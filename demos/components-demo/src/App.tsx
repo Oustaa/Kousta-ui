@@ -106,16 +106,32 @@ function App() {
       >
         <div style={{ display: "flex", gap: "12px" }}>
           <div>
-            <Select
+            <Select<{ first_name: string; last_name: string; id: number }>
+              // clearable={false}
               data={[
                 { first_name: "Youness", last_name: "Tailba", id: 1 },
                 { first_name: "Oussama", last_name: "Tailba", id: 2 },
                 { first_name: "Abd eladim", last_name: "Tailba", id: 3 },
                 { first_name: "Khalid", last_name: "Tailba", id: 4 },
+                { first_name: "Youness", last_name: "Tailba", id: 5 },
+                { first_name: "Oussama", last_name: "Tailba", id: 6 },
+                { first_name: "Abd eladim", last_name: "Tailba", id: 7 },
+                { first_name: "Khalid", last_name: "Tailba", id: 8 },
+                { first_name: "Youness", last_name: "Tailba", id: 9 },
+                { first_name: "Oussama", last_name: "Tailba", id: 10 },
+                { first_name: "Abd eladim", last_name: "Tailba", id: 11 },
+                { first_name: "Khalid", last_name: "Tailba", id: 12 },
+                { first_name: "Youness", last_name: "Tailba", id: 13 },
+                { first_name: "Oussama", last_name: "Tailba", id: 14 },
+                { first_name: "Abd eladim", last_name: "Tailba", id: 15 },
+                { first_name: "Khalid", last_name: "Tailba", id: 16 },
               ]}
               options={{
-                value: "first_name last_name",
+                value: "id",
                 label: "first_name last_name",
+                // renderOption(row) {
+                //   return <h1>{row.id}</h1>;
+                // },
               }}
               label="Select"
               // errors={["There is an error"]}
@@ -241,10 +257,7 @@ function App() {
         </Button>
         <br />
         <br />
-        <Button size={"md"} onClick={open}>
-          Open Modal
-        </Button>
-
+        <Button onClick={open}>Open Modal</Button>
         <Button
           variant="danger"
           loading={loading}
