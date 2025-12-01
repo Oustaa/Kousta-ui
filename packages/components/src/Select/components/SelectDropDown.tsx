@@ -8,12 +8,14 @@ type SelectDropDownProps<T extends SelectDataConstraints> = {
   closeOnClickOutside: (e?: MouseEvent | TouchEvent) => void;
   onSelectValue: (value: unknown) => void;
   value?: unknown;
-} & Pick<SelectProps<T>, "data" | "options" | "emptyMessage">;
+  data: T[];
+} & Pick<SelectProps<T>, "options" | "emptyMessage" | "disabledOption">;
 
 const SelectDropDown = <T extends SelectDataConstraints>({
   data,
   emptyMessage = "No option found",
   closeOnClickOutside,
+  disabledOption,
   options,
   onSelectValue,
   value,
@@ -61,13 +63,12 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       window.removeEventListener("touchstart", closeOnClickOutside);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         const selectedOption = data[highlitedOptionIndex];
-        console.log({ selectedOption, highlitedOptionIndex });
 
         const value = getNestedProperty(
           selectedOption,
@@ -107,6 +108,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
             onSelectValue={onSelectValue}
             value={value}
             highlightOption={() => setHighlitedOption(index)}
+            disabledOption={disabledOption}
           />
         ))
       )}

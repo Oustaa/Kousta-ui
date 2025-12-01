@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import { getOptionLabel } from "../_utils";
 import classes from "../Select.module.css";
@@ -9,7 +10,7 @@ type SelectOptionProps<T extends SelectDataConstraints> = {
   value?: unknown;
   isHighlighted: boolean;
   highlightOption: VoidFunction;
-} & Pick<SelectProps<T>, "options">;
+} & Pick<SelectProps<T>, "options" | "disabledOption">;
 
 const SelectOption = <T extends SelectDataConstraints>({
   row,
@@ -18,15 +19,33 @@ const SelectOption = <T extends SelectDataConstraints>({
   value,
   isHighlighted,
   highlightOption,
+  disabledOption,
 }: SelectOptionProps<T>) => {
+  const optionRef = useRef<null | HTMLDivElement>(null);
+  const disabled = disabledOption?.(row);
+
+  useEffect(() => {
+    if (optionRef && isHighlighted) {
+      optionRef.current?.scrollIntoView({
+        behavior: "auto",
+        block: "nearest",
+      });
+    }
+  }, [isHighlighted]);
+
   return (
     <div
+      role="option"
+      ref={optionRef}
       onMouseEnter={highlightOption}
       data-selected={value === getNestedProperty(row, options?.value as string)}
+      data-disabled={String(disabled)}
       className={`${classes["select-option"]} ${isHighlighted && classes["highlighted-option"]}`}
       onClick={() => {
-        highlightOption();
-        onSelectValue(getNestedProperty(row, options?.value as string));
+        if (!disabled) {
+          highlightOption();
+          onSelectValue(getNestedProperty(row, options?.value as string));
+        }
       }}
     >
       {getOptionLabel(row, options)}

@@ -14,20 +14,25 @@ const Select = <T extends SelectDataConstraints>({
   errors,
   required,
   labelPosition,
-  data,
+  data: propsData,
   options = { value: "value", label: "label" },
   clearable = true,
   emptyMessage,
   seachable = true,
   disabled,
   onChange,
-  value: propsValue,
+  getData,
+  extractDynamicData,
+  disabledOption,
+  onSearch,
+  ...props
 }: SelectProps<T>) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [selectData, setSelectData] = useState<T[]>(data);
+  const [data, setData] = useState<T[]>(propsData || []);
+  const [selectData, setSelectData] = useState<T[]>(propsData || []);
 
   /* Select Value Logic */
-  const [value, setValue] = useState<null | unknown>(propsValue);
+  const [value, setValue] = useState<null | unknown>(props.value);
 
   const onSelectValue = useCallback((value: string | number | unknown) => {
     setValue(value);
@@ -64,12 +69,11 @@ const Select = <T extends SelectDataConstraints>({
     setDropDownOpen(false);
     setSearchTerm("");
     setSelectData(data);
-  }, []);
+  }, [data]);
 
   const closeOnClickOutside = useCallback((e?: MouseEvent | TouchEvent) => {
-    if (!e) return closeDropDown();
-
     if (
+      !e ||
       isNodeAChild(
         e.target as HTMLElement,
         selectRef.current as unknown as HTMLElement,
@@ -77,44 +81,79 @@ const Select = <T extends SelectDataConstraints>({
     )
       closeDropDown();
   }, []);
-
   /* End Drop Down Logic */
 
-  /* Search Logic */
-  const search = (term: string) => {
-    if (!options.label) return;
+  /* Loading dynamic data logic */
+  const [loading, setLoading] = useState<boolean>(!!props.loading);
 
-    const regex = new RegExp(term, "i");
+  useEffect(() => {
+    if (getData && typeof getData === "function") {
+      setLoading(true);
 
-    if (term.trim() === "") {
-      setSelectData(data);
-    } else {
-      const filteredData = data.filter((row: T) => {
-        if (options && options.label) {
-          const result = regex.test(
-            getNestedProperty(row, options.label) as string,
-          );
-          return result;
-        } else {
-          return regex.test(getNestedProperty(row, "label") as string);
-        }
-      });
+      getData()
+        .then((response) => {
+          let data = response as T[];
 
-      setSelectData(filteredData);
+          if (extractDynamicData && typeof extractDynamicData === "function") {
+            data = extractDynamicData(response);
+          }
+          setSelectData(data);
+          setData(data);
+        })
+        .catch((error) => {
+          console.log({ error });
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     }
-  };
+  }, []);
+  /* End loading dynamic data logic */
 
+  /* Search Logic */
+  const search = useCallback(
+    (term: string) => {
+      if (options.label || (onSearch && typeof onSearch === "function")) {
+        const regex = new RegExp(term, "i");
+
+        console.log({ term });
+
+        if (term && term.trim() === "") {
+          setSelectData(data);
+        } else {
+          const filteredData = data.filter((row: T) => {
+            if (onSearch && typeof onSearch === "function") {
+              return onSearch(row, term);
+            } else if (options && options.label) {
+              const result = regex.test(
+                getNestedProperty(row, options.label) as string,
+              );
+              return result;
+            } else {
+              // lable = "label" is the default...
+              return regex.test(getNestedProperty(row, "label") as string);
+            }
+          });
+
+          setSelectData(filteredData);
+        }
+      }
+    },
+    [data],
+  );
   /* End of Search Logic */
 
   /* Effects */
-  // if external data changed, select data should be reflected
+  // if props data changed, select data should be reflected
   useEffect(() => {
-    setSelectData(data);
-  }, [data]);
+    if (propsData) {
+      setSelectData(data);
+    }
+  }, [propsData]);
   /* End of Effects */
 
   return (
-    <div className={classes["select"]}>
+    <div className={`${classes["select"]}${disabled && "disabled"}`}>
       <FormElement labelPosition={labelPosition}>
         {label && (
           <Label
@@ -152,6 +191,9 @@ const Select = <T extends SelectDataConstraints>({
               e.target.setSelectionRange(valueLen, valueLen);
             }}
             onChange={(e) => {
+              if (!dropDownOpen) {
+                OpenDropDown();
+              }
               let value = e.target.value;
 
               if (value.substring(0, value.length - 1) === selectedLabel)
@@ -162,9 +204,11 @@ const Select = <T extends SelectDataConstraints>({
             }}
             rightSection={
               <button
+                tabIndex={-1}
+                disabled={disabled}
                 className={classes["select-right-section"]}
                 onClick={() => {
-                  if (value) {
+                  if (value && clearable) {
                     setValue(null);
                   } else if (!dropDownOpen) {
                     setDropDownOpen(true);
@@ -189,12 +233,14 @@ const Select = <T extends SelectDataConstraints>({
           />
           {dropDownOpen && (
             <SelectDropDown
+              key={data.length}
               data={selectData}
               options={options}
               emptyMessage={emptyMessage}
               closeOnClickOutside={closeOnClickOutside}
               onSelectValue={onSelectValue}
               value={value}
+              disabledOption={disabledOption}
             />
           )}
         </div>

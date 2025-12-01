@@ -21,12 +21,18 @@ export type SelectOptionType<T> = {
     }
 );
 
+type GetDataFunction = () => Promise<unknown>;
+type ExtractDynamicDataFunction<T> = (response: any) => T[];
+
 export type SelectProps<T extends SelectDataConstraints> = {
   // should add an option for getting data dynamically
-  data: T[];
+  data?: T[];
+  getData?: GetDataFunction;
+  extractDynamicData?: ExtractDynamicDataFunction<T>;
   onChange?: (value: unknown) => void;
-  value?: string;
+  value?: string | number;
 
+  loading?: boolean;
   options?: SelectOptionType<T>;
   label?: string;
   labelProps?: ComponentPropsWithoutRef<"label">;
@@ -38,5 +44,20 @@ export type SelectProps<T extends SelectDataConstraints> = {
   emptyMessage?: string;
   disabled?: boolean;
 
+  onSearch?: (row: T, term: string) => void;
+  // this is meant for if you want to search on a backend or some like that
+  // | ((term: string) => Promise<unknown>);
   disabledOption?: (row: T) => boolean;
-};
+} & (
+  | {
+      data: T[];
+      getData?: never;
+      extractDynamicData?: never;
+    }
+  | {
+      data?: never;
+      loading?: never;
+      getData: GetDataFunction;
+      extractDynamicData?: ExtractDynamicDataFunction<T>;
+    }
+);

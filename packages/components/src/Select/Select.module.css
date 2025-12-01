@@ -4,6 +4,14 @@
 
 .select {
   width: 100%;
+
+  &:hover {
+    cursor: pointer;
+
+    .disabled {
+      cursor: not-allowed;
+    }
+  }
 }
 
 .select-container {
@@ -30,6 +38,7 @@
   z-index: 1000;
   max-height: 40vh;
   overflow-y: scroll;
+  scroll-margin-block: var(--kui-spacing-xs);
 
   background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
   border: solid 0.5px light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
@@ -45,6 +54,11 @@
       var(--kui-primary-400),
       var(--kui-primary-600)
     );
+  }
+
+  &[data-disabled="true"] {
+    opacity: 0.75;
+    cursor: not-allowed;
   }
 }
 
