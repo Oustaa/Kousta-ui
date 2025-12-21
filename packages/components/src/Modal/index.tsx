@@ -206,7 +206,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
             animation: `toLeft 5s toLeft`,
             width: fullWidth
               ? `calc(100vw - ${(offset || 0) * 2}px)`
-              : `clamp(200px, ${modalSize}, 100%)`,
+              : `clamp(200px, ${modalSize}, calc(100% - ${offset}px))`,
             height: fullHeight
               ? `calc(100vh - ${(offset || 0) * 2}px)`
               : "max-content",
