@@ -1,0 +1,76 @@
+/*=============================================
+=                    Select                   =
+=============================================*/
+
+.select {
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+
+    .disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.select-container {
+  position: relative;
+  border-radius: calc(var(--kui-rounded) * 1rem);
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    &[data-disabled="true"] {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.highlighted-option {
+  background-color: light-dark(var(--kui-primary-300), var(--kui-primary-500));
+}
+
+.select-dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-height: 40vh;
+  overflow-y: scroll;
+  scroll-margin-block: var(--kui-spacing-xs);
+
+  background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
+  border: solid 0.5px light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
+  border-radius: calc(var(--kui-rounded) * 1rem);
+}
+
+.select-option {
+  padding: var(--kui-spacing-xs);
+  text-align: left;
+
+  &[data-selected="true"] {
+    background-color: light-dark(
+      var(--kui-primary-400),
+      var(--kui-primary-600)
+    );
+  }
+
+  &[data-disabled="true"] {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+}
+
+.select-empty-message {
+  text-align: center;
+  padding: var(--kui-spacing-xs);
+}
+
+.select-right-section {
+  border-radius: calc(var(--kui-rounded) * 1rem);
+  padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
+  background-color: light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
+}
+
+/*=====            End of Select       ======*/

@@ -8,15 +8,15 @@ import {
 
 import classes from "./Group.module.css";
 
-const Group: FC<GroupProps> = ({ children, direction, gap }) => {
+const Group: FC<GroupProps> = ({ children, direction, gap, ...rest }) => {
   const items: ReactNode[] = [];
 
   if (Array.isArray(children)) {
     if (children.length === 1) {
       items.push(children);
     } else if (children.length === 2) {
-      items.push(renderLeftSectionItem(children[0]), direction);
-      items.push(renderRightSectionItem(children[1]), direction);
+      items.push(renderLeftSectionItem(children[0], direction));
+      items.push(renderRightSectionItem(children[1], direction));
     } else {
       items.push(renderLeftSectionItem(children[0], direction));
       for (let i = 1; i < children.length - 1; i++) {
@@ -40,7 +40,12 @@ const Group: FC<GroupProps> = ({ children, direction, gap }) => {
   }
 
   return (
-    <div className={classes["group"]} style={{ gap, flexDirection: direction }}>
+    <div
+      style={{ ...{ gap, flexDirection: direction }, ...rest.style }}
+      {...rest}
+      className={classes["group"]}
+      role="group"
+    >
       {items}
     </div>
   );

@@ -15,13 +15,11 @@ type ErrorBoundryState = {
 class ErrorBoundry extends Component<ErrorBoundryProps, ErrorBoundryState> {
   state = { hasError: false, error: undefined, loading: false };
 
-  static getDerivedStateFromError(error: any) {
-    console.log({ getDerivedStateFromError: error });
+  static getDerivedStateFromError(error: unknown) {
     return { hasError: true, error: error };
   }
 
-  componentDidCatch(error: Error, errorInfo: any): void {
-    console.log({ error, errorInfo });
+  componentDidCatch(error: Error, errorInfo: unknown): void {
     const onError = this.props.onError;
 
     if (onError && typeof onError === "function") onError(error);

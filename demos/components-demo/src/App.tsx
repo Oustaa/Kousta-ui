@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Button,
   ContextMenu,
@@ -7,6 +7,9 @@ import {
   Modal,
   ComponentPropsProvider,
   Group,
+  Select,
+  WindowBoundary,
+  AsyncSelect,
 } from "@kousta-ui/components";
 import {
   Bs123,
@@ -22,11 +25,65 @@ import "./App.css";
 import "./index.css";
 import { useDisclosure, useScrollLock } from "@kousta-ui/hooks";
 
+import { isNodeAChild } from "@kousta-ui/helpers";
+// import { getUsers } from "./app";
+import { useDebounceCallback } from "@kousta-ui/hooks";
+
+type User = { first_name: string; last_name: string; id: number };
+type ProductInterface = { ref: string; id: number; designation: string };
+
+async function getProducts({
+  limit,
+  page,
+  search,
+}: {
+  page: number;
+  limit: number;
+  search?: string;
+}) {
+  const resp = await fetch(
+    `http://localhost:3000/products?limit=${limit}&page=${page}&search=${search}`,
+  );
+
+  const result = await resp.json();
+
+  return result;
+}
+
 function App() {
   const { lockScroll, unlockScroll } = useScrollLock();
   const { opened, close, open } = useDisclosure(false);
   const [loading, setLoading] = useState(false);
   const [value, setValue] = useState<string>("");
+  const [count, setCount] = useState<number>(0);
+  const parentRef = useRef<null | HTMLDivElement>(null);
+
+  const debouncedOnChange = useDebounceCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(e);
+      alert(e.target.value);
+    },
+    500,
+  );
+
+  const [selectData] = useState([
+    { first_name: "Youness", last_name: "Tailba", id: 1 },
+    { first_name: "Oussama", last_name: "Tailba", id: 2 },
+    { first_name: "Abd eladim", last_name: "Tailba", id: 3 },
+    { first_name: "Khalid", last_name: "Tailba", id: 4 },
+    { first_name: "Youness", last_name: "Tailba", id: 5 },
+    { first_name: "Oussama", last_name: "Tailba", id: 6 },
+    { first_name: "Abd eladim", last_name: "Tailba", id: 7 },
+    { first_name: "Khalid", last_name: "Tailba", id: 8 },
+    { first_name: "Youness", last_name: "Tailba", id: 9 },
+    { first_name: "Oussama", last_name: "Tailba", id: 10 },
+    { first_name: "Abd eladim", last_name: "Tailba", id: 11 },
+    { first_name: "Khalid", last_name: "Tailba", id: 12 },
+    { first_name: "Youness", last_name: "Tailba", id: 13 },
+    { first_name: "Oussama", last_name: "Tailba", id: 14 },
+    { first_name: "Abd eladim", last_name: "Tailba", id: 15 },
+    { first_name: "Khalid", last_name: "Tailba", id: 16 },
+  ]);
 
   useEffect(() => {
     let timeout;
@@ -39,8 +96,42 @@ function App() {
     return clearTimeout(timeout);
   }, [loading]);
 
+  const getSelectProducts = useCallback(
+    async ({ page, searchTerm }: { page: number; searchTerm?: string }) => {
+      return getProducts({
+        page,
+        limit: 20,
+        search: searchTerm,
+      });
+    },
+    [],
+  );
+
   return (
     <>
+      <div ref={parentRef}>
+        <button
+          onClick={(e) => {
+            alert(isNodeAChild(parentRef.current, e.target as Node));
+          }}
+        >
+          inside
+        </button>
+        <button
+          onClick={(e) => {
+            alert(isNodeAChild(parentRef.current, e.target as Node));
+          }}
+        >
+          inside 2
+        </button>
+      </div>
+      <button
+        onClick={(e) => {
+          alert(isNodeAChild(parentRef.current, e.target as Node));
+        }}
+      >
+        outside
+      </button>
       <ComponentPropsProvider
         button={{
           size: "sm",
@@ -76,12 +167,193 @@ function App() {
           size: "lg",
         }}
       >
+        <Button onClick={() => setValue("")}>Clear</Button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="scrool-area" style={{ height: "100vh" }}>
+          <WindowBoundary
+            onItemExit={() => {
+              console.log("hello just exited");
+            }}
+            onItemEnter={() => {
+              console.log("hello just entered");
+            }}
+            onceItemEnter={() => {
+              console.log("It just once entered");
+            }}
+            onceItemExit={() => {
+              console.log("It just once exited");
+            }}
+            root={document.querySelector("#scrool-area")}
+            threshold={1}
+          >
+            <div style={{ paddingBlock: "60px", backgroundColor: "blue" }}>
+              Hello I am here
+            </div>
+          </WindowBoundary>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style={{ display: "flex", gap: "12px" }}>
+          <div>
+            <Select<User>
+              // loading
+              // clearable={false}
+              data={selectData}
+              value={7}
+              options={{
+                value: "id",
+                label: "first_name last_name",
+              }}
+              label="Static Select"
+              // errors={["There is an error"]}
+              // labelPosition="x"
+              required
+              emptyMessage="Give me some options"
+              // seachable={false}
+              // disabled
+              disabledOption={(row) => {
+                return [1, 3, 6].includes(row.id);
+              }}
+              onSearch={(user: User, term: string) => user.first_name === term}
+            />
+            <AsyncSelect<ProductInterface>
+              clearable={false}
+              hasMore={(resp, page) => page < resp.meta.totalPages}
+              getData={getSelectProducts}
+              extractDynamicData={(resp) => resp.products}
+              // value={4}
+              options={{
+                value: "id",
+                label: "id - designation",
+              }}
+              label="Dynamic Select"
+              // errors={["There is an error"]}
+              // labelPosition="x"
+              required
+              emptyMessage="Give me some options"
+              // seachable={false}
+              // disabled
+              disabledOption={(row) => row.id === 4 || row.id === 9}
+            />
+          </div>
+          <Input
+            label="Society"
+            placeholder="this is my placeholder"
+            // errors={["There is an error"]}
+            // required={true}
+            // type="numbenumberr"
+            value={value}
+            // type="number"
+            step={2.5}
+            // onChange={(e) => {
+            //   setValue(e.target.value);
+            //   alert(e.target.value);
+            // }}
+            onChange={(e) => {
+              debouncedOnChange(e);
+              setValue(e.target.value);
+            }}
+            // labelPosition="x"
+            // i should add this
+            leftSection={
+              <Button onClick={() => alert("Hello InputLeft Section")}>
+                left
+              </Button>
+            }
+            rightSection={
+              <Button onClick={() => alert("Hello InputLeft Section")}>
+                right
+              </Button>
+            }
+          />
+        </div>
+        <br />
+        <br />
+
         <Group direction="row">
-          <Button variant="primary">Primary Link</Button>
-          <Button variant="neutral">Neutral Link</Button>
+          <Button disabled variant="primary">
+            Primary Link
+          </Button>
+          <Button variant="primary">Neutral Link</Button>
           <Button variant="success">Success Link</Button>
           <Button variant="danger">Danger Link</Button>
         </Group>
+        <br />
+        <br />
+
+        <Group gap="10px">
+          <Button
+            variant="neutral"
+            onClick={() => setCount((prev) => prev - 1)}
+            disabled={count === 0}
+          >
+            -
+          </Button>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "left",
+            }}
+          >
+            {count}
+          </div>
+          <Button
+            variant="neutral"
+            onClick={() => setCount((prev) => prev + 1)}
+            disabled={count === 23}
+          >
+            +
+          </Button>
+        </Group>
+        <br />
+        <br />
+
         <Modal
           opened={opened}
           onClose={close}
@@ -129,37 +401,7 @@ function App() {
         </Button>
         <br />
         <br />
-        <Button size={"md"} onClick={open}>
-          Open Modal
-        </Button>
-
-        <br />
-        <br />
-        <Input
-          label="Society"
-          placeholder="this is my placeholder"
-          errors={["There is an error"]}
-          required={true}
-          // type="numbenumberr"
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-          // i should add this
-          leftSection={
-            <Button onClick={() => alert("Hello InputLeft Section")}>
-              left
-            </Button>
-          }
-          rightSection={
-            <Button onClick={() => alert("Hello InputLeft Section")}>
-              right
-            </Button>
-          }
-        />
-        <br />
-        <br />
-
+        <Button onClick={open}>Open Modal</Button>
         <Button
           variant="danger"
           loading={loading}
@@ -303,32 +545,32 @@ function App() {
         <br />
         <br />
 
-        {/* <Menu.Menu */}
-        {/*   // position="Top-Center" */}
-        {/*   closeOnClick={false} */}
-        {/* > */}
-        {/*   <Menu.Target> */}
-        {/*     <Button>Menu Target Button</Button> */}
-        {/*   </Menu.Target> */}
-        {/*   <Menu.DropDown> */}
-        {/*     <Menu.Label>Hello Application</Menu.Label> */}
-        {/*     <Menu.Item */}
-        {/*       leftSection={ */}
-        {/*         <div> */}
-        {/*           <BsHouseLock /> */}
-        {/*         </div> */}
-        {/*       } */}
-        {/*       closeMenuOnClick={true} */}
-        {/*     > */}
-        {/*       Hello There 1 */}
-        {/*     </Menu.Item> */}
-        {/*     <Menu.Item disabled={true}>Hello There 2</Menu.Item> */}
-        {/*     <Menu.Item>Hello There 3</Menu.Item> */}
-        {/*     <Menu.Divider /> */}
-        {/*     <Menu.Item>Hello There 4</Menu.Item> */}
-        {/*     <Menu.Item>Hello There 5</Menu.Item> */}
-        {/*   </Menu.DropDown> */}
-        {/* </Menu.Menu> */}
+        <Menu.Menu
+          // position="Top-Center"
+          closeOnClick={false}
+        >
+          <Menu.Target>
+            <Button>Menu Target Button</Button>
+          </Menu.Target>
+          <Menu.DropDown>
+            <Menu.Label>Hello Application</Menu.Label>
+            <Menu.Item
+              leftSection={
+                <div>
+                  <BsHouseLock />
+                </div>
+              }
+              closeMenuOnClick={true}
+            >
+              Hello There 1
+            </Menu.Item>
+            <Menu.Item disabled={true}>Hello There 2</Menu.Item>
+            <Menu.Item>Hello There 3</Menu.Item>
+            <Menu.Divider />
+            <Menu.Item>Hello There 4</Menu.Item>
+            <Menu.Item>Hello There 5</Menu.Item>
+          </Menu.DropDown>
+        </Menu.Menu>
         <br />
         <br />
 

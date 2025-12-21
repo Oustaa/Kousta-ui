@@ -4,11 +4,11 @@ import classes from "./Label.module.css";
 
 const Label: FC<
   ComponentPropsWithoutRef<"label"> & {
-    label: string;
+    children: string;
     required?: boolean;
     errors?: string[] | string | ReactNode;
   }
-> = ({ label, required, errors, ...labelProps }) => {
+> = ({ children: label, required, errors, ...labelProps }) => {
   return (
     <label
       data-required={label && String(required)}

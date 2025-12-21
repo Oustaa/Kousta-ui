@@ -1,58 +1,48 @@
-function extractSkipKeys(
-  key: string,
-): [string, (label: string) => string | unknown] {
-  let [prefix, suffix] = ["", ""];
-
-  if (key.startsWith("\\")) {
-    prefix = key.substring(1, 2);
-    key = key.replace(`\\${prefix}`, "");
-  }
-
-  if (/\\.$/.test(key)) {
-    suffix = key.substring(key.length - 1);
-    key = key.replace(`\\${suffix}`, "");
-  }
-
-  if (!prefix && !suffix) {
-    return [key, (value) => value];
-  }
-
-  return [key, (value) => `${prefix}${value}${suffix}`];
+// TODO:
+// i should check for \w and \d instead of specieal charachters
+// and also i need to add a skip charachters e.g.: \\(name), %...
+function isSpecialChar(s: string): boolean {
+  return ["{", "}", "(", ")", "[", "]", "-", "_", "/", "|", " "].includes(s);
 }
 
 export function getNestedProperty<T>(
   obj: Record<string, unknown>,
   key: string,
 ): T | undefined {
-  const splitKey = key.split(" ");
+  let finalValue: string = "";
+  let currentKey = "";
 
-  const initialValue = splitKey.map((k) => {
-    const [processedKey, cb] = extractSkipKeys(k);
+  let targetObject = obj;
 
-    const keys = processedKey.split(/\[|\]|\./).filter(Boolean);
+  for (let i = 0; i < key.length; i++) {
+    const k = key[i];
+    if (isSpecialChar(k)) {
+      if (currentKey.trim().length !== 0 && k !== "-" && k !== "_") {
+        finalValue += targetObject[currentKey];
+        currentKey = "";
+        targetObject = obj;
+      }
 
-    return keys.reduce<Record<string, unknown> | unknown>(
-      (acc: unknown, currentKey: string) => {
-        if (typeof acc === "object" && acc !== null) {
-          const formattedCurrentKey = currentKey.replaceAll("|_|", " ");
+      if ((k === "-" || k === "_") && /\w/i.test(k)) {
+        currentKey += k;
+      } else {
+        finalValue += k;
+      }
+    } else if (k === "." && currentKey) {
+      targetObject = targetObject[currentKey] as Record<string, unknown>;
+      currentKey = "";
+    } else {
+      currentKey += k;
+    }
+  }
 
-          if (Object.prototype.hasOwnProperty.call(acc, formattedCurrentKey)) {
-            // @ts-expect-error this is not an error
-            return cb((acc as Record<string, unknown>)[formattedCurrentKey]);
-          }
-        }
-        return undefined;
-      },
-      obj,
-    );
-  });
+  if (currentKey) {
+    if (finalValue) finalValue += targetObject[currentKey];
+    // @ts-expect-error this is not an error
+    else finalValue = targetObject[currentKey];
+  }
 
-  const value =
-    initialValue.length > 1 ? initialValue.join(" ") : initialValue[0];
-
-  if (typeof value === "string" && !value.trim()) return undefined;
-
-  return value as T;
+  return finalValue as T | undefined;
 }
 
 export const updateNestedProperties = <T extends Record<string, unknown>>(

@@ -1,6 +1,9 @@
 import { getNestedProperty, updateNestedProperties } from "./index";
 
 const obj = {
+  _id: 234,
+  first_name: "Oussama",
+  last_name: "Tailba",
   name: "Kousta ui",
   versions: {
     number: 123,
@@ -21,6 +24,24 @@ describe("nestedObjectPros tests", () => {
       expect(value).toBe("Kousta ui");
     });
 
+    it("should concat _ and - ", () => {
+      const value = getNestedProperty(obj, "first_name last_name");
+
+      expect(value).toBe("Oussama Tailba");
+    });
+
+    it("should concat _ and -  2", () => {
+      const value = getNestedProperty(obj, "first_name");
+
+      expect(value).toBe("Oussama");
+    });
+
+    it("should concat _ and -  3", () => {
+      const value = getNestedProperty(obj, "name _id");
+
+      expect(value).toBe("Kousta ui 234");
+    });
+
     it("should return the correct value (Level 2)", () => {
       const versionNumber = getNestedProperty(obj, "versions.number");
       expect(versionNumber).toBe(123);
@@ -35,6 +56,10 @@ describe("nestedObjectPros tests", () => {
 
       const level3Days = getNestedProperty(obj, "versions.date.days");
       expect(level3Days).toHaveLength(5);
+    });
+    it("should return the value with skiping special characters", () => {
+      const specialSkipping = getNestedProperty(obj, "(name) (versions.name)");
+      expect(specialSkipping).toBe("(Kousta ui) (@latest)");
     });
   });
 

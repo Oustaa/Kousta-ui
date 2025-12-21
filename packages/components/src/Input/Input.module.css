@@ -2,59 +2,36 @@
 =                    Input                    =
 =============================================*/
 
-.formElement {
+.input-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  column-gap: var(--kui-spacing-2xs);
+  align-items: flex-start;
+  gap: var(--kui-spacing-2xs);
 }
 
-.label {
-  font-size: var(--kui-text-base);
-  color: light-dark(var(--kui-neutral-900), var(--kui-neutral-50));
-  font-weight: 500;
-
-  &[data-required="true"]::after {
-    content: "*";
-    color: var(--kui-danger-600);
-    margin-left: var(--kui-spacing-xs);
-  }
-
-  &[data-error="true"] {
-    color: var(--kui-danger-600);
-  }
-}
-
-.input-container {
+.input-inner {
   display: flex;
   align-items: stretch;
   width: 100%;
 }
 
-.input-label-container {
-  display: flex;
-  width: 100%;
-  justify-content: start;
-  gap: var(--kui-spacing-2xs);
-}
-
 .input {
   padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
-  border: solid 0.5px light-dark(var(--kui-neutral-600), var(--kui-neutral-700));
+  border: solid 0.5px light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
   background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
   font-size: var(--kui-text-base);
   flex: 1 1 0%;
   border-radius: calc(var(--kui-rounded) * 1rem);
 
   &::placeholder {
-    color: var(--kui-neutrl-400);
+    color: light-dark(var(--kui-neutrl-200), var(--kui-neutral-700));
   }
 
   &:focus,
   &:focus-visible {
     outline: unset;
     border-color: var(--kui-primary-600);
-    border-radius: 0;
   }
 
   &[data-error="true"] {

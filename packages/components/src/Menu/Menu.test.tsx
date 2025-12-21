@@ -52,9 +52,6 @@ describe("Menu", () => {
       expect(menuItemB).not.toBeInTheDocument();
 
       await user.click(menuTarget);
-
-      // const menuItemA = screen.getByText("Menu Item 1");
-      // expect(menuItemA).toBeInTheDocument();
     });
 
     it("should close menu on click on MenuItem", async () => {

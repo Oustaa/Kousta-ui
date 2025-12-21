@@ -1,0 +1,13 @@
+/*=============================================
+=                FormElement                  =
+=============================================*/
+
+.formElement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--kui-spacing-2xs);
+}
+
+/*=====      End of FormElement        ======*/

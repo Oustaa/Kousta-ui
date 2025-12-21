@@ -47,16 +47,17 @@ jobs:
       - name: Test
         run: yarn test --ci
 
-      - name: Configure git user for CI
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Updating Pakcages Versions
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npx lerna version patch --force-publish
-      - name: Publish all public workspaces
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npx lerna publish from-git
+      # - name: Configure git user for CI
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      #
+      # - name: Updating Pakcages Versions
+      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #   run: npx lerna version patch --force-publish -y
+      #
+      # - name: Publish all public workspaces
+      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #   run: npx lerna publish from-git
 
 
