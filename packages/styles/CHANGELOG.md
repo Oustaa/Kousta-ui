@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/Oustaa/kousta-ui/compare/@kousta-ui/styles@0.1.1...@kousta-ui/styles@0.1.2) (2025-12-21)
+
+**Note:** Version bump only for package @kousta-ui/styles
+
 ## [0.1.1](https://github.com/Oustaa/kousta-ui/compare/@kousta-ui/styles@0.1.0-alpha.4...@kousta-ui/styles@0.1.1) (2025-11-14)
 
 **Note:** Version bump only for package @kousta-ui/styles
