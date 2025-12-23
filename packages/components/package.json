@@ -1,6 +1,6 @@
 {
   "name": "@ousta-ui/components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./cjs/index.cjs",
   "module": "./esm/index.mjs",
   "types": "lib/index.d.ts",

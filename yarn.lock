@@ -5648,7 +5648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ousta-ui/components@workspace:packages/components":
+"@ousta-ui/components@workspace:*, @ousta-ui/components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "@ousta-ui/components@workspace:packages/components"
   dependencies:
@@ -5704,6 +5704,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ousta-ui/table@workspace:packages/table"
   dependencies:
+    "@ousta-ui/components": "workspace:*"
+    "@ousta-ui/helpers": "workspace:*"
+    "@ousta-ui/hooks": "workspace:*"
     sass: "npm:^1.79.3"
   peerDependencies:
     react: ">=17"
