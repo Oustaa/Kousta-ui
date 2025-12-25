@@ -1,21 +1,21 @@
 # ousta-ui
 ousta-ui is a react ui library i have build after 3 years of experementing with other awesome ui libraries, and creating some custome ui components, it is meant for ease if use, and performance focuse.
 
-[Docs](https://ui.usta.org)
+[Docs](https://ui.ousta.dev)
 
 # Available Packges
 
 ## Components
 - #### Installations:
   ```
-    npm i ousta-ui/components
+    npm i @ousta-ui/components
   ```
 - ### Usage:
 ```tsx
 import { Modal, Button } from "@ousta-ui/components";
 import { useDisclosure } from "@ousta-ui/hooks";
 
-import "ousta-ui/components/esm/index.css";
+import "@ousta-ui/components/esm/index.css";
 
 const App = () => {
   const { opened, close, open } = useDisclosure(false);
@@ -54,14 +54,14 @@ export default App;
 ## Table
 - ### Installations:
   ```
-    npm i ousta-ui/table
+    npm i @ousta-ui/table
   ```
 - ### Usage:
 ```tsx
 import { DataTable } from "@ousta-ui/table";
 import { THeader } from "@ousta-ui/table/lib/DataTable/_props";
 
-import "ousta-ui/table/esm/index.css";
+import "@ousta-ui/table/esm/index.css";
 
 interface User {
   id: number;
@@ -128,7 +128,7 @@ export default App;
 ## Helpers
 - ### Installations:
   ```
-    npm i ousta-ui/helpers
+    npm i @ousta-ui/helpers
   ```
 - ### Usage:
 
@@ -136,7 +136,7 @@ export default App;
 ## Hooks
 - ### Installations:
   ```
-    npm i ousta-ui/hooks
+    npm i @ousta-ui/hooks
   ```
 - ### Usage:
 
