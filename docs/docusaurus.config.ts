@@ -4,14 +4,16 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "ousta-ui",
+  title: "Ousta UI",
   tagline: "a ui library focuses on performance and convenience",
   favicon: "img/favicon.ico",
   url: "https://ui.ousta.dev",
   baseUrl: "/",
 
-  organizationName: "Ousta",
-  projectName: "ousta-ui",
+  organizationName: "Oustaa",
+  projectName: "Ousta-ui",
+
+  trailingSlash: false,
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -46,7 +48,7 @@ const config: Config = {
           label: "Docs",
         },
         {
-          href: "https://github.com/oustaa/usta-ui",
+          href: "https://github.com/oustaa/ousta-ui",
           label: "GitHub",
           position: "right",
         },
