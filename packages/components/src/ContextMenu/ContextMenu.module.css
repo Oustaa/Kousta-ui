@@ -12,11 +12,11 @@ button {
 
 .OuicontextMenu {
   position: absolute;
-  background-color: light-dark(var(--Ouineutral-50), var(--Ouineutral-700));
+  background-color: light-dark(var(--Oui-neutral-50), var(--Oui-neutral-700));
   width: max-content;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  border-radius: calc(var(--Ouirounded) * 1rem);
+  border-radius: calc(var(--Oui-rounded) * 1rem);
 }
 
 .OuicontextMenu-Item {
@@ -29,8 +29,8 @@ button {
   gap: 10px;
   padding-inline-end: 10px;
 
-  background: light-dark(var(--Ouineutral-50), var(--Ouineutral-700));
-  color: light-dark(var(--Ouineutral-900), var(--Ouineutral-50));
+  background: light-dark(var(--Oui-neutral-50), var(--Oui-neutral-700));
+  color: light-dark(var(--Oui-neutral-900), var(--Oui-neutral-50));
   font-size: 0.9rem;
   font-weight: 400;
 
@@ -39,13 +39,19 @@ button {
   }
 
   &:disabled {
-    background-color: light-dark(var(--Ouineutral-100), var(--Ouineutral-800));
-    color: light-dark(var(--Ouineutral-300), var(--Ouineutral-600));
+    background-color: light-dark(
+      var(--Oui-neutral-100),
+      var(--Oui-neutral-800)
+    );
+    color: light-dark(var(--Oui-neutral-300), var(--Oui-neutral-600));
     cursor: not-allowed;
   }
 
   &:not(:disabled):hover {
-    background-color: light-dark(var(--Ouineutral-100), var(--Ouineutral-600));
+    background-color: light-dark(
+      var(--Oui-neutral-100),
+      var(--Oui-neutral-600)
+    );
   }
 }
 
@@ -56,7 +62,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: light-dark(var(--Ouineutral-200), var(--Ouineutral-800));
+  background-color: light-dark(var(--Oui-neutral-200), var(--Oui-neutral-800));
 }
 
 .OuicontextMenu_separator_container {
@@ -70,7 +76,7 @@ button {
   width: 100%;
   margin-inline: 10px;
   margin-block: 0px;
-  background-color: var(--Ouineutral-200);
+  background-color: var(--Oui-neutral-200);
 }
 
 .OuicontextMenu_separator_icon {
@@ -78,12 +84,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: light-dark(var(--Ouineutral-200), var(--Ouineutral-800));
+  background-color: light-dark(var(--Oui-neutral-200), var(--Oui-neutral-800));
 }
 
 .OuicontextMenu_group_title {
-  font-size: var(--Ouispacing-sm);
-  color: var(--Ouineutral-500);
+  font-size: var(--Oui-spacing-sm);
+  color: var(--Oui-neutral-500);
   padding-inline: 10px;
   padding-top: 4px;
 }

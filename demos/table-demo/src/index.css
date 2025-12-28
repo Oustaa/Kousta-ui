@@ -12,12 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --Ouispacing-sm: 4px;
-  --Ouispacing-md: 8px;
-  --Ouiprimary-500: red;
-  --Ouiprimary-600: rgba(255, 0, 0, 0.8);
-  --Ouirounded: 0.2;
-  --Ouidanger-500: blue;
+  --Oui-spacing-sm: 4px;
+  --Oui-spacing-md: 8px;
+  --Oui-primary-500: red;
+  --Oui-primary-600: rgba(255, 0, 0, 0.8);
+  --Oui-rounded: 0.2;
+  --Oui-danger-500: blue;
 }
 
 .bg-red-500 {

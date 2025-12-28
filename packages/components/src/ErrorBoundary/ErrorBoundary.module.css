@@ -3,8 +3,8 @@
 =============================================*/
 
 .error-text {
-  font-size: var(--Ouitext-base);
-  color: var(--Ouidanger-500);
+  font-size: var(--Oui-text-base);
+  color: var(--Oui-danger-500);
 }
 
 /*=====       End of ErrorBoundary   ======*/

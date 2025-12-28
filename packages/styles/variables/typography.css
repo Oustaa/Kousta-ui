@@ -1,10 +1,10 @@
 :root {
   /* Text Sizing */
-  --Ouitext-xs: 0.5rem;
-  --Ouitext-sm: 0.75rem;
-  --Ouitext-base: 1rem;
-  --Ouitext-medium: 1.125rem;
-  --Ouitext-lg: 1.5rem;
-  --Ouitext-xl: 2.75rem;
-  --Ouitext-2xl: 4rem;
+  --Oui-text-xs: 0.5rem;
+  --Oui-text-sm: 0.75rem;
+  --Oui-text-base: 1rem;
+  --Oui-text-medium: 1.125rem;
+  --Oui-text-lg: 1.5rem;
+  --Oui-text-xl: 2.75rem;
+  --Oui-text-2xl: 4rem;
 }

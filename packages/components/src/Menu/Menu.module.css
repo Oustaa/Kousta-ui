@@ -15,7 +15,10 @@ button {
 
 .Ouimenu_target {
   border: unset;
-  background-color: light-dark(--var(--Ouineutral-600), var(--Ouineutral-200));
+  background-color: light-dark(
+    --var(--Oui-neutral-600),
+    var(--Oui-neutral-200)
+  );
 
   &:hover {
     cursor: pointer;
@@ -25,17 +28,17 @@ button {
 .Ouimenu_dropdown {
   width: max-content;
   position: absolute;
-  background: light-dark(var(--Ouineutral-50), var(--Ouineutral-700));
-  color: light-dark(var(--Ouineutral-900), var(--Ouineutral-50));
-  padding: var(--Ouispacing-sm);
+  background: light-dark(var(--Oui-neutral-50), var(--Oui-neutral-700));
+  color: light-dark(var(--Oui-neutral-900), var(--Oui-neutral-50));
+  padding: var(--Oui-spacing-sm);
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 4px;
-  box-shadow: 2px 2px 6px light-dark(var(--Ouineutral-100), transparent);
-  border: 1px solid light-dark(var(--Ouineutral-200), var(--Ouineutral-700));
+  box-shadow: 2px 2px 6px light-dark(var(--Oui-neutral-100), transparent);
+  border: 1px solid light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
   z-index: 1000;
-  border-radius: calc(var(--Ouirounded) * 1rem);
+  border-radius: calc(var(--Oui-rounded) * 1rem);
 }
 
 .Ouimenu_item {
@@ -45,7 +48,7 @@ button {
   gap: 6px;
 
   &:not(:first-child) {
-    margin-top: var(--Ouispacing-sm);
+    margin-top: var(--Oui-spacing-sm);
   }
 
   &:hover {
@@ -60,8 +63,8 @@ button {
 .Ouimenu_divider {
   height: 1px;
   width: 100%;
-  margin-block: var(--Ouispacing-sm);
-  background-color: light-dark(var(--Ouineutral-800), var(--Ouineutral-200));
+  margin-block: var(--Oui-spacing-sm);
+  background-color: light-dark(var(--Oui-neutral-800), var(--Oui-neutral-200));
   border: unset;
 }
 

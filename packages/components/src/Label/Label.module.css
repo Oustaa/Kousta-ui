@@ -3,18 +3,18 @@
 =============================================*/
 
 .label {
-  font-size: var(--Ouitext-base);
-  color: light-dark(var(--Ouineutral-900), var(--Ouineutral-50));
+  font-size: var(--Oui-text-base);
+  color: light-dark(var(--Oui-neutral-900), var(--Oui-neutral-50));
   font-weight: 500;
 
   &[data-required="true"]::after {
     content: "*";
-    color: var(--Ouidanger-600);
-    margin-left: var(--Ouispacing-xs);
+    color: var(--Oui-danger-600);
+    margin-left: var(--Oui-spacing-xs);
   }
 
   &[data-error="true"] {
-    color: var(--Ouidanger-600);
+    color: var(--Oui-danger-600);
   }
 }
 

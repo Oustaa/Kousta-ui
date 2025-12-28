@@ -5,9 +5,7 @@
 .formElement {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: var(--Ouispacing-2xs);
+  gap: var(--Oui-spacing-2xs);
 }
 
 /*=====      End of FormElement        ======*/

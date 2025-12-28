@@ -1,11 +1,11 @@
 :root {
-  --Ouispacing-2xs: 0.25rem;
-  --Ouispacing-xs: 0.5rem;
-  --Ouispacing-sm: 0.75rem;
-  --Ouispacing-base: 1rem;
-  --Ouispacing-md: 1.25rem;
-  --Ouispacing-lg: 1.5rem;
-  --Ouispacing-xl: 1.75rem;
-  --Ouispacing-2xl: 2rem;
-  --Ouispacing-3xl: 3rem;
+  --Oui-spacing-2xs: 0.25rem;
+  --Oui-spacing-xs: 0.5rem;
+  --Oui-spacing-sm: 0.75rem;
+  --Oui-spacing-base: 1rem;
+  --Oui-spacing-md: 1.25rem;
+  --Oui-spacing-lg: 1.5rem;
+  --Oui-spacing-xl: 1.75rem;
+  --Oui-spacing-2xl: 2rem;
+  --Oui-spacing-3xl: 3rem;
 }

@@ -8,8 +8,8 @@
 }
 
 .Ouithead {
-  background-color: light-dark(var(--Ouineutral-100), var(--Ouineutral-800));
-  color: light-dark(var(--Ouineutral-950), var(--Ouineutral-50));
+  background-color: light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800));
+  color: light-dark(var(--Oui-neutral-950), var(--Oui-neutral-50));
 }
 
 .Ouibody {
@@ -17,22 +17,22 @@
 }
 
 .Ouitr {
-  /* border: 1px solid light-dark(var(--Ouineutral-200), var(--Ouineutral-700)); */
+  /* border: 1px solid light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700)); */
 }
 
 .Ouith {
-  border: 1px solid light-dark(var(--Ouineutral-200), var(--Ouineutral-700));
+  border: 1px solid light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
   padding-block: 0.5rem;
 }
 
 .Ouitd {
-  background-color: light-dark(var(--Ouineutral-50), var(--Ouineutral-900));
+  background-color: light-dark(var(--Oui-neutral-50), var(--Oui-neutral-900));
   text-align: center;
   padding: 0.25rem;
   padding-block: 0.5rem;
-  border: 1px solid light-dark(var(--Ouineutral-200), var(--Ouineutral-700));
-  color: light-dark(var(--Ouineutral-950), var(--Ouineutral-50));
-  padding-inline: var(--Ouispacing-sm);
+  border: 1px solid light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
+  color: light-dark(var(--Oui-neutral-950), var(--Oui-neutral-50));
+  padding-inline: var(--Oui-spacing-sm);
   text-align: left;
 }
 

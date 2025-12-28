@@ -4,24 +4,24 @@
 
 .Ouitable-head {
   display: flex;
-  gap: var(--Ouispacing-md);
+  gap: var(--Oui-spacing-md);
   justify-content: space-between;
-  margin-bottom: var(--Ouispacing-xs);
+  margin-bottom: var(--Oui-spacing-xs);
 }
 
 .Ouitable-head-section {
   display: flex;
   align-items: center;
-  column-gap: var(--Ouispacing-sm);
+  column-gap: var(--Oui-spacing-sm);
 }
 
 .Ouitable-head_sh_label {
   display: flex;
-  gap: var(--Ouispacing-xs);
+  gap: var(--Oui-spacing-xs);
 }
 
 .table-actions-container {
   display: flex;
-  gap: var(--Ouispacing-xs);
+  gap: var(--Oui-spacing-xs);
 }
 /*=====         End of DataTable        ======*/
