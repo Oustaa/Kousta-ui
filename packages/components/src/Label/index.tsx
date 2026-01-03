@@ -16,7 +16,7 @@ const Label: FC<
         // this is not correct based on the type of the errors...
         Array.isArray(errors) && errors.length > 0 ? "true" : "false"
       }
-      className={classes["label"]}
+      className={`${classes["label"]} kui-label`}
       htmlFor={label}
       {...labelProps}
     >

@@ -1,10 +1,6 @@
 import { FC } from "react";
 import { InputProps } from "./_props";
-import {
-  renderLeftSectionItem,
-  renderMiddleSectionItem,
-  renderRightSectionItem,
-} from "../utils/renderSections";
+import { renderMiddleSectionItem } from "../utils/renderSections";
 
 import classes from "./Input.module.css";
 import Label from "../Label";

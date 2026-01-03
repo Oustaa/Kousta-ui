@@ -15,10 +15,7 @@ button {
 
 .Ouimenu_target {
   border: unset;
-  background-color: light-dark(
-    --var(--Oui-neutral-600),
-    var(--Oui-neutral-200)
-  );
+  background-color: light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
 
   &:hover {
     cursor: pointer;

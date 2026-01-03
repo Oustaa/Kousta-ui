@@ -25,7 +25,7 @@
   border-radius: calc(var(--Oui-rounded) * 1rem);
 
   &::placeholder {
-    color: light-dark(var(--Oui-neutrl-200), var(--Oui-neutral-700));
+    color: light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
   }
 
   &:focus,

@@ -23,6 +23,6 @@ describe("Label Tests", () => {
     const labelElement = screen.getByText(/label/i);
     expect(labelElement).toBeInTheDocument();
     expect(labelElement).toHaveAttribute("data-error", "true");
-    expect(labelElement).toHaveStyle({ color: "var(--Ouidanger-600)" });
+    expect(labelElement).toHaveStyle({ color: "var(--Oui-danger-600)" });
   });
 });
