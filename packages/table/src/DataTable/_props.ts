@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, PropsWithChildren, ReactNode } from "react";
-import { ButtonProps, MenuProps, ModalProps } from "@ousta-ui/components";
+import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
 
 export type TableProps<T> = {
   data: T[];

@@ -1,4 +1,4 @@
-import { ButtonProps, MenuProps, ModalProps } from "@ousta-ui/components";
+import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
 import {
   ComponentPropsWithoutRef,
   createContext,

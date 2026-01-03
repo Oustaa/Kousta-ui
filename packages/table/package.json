@@ -1,5 +1,5 @@
 {
-  "name": "@ousta-ui/table",
+  "name": "@kousta-ui/table",
   "version": "0.1.4",
   "main": "./cjs/table/src/index.cjs",
   "module": "./esm/table/src/index.mjs",
@@ -20,9 +20,9 @@
     "sass": "^1.79.3"
   },
   "dependencies": {
-    "@ousta-ui/components": "workspace:*",
-    "@ousta-ui/helpers": "workspace:*",
-    "@ousta-ui/hooks": "workspace:*"
+    "@kousta-ui/components": "workspace:*",
+    "@kousta-ui/helpers": "workspace:*",
+    "@kousta-ui/hooks": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=17",

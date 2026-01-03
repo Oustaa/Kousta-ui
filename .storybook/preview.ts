@@ -1,9 +1,9 @@
 import type { Preview } from "@storybook/react";
 import type { Decorator } from "@storybook/react";
 
-import "@ousta-ui/styles/tokens.css";
-import "@ousta-ui/components/esm/index.css";
-import "@ousta-ui/table/esm/index.css";
+import "@kousta-ui/styles/tokens.css";
+import "@kousta-ui/components/esm/index.css";
+import "@kousta-ui/table/esm/index.css";
 
 import React from "react";
 

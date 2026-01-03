@@ -2,7 +2,7 @@ import { useState } from "react";
 import Table from "../../Table";
 import { useTableContext } from "../tableContext";
 import { hasActions, hasBulkActions } from "../utils/tableAction";
-import { Menu } from "@ousta-ui/components";
+import { Menu } from "@kousta-ui/components";
 
 function TableHeader() {
   const [, setAllSelected] = useState<boolean>(false);

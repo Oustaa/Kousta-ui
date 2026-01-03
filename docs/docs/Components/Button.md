@@ -233,7 +233,7 @@ Default class names from `Button.module.css`:
 - Light: `.btn-primary-light`, `.btn-success-light`, `.btn-danger-light`, `.btn-neutral-light`, `.btn-warning-light`
 - Link: `.btn-primary-link`, `.btn-success-link`, `.btn-danger-link`, `.btn-neutral-link`, `.btn-warning-link`
 
-Each variant leverages design tokens (e.g., `--Ouiprimary-500`) and defines hover states per style.
+Each variant leverages design tokens (e.g., `--Oui-primary-500`) and defines hover states per style.
 
 ---
 

@@ -5,7 +5,7 @@
 .formElement {
   width: 100%;
   display: flex;
-  gap: var(--Oui-spacing-2xs);
+  gap: var(--kui-spacing-2xs);
 }
 
 /*=====      End of FormElement        ======*/

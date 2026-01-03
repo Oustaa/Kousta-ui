@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTableContext } from "../tableContext";
-import { Button, Input } from "@ousta-ui/components";
+import { Button, Input } from "@kousta-ui/components";
 
 const TableSearch = () => {
   const { options, headers } = useTableContext();

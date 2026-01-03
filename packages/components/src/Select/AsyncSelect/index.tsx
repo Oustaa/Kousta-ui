@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { SelectDataConstraints } from "../Base/_props";
 import { AsyncSelectProps } from "./_props";
 import Select from "../Base";
-import { useDebounceCallback } from "@ousta-ui/hooks";
+import { useDebounceCallback } from "@kousta-ui/hooks";
 
 const AsyncSelect = <T extends SelectDataConstraints>({
   getData,

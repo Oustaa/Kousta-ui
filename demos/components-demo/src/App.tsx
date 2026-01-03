@@ -1,16 +1,16 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   Button,
   ContextMenu,
   Menu,
-  Input,
+  // Input,
   Modal,
   ComponentPropsProvider,
   Group,
   Select,
   WindowBoundary,
   AsyncSelect,
-} from "@ousta-ui/components";
+} from "@kousta-ui/components";
 import {
   Bs123,
   BsAlphabet,
@@ -20,14 +20,13 @@ import {
 } from "react-icons/bs";
 import { RiFileExcel2Line } from "react-icons/ri";
 
-import "@ousta-ui/components/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 import "./App.css";
 import "./index.css";
-import { useDisclosure, useScrollLock } from "@ousta-ui/hooks";
+import { useDisclosure, useScrollLock } from "@kousta-ui/hooks";
 
-import { isNodeAChild } from "@ousta-ui/helpers";
 // import { getUsers } from "./app";
-import { useDebounceCallback } from "@ousta-ui/hooks";
+// import { useDebounceCallback } from "@kousta-ui/hooks";
 
 type User = { first_name: string; last_name: string; id: number };
 type ProductInterface = { ref: string; id: number; designation: string };
@@ -54,17 +53,16 @@ function App() {
   const { lockScroll, unlockScroll } = useScrollLock();
   const { opened, close, open } = useDisclosure(false);
   const [loading, setLoading] = useState(false);
-  const [value, setValue] = useState<string>("");
+  const [, setValue] = useState<string>("");
   const [count, setCount] = useState<number>(0);
-  const parentRef = useRef<null | HTMLDivElement>(null);
 
-  const debouncedOnChange = useDebounceCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      console.log(e);
-      alert(e.target.value);
-    },
-    500,
-  );
+  // const debouncedOnChange = useDebounceCallback(
+  //   (e: React.ChangeEvent<HTMLInputElement>) => {
+  //     console.log(e);
+  //     alert(e.target.value);
+  //   },
+  //   500,
+  // );
 
   const [selectData] = useState([
     { first_name: "Youness", last_name: "Tailba", id: 1 },
@@ -109,29 +107,6 @@ function App() {
 
   return (
     <>
-      <div ref={parentRef}>
-        <button
-          onClick={(e) => {
-            alert(isNodeAChild(parentRef.current, e.target as Node));
-          }}
-        >
-          inside
-        </button>
-        <button
-          onClick={(e) => {
-            alert(isNodeAChild(parentRef.current, e.target as Node));
-          }}
-        >
-          inside 2
-        </button>
-      </div>
-      <button
-        onClick={(e) => {
-          alert(isNodeAChild(parentRef.current, e.target as Node));
-        }}
-      >
-        outside
-      </button>
       <ComponentPropsProvider
         button={{
           size: "sm",
@@ -238,8 +213,19 @@ function App() {
         <br />
         <br />
         <br />
-        <div style={{ display: "flex", gap: "12px" }}>
-          <div>
+        <div
+          style={{
+            display: "flex",
+            gap: "12px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              gap: "12px",
+              width: "100%",
+            }}
+          >
             <Select<User>
               // loading
               // clearable={false}
@@ -250,8 +236,8 @@ function App() {
                 label: "first_name last_name",
               }}
               label="Static Select"
-              // errors={["There is an error"]}
-              // labelPosition="x"
+              // errors={["There is an error", "there is another one"]}
+              labelPosition="x"
               required
               emptyMessage="Give me some options"
               // seachable={false}
@@ -262,55 +248,66 @@ function App() {
               onSearch={(user: User, term: string) => user.first_name === term}
             />
             <AsyncSelect<ProductInterface>
-              clearable={false}
+              // clearable={false}
               hasMore={(resp, page) => page < resp.meta.totalPages}
               getData={getSelectProducts}
               extractDynamicData={(resp) => resp.products}
-              // value={4}
+              value={4}
               options={{
                 value: "id",
                 label: "id - designation",
+                renderOption(row) {
+                  return `id: ${row.id} - ${row.designation}`;
+                },
               }}
               label="Dynamic Select"
               // errors={["There is an error"]}
-              // labelPosition="x"
-              required
+              labelPosition="x"
+              // required
               emptyMessage="Give me some options"
               // seachable={false}
               // disabled
-              disabledOption={(row) => row.id === 4 || row.id === 9}
+              disabledOption={(row) => {
+                return row.id === 4 || row.id === 9;
+              }}
+              onChange={(value) => {
+                console.log({ value });
+              }}
+              // searchTimeout={100}
+              // rawValue
+              // isMultiple
             />
           </div>
-          <Input
-            label="Society"
-            placeholder="this is my placeholder"
-            // errors={["There is an error"]}
-            // required={true}
-            // type="numbenumberr"
-            value={value}
-            // type="number"
-            step={2.5}
-            // onChange={(e) => {
-            //   setValue(e.target.value);
-            //   alert(e.target.value);
-            // }}
-            onChange={(e) => {
-              debouncedOnChange(e);
-              setValue(e.target.value);
-            }}
-            // labelPosition="x"
-            // i should add this
-            leftSection={
-              <Button onClick={() => alert("Hello InputLeft Section")}>
-                left
-              </Button>
-            }
-            rightSection={
-              <Button onClick={() => alert("Hello InputLeft Section")}>
-                right
-              </Button>
-            }
-          />
+          {/* <Input */}
+          {/*   label="Society" */}
+          {/*   placeholder="this is my placeholder" */}
+          {/*   // errors={["There is an error"]} */}
+          {/*   // required={true} */}
+          {/*   // type="numbenumberr" */}
+          {/*   value={value} */}
+          {/*   // type="number" */}
+          {/*   step={2.5} */}
+          {/*   // onChange={(e) => { */}
+          {/*   //   setValue(e.target.value); */}
+          {/*   //   alert(e.target.value); */}
+          {/*   // }} */}
+          {/*   onChange={(e) => { */}
+          {/*     debouncedOnChange(e); */}
+          {/*     setValue(e.target.value); */}
+          {/*   }} */}
+          {/*   // labelPosition="x" */}
+          {/*   // i should add this */}
+          {/*   leftSection={ */}
+          {/*     <Button onClick={() => alert("Hello InputLeft Section")}> */}
+          {/*       left */}
+          {/*     </Button> */}
+          {/*   } */}
+          {/*   rightSection={ */}
+          {/*     <Button onClick={() => alert("Hello InputLeft Section")}> */}
+          {/*       right */}
+          {/*     </Button> */}
+          {/*   } */}
+          {/* /> */}
         </div>
         <br />
         <br />

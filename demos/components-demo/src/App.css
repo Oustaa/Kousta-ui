@@ -1,9 +1,9 @@
 :root {
-  /* --Ouispacing-sm: 4px; */
-  /* --Ouispacing-md: 8px; */
-  /* --Ouiprimary-500: red; */
-  /* --Ouiprimary-600: rgba(255, 0, 0, 0.8); */
-  --Ouirounded: 0.4;
+  /* --kui-spacing-sm: 4px; */
+  /* --kui-spacing-md: 8px; */
+  /* --kui-primary-500: red; */
+  /* --kui-primary-600: rgba(255, 0, 0, 0.8); */
+  --kui-rounded: 0.4;
 }
 
 #root {
@@ -11,6 +11,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .logo {

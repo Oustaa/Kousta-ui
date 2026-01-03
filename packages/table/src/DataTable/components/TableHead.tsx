@@ -1,5 +1,5 @@
 import { useTableContext } from "../tableContext";
-import { Button, Menu } from "@ousta-ui/components";
+import { Button, Menu } from "@kousta-ui/components";
 
 import classes from "../DataTable.module.css";
 

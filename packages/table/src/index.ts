@@ -1,4 +1,4 @@
-import "@ousta-ui/styles/tokens.css";
+import "@kousta-ui/styles/tokens.css";
 
 export { default as Table } from "./Table/index";
 

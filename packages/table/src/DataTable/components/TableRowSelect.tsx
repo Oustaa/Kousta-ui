@@ -18,7 +18,7 @@ const TableRowCheckbox = <T extends Record<string, unknown>>({
       style={{
         width: "min-content",
         backgroundColor: highlighted
-          ? "light-dark(var(--Ouineutral-100), var(--Ouineutral-800))"
+          ? "light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800))"
           : "unset",
         ...config?.props?.td?.style,
       }}

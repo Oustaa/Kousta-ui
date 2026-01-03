@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import FormElement from "../../FormElement";
 import Label from "../../Label";
 import { SelectDataConstraints, SelectProps } from "./_props";
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 import SelectDropDown from "./components/SelectDropDown";
 import SelectSearchInput from "./components/SelectSearchInput";
 

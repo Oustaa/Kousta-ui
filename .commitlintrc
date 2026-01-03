@@ -8,7 +8,7 @@
     'scope-enum': [
       2,
       'always',
-      ['components', 'docs', 'helpers', 'hooks', 'styles', 'table', 'release'],
+      ['components', 'docs', 'helpers', 'hooks', 'styles', 'table', 'release', 'global'],
     ],
   }
 }

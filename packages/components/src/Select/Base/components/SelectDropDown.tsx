@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import classes from "../Select.module.css";
 import SelectOption from "./SelectOption";
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 type SelectDropDownProps<T extends SelectDataConstraints> = {
   closeOnClickOutside: (e?: MouseEvent | TouchEvent) => void;

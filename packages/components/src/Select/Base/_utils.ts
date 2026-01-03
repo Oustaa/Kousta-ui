@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { SelectDataConstraints, SelectOptionType } from "./_props";
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 export const getOptionLabel = <T extends SelectDataConstraints>(
   row: T,

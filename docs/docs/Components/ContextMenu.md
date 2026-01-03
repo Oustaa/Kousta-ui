@@ -52,7 +52,7 @@ export default function Example() {
         },
       ]}
     >
-      <div style={{ padding: 24, border: "1px dashed var(--Ouineutral-400)" }}>
+      <div style={{ padding: 24, border: "1px dashed var(--Oui-neutral-400)" }}>
         Right‑click anywhere in this box
       </div>
     </ContextMenu>

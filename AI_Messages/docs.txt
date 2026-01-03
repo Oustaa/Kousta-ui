@@ -1,0 +1,12 @@
+update the docs for the whole packages ( components, table, hooks, helper ).
+  - first update the existing one, and any one that dose not exists ( e.g. table, dataTable, helper, hooks )
+  - also fix the docs home page.
+  - for the components and table packages add preview on each example.
+  - for each props add a description of it and how it should be used, and everything the users whom will use the ui library might need to know. and for each props if needed add a preview.
+  - for each props if the propsProvider can accept it add a preview to it and how the user can use it.
+  - don't forget to add styles docs, and the --Oui-rounded it meant to add a border-radius to all the element if not set every components will have a 0 border-radius multiplier hense every components will have a sharp edge.
+
+NOTES:
+  - the helpers are a set of functions that can be used with any js ui library, as well as nodejs.
+  - each of TablePropsProvider and ComponentsPropsProvider is a providers that can be used to overwrite the default props of the table and components.
+  - the previews are should not be a storybook they should be in the page of the docs.

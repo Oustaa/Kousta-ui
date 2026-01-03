@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Table from "../../Table";
 import { THeaderValue } from "../_props";
 
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 import { useTableContext } from "../tableContext";
 
 const TableRowCol = <T extends Record<string, unknown>>({
@@ -33,7 +33,7 @@ const TableRowCol = <T extends Record<string, unknown>>({
       {...config?.props?.td}
       style={{
         backgroundColor: highlighted
-          ? "light-dark(var(--Ouineutral-100), var(--Ouineutral-800))"
+          ? "light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800))"
           : "unset",
         ...config?.props?.td?.style,
       }}

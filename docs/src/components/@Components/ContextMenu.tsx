@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ContextMenu } from "@ousta-ui/components";
+import { ContextMenu } from "@kousta-ui/components";
 import {
   LuCopy,
   LuTrash2,
@@ -32,7 +32,7 @@ export const CM_QuickStartPreview = () => {
       <div
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -49,7 +49,7 @@ export const CM_BasicRightClickPreview = () => {
       <div
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -87,7 +87,7 @@ export const CM_SubMenusPreview = () => {
           height: 120,
           display: "grid",
           placeItems: "center",
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -113,7 +113,7 @@ export const CM_GroupsIconsPreview = () => {
       <div
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -135,7 +135,7 @@ export const CM_CloseBehaviorPreview = () => {
       <div
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -181,7 +181,7 @@ export const CM_PositioningInteractivePreview = () => {
         ref={areaRef}
         style={{
           position: "relative",
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
           padding: 24,
           minHeight: 180,
@@ -226,7 +226,7 @@ export const CM_CustomWrapperPreview = () => {
       <section
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >
@@ -257,7 +257,7 @@ export const CM_AccessibilityPreview = () => {
       <div
         style={{
           padding: 16,
-          border: "1px dashed var(--Ouineutral-400)",
+          border: "1px dashed var(--Oui-neutral-400)",
           borderRadius: 8,
         }}
       >

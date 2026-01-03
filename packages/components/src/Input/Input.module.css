@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--Oui-spacing-2xs);
+  gap: var(--kui-spacing-2xs);
 }
 
 .input-inner {
@@ -17,37 +17,37 @@
 }
 
 .input {
-  padding: var(--Oui-spacing-xs) var(--Oui-spacing-sm);
-  border: solid 0.5px light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
-  background-color: light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800));
-  font-size: var(--Oui-text-base);
+  padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
+  border: solid 0.5px light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
+  background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
+  font-size: var(--kui-text-base);
   flex: 1 1 0%;
-  border-radius: calc(var(--Oui-rounded) * 1rem);
+  border-radius: calc(var(--kui-rounded) * 1rem);
 
   &::placeholder {
-    color: light-dark(var(--Oui-neutral-200), var(--Oui-neutral-700));
+    color: light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
   }
 
   &:focus,
   &:focus-visible {
     outline: unset;
-    border-color: var(--Oui-primary-600);
+    border-color: var(--kui-primary-600);
   }
 
   &[data-error="true"] {
-    background-color: var(--Oui-danger-100);
-    border: 0.5px solid var(--Oui-danger-600);
-    color: var(--Oui-danger-600);
+    background-color: var(--kui-danger-100);
+    border: 0.5px solid var(--kui-danger-600);
+    color: var(--kui-danger-600);
 
     &::placeholder {
-      color: var(--Oui-danger-400);
+      color: var(--kui-danger-400);
     }
   }
 }
 
 .error-message {
-  color: var(--Oui-danger-500);
-  font-size: var(--Oui-text-sm);
+  color: var(--kui-danger-500);
+  font-size: var(--kui-text-sm);
 }
 
 /*=====            End of Input        ======*/

@@ -9,7 +9,7 @@ import {
 import { ModalPosition, ModalProps, ModalSize } from "./_props";
 import classes from "./Modal.module.css";
 import Button from "../Button";
-import { useScrollLock } from "@ousta-ui/hooks";
+import { useScrollLock } from "@kousta-ui/hooks";
 import { modalPositionStyle } from "./modalPositions";
 import { ModalPropsProvided, useComponentContext } from "../PropsContext";
 

@@ -4,7 +4,7 @@
 .modal-container {
   position: fixed;
   border: 0;
-  background-color: light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800));
+  background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
   top: 120px;
   padding: 0;
   margin: 0;
@@ -13,19 +13,19 @@
   max-width: 100vw;
   overflow: auto;
   z-index: 1000;
-  border-radius: calc(1rem * var(--Oui-rounded));
+  border-radius: calc(1rem * var(--kui-rounded));
 }
 
 .menu-header {
-  padding-inline: var(--Oui-spacing-sm);
-  padding-block: var(--Oui-spacing-xs);
+  padding-inline: var(--kui-spacing-sm);
+  padding-block: var(--kui-spacing-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   position: sticky;
   top: 0;
-  background-color: light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800));
+  background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
 
   & h3 {
     margin: 0;
@@ -34,17 +34,17 @@
 }
 
 .menu-header h3 {
-  font-size: var(--Oui-text-base);
+  font-size: var(--kui-text-base);
 }
 
 .menu-body {
-  padding: var(--Oui-spacing-sm);
+  padding: var(--kui-spacing-sm);
 }
 
 .backdrop {
   position: fixed;
   inset: 0;
-  background-color: var(--Oui-neutral-950);
+  background-color: var(--kui-neutral-950);
   opacity: 0.35;
   z-index: 300;
 }
@@ -181,46 +181,46 @@
 /* } */
 /**/
 /* .backdrop-enter { */
-/*   animation: fade-in var(--Oui-anim-duration, 200ms) ease-out both; */
+/*   animation: fade-in var(--kui-anim-duration, 200ms) ease-out both; */
 /* } */
 /* .backdrop-exit { */
-/*   animation: fade-out var(--Oui-anim-duration, 200ms) ease-in both; */
+/*   animation: fade-out var(--kui-anim-duration, 200ms) ease-in both; */
 /* } */
 /**/
 /* .slide-left-enter { */
-/*   animation: slide-left-in var(--Oui-anim-duration, 200ms) ease-out; */
+/*   animation: slide-left-in var(--kui-anim-duration, 200ms) ease-out; */
 /* } */
 /* .slide-left-exit { */
-/*   animation: slide-left-out var(--Oui-anim-duration, 160ms) ease-in; */
+/*   animation: slide-left-out var(--kui-anim-duration, 160ms) ease-in; */
 /* } */
 /**/
 /* .slide-right-enter { */
-/*   animation: slide-right-in var(--Oui-anim-duration, 200ms) ease-out; */
+/*   animation: slide-right-in var(--kui-anim-duration, 200ms) ease-out; */
 /* } */
 /* .slide-right-exit { */
-/*   animation: slide-right-out var(--Oui-anim-duration, 160ms) ease-in; */
+/*   animation: slide-right-out var(--kui-anim-duration, 160ms) ease-in; */
 /* } */
 /**/
 /* .fade-enter { */
-/*   animation: fade-in var(--Oui-anim-duration, 180ms) ease-out; */
+/*   animation: fade-in var(--kui-anim-duration, 180ms) ease-out; */
 /* } */
 /* .fade-exit { */
-/*   animation: fade-out var(--Oui-anim-duration, 120ms) ease-in; */
+/*   animation: fade-out var(--kui-anim-duration, 120ms) ease-in; */
 /* } */
 /**/
 /* .zoom-enter { */
-/*   animation: zoom-in var(--Oui-anim-duration, 200ms) */
+/*   animation: zoom-in var(--kui-anim-duration, 200ms) */
 /*     cubic-bezier(0.2, 0.8, 0.2, 1); */
 /* } */
 /* .zoom-exit { */
-/*   animation: zoom-out var(--Oui-anim-duration, 160ms) cubic-bezier(0.4, 0, 1, 1); */
+/*   animation: zoom-out var(--kui-anim-duration, 160ms) cubic-bezier(0.4, 0, 1, 1); */
 /* } */
 /**/
 /* .drop-top-enter { */
-/*   animation: drop-top-in var(--Oui-anim-duration, 220ms) ease-out; */
+/*   animation: drop-top-in var(--kui-anim-duration, 220ms) ease-out; */
 /* } */
 /* .drop-top-exit { */
-/*   animation: drop-top-out var(--Oui-anim-duration, 160ms) ease-in; */
+/*   animation: drop-top-out var(--kui-anim-duration, 160ms) ease-in; */
 /* } */
 
 /*=====          End of Modal          ======*/

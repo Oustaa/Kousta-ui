@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
-import { DataTable, TablePropsProvider } from "@ousta-ui/table";
-import { Input, Menu } from "@ousta-ui/components";
+import { DataTable, TablePropsProvider } from "@kousta-ui/table";
+import { Input, Menu } from "@kousta-ui/components";
 import {
   BsChevronDown,
   BsChevronUp,
@@ -12,10 +12,10 @@ import {
 
 import { users } from "./data/users";
 
-import "@ousta-ui/table/esm/index.css";
-import "@ousta-ui/components/esm/index.css";
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
-import { THeader } from "@ousta-ui/table/lib/DataTable/_props";
+import { THeader } from "@kousta-ui/table/lib/DataTable/_props";
 
 export type UserType = {
   name: string;
