@@ -4,6 +4,7 @@ type GetDataFunction = (params: {
   page: number;
   limit: number;
   searchTerm?: string;
+  // signal: AbortSignal;
 }) => Promise<unknown>;
 
 type ExtractDynamicDataFunction<T> = (response: any) => T[];
@@ -13,4 +14,5 @@ export type AsyncSelectProps<T extends SelectDataConstraints> = {
   extractDynamicData?: ExtractDynamicDataFunction<T>;
   infiniteScroll?: boolean;
   hasMore?: (responce: any, page: number) => boolean;
+  searchTimeout?: number;
 } & Omit<SelectProps<T>, "data" | "loading" | "onSearch">;

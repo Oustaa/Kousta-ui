@@ -9,6 +9,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
   extractDynamicData,
   limit = 50,
   hasMore,
+  searchTimeout = 500,
   ...rest
 }: AsyncSelectProps<T>) => {
   const isFetchingRef = useRef<boolean>(false);
@@ -28,7 +29,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
 
     getData({ limit, page, searchTerm })
       .then((response) => {
-        let result = extractDynamicData
+        const result = extractDynamicData
           ? extractDynamicData(response)
           : (response as T[]);
 
@@ -54,7 +55,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
   const debouncedSearch = useDebounceCallback(() => {
     setData([]);
     handleGetData();
-  }, 500);
+  }, searchTimeout);
 
   return (
     <Select

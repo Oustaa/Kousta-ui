@@ -42,7 +42,10 @@ const SelectDropDown = <T extends SelectDataConstraints>({
 
   const goNext = useCallback(
     (index: number): number => {
-      // check if the current option is not disabled
+      if (index > data.length - 1) {
+        index = 0;
+      }
+
       const row = data[index];
 
       if (disabledOption && disabledOption(row)) {
@@ -51,12 +54,15 @@ const SelectDropDown = <T extends SelectDataConstraints>({
 
       return index;
     },
-    [highlitedOptionIndex],
+    [highlitedOptionIndex, data],
   );
 
   const goPrev = useCallback(
     (index: number): number => {
-      // check if the current option is not disabled
+      if (index < 0) {
+        index = data.length - 1;
+      }
+
       const row = data[index];
 
       if (disabledOption && disabledOption(row)) {
@@ -65,7 +71,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
 
       return index;
     },
-    [highlitedOptionIndex],
+    [highlitedOptionIndex, data],
   );
 
   useEffect(() => {
@@ -82,6 +88,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
 
           return goNext(prev + 1);
         });
+        e.preventDefault();
       }
       if (e.key === "ArrowUp") {
         setHighlitedOptionIndex((prev) => {
@@ -90,6 +97,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
           }
           return goPrev(prev - 1);
         });
+        e.preventDefault();
       }
     };
 
@@ -134,7 +142,6 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       ) : (
         <>
           {data.map((row, index) => {
-            console.log({ index, "data.length - 1": data.length - 1 });
             return (
               <SelectOption
                 index={index}

@@ -24,6 +24,7 @@ export type SelectOptionType<T> = {
 export type SelectProps<T extends SelectDataConstraints> = {
   data: T[];
   onChange?: (value: unknown) => void;
+  rawValue?: boolean;
   value?: string | number;
   limit?: number;
   // Async Select Props
@@ -44,4 +45,6 @@ export type SelectProps<T extends SelectDataConstraints> = {
   disabled?: boolean;
   onSearch?: (row: T, term: string) => void;
   disabledOption?: (row: T) => boolean;
+
+  isMultiple?: boolean;
 };

@@ -1,9 +1,10 @@
-import { Ref, useCallback, useEffect, useRef } from "react";
+import { Ref, useEffect, useRef } from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import { getOptionLabel } from "../_utils";
-import classes from "../Select.module.css";
 import { getNestedProperty } from "@ousta-ui/helpers";
 import WindowBoundary from "components/src/WindowBoundary";
+
+import classes from "../Select.module.css";
 
 type SelectOptionProps<T extends SelectDataConstraints> = {
   index?: number;

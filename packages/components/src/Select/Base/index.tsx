@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import FormElement from "../../FormElement";
-import Input from "../../Input";
 import Label from "../../Label";
 import { SelectDataConstraints, SelectProps } from "./_props";
-import { getNestedProperty, isNodeAChild } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@ousta-ui/helpers";
+import SelectDropDown from "./components/SelectDropDown";
+import SelectSearchInput from "./components/SelectSearchInput";
 
 import classes from "./Select.module.css";
-import SelectDropDown from "./components/SelectDropDown";
 
 const Select = <T extends SelectDataConstraints>({
   label,
@@ -26,23 +26,70 @@ const Select = <T extends SelectDataConstraints>({
   loading,
   asyncSearch,
   onLastItemRendered,
+  isMultiple,
+  rawValue,
   ...props
 }: SelectProps<T>) => {
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const selectSearchInput = useRef<HTMLInputElement | null>(null);
+  const [isSearching, setIsSearching] = useState<boolean>(false);
   const [selectData, setSelectData] = useState<T[]>(data);
 
   /* Select Value Logic */
-  const [value, setValue] = useState<null | unknown>(props.value);
+  const [value, setValue] = useState<unknown>(props.value);
+
+  /* Drop Down Logic */
+  const selectRef = useRef<HTMLDivElement | null>(null);
+  const [dropDownOpen, setDropDownOpen] = useState<boolean>(false);
+
+  const OpenDropDown = useCallback(() => {
+    if (disabled) return;
+
+    if (dropDownOpen) setDropDownOpen(false);
+    else setDropDownOpen(true);
+  }, [dropDownOpen]);
+
+  const closeDropDown = useCallback(() => {
+    setDropDownOpen(false);
+    setSelectData(data);
+    setIsSearching(false);
+
+    if (selectSearchInput.current) selectSearchInput.current.value = "";
+  }, [data]);
+
+  const closeOnClickOutside = useCallback(
+    (e?: MouseEvent | TouchEvent) => {
+      if (
+        !e ||
+        !selectRef.current ||
+        !selectRef.current.contains(e.target as Node)
+      )
+        closeDropDown();
+    },
+    [data],
+  );
+  /* End Drop Down Logic */
 
   const onSelectValue = useCallback(
     (value: string | number | unknown) => {
       setValue(value);
-      onChange?.(value);
-      setDropDownOpen(false);
-      setSearchTerm("");
-      setSelectData(data);
+
+      if (rawValue) {
+        onChange?.(
+          data.find(
+            (row) => getNestedProperty(row, options?.value as string) === value,
+          ),
+        );
+      } else {
+        onChange?.(value);
+      }
+
+      if (!isMultiple) closeDropDown();
+
+      // checkc if not multiple select clear search input value
+      if (selectSearchInput.current && isMultiple)
+        selectSearchInput.current.value = "";
     },
-    [data],
+    [data, closeDropDown],
   );
 
   const selectedRow = useMemo(
@@ -58,36 +105,6 @@ const Select = <T extends SelectDataConstraints>({
     return getNestedProperty(selectedRow, options.label as string) as string;
   }, [selectedRow]);
   /* End Select Value Logic */
-
-  /* Drop Down Logic */
-  const selectRef = useRef<HTMLDivElement | null>(null);
-  const [dropDownOpen, setDropDownOpen] = useState<boolean>(false);
-
-  const OpenDropDown = useCallback(() => {
-    if (dropDownOpen) setDropDownOpen(false);
-    else setDropDownOpen(true);
-  }, []);
-
-  const closeDropDown = useCallback(() => {
-    setDropDownOpen(false);
-    setSearchTerm("");
-    setSelectData(data);
-  }, [data]);
-
-  const closeOnClickOutside = useCallback(
-    (e?: MouseEvent | TouchEvent) => {
-      if (
-        !e ||
-        isNodeAChild(
-          e.target as HTMLElement,
-          selectRef.current as unknown as HTMLElement,
-        )
-      )
-        closeDropDown();
-    },
-    [data],
-  );
-  /* End Drop Down Logic */
 
   /* Search Logic */
   const search = useCallback(
@@ -112,7 +129,6 @@ const Select = <T extends SelectDataConstraints>({
               );
               return result;
             } else {
-              // lable = "label" is the default...
               return regex.test(getNestedProperty(row, "label") as string);
             }
           });
@@ -132,12 +148,10 @@ const Select = <T extends SelectDataConstraints>({
   }, [data]);
   /* End of Effects */
 
-  useEffect(() => {
-    console.log("SELECT JUST RENDERED");
-  }, []);
-
   return (
-    <div className={`${classes["select"]}${disabled && "disabled"}`}>
+    <div
+      className={`${classes["select-container"]}${disabled ? " disabled" : ""}`}
+    >
       <FormElement labelPosition={labelPosition}>
         {label && (
           <Label
@@ -149,72 +163,99 @@ const Select = <T extends SelectDataConstraints>({
             {label}
           </Label>
         )}
-        <div
-          ref={selectRef}
-          data-disabled={String(disabled)}
-          className={classes["select-container"]}
-        >
-          {/* this should be a div with the className input to have the some style as the input comp */}
-          <Input
-            value={searchTerm ? searchTerm : selectedLabel}
-            errors={errors}
-            onClick={OpenDropDown}
-            disabled={disabled}
-            readOnly={!seachable}
+        <div ref={selectRef} className={classes["select-outer"]}>
+          <div
+            className={[
+              classes["select-inner"],
+              disabled && classes.disabled,
+              errors && classes.error,
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            tabIndex={disabled ? -1 : 0}
             onKeyDown={(e) => {
+              if (!seachable) return;
+
+              if (/^\w$/i.test(e.key)) {
+                if (selectSearchInput.current && !isSearching) {
+                  if (!dropDownOpen) OpenDropDown();
+
+                  selectSearchInput.current.value =
+                    selectSearchInput.current.value + e.key;
+
+                  search(selectSearchInput.current.value);
+                  e.stopPropagation();
+                  e.preventDefault();
+                }
+
+                setIsSearching(true);
+                selectSearchInput.current?.focus();
+              }
+
               if (
                 (e.key === "ArrowDown" || e.key === "ArrowUp") &&
                 !dropDownOpen
               ) {
                 OpenDropDown();
                 e.stopPropagation();
+                e.preventDefault();
+              }
+
+              if (e.key === "Enter") {
+                e.preventDefault();
               }
             }}
-            onFocus={(e) => {
-              const valueLen = e.target.value.length;
-              e.target.setSelectionRange(valueLen, valueLen);
+            onClick={() => {
+              OpenDropDown();
             }}
-            onChange={(e) => {
-              if (!dropDownOpen) {
-                OpenDropDown();
-              }
-              let value = e.target.value;
-
-              if (value.substring(0, value.length - 1) === selectedLabel)
-                value = value[value.length - 1];
-
-              setSearchTerm(value);
-              search(value);
-            }}
-            rightSection={
+          >
+            <SelectSearchInput
+              search={search}
+              ref={selectSearchInput}
+              isSearching={isSearching}
+            />
+            {!isSearching && (
+              <span className={classes["select-value"]}>
+                {options.renderOption &&
+                typeof options.renderOption === "function" &&
+                selectedRow
+                  ? options.renderOption(selectedRow)
+                  : selectedLabel}
+              </span>
+            )}
+            {clearable && selectedRow && (
               <button
-                tabIndex={-1}
-                disabled={disabled}
-                className={classes["select-right-section"]}
-                onClick={() => {
-                  if (value && clearable) {
-                    setValue(null);
-                  } else if (!dropDownOpen) {
-                    setDropDownOpen(true);
-                  }
+                className={[
+                  classes["clear-select"],
+                  errors && classes.error,
+                  disabled && classes.disabled,
+                ].join(" ")}
+                onClick={(e) => {
+                  setValue(undefined);
+
+                  e.stopPropagation();
                 }}
               >
-                {value && clearable ? (
-                  "X"
-                ) : (
-                  <div
-                    style={{
-                      transform: "rotate(90deg)",
-                      fontSize: "medium",
-                      fontWeight: "somibold",
-                    }}
-                  >
-                    &gt;
-                  </div>
-                )}
+                X
               </button>
-            }
-          />
+            )}
+            <button
+              className={[
+                classes["select-toggle"],
+                dropDownOpen && classes.open,
+                disabled && classes.disabled,
+              ].join(" ")}
+              tabIndex={-1}
+              onClick={(e) => {
+                if (dropDownOpen) closeDropDown();
+                else OpenDropDown();
+
+                e.stopPropagation();
+              }}
+            >
+              V
+            </button>
+          </div>
           {dropDownOpen && (
             <SelectDropDown
               key={data.length}
@@ -231,6 +272,21 @@ const Select = <T extends SelectDataConstraints>({
           )}
         </div>
       </FormElement>
+      {errors && (
+        <div className={classes["select-error-message"]}>
+          {typeof errors === "string" ? (
+            <p className={classes["error-message"]}>{errors}</p>
+          ) : Array.isArray(errors) ? (
+            errors.map((error, index) => (
+              <p key={index} className={classes["error-message"]}>
+                {error}
+              </p>
+            ))
+          ) : (
+            ""
+          )}
+        </div>
+      )}
     </div>
   );
 };
