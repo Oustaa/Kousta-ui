@@ -11,7 +11,7 @@ const SelectSearchInput = forwardRef<HTMLInputElement, SelectSearchInputProps>(
     return (
       <input
         ref={ref}
-        className={classes["select-input"]}
+        className={`${classes["select-input"]} kui-select-input`}
         style={isSearching ? { display: "block" } : { display: "none" }}
         onChange={(e) => {
           search(e.target.value);

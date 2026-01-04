@@ -187,3 +187,61 @@ export type ModalProps = { /* see props table above */ }
 - The modal automatically handles body scroll locking.
 - Use `withBackdrop={false}` for non-blocking overlays.
 - Combine `fullWidth` and `position="bottom"` for a **mobile sheet** effect.
+
+---
+
+## Styles
+
+Kousta-UI Modal components include customizable CSS classes for easy styling overrides. Each modal element receives the following classes:
+
+### Base Classes
+- `kui-modal` - Base modal class applied to all modals
+- `kui-modal-{size}` - Size-specific class (e.g., `kui-modal-sm`, `kui-modal-md`, `kui-modal-lg`)
+- `kui-modal-{position}` - Position-specific class (e.g., `kui-modal-center`, `kui-modal-top`)
+
+### Component Classes
+- `kui-modal-backdrop` - Modal backdrop overlay
+- `kui-modal-header` - Modal header container
+- `kui-modal-title` - Modal title element
+- `kui-modal-close` - Close button element
+- `kui-modal-body` - Modal body/content area
+- `kui-modal-footer` - Modal footer area
+
+### Customization Examples
+
+You can easily override modal styles using these CSS classes:
+
+```css
+/* Custom modal styling */
+.kui-modal {
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom backdrop */
+.kui-modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Custom header */
+.kui-modal-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+/* Custom close button */
+.kui-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* Custom size overrides */
+.kui-modal-lg {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+```

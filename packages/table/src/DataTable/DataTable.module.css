@@ -2,20 +2,20 @@
 =                 DataTable                   =
 =============================================*/
 
-.Ouitable-head {
+.kui-table-head {
   display: flex;
   gap: var(--kui-spacing-md);
   justify-content: space-between;
   margin-bottom: var(--kui-spacing-xs);
 }
 
-.Ouitable-head-section {
+.kui-table-head-section {
   display: flex;
   align-items: center;
   column-gap: var(--kui-spacing-sm);
 }
 
-.Ouitable-head_sh_label {
+.kui-table-head_sh_label {
   display: flex;
   gap: var(--kui-spacing-xs);
 }

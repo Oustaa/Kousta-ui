@@ -10,6 +10,7 @@ import {
   Select,
   WindowBoundary,
   AsyncSelect,
+  Label,
 } from "@kousta-ui/components";
 import {
   Bs123,

@@ -22,14 +22,19 @@ const Input: FC<InputProps> = ({
   };
 
   return (
-    <div className={classes["input-container"]}>
+    <div className={`${classes["input-container"]} kui-input-container`}>
       <FormElement labelPosition={labelPosition}>
         {label && (
-          <Label {...labelProps} required={required} errors={errors}>
+          <Label
+            {...labelProps}
+            required={required}
+            errors={errors}
+            contextualClass="kui-input-label"
+          >
             {label}
           </Label>
         )}
-        <div className={classes["input-inner"]}>
+        <div className={`${classes["input-inner"]} kui-input-inner`}>
           <Group style={{ width: "100%" }}>
             {leftSection}
             {renderMiddleSectionItem(
@@ -38,7 +43,7 @@ const Input: FC<InputProps> = ({
                   // this is not correct based on the type of the errors...
                   Array.isArray(errors) && errors.length > 0 ? "true" : "false"
                 }
-                className={classes["input"]}
+                className={`${classes["input"]} kui-input`}
                 id={label}
                 pattern={inputPattern[rest.type as keyof typeof inputPattern]}
                 {...rest}
@@ -52,7 +57,7 @@ const Input: FC<InputProps> = ({
           </Group>
         </div>
       </FormElement>
-      <span className={classes["error-message"]}>
+      <span className={`${classes["error-message"]} kui-input-error-message`}>
         {(errors as string[])?.[0]}
       </span>
     </div>

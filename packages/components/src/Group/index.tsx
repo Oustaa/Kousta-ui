@@ -43,7 +43,7 @@ const Group: FC<GroupProps> = ({ children, direction, gap, ...rest }) => {
     <div
       style={{ ...{ gap, flexDirection: direction }, ...rest.style }}
       {...rest}
-      className={classes["group"]}
+      className={`${classes["group"]} kui-group`}
       role="group"
     >
       {items}

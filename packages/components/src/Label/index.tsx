@@ -7,8 +7,9 @@ const Label: FC<
     children: string;
     required?: boolean;
     errors?: string[] | string | ReactNode;
+    contextualClass?: string;
   }
-> = ({ children: label, required, errors, ...labelProps }) => {
+> = ({ children: label, required, errors, contextualClass, ...labelProps }) => {
   return (
     <label
       data-required={label && String(required)}
@@ -16,7 +17,7 @@ const Label: FC<
         // this is not correct based on the type of the errors...
         Array.isArray(errors) && errors.length > 0 ? "true" : "false"
       }
-      className={`${classes["label"]} kui-label`}
+      className={`${classes["label"]} kui-label ${contextualClass || ""}`}
       htmlFor={label}
       {...labelProps}
     >

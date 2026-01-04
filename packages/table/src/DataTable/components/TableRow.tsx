@@ -194,7 +194,9 @@ const TableRow = <T extends Record<string, unknown>>({
               ...config?.props?.td?.style,
             }}
           >
-            <div className={classes["table-actions-container"]}>
+            <div
+              className={`${classes["table-actions-container"]} kui-data-table-actions-container`}
+            >
               {tableActions.length > 0 ? tableActions : config?.emptyRowIcon}
             </div>
           </Table.Td>

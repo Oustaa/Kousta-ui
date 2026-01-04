@@ -38,10 +38,12 @@ export const ContextMenuMenu = forwardRef<HTMLDivElement, ContextMenuMenuProps>(
           top: `${y - offsetY}px`,
           left: `${x - offsetX}px`,
         }}
-        className={classes["OuicontextMenu"]}
+        className={`${classes["OuicontextMenu"]} kui-contextmenu`}
         ref={ref}
       >
-        <div className={classes["OuiiconsContainer"]}></div>
+        <div
+          className={`${classes["OuiiconsContainer"]} kui-contextmenu-icons`}
+        ></div>
 
         {options.map((option, index): React.ReactNode => {
           if (

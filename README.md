@@ -1,3 +1,5 @@
+![banner](/static/images/readme-baner.png)
+
 # Kousta-ui
 Kousta-ui is a react ui library i have build after 3 years of experementing with other awesome ui libraries, and creating some custome ui components, it is meant for ease if use, and performance focuse.
 

@@ -15,7 +15,7 @@ const TableSearch = () => {
   if (!options || !options.search) return <></>;
 
   return (
-    <div className="table-search-container">
+    <div className="table-search-container kui-data-table-search-container">
       <Input
         aria-label="search-input"
         onKeyDown={(event) => {

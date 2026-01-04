@@ -136,9 +136,16 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   }, []);
 
   return (
-    <div ref={dropdownRef} className={classes["select-dropdown"]}>
+    <div
+      ref={dropdownRef}
+      className={`${classes["select-dropdown"]} kui-select-dropdown`}
+    >
       {data.length === 0 && !loading ? (
-        <div className={classes["select-empty-message"]}>{emptyMessage}</div>
+        <div
+          className={`${classes["select-empty-message"]} kui-select-empty-message`}
+        >
+          {emptyMessage}
+        </div>
       ) : (
         <>
           {data.map((row, index) => {

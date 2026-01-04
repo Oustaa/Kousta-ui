@@ -174,25 +174,59 @@ export default function Example() {
 
 ---
 
-## Styling
+## Styles
 
-The component uses CSS modules with the following class names:
+Kousta-UI Input components include customizable CSS classes for easy styling overrides. Each input element receives the following classes:
 
-- `.input-container` – Main wrapper containing label, input, and error
-- `.input-inner` – Container for the input field and sections
-- `.input` – The actual input element
-- `.error-message` – Error message display
+### Base Classes
+- `kui-input-container` - Main wrapper containing label, input, and error
+- `kui-input-inner` - Container for the input field and sections
+- `kui-input` - The actual input element
+- `kui-input-error-message` - Error message display
 
-### CSS variables
+### Contextual Classes
+- `kui-input-label` - Applied to the label when used within an Input component
 
-You can customize the appearance using CSS variables:
+### Customization Examples
+
+You can easily override input styles using these CSS classes:
 
 ```css
-.ousta-input {
-  --input-border-color: #d1d5db;
-  --input-focus-border-color: #3b82f6;
-  --input-error-border-color: #ef4444;
-  --input-padding: 0.5rem 0.75rem;
+/* Custom input styling */
+.kui-input {
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.kui-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Custom error state */
+.kui-input-error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* Custom container */
+.kui-input-container {
+  margin-bottom: 1rem;
+}
+```
+
+### CSS Variables
+
+You can also customize using CSS variables:
+
+```css
+.kui-input {
+  --kui-input-border-color: #d1d5db;
+  --kui-input-focus-border-color: #3b82f6;
+  --kui-input-error-border-color: #ef4444;
+  --kui-input-padding: 0.5rem 0.75rem;
 }
 ```
 

@@ -19,7 +19,7 @@ const TableHead = () => {
   );
 
   return (
-    <div className={classes["Ouitable-head"]}>
+    <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
       {Object.keys(rowSelection.selectedRows).length ? (
         options?.bulkActions?.map((action) => {
           if (action.canPerformAction) return null;
@@ -38,7 +38,9 @@ const TableHead = () => {
           );
         })
       ) : config?.noHead !== true ? (
-        <div className={classes["Ouitable-head-section"]}>
+        <div
+          className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
+        >
           {/* Hide Table Rows */}
           {config?.toggleRows !== false && (
             <Menu.Menu closeOnClick={false}>
@@ -52,7 +54,9 @@ const TableHead = () => {
               <Menu.DropDown>
                 {headersCanSee.map((headerName) => (
                   <Menu.Item key={headerName}>
-                    <div className={classes["Ouitable-head_sh_label"]}>
+                    <div
+                      className={`${classes["kui-table-head_sh_label"]} kui-data-table-head-label`}
+                    >
                       <input
                         id={headerName}
                         type="checkbox"

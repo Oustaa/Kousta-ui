@@ -21,7 +21,7 @@ const Table: FC<PropsWithChildren<ComponentPropsWithRef<"table">>> = ({
     <table
       role="table"
       {...rest}
-      className={`${classes["Ouitable"]} ${className || ""}`}
+      className={`${classes["kui-table"]} ${className || ""} kui-table`}
     >
       {children}
     </table>
@@ -34,7 +34,10 @@ const Thead: FC<PropsWithChildren<ComponentPropsWithRef<"thead">>> = ({
   ...rest
 }) => {
   return (
-    <thead {...rest} className={`${classes["Ouithead"]} ${className || ""}`}>
+    <thead
+      {...rest}
+      className={`${classes["Ouithead"]} ${className || ""} kui-table-thead`}
+    >
       {children}
     </thead>
   );
@@ -46,7 +49,10 @@ const Tbody: FC<PropsWithChildren<ComponentPropsWithRef<"tbody">>> = ({
   ...rest
 }) => {
   return (
-    <tbody {...rest} className={`${classes["Ouitbody"]} ${className || ""}`}>
+    <tbody
+      {...rest}
+      className={`${classes["Ouitbody"]} ${className || ""} kui-table-tbody`}
+    >
       {children}
     </tbody>
   );
@@ -61,7 +67,7 @@ const Tr: FC<PropsWithChildren<ComponentPropsWithRef<"tr">>> = ({
     <tr
       {...rest}
       role="tr"
-      className={`${classes["Ouitr"]} ${className || ""}`}
+      className={`${classes["Ouitr"]} ${className || ""} kui-table-tr`}
     >
       {children}
     </tr>
@@ -74,7 +80,10 @@ const Th: FC<PropsWithChildren<ComponentPropsWithRef<"th">>> = ({
   ...rest
 }) => {
   return (
-    <th {...rest} className={`${classes["Ouith"]} ${className || ""}`}>
+    <th
+      {...rest}
+      className={`${classes["Ouith"]} ${className || ""} kui-table-th`}
+    >
       {children}
     </th>
   );
@@ -86,7 +95,10 @@ const Td: FC<PropsWithChildren<ComponentPropsWithRef<"td">>> = ({
   ...rest
 }) => {
   return (
-    <td {...rest} className={`${classes["Ouitd"]} ${className || ""}`}>
+    <td
+      {...rest}
+      className={`${classes["Ouitd"]} ${className || ""} kui-table-td`}
+    >
       {children}
     </td>
   );

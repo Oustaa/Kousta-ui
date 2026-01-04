@@ -417,7 +417,7 @@ Each component applies specific CSS classes:
 
 | Component | Class Name | Purpose |
 |-----------|------------|---------|
-| `Table.Root` | `.Ouitable` | Main table styling |
+| `Table.Root` | `.kui-table` | Main table styling |
 | `Table.Thead` | `.Ouithead` | Header section styling |
 | `Table.Tbody` | `.Ouitbody` | Body section styling |
 | `Table.Tr` | `.Ouitr` | Row styling |
@@ -440,7 +440,7 @@ Customize appearance using CSS variables:
 ### Custom styling example
 
 ```css
-.custom-table .Ouitable {
+.custom-table .kui-table {
   border: 1px solid var(--ousta-table-border);
   border-radius: 8px;
   overflow: hidden;

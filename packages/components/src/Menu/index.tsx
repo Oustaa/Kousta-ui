@@ -144,7 +144,7 @@ const MenuContainer: FC<PropsWithChildren<MenuProps>> = ({
 
           setOpened(false);
         }}
-        className={classes["Ouimenu"]}
+        className={`${classes["Ouimenu"]} kui-menu`}
       >
         {children}
       </div>
@@ -162,7 +162,7 @@ const MenuTarget: FC<PropsWithChildren> = ({ children }) => {
 
         toggle();
       }}
-      className={classes["Ouimenu_target"]}
+      className={`${classes["Ouimenu_target"]} kui-menu-target`}
     >
       {children}
     </button>
@@ -177,7 +177,7 @@ const MenuDropDown: FC<PropsWithChildren> = ({ children }) => {
     <div
       role="menu"
       style={getPositionStyle(offset!)[position!] as CSSProperties}
-      className={classes["Ouimenu_dropdown"]}
+      className={`${classes["Ouimenu_dropdown"]} kui-menu-dropdown`}
     >
       {children}
     </div>
@@ -209,7 +209,7 @@ const MenuItem: FC<PropsWithChildren<MenuItemProps>> = ({
       onClick={() => {
         if (shouldClose) close();
       }}
-      className={classes["Ouimenu_item"]}
+      className={`${classes["Ouimenu_item"]} kui-menu-item ${disabled ? "kui-disabled" : ""}`}
     >
       {leftSection && leftSection}
       {children}
@@ -222,7 +222,7 @@ const MenuLabel: FC<
   PropsWithChildren<{ leftSection?: ReactNode; rightSection?: ReactNode }>
 > = ({ children, leftSection, rightSection }) => {
   return (
-    <span className={classes["Ouimenu_label"]}>
+    <span className={`${classes["Ouimenu_label"]} kui-menu-label`}>
       {leftSection && leftSection}
       {children}
       {rightSection && rightSection}
@@ -231,7 +231,7 @@ const MenuLabel: FC<
 };
 
 const MenuDivider = () => {
-  return <hr className={classes["Ouimenu_divider"]} />;
+  return <hr className={`${classes["Ouimenu_divider"]} kui-menu-divider`} />;
 };
 
 export default {

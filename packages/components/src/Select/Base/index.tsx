@@ -150,28 +150,31 @@ const Select = <T extends SelectDataConstraints>({
 
   return (
     <div
-      className={`${classes["select-container"]}${disabled ? " disabled" : ""}`}
+      className={`${classes["select-container"]}${disabled ? " disabled" : ""} kui-select-container`}
     >
       <FormElement labelPosition={labelPosition}>
         {label && (
           <Label
             errors={errors}
             required={required}
+            contextualClass="kui-select-label"
             {...labelProps}
             onClick={OpenDropDown}
           >
             {label}
           </Label>
         )}
-        <div ref={selectRef} className={classes["select-outer"]}>
+        <div
+          ref={selectRef}
+          className={`${classes["select-outer"]} kui-select-outer`}
+        >
           <div
-            className={[
-              classes["select-inner"],
-              disabled && classes.disabled,
-              errors && classes.error,
-            ]
-              .filter(Boolean)
-              .join(" ")}
+            className={`
+              ${classes["select-inner"]}
+              ${disabled && classes.disabled}
+              ${errors && classes.error}
+              kui-select-inner ${disabled && "kui-disabled"} ${errors && "kui-error"}
+            `}
             tabIndex={disabled ? -1 : 0}
             onKeyDown={(e) => {
               if (!seachable) return;
@@ -215,7 +218,7 @@ const Select = <T extends SelectDataConstraints>({
               isSearching={isSearching}
             />
             {!isSearching && (
-              <span className={classes["select-value"]}>
+              <span className={`${classes["select-value"]} kui-select-value`}>
                 {options.renderOption &&
                 typeof options.renderOption === "function" &&
                 selectedRow
@@ -225,11 +228,12 @@ const Select = <T extends SelectDataConstraints>({
             )}
             {clearable && selectedRow && (
               <button
-                className={[
-                  classes["clear-select"],
-                  errors && classes.error,
-                  disabled && classes.disabled,
-                ].join(" ")}
+                className={`
+                  ${classes["clear-select"]}
+                  ${errors && classes.error}
+                  ${disabled && classes.disabled}
+                  kui-select-clear ${errors && "kui-error"} ${disabled && "kui-disabled"}
+                `}
                 onClick={(e) => {
                   setValue(undefined);
 
@@ -240,11 +244,12 @@ const Select = <T extends SelectDataConstraints>({
               </button>
             )}
             <button
-              className={[
-                classes["select-toggle"],
-                dropDownOpen && classes.open,
-                disabled && classes.disabled,
-              ].join(" ")}
+              className={`
+                ${classes["select-toggle"]}
+                ${dropDownOpen && classes.open}
+                ${disabled && classes.disabled}
+                kui-select-toggle ${dropDownOpen && "kui-open"} ${disabled && "kui-disabled"}
+              `}
               tabIndex={-1}
               onClick={(e) => {
                 if (dropDownOpen) closeDropDown();

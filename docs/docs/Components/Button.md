@@ -302,3 +302,46 @@ export type ButtonProps = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 } & ComponentPropsWithoutRef<"button">;
 ```
+
+---
+
+## Styles
+
+Kousta-UI Button components include customizable CSS classes for easy styling overrides. Each button element receives the following classes:
+
+### Base Classes
+- `kui-button` - Base button class applied to all buttons
+- `kui-button-{variant}` - Variant-specific class (e.g., `kui-button-primary`, `kui-button-success-outline`)
+- `kui-button-{size}` - Size-specific class (e.g., `kui-button-sm`, `kui-button-md`, `kui-button-lg`)
+
+### State Classes
+- `kui-button-loading` - Applied to the loading indicator container when `loading={true}`
+
+### Customization Examples
+
+You can easily override button styles using these CSS classes:
+
+```css
+/* Custom primary button */
+.kui-button-primary {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+/* Custom size */
+.kui-button-lg {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+/* Custom loading state */
+.kui-button-loading {
+  opacity: 0.7;
+}
+```
+
+### Available Variants
+All standard variants are supported:
+- Colors: `primary`, `secondary`, `success`, `warning`, `danger`, `neutral`
+- Styles: `outline`, `light`, `link` (combined with colors)
+- Example: `kui-button-success-outline`, `kui-button-primary-light`

@@ -22,7 +22,7 @@ function flexDirection(position: LabelPositionBase = "y"): CSSProperties {
 const FormElement: FC<FormElementProps> = ({ children, labelPosition }) => {
   return (
     <div
-      className={classes["formElement"]}
+      className={`${classes["formElement"]} kui-form-element`}
       style={flexDirection(labelPosition)}
     >
       {children}

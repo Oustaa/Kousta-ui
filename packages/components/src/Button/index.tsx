@@ -70,7 +70,9 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     // defaultProps className overwriting
     ` ${classes[`btn-${variant || defaultProps.variant}`]} ${classes[`btn-${size || defaultProps.size}`]} ` +
     // component class name
-    className;
+    className +
+    // kui prefixed class
+    ` kui-button kui-button-${variant || defaultProps.variant} kui-button-${size || defaultProps.size}`;
 
   return (
     <button
@@ -83,7 +85,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
       type={type || defaultProps.type}
     >
       {loading ? (
-        <div className="">
+        <div className="kui-button-loading">
           {rest.loadingIndicator || defaultProps.loadingIndicator}
         </div>
       ) : (

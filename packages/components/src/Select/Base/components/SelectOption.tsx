@@ -67,6 +67,7 @@ const SelectOption = <T extends SelectDataConstraints>({
         className={[
           classes["select-option"],
           isHighlighted ? classes["highlighted-option"] : "",
+          `kui-select-option ${isHighlighted ? "kui-select-option-highlighted" : ""}`,
         ].join(" ")}
         data-selected={isSelected}
         data-disabled={disabled}

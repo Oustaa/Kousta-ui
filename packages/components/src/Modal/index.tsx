@@ -195,7 +195,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
       )}
 
       {withBackdrop && ((isControlled && opened) || modalOpened) && (
-        <div className={classes["backdrop"]} />
+        <div className={`${classes["backdrop"]} kui-modal-backdrop`} />
       )}
       {((isControlled && opened) || modalOpened) && (
         <div
@@ -212,17 +212,23 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
               : "max-content",
             ...modalPositionStyle(offset)[position as ModalPosition],
           }}
-          className={classes["modal-container"]}
+          className={`${classes["modal-container"]} kui-modal kui-modal-${size || defaultProps.size} kui-modal-${position || defaultProps.position}`}
         >
           {(title || withCloseBtn) && (
-            <header className={classes["menu-header"]}>
+            <header className={`${classes["menu-header"]} kui-modal-header`}>
               {title ? (
-                <h3 className={classes["menu-title"]}>{title}</h3>
+                <h3 className={`${classes["menu-title"]} kui-modal-title`}>
+                  {title}
+                </h3>
               ) : (
                 <h3 />
               )}
               {withCloseBtn ? (
-                <button role="modal-close" onClick={handleCloseModal}>
+                <button
+                  role="modal-close"
+                  className="kui-modal-close"
+                  onClick={handleCloseModal}
+                >
                   X
                 </button>
               ) : (
@@ -230,8 +236,10 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
               )}
             </header>
           )}
-          <div className={classes["menu-body"]}>{children}</div>
-          <div className={classes["menu-footer"]}></div>
+          <div className={`${classes["menu-body"]} kui-modal-body`}>
+            {children}
+          </div>
+          <div className={`${classes["menu-footer"]} kui-modal-footer`}></div>
         </div>
       )}
     </>

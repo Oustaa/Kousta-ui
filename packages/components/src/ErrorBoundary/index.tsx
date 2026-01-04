@@ -30,7 +30,11 @@ class ErrorBoundry extends Component<ErrorBoundryProps, ErrorBoundryState> {
 
     if (this.state.hasError) {
       if (fallback && isValidElement(fallback)) return fallback;
-      return <h3 className={classes["error-text"]}>An Error Has Ocured</h3>;
+      return (
+        <h3 className={`${classes["error-text"]} kui-error-boundary-text`}>
+          An Error Has Ocured
+        </h3>
+      );
     }
 
     return this.props.children;
