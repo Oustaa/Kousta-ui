@@ -3,14 +3,13 @@ import {
   Button,
   ContextMenu,
   Menu,
-  // Input,
+  Input,
   Modal,
   ComponentPropsProvider,
   Group,
   Select,
   WindowBoundary,
   AsyncSelect,
-  Label,
 } from "@kousta-ui/components";
 import {
   Bs123,
@@ -142,42 +141,13 @@ function App() {
           offset: 20,
           size: "lg",
         }}
+        select={{
+          clearable: false,
+          seachable: false,
+          emptyMessage: "EMPTY EMPTY",
+        }}
       >
         <Button onClick={() => setValue("")}>Clear</Button>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <br />
@@ -230,23 +200,29 @@ function App() {
             <Select<User>
               // loading
               // clearable={false}
+              // seachable={false}
               data={selectData}
-              value={7}
+              placeholder="select static"
+              // value={7}
               options={{
                 value: "id",
                 label: "first_name last_name",
               }}
               label="Static Select"
               // errors={["There is an error", "there is another one"]}
-              labelPosition="x"
-              required
-              emptyMessage="Give me some options"
+              // labelPosition="x"
+              // required
+              // emptyMessage="Give me some options"
               // seachable={false}
               // disabled
-              disabledOption={(row) => {
-                return [1, 3, 6].includes(row.id);
-              }}
-              onSearch={(user: User, term: string) => user.first_name === term}
+              // isMultiple
+              // onSearch={(user: User, term: string) => user.first_name === term}
+            />
+            <Input
+              label="Input label"
+              placeholder="Kui input"
+              // errors={["There is an error"]}
+              // labelPosition="x"
             />
             <AsyncSelect<ProductInterface>
               // clearable={false}
@@ -262,8 +238,9 @@ function App() {
                 },
               }}
               label="Dynamic Select"
+              placeholder="Dynamic Select"
               // errors={["There is an error"]}
-              labelPosition="x"
+              // labelPosition="x"
               // required
               emptyMessage="Give me some options"
               // seachable={false}

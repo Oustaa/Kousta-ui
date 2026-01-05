@@ -5,17 +5,16 @@
 .label {
   font-size: var(--kui-text-base);
   color: light-dark(var(--kui-neutral-900), var(--kui-neutral-50));
-  font-weight: 500;
   text-wrap: nowrap;
 
   &[data-required="true"]::after {
     content: "*";
-    color: var(--kui-danger-600);
+    color: var(--kui-danger-500);
     margin-left: var(--kui-spacing-xs);
   }
 
   &[data-error="true"] {
-    color: var(--kui-danger-600);
+    color: var(--kui-danger-500);
   }
 }
 

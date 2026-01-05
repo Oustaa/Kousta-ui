@@ -18,8 +18,6 @@ type SelectOptionProps<T extends SelectDataConstraints> = {
 } & Pick<SelectProps<T>, "options" | "disabledOption" | "onLastItemRendered">;
 
 const SelectOption = <T extends SelectDataConstraints>({
-  index,
-  dataLength,
   row,
   options,
   onSelectValue,
@@ -47,16 +45,7 @@ const SelectOption = <T extends SelectDataConstraints>({
 
   return (
     <WindowBoundary
-      onceItemEnter={
-        onLastItemRendered
-          ? () => {
-              console.log("select last item just rendered");
-              console.log({ index, onLastItemRendered, dataLength });
-              console.log({ onLastItemRendered });
-              onLastItemRendered?.();
-            }
-          : undefined
-      }
+      onceItemEnter={onLastItemRendered}
       root={(dropdownRef as any)?.current ?? undefined}
       threshold={0.5}
     >

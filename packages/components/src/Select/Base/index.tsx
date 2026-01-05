@@ -5,8 +5,13 @@ import { SelectDataConstraints, SelectProps } from "./_props";
 import { getNestedProperty } from "@kousta-ui/helpers";
 import SelectDropDown from "./components/SelectDropDown";
 import SelectSearchInput from "./components/SelectSearchInput";
+import SelectLoadingIndicator from "./components/SelectLoadingIndicator";
 
 import classes from "./Select.module.css";
+import {
+  SelectPropsProvided,
+  useComponentContext,
+} from "components/src/PropsContext";
 
 const Select = <T extends SelectDataConstraints>({
   label,
@@ -15,10 +20,10 @@ const Select = <T extends SelectDataConstraints>({
   required,
   labelPosition,
   data,
-  options = { value: "value", label: "label" },
-  clearable = true,
+  options,
+  clearable,
   emptyMessage,
-  seachable = true,
+  seachable,
   disabled,
   onChange,
   disabledOption,
@@ -27,9 +32,48 @@ const Select = <T extends SelectDataConstraints>({
   asyncSearch,
   onLastItemRendered,
   isMultiple,
+  placeholder,
   rawValue,
+  extraOptionsLoading,
+  onBlur,
   ...props
 }: SelectProps<T>) => {
+  const selectProps = useComponentContext("select") as SelectPropsProvided;
+
+  if (selectProps) {
+    if (clearable === undefined) {
+      if (selectProps.clearable !== undefined)
+        clearable = selectProps.clearable;
+      else clearable = true;
+    }
+    if (selectProps.emptyMessage && !emptyMessage) {
+      emptyMessage = selectProps.emptyMessage;
+    }
+    if (selectProps.rawValue && rawValue === undefined) {
+      rawValue = selectProps.rawValue;
+    }
+    if (selectProps.labelPosition && !labelPosition) {
+      labelPosition = selectProps.labelPosition;
+    }
+    if (selectProps.labelProps) {
+      labelProps = { ...selectProps.labelProps, ...labelProps };
+    }
+    if (!options) {
+      if (selectProps.options) options = selectProps.options;
+      else options = { value: "value", label: "label" };
+    }
+    if (seachable === undefined) {
+      if (selectProps.seachable !== undefined)
+        seachable = selectProps.seachable;
+      else seachable = true;
+    }
+    if (selectProps.required && required === undefined) {
+      required = selectProps.required;
+    }
+  } else {
+    options = { value: "value", label: "label" };
+  }
+
   const selectSearchInput = useRef<HTMLInputElement | null>(null);
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [selectData, setSelectData] = useState<T[]>(data);
@@ -39,22 +83,33 @@ const Select = <T extends SelectDataConstraints>({
 
   /* Drop Down Logic */
   const selectRef = useRef<HTMLDivElement | null>(null);
+  const selectInnerRef = useRef<HTMLDivElement | null>(null);
+
   const [dropDownOpen, setDropDownOpen] = useState<boolean>(false);
 
   const OpenDropDown = useCallback(() => {
-    if (disabled) return;
+    if (disabled || loading) return;
 
     if (dropDownOpen) setDropDownOpen(false);
     else setDropDownOpen(true);
-  }, [dropDownOpen]);
+  }, [dropDownOpen, disabled, loading]);
 
   const closeDropDown = useCallback(() => {
     setDropDownOpen(false);
     setSelectData(data);
     setIsSearching(false);
 
+    if (selectRef.current) {
+      onBlur?.({
+        ...selectRef.current,
+        clear() {
+          setValue(null);
+        },
+      });
+    }
+
     if (selectSearchInput.current) selectSearchInput.current.value = "";
-  }, [data]);
+  }, [data, onBlur]);
 
   const closeOnClickOutside = useCallback(
     (e?: MouseEvent | TouchEvent) => {
@@ -89,7 +144,7 @@ const Select = <T extends SelectDataConstraints>({
       if (selectSearchInput.current && isMultiple)
         selectSearchInput.current.value = "";
     },
-    [data, closeDropDown],
+    [data, closeDropDown, isMultiple, onChange],
   );
 
   const selectedRow = useMemo(
@@ -159,7 +214,10 @@ const Select = <T extends SelectDataConstraints>({
             required={required}
             contextualClass="kui-select-label"
             {...labelProps}
-            onClick={OpenDropDown}
+            onClick={() => {
+              selectInnerRef.current?.focus();
+              OpenDropDown();
+            }}
           >
             {label}
           </Label>
@@ -171,15 +229,20 @@ const Select = <T extends SelectDataConstraints>({
           <div
             className={`
               ${classes["select-inner"]}
-              ${disabled && classes.disabled}
+              ${(disabled || loading) && classes.disabled}
               ${errors && classes.error}
               kui-select-inner ${disabled && "kui-disabled"} ${errors && "kui-error"}
             `}
-            tabIndex={disabled ? -1 : 0}
+            ref={selectInnerRef}
+            tabIndex={disabled || loading ? -1 : 0}
+            onBlur={(e) => {
+              // this should be fixed
+              closeOnClickOutside(e as any);
+            }}
             onKeyDown={(e) => {
-              if (!seachable) return;
-
               if (/^\w$/i.test(e.key)) {
+                if (!seachable) return;
+
                 if (selectSearchInput.current && !isSearching) {
                   if (!dropDownOpen) OpenDropDown();
 
@@ -216,32 +279,45 @@ const Select = <T extends SelectDataConstraints>({
               search={search}
               ref={selectSearchInput}
               isSearching={isSearching}
+              placeholder={placeholder}
             />
             {!isSearching && (
               <span className={`${classes["select-value"]} kui-select-value`}>
-                {options.renderOption &&
-                typeof options.renderOption === "function" &&
-                selectedRow
-                  ? options.renderOption(selectedRow)
-                  : selectedLabel}
+                {!selectedRow && placeholder ? (
+                  <span className={classes["select-placeholder"]}>
+                    {placeholder}
+                  </span>
+                ) : options.renderOption &&
+                  typeof options.renderOption === "function" &&
+                  selectedRow ? (
+                  options.renderOption(selectedRow)
+                ) : (
+                  selectedLabel
+                )}
               </span>
             )}
-            {clearable && selectedRow && (
-              <button
-                className={`
+
+            {loading ? (
+              <SelectLoadingIndicator />
+            ) : (
+              clearable &&
+              selectedRow && (
+                <button
+                  className={`
                   ${classes["clear-select"]}
                   ${errors && classes.error}
                   ${disabled && classes.disabled}
                   kui-select-clear ${errors && "kui-error"} ${disabled && "kui-disabled"}
                 `}
-                onClick={(e) => {
-                  setValue(undefined);
+                  onClick={(e) => {
+                    setValue(undefined);
 
-                  e.stopPropagation();
-                }}
-              >
-                X
-              </button>
+                    e.stopPropagation();
+                  }}
+                >
+                  X
+                </button>
+              )
             )}
             <button
               className={`
@@ -271,7 +347,7 @@ const Select = <T extends SelectDataConstraints>({
               onSelectValue={onSelectValue}
               value={value}
               disabledOption={disabledOption}
-              loading={loading || false}
+              extraOptionsLoading={Boolean(extraOptionsLoading)}
               onLastItemRendered={onLastItemRendered}
             />
           )}

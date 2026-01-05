@@ -9,7 +9,7 @@ type SelectDropDownProps<T extends SelectDataConstraints> = {
   onSelectValue: (value: unknown) => void;
   value?: unknown;
   data: T[];
-  loading: boolean;
+  extraOptionsLoading: boolean;
 } & Pick<
   SelectProps<T>,
   "options" | "emptyMessage" | "disabledOption" | "onLastItemRendered"
@@ -22,7 +22,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   disabledOption,
   options,
   onSelectValue,
-  loading,
+  extraOptionsLoading,
   value,
   onLastItemRendered,
 }: SelectDropDownProps<T>) => {
@@ -42,7 +42,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
 
   const goNext = useCallback(
     (index: number): number => {
-      if (index > data.length - 1) {
+      if (index >= data.length) {
         index = 0;
       }
 
@@ -140,7 +140,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       ref={dropdownRef}
       className={`${classes["select-dropdown"]} kui-select-dropdown`}
     >
-      {data.length === 0 && !loading ? (
+      {data.length === 0 && !extraOptionsLoading ? (
         <div
           className={`${classes["select-empty-message"]} kui-select-empty-message`}
         >
@@ -169,7 +169,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
             );
           })}
           {/* this should be changed */}
-          {loading && (
+          {extraOptionsLoading && (
             <SelectOption
               dropdownRef={dropdownRef}
               row={{ label: "Loading...", value: "" } as unknown as T}

@@ -61,6 +61,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
     <Select
       data={data}
       loading={loading}
+      extraOptionsLoading={loading && page > 1}
       {...rest}
       onLastItemRendered={handleGetData}
       asyncSearch={(term: string) => {

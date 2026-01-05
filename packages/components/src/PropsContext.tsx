@@ -7,6 +7,9 @@ import {
 import { ButtonProps } from "./Button/_props";
 import { MenuItemProps, MenuProps } from "./Menu/_props";
 import { ModalProps } from "./Modal/_props";
+import { SelectProps } from "./Select/index";
+import { AsyncSelectProps } from "./Select/AsyncSelect/_props";
+import { SelectDataConstraints } from "./Select/Base/_props";
 
 /* Helper Types */
 type OptionalKeys<T> = {
@@ -30,10 +33,29 @@ export type MenuPropsProvided = {
 /* Modal */
 export type ModalPropsProvided = GetOptionalProperties<ModalProps>;
 
+export type SelectPropsProvided = Pick<
+  SelectProps<SelectDataConstraints>,
+  | "rawValue"
+  | "options"
+  | "labelPosition"
+  | "emptyMessage"
+  | "seachable"
+  | "required"
+  | "labelProps"
+  | "clearable"
+>;
+
+export type AsyncSelectPropsProvided = Pick<
+  AsyncSelectProps<SelectDataConstraints>,
+  "limit" | "extractDynamicData" | "searchTimeout" | "hasMore"
+>;
+
 type PropsContextType = {
   button?: ButtonPropsProvided;
   menu?: MenuPropsProvided;
   modal?: ModalPropsProvided;
+  select?: SelectPropsProvided;
+  asyncSelect?: SelectPropsProvided;
 };
 
 const PropsContext = createContext<PropsContextType | undefined>({});

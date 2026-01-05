@@ -32,7 +32,14 @@ export type SelectProps<T extends SelectDataConstraints> = {
   asyncSearch?: (term: string) => void;
   // End Async Select Props
 
+  placeholder?: string;
   loading?: boolean;
+  onBlur?: (
+    target: HTMLDivElement & {
+      clear: VoidFunction;
+    },
+  ) => void;
+  extraOptionsLoading?: boolean;
   options?: SelectOptionType<T>;
   label?: string;
   labelProps?: ComponentPropsWithoutRef<"label">;

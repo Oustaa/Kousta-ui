@@ -7,5 +7,5 @@ export { default as Select } from "./Base";
 
 export type SelectProps<T extends SelectDataConstraints> = Omit<
   BaseSelectProps<T>,
-  "onLastItemRendered" | "asyncSearch"
+  "onLastItemRendered" | "asyncSearch" | "extraOptionsLoading" | "limit"
 >;
