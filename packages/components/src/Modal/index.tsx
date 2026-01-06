@@ -199,7 +199,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
       )}
       {((isControlled && opened) || modalOpened) && (
         <div
-          data-testid={"dialog-menu"}
+          data-testid={"dialog-modal"}
           role="modal"
           ref={modalRef}
           style={{
@@ -215,9 +215,9 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
           className={`${classes["modal-container"]} kui-modal kui-modal-${size || defaultProps.size} kui-modal-${position || defaultProps.position}`}
         >
           {(title || withCloseBtn) && (
-            <header className={`${classes["menu-header"]} kui-modal-header`}>
+            <header className={`${classes["modal-header"]} kui-modal-header`}>
               {title ? (
-                <h3 className={`${classes["menu-title"]} kui-modal-title`}>
+                <h3 className={`${classes["modal-title"]} kui-modal-title`}>
                   {title}
                 </h3>
               ) : (
@@ -236,10 +236,10 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
               )}
             </header>
           )}
-          <div className={`${classes["menu-body"]} kui-modal-body`}>
+          <div className={`${classes["modal-body"]} kui-modal-body`}>
             {children}
           </div>
-          <div className={`${classes["menu-footer"]} kui-modal-footer`}></div>
+          <div className={`${classes["modal-footer"]} kui-modal-footer`}></div>
         </div>
       )}
     </>

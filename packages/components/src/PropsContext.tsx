@@ -43,6 +43,10 @@ export type SelectPropsProvided = Pick<
   | "required"
   | "labelProps"
   | "clearable"
+  | "disableErrorBoundaries"
+  | "optionErrorFallback"
+  | "selectErrorFallback"
+  | "icons"
 >;
 
 export type AsyncSelectPropsProvided = Pick<

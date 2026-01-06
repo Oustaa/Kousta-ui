@@ -16,7 +16,7 @@
   border-radius: calc(1rem * var(--kui-rounded));
 }
 
-.menu-header {
+.modal-header {
   padding-inline: var(--kui-spacing-sm);
   padding-block: var(--kui-spacing-xs);
   display: flex;
@@ -33,11 +33,11 @@
   }
 }
 
-.menu-header h3 {
+.modal-header h3 {
   font-size: var(--kui-text-base);
 }
 
-.menu-body {
+.modal-body {
   padding: var(--kui-spacing-sm);
 }
 

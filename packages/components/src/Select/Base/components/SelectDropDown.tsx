@@ -1,8 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  isValidElement,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import classes from "../Select.module.css";
 import SelectOption from "./SelectOption";
 import { getNestedProperty } from "@kousta-ui/helpers";
+import ErrorBoundary from "components/src/ErrorBoundary";
 
 type SelectDropDownProps<T extends SelectDataConstraints> = {
   closeOnClickOutside: (e?: MouseEvent | TouchEvent) => void;
@@ -12,7 +19,12 @@ type SelectDropDownProps<T extends SelectDataConstraints> = {
   extraOptionsLoading: boolean;
 } & Pick<
   SelectProps<T>,
-  "options" | "emptyMessage" | "disabledOption" | "onLastItemRendered"
+  | "options"
+  | "emptyMessage"
+  | "disabledOption"
+  | "onLastItemRendered"
+  | "disableErrorBoundaries"
+  | "optionErrorFallback"
 >;
 
 const SelectDropDown = <T extends SelectDataConstraints>({
@@ -25,6 +37,8 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   extraOptionsLoading,
   value,
   onLastItemRendered,
+  disableErrorBoundaries,
+  optionErrorFallback,
 }: SelectDropDownProps<T>) => {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [highlitedOptionIndex, setHighlitedOptionIndex] = useState<number>(
@@ -82,19 +96,12 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       if (e.key === "Escape") closeOnClickOutside();
       if (e.key === "ArrowDown") {
         setHighlitedOptionIndex((prev) => {
-          if (prev >= data.length - 1) {
-            return 0;
-          }
-
           return goNext(prev + 1);
         });
         e.preventDefault();
       }
       if (e.key === "ArrowUp") {
         setHighlitedOptionIndex((prev) => {
-          if (prev === 0) {
-            return data.length - 1;
-          }
           return goPrev(prev - 1);
         });
         e.preventDefault();
@@ -143,6 +150,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       {data.length === 0 && !extraOptionsLoading ? (
         <div
           className={`${classes["select-empty-message"]} kui-select-empty-message`}
+          data-disabled={"true"}
         >
           {emptyMessage}
         </div>
@@ -150,22 +158,44 @@ const SelectDropDown = <T extends SelectDataConstraints>({
         <>
           {data.map((row, index) => {
             return (
-              <SelectOption
-                index={index}
-                dataLength={data.length}
-                dropdownRef={dropdownRef}
-                row={row}
-                isHighlighted={index === highlitedOptionIndex}
+              <ErrorBoundary
+                onError={(err) => {
+                  if (disableErrorBoundaries) throw err;
+                }}
                 key={getNestedProperty(row, options?.value as string)}
-                options={options}
-                onSelectValue={onSelectValue}
-                value={value}
-                highlightOption={() => setHighlitedOption(index)}
-                disabledOption={disabledOption}
-                onLastItemRendered={
-                  index === data.length - 1 ? onLastItemRendered : undefined
+                fallback={
+                  optionErrorFallback ? (
+                    <div className={classes["select-option"]}>
+                      {optionErrorFallback({ row })}
+                    </div>
+                  ) : (
+                    <div
+                      className={[
+                        classes["select-option"],
+                        classes["select-option-fallback"],
+                      ].join(" ")}
+                    >
+                      Error Ocured while rendering option
+                    </div>
+                  )
                 }
-              />
+              >
+                <SelectOption
+                  index={index}
+                  dataLength={data.length}
+                  dropdownRef={dropdownRef}
+                  row={row}
+                  isHighlighted={index === highlitedOptionIndex}
+                  options={options}
+                  onSelectValue={onSelectValue}
+                  value={value}
+                  highlightOption={() => setHighlitedOption(index)}
+                  disabledOption={disabledOption}
+                  onLastItemRendered={
+                    index === data.length - 1 ? onLastItemRendered : undefined
+                  }
+                />
+              </ErrorBoundary>
             );
           })}
           {/* this should be changed */}

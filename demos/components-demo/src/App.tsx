@@ -16,9 +16,14 @@ import {
   BsAlphabet,
   BsAmazon,
   BsArchive,
+  BsArchiveFill,
+  BsAt,
+  BsFacebook,
   BsHouseLock,
+  BsX,
 } from "react-icons/bs";
 import { RiFileExcel2Line } from "react-icons/ri";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 import "@kousta-ui/components/esm/index.css";
 import "./App.css";
@@ -142,9 +147,16 @@ function App() {
           size: "lg",
         }}
         select={{
-          clearable: false,
-          seachable: false,
+          // clearable: false,
+          // seachable: false,
           emptyMessage: "EMPTY EMPTY",
+          // disableErrorBoundaries: true,
+          icons: {
+            clear: <BsX size={18} />,
+            open: <BsArchiveFill />,
+            close: <BsFacebook />,
+            loading: <BsAlphabet />,
+          },
         }}
       >
         <Button onClick={() => setValue("")}>Clear</Button>
@@ -207,8 +219,21 @@ function App() {
               options={{
                 value: "id",
                 label: "first_name last_name",
+                renderOption(row) {
+                  if (row.id === 6)
+                    throw Error("Id 6 is not accepted in my application");
+                  return (
+                    <span>
+                      {getNestedProperty(row, "(id) first_name last_name")}
+                    </span>
+                  );
+                },
               }}
               label="Static Select"
+              disabledOption={(user) => [1, 5].includes(user.id)}
+              optionErrorFallback={({ row }) => {
+                return <span>options with id ({row.id}) is not working</span>;
+              }}
               // errors={["There is an error", "there is another one"]}
               // labelPosition="x"
               // required
@@ -217,6 +242,8 @@ function App() {
               // disabled
               // isMultiple
               // onSearch={(user: User, term: string) => user.first_name === term}
+              // disableErrorBoundaries={true}
+              // loading
             />
             <Input
               label="Input label"

@@ -13,7 +13,7 @@ import {
   useComponentContext,
 } from "components/src/PropsContext";
 
-const Select = <T extends SelectDataConstraints>({
+const BaseSelect = <T extends SelectDataConstraints>({
   label,
   labelProps,
   errors,
@@ -36,6 +36,10 @@ const Select = <T extends SelectDataConstraints>({
   rawValue,
   extraOptionsLoading,
   onBlur,
+  disableErrorBoundaries,
+  optionErrorFallback,
+  selectErrorFallback,
+  icons,
   ...props
 }: SelectProps<T>) => {
   const selectProps = useComponentContext("select") as SelectPropsProvided;
@@ -62,6 +66,17 @@ const Select = <T extends SelectDataConstraints>({
       if (selectProps.options) options = selectProps.options;
       else options = { value: "value", label: "label" };
     }
+    if (!optionErrorFallback && selectProps.optionErrorFallback) {
+      // @ts-expect-error this is not an error
+      optionErrorFallback = selectProps.optionErrorFallback;
+    }
+    if (!selectErrorFallback) {
+      selectErrorFallback = selectProps.selectErrorFallback;
+    }
+    if (selectProps.icons) {
+      if (!icons) icons = selectProps.icons;
+      else icons = { ...selectProps.icons, ...icons };
+    }
     if (seachable === undefined) {
       if (selectProps.seachable !== undefined)
         seachable = selectProps.seachable;
@@ -70,10 +85,18 @@ const Select = <T extends SelectDataConstraints>({
     if (selectProps.required && required === undefined) {
       required = selectProps.required;
     }
+    if (
+      selectProps.disableErrorBoundaries &&
+      disableErrorBoundaries === undefined
+    ) {
+      disableErrorBoundaries = selectProps.disableErrorBoundaries;
+    }
   } else {
-    options = { value: "value", label: "label" };
+    if (!options) {
+      options = { value: "value", label: "label" };
+    }
+    if (!icons) icons = {};
   }
-
   const selectSearchInput = useRef<HTMLInputElement | null>(null);
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [selectData, setSelectData] = useState<T[]>(data);
@@ -157,7 +180,7 @@ const Select = <T extends SelectDataConstraints>({
 
   const selectedLabel = useMemo(() => {
     if (!selectedRow) return "";
-    return getNestedProperty(selectedRow, options.label as string) as string;
+    return getNestedProperty(selectedRow, options?.label as string) as string;
   }, [selectedRow]);
   /* End Select Value Logic */
 
@@ -167,7 +190,7 @@ const Select = <T extends SelectDataConstraints>({
       if (asyncSearch && typeof asyncSearch === "function") {
         asyncSearch(term);
       } else if (
-        options.label ||
+        options?.label ||
         (onSearch && typeof onSearch === "function")
       ) {
         const regex = new RegExp(term, "i");
@@ -287,8 +310,8 @@ const Select = <T extends SelectDataConstraints>({
                   <span className={classes["select-placeholder"]}>
                     {placeholder}
                   </span>
-                ) : options.renderOption &&
-                  typeof options.renderOption === "function" &&
+                ) : options?.renderOption &&
+                  typeof options?.renderOption === "function" &&
                   selectedRow ? (
                   options.renderOption(selectedRow)
                 ) : (
@@ -298,7 +321,13 @@ const Select = <T extends SelectDataConstraints>({
             )}
 
             {loading ? (
-              <SelectLoadingIndicator />
+              icons?.loading ? (
+                <div className={classes["select-loading-indicator"]}>
+                  {icons.loading}
+                </div>
+              ) : (
+                <SelectLoadingIndicator />
+              )
             ) : (
               clearable &&
               selectedRow && (
@@ -315,7 +344,7 @@ const Select = <T extends SelectDataConstraints>({
                     e.stopPropagation();
                   }}
                 >
-                  X
+                  {icons?.clear ? icons.clear : "X"}
                 </button>
               )
             )}
@@ -334,7 +363,13 @@ const Select = <T extends SelectDataConstraints>({
                 e.stopPropagation();
               }}
             >
-              V
+              {dropDownOpen
+                ? icons?.open
+                  ? icons.open
+                  : "V"
+                : icons?.close
+                  ? icons.close
+                  : "V"}
             </button>
           </div>
           {dropDownOpen && (
@@ -349,6 +384,8 @@ const Select = <T extends SelectDataConstraints>({
               disabledOption={disabledOption}
               extraOptionsLoading={Boolean(extraOptionsLoading)}
               onLastItemRendered={onLastItemRendered}
+              disableErrorBoundaries={disableErrorBoundaries}
+              optionErrorFallback={optionErrorFallback}
             />
           )}
         </div>
@@ -372,4 +409,4 @@ const Select = <T extends SelectDataConstraints>({
   );
 };
 
-export default Select;
+export default BaseSelect;

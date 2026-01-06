@@ -7,13 +7,13 @@ button {
   background: unset;
 }
 
-.Ouimenu {
+.menu {
   position: relative;
   width: max-content;
   text-align: left;
 }
 
-.Ouimenu_target {
+.menu_target {
   border: unset;
   background-color: light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
 
@@ -22,7 +22,7 @@ button {
   }
 }
 
-.Ouimenu_dropdown {
+.menu_dropdown {
   width: max-content;
   position: absolute;
   background: light-dark(var(--kui-neutral-50), var(--kui-neutral-700));
@@ -38,7 +38,7 @@ button {
   border-radius: calc(var(--kui-rounded) * 1rem);
 }
 
-.Ouimenu_item {
+.menu_item {
   font-size: 0.9rem;
   font-weight: 400;
   display: flex;
@@ -53,11 +53,11 @@ button {
   }
 }
 
-.Ouimenu_label {
+.menu_label {
   font-size: 0.75rem;
 }
 
-.Ouimenu_divider {
+.menu_divider {
   height: 1px;
   width: 100%;
   margin-block: var(--kui-spacing-sm);

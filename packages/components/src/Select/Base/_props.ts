@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import React, { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 import { LabelPositionBase } from "../../_core/types";
 
 export type SelectDataConstraints = Record<string | number, unknown>;
@@ -31,6 +31,19 @@ export type SelectProps<T extends SelectDataConstraints> = {
   onLastItemRendered?: () => void;
   asyncSearch?: (term: string) => void;
   // End Async Select Props
+
+  // Error Boundaries
+  disableErrorBoundaries?: boolean;
+  optionErrorFallback?: FC<{ row: T }>;
+  selectErrorFallback?: ReactNode;
+
+  // Icon overwriting
+  icons?: {
+    close?: ReactNode;
+    open?: ReactNode;
+    clear?: ReactNode;
+    loading?: ReactNode;
+  };
 
   placeholder?: string;
   loading?: boolean;

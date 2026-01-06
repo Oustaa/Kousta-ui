@@ -53,8 +53,16 @@
 
   &[data-disabled="true"] {
     opacity: 0.5;
-    cursor: not-allowed;
+
+    &:hover {
+      cursor: not-allowed;
+    }
   }
+}
+
+.select-option-fallback {
+  background: var(--kui-danger-200);
+  color: var(--kui-danger-700);
 }
 
 .select-empty-message {
