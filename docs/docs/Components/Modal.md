@@ -3,7 +3,13 @@ sidebar_position: 4
 ---
 
 import Badge from '@site/src/components/Badge';
-import { UncontrolledModal, ControlledModal, ModalAsDrawer } from '@site/src/components/@Components/Modal';
+import {
+  UncontrolledModal,
+  ControlledModal,
+  ModalAsDrawer,
+  ModalSizePositionPreview,
+  ModalCloseBehaviorPreview,
+} from '@site/src/components/@Components/Modal';
 
 
 # Modal
@@ -15,7 +21,7 @@ The **Modal** component provides an accessible and flexible dialog interface for
 ## Usage
 
 ```tsx
-import { Modal } from "@ousta-ui/components";
+import { Modal } from "@kousta-ui/components";
 
 <Modal modalTrigger="Open Modal">
   {/* Modal Content */}
@@ -77,15 +83,15 @@ Avoid uncontrolled modals for complex or data-heavy components since they mount 
 A **controlled modal** allows parent components to manage its open/close state manually. This is useful for modals that depend on asynchronous data or need to be programmatically opened/closed.
 
 ```tsx
-import { useDisclosure } from "@ousta-ui/hooks";
+import { useDisclosure } from "@kousta-ui/hooks";
 
 const Example = () => {
   const { close, open, opened } = useDisclosure(false);
 
   return (
     <>
-      <button onClick={() => setOpened(true)}>Open Modal</button>
-      <Modal opened={opened} onClose={() => setOpened(false)} title="Controlled Modal">
+      <button onClick={open}>Open Modal</button>
+      <Modal opened={opened} onClose={close} title="Controlled Modal">
         <p>This modal is controlled from outside.</p>
       </Modal>
     </>
@@ -132,6 +138,16 @@ You can also provide a **custom pixel width** as a string, e.g. `"1000px"`.
 
 ---
 
+## Size, position, and offset
+
+`size`, `position`, and `offset` are implemented via inline styles on the modal container.
+
+### Preview (interactive)
+
+<ModalSizePositionPreview />
+
+---
+
 ## Modal Positions
 
 | Position | Description |
@@ -141,6 +157,44 @@ You can also provide a **custom pixel width** as a string, e.g. `"1000px"`.
 | `bottom` | Anchored at the bottom |
 | `left`, `right` | Vertically centered side panels |
 | `left-top`, `left-bottom`, `right-top`, `right-bottom` | Corner positions |
+
+---
+
+## Close behaviors
+
+The modal can close on:
+
+- **Escape** (default `closeOnClickEsc={true}`)
+- **Outside click / touch** (default `closeOnClickOutside={true}`)
+
+Disable either behavior explicitly:
+
+```tsx
+import { Modal } from "@kousta-ui/components";
+import { useDisclosure } from "@kousta-ui/hooks";
+
+export function Example() {
+  const { open, close, opened } = useDisclosure(false);
+
+  return (
+    <>
+      <button onClick={open}>Open</button>
+      <Modal
+        opened={opened}
+        onClose={close}
+        closeOnClickEsc={false}
+        closeOnClickOutside={false}
+      >
+        <p>Use the close button (X) to close this modal.</p>
+      </Modal>
+    </>
+  );
+}
+```
+
+### Preview
+
+<ModalCloseBehaviorPreview />
 
 ---
 
@@ -190,58 +244,34 @@ export type ModalProps = { /* see props table above */ }
 
 ---
 
-## Styles
+## Styles & customization
 
-Kousta-UI Modal components include customizable CSS classes for easy styling overrides. Each modal element receives the following classes:
+### Runtime classes
 
-### Base Classes
-- `kui-modal` - Base modal class applied to all modals
-- `kui-modal-{size}` - Size-specific class (e.g., `kui-modal-sm`, `kui-modal-md`, `kui-modal-lg`)
-- `kui-modal-{position}` - Position-specific class (e.g., `kui-modal-center`, `kui-modal-top`)
+- **Modal container**
+  - `kui-modal`
+  - `kui-modal-{size}` (example: `kui-modal-md`)
+  - `kui-modal-{position}` (example: `kui-modal-center`)
+- **Backdrop**
+  - `kui-modal-backdrop`
+- **Header**
+  - `kui-modal-header`
+- **Title**
+  - `kui-modal-title`
+- **Close button**
+  - `kui-modal-close`
+- **Body**
+  - `kui-modal-body`
+- **Footer**
+  - `kui-modal-footer`
 
-### Component Classes
-- `kui-modal-backdrop` - Modal backdrop overlay
-- `kui-modal-header` - Modal header container
-- `kui-modal-title` - Modal title element
-- `kui-modal-close` - Close button element
-- `kui-modal-body` - Modal body/content area
-- `kui-modal-footer` - Modal footer area
+### Tokens used by the default styles
 
-### Customization Examples
-
-You can easily override modal styles using these CSS classes:
-
-```css
-/* Custom modal styling */
-.kui-modal {
-  border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Custom backdrop */
-.kui-modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-}
-
-/* Custom header */
-.kui-modal-header {
-  border-bottom: 1px solid #e5e7eb;
-  padding: 1.5rem;
-}
-
-/* Custom close button */
-.kui-modal-close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #6b7280;
-}
-
-/* Custom size overrides */
-.kui-modal-lg {
-  max-width: 90vw;
-  max-height: 90vh;
-}
-```
+- **Colors**
+  - `--kui-neutral-100`, `--kui-neutral-800`, `--kui-neutral-950`
+- **Spacing**
+  - `--kui-spacing-xs`, `--kui-spacing-sm`
+- **Typography**
+  - `--kui-text-base`
+- **Rounding**
+  - `--kui-rounded`

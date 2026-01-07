@@ -54,7 +54,7 @@ export const CloseBehaviorPreview = () => {
   return (
     <Menu.Menu closeOnClick={false}>
       <Menu.Target>
-        <Button variant="secondary">Bulk actions</Button>
+        <Button variant="neutral-outline">Bulk actions</Button>
       </Menu.Target>
       <Menu.DropDown>
         <Menu.Item>Pin</Menu.Item>
@@ -184,22 +184,3 @@ export const DisabledItemsPreview = () => {
   );
 };
 
-/** Accessibility extras (demonstrative only) */
-export const AccessibilityPreview = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <Menu.Menu>
-      <Menu.Target
-        aria-haspopup="menu"
-        aria-expanded={open}
-        onClick={() => setOpen((o) => !o)}
-      >
-        <Button variant="outline">Options</Button>
-      </Menu.Target>
-      <Menu.DropDown>
-        <Menu.Item>Alpha</Menu.Item>
-        <Menu.Item>Beta</Menu.Item>
-      </Menu.DropDown>
-    </Menu.Menu>
-  );
-};

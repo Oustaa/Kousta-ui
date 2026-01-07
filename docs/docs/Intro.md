@@ -3,9 +3,9 @@ sidebar_position: 1
 title: Introduction
 ---
 
-# Ousta UI
+# Kousta UI
 
-**Ousta UI** is a modern React UI library built with performance and convenience in mind. After 3 years of experimentation with various UI libraries and creating custom components, Ousta UI delivers a comprehensive set of tools designed for ease of use and optimal performance.
+**Kousta UI** is a modern React UI library built with performance and convenience in mind.
 
 ## 🚀 Features
 
@@ -17,9 +17,9 @@ title: Introduction
 
 ## 📦 Packages
 
-Ousta UI is organized into focused packages to help you use only what you need:
+Kousta UI is organized into focused packages to help you use only what you need:
 
-### [@ousta-ui/components](/docs/category/components)
+### [@kousta-ui/components](/docs/category/components)
 A comprehensive collection of reusable React components including:
 - **Modal**: Flexible modal dialogs with positioning and size options
 - **Button**: Versatile button components with multiple variants
@@ -30,26 +30,24 @@ A comprehensive collection of reusable React components including:
 - **ContextMenu**: Right-click context menus
 - **WindowBoundary**: Boundary-aware components
 
-### [@ousta-ui/table](/docs/category/table)
+### [@kousta-ui/table](/docs/category/table)
 Powerful data table solutions featuring:
 - **DataTable**: Advanced data table with sorting, filtering, and custom rendering
 - **Responsive Design**: Mobile-friendly table layouts
 - **Custom Headers**: Flexible header configuration with nested data support
 - **Performance Optimized**: Efficient rendering for large datasets
 
-### [@ousta-ui/hooks](/docs/category/hooks)
+### [@kousta-ui/hooks](/docs/category/hooks)
 Essential React hooks for common UI patterns:
 - **useDisclosure**: Manage open/close states for modals, dropdowns, etc.
 - **useScrollLock**: Prevent body scroll when overlays are active
-- **useLocalStorage**: Persistent state management
-- **useMediaQuery**: Responsive design utilities
+- **usePagination**: Pagination state helpers
+- **useDebounceCallback**: Debounce a callback with cleanup on unmount
 
-### [@ousta-ui/helpers](/docs/category/helpers)
+### [@kousta-ui/helpers](/docs/category/helpers)
 Utility functions and helpers to streamline your development:
-- **Type guards**: Runtime type checking utilities
-- **Formatting helpers**: Date, number, and string formatting functions
-- **DOM utilities**: Common DOM manipulation helpers
-- **Validation utilities**: Form validation helpers
+- **getNestedProperty**: Safely read nested values
+- **updateNestedProperties**: Update nested properties immutably
 
 ## 🏁 Quick Start
 
@@ -59,29 +57,28 @@ Choose the packages you need:
 
 ```bash
 # Components package
-npm install @ousta-ui/components
+npm install @kousta-ui/components
 
 # Table package
-npm install @ousta-ui/table
+npm install @kousta-ui/table
 
 # Hooks package
-npm install @ousta-ui/hooks
+npm install @kousta-ui/hooks
 
 # Helpers package
-npm install @ousta-ui/helpers
+npm install @kousta-ui/helpers
 
 # Or install everything
-npm install @ousta-ui/components @ousta-ui/table @ousta-ui/hooks @ousta-ui/helpers
+npm install @kousta-ui/components @kousta-ui/table @kousta-ui/hooks @kousta-ui/helpers
 ```
 
 ### Basic Usage
 
 ```tsx
-import { Modal, Button } from "@ousta-ui/components";
-import { useDisclosure } from "@ousta-ui/hooks";
+import { Modal, Button } from "@kousta-ui/components";
+import { useDisclosure } from "@kousta-ui/hooks";
 
-// Import the CSS
-import "@ousta-ui/components/esm/index.css";
+import "@kousta-ui/styles/tokens.css";
 
 function App() {
   const { opened, close, open } = useDisclosure(false);
@@ -90,7 +87,7 @@ function App() {
     <>
       <Button onClick={open}>Open Modal</Button>
       <Modal opened={opened} onClose={close} title="Hello World">
-        <p>This is a modal from Ousta UI!</p>
+        <p>This is a modal from Kousta UI!</p>
       </Modal>
     </>
   );
@@ -100,8 +97,9 @@ function App() {
 ### DataTable Example
 
 ```tsx
-import { DataTable } from "@ousta-ui/table";
-import "@ousta-ui/table/esm/index.css";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/styles/tokens.css";
 
 interface User {
   id: number;
@@ -135,25 +133,17 @@ function UserTable() {
 
 ### Using Providers
 
-Ousta UI components can be customized using the `ComponentPropsProvider`:
+Kousta UI components can be customized using the `ComponentPropsProvider`:
 
 ```tsx
-import { ComponentPropsProvider } from "@ousta-ui/components";
+import { ComponentPropsProvider } from "@kousta-ui/components";
 
 function App() {
-  const defaultProps = {
-    Button: {
-      variant: "primary",
-      size: "md",
-    },
-    Modal: {
-      position: "center",
-      size: "md",
-    },
-  };
-
   return (
-    <ComponentPropsProvider defaultProps={defaultProps}>
+    <ComponentPropsProvider
+      button={{ variant: "primary", size: "md" }}
+      modal={{ position: "center", size: "md" }}
+    >
       <YourApp />
     </ComponentPropsProvider>
   );
@@ -166,25 +156,12 @@ Customize the appearance using CSS variables:
 
 ```css
 :root {
-  /* Colors */
-  --ousta-primary: #3b82f6;
-  --ousta-primary-hover: #2563eb;
-  --ousta-secondary: #6b7280;
-  --ousta-success: #10b981;
-  --ousta-warning: #f59e0b;
-  --ousta-error: #ef4444;
+  --kui-primary-500: #2563eb;
+  --kui-primary-600: #1d4ed8;
+  --kui-spacing-base: 1.125rem;
 
-  /* Spacing */
-  --ousta-spacing-xs: 0.25rem;
-  --ousta-spacing-sm: 0.5rem;
-  --ousta-spacing-md: 1rem;
-  --ousta-spacing-lg: 1.5rem;
-  --ousta-spacing-xl: 2rem;
-
-  /* Border radius */
-  --ousta-radius-sm: 0.25rem;
-  --ousta-radius-md: 0.375rem;
-  --ousta-radius-lg: 0.5rem;
+  /* Border radius multiplier used by multiple components */
+  --kui-rounded: 0.5;
 }
 ```
 
@@ -197,9 +174,8 @@ Customize the appearance using CSS variables:
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/Oustaa/ousta-ui)
-- [Report Issues](https://github.com/Oustaa/ousta-ui/issues)
-- [Examples and Demos](https://ui.ousta.dev)
+- [GitHub Repository](https://github.com/Oustaa/kousta-ui)
+- [Report Issues](https://github.com/Oustaa/kousta-ui/issues)
 
 ---
 

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ```tsx
 import { useState } from "react"
-import { DataTable } from "@ousta-ui/table"
+import { DataTable } from "@kousta-ui/table"
 
 const [headers, setHeaders] = useState({
   id:{

@@ -7,7 +7,7 @@ import Badge from '@site/src/components/Badge';
 
 # Helpers Package
 
-The **@ousta-ui/helpers** package provides a collection of framework-agnostic utility functions that solve common programming challenges. These helpers are designed to work with any JavaScript UI library (React, Vue, Angular, Svelte) and can also be used in Node.js environments.
+The **@kousta-ui/helpers** package provides a small set of framework-agnostic utility functions.
 
 ---
 
@@ -25,11 +25,11 @@ The **@ousta-ui/helpers** package provides a collection of framework-agnostic ut
 ## 📦 Installation
 
 ```bash
-npm install @ousta-ui/helpers
+npm install @kousta-ui/helpers
 # or
-yarn add @ousta-ui/helpers
+yarn add @kousta-ui/helpers
 # or
-pnpm add @ousta-ui/helpers
+pnpm add @kousta-ui/helpers
 ```
 
 ---
@@ -40,7 +40,6 @@ pnpm add @ousta-ui/helpers
 |--------|---------|------------------|
 | [`getNestedProperty`](/docs/helpers/getNestedProperty) | Access nested object properties with string paths | Form data access, API response parsing |
 | [`updateNestedProperties`](/docs/helpers/updateNestedProperties) | Update nested object properties immutably | State management, configuration updates |
-| [`isNodeAChild`](/docs/helpers/isNodeAChild) | Check if a DOM node is a child of another | Event handling, click outside detection |
 
 ---
 
@@ -48,7 +47,7 @@ pnpm add @ousta-ui/helpers
 
 ```javascript
 // Import individual helpers (recommended for tree shaking)
-import { getNestedProperty, updateNestedProperties, isNodeAChild } from "@ousta-ui/helpers";
+import { getNestedProperty, updateNestedProperties } from "@kousta-ui/helpers";
 
 // Object manipulation
 const user = {
@@ -67,11 +66,6 @@ console.log(fullName); // "John Doe"
 
 // Update nested property immutably
 const updatedUser = updateNestedProperties(user, "contact.email", "newemail@example.com");
-
-// DOM node checking (browser environment)
-const parent = document.getElementById("container");
-const child = document.getElementById("button");
-const isChild = isNodeAChild(parent, child);
 ```
 
 ---
@@ -89,7 +83,7 @@ Helpers for working with complex nested objects:
 
 Helpers for browser DOM operations:
 
-- **[`isNodeAChild`](/docs/helpers/isNodeAChild)** - Check parent-child relationships between DOM nodes
+This package does not currently export DOM utilities.
 
 ---
 
@@ -109,21 +103,12 @@ Helpers for browser DOM operations:
 - Modifying nested data without mutation
 - Working with React/Vue state management
 
-### Use `isNodeAChild` when:
-
-- Implementing click-outside detection
-- Handling event delegation
-- Managing focus trapping in modals
-- Validating DOM node relationships
-
----
-
 ## 🔧 TypeScript Support
 
 All helpers provide full TypeScript support:
 
 ```typescript
-import { getNestedProperty, updateNestedProperties, isNodeAChild } from "@ousta-ui/helpers";
+import { getNestedProperty, updateNestedProperties } from "@kousta-ui/helpers";
 
 // Typed object access
 interface User {
@@ -143,11 +128,6 @@ const fullName: string = getNestedProperty(user, "personal.first_name personal.l
 
 // Update with type safety
 const updatedUser: User = updateNestedProperties(user, "contact.email", "new@example.com");
-
-// DOM node checking (browser environment)
-const parent: HTMLElement | null = document.getElementById("container");
-const child: HTMLElement | null = document.getElementById("button");
-const isChild: boolean = isNodeAChild(parent, child);
 ```
 
 ---
@@ -169,7 +149,7 @@ const isChild: boolean = isNodeAChild(parent, child);
 
 ```jsx
 import React, { useState } from "react";
-import { getNestedProperty, updateNestedProperties } from "@ousta-ui/helpers";
+import { getNestedProperty, updateNestedProperties } from "@kousta-ui/helpers";
 
 function UserProfile({ userData }) {
   const [user, setUser] = useState(userData);
@@ -204,7 +184,7 @@ function UserProfile({ userData }) {
 </template>
 
 <script>
-import { getNestedProperty, updateNestedProperties } from "@ousta-ui/helpers";
+import { getNestedProperty, updateNestedProperties } from "@kousta-ui/helpers";
 
 export default {
   data() {
@@ -235,7 +215,7 @@ export default {
 ### Node.js Integration
 
 ```javascript
-const { getNestedProperty, updateNestedProperties } = require("@ousta-ui/helpers");
+const { getNestedProperty, updateNestedProperties } = require("@kousta-ui/helpers");
 
 // Process configuration files
 const config = {

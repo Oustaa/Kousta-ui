@@ -40,7 +40,7 @@ This hook doesn't accept any parameters.
 ## Basic Usage
 
 ```tsx
-import { useScrollLock } from "@ousta-ui/hooks";
+import { useScrollLock } from "@kousta-ui/hooks";
 
 function BasicExample() {
   const { lockScroll, unlockScroll } = useScrollLock();
@@ -74,7 +74,7 @@ function BasicExample() {
 
 ```tsx
 function ModalExample() {
-  const { opened, open, close } = useDisclosure();
+  const { opened, open, close } = useDisclosure(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const handleOpen = () => {

@@ -7,47 +7,41 @@ import Badge from '@site/src/components/Badge';
 
 # Styles & Customization
 
-Ousta UI provides a comprehensive theming system built on CSS custom properties (CSS variables). This allows for deep customization of component appearance while maintaining consistency across your application.
+Kousta UI provides a theming system built on CSS custom properties (CSS variables). This allows for deep customization of component appearance while maintaining consistency across your application.
 
 ---
 
 ## 🎨 CSS Custom Properties
 
-All styling in Ousta UI is controlled through CSS custom properties that can be overridden at any level. This makes it easy to create custom themes, adapt to brand guidelines, or implement dark/light modes.
+All styling in Kousta UI is controlled through CSS custom properties that can be overridden at any level. This makes it easy to create custom themes, adapt to brand guidelines, or implement dark/light modes.
 
 ### Importing Styles
 
 ```css
 /* Import the complete token system */
-@import "@ousta-ui/styles/dist/tokens.css";
-
-/* Or import individual variable files */
-@import "@ousta-ui/styles/variables/colors.css";
-@import "@ousta-ui/styles/variables/spacing.css";
-@import "@ousta-ui/styles/variables/typography.css";
-@import "@ousta-ui/styles/variables/radius.css";
+@import "@kousta-ui/styles/tokens.css";
 ```
 
 ---
 
-## 🔄 Global Border Radius (`--Oui-rounded`)
+## 🔄 Global Border Radius (`--kui-rounded`)
 
-The `--Oui-rounded` variable is a **border-radius multiplier** that applies globally to all components. It's the most powerful way to control the visual style of your entire application.
+The `--kui-rounded` variable is a **border-radius multiplier** that applies globally to components that use it (buttons, inputs, selects, menus, modals, etc.).
 
 ### How It Works
 
 - **Multiplier Value**: A number that gets multiplied by `1rem` to calculate border radius
 - **Global Application**: Affects all components (buttons, inputs, modals, etc.)
-- **Default Value**: `0.5` (moderately rounded corners)
-- **Calculation**: `border-radius: calc(var(--Oui-rounded) * 1rem)`
+- **Definition**: You define this variable in your global styles (it is used by components, but not defined in `@kousta-ui/styles/tokens.css`)
+- **Calculation**: `border-radius: calc(var(--kui-rounded) * 1rem)`
 
 ### Visual Examples
 
-#### `--Oui-rounded: 0` (Sharp Edges)
+#### `--kui-rounded: 0` (Sharp Edges)
 
 ```css
 :root {
-  --Oui-rounded: 0;
+  --kui-rounded: 0;
 }
 ```
 
@@ -92,11 +86,11 @@ The `--Oui-rounded` variable is a **border-radius multiplier** that applies glob
 
 **Use Case**: Modern, minimalist interfaces; data-heavy applications; professional tools.
 
-#### `--Oui-rounded: 0.5` (Default)
+#### `--kui-rounded: 0.5` (Moderately Rounded)
 
 ```css
 :root {
-  --Oui-rounded: 0.5;
+  --kui-rounded: 0.5;
 }
 ```
 
@@ -141,11 +135,11 @@ The `--Oui-rounded` variable is a **border-radius multiplier** that applies glob
 
 **Use Case**: General-purpose applications; balanced design; most common use cases.
 
-#### `--Oui-rounded: 1` (Fully Rounded)
+#### `--kui-rounded: 1` (Fully Rounded)
 
 ```css
 :root {
-  --Oui-rounded: 1;
+  --kui-rounded: 1;
 }
 ```
 
@@ -194,7 +188,7 @@ The `--Oui-rounded` variable is a **border-radius multiplier** that applies glob
 
 ## 🎯 Component Effects
 
-Different `--Oui-rounded` values dramatically affect the visual appearance of components:
+Different `--kui-rounded` values dramatically affect the visual appearance of components:
 
 ### Buttons
 
@@ -210,15 +204,15 @@ Higher rounded values create softer, more approachable interfaces:
 
 ```css
 :root {
-  --Oui-rounded: 0.75; /* Softer than default */
+  --kui-rounded: 0.75; /* Softer than default */
 }
 
 .modal {
-  border-radius: calc(var(--Oui-rounded) * 1rem); /* 12px */
+  border-radius: calc(var(--kui-rounded) * 1rem); /* 12px */
 }
 
 .card {
-  border-radius: calc(var(--Oui-rounded) * 1rem); /* 12px */
+  border-radius: calc(var(--kui-rounded) * 1rem); /* 12px */
 }
 ```
 
@@ -228,15 +222,15 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-rounded: 0.25; /* Subtle rounding */
+  --kui-rounded: 0.25; /* Subtle rounding */
 }
 
 .input {
-  border-radius: calc(var(--Oui-rounded) * 1rem); /* 4px */
+  border-radius: calc(var(--kui-rounded) * 1rem); /* 4px */
 }
 
 .button {
-  border-radius: calc(var(--Oui-rounded) * 1rem); /* 4px */
+  border-radius: calc(var(--kui-rounded) * 1rem); /* 4px */
 }
 ```
 
@@ -250,16 +244,16 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-primary-50: #fbf6fd;
-  --Oui-primary-100: #f6ecfb;
-  --Oui-primary-200: #ecd8f6;
-  --Oui-primary-300: #deb9ee;
-  --Oui-primary-400: #cc8fe3;
-  --Oui-primary-500: #b364d1;  /* Main primary */
-  --Oui-primary-600: #9141ac;
-  --Oui-primary-700: #7f3695;
-  --Oui-primary-800: #692e7a;
-  --Oui-primary-900: #5a2a65;
+  --kui-primary-50: #fbf6fd;
+  --kui-primary-100: #f6ecfb;
+  --kui-primary-200: #ecd8f6;
+  --kui-primary-300: #deb9ee;
+  --kui-primary-400: #cc8fe3;
+  --kui-primary-500: #b364d1;
+  --kui-primary-600: #9141ac;
+  --kui-primary-700: #7f3695;
+  --kui-primary-800: #692e7a;
+  --kui-primary-900: #5a2a65;
 }
 ```
 
@@ -267,16 +261,16 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-success-50: #eafee7;
-  --Oui-success-100: #d1fbcc;
-  --Oui-success-200: #a6f89e;
-  --Oui-success-300: #6ff066;
-  --Oui-success-400: #2ae120;
-  --Oui-success-500: #1fca18;  /* Main success */
-  --Oui-success-600: #12a10f;
-  --Oui-success-700: #107b10;
-  --Oui-success-800: #136113;
-  --Oui-success-900: #155217;
+  --kui-success-50: #eafee7;
+  --kui-success-100: #d1fbcc;
+  --kui-success-200: #a6f89e;
+  --kui-success-300: #6ff066;
+  --kui-success-400: #2ae120;
+  --kui-success-500: #1fca18;
+  --kui-success-600: #12a10f;
+  --kui-success-700: #107b10;
+  --kui-success-800: #136113;
+  --kui-success-900: #155217;
 }
 ```
 
@@ -284,16 +278,16 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-danger-50: #fff0f0;
-  --Oui-danger-100: #ffdddd;
-  --Oui-danger-200: #ffc0c0;
-  --Oui-danger-300: #ff9494;
-  --Oui-danger-400: #ff5757;
-  --Oui-danger-500: #ff2323;  /* Main danger */
-  --Oui-danger-600: #ff0000;
-  --Oui-danger-700: #d70000;
-  --Oui-danger-800: #b10303;
-  --Oui-danger-900: #920a0a;
+  --kui-danger-50: #fff0f0;
+  --kui-danger-100: #ffdddd;
+  --kui-danger-200: #ffc0c0;
+  --kui-danger-300: #ff9494;
+  --kui-danger-400: #ff5757;
+  --kui-danger-500: #ff2323;
+  --kui-danger-600: #ff0000;
+  --kui-danger-700: #d70000;
+  --kui-danger-800: #b10303;
+  --kui-danger-900: #920a0a;
 }
 ```
 
@@ -301,16 +295,16 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-warning-50: #fff9ec;
-  --Oui-warning-100: #fff0d3;
-  --Oui-warning-200: #ffdea5;
-  --Oui-warning-300: #ffc66d;
-  --Oui-warning-400: #ffa132;
-  --Oui-warning-500: #ff840a;  /* Main warning */
-  --Oui-warning-600: #e66100;
-  --Oui-warning-700: #cc4d02;
-  --Oui-warning-800: #a13c0b;
-  --Oui-warning-900: #82330c;
+  --kui-warning-50: #fff9ec;
+  --kui-warning-100: #fff0d3;
+  --kui-warning-200: #ffdea5;
+  --kui-warning-300: #ffc66d;
+  --kui-warning-400: #ffa132;
+  --kui-warning-500: #ff840a;
+  --kui-warning-600: #e66100;
+  --kui-warning-700: #cc4d02;
+  --kui-warning-800: #a13c0b;
+  --kui-warning-900: #82330c;
 }
 ```
 
@@ -318,17 +312,17 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-neutral-50: #ffffff;
-  --Oui-neutral-100: #efefef;
-  --Oui-neutral-200: #dcdcdc;
-  --Oui-neutral-300: #bdbdbd;
-  --Oui-neutral-400: #989898;
-  --Oui-neutral-500: #7c7c7c;
-  --Oui-neutral-600: #656565;
-  --Oui-neutral-700: #525252;
-  --Oui-neutral-800: #464646;
-  --Oui-neutral-900: #3d3d3d;
-  --Oui-neutral-950: #000000;
+  --kui-neutral-50: #ffffff;
+  --kui-neutral-100: #efefef;
+  --kui-neutral-200: #dcdcdc;
+  --kui-neutral-300: #bdbdbd;
+  --kui-neutral-400: #989898;
+  --kui-neutral-500: #7c7c7c;
+  --kui-neutral-600: #656565;
+  --kui-neutral-700: #525252;
+  --kui-neutral-800: #464646;
+  --kui-neutral-900: #3d3d3d;
+  --kui-neutral-950: #000000;
 }
 ```
 
@@ -336,15 +330,15 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-spacing-2xs: 0.25rem;  /* 4px */
-  --Oui-spacing-xs: 0.5rem;    /* 8px */
-  --Oui-spacing-sm: 0.75rem;   /* 12px */
-  --Oui-spacing-base: 1rem;    /* 16px */
-  --Oui-spacing-md: 1.25rem;   /* 20px */
-  --Oui-spacing-lg: 1.5rem;    /* 24px */
-  --Oui-spacing-xl: 1.75rem;   /* 28px */
-  --Oui-spacing-2xl: 2rem;     /* 32px */
-  --Oui-spacing-3xl: 3rem;     /* 48px */
+  --kui-spacing-2xs: 0.25rem;
+  --kui-spacing-xs: 0.5rem;
+  --kui-spacing-sm: 0.75rem;
+  --kui-spacing-base: 1rem;
+  --kui-spacing-md: 1.25rem;
+  --kui-spacing-lg: 1.5rem;
+  --kui-spacing-xl: 1.75rem;
+  --kui-spacing-2xl: 2rem;
+  --kui-spacing-3xl: 3rem;
 }
 ```
 
@@ -352,13 +346,13 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-text-xs: 0.5rem;      /* 8px */
-  --Oui-text-sm: 0.75rem;     /* 12px */
-  --Oui-text-base: 1rem;      /* 16px */
-  --Oui-text-medium: 1.125rem; /* 18px */
-  --Oui-text-lg: 1.5rem;      /* 24px */
-  --Oui-text-xl: 2.75rem;     /* 44px */
-  --Oui-text-2xl: 4rem;       /* 64px */
+  --kui-text-xs: 0.5rem;
+  --kui-text-sm: 0.75rem;
+  --kui-text-base: 1rem;
+  --kui-text-medium: 1.125rem;
+  --kui-text-lg: 1.5rem;
+  --kui-text-xl: 2.75rem;
+  --kui-text-2xl: 4rem;
 }
 ```
 
@@ -366,7 +360,7 @@ Form elements benefit from consistent rounding:
 
 ```css
 :root {
-  --Oui-rounded: 0.5;  /* Default multiplier */
+  --kui-rounded: 0.5;
 }
 ```
 
@@ -379,35 +373,32 @@ Form elements benefit from consistent rounding:
 ```css
 :root {
   /* Brand colors */
-  --Oui-primary-500: #2563eb;
-  --Oui-primary-600: #1d4ed8;
-  --Oui-primary-700: #1e40af;
+  --kui-primary-500: #2563eb;
+  --kui-primary-600: #1d4ed8;
+  --kui-primary-700: #1e40af;
 
   /* Custom spacing */
-  --Oui-spacing-base: 1.25rem; /* Larger base spacing */
+  --kui-spacing-base: 1.25rem; /* Larger base spacing */
 
   /* Custom typography */
-  --Oui-text-base: 1.125rem; /* Larger base font size */
+  --kui-text-base: 1.125rem; /* Larger base font size */
 
   /* Rounded corners */
-  --Oui-rounded: 0.375; /* Subtle rounding */
+  --kui-rounded: 0.375; /* Subtle rounding */
 }
 ```
 
 ### Dark Mode
 
 ```css
-[data-theme="dark"] {
-  --Oui-neutral-50: #1a1a1a;
-  --Oui-neutral-100: #2d2d2d;
-  --Oui-neutral-200: #404040;
-  --Oui-neutral-900: #f5f5f5;
-  --Oui-neutral-950: #ffffff;
-
-  /* Adjust other colors for dark mode */
-  --Oui-primary-400: #a78bfa;
-  --Oui-primary-500: #8b5cf6;
-  --Oui-primary-600: #7c3aed;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kui-neutral-50: #1a1a1a;
+    --kui-neutral-100: #2d2d2d;
+    --kui-neutral-200: #404040;
+    --kui-neutral-900: #f5f5f5;
+    --kui-neutral-950: #ffffff;
+  }
 }
 ```
 
@@ -416,19 +407,19 @@ Form elements benefit from consistent rounding:
 ```css
 :root {
   /* Sharp, minimal design */
-  --Oui-rounded: 0;
+  --kui-rounded: 0;
 
   /* Monochrome palette */
-  --Oui-primary-500: #374151;
-  --Oui-primary-600: #1f2937;
-  --Oui-success-500: #6b7280;
-  --Oui-danger-500: #374151;
-  --Oui-warning-500: #6b7280;
+  --kui-primary-500: #374151;
+  --kui-primary-600: #1f2937;
+  --kui-success-500: #6b7280;
+  --kui-danger-500: #374151;
+  --kui-warning-500: #6b7280;
 
   /* Minimal spacing */
-  --Oui-spacing-sm: 0.5rem;
-  --Oui-spacing-base: 0.75rem;
-  --Oui-spacing-md: 1rem;
+  --kui-spacing-sm: 0.5rem;
+  --kui-spacing-base: 0.75rem;
+  --kui-spacing-md: 1rem;
 }
 ```
 
@@ -437,18 +428,18 @@ Form elements benefit from consistent rounding:
 ```css
 :root {
   /* Very rounded, playful design */
-  --Oui-rounded: 1.25;
+  --kui-rounded: 1.25;
 
   /* Vibrant colors */
-  --Oui-primary-500: #ec4899;
-  --Oui-success-500: #10b981;
-  --Oui-danger-500: #f43f5e;
-  --Oui-warning-500: #f59e0b;
+  --kui-primary-500: #ec4899;
+  --kui-success-500: #10b981;
+  --kui-danger-500: #f43f5e;
+  --kui-warning-500: #f59e0b;
 
   /* Generous spacing */
-  --Oui-spacing-base: 1.25rem;
-  --Oui-spacing-md: 1.5rem;
-  --Oui-spacing-lg: 2rem;
+  --kui-spacing-base: 1.25rem;
+  --kui-spacing-md: 1.5rem;
+  --kui-spacing-lg: 2rem;
 }
 ```
 
@@ -461,11 +452,11 @@ Form elements benefit from consistent rounding:
 ```css
 /* Override for specific component */
 .custom-card {
-  --Oui-rounded: 0.25; /* Sharper corners for cards */
+  --kui-rounded: 0.25; /* Sharper corners for cards */
 }
 
 .custom-button {
-  --Oui-rounded: 2; /* Very rounded buttons */
+  --kui-rounded: 2; /* Very rounded buttons */
 }
 ```
 
@@ -475,13 +466,13 @@ Form elements benefit from consistent rounding:
 /* Different rounding for different screen sizes */
 @media (max-width: 768px) {
   :root {
-    --Oui-rounded: 0.25; /* Sharper on mobile */
+    --kui-rounded: 0.25; /* Sharper on mobile */
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-    --Oui-rounded: 0.75; /* Softer on large screens */
+    --kui-rounded: 0.75; /* Softer on large screens */
   }
 }
 ```
@@ -492,9 +483,9 @@ Form elements benefit from consistent rounding:
 /* Smooth transitions for theme changes */
 :root {
   transition:
-    --Oui-rounded 0.3s ease,
-    --Oui-primary-500 0.3s ease,
-    --Oui-neutral-100 0.3s ease;
+    --kui-rounded 0.3s ease,
+    --kui-primary-500 0.3s ease,
+    --kui-neutral-100 0.3s ease;
 }
 ```
 
@@ -504,7 +495,7 @@ Form elements benefit from consistent rounding:
 
 ### Do's
 
-- ✅ Use `--Oui-rounded` for consistent border radius across components
+- ✅ Use `--kui-rounded` for consistent border radius across components
 - ✅ Choose values based on your brand personality (0=professional, 1=friendly)
 - ✅ Test with real components to see the full effect
 - ✅ Consider responsive design when choosing values
@@ -528,10 +519,10 @@ function ThemeSwitcher() {
   const [theme, setTheme] = useState('default');
 
   const themes = {
-    sharp: { '--Oui-rounded': 0 },
-    default: { '--Oui-rounded': 0.5 },
-    rounded: { '--Oui-rounded': 1 },
-    playful: { '--Oui-rounded': 1.5 }
+    sharp: { '--kui-rounded': 0 },
+    default: { '--kui-rounded': 0.5 },
+    rounded: { '--kui-rounded': 1 },
+    playful: { '--kui-rounded': 1.5 }
   };
 
   const applyTheme = (themeName) => {

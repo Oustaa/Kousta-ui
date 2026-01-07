@@ -24,7 +24,7 @@ An advanced **DataTable** component that provides a full-featured data managemen
 ## Quick start
 
 ```tsx
-import { DataTable } from "@ousta-ui/table";
+import { DataTable } from "@kousta-ui/table";
 
 interface User {
   id: number;
@@ -817,7 +817,7 @@ The DataTable component includes comprehensive accessibility features:
 
 ```ts
 import { ComponentPropsWithoutRef, ReactNode } from "react";
-import { ButtonProps, MenuProps, ModalProps } from "@ousta-ui/components";
+import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
 
 // Main table props
 export type TableProps<T> = {

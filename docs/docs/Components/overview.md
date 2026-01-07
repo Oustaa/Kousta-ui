@@ -7,7 +7,7 @@ import Badge from '@site/src/components/Badge';
 
 # Components Package
 
-The **@ousta-ui/components** package provides a comprehensive collection of reusable, accessible, and customizable React components built with performance and developer experience in mind.
+The **@kousta-ui/components** package provides a collection of reusable React components.
 
 ---
 
@@ -25,18 +25,17 @@ The **@ousta-ui/components** package provides a comprehensive collection of reus
 ## 📦 Installation
 
 ```bash
-npm install @ousta-ui/components
+npm install @kousta-ui/components
 # or
-yarn add @ousta-ui/components
+yarn add @kousta-ui/components
 # or
-pnpm add @ousta-ui/components
+pnpm add @kousta-ui/components
 ```
 
 ### Import styles
 
 ```tsx
-// Import the component styles
-import "@ousta-ui/components/esm/index.css";
+import "@kousta-ui/styles/tokens.css";
 ```
 
 ---
@@ -44,7 +43,7 @@ import "@ousta-ui/components/esm/index.css";
 ## 🎯 Quick Start
 
 ```tsx
-import { Button, Modal, Input } from "@ousta-ui/components";
+import { Button, Modal, Input } from "@kousta-ui/components";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -75,8 +74,8 @@ Interactive form elements with validation and accessibility built-in.
 
 - **[Input](/docs/Components/Input)** - Versatile input with labels, errors, and sections
 - **[Button](/docs/Components/Button)** - Theme-aware button with variants and loading states
-- **[Select](/docs/Components/Select)** - Searchable dropdown with local filtering
-- **[AsyncSelect](/docs/Components/AsyncSelect)** - Server-side search and infinite scrolling
+- **[Select](/docs/Components/Select)** - Dropdown selection
+- **[AsyncSelect](/docs/Components/AsyncSelect)** - Async data loading select
 
 ### Navigation & Layout
 
@@ -101,7 +100,7 @@ Helper components for performance and advanced interactions.
 Set global defaults and create custom variants:
 
 ```tsx
-import { ComponentPropsProvider } from "@ousta-ui/components";
+import { ComponentPropsProvider } from "@kousta-ui/components";
 
 <ComponentPropsProvider
   button={{
@@ -125,12 +124,9 @@ Customize appearance with CSS variables:
 
 ```css
 :root {
-  --ousta-primary: #3b82f6;
-  --ousta-primary-hover: #2563eb;
-  --ousta-success: #10b981;
-  --ousta-warning: #f59e0b;
-  --ousta-error: #ef4444;
-  --ousta-neutral: #6b7280;
+  --kui-primary-500: #3b82f6;
+  --kui-primary-600: #2563eb;
+  --kui-rounded: 0.5;
 }
 ```
 
@@ -155,7 +151,7 @@ All components are built with accessibility as a first-class concern:
 Full TypeScript support with comprehensive type definitions:
 
 ```tsx
-import { Button, ButtonProps } from "@ousta-ui/components";
+import { Button, ButtonProps } from "@kousta-ui/components";
 
 interface CustomButtonProps extends ButtonProps {
   customProp?: string;
@@ -292,7 +288,7 @@ function LazyImage({ src, alt }) {
   Click me
 </Button>
 
-// Ousta UI
+// Kousta UI
 <Button variant="primary">
   Click me
 </Button>
@@ -307,7 +303,7 @@ function LazyImage({ src, alt }) {
   <Option value="1">Option 1</Option>
 </Select>
 
-// Ousta UI
+// Kousta UI
 <Input placeholder="Enter text" />
 <Select data={[{ value: "1", label: "Option 1" }]} />
 ```
@@ -316,21 +312,21 @@ function LazyImage({ src, alt }) {
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [contributing guidelines](https://github.com/Oustaa/ousta-ui/blob/main/CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [contributing guidelines](https://github.com/Oustaa/kousta-ui/blob/main/CONTRIBUTING.md) for details.
 
 ---
 
 ## 📄 License
 
-MIT © [Ousta](https://github.com/Oustaa)
+MIT © [Oustaa](https://github.com/Oustaa)
 
 ---
 
 ## 🔗 Related Packages
 
-- **[@ousta-ui/table](/docs/category/table)** - Advanced data table components
-- **[@ousta-ui/hooks](/docs/category/hooks)** - Essential React hooks
-- **[@ousta-ui/helpers](/docs/category/helpers)** - Utility functions and helpers
+- **[@kousta-ui/table](/docs/category/table)** - Advanced data table components
+- **[@kousta-ui/hooks](/docs/category/hooks)** - Essential React hooks
+- **[@kousta-ui/helpers](/docs/category/helpers)** - Utility functions and helpers
 
 ---
 

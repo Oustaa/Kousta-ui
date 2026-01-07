@@ -3,6 +3,14 @@ sidebar_position: 1
 ---
 
 import Badge from '@site/src/components/Badge';
+import {
+  QuickStartPreview,
+  VariantsPreview,
+  SizesPreview,
+  LoadingDisabledPreview,
+  ProviderDefaultsPreview,
+  ProviderVariantsPreview,
+} from '@site/src/components/@Components/Button';
 
 # Button
 
@@ -14,7 +22,7 @@ Now supports **global default props & per‑variant overrides via a context prov
 ## Quick start
 
 ```tsx
-import { Button } from "@ousta-ui/components";
+import { Button } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -26,6 +34,9 @@ export default function Example() {
   );
 }
 ```
+
+### Preview
+<QuickStartPreview />
 
 ---
 
@@ -68,13 +79,16 @@ All color variants are available in **solid**, **outline**, **light**, and **lin
 </div>
 ```
 
+### Preview
+<VariantsPreview />
+
 ### Define your own variants
 
 With the [`ComponentPropsProvider`](/docs/Components/ComponentPropsProvider) you can provide your own pre‑defined button **variant**, as well as override the existing ones.
 
 #### Example
 ```tsx
-import { Button, ComponentPropsProvider } from "@ousta-ui/components";
+import { Button, ComponentPropsProvider } from "@kousta-ui/components";
 
 <ComponentPropsProvider
   button={{
@@ -108,12 +122,15 @@ import { Button, ComponentPropsProvider } from "@ousta-ui/components";
 <Button size="lg">Large Button</Button>
 ```
 
+### Preview
+<SizesPreview />
+
 ### Override size app‑wide
 
 Use the provider to set a default size for a subtree. Component props always **override** provider defaults.
 
 ```tsx
-import { Button, ComponentPropsProvider } from "@ousta-ui/components";
+import { Button, ComponentPropsProvider } from "@kousta-ui/components";
 
 <>
   <Button>Medium (default)</Button>
@@ -125,6 +142,9 @@ import { Button, ComponentPropsProvider } from "@ousta-ui/components";
   </ComponentPropsProvider>
 </>
 ```
+
+### Preview
+<ProviderDefaultsPreview />
 
 ---
 
@@ -146,6 +166,9 @@ import { Button, ComponentPropsProvider } from "@ousta-ui/components";
 </div>
 ```
 
+### Preview
+<LoadingDisabledPreview />
+
 ### Override `loadingIndicator`
 
 ```tsx
@@ -165,7 +188,7 @@ import { Button, ComponentPropsProvider } from "@ousta-ui/components";
 Use `ComponentPropsProvider` to define **app‑wide defaults** for Button and to create **custom variants** that map to native button props (style/className/aria/etc.).
 
 ```tsx
-import { ComponentPropsProvider, Button } from "@ousta-ui/components";
+import { ComponentPropsProvider, Button } from "@kousta-ui/components";
 
 export default function App() {
   return (
@@ -203,6 +226,9 @@ export default function App() {
 }
 ```
 
+### Preview
+<ProviderVariantsPreview />
+
 ### How precedence works
 
 - **Component props win** over provider defaults. If you pass `size="lg"` on a button, it overrides the provider’s `size`.
@@ -219,21 +245,6 @@ export default function App() {
 - Ensure contrast between text and background meets WCAG AA.
 
 <Badge color="green">Tip</Badge> If the label is just an icon, add an accessible name with `aria-label`.
-
----
-
-## Styling hooks
-
-Default class names from `Button.module.css`:
-
-- Base: `.btn`
-- Sizes: `.btn-sm`, `.btn-md`, `.btn-lg`
-- Solid: `.btn-primary`, `.btn-success`, `.btn-danger`, `.btn-neutral`, `.btn-warning`
-- Outline: `.btn-primary-outline`, `.btn-success-outline`, `.btn-danger-outline`, `.btn-neutral-outline`, `.btn-warning-outline`
-- Light: `.btn-primary-light`, `.btn-success-light`, `.btn-danger-light`, `.btn-neutral-light`, `.btn-warning-light`
-- Link: `.btn-primary-link`, `.btn-success-link`, `.btn-danger-link`, `.btn-neutral-link`, `.btn-warning-link`
-
-Each variant leverages design tokens (e.g., `--Oui-primary-500`) and defines hover states per style.
 
 ---
 
@@ -305,43 +316,24 @@ export type ButtonProps = {
 
 ---
 
-## Styles
+## Styles & customization
 
-Kousta-UI Button components include customizable CSS classes for easy styling overrides. Each button element receives the following classes:
+### Runtime classes
 
-### Base Classes
-- `kui-button` - Base button class applied to all buttons
-- `kui-button-{variant}` - Variant-specific class (e.g., `kui-button-primary`, `kui-button-success-outline`)
-- `kui-button-{size}` - Size-specific class (e.g., `kui-button-sm`, `kui-button-md`, `kui-button-lg`)
+- **Base**
+  - `kui-button`
+- **Variant**
+  - `kui-button-{variant}` (example: `kui-button-primary-light`)
+- **Size**
+  - `kui-button-{size}` (example: `kui-button-lg`)
+- **Loading UI**
+  - `kui-button-loading` (rendered inside the button when `loading` is true)
 
-### State Classes
-- `kui-button-loading` - Applied to the loading indicator container when `loading={true}`
+### Tokens used by the default styles
 
-### Customization Examples
-
-You can easily override button styles using these CSS classes:
-
-```css
-/* Custom primary button */
-.kui-button-primary {
-  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-  border: none;
-}
-
-/* Custom size */
-.kui-button-lg {
-  padding: 12px 24px;
-  font-size: 18px;
-}
-
-/* Custom loading state */
-.kui-button-loading {
-  opacity: 0.7;
-}
-```
-
-### Available Variants
-All standard variants are supported:
-- Colors: `primary`, `secondary`, `success`, `warning`, `danger`, `neutral`
-- Styles: `outline`, `light`, `link` (combined with colors)
-- Example: `kui-button-success-outline`, `kui-button-primary-light`
+- **Spacing**
+  - `--kui-spacing-xs`, `--kui-spacing-sm`, `--kui-spacing-md`, `--kui-spacing-lg`
+- **Rounding**
+  - `--kui-rounded`
+- **Colors**
+  - `--kui-primary-*`, `--kui-success-*`, `--kui-danger-*`, `--kui-neutral-*`, `--kui-warning-*`

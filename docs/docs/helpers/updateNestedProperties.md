@@ -52,7 +52,7 @@ The `key` parameter uses dot notation to specify nested property locations:
 ## Basic Usage
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 const user = {
   personal: {
@@ -86,7 +86,7 @@ console.log(updated3.contact.phone); // "123-456-7890"
 
 ```javascript
 import React, { useState } from "react";
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 function UserProfile() {
   const [user, setUser] = useState({
@@ -150,7 +150,7 @@ function UserProfile() {
 ### Configuration Management
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 const defaultConfig = {
   api: {
@@ -205,7 +205,7 @@ console.log(finalProdConfig);
 ### Form Data Processing
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 const initialFormData = {
   user: {
@@ -265,7 +265,7 @@ console.log(processedData);
 ### E-commerce Product Updates
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 const product = {
   id: "prod_123",
@@ -327,7 +327,7 @@ console.log(finalProduct);
 ### User Settings Management
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 const defaultSettings = {
   profile: {
@@ -400,7 +400,7 @@ console.log(userSettings);
 ## Node.js Usage Example
 
 ```javascript
-const { updateNestedProperties } = require("@ousta-ui/helpers");
+const { updateNestedProperties } = require("@kousta-ui/helpers");
 const fs = require("fs");
 
 // Configuration management for Node.js application
@@ -557,7 +557,7 @@ console.log(updated2); // { existing: { prop: null, newProp: undefined } }
 Full TypeScript support with generic types:
 
 ```typescript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 interface User {
   personal: {
@@ -649,7 +649,7 @@ function updateNestedValue(obj, path, value) {
 ### After updateNestedProperties
 
 ```javascript
-import { updateNestedProperties } from "@ousta-ui/helpers";
+import { updateNestedProperties } from "@kousta-ui/helpers";
 
 // Simplified updates
 function updateUserEmail(user, newEmail) {

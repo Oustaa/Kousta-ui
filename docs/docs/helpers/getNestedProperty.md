@@ -52,7 +52,7 @@ The `key` parameter supports advanced syntax:
 ## Basic Usage
 
 ```javascript
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 const user = {
   first_name: "John",
@@ -316,7 +316,7 @@ console.log(activitySummary); // "2024-01-15T10:30:00Z (127)"
 ## Node.js Usage Example
 
 ```javascript
-const { getNestedProperty } = require("@ousta-ui/helpers");
+const { getNestedProperty } = require("@kousta-ui/helpers");
 const fs = require("fs");
 
 // Read and parse JSON configuration file
@@ -447,7 +447,7 @@ console.log(settings); // Array of settings
 Full TypeScript support with generic types:
 
 ```typescript
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 interface User {
   personal: {
@@ -525,7 +525,7 @@ function getFullName(user) {
 
 ```javascript
 // Simplified with helper
-import { getNestedProperty } from "@ousta-ui/helpers";
+import { getNestedProperty } from "@kousta-ui/helpers";
 
 function getFullName(user) {
   return getNestedProperty(user, "personal.first_name personal.last_name");

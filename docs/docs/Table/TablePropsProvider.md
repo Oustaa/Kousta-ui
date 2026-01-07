@@ -23,7 +23,7 @@ A powerful **TablePropsProvider** that allows you to set global defaults and cus
 ## Quick start
 
 ```tsx
-import { TablePropsProvider, DataTable } from "@ousta-ui/table";
+import { TablePropsProvider, DataTable } from "@kousta-ui/table";
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
           buttonProps: { variant: "danger", size: "sm" },
         },
       }}
-      toggleRows={{ variant: "outline", size: "xs" }}
+      toggleRows={{ variant: "neutral-outline", size: "sm" }}
       disableContextMenu={false}
     >
       <div>
@@ -755,7 +755,7 @@ function DynamicTableProvider({ children }) {
 
 ```ts
 import { ComponentPropsWithoutRef, ReactNode } from "react";
-import { ButtonProps, MenuProps, ModalProps } from "@ousta-ui/components";
+import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
 
 type PropsContextType = Partial<{
   props: {

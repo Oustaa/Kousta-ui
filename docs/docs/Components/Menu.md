@@ -11,7 +11,6 @@ import {
   PositionsPreview,
   IconsLabelsDividersPreview,
   DisabledItemsPreview,
-  AccessibilityPreview,
 } from '@site/src/components/@Components/Menu';
 
 # Menu
@@ -20,10 +19,19 @@ The **Menu** component renders a lightweight, accessible dropdown that can be op
 
 ---
 
-## Quick start
+## Anatomy
+
+The Menu is a composition of small primitives:
+
+- **`Menu.Menu`**: The container and state provider.
+- **`Menu.Target`**: The trigger button that opens the dropdown.
+- **`Menu.DropDown`**: The positioned panel that contains the items.
+- **`Menu.Item`**: A clickable action row.
+- **`Menu.Label`**: A non-interactive label row.
+- **`Menu.Divider`**: A horizontal separator.
 
 ```tsx
-import { Menu } from "@ousta-ui/components";
+import { Menu } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -45,129 +53,74 @@ export default function Example() {
 
 ---
 
-## Anatomy
-
-The Menu is a composition of small primitives:
-
-- **`Menu.Menu`** – the container and state provider
-- **`Menu.Target`** – the trigger button
-- **`Menu.DropDown`** – the positioned panel
-- **`Menu.Item`** – a clickable action row
-- **`Menu.Label`** – a non-interactive label row
-- **`Menu.Divider`** – a horizontal separator
-
-```tsx
-import { Menu } from "@ousta-ui/components";
-
-<Menu.Menu>
-  <Menu.Target>Actions</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Label>General</Menu.Label>
-    <Menu.Item>New</Menu.Item>
-    <Menu.Item>Duplicate</Menu.Item>
-    <Menu.Divider />
-    <Menu.Label>Danger</Menu.Label>
-    <Menu.Item>Delete</Menu.Item>
-  </Menu.DropDown>
-</Menu.Menu>
-```
-
-### Preview
-<IconsLabelsDividersPreview />
-
----
-
 ## Props
 
-### `Menu.Menu` (container)
+### `Menu.Menu` (Container)
 
-| Prop | Type | Default | Description |
-|---|---|---|---|
-| `type` | `"hover"` \| `"click"` | `"click"` | How the menu opens: on mouse **hover** or on **click**. |
-| `closeOnClick` | `boolean` | `true` | If `true`, clicking any `Menu.Item` closes the menu by default. |
-| `position` | [`MenuPosition`](#positions) | `"Bottom-Start"` | Where the dropdown appears relative to the trigger. |
-| `offset` | `number` | `4` | Gap (in px) between trigger and dropdown. |
-
-#### Type definitions
-
-```ts
-export type MenuOpenPosition = "Top" | "Bottom" | "Left" | "Right";
-export type MenuOpenLocation = "Start" | "End" | "Center";
-export type MenuPosition = \`\${MenuOpenPosition}-\${MenuOpenLocation}\`;
-
-export type MenuProps = {
-  type?: "hover" | "click";
-  closeOnClick?: boolean;
-  position?: MenuPosition;
-  offset?: number;
-};
-```
-
----
+| Name | Type | Default | Provider? | Description |
+|------|------|---------|-----------|-------------|
+| `type` | `"hover" \| "click"` | `"click"` | Yes | How the menu opens. |
+| `closeOnClick` | `boolean` | `true` | Yes | If `true`, clicking any `Menu.Item` closes the menu by default. |
+| `position` | `MenuPosition` | `"Bottom-Start"`| Yes | Where the dropdown appears relative to the trigger. |
+| `offset` | `number` | `4` | Yes | Gap (in px) between the trigger and dropdown. |
 
 ### `Menu.Item`
 
-| Prop | Type | Default | Description |
-|---|---|---|---|
-| `closeMenuOnClick` | `boolean` | inherits `closeOnClick` | Per-item override to close the menu when clicked. |
-| `disabled` | `boolean` | `false` | Disables the item and prevents interaction. |
-| `leftSection` | `ReactNode` | — | Optional element/icon rendered on the **left**. |
-| `rightSection` | `ReactNode` | — | Optional element/icon rendered on the **right**. |
+| Name | Type | Default | Provider? | Description |
+|------|------|---------|-----------|-------------|
+| `closeMenuOnClick` | `boolean` | `undefined` | Yes | Per-item override for the container's `closeOnClick` behavior. |
+| `disabled` | `boolean` | `false` | No | Disables the item and prevents interaction. |
+| `leftSection` | `ReactNode` | — | No | Optional element/icon rendered on the left. |
+| `rightSection` | `ReactNode` | — | No | Optional element/icon rendered on the right. |
 
-```ts
-export type MenuItemProps = {
-  closeMenuOnClick?: boolean;
-  disabled?: boolean;
-  leftSection?: ReactNode;
-  rightSection?: ReactNode;
-};
-```
-
-### Preview
-<DisabledItemsPreview />
+<Badge color="blue">Note</Badge> Props marked with **Yes** in the **Provider?** column can be configured globally using the `ComponentPropsProvider`.
 
 ---
 
-## Trigger modes
+## Usage
 
-### Click (default)
+### Trigger Modes
+
+#### Click (Default)
+
+The menu opens when the `Menu.Target` is clicked.
+
 ```tsx
-import { Menu } from "@ousta-ui/components";
-
-<Menu.Menu>
-  <Menu.Target>Open</Menu.Target>
-  <Menu.DropDown>...</Menu.DropDown>
+<Menu.Menu type="click">
+  <Menu.Target>Click me</Menu.Target>
+  <Menu.DropDown>
+    <Menu.Item>Item 1</Menu.Item>
+    <Menu.Item>Item 2</Menu.Item>
+  </Menu.DropDown>
 </Menu.Menu>
 ```
 
 ### Preview
 <ClickTriggerPreview />
 
-### Hover
-```tsx
-import { Menu } from "@ousta-ui/components";
+#### Hover
 
+Set `type="hover"` to open the menu on mouse enter and close on mouse leave.
+
+```tsx
 <Menu.Menu type="hover">
   <Menu.Target>Hover me</Menu.Target>
-  <Menu.DropDown>...</Menu.DropDown>
+  <Menu.DropDown>
+    <Menu.Item>Item 1</Menu.Item>
+    <Menu.Item>Item 2</Menu.Item>
+  </Menu.DropDown>
 </Menu.Menu>
 ```
-
-> When `type="hover"`, the container opens on `mouseenter` and closes on `mouseleave`. Click on the target won’t toggle the menu in this mode.
 
 ### Preview
 <HoverTriggerPreview />
 
----
+### Close Behavior
 
-## Close behavior
-
-Global default via `closeOnClick` on the container, with per-item override using `closeMenuOnClick`:
+By default, clicking any item closes the menu (`closeOnClick={true}`). You can override this globally on the container or per-item with `closeMenuOnClick`.
 
 ```tsx
-import { Menu } from "@ousta-ui/components";
-
-// Global: do NOT close when any item is clicked
+// Do NOT close when any item is clicked, except for the one that overrides it
 <Menu.Menu closeOnClick={false}>
   <Menu.Target>Bulk actions</Menu.Target>
   <Menu.DropDown>
@@ -180,47 +133,18 @@ import { Menu } from "@ousta-ui/components";
 ### Preview
 <CloseBehaviorPreview />
 
----
+### Positioning
 
-## Positions
-
-The dropdown can be placed on any side and alignment relative to the trigger. Use the controls below to change **position** and **offset** on the fly.
+The dropdown can be placed on any side and alignment relative to the trigger. Use the interactive controls below to see how `position` and `offset` work.
 
 ### Preview (interactive)
 <PositionsPreview />
 
-| Position | Visual |
-|---|---|
-| `Bottom-Start` | Below, left-aligned |
-| `Bottom-Center` | Below, centered |
-| `Bottom-End` | Below, right-aligned |
-| `Top-Start` | Above, left-aligned |
-| `Top-Center` | Above, centered |
-| `Top-End` | Above, right-aligned |
-| `Left-Start` | Left side, top-aligned |
-| `Left-Center` | Left side, centered vertically |
-| `Left-End` | Left side, bottom-aligned |
-| `Right-Start` | Right side, top-aligned |
-| `Right-Center` | Right side, centered vertically |
-| `Right-End` | Right side, bottom-aligned |
+### With Icons, Labels & Dividers
 
-Change the spacing from the trigger with `offset`:
+Compose the menu with `Menu.Label`, `Menu.Divider`, and `leftSection`/`rightSection` props on items for a richer UI.
 
 ```tsx
-import { Menu } from "@ousta-ui/components";
-
-<Menu.Menu position="Right-Center" offset={12}>
-  <Menu.Target>More</Menu.Target>
-  <Menu.DropDown>...</Menu.DropDown>
-</Menu.Menu>
-```
-
----
-
-## With icons, labels & dividers
-
-```tsx
-import { Menu } from "@ousta-ui/components";
 import { LuUser, LuSettings, LuLogOut } from "react-icons/lu";
 
 <Menu.Menu>
@@ -241,13 +165,11 @@ import { LuUser, LuSettings, LuLogOut } from "react-icons/lu";
 ### Preview
 <IconsLabelsDividersPreview />
 
----
+### Disabled Items
 
-## Disabled items
+Pass the `disabled` prop to any `Menu.Item` to make it non-interactive.
 
 ```tsx
-import { Menu } from "@ousta-ui/components";
-
 <Menu.Menu>
   <Menu.Target>Move</Menu.Target>
   <Menu.DropDown>
@@ -263,122 +185,32 @@ import { Menu } from "@ousta-ui/components";
 
 ---
 
-## Accessibility
+## Styles & customization
 
-This component ships with basic ARIA roles already applied:
+### Runtime classes
 
-- `Menu.DropDown` renders with `role="menu"`
-- `Menu.Item` renders with `role="menuitem"`
+- **`kui-menu`**: The main container (`Menu.Menu`).
+- **`kui-menu-target`**: The trigger button (`Menu.Target`).
+- **`kui-menu-dropdown`**: The dropdown panel (`Menu.DropDown`).
+- **`kui-menu-item`**: A menu item (`Menu.Item`).
+- **`kui-disabled`**: Added to a `kui-menu-item` when it is disabled.
+- **`kui-menu-label`**: A label (`Menu.Label`).
+- **`kui-menu-divider`**: A divider (`Menu.Divider`).
 
-**Recommendations** (optional, but good practice):
+### Tokens used by the default styles
 
-- Add `aria-haspopup="menu"` and `aria-expanded` to `Menu.Target` if you need richer semantics (e.g., when used outside of the default button).
-- Ensure keyboard focus management in your app shell (e.g., focus the first menu item on open, restore focus to the trigger on close) if you customize behavior.
-- Provide visible focus rings via CSS for keyboard users.
-- Use descriptive labels for icons-only items.
-
-```tsx
-import React, { useState } from "react";
-import { Menu } from "@ousta-ui/components";
-
-// Example: extra ARIA on the trigger
-export default function A11yMenu() {
-  const [open, setOpen] = useState(false);
-  return (
-    <Menu.Menu>
-      <Menu.Target aria-haspopup="menu" aria-expanded={open} onClick={() => setOpen(o => !o)}>
-        Options
-      </Menu.Target>
-      <Menu.DropDown>{/* items */}</Menu.DropDown>
-    </Menu.Menu>
-  );
-}
-```
-
-<Badge color="green">Note</Badge> The component also closes when clicking outside the menu.
-
-### Preview
-<AccessibilityPreview />
-
----
-
-## Styling
-
-The default styles are provided via `Menu.module.css` with the following class hooks:
-
-- `.Ouimenu` – container (positioning context)
-- `.Ouimenu_target` – trigger button
-- `.Ouimenu_dropdown` – dropdown panel
-- `.Ouimenu_item` – item row
-- `.Ouimenu_label` – label text
-- `.Ouimenu_divider` – `<hr />` separator
-
-You can override these classes or wrap the primitives to attach your design system tokens.
-
----
-
-## Testing recipes
-
-The library already uses semantic roles, which makes testing straightforward:
-
-```tsx
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { Menu } from "@ousta-ui/components";
-
-test("opens on click and applies correct position", async () => {
-  render(
-    <Menu.Menu position="Bottom-Center">
-      <Menu.Target>Menu</Menu.Target>
-      <Menu.DropDown>
-        <Menu.Item>Item 1</Menu.Item>
-      </Menu.DropDown>
-    </Menu.Menu>
-  );
-
-  await userEvent.click(screen.getByText("Menu"));
-  const dropdown = screen.getByRole("menu");
-  expect(dropdown).toBeInTheDocument();
-});
-```
-
-For hover mode:
-
-```tsx
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { Menu } from "@ousta-ui/components";
-
-render(
-  <Menu.Menu type="hover" position="Left-End">
-    <Menu.Target>Menu</Menu.Target>
-    <Menu.DropDown>
-      <Menu.Item>Item</Menu.Item>
-    </Menu.DropDown>
-  </Menu.Menu>
-);
-
-await userEvent.hover(screen.getByText("Menu"));
-expect(screen.getByRole("menu")).toBeVisible();
-```
-
----
-
-## Tips & gotchas
-
-- Use `closeOnClick={false}` for batch actions; override with `closeMenuOnClick` on the specific item that should close.
-- Combine `Right-Start` / `Left-Start` for toolbar menus, and `Bottom-Start` for action menus attached to list rows.
-- The menu uses the **nearest positioned ancestor** (`.Ouimenu`) for absolute positioning—don’t remove `position: relative` there.
-- Prefer concise labels; multi-line content is supported but consider `leftSection`/`rightSection` for icons/shortcuts instead.
+- **Colors**: `--kui-neutral-*`
+- **Spacing**: `--kui-spacing-sm`
+- **Rounding**: `--kui-rounded`
 
 ---
 
 ## Types (reference)
 
 ```ts
-export type MenuOpenPosition = "Top" | "Bottom" | "Left" | "Right";
-export type MenuOpenLocation = "Start" | "End" | "Center";
-export type MenuPosition = \`\${MenuOpenPosition}-${MenuOpenLocation}\`;
+import { ReactNode } from "react";
+
+export type MenuPosition = 'Top-Start' | 'Top-Center' | 'Top-End' | 'Bottom-Start' | 'Bottom-Center' | 'Bottom-End' | 'Left-Start' | 'Left-Center' | 'Left-End' | 'Right-Start' | 'Right-Center' | 'Right-End';
 
 export type MenuProps = {
   type?: "hover" | "click";

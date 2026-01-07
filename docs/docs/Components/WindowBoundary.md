@@ -3,20 +3,15 @@ sidebar_position: 8
 ---
 
 import Badge from '@site/src/components/Badge';
+import {
+  BasicVisibilityPreview,
+  LazyImagePreview,
+  InfiniteScrollPreview
+} from '@site/src/components/@Components/WindowBoundary';
 
 # WindowBoundary
 
-A performance-optimized **WindowBoundary** component that detects when elements enter or exit the viewport. Perfect for lazy loading, infinite scrolling, animations, and performance optimizations.
-
----
-
-## When to use
-
-- **Lazy loading**: Load images or components only when they become visible
-- **Infinite scrolling**: Trigger data loading when user scrolls to bottom
-- **Animations**: Start animations when elements enter viewport
-- **Performance**: Defer expensive operations until needed
-- **Analytics**: Track when content is viewed by users
+A performance-optimized **WindowBoundary** component that detects when elements enter or exit the viewport using the Intersection Observer API. It is perfect for lazy loading, infinite scrolling, triggering animations, and other performance optimizations.
 
 ---
 
@@ -24,219 +19,121 @@ A performance-optimized **WindowBoundary** component that detects when elements 
 
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
-| `onItemEnter` | `(element: Element \| null) => void` | — | Callback when element enters viewport. |
-| `onItemExit` | `(element: Element \| null) => void` | — | Callback when element exits viewport. |
-| `onceItemEnter` | `(element: Element \| null) => void` | — | Callback that fires only once when element first enters viewport. |
-| `onceItemExit` | `(element: Element \| null) => void` | — | Callback that fires only once when element first exits viewport. |
-| `root` | `Element \| Document \| null` | `null` | The element that is used as the viewport for checking visibility. |
-| `As` | `string` | `"div"` | The HTML tag to render as the wrapper element. |
-| `threshold` | `number` | `0` | Percentage of the element's visibility needed to trigger callbacks (0-1). |
-| `...rest` | `ComponentPropsWithoutRef<"div">` | — | Any native div props are forwarded to the wrapper. |
+| `onItemEnter` | `(element: Element \| null) => void` | — | Callback fired every time the element enters the viewport. |
+| `onItemExit` | `(element: Element \| null) => void` | — | Callback fired every time the element exits the viewport. |
+| `onceItemEnter` | `(element: Element \| null) => void` | — | Callback that fires only once when the element first enters the viewport. |
+| `onceItemExit` | `(element: Element \| null) => void` | — | Callback that fires only once when the element first exits the viewport. |
+| `root` | `Element \| Document \| null` | `document.body` | The element used as the viewport for checking visibility. Defaults to the browser viewport. |
+| `As` | `ElementType` | `"div"` | The HTML tag or React component to render as the wrapper element. |
+| `threshold` | `number` | `0` | A number between 0 and 1 indicating the percentage of the element's visibility needed to trigger callbacks. |
 
-<Badge color="blue">Note</Badge> The component uses the Intersection Observer API for optimal performance.
+<Badge color="blue">Note</Badge> The component is headless and does not have any visual styles of its own.
 
-## Examples
+---
 
-### Basic visibility detection
+## Usage
+
+### Basic Visibility Detection
+
+Use the `onItemEnter` and `onItemExit` callbacks to track when an element becomes visible.
 
 ```tsx
-<WindowBoundary
-  onItemEnter={(element) => {
-    console.log("Card is now visible");
-    element?.setAttribute("data-visible", "true");
-  }}
-  onItemExit={(element) => {
-    console.log("Card is no longer visible");
-    element?.setAttribute("data-visible", "false");
-  }}
->
-  <div className="card">
-    <h3>Observable Card</h3>
-    <p>This card's visibility is being tracked.</p>
-  </div>
-</WindowBoundary>
+function VisibilityTracker() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <div style={{ height: '150vh', paddingTop: '75vh' }}>
+      <WindowBoundary
+        onItemEnter={() => setVisible(true)}
+        onItemExit={() => setVisible(false)}
+      >
+        <div style={{
+          padding: '40px',
+          textAlign: 'center',
+          background: visible ? 'lightgreen' : '#eee',
+          transition: 'background 0.3s ease'
+        }}>
+          {visible ? 'I am in the viewport!' : 'Scroll me into view!'}
+        </div>
+      </WindowBoundary>
+    </div>
+  );
+}
 ```
 
-### Lazy image loading
+### Preview
+<BasicVisibilityPreview />
+
+### Lazy Loading Images
+
+Use `onceItemEnter` to defer loading an image until it is about to enter the viewport. This saves bandwidth and improves initial page load time.
 
 ```tsx
-function LazyImage({ src, alt, ...props }) {
-  const [isLoaded, setIsLoaded] = useState(false);
+function LazyImage() {
   const [isInView, setIsInView] = useState(false);
 
   return (
-    <WindowBoundary
-      onceItemEnter={() => setIsInView(true)}
-      threshold={0.1}
-    >
-      <div style={{ minHeight: "200px", background: "#f5f5f5" }}>
-        {isInView && (
-          <img
-            src={src}
-            alt={alt}
-            onLoad={() => setIsLoaded(true)}
-            style={{
-              opacity: isLoaded ? 1 : 0,
-              transition: "opacity 0.3s",
-              width: "100%",
-              height: "auto"
-            }}
-            {...props}
-          />
-        )}
-        {!isLoaded && isInView && (
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "200px"
-          }}>
-            Loading...
-          </div>
-        )}
-      </div>
-    </WindowBoundary>
+    <div style={{ height: '150vh', paddingTop: '75vh' }}>
+      <WindowBoundary onceItemEnter={() => setIsInView(true)} threshold={0.1}>
+        <div style={{ minHeight: '200px', background: '#f0f0f0', display: 'grid', placeItems: 'center' }}>
+          {isInView ? <img src="https://via.placeholder.com/400x200.png?text=Image+Loaded" alt="Lazy Loaded" /> : 'Scroll down to load image...'}
+        </div>
+      </WindowBoundary>
+    </div>
   );
 }
 ```
 
-### Infinite scrolling
+### Preview
+<LazyImagePreview />
+
+### Infinite Scrolling
+
+Place the `WindowBoundary` at the end of a list to trigger a function that loads more items when the user scrolls to the bottom.
 
 ```tsx
 function InfiniteList() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(Array.from({ length: 5 }, (_, i) => `Item ${i + 1}`));
   const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(true);
 
-  const loadMore = async () => {
-    if (loading || !hasMore) return;
-
+  const loadMore = () => {
+    if (loading) return;
     setLoading(true);
-    try {
-      const newItems = await fetchMoreItems(items.length);
+    setTimeout(() => {
+      const newItems = Array.from({ length: 5 }, (_, i) => `Item ${items.length + i + 1}`);
       setItems(prev => [...prev, ...newItems]);
-      setHasMore(newItems.length > 0);
-    } finally {
       setLoading(false);
-    }
+    }, 1000);
   };
 
   return (
-    <div>
-      {items.map((item, index) => (
-        <div key={index} className="list-item">
-          {item.content}
-        </div>
-      ))}
-
-      {hasMore && (
-        <WindowBoundary
-          onItemEnter={loadMore}
-          threshold={0.5}
-        >
-          <div style={{
-            padding: "20px",
-            textAlign: "center",
-            background: "#f9f9f9",
-            borderRadius: "8px",
-            margin: "20px 0"
-          }}>
-            {loading ? "Loading more..." : "Scroll to load more"}
-          </div>
-        </WindowBoundary>
-      )}
-    </div>
-  );
-}
-```
-
-### Custom threshold
-
-```tsx
-<WindowBoundary
-  onItemEnter={(element) => {
-    console.log("Element is 50% visible");
-  }}
-  threshold={0.5} // Trigger when 50% of element is visible
->
-  <div className="content">
-    This content will be detected when it's halfway visible.
-  </div>
-</WindowBoundary>
-```
-
-### Custom root element
-
-```tsx
-function ScrollableContainer() {
-  const containerRef = useRef();
-
-  return (
-    <div
-      ref={containerRef}
-      style={{
-        height: "400px",
-        overflow: "auto",
-        border: "1px solid #ccc",
-        padding: "20px"
-      }}
-    >
-      <div style={{ height: "200px", background: "#f0f0f0" }}>
-        Scroll down to see the tracked element:
-      </div>
-
-      <WindowBoundary
-        root={containerRef.current}
-        onItemEnter={() => console.log("Element entered scrollable container")}
-      >
-        <div style={{
-          height: "100px",
-          background: "#e0f0ff",
-          padding: "20px",
-          borderRadius: "8px"
-        }}>
-          I'm tracked within the scrollable container!
-        </div>
+    <div style={{ height: '300px', overflowY: 'auto', border: '1px solid #ccc' }}>
+      {items.map(item => <div key={item}>{item}</div>)}
+      <WindowBoundary onItemEnter={loadMore} threshold={1.0}>
+        <div>{loading ? 'Loading...' : 'Scroll to load more'}</div>
       </WindowBoundary>
-
-      <div style={{ height: "200px", background: "#f0f0f0" }}>
-        More content...
-      </div>
     </div>
   );
 }
 ```
 
----
-
-## Performance Considerations
-
-- **Intersection Observer**: Uses the efficient Intersection Observer API instead of scroll events
-- **Debounced callbacks**: Callbacks are optimized to prevent excessive function calls
-- **Memory management**: Automatically cleans up observers when component unmounts
-- **Threshold optimization**: Use appropriate thresholds to balance sensitivity and performance
-
-<Badge color="green">Tip</Badge> For best performance, avoid expensive operations in enter/exit callbacks. Consider debouncing or throttling if needed.
+### Preview
+<InfiniteScrollPreview />
 
 ---
 
-## Browser Support
+## Styling
 
-The Intersection Observer API is supported in all modern browsers:
+`WindowBoundary` is a headless component, meaning it has no visual output or styles. It renders a wrapper element (a `div` by default) around its children, to which it attaches the Intersection Observer. You can change the wrapper element using the `As` prop.
 
-- ✅ Chrome 51+
-- ✅ Firefox 55+
-- ✅ Safari 12.1+
-- ✅ Edge 15+
-
-For older browsers, consider using a polyfill.
+Any styles should be applied to the child elements you pass to the component.
 
 ---
 
 ## Types (reference)
 
 ```ts
-import { ComponentPropsWithoutRef } from "react";
+import { ElementType } from "react";
 
 export type WindowBoundaryProps = {
   onItemEnter?: (element: Element | null) => void;
@@ -244,44 +141,7 @@ export type WindowBoundaryProps = {
   onceItemEnter?: (element: Element | null) => void;
   onceItemExit?: (element: Element | null) => void;
   root?: Element | Document | null;
-  As?: string;
+  As?: ElementType;
   threshold?: number;
-} & ComponentPropsWithoutRef<"div">;
-```
-
-## Quick start
-
-```tsx
-import { WindowBoundary } from "@ousta-ui/components";
-
-export default function Example() {
-  return (
-    <div style={{ height: "200vh", padding: "20px" }}>
-      <h2>Scroll down to see the effect</h2>
-
-      <WindowBoundary
-        onItemEnter={(element) => {
-          console.log("Element entered viewport:", element);
-          element?.classList.add("visible");
-        }}
-        onItemExit={(element) => {
-          console.log("Element exited viewport:", element);
-          element?.classList.remove("visible");
-        }}
-      >
-        <div style={{
-          marginTop: "100vh",
-          padding: "40px",
-          background: "#f0f0f0",
-          borderRadius: "8px",
-          transition: "opacity 0.5s",
-          opacity: 0
-        }}>
-          <h3>I appeared when you scrolled!</h3>
-          <p>This content was detected when it entered the viewport.</p>
-        </div>
-      </WindowBoundary>
-    </div>
-  );
-}
+};
 ```

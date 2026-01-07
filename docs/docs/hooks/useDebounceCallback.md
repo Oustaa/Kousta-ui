@@ -42,7 +42,7 @@ A performance-optimized hook that debounces function calls, preventing excessive
 ## Basic Usage
 
 ```tsx
-import { useDebounceCallback } from "@ousta-ui/hooks";
+import { useDebounceCallback } from "@kousta-ui/hooks";
 
 function BasicExample() {
   const [searchTerm, setSearchTerm] = useState("");

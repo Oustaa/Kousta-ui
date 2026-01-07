@@ -44,10 +44,10 @@ A simple and elegant hook for managing boolean state with common actions like op
 ## Basic Usage
 
 ```tsx
-import { useDisclosure } from "@ousta-ui/hooks";
+import { useDisclosure } from "@kousta-ui/hooks";
 
 function BasicExample() {
-  const { opened, open, close, toggle } = useDisclosure();
+  const { opened, open, close, toggle } = useDisclosure(false);
 
   return (
     <div>

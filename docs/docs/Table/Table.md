@@ -23,11 +23,11 @@ A lightweight, accessible **Table** component that provides the fundamental buil
 ## Quick start
 
 ```tsx
-import { Table } from "@ousta-ui/table";
+import { Table } from "@kousta-ui/table";
 
 export default function BasicTable() {
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Product</Table.Th>
@@ -47,7 +47,7 @@ export default function BasicTable() {
           <Table.Td>100GB Storage, Priority Support</Table.Td>
         </Table.Tr>
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
 }
 ```

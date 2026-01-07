@@ -23,7 +23,7 @@ The **ContextMenu** provides a customizable, nested right‑click menu. It suppo
 ## Quick start
 
 ```tsx
-import ContextMenu from "@ousta-ui/components/ContextMenu";
+import ContextMenu from "@kousta-ui/components/ContextMenu";
 import { LuCopy, LuTrash2, LuFolderPlus } from "react-icons/lu";
 
 export default function Example() {
@@ -52,7 +52,7 @@ export default function Example() {
         },
       ]}
     >
-      <div style={{ padding: 24, border: "1px dashed var(--Oui-neutral-400)" }}>
+      <div style={{ padding: 24, border: "1px dashed var(--kui-neutral-400)" }}>
         Right‑click anywhere in this box
       </div>
     </ContextMenu>
@@ -197,6 +197,8 @@ const options = [
 - Global default is controlled by **`itemCloseOnClick`** on the provider (default `true`).
 - Per-item override with **`closeOnClick`**.
 
+<Badge color="yellow">Implementation note</Badge> In the current implementation, `closeOnClick` defaults to `true` per item. That means items will close the menu on click unless you explicitly set `closeOnClick: false`.
+
 ```tsx
 <ContextMenu
   itemCloseOnClick={false}
@@ -252,32 +254,43 @@ Use `As` to change the HTML tag of the right‑click area and pass extra props.
 
 - Opens on **contextmenu** (right‑click) and closes on outside click.
 - Items render as `<button>` with proper disabled states via `active: false`.
-- Add visible focus styles in your CSS for keyboard users if you add keyboard support.
-- Provide text labels for icon‑only items.
 
-<Badge color="green">Note</Badge> Keyboard navigation is not implemented by default. If you need it, wrap/extend the components to manage focus, arrow‑key navigation, and ARIA roles like `menu`/`menuitem`.
+<Badge color="green">Note</Badge> Keyboard navigation and ARIA roles (like `menu`/`menuitem`) are not implemented by default. If you need them, wrap/extend the component to manage focus, keyboard interactions, and semantics.
 
 ### Preview
 <CM_AccessibilityPreview />
 
 ---
 
-## Styling hooks
+## Styles & customization
 
-Default class names from `ContextMenu.module.css`:
+### Runtime classes
 
-- `.OuicontextMenu-Container` – absolute stacking context (portal‑like container)
-- `.OuicontextMenu` – the floating menu panel
-- `.OuicontextMenu-Item` – clickable row
-- `.OuicontextMenu-ItemIcon` – leading icon cell
-- `.OuicontextMenu_separator_container` – wrapper for separator line
-- `.OuicontextMenu_separator` – separator line
-- `.OuicontextMenu_separator_icon` – spacer cell aligned with icons
-- `.OuicontextMenu_group_title` – group header text
-- `.OuicontextMenu-Item_WithSubs` – submenu panel modifier
-- `.OuiiconsContainer` – (internal) reserved icon gutter
+- **Provider container**
+  - `kui-contextmenu-container`
+- **Menu panel**
+  - `kui-contextmenu`
+- **Icon gutter (empty spacer column)**
+  - `kui-contextmenu-icons`
+- **Item**
+  - `kui-contextmenu-item`
+  - `kui-disabled` (added when `active: false`)
+- **Item icon cell**
+  - `kui-contextmenu-item-icon`
+- **Separator**
+  - `kui-contextmenu-separator-container`
+  - `kui-contextmenu-separator-icon`
+  - `kui-contextmenu-separator`
+- **Group**
+  - `kui-contextmenu-group-container`
+  - `kui-contextmenu-group-title`
 
-Override any of these to fit your design system.
+### Tokens used by the default styles
+
+- **Colors**
+  - `--kui-neutral-50`, `--kui-neutral-100`, `--kui-neutral-200`, `--kui-neutral-300`, `--kui-neutral-500`, `--kui-neutral-600`, `--kui-neutral-700`, `--kui-neutral-800`, `--kui-neutral-900`
+- **Rounding**
+  - `--kui-rounded`
 
 ---
 
@@ -287,7 +300,7 @@ The test suite can follow these patterns:
 
 ```tsx
 import { render, screen, fireEvent } from "@testing-library/react";
-import ContextMenu from "@ousta-ui/components/ContextMenu";
+import ContextMenu from "@kousta-ui/components/ContextMenu";
 
 const onLeaf = jest.fn();
 const onSub = jest.fn();

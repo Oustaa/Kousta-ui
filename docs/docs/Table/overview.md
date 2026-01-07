@@ -7,7 +7,7 @@ import Badge from '@site/src/components/Badge';
 
 # Table Package
 
-The **@ousta-ui/table** package provides powerful, flexible table components for displaying and managing tabular data. It offers both a basic `Table` component for simple use cases and an advanced `DataTable` component with built-in features like sorting, filtering, and actions.
+The **@kousta-ui/table** package provides table components for displaying and managing tabular data. It offers both a basic `Table` component for simple use cases and an advanced `DataTable` component with built-in features like selection, actions, and extensible options.
 
 ---
 
@@ -26,18 +26,17 @@ The **@ousta-ui/table** package provides powerful, flexible table components for
 ## 📦 Installation
 
 ```bash
-npm install @ousta-ui/table
+npm install @kousta-ui/table
 # or
-yarn add @ousta-ui/table
+yarn add @kousta-ui/table
 # or
-pnpm add @ousta-ui/table
+pnpm add @kousta-ui/table
 ```
 
 ### Import styles
 
 ```tsx
-// Import the table styles
-import "@ousta-ui/table/esm/index.css";
+import "@kousta-ui/styles/tokens.css";
 ```
 
 ---
@@ -47,11 +46,11 @@ import "@ousta-ui/table/esm/index.css";
 ### Basic Table
 
 ```tsx
-import { Table } from "@ousta-ui/table";
+import { Table } from "@kousta-ui/table";
 
 function BasicTable() {
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Name</Table.Th>
@@ -71,7 +70,7 @@ function BasicTable() {
           <Table.Td>25</Table.Td>
         </Table.Tr>
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
 }
 ```
@@ -79,7 +78,7 @@ function BasicTable() {
 ### Advanced DataTable
 
 ```tsx
-import { DataTable } from "@ousta-ui/table";
+import { DataTable } from "@kousta-ui/table";
 
 interface User {
   id: number;
@@ -188,7 +187,7 @@ function AdvancedTable() {
 Set global defaults for all tables:
 
 ```tsx
-import { TablePropsProvider } from "@ousta-ui/table";
+import { TablePropsProvider } from "@kousta-ui/table";
 
 <TablePropsProvider
   props={{
@@ -207,25 +206,12 @@ import { TablePropsProvider } from "@ousta-ui/table";
     },
   }}
   toggleRows={{
-    variant: "outline",
-    size: "xs",
+    variant: "neutral-outline",
+    size: "sm",
   }}
 >
   <YourApp />
 </TablePropsProvider>
-```
-
-### CSS Variables
-
-Customize appearance with CSS variables:
-
-```css
-:root {
-  --ousta-table-border: #e5e7eb;
-  --ousta-table-header-bg: #f9fafb;
-  --ousta-table-row-hover: #f3f4f6;
-  --ousta-table-selected: #dbeafe;
-}
 ```
 
 ---
@@ -247,7 +233,7 @@ All table components are built with accessibility as a priority:
 Full TypeScript support with generic types:
 
 ```tsx
-import { DataTable, TableProps } from "@ousta-ui/table";
+import { DataTable, TableProps } from "@kousta-ui/table";
 
 interface User {
   id: number;
@@ -377,7 +363,7 @@ const options = {
 
 **After:**
 ```tsx
-<Table>
+<Table.Root>
   <Table.Thead>
     <Table.Tr>
       <Table.Th>Name</Table.Th>
@@ -390,14 +376,14 @@ const options = {
       <Table.Td>john@example.com</Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</Table.Root>
 ```
 
 ### From Other Table Libraries
 
 The API is designed to be familiar while providing enhanced features. Most table libraries can be migrated by:
 
-1. Replacing the table components with Ousta UI equivalents
+1. Replacing the table components with Kousta UI equivalents
 2. Converting column definitions to the header format
 3. Implementing actions using the built-in action system
 4. Applying styling through CSS variables or provider

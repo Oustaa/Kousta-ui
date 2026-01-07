@@ -6,7 +6,7 @@ import Badge from '@site/src/components/Badge';
 
 # ComponentPropsProvider
 
-A powerful **ComponentPropsProvider** that allows you to set global default props and create custom variants for Ousta UI components. Perfect for maintaining consistent design systems and reducing prop duplication across your application.
+A powerful **ComponentPropsProvider** that allows you to set global default props and create custom variants for Kousta UI components. Perfect for maintaining consistent design systems and reducing prop duplication across your application.
 
 ---
 
@@ -23,7 +23,7 @@ A powerful **ComponentPropsProvider** that allows you to set global default prop
 ## Quick start
 
 ```tsx
-import { ComponentPropsProvider, Button, Modal } from "@ousta-ui/components";
+import { ComponentPropsProvider, Button, Modal } from "@kousta-ui/components";
 
 export default function App() {
   return (
@@ -403,7 +403,7 @@ function DynamicProvider({ children }) {
 Full TypeScript support with proper type inference:
 
 ```tsx
-import { ComponentPropsProvider, ButtonPropsProvided } from "@ousta-ui/components";
+import { ComponentPropsProvider, ButtonPropsProvided } from "@kousta-ui/components";
 
 const buttonConfig: ButtonPropsProvided = {
   size: "md",

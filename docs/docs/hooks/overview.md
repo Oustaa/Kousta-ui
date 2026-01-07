@@ -7,7 +7,7 @@ import Badge from '@site/src/components/Badge';
 
 # Hooks Package
 
-The **@ousta-ui/hooks** package provides a collection of essential, reusable React hooks that solve common UI patterns and state management challenges. These hooks are designed to be lightweight, type-safe, and composable.
+The **@kousta-ui/hooks** package provides a collection of essential, reusable React hooks that solve common UI patterns and state management challenges.
 
 ---
 
@@ -25,11 +25,11 @@ The **@ousta-ui/hooks** package provides a collection of essential, reusable Rea
 ## 📦 Installation
 
 ```bash
-npm install @ousta-ui/hooks
+npm install @kousta-ui/hooks
 # or
-yarn add @ousta-ui/hooks
+yarn add @kousta-ui/hooks
 # or
-pnpm add @ousta-ui/hooks
+pnpm add @kousta-ui/hooks
 ```
 
 ---
@@ -53,11 +53,11 @@ import {
   usePagination, 
   useDebounceCallback, 
   useScrollLock 
-} from "@ousta-ui/hooks";
+} from "@kousta-ui/hooks";
 
 function App() {
   // Modal state management
-  const { opened, open, close, toggle } = useDisclosure();
+  const { opened, open, close, toggle } = useDisclosure(false);
   
   // Pagination for data
   const { page, nextPage, prevPage, setPage } = usePagination({
@@ -165,7 +165,7 @@ Hooks that enhance user experience:
 All hooks provide full TypeScript support:
 
 ```tsx
-import { useDisclosure, usePagination } from "@ousta-ui/hooks";
+import { useDisclosure, usePagination } from "@kousta-ui/hooks";
 
 // Typed disclosure state
 const { opened, open, close } = useDisclosure(false);

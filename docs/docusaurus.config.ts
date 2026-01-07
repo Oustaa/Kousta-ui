@@ -1,4 +1,3 @@
-// docusaurus.config.ts
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
@@ -35,7 +34,7 @@ const config: Config = {
 
   themeConfig: {
     liveCodeBlock: { playgroundPosition: "bottom" },
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo.png",
     navbar: {
       logo: {
         alt: "kousta-ui logo",
@@ -75,7 +74,6 @@ const config: Config = {
               label: "Discord",
               href: "https://discord.gg/5zDJG79A",
             },
-            { label: "Twitter", href: "https://twitter.com/docusaurus" },
           ],
         },
         {

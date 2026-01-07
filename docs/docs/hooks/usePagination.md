@@ -47,7 +47,7 @@ A comprehensive pagination hook that handles all pagination logic including boun
 ## Basic Usage
 
 ```tsx
-import { usePagination } from "@ousta-ui/hooks";
+import { usePagination } from "@kousta-ui/hooks";
 
 function BasicExample() {
   const totalItems = 100;

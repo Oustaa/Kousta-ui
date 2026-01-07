@@ -7,7 +7,6 @@
   --ifm-color-primary-darker: #7f3695;
   --ifm-color-primary-darkest: #692e7a;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
@@ -19,6 +18,15 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+}
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+.theme-code-block-highlighted-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme="dark"] .theme-code-block-highlighted-line {
+  background-color: rgba(0, 0, 0, 0.3);
 }
