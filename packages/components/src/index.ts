@@ -32,4 +32,7 @@ export { default as ErrorBoundary } from "./ErrorBoundary";
 
 export { default as WindowBoundary } from "./WindowBoundary";
 
+export { default as Pagination } from "./Pagination";
+export { PaginationProps } from "./Pagination/_props";
+
 export { ComponentPropsProvider } from "./PropsContext";

@@ -1,0 +1,36 @@
+/*=============================================
+=                Pagination                   =
+=============================================*/
+
+.pagination-container {
+  display: flex;
+  gap: var(--kui-spacing-sm);
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--kui-spacing-xs);
+  aspect-ratio: 2/1;
+
+  background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
+  border-radius: calc(1rem * var(--kui-rounded));
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: var(--kui-primary-600);
+    color: var(--kui-neutral-50);
+  }
+
+  &:disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+/*=====         End of Pagination      ======*/

@@ -10,16 +10,18 @@ import {
   Select,
   WindowBoundary,
   AsyncSelect,
+  Pagination,
 } from "@kousta-ui/components";
+
 import {
   Bs123,
   BsAlphabet,
   BsAmazon,
   BsArchive,
   BsArchiveFill,
-  BsAt,
   BsFacebook,
   BsHouseLock,
+  BsThreeDots,
   BsX,
 } from "react-icons/bs";
 import { RiFileExcel2Line } from "react-icons/ri";
@@ -29,6 +31,7 @@ import "@kousta-ui/components/esm/index.css";
 import "./App.css";
 import "./index.css";
 import { useDisclosure, useScrollLock } from "@kousta-ui/hooks";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 // import { getUsers } from "./app";
 // import { useDebounceCallback } from "@kousta-ui/hooks";
@@ -118,7 +121,7 @@ function App() {
           // variant: "mine",
           type: "submit",
           // className: "btn-class",
-          loadingIndicator: "Asbeeeer",
+          loadingIndicator: "Loading, Loading",
           variants: {
             mine: {
               style: {
@@ -158,11 +161,18 @@ function App() {
             loading: <BsAlphabet />,
           },
         }}
+        pagination={{
+          placeholderIcon: <BsThreeDots />,
+          prevIcon: <FaAngleLeft />,
+          nextIcon: <FaAngleRight />,
+          seblings: 3,
+        }}
       >
         <Button onClick={() => setValue("")}>Clear</Button>
         <br />
         <br />
         <br />
+        <Pagination page={1} total={20} />
         <br />
         <br />
         <br />
@@ -231,9 +241,9 @@ function App() {
               }}
               label="Static Select"
               disabledOption={(user) => [1, 5].includes(user.id)}
-              optionErrorFallback={({ row }) => {
-                return <span>options with id ({row.id}) is not working</span>;
-              }}
+              // optionErrorFallback={({ row }) => {
+              //   return <span>options with id ({row.id}) is not working</span>;
+              // }}
               // errors={["There is an error", "there is another one"]}
               // labelPosition="x"
               // required

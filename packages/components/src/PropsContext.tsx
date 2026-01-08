@@ -10,6 +10,7 @@ import { ModalProps } from "./Modal/_props";
 import { SelectProps } from "./Select/index";
 import { AsyncSelectProps } from "./Select/AsyncSelect/_props";
 import { SelectDataConstraints } from "./Select/Base/_props";
+import { PaginationProps } from "./Pagination/_props";
 
 /* Helper Types */
 type OptionalKeys<T> = {
@@ -33,6 +34,7 @@ export type MenuPropsProvided = {
 /* Modal */
 export type ModalPropsProvided = GetOptionalProperties<ModalProps>;
 
+/* Select */
 export type SelectPropsProvided = Pick<
   SelectProps<SelectDataConstraints>,
   | "rawValue"
@@ -49,9 +51,16 @@ export type SelectPropsProvided = Pick<
   | "icons"
 >;
 
+/* AsyncSelect */
 export type AsyncSelectPropsProvided = Pick<
   AsyncSelectProps<SelectDataConstraints>,
   "limit" | "extractDynamicData" | "searchTimeout" | "hasMore"
+>;
+
+/* Pagination */
+export type PaginationPropsProvided = Pick<
+  PaginationProps,
+  "placeholderIcon" | "nextIcon" | "prevIcon" | "seblings"
 >;
 
 type PropsContextType = {
@@ -60,6 +69,7 @@ type PropsContextType = {
   modal?: ModalPropsProvided;
   select?: SelectPropsProvided;
   asyncSelect?: SelectPropsProvided;
+  pagination?: PaginationPropsProvided;
 };
 
 const PropsContext = createContext<PropsContextType | undefined>({});
