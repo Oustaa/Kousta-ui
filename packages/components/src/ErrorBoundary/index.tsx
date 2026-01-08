@@ -5,6 +5,7 @@ import classes from "./ErrorBoundary.module.css";
 type ErrorBoundryProps = PropsWithChildren<{
   fallback?: ReactNode;
   onError?: (error: Error) => void;
+  throwOnError?: boolean;
 }>;
 
 type ErrorBoundryState = {
@@ -19,10 +20,13 @@ class ErrorBoundry extends Component<ErrorBoundryProps, ErrorBoundryState> {
     return { hasError: true, error: error };
   }
 
-  componentDidCatch(error: Error, errorInfo: unknown): void {
+  componentDidCatch(error: Error): void {
     const onError = this.props.onError;
 
     if (onError && typeof onError === "function") onError(error);
+    if (this.props.throwOnError) {
+      throw error;
+    }
   }
 
   render() {

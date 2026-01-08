@@ -190,6 +190,7 @@ const MenuItem: FC<PropsWithChildren<MenuItemProps>> = ({
   leftSection,
   rightSection,
   disabled,
+  onClick,
 }) => {
   const menuProps = useComponentContext("menu") as MenuPropsProvided;
   if (menuProps && menuProps.menuItem) {
@@ -207,6 +208,7 @@ const MenuItem: FC<PropsWithChildren<MenuItemProps>> = ({
       disabled={disabled}
       role="menuitem"
       onClick={() => {
+        onClick?.();
         if (shouldClose) close();
       }}
       className={`${classes["menu_item"]} kui-menu-item ${disabled ? "kui-disabled" : ""}`}

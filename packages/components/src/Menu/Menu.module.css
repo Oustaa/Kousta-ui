@@ -15,7 +15,7 @@ button {
 
 .menu_target {
   border: unset;
-  background-color: light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
+  /* background-color: light-dark(var(--kui-neutral-200), var(--kui-neutral-700)); */
 
   &:hover {
     cursor: pointer;
@@ -32,7 +32,8 @@ button {
   flex-direction: column;
   align-items: start;
   gap: 4px;
-  box-shadow: 2px 2px 6px light-dark(var(--kui-neutral-100), transparent);
+  box-shadow: 2px 2px 6px
+    light-dark(var(--kui-neutral-100), var(--kui-neutral-900));
   border: 1px solid light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
   z-index: 1000;
   border-radius: calc(var(--kui-rounded) * 1rem);

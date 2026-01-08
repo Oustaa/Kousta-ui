@@ -1,10 +1,4 @@
-import {
-  isValidElement,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import classes from "../Select.module.css";
 import SelectOption from "./SelectOption";
@@ -159,10 +153,8 @@ const SelectDropDown = <T extends SelectDataConstraints>({
           {data.map((row, index) => {
             return (
               <ErrorBoundary
-                onError={(err) => {
-                  if (disableErrorBoundaries) throw err;
-                }}
                 key={getNestedProperty(row, options?.value as string)}
+                throwOnError={disableErrorBoundaries}
                 fallback={
                   optionErrorFallback ? (
                     <div className={classes["select-option"]}>

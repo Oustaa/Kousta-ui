@@ -127,6 +127,7 @@
   },
   "packageManager": "yarn@4.5.0",
   "dependencies": {
-    "knip": "^5.63.1"
+    "knip": "^5.63.1",
+    "lucide-react": "^0.562.0"
   }
 }

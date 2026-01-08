@@ -13,6 +13,7 @@ export type MenuProps = {
 };
 
 export type MenuItemProps = {
+  onClick?: VoidFunction;
   closeMenuOnClick?: boolean;
   disabled?: boolean;
   leftSection?: ReactNode;
