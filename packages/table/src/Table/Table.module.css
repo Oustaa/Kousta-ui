@@ -7,25 +7,26 @@
   border-collapse: collapse;
 }
 
-.Ouithead {
+.kui-thead {
   background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));
   color: light-dark(var(--kui-neutral-950), var(--kui-neutral-50));
 }
 
-.Ouibody {
+.kui-body {
   text-align: center;
 }
 
-.Ouitr {
+.kui-tr {
   /* border: 1px solid light-dark(var(--kui-neutral-200), var(--kui-neutral-700)); */
 }
 
-.Ouith {
+.kui-th {
   border: 1px solid light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
-  padding-block: 0.5rem;
+  padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
+  text-align: left;
 }
 
-.Ouitd {
+.kui-td {
   background-color: light-dark(var(--kui-neutral-50), var(--kui-neutral-900));
   text-align: center;
   padding: 0.25rem;

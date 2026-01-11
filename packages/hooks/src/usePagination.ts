@@ -12,6 +12,7 @@ export const usePagination = ({
   page = 1,
 }: usePaginationProps) => {
   const [currentPage, setCurrentPage] = useState<number>(page);
+  const [currentLimit, setCurrentLimit] = useState<number>(limit);
   const totalPages = Math.ceil(total / limit);
 
   const nextPage = useCallback(() => {
@@ -24,16 +25,23 @@ export const usePagination = ({
     setCurrentPage((prev) => prev - 1);
   }, [currentPage]);
 
-  const setPage = useCallback((page: number) => {
+  const setPage = (page: number) => {
     if (page > totalPages || page < 1) return;
     setCurrentPage(page);
+  };
+
+  const setLimit = useCallback((limit: number) => {
+    setCurrentLimit(limit);
   }, []);
 
   return {
-    limit,
+    total,
+    totalPages,
+    limit: currentLimit,
     page: currentPage,
     nextPage,
     prevPage,
     setPage,
+    setLimit,
   };
 };

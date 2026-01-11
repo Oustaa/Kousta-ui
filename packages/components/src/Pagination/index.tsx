@@ -1,4 +1,4 @@
-import { FC, isValidElement, useMemo, useState } from "react";
+import { FC, isValidElement, useEffect, useMemo, useState } from "react";
 import { PaginationProps } from "./_props";
 import { PaginationPropsProvided, useComponentContext } from "../PropsContext";
 import { getSeblings } from "./getSeblings";
@@ -6,13 +6,14 @@ import { getSeblings } from "./getSeblings";
 import classes from "./Pagination.module.css";
 
 const Pagination: FC<PaginationProps> = ({
-  page,
-  total,
+  page = 1,
+  totalPages,
   onChange,
   nextIcon,
   placeholderIcon,
   prevIcon,
   seblings,
+  disabled,
 }) => {
   const paginationProps = useComponentContext(
     "pagination",
@@ -34,38 +35,46 @@ const Pagination: FC<PaginationProps> = ({
   const pagesToDisplay = useMemo(() => {
     let pages: ("" | number)[] = [];
 
-    if (currentPage <= page + seblings * 2 + 1) {
-      pages = getSeblings(currentPage, total, seblings, "start");
-      if (pages[pages.length - 1] !== total) {
-        pages.push("", total);
+    if (currentPage <= seblings * 2 + 2) {
+      pages = getSeblings(currentPage, totalPages, seblings, "start");
+      if (pages[pages.length - 1] !== totalPages) {
+        pages.push("", totalPages);
       }
-    } else if (currentPage > total - seblings * 2 - 1) {
-      pages = getSeblings(currentPage, total, seblings, "end");
+    } else if (currentPage > totalPages - seblings * 2 - 1) {
+      pages = getSeblings(currentPage, totalPages, seblings, "end");
 
       if (pages[0] !== 1) {
         pages = [1, "", ...pages];
       }
     } else {
-      pages = getSeblings(currentPage, total, seblings);
+      pages = getSeblings(currentPage, totalPages, seblings);
 
-      if (pages[pages.length - 1] !== total) {
-        pages.push("", total);
+      if (pages[pages.length - 1] !== totalPages) {
+        pages.push("", totalPages);
       }
       if (pages[0] !== 1) {
         pages = [1, "", ...pages];
       }
     }
 
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+
     return pages;
-  }, [currentPage]);
+  }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    setCurrentPage(page);
+  }, [page]);
 
   return (
     <div className={classes["pagination-container"]}>
       <button
-        disabled={currentPage === 1}
-        className={[classes["pagination-link"], "kui-pagination-link"].join(
-          " ",
-        )}
+        disabled={currentPage === 1 || disabled}
+        className={[
+          classes["pagination-link"],
+          classes["is-control"],
+          "kui-pagination-link",
+        ].join(" ")}
         onClick={() =>
           setCurrentPage((prev) => {
             onChange?.(prev - 1);
@@ -76,10 +85,11 @@ const Pagination: FC<PaginationProps> = ({
         {prevIcon && isValidElement(prevIcon) ? prevIcon : "Prev"}
       </button>
 
-      {pagesToDisplay.map((page) => {
+      {pagesToDisplay.map((page, index) => {
         if (typeof page === "string") {
           return (
             <button
+              key={index}
               disabled
               className={[
                 classes["pagination-link"],
@@ -94,10 +104,13 @@ const Pagination: FC<PaginationProps> = ({
         }
         return (
           <button
+            key={index}
             onClick={() => {
-              setCurrentPage(page);
+              console.log({ "page in side pagination page click": page });
               onChange?.(page);
+              setCurrentPage(page);
             }}
+            disabled={disabled}
             className={[
               classes["pagination-link"],
               page === currentPage && classes["active"],
@@ -110,10 +123,12 @@ const Pagination: FC<PaginationProps> = ({
         );
       })}
       <button
-        disabled={currentPage === total}
-        className={[classes["pagination-link"], "kui-pagination-link"].join(
-          " ",
-        )}
+        disabled={currentPage === totalPages || disabled}
+        className={[
+          classes["pagination-link"],
+          classes["is-control"],
+          "kui-pagination-link",
+        ].join(" ")}
         onClick={() =>
           setCurrentPage((prev) => {
             onChange?.(prev + 1);

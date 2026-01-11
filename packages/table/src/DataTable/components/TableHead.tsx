@@ -1,12 +1,18 @@
+import { useMemo } from "react";
 import { useTableContext } from "../tableContext";
 import { Button, Menu } from "@kousta-ui/components";
+import TableSearch from "./TableSearch";
 
 import classes from "../DataTable.module.css";
 
-import TableSearch from "./TableSearch";
-
 const TableHead = () => {
-  const { headers, options, config, rowSelection } = useTableContext();
+  const { headers, options, config, rowSelection, displayAs, setDisplayAs } =
+    useTableContext();
+
+  const extraviewsKeys = useMemo(() => {
+    if (!options?.extraviews) return [];
+    return Object.keys(options?.extraviews);
+  }, [options]);
 
   const visibleHeaders = Object.keys(headers.data).filter(
     (header) =>
@@ -21,22 +27,27 @@ const TableHead = () => {
   return (
     <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
       {Object.keys(rowSelection.selectedRows).length ? (
-        options?.bulkActions?.map((action) => {
-          if (action.canPerformAction) return null;
+        <div className={classes["kui-table-head-section"]}>
+          {options?.bulkActions?.map((action) => {
+            if (action.canPerformAction) return null;
 
-          return (
-            <Button
-              {...(action.buttonProps || {})}
-              onClick={() =>
-                action.onClick(Object.values(rowSelection.selectedRows), () =>
-                  rowSelection.setSelectedRows(0, {}, true),
-                )
-              }
-            >
-              {action.title}
-            </Button>
-          );
-        })
+            return (
+              <Button
+                {...(action.buttonProps || {})}
+                onClick={() =>
+                  action.onClick(Object.values(rowSelection.selectedRows), () =>
+                    rowSelection.setSelectedRows(0, {}, true),
+                  )
+                }
+              >
+                {action.title}
+              </Button>
+            );
+          })}
+          <Button variant="neutral" onClick={() => rowSelection.diseclectAll()}>
+            Cancel
+          </Button>
+        </div>
       ) : config?.noHead !== true ? (
         <div
           className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
@@ -83,6 +94,42 @@ const TableHead = () => {
           <TableSearch />
         </div>
       ) : null}
+      <div>
+        {(options?.cards || extraviewsKeys.length !== 0) && (
+          <Menu.Menu position="Bottom-End">
+            <Menu.Target>
+              <Button variant="primary">...</Button>
+            </Menu.Target>
+            <Menu.DropDown>
+              {displayAs !== "table" && (
+                <Menu.Item onClick={() => setDisplayAs("table")}>
+                  Table
+                </Menu.Item>
+              )}
+              {displayAs !== "card" && options?.cards && (
+                <Menu.Item onClick={() => setDisplayAs("card")}>Card</Menu.Item>
+              )}
+
+              {extraviewsKeys.map((key) => {
+                const view = options?.extraviews?.[key];
+
+                if (!view || displayAs === key || view.canView === false)
+                  return;
+
+                return (
+                  <Menu.Item
+                    {...view.menuProps}
+                    key={key}
+                    onClick={() => setDisplayAs(key)}
+                  >
+                    {key}
+                  </Menu.Item>
+                );
+              })}
+            </Menu.DropDown>
+          </Menu.Menu>
+        )}
+      </div>
     </div>
   );
 };

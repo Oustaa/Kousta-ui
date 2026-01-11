@@ -20,6 +20,10 @@
   --kui-danger-500: blue;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .bg-red-500 {
   background-color: green;
 }

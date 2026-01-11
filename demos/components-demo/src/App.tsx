@@ -30,8 +30,13 @@ import { getNestedProperty } from "@kousta-ui/helpers";
 import "@kousta-ui/components/esm/index.css";
 import "./App.css";
 import "./index.css";
-import { useDisclosure, useScrollLock } from "@kousta-ui/hooks";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useDisclosure, usePagination, useScrollLock } from "@kousta-ui/hooks";
+import {
+  FaAngleDown,
+  FaAngleLeft,
+  FaAngleRight,
+  FaAngleUp,
+} from "react-icons/fa";
 
 // import { getUsers } from "./app";
 // import { useDebounceCallback } from "@kousta-ui/hooks";
@@ -49,7 +54,7 @@ async function getProducts({
   search?: string;
 }) {
   const resp = await fetch(
-    `http://localhost:3000/products?limit=${limit}&page=${page}&search=${search}`,
+    `http://localhost:8000/api/v1/products?limit=${limit}&page=${page}&search=${search}`,
   );
 
   const result = await resp.json();
@@ -71,6 +76,12 @@ function App() {
   //   },
   //   500,
   // );
+
+  const { setPage, totalPages, total, page, limit, setLimit } = usePagination({
+    total: 900,
+    limit: 20,
+    page: 1,
+  });
 
   const [selectData] = useState([
     { first_name: "Youness", last_name: "Tailba", id: 1 },
@@ -106,7 +117,7 @@ function App() {
     async ({ page, searchTerm }: { page: number; searchTerm?: string }) => {
       return getProducts({
         page,
-        limit: 20,
+        limit: 50,
         search: searchTerm,
       });
     },
@@ -156,9 +167,9 @@ function App() {
           // disableErrorBoundaries: true,
           icons: {
             clear: <BsX size={18} />,
-            open: <BsArchiveFill />,
-            close: <BsFacebook />,
-            loading: <BsAlphabet />,
+            open: <FaAngleUp />,
+            close: <FaAngleDown />,
+            // loading: <FaAngleUp />,
           },
         }}
         pagination={{
@@ -172,7 +183,40 @@ function App() {
         <br />
         <br />
         <br />
-        <Pagination page={1} total={20} />
+        <div
+          style={{
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <Select
+              data={[
+                { label: 10, value: 10 },
+                { label: 20, value: 20 },
+                { label: 40, value: 40 },
+                { label: 50, value: 50 },
+              ]}
+              value={limit}
+              onChange={(value: any) => {
+                setLimit(Number(value));
+                if (totalPages > Math.ceil(total / Number(value))) {
+                  setPage(Math.ceil(total / value));
+                }
+              }}
+              clearable={false}
+            />
+          </div>
+          <Pagination
+            page={page}
+            totalPages={Math.ceil(total / limit)}
+            onChange={(page) => {
+              setPage(page);
+            }}
+            // seblings={3}
+          />
+        </div>
         <br />
         <br />
         <br />
@@ -263,7 +307,7 @@ function App() {
             />
             <AsyncSelect<ProductInterface>
               // clearable={false}
-              hasMore={(resp, page) => page < resp.meta.totalPages}
+              hasMore={(resp, page) => page < resp.meta.last_page}
               getData={getSelectProducts}
               extractDynamicData={(resp) => resp.products}
               value={4}

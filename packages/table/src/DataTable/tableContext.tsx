@@ -6,11 +6,25 @@ export type TableHeaders<T> = {
   setHeaders: React.Dispatch<React.SetStateAction<THeader<T>>>;
 };
 
-type TableContextType<T> = Omit<TableProps<T>, "headers"> & {
+type TableContextType<T> = Omit<TableProps<T>, "headers" | "pagination"> & {
   headers: TableHeaders<T>;
   rowSelection: {
     selectedRows: Record<number, unknown>;
     setSelectedRows: (index: number, row: unknown, all?: boolean) => void;
+    diseclectAll: VoidFunction;
+  };
+  search: {
+    query: string;
+    setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
+  displayAs: string;
+  setDisplayAs: (as: string) => void;
+  pagination?: {
+    limit: number;
+    page: number;
+    total: number;
+    setPage: (page: number) => void;
+    setLimit: (limit: number) => void;
   };
 };
 

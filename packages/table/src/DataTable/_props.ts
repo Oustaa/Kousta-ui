@@ -1,5 +1,15 @@
-import { ComponentPropsWithoutRef, PropsWithChildren, ReactNode } from "react";
-import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
+import {
+  ComponentPropsWithoutRef,
+  FC,
+  PropsWithChildren,
+  ReactNode,
+} from "react";
+import {
+  ButtonProps,
+  MenuItemProps,
+  MenuProps,
+  ModalProps,
+} from "@kousta-ui/components";
 
 export type TableProps<T> = {
   data: T[];
@@ -7,6 +17,7 @@ export type TableProps<T> = {
   title: string;
   headers: THeader<T>;
   keyExtractor?: (row: T) => string | number;
+  pagination?: TablePagination;
 
   options?: TOptions<T>;
   config?: TConfig;
@@ -17,6 +28,12 @@ export type TOptions<T> = Partial<{
   actions: Partial<TActions<T>>;
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
+
+  cards: {
+    card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
+    cardsContainerProps?: ComponentPropsWithoutRef<"div">;
+    menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
+  };
 
   viewComp: {
     Component: (row: T) => ReactNode;
@@ -29,16 +46,16 @@ export type TOptions<T> = Partial<{
     canView?: CanPerformAction<T>;
   } & (
     | {
-      type: "modal";
-      modalOptions?: Partial<ModalProps>;
-    }
+        type: "modal";
+        modalOptions?: Partial<ModalProps>;
+      }
     | {
-      type?: "extends";
-      modalOptions?: never;
-    }
+        type?: "extends";
+        modalOptions?: never;
+      }
   );
   bulkActions: TBulkActions<T>[];
-  extraviews: TExtraView[];
+  extraviews: Record<string, TExtraView<T>>;
   // TODO: adding the clearAll function
   selectFilter: Record<string, (row: T, clearAll?: VoidFunction) => boolean>;
 }>;
@@ -53,22 +70,17 @@ export type THeaderValue<T> = {
   visible?: boolean;
   canSee?: boolean;
 } & (
-    | {
+  | {
       value: string;
       exec?: never;
     }
-    | {
+  | {
       value?: never;
       exec: (row: T) => string | ReactNode;
     }
-  );
+);
 
 export type THeader<T> = Record<string, THeaderValue<T>>;
-
-// export type TableHeaders<T> = {
-//   data: THeader<T>;
-//   setHeaders: React.Dispatch<React.SetStateAction<THeader<T>>>;
-// };
 
 type TBulkActions<T> = {
   title: string;
@@ -78,7 +90,11 @@ type TBulkActions<T> = {
   canPerformAction?: boolean;
 };
 
-type TExtraView = { name: string };
+type TExtraView<T> = {
+  View: FC<{ data: T[]; visibleHeaders: string[] }>;
+  canView?: boolean;
+  menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
+};
 
 type TSearch = (
   q: string,
@@ -89,7 +105,7 @@ type TSearch = (
 ) => void;
 
 type TActions<T> = {
-  get: () => void;
+  get: (params: Record<string, number | string | undefined>) => void;
   edit: {
     canEdit?: CanPerformAction<T>;
     onEdit: (row: T) => void;
@@ -109,6 +125,12 @@ type ExtraActions<T> = {
   onClick: (row: T) => void;
   Icon?: ReactNode;
   allowed?: CanPerformAction<T>;
+};
+
+type TablePagination = {
+  total: number;
+  page: number;
+  limit: number;
 };
 
 // Table config

@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import DataTable from "..";
-import { data, headers } from "./test-setup";
+import { data, headers, UserType } from "./test-setup";
 import { TableProps } from "../_props";
 
 function renderTableWithExtraProps(props?: Partial<TableProps<unknown>>) {
   render(
-    <DataTable
+    // @ts-expect-error this is not an error
+    <DataTable<UserType>
       {...props}
       data={data}
       headers={headers}

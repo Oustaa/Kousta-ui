@@ -7,11 +7,26 @@ import { isValidElement, useCallback, useState } from "react";
 import { TableProps } from "./_props";
 import { TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
+import TableCardContainer from "./components/TableCardContainer";
+import DisplayExtraView from "./components/DisplayExtraView";
+import TableFooter from "./components/TableFooter";
+import { usePagination } from "@kousta-ui/hooks";
+import TableLoading from "./components/TableLoading";
+import EmptyTable from "./components/EmptyTable";
 
 function DataTable<T>(props: TableProps<T>) {
   const providedProps = useComponentContext();
   const [headers, setHeaders] = useState(props.headers);
   const [selectedRows, setSelectedRows] = useState<Record<number, unknown>>({});
+  const [query, setQuery] = useState<string>("");
+
+  const [displayAs, setDisplayAs] = useState<string>("table");
+
+  const { limit, setPage, setLimit, page, total } = usePagination({
+    total: props.pagination?.total || 0,
+    page: props.pagination?.page || 0,
+    limit: props.pagination?.limit || 0,
+  });
 
   const setSelectedRowsFunc = useCallback(
     (index: number, row: unknown, all: boolean = false) => {
@@ -162,16 +177,42 @@ function DataTable<T>(props: TableProps<T>) {
       {...props}
       config={config}
       headers={{ data: headers, setHeaders }}
+      search={{ query, setQuery }}
       rowSelection={{
         selectedRows,
         setSelectedRows: setSelectedRowsFunc,
+        diseclectAll: () => setSelectedRows({}),
       }}
+      displayAs={displayAs}
+      setDisplayAs={(as: string) => setDisplayAs(as)}
+      pagination={
+        props.pagination
+          ? {
+              limit,
+              page,
+              total,
+              setPage,
+              setLimit,
+            }
+          : undefined
+      }
     >
       <TableHead />
-      <Table.Root {...props.config?.props?.table}>
-        <TableHeader />
-        <TableBody />
-      </Table.Root>
+      {props.loading ? (
+        <TableLoading />
+      ) : props.data?.length === 0 ? (
+        <EmptyTable />
+      ) : displayAs === "table" ? (
+        <Table.Root {...props.config?.props?.table}>
+          <TableHeader />
+          <TableBody />
+        </Table.Root>
+      ) : displayAs === "card" ? (
+        <TableCardContainer />
+      ) : (
+        <DisplayExtraView />
+      )}
+      <TableFooter />
     </TableContextProvider>
   );
 }

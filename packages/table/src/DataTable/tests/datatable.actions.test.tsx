@@ -2,17 +2,18 @@ import DataTable from "..";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { TableProps } from "../_props";
 import userEvent from "@testing-library/user-event";
-import { data, headers } from "./test-setup";
+import { data, headers, UserType } from "./test-setup";
 
 function renderTableWithExtraProps(props: Partial<TableProps<unknown>>) {
   render(
-    <DataTable
+    // @ts-expect-error this is not an error
+    <DataTable<UserType>
       {...props}
       data={data}
       headers={headers}
       loading={false}
       title="this is a title"
-      keyExtractor={(row) => row.name}
+      // keyExtractor={(row) => row.name}
     />,
   );
 }

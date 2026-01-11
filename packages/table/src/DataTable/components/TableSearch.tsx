@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useTableContext } from "../tableContext";
 import { Button, Input } from "@kousta-ui/components";
 
 const TableSearch = () => {
-  const { options, headers } = useTableContext();
-  const [q, setQ] = useState<string>("");
+  const { options, headers, pagination, search } = useTableContext();
+  const [q, setQ] = useState<string>(search.query);
 
   const visibleHeaders = Object.keys(headers.data).filter(
     (header) =>
@@ -12,7 +12,24 @@ const TableSearch = () => {
       headers.data[header].canSee !== false,
   );
 
-  if (!options || !options.search) return <></>;
+  const searchHandler = useCallback(() => {
+    const setPage = pagination?.setPage;
+    const limit = pagination?.limit;
+
+    if (options?.search) {
+      options.search?.(q, { visibleHeaders, props: {} });
+    } else if (options?.actions?.get) {
+      setPage?.(1);
+      // options.actions.get({
+      //   page: 1,
+      //   limit: limit,
+      //   search: q,
+      // });
+      search.setQuery(q);
+    }
+  }, [q]);
+
+  if (!options || (!options.search && !options?.actions?.get)) return <></>;
 
   return (
     <div className="table-search-container kui-data-table-search-container">
@@ -20,7 +37,7 @@ const TableSearch = () => {
         aria-label="search-input"
         onKeyDown={(event) => {
           if (event.key === "Enter") {
-            options.search?.(q, { visibleHeaders, props: {} });
+            searchHandler();
           }
         }}
         value={q}
@@ -28,9 +45,8 @@ const TableSearch = () => {
         rightSection={
           <Button
             variant="neutral"
-            onClick={() => {
-              options.search?.(q, { visibleHeaders, props: {} });
-            }}
+            onClick={searchHandler}
+            disabled={search.query === q}
           >
             Search
           </Button>

@@ -9,6 +9,7 @@
   margin-bottom: var(--kui-spacing-xs);
 }
 
+.kui-table-footer-section,
 .kui-table-head-section {
   display: flex;
   align-items: center;
@@ -23,5 +24,20 @@
 .table-actions-container {
   display: flex;
   gap: var(--kui-spacing-xs);
+}
+
+.table-footer {
+  margin-top: var(--kui-spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-pagination-message {
+  text-wrap: nowrap;
+
+  & strong {
+    font-weight: 700;
+  }
 }
 /*=====         End of DataTable        ======*/

@@ -1,19 +1,28 @@
 import { useCallback, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
-import { Input, Menu } from "@kousta-ui/components";
+import {
+  ComponentPropsProvider,
+  Input,
+  Menu,
+  Pagination,
+} from "@kousta-ui/components";
 import {
   BsChevronDown,
-  BsChevronUp,
   BsDash,
   BsEye,
+  BsKanbanFill,
   BsPen,
+  BsThreeDots,
   BsTrash,
 } from "react-icons/bs";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { usePagination } from "@kousta-ui/hooks";
 
 import { users } from "./data/users";
 
 import "@kousta-ui/table/esm/index.css";
 import "@kousta-ui/components/esm/index.css";
+import "./App.css";
 
 import { THeader } from "@kousta-ui/table/lib/DataTable/_props";
 
@@ -25,39 +34,91 @@ export type UserType = {
   location: { name: string };
 };
 
+type ProductType = {
+  id: number;
+  ref: string;
+  designation: string;
+  nature: string;
+  famille: string;
+  flux_fabrication: number;
+  stock_negatif: number;
+  gestion_lot: number;
+  gestion_stock: number;
+  controle_quality: number;
+  category_product_id: number;
+  category: {
+    id: number;
+    ref: string;
+    flux_vente: number;
+    flux_achat: number;
+  };
+  categoryUnit: {
+    id: number;
+    label: string;
+  };
+};
+
+const getProducts = (
+  props: Record<string, number | string | undefined> = {},
+) => {
+  const params = new URLSearchParams();
+
+  Object.keys(props).forEach((key) => {
+    if (props[key]) params.append(key, String(props[key]));
+  });
+
+  return fetch(`http://localhost:8000/api/v1/products?${params.toString()}`);
+};
+
 const App = () => {
+  const [products, setProducts] = useState([]);
+  const [productsLoading, setProductsLoading] = useState(false);
+  const [totalProducts, setTotalProducts] = useState(0);
+
+  const { page, limit, total, totalPages, setPage } = usePagination({
+    total: totalProducts,
+    limit: 20,
+    page: 1,
+  });
+
+  console.log({ totalPages });
   const [data, setData] = useState<Array<UserType>>(users);
 
-  const headers: THeader<UserType> = {
-    user: {
-      exec(user: UserType) {
-        return (
-          <div>
-            <h2>{user.email}</h2>
-          </div>
-        );
-      },
-      visible: false,
-    },
-    name: {
-      exec() {
-        return "WHAAAAAAAAAA";
-      },
-      visible: false,
-      canSee: false,
-    },
-    age: {
-      value: "age",
-    },
-    email: {
-      value: "email",
-    },
-    address: {
-      value: "address",
-    },
-    local: {
-      value: "location.name",
-    },
+  // const headers: THeader<UserType> = {
+  //   user: {
+  //     exec(user: UserType) {
+  //       return (
+  //         <div>
+  //           <h2>{user.email}</h2>
+  //         </div>
+  //       );
+  //     },
+  //     visible: false,
+  //   },
+  //   name: {
+  //     exec() {
+  //       return "WHAAAAAAAAAA";
+  //     },
+  //     visible: false,
+  //     canSee: false,
+  //   },
+  //   age: {
+  //     value: "age",
+  //   },
+  //   email: {
+  //     value: "email",
+  //   },
+  //   address: {
+  //     value: "address",
+  //   },
+  //   local: {
+  //     value: "location.name",
+  //   },
+  // };
+  const headers: THeader<ProductType> = {
+    id: { value: "id" },
+    label: { value: "designation" },
+    category: { value: "category.ref" },
   };
 
   const searchHandler = useCallback(
@@ -77,278 +138,259 @@ const App = () => {
     [],
   );
 
+  const getTableProducts = useCallback(
+    (params: Record<string, string | number | undefined>) => {
+      setProductsLoading(true);
+      getProducts(params)
+        .then((resp) => resp.json())
+        .then((data) => {
+          setProducts(data.products);
+          setTotalProducts(data.meta.total);
+        })
+        .catch(console.log)
+        .finally(() => setProductsLoading(false));
+    },
+    [],
+  );
+
   return (
-    <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
-      {/* <Table.Root> */}
-      {/*   <Table.Thead> */}
-      {/*     <Table.Tr> */}
-      {/*       <Table.Th>Full Name</Table.Th> */}
-      {/*       <Table.Th>Age</Table.Th> */}
-      {/*       <Table.Th>Email</Table.Th> */}
-      {/*       <Table.Th>Address</Table.Th> */}
-      {/*     </Table.Tr> */}
-      {/*   </Table.Thead> */}
-      {/*   <Table.Tbody> */}
-      {/*     {data.map((row, index) => { */}
-      {/*       return ( */}
-      {/*         <Table.Tr key={index}> */}
-      {/*           <Table.Td>{row.name}</Table.Td> */}
-      {/*           <Table.Td>{row.age}</Table.Td> */}
-      {/*           <Table.Td>{row.email}</Table.Td> */}
-      {/*           <Table.Td>{row.address}</Table.Td> */}
-      {/*         </Table.Tr> */}
-      {/*       ); */}
-      {/*     })} */}
-      {/*   </Table.Tbody> */}
-      {/* </Table.Root> */}
-      <Input
-        label="Society"
-        placeholder="this is my placeholder"
-        // errors={["There is an error"]}
-        // required={true}
-        // value={value}
-        // onChange={(e) => {
-        //   setValue(e.target.value);
-        // }}
-        // i should add this
-        // leftSection={<Button onClick={alert("Hello InputLeft Section")} />}
-      />
-      <br />
-      <br />
-      <br />
-      <TablePropsProvider
-        actions={{
-          delete: {
-            buttonProps: { variant: "success" },
-            title: <BsTrash />,
-          },
-        }}
-        emptyRowIcon={<BsDash />}
-        emptyTable={<h1>There is not data.....</h1>}
-        // selectFilter={{ icon: <IoMdArrowDropdown /> }}
-        // disableContextMenu={true}
-        // toggleRows={{ variant: "warning", children: <BsEye /> }}
-        toggleRows={false}
-        selectFilter={{ icon: <BsChevronDown /> }}
-        props={{
-          table: {
-            style: { borderColor: "white" },
-          },
-          td: {
-            style: { borderColor: "white" },
-          },
-          th: {
-            style: { backgroundColor: "blue", borderColor: "white" },
-          },
+    <TablePropsProvider
+      actions={{
+        delete: {
+          buttonProps: { variant: "success" },
+          title: <BsTrash />,
+        },
+      }}
+      emptyRowIcon={<BsDash />}
+      emptyTable={<h1>There is not data.....</h1>}
+      // selectFilter={{ icon: <IoMdArrowDropdown /> }}
+      // disableContextMenu={true}
+      // toggleRows={{ variant: "warning", children: <BsEye /> }}
+      // toggleRows={false}
+      selectFilter={{ icon: <BsChevronDown /> }}
+      // props={{
+      //   table: {
+      //     style: { borderColor: "white" },
+      //   },
+      //   td: {
+      //     style: { borderColor: "white" },
+      //   },
+      //   th: {
+      //     // style: { backgroundColor: "blue", borderColor: "white" },
+      //   },
+      // }}
+    >
+      <ComponentPropsProvider
+        pagination={{
+          placeholderIcon: <BsThreeDots />,
+          prevIcon: <FaAngleLeft />,
+          nextIcon: <FaAngleRight />,
+          seblings: 2,
         }}
       >
-        <DataTable<UserType>
-          data={data}
-          headers={headers}
-          loading={false}
-          keyExtractor={(row) => `${row.name}`}
-          title="this is a title"
-          options={{
-            bulkActions: [
-              {
-                title: "Delete All",
-                onClick: (rows, clearSelected) => {
-                  console.log({ rows });
-                  clearSelected();
+        <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
+          {/* <Table.Root> */}
+          {/*   <Table.Thead> */}
+          {/*     <Table.Tr> */}
+          {/*       <Table.Th>Full Name</Table.Th> */}
+          {/*       <Table.Th>Age</Table.Th> */}
+          {/*       <Table.Th>Email</Table.Th> */}
+          {/*       <Table.Th>Address</Table.Th> */}
+          {/*     </Table.Tr> */}
+          {/*   </Table.Thead> */}
+          {/*   <Table.Tbody> */}
+          {/*     {data.map((row, index) => { */}
+          {/*       return ( */}
+          {/*         <Table.Tr key={index}> */}
+          {/*           <Table.Td>{row.name}</Table.Td> */}
+          {/*           <Table.Td>{row.age}</Table.Td> */}
+          {/*           <Table.Td>{row.email}</Table.Td> */}
+          {/*           <Table.Td>{row.address}</Table.Td> */}
+          {/*         </Table.Tr> */}
+          {/*       ); */}
+          {/*     })} */}
+          {/*   </Table.Tbody> */}
+          {/* </Table.Root> */}
+          {/* <Pagination */}
+          {/*   page={page} */}
+          {/*   totalPages={Math.ceil(total / limit)} */}
+          {/*   seblings={3} */}
+          {/*   onChange={setPage} */}
+          {/* /> */}
+          <br />
+          <br />
+          <br />
+          <DataTable<ProductType>
+            data={products}
+            headers={headers}
+            loading={productsLoading}
+            keyExtractor={(row) => row.id}
+            title="this is a title"
+            pagination={{
+              limit: 20,
+              page: 1,
+              total: totalProducts,
+            }}
+            options={{
+              bulkActions: [
+                {
+                  title: "Delete All",
+                  onClick: (rows, clearSelected) => {
+                    console.log({ rows });
+                    clearSelected();
+                  },
+                  buttonProps: {
+                    variant: "danger",
+                  },
                 },
-                buttonProps: {
-                  variant: "danger",
-                },
-              },
-            ],
-            emptyTable: <h1>Nop Nop Nop</h1>,
-            viewComp: {
-              Component: (row) => {
-                return <h2>{row.email}</h2>;
-              },
-              canView(row) {
-                return row?.name !== "Imane Berrada";
-              },
-
-              // type: "extends",
-              extendRowIcon: <BsChevronDown />,
-              minimizeRowIcon: <BsChevronUp />,
-              openModalIcon: <BsEye />,
-              openButtonProps: {
-                variant: "primary-link",
-              },
-            },
-            actions: {
-              delete: {
-                canDelete: (row) => row?.age > 25,
-                buttonProps: {
-                  // variant: "danger-link",
-                  // size: "sm",
-                },
-                title: <BsTrash size={12} />,
-                onDelete: (row: UserType) => {
-                  console.log({ row });
-                },
-              },
-              edit: {
-                buttonProps: {
-                  variant: "success-link",
-                  // size: "sm",
-                  // style: {
-                  //   paddingInline: 0,
-                  // },
-                },
-                title: <BsPen size={".75rem"} />,
-                canEdit: (row) => {
-                  return row?.name !== "Imane Berrada";
-                },
-                onEdit: (row: UserType) => {
-                  console.log({ row });
-                },
-              },
-            },
-            // extraActions: [
-            //   {
-            //     title: "Do Something",
-            //     onClick: () => {},
-            //     allowed: (row) => row.age < 23,
-            //     Icon: <Bs123 />,
-            //   },
-            // ],
-            selectFilter: {
-              adult: (row) => row.age > 22 && row.age < 33,
-              young: (row) => row.age <= 22,
-            },
-            // emptyTable: <div style={{ color: "red" }}>Whaaat The fuck</div>,
-            search: searchHandler,
-            // showHideRow: false
-            // noHead: true
-          }}
-          config={
-            {
-              // noHead: false,
-              // toggleRows: false,
-              // toggleRows: {
-              //   variant: "warning",
-              //   children: <BsEye />,
+              ],
+              // cards: {
+              //   card({ row, visibleHeaders }) {
+              //     return (
+              //       <div
+              //         style={{
+              //           background: "var(--kui-neutral-700)",
+              //           padding: "var(--kui-spacing-sm)",
+              //           borderRadius: "var(--kui-spacing-xs)",
+              //         }}
+              //       >
+              //         {visibleHeaders.includes("user") && <h2>{row.name}</h2>}
+              //         {visibleHeaders.includes("email") && <p>{row.email}</p>}
+              //         {visibleHeaders.includes("address") && (
+              //           <p>{row.address || "--"}</p>
+              //         )}
+              //       </div>
+              //     );
+              //   },
+              //   cardsContainerProps: {
+              //     style: {
+              //       display: "grid",
+              //       gridColumn: "4",
+              //       gridTemplateColumns: "repeat(4, 1fr)",
+              //       gap: "var(--kui-spacing-sm)",
+              //     },
+              //   },
               // },
-              // disableContextMenu: false,
-            }
-          }
-        />
-        <br />
-        <br />
-        <br />
-        <DataTable<UserType>
-          data={data}
-          headers={headers}
-          loading={false}
-          keyExtractor={(row) => `${row.name}`}
-          title="this is a title"
-          options={{
-            bulkActions: [
-              {
-                title: "Delete All",
-                onClick: (rows, clearSelected) => {
-                  console.log({ rows });
-                  clearSelected();
-                },
-                buttonProps: {
-                  variant: "danger",
-                },
-              },
-            ],
-            emptyTable: <h1>Nop Nop Nop</h1>,
-            viewComp: {
-              Component: (row) => {
-                return <h2>{row.email}</h2>;
-              },
-              canView(row) {
-                return row?.name !== "Imane Berrada";
-              },
-
-              // type: "extends",
-              extendRowIcon: <BsChevronDown />,
-              minimizeRowIcon: <BsChevronUp />,
-              openModalIcon: <BsEye />,
-              openButtonProps: {
-                variant: "primary-link",
-              },
-            },
-            actions: {
-              delete: {
-                canDelete: (row) => row?.age > 25,
-                buttonProps: {
-                  // variant: "danger-link",
-                  // size: "sm",
-                },
-                title: <BsTrash size={12} />,
-                onDelete: (row: UserType) => {
-                  console.log({ row });
-                },
-              },
-              edit: {
-                buttonProps: {
-                  variant: "success-link",
-                  // size: "sm",
-                  // style: {
-                  //   paddingInline: 0,
-                  // },
-                },
-                title: <BsPen size={".75rem"} />,
-                canEdit: (row) => {
-                  return row?.name !== "Imane Berrada";
-                },
-                onEdit: (row: UserType) => {
-                  console.log({ row });
-                },
-              },
-            },
-            // extraActions: [
-            //   {
-            //     title: "Do Something",
-            //     onClick: () => {},
-            //     allowed: (row) => row.age < 23,
-            //     Icon: <Bs123 />,
-            //   },
-            // ],
-            selectFilter: {
-              adult: (row) => row.age > 22 && row.age < 33,
-              young: (row) => row.age <= 22,
-            },
-            // emptyTable: <div style={{ color: "red" }}>Whaaat The fuck</div>,
-            search: searchHandler,
-            // showHideRow: false
-            // noHead: true
-          }}
-          config={
-            {
-              // noHead: false,
-              // toggleRows: false,
-              // toggleRows: {
-              //   variant: "warning",
-              //   children: <BsEye />,
+              emptyTable: <h1>Nop Nop Nop</h1>,
+              // viewComp: {
+              //   Component: (row) => {
+              //     return <h2>{row.email}</h2>;
+              //   },
+              //   canView(row) {
+              //     return row?.name !== "Imane Berrada";
+              //   },
+              //
+              //   // type: "extends",
+              //   extendRowIcon: <BsChevronDown />,
+              //   minimizeRowIcon: <BsChevronUp />,
+              //   openModalIcon: <BsEye />,
+              //   openButtonProps: {
+              //     variant: "primary-link",
+              //   },
               // },
-              // disableContextMenu: false,
+              actions: {
+                get: getTableProducts,
+                delete: {
+                  canDelete: (row) => row?.gestion_stock > 25,
+                  buttonProps: {
+                    // variant: "danger-link",
+                    // size: "sm",
+                  },
+                  title: <BsTrash size={12} />,
+                  onDelete: (row) => {
+                    console.log({ row });
+                  },
+                },
+                edit: {
+                  buttonProps: {
+                    variant: "success-link",
+                    // size: "sm",
+                    // style: {
+                    //   paddingInline: 0,
+                    // },
+                  },
+                  title: <BsPen size={".75rem"} />,
+                  // canEdit: (row) => {
+                  //   return !!row?.flux_fabrication;
+                  // },
+                  onEdit: (row) => {
+                    console.log({ row });
+                  },
+                },
+              },
+              extraActions: [
+                {
+                  Icon: <BsEye />,
+                  title: "do Something",
+                  onClick(row) {
+                    console.log(row);
+                  },
+                  allowed(row) {
+                    return !!row.stock_negatif;
+                  },
+                },
+              ],
+              extraviews: {
+                map: {
+                  View: ({ data }) => {
+                    return (
+                      <>
+                        <h1>Map View</h1>
+                        <p>{data.length}</p>
+                      </>
+                    );
+                  },
+                },
+                kanban: {
+                  View: ({ data }) => {
+                    return (
+                      <>
+                        <h1>Kanban View</h1>
+                        <p>{data.length}</p>
+                      </>
+                    );
+                  },
+                  menuProps: {
+                    leftSection: <BsKanbanFill />,
+                  },
+                },
+              },
+              // extraActions: [
+              //   {
+              //     title: "Do Something",
+              //     onClick: () => {},
+              //     allowed: (row) => row.age < 23,
+              //     Icon: <Bs123 />,
+              //   },
+              // ],
+              selectFilter: {
+                "Stock Negative allowed": (row) => !!row.stock_negatif,
+                "Flux Fabrication": (row) => !!row.flux_fabrication,
+              },
+              // emptyTable: <div style={{ color: "red" }}>Whaaat The fuck</div>,
+              // search: searchHandler,
+              // showHideRow: false
+            }}
+            config={
+              {
+                // noHead: false,
+                // toggleRows: false,
+                // toggleRows: {
+                //   variant: "warning",
+                //   children: <BsEye />,
+                // },
+                // disableContextMenu: false,
+              }
             }
-          }
-        />
-        <br />
-        <br />
-        <Menu.Menu closeOnClick type="click">
-          <Menu.Target>I AM A MENU</Menu.Target>
-          <Menu.DropDown>
-            <Menu.Label>Hello Application</Menu.Label>
-            <Menu.Item closeMenuOnClick={false}>Dont Close</Menu.Item>
-            <Menu.Item>Hello There 2</Menu.Item>
-            <Menu.Item>Hello There 3</Menu.Item>
-            <Menu.Divider />
-            <Menu.Item>Hello There 4</Menu.Item>
-            <Menu.Item>Hello There 5</Menu.Item>
-          </Menu.DropDown>
-        </Menu.Menu>
-      </TablePropsProvider>
-    </div>
+          />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      </ComponentPropsProvider>
+    </TablePropsProvider>
   );
 };
 

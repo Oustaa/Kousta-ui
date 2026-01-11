@@ -57,9 +57,11 @@ export function renderMiddleSectionItem(
   item: ReactNode,
   sections?: { left?: ReactNode; right?: ReactNode },
   direction?: "row" | "column",
+  key?: string | number,
 ): ReactNode {
   if (isValidElement(item)) {
     return cloneElement(item, {
+      key,
       style: mergeStyles(item.props.style, {
         ...(sections?.left &&
           (direction === "column"

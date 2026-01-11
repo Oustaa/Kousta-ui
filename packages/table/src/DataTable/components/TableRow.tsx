@@ -47,6 +47,7 @@ const TableRow = <T extends Record<string, unknown>>({
 
       tableActions.push(
         <Button
+          size="sm"
           variant="neutral-light"
           onClick={() => action?.onDelete!(row)}
           {...action?.buttonProps}
@@ -63,6 +64,7 @@ const TableRow = <T extends Record<string, unknown>>({
       });
       tableActions.push(
         <Button
+          size="sm"
           variant="neutral-light"
           onClick={() => action?.onEdit!(row)}
           {...action?.buttonProps}
@@ -102,6 +104,7 @@ const TableRow = <T extends Record<string, unknown>>({
             canPerformActionResolver(row, action.allowed) && (
               <Button
                 variant="neutral-light"
+                size="sm"
                 onClick={() => options!.actions!.edit?.onEdit!(row)}
               >
                 {action.Icon} {action.title}
@@ -125,6 +128,7 @@ const TableRow = <T extends Record<string, unknown>>({
       tableActions.push(
         <Button
           variant="neutral-light"
+          size="sm"
           {...options.viewComp.openButtonProps}
           onClick={open}
         >
@@ -135,6 +139,7 @@ const TableRow = <T extends Record<string, unknown>>({
       tableActions.push(
         <Button
           variant="neutral-light"
+          size="sm"
           {...options.viewComp.openButtonProps}
           onClick={toggle}
         >

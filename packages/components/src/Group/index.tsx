@@ -28,6 +28,7 @@ const Group: FC<GroupProps> = ({ children, direction, gap, ...rest }) => {
               right: children[children.length - 1],
             },
             direction,
+            i,
           ),
         );
       }
