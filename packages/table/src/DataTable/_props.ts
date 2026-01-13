@@ -24,7 +24,6 @@ export type TableProps<T> = {
 };
 
 export type TOptions<T> = Partial<{
-  search: TSearch;
   actions: Partial<TActions<T>>;
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
@@ -96,13 +95,13 @@ type TExtraView<T> = {
   menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
 };
 
-type TSearch = (
-  q: string,
-  options: {
-    visibleHeaders: string[];
-    props: Record<string, string | number | Array<string> | Array<number>>;
-  },
-) => void;
+// type TStaticSearch = (
+//   q: string,
+//   options: {
+//     visibleHeaders: string[];
+//     props: Record<string, string | number | Array<string> | Array<number>>;
+//   },
+// ) => void;
 
 type TActions<T> = {
   get: (params: Record<string, number | string | undefined>) => void;
@@ -118,6 +117,7 @@ type TActions<T> = {
     title?: string | ReactNode;
     buttonProps?: ButtonProps;
   };
+  search: (params: Record<string, number | string | undefined>) => void;
 };
 
 type ExtraActions<T> = {
@@ -140,6 +140,7 @@ type TConfig = {
   noHead?: boolean;
   selectFilter?: { icon: ReactNode; menuProps?: MenuProps };
   emptyRowIcon?: ReactNode;
+  useGetAsRefresh?: boolean;
   props?: {
     table?: ComponentPropsWithoutRef<"table">;
     tbody?: ComponentPropsWithoutRef<"tbody">;

@@ -27,7 +27,6 @@
 }
 
 .table-footer {
-  margin-top: var(--kui-spacing-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,4 +39,34 @@
     font-weight: 700;
   }
 }
+
+.table-information-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kui-spacing-sm);
+  margin-bottom: var(--kui-spacing-sm);
+}
+
+.table-information-item {
+  display: flex;
+  gap: var(--kui-spacing-sm);
+  align-items: end;
+  line-height: 1;
+}
+
+.table-information-label {
+  font-size: var(--kui-spacing-sm);
+  color: ligth-dark(var(--kui-neutral-600), var(--kui-neutral-400));
+}
+
+.table-information-value {
+  color: ligth-dark(var(--kui-neutral-50), var(--kui-neutral-900));
+}
+
+.table-information-clear {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 /*=====         End of DataTable        ======*/

@@ -57,9 +57,11 @@ const Input: FC<InputProps> = ({
           </Group>
         </div>
       </FormElement>
-      <span className={`${classes["error-message"]} kui-input-error-message`}>
-        {(errors as string[])?.[0]}
-      </span>
+      {errors && (
+        <span className={`${classes["error-message"]} kui-input-error-message`}>
+          {(errors as string[])?.[0]}
+        </span>
+      )}
     </div>
   );
 };

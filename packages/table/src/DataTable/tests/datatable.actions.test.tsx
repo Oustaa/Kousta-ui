@@ -13,7 +13,7 @@ function renderTableWithExtraProps(props: Partial<TableProps<unknown>>) {
       headers={headers}
       loading={false}
       title="this is a title"
-      // keyExtractor={(row) => row.name}
+      keyExtractor={(row) => row.name}
     />,
   );
 }
@@ -93,7 +93,9 @@ describe("DataTable Actions", () => {
     beforeEach(() => {
       renderTableWithExtraProps({
         options: {
-          search: searchFunc,
+          actions: {
+            search: searchFunc,
+          },
         },
       });
     });
@@ -116,21 +118,28 @@ describe("DataTable Actions", () => {
 
       await user.click(searchButton);
       expect(searchFunc).toHaveBeenCalledTimes(1);
-      expect(searchFunc).toHaveBeenCalledWith(searchTerm, expect.any(Object));
+      expect(searchFunc).toHaveBeenCalledWith(
+        expect.objectContaining({
+          search: searchTerm,
+        }),
+      );
 
-      // If you also want Enter to trigger search:
+      // testing that the search is only begin called with distinct search query
+      await user.type(searchInput, "{Enter}");
+      expect(searchFunc).toHaveBeenCalledTimes(1);
+      await user.click(searchButton);
+      expect(searchFunc).toHaveBeenCalledTimes(1);
+
+      const newSearchTerm = `${searchTerm}a`;
+      await user.clear(searchInput);
+      await user.type(searchInput, newSearchTerm);
       await user.type(searchInput, "{Enter}");
       expect(searchFunc).toHaveBeenCalledTimes(2);
-      expect(searchFunc).toHaveBeenCalledWith(searchTerm, expect.any(Object));
+      expect(searchFunc).toHaveBeenCalledWith(
+        expect.objectContaining({
+          search: newSearchTerm,
+        }),
+      );
     });
   });
 });
-
-// this is the test for menu click on the tr
-// const trElement = screen.getAllByRole("tr");
-// expect(trElement).toHaveLength(1);
-//
-// fireEvent.contextMenu(trElement[0]);
-//
-// const deleteButtonWithContext = await screen.findAllByText(/delete/i);
-// expect(deleteButtonWithContext).toHaveLength(2);

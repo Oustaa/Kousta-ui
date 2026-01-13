@@ -156,7 +156,7 @@ const MenuTarget: FC<PropsWithChildren> = ({ children }) => {
   const { toggle, type } = useMenuContext();
 
   return (
-    <button
+    <div
       onClick={() => {
         if (type === "hover") return;
 
@@ -165,7 +165,7 @@ const MenuTarget: FC<PropsWithChildren> = ({ children }) => {
       className={`${classes["menu_target"]} kui-menu-target`}
     >
       {children}
-    </button>
+    </div>
   );
 };
 

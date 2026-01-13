@@ -1,4 +1,4 @@
-import { FC, isValidElement, useEffect, useMemo, useState } from "react";
+import { FC, isValidElement, useMemo, useState } from "react";
 import { PaginationProps } from "./_props";
 import { PaginationPropsProvided, useComponentContext } from "../PropsContext";
 import { getSeblings } from "./getSeblings";
@@ -62,9 +62,7 @@ const Pagination: FC<PaginationProps> = ({
     return pages;
   }, [currentPage, totalPages]);
 
-  useEffect(() => {
-    setCurrentPage(page);
-  }, [page]);
+  if (totalPages < 1) return <></>;
 
   return (
     <div className={classes["pagination-container"]}>
@@ -106,7 +104,6 @@ const Pagination: FC<PaginationProps> = ({
           <button
             key={index}
             onClick={() => {
-              console.log({ "page in side pagination page click": page });
               onChange?.(page);
               setCurrentPage(page);
             }}

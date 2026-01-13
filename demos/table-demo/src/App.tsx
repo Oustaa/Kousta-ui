@@ -1,11 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
-import {
-  ComponentPropsProvider,
-  Input,
-  Menu,
-  Pagination,
-} from "@kousta-ui/components";
+import { ComponentPropsProvider } from "@kousta-ui/components";
 import {
   BsChevronDown,
   BsDash,
@@ -16,9 +11,7 @@ import {
   BsTrash,
 } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { usePagination } from "@kousta-ui/hooks";
-
-import { users } from "./data/users";
+import { FaMap } from "react-icons/fa";
 
 import "@kousta-ui/table/esm/index.css";
 import "@kousta-ui/components/esm/index.css";
@@ -67,22 +60,13 @@ const getProducts = (
     if (props[key]) params.append(key, String(props[key]));
   });
 
-  return fetch(`http://localhost:8000/api/v1/products?${params.toString()}`);
+  return fetch(`http://localhost:8001/api/v1/products?${params.toString()}`);
 };
 
 const App = () => {
   const [products, setProducts] = useState([]);
   const [productsLoading, setProductsLoading] = useState(false);
   const [totalProducts, setTotalProducts] = useState(0);
-
-  const { page, limit, total, totalPages, setPage } = usePagination({
-    total: totalProducts,
-    limit: 20,
-    page: 1,
-  });
-
-  console.log({ totalPages });
-  const [data, setData] = useState<Array<UserType>>(users);
 
   // const headers: THeader<UserType> = {
   //   user: {
@@ -121,28 +105,32 @@ const App = () => {
     category: { value: "category.ref" },
   };
 
-  const searchHandler = useCallback(
-    (q: string, { visibleHeaders: vh }: { visibleHeaders: string[] }) => {
-      const reg = new RegExp(q);
-
-      setData(() =>
-        users.filter(
-          (user) =>
-            (vh?.includes("name") && reg.test(user.name)) ||
-            (vh?.includes("email") && reg.test(user.email)) ||
-            reg.test(user.address || "") ||
-            reg.test(user.location.name),
-        ),
-      );
-    },
-    [],
-  );
+  // const searchHandler = useCallback(
+  //   (q: string, { visibleHeaders: vh }: { visibleHeaders: string[] }) => {
+  //     const reg = new RegExp(q);
+  //
+  //     setData(() =>
+  //       users.filter(
+  //         (user) =>
+  //           (vh?.includes("name") && reg.test(user.name)) ||
+  //           (vh?.includes("email") && reg.test(user.email)) ||
+  //           reg.test(user.address || "") ||
+  //           reg.test(user.location.name),
+  //       ),
+  //     );
+  //   },
+  //   [],
+  // );
 
   const getTableProducts = useCallback(
     (params: Record<string, string | number | undefined>) => {
       setProductsLoading(true);
       getProducts(params)
-        .then((resp) => resp.json())
+        .then((resp) => {
+          console.log({ "resp.status": resp.status });
+          if (resp.status === 204) return { products: [], meta: { total: 0 } };
+          return resp.json();
+        })
         .then((data) => {
           setProducts(data.products);
           setTotalProducts(data.meta.total);
@@ -153,40 +141,50 @@ const App = () => {
     [],
   );
 
+  // useEffect(() => {
+  //   getTableProducts({});
+  // }, []);
+
   return (
-    <TablePropsProvider
-      actions={{
-        delete: {
-          buttonProps: { variant: "success" },
-          title: <BsTrash />,
-        },
+    <ComponentPropsProvider
+      pagination={{
+        placeholderIcon: <BsThreeDots />,
+        prevIcon: <FaAngleLeft />,
+        nextIcon: <FaAngleRight />,
+        seblings: 2,
       }}
-      emptyRowIcon={<BsDash />}
-      emptyTable={<h1>There is not data.....</h1>}
-      // selectFilter={{ icon: <IoMdArrowDropdown /> }}
-      // disableContextMenu={true}
-      // toggleRows={{ variant: "warning", children: <BsEye /> }}
-      // toggleRows={false}
-      selectFilter={{ icon: <BsChevronDown /> }}
-      // props={{
-      //   table: {
-      //     style: { borderColor: "white" },
-      //   },
-      //   td: {
-      //     style: { borderColor: "white" },
-      //   },
-      //   th: {
-      //     // style: { backgroundColor: "blue", borderColor: "white" },
-      //   },
-      // }}
     >
-      <ComponentPropsProvider
-        pagination={{
-          placeholderIcon: <BsThreeDots />,
-          prevIcon: <FaAngleLeft />,
-          nextIcon: <FaAngleRight />,
-          seblings: 2,
+      <TablePropsProvider
+        actions={{
+          delete: {
+            buttonProps: { variant: "success" },
+            title: <BsTrash />,
+          },
+          edit: {
+            buttonProps: { variant: "primary" },
+          },
         }}
+        toggleRows={{
+          children: <BsEye />,
+        }}
+        emptyRowIcon={<BsDash />}
+        emptyTable={<h1>There is not data.....</h1>}
+        // selectFilter={{ icon: <IoMdArrowDropdown /> }}
+        // disableContextMenu={true}
+        // toggleRows={{ variant: "warning", children: <BsEye /> }}
+        // toggleRows={false}
+        selectFilter={{ icon: <BsChevronDown /> }}
+        // props={{
+        //   table: {
+        //     style: { borderColor: "white" },
+        //   },
+        //   td: {
+        //     style: { borderColor: "white" },
+        //   },
+        //   th: {
+        //     // style: { backgroundColor: "blue", borderColor: "white" },
+        //   },
+        // }}
       >
         <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
           {/* <Table.Root> */}
@@ -244,33 +242,34 @@ const App = () => {
                   },
                 },
               ],
-              // cards: {
-              //   card({ row, visibleHeaders }) {
-              //     return (
-              //       <div
-              //         style={{
-              //           background: "var(--kui-neutral-700)",
-              //           padding: "var(--kui-spacing-sm)",
-              //           borderRadius: "var(--kui-spacing-xs)",
-              //         }}
-              //       >
-              //         {visibleHeaders.includes("user") && <h2>{row.name}</h2>}
-              //         {visibleHeaders.includes("email") && <p>{row.email}</p>}
-              //         {visibleHeaders.includes("address") && (
-              //           <p>{row.address || "--"}</p>
-              //         )}
-              //       </div>
-              //     );
-              //   },
-              //   cardsContainerProps: {
-              //     style: {
-              //       display: "grid",
-              //       gridColumn: "4",
-              //       gridTemplateColumns: "repeat(4, 1fr)",
-              //       gap: "var(--kui-spacing-sm)",
-              //     },
-              //   },
-              // },
+              cards: {
+                card({ row, visibleHeaders }) {
+                  return (
+                    <div
+                      style={{
+                        background: "var(--kui-neutral-700)",
+                        padding: "var(--kui-spacing-sm)",
+                        borderRadius: "var(--kui-spacing-xs)",
+                      }}
+                    >
+                      {visibleHeaders.includes("label") && (
+                        <h2>{row.designation}</h2>
+                      )}
+                      {visibleHeaders.includes("category") && (
+                        <p>{row.category.ref}</p>
+                      )}
+                    </div>
+                  );
+                },
+                cardsContainerProps: {
+                  style: {
+                    display: "grid",
+                    gridColumn: "4",
+                    gridTemplateColumns: "repeat(4, 1fr)",
+                    gap: "var(--kui-spacing-sm)",
+                  },
+                },
+              },
               emptyTable: <h1>Nop Nop Nop</h1>,
               // viewComp: {
               //   Component: (row) => {
@@ -290,6 +289,7 @@ const App = () => {
               // },
               actions: {
                 get: getTableProducts,
+                search: getTableProducts,
                 delete: {
                   canDelete: (row) => row?.gestion_stock > 25,
                   buttonProps: {
@@ -303,13 +303,13 @@ const App = () => {
                 },
                 edit: {
                   buttonProps: {
-                    variant: "success-link",
+                    // variant: "success-link",
                     // size: "sm",
                     // style: {
                     //   paddingInline: 0,
                     // },
                   },
-                  title: <BsPen size={".75rem"} />,
+                  // title: <BsPen size={".75rem"} />,
                   // canEdit: (row) => {
                   //   return !!row?.flux_fabrication;
                   // },
@@ -339,6 +339,9 @@ const App = () => {
                         <p>{data.length}</p>
                       </>
                     );
+                  },
+                  menuProps: {
+                    leftSection: <FaMap />,
                   },
                 },
                 kanban: {
@@ -371,17 +374,14 @@ const App = () => {
               // search: searchHandler,
               // showHideRow: false
             }}
-            config={
-              {
-                // noHead: false,
-                // toggleRows: false,
-                // toggleRows: {
-                //   variant: "warning",
-                //   children: <BsEye />,
-                // },
-                // disableContextMenu: false,
-              }
-            }
+            config={{
+              // noHead: false,
+              // toggleRows: false,
+              toggleRows: {
+                children: <BsEye />,
+              },
+              // disableContextMenu: false,
+            }}
           />
           <br />
           <br />
@@ -389,8 +389,8 @@ const App = () => {
           <br />
           <br />
         </div>
-      </ComponentPropsProvider>
-    </TablePropsProvider>
+      </TablePropsProvider>
+    </ComponentPropsProvider>
   );
 };
 

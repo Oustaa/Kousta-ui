@@ -41,6 +41,7 @@ type PropsContextType = Partial<{
   emptyTable: ReactNode;
   emptyRowIcon: ReactNode;
   keyExtractor?: (row: unknown) => string | number;
+  useGetAsRefresh?: boolean;
 }>;
 
 const PropsContext = createContext<PropsContextType | undefined>({});

@@ -13,6 +13,7 @@ import TableFooter from "./components/TableFooter";
 import { usePagination } from "@kousta-ui/hooks";
 import TableLoading from "./components/TableLoading";
 import EmptyTable from "./components/EmptyTable";
+import TableInformation from "./components/TableInformation";
 
 function DataTable<T>(props: TableProps<T>) {
   const providedProps = useComponentContext();
@@ -94,6 +95,13 @@ function DataTable<T>(props: TableProps<T>) {
     }
 
     if (
+      providedProps.useGetAsRefresh !== undefined &&
+      props.config?.useGetAsRefresh === undefined
+    ) {
+      config.useGetAsRefresh = providedProps.useGetAsRefresh;
+    }
+
+    if (
       providedProps.toggleRows !== undefined &&
       props.config?.toggleRows === undefined
     ) {
@@ -159,7 +167,6 @@ function DataTable<T>(props: TableProps<T>) {
     if (providedProps.emptyRowIcon && !props.config?.emptyRowIcon) {
       config.emptyRowIcon = providedProps.emptyRowIcon;
     }
-
     if (providedProps.props && props.config?.props) {
       config.props = { ...props.config?.props, ...providedProps.props };
     } else if (providedProps.props && !props.config?.props)
@@ -198,6 +205,7 @@ function DataTable<T>(props: TableProps<T>) {
       }
     >
       <TableHead />
+      <TableInformation />
       {props.loading ? (
         <TableLoading />
       ) : props.data?.length === 0 ? (

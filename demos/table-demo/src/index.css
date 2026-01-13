@@ -12,12 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --kui-spacing-sm: 4px;
-  --kui-spacing-md: 8px;
-  --kui-primary-500: red;
-  --kui-primary-600: rgba(255, 0, 0, 0.8);
+  /* --kui-spacing-sm: 4px; */
+  /* --kui-spacing-md: 8px; */
+  /* --kui-primary-500: red; */
+  /* --kui-primary-600: rgba(255, 0, 0, 0.8); */
   --kui-rounded: 0.2;
-  --kui-danger-500: blue;
+  /* --kui-danger-500: blue; */
 }
 
 * {

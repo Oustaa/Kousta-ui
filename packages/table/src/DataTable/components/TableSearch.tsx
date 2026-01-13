@@ -1,57 +1,57 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTableContext } from "../tableContext";
-import { Button, Input } from "@kousta-ui/components";
+import { Button, Group, Input } from "@kousta-ui/components";
+import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
 const TableSearch = () => {
-  const { options, headers, pagination, search } = useTableContext();
+  const { options, pagination, search } = useTableContext();
   const [q, setQ] = useState<string>(search.query);
-
-  const visibleHeaders = Object.keys(headers.data).filter(
-    (header) =>
-      headers.data[header].visible !== false &&
-      headers.data[header].canSee !== false,
-  );
+  const functionWithTableProps = useFunctionWithTableParams();
 
   const searchHandler = useCallback(() => {
     const setPage = pagination?.setPage;
-    const limit = pagination?.limit;
 
-    if (options?.search) {
-      options.search?.(q, { visibleHeaders, props: {} });
+    if (options?.actions?.search) {
+      search.setQuery(q);
+      functionWithTableProps(options.actions?.search, { search: q, page: 1 });
     } else if (options?.actions?.get) {
       setPage?.(1);
-      // options.actions.get({
-      //   page: 1,
-      //   limit: limit,
-      //   search: q,
-      // });
       search.setQuery(q);
+      functionWithTableProps(options.actions?.get, { search: q, page: 1 });
     }
   }, [q]);
 
-  if (!options || (!options.search && !options?.actions?.get)) return <></>;
+  if (!options || (!options.actions?.search && !options?.actions?.get))
+    return <></>;
+
+  useEffect(() => {
+    if (search.query === "") setQ("");
+  }, [search.query]);
 
   return (
     <div className="table-search-container kui-data-table-search-container">
-      <Input
-        aria-label="search-input"
-        onKeyDown={(event) => {
-          if (event.key === "Enter") {
-            searchHandler();
+      <Group>
+        <Input
+          aria-label="search-input"
+          onKeyDown={(event) => {
+            if (q === search.query) return;
+            if (event.key === "Enter") {
+              searchHandler();
+            }
+          }}
+          value={q}
+          rightSection={
+            <Button
+              variant="primary"
+              onClick={searchHandler}
+              disabled={search.query === q}
+            >
+              Search
+            </Button>
           }
-        }}
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        rightSection={
-          <Button
-            variant="neutral"
-            onClick={searchHandler}
-            disabled={search.query === q}
-          >
-            Search
-          </Button>
-        }
-      />
+          onChange={(e) => setQ(e.target.value)}
+        />
+      </Group>
     </div>
   );
 };

@@ -54,7 +54,7 @@ async function getProducts({
   search?: string;
 }) {
   const resp = await fetch(
-    `http://localhost:8000/api/v1/products?limit=${limit}&page=${page}&search=${search}`,
+    `http://localhost:8001/api/v1/products?limit=${limit}&page=${page}&search=${search}`,
   );
 
   const result = await resp.json();

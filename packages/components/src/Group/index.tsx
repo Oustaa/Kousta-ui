@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { cloneElement, FC, isValidElement, ReactNode } from "react";
 import { GroupProps } from "./_props";
 import {
   renderMiddleSectionItem,
@@ -13,28 +13,55 @@ const Group: FC<GroupProps> = ({ children, direction, gap, ...rest }) => {
 
   if (Array.isArray(children)) {
     if (children.length === 1) {
-      items.push(children);
-    } else if (children.length === 2) {
-      items.push(renderLeftSectionItem(children[0], direction));
-      items.push(renderRightSectionItem(children[1], direction));
-    } else {
-      items.push(renderLeftSectionItem(children[0], direction));
-      for (let i = 1; i < children.length - 1; i++) {
-        items.push(
-          renderMiddleSectionItem(
-            children[i],
-            {
-              left: children[0],
-              right: children[children.length - 1],
-            },
-            direction,
-            i,
-          ),
-        );
+      if (isValidElement(children[0])) {
+        items.push(cloneElement(children[0], { key: 0 }));
+      } else {
+        items.push(children[0]);
       }
-      items.push(
-        renderRightSectionItem(children[children.length - 1], direction),
-      );
+    } else if (children.length === 2) {
+      const firstChild = renderLeftSectionItem(children[0], direction);
+      if (isValidElement(firstChild)) {
+        items.push(cloneElement(firstChild, { key: 0 }));
+      } else {
+        items.push(firstChild);
+      }
+      const secondChild = renderRightSectionItem(children[1], direction);
+      if (isValidElement(secondChild)) {
+        items.push(cloneElement(secondChild, { key: 1 }));
+      } else {
+        items.push(secondChild);
+      }
+    } else {
+      const firstChild = renderLeftSectionItem(children[0], direction);
+      if (isValidElement(firstChild)) {
+        items.push(cloneElement(firstChild, { key: 0 }));
+      } else {
+        items.push(firstChild);
+      }
+
+      for (let i = 1; i < children.length - 1; i++) {
+        const middleChild = renderMiddleSectionItem(
+          children[i],
+          {
+            left: children[0],
+            right: children[children.length - 1],
+          },
+          direction,
+          i,
+        );
+        if (isValidElement(middleChild)) {
+          items.push(cloneElement(middleChild, { key: i }));
+        } else {
+          items.push(middleChild);
+        }
+      }
+      const lastIndex = children.length - 1;
+      const lastChild = renderRightSectionItem(children[lastIndex], direction);
+      if (isValidElement(lastChild)) {
+        items.push(cloneElement(lastChild, { key: lastIndex }));
+      } else {
+        items.push(lastChild);
+      }
     }
   } else {
     items.push(children);

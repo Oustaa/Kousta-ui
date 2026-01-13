@@ -1,11 +1,14 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useTableContext } from "../tableContext";
 import { Button, Menu } from "@kousta-ui/components";
 import TableSearch from "./TableSearch";
 
 import classes from "../DataTable.module.css";
+import RefreshTableBtn from "./RefreshTableBtn";
+import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
 const TableHead = () => {
+  const functionWithTableProps = useFunctionWithTableParams();
   const { headers, options, config, rowSelection, displayAs, setDisplayAs } =
     useTableContext();
 
@@ -23,6 +26,12 @@ const TableHead = () => {
   const headersCanSee = Object.keys(headers.data).filter(
     (header) => headers.data[header].canSee !== false,
   );
+
+  useEffect(() => {
+    if (options?.actions?.get) {
+      functionWithTableProps(options.actions.get);
+    }
+  }, []);
 
   return (
     <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
@@ -94,7 +103,10 @@ const TableHead = () => {
           <TableSearch />
         </div>
       ) : null}
-      <div>
+      <div
+        className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
+      >
+        <RefreshTableBtn />
         {(options?.cards || extraviewsKeys.length !== 0) && (
           <Menu.Menu position="Bottom-End">
             <Menu.Target>

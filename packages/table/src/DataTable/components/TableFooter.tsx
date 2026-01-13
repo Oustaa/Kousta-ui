@@ -3,19 +3,24 @@ import { Pagination, Select } from "@kousta-ui/components";
 import classes from "../DataTable.module.css";
 import { useTableContext } from "../tableContext";
 import { useEffect } from "react";
+import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
 const TableFooter = () => {
-  const { pagination, options, search } = useTableContext();
+  const functionWithTableProps = useFunctionWithTableParams();
+
+  const { pagination, options } = useTableContext();
 
   if (!pagination) return;
 
-  const { limit, page, total, setLimit, setPage } = pagination;
+  const { limit, page, total = 1, setLimit, setPage } = pagination;
+
+  const totalPages = Math.ceil(total / limit);
 
   useEffect(() => {
-    setPage(Math.min(page, Math.ceil(total / limit)));
-    if (options && options.actions && options.actions.get)
-      options.actions.get({ page, limit, search: search.query });
-  }, [limit, page, search.query]);
+    if (page > totalPages) setPage(totalPages);
+  }, [limit, page]);
+
+  if (!options?.actions?.get) return <></>;
 
   return (
     <div className={[classes["table-footer"]].join(" ")}>
@@ -28,8 +33,19 @@ const TableFooter = () => {
             { label: 50, value: 50 },
           ]}
           value={limit}
-          onChange={(value: any) => {
-            setLimit(Number(value));
+          onChange={(limit: any) => {
+            setLimit(Number(limit));
+            const totalPages = Math.ceil(total / limit);
+
+            if (page > totalPages) {
+              setPage(totalPages);
+            }
+
+            // @ts-expect-error this is not an error
+            functionWithTableProps(options?.actions?.get, {
+              page: Math.min(page, totalPages),
+              limit,
+            });
           }}
         />
         <p className={classes["table-pagination-message"]}>
@@ -41,10 +57,16 @@ const TableFooter = () => {
 
       <div className={classes["kui-table-footer-section"]}>
         <Pagination
+          key={total}
           page={page}
-          totalPages={Math.ceil(total / limit)}
+          totalPages={totalPages}
           onChange={(page) => {
-            console.log("Pager fucking changed to %d.", page);
+            // @ts-expect-error this is not an error
+            functionWithTableProps(options?.actions?.get, {
+              page,
+              limit,
+            });
+
             setPage(page);
           }}
           seblings={3}

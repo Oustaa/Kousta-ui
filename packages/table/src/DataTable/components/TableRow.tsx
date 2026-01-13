@@ -47,6 +47,7 @@ const TableRow = <T extends Record<string, unknown>>({
 
       tableActions.push(
         <Button
+          key="delete-action"
           size="sm"
           variant="neutral-light"
           onClick={() => action?.onDelete!(row)}
@@ -64,6 +65,7 @@ const TableRow = <T extends Record<string, unknown>>({
       });
       tableActions.push(
         <Button
+          key="edit-action"
           size="sm"
           variant="neutral-light"
           onClick={() => action?.onEdit!(row)}
@@ -103,6 +105,7 @@ const TableRow = <T extends Record<string, unknown>>({
           tableActions.push(
             canPerformActionResolver(row, action.allowed) && (
               <Button
+                key={action.title as string}
                 variant="neutral-light"
                 size="sm"
                 onClick={() => options!.actions!.edit?.onEdit!(row)}
@@ -127,6 +130,7 @@ const TableRow = <T extends Record<string, unknown>>({
     if (options.viewComp.type === "modal") {
       tableActions.push(
         <Button
+          key="view-comp-action"
           variant="neutral-light"
           size="sm"
           {...options.viewComp.openButtonProps}
@@ -138,6 +142,7 @@ const TableRow = <T extends Record<string, unknown>>({
     } else {
       tableActions.push(
         <Button
+          key="view-comp-toggle-action"
           variant="neutral-light"
           size="sm"
           {...options.viewComp.openButtonProps}
@@ -199,11 +204,11 @@ const TableRow = <T extends Record<string, unknown>>({
               ...config?.props?.td?.style,
             }}
           >
-            <div
-              className={`${classes["table-actions-container"]} kui-data-table-actions-container`}
-            >
-              {tableActions.length > 0 ? tableActions : config?.emptyRowIcon}
-            </div>
+            <>
+              {tableActions.length > 0
+                ? tableActions
+                : config?.emptyRowIcon}
+            </>
           </Table.Td>
         )}
       </ContextMenu>
