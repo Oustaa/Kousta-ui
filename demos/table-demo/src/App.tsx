@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
 import { ComponentPropsProvider } from "@kousta-ui/components";
 import {
@@ -6,7 +6,6 @@ import {
   BsDash,
   BsEye,
   BsKanbanFill,
-  BsPen,
   BsThreeDots,
   BsTrash,
 } from "react-icons/bs";
@@ -269,6 +268,14 @@ const App = () => {
                     gap: "var(--kui-spacing-sm)",
                   },
                 },
+                loadingIndicator(props) {
+                  return (
+                    <>
+                      <h1>Card Loading</h1>
+                      {JSON.stringify(props)}
+                    </>
+                  );
+                },
               },
               emptyTable: <h1>Nop Nop Nop</h1>,
               // viewComp: {
@@ -343,6 +350,14 @@ const App = () => {
                   menuProps: {
                     leftSection: <FaMap />,
                   },
+                  loadingIndicator(props) {
+                    return (
+                      <>
+                        <h1>Map Loading</h1>
+                        {JSON.stringify(props)}
+                      </>
+                    );
+                  },
                 },
                 kanban: {
                   View: ({ data }) => {
@@ -355,6 +370,14 @@ const App = () => {
                   },
                   menuProps: {
                     leftSection: <BsKanbanFill />,
+                  },
+                  loadingIndicator(props) {
+                    return (
+                      <>
+                        <h1>Kanban Loading</h1>
+                        {JSON.stringify(props)}
+                      </>
+                    );
                   },
                 },
               },
@@ -381,6 +404,14 @@ const App = () => {
                 children: <BsEye />,
               },
               // disableContextMenu: false,
+              loadingIndicator(props) {
+                return (
+                  <>
+                    <h1>Table Loading</h1>
+                    {JSON.stringify(props)}
+                  </>
+                );
+              },
             }}
           />
           <br />

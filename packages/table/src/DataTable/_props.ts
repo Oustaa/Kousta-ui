@@ -32,6 +32,7 @@ export type TOptions<T> = Partial<{
     card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
     cardsContainerProps?: ComponentPropsWithoutRef<"div">;
     menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
+    loadingIndicator?: LoadingIndicator;
   };
 
   viewComp: {
@@ -93,6 +94,7 @@ type TExtraView<T> = {
   View: FC<{ data: T[]; visibleHeaders: string[] }>;
   canView?: boolean;
   menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
+  loadingIndicator?: LoadingIndicator;
 };
 
 // type TStaticSearch = (
@@ -141,6 +143,7 @@ type TConfig = {
   selectFilter?: { icon: ReactNode; menuProps?: MenuProps };
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
+  loadingIndicator?: LoadingIndicator;
   props?: {
     table?: ComponentPropsWithoutRef<"table">;
     tbody?: ComponentPropsWithoutRef<"tbody">;
@@ -150,5 +153,7 @@ type TConfig = {
     tr?: ComponentPropsWithoutRef<"tr">;
   };
 };
+
+type LoadingIndicator = (props: { visibleHeaders: string[] }) => ReactNode;
 
 export type CanPerformAction<T> = ((row: T) => boolean) | boolean;

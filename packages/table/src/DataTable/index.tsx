@@ -11,9 +11,9 @@ import TableCardContainer from "./components/TableCardContainer";
 import DisplayExtraView from "./components/DisplayExtraView";
 import TableFooter from "./components/TableFooter";
 import { usePagination } from "@kousta-ui/hooks";
-import TableLoading from "./components/TableLoading";
 import EmptyTable from "./components/EmptyTable";
 import TableInformation from "./components/TableInformation";
+import TableLoading from "./components/TableLoading";
 
 function DataTable<T>(props: TableProps<T>) {
   const providedProps = useComponentContext();
@@ -206,21 +206,21 @@ function DataTable<T>(props: TableProps<T>) {
     >
       <TableHead />
       <TableInformation />
-      {props.loading ? (
-        <TableLoading />
-      ) : props.data?.length === 0 ? (
-        <EmptyTable />
-      ) : displayAs === "table" ? (
-        <Table.Root {...props.config?.props?.table}>
-          <TableHeader />
-          <TableBody />
-        </Table.Root>
-      ) : displayAs === "card" ? (
-        <TableCardContainer />
-      ) : (
-        <DisplayExtraView />
-      )}
-      <TableFooter />
+      <TableLoading>
+        {props.data?.length === 0 ? (
+          <EmptyTable />
+        ) : displayAs === "table" ? (
+          <Table.Root {...props.config?.props?.table}>
+            <TableHeader />
+            <TableBody />
+          </Table.Root>
+        ) : displayAs === "card" ? (
+          <TableCardContainer />
+        ) : (
+          <DisplayExtraView />
+        )}
+        <TableFooter />
+      </TableLoading>
     </TableContextProvider>
   );
 }
