@@ -6,7 +6,6 @@ import {
   ContextMenuTypeOption,
   Modal,
 } from "@kousta-ui/components";
-
 import {
   canPerformActionResolver,
   hasActions,
@@ -15,12 +14,12 @@ import {
   hasEditAction,
 } from "../utils/tableAction";
 import Table from "../../Table";
-
-import classes from "../DataTable.module.css";
 import { ReactNode, useState } from "react";
 import { useDisclosure } from "@kousta-ui/hooks";
 import { getShownHeders } from "../utils/getShownHeaders";
 import TableRowCheckbox from "./TableRowSelect";
+
+import classes from "../DataTable.module.css";
 
 const TableRow = <T extends Record<string, unknown>>({
   row,
@@ -204,11 +203,14 @@ const TableRow = <T extends Record<string, unknown>>({
               ...config?.props?.td?.style,
             }}
           >
-            <>
-              {tableActions.length > 0
-                ? tableActions
-                : config?.emptyRowIcon}
-            </>
+            <div
+              className={[
+                classes["table-row-actions-container"],
+                "kui-table-row-actions-container",
+              ].join(" ")}
+            >
+              {tableActions.length > 0 ? tableActions : config?.emptyRowIcon}
+            </div>
           </Table.Td>
         )}
       </ContextMenu>

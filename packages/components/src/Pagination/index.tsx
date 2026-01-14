@@ -87,7 +87,7 @@ const Pagination: FC<PaginationProps> = ({
         if (typeof page === "string") {
           return (
             <button
-              key={index}
+              key={` ${index} `}
               disabled
               className={[
                 classes["pagination-link"],
@@ -102,8 +102,9 @@ const Pagination: FC<PaginationProps> = ({
         }
         return (
           <button
-            key={index}
+            key={page}
             onClick={() => {
+              if (page === currentPage) return;
               onChange?.(page);
               setCurrentPage(page);
             }}

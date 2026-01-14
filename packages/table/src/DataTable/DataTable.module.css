@@ -21,13 +21,18 @@
   gap: var(--kui-spacing-xs);
 }
 
-.table-actions-container {
+.table-row-actions-container {
   display: flex;
   gap: var(--kui-spacing-xs);
 }
 
+.table-search-container {
+  /*  */
+}
+
 .table-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -56,10 +61,12 @@
 
 .table-information-label {
   font-size: var(--kui-spacing-sm);
-  color: ligth-dark(var(--kui-neutral-600), var(--kui-neutral-400));
+  /* color: ligth-dark(var(--kui-neutral-600), var(--kui-neutral-400)); */
+  color: ligth-dark(var(--kui-neutral-50), var(--kui-neutral-900));
 }
 
 .table-information-value {
+  font-size: var(--kui-spacing-sm);
   color: ligth-dark(var(--kui-neutral-50), var(--kui-neutral-900));
 }
 

@@ -200,6 +200,7 @@ function DataTable<T>(props: TableProps<T>) {
               total,
               setPage,
               setLimit,
+              type: props.pagination.type,
             }
           : undefined
       }

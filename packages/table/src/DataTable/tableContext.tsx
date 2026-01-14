@@ -23,6 +23,7 @@ type TableContextType<T> = Omit<TableProps<T>, "headers" | "pagination"> & {
     limit: number;
     page: number;
     total: number;
+    type?: "static" | "dynamic";
     setPage: (page: number) => void;
     setLimit: (limit: number) => void;
   };

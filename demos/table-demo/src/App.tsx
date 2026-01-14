@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
 import { ComponentPropsProvider } from "@kousta-ui/components";
 import {
@@ -11,6 +11,7 @@ import {
 } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
+import { usePagination } from "@kousta-ui/hooks";
 
 import "@kousta-ui/table/esm/index.css";
 import "@kousta-ui/components/esm/index.css";
@@ -126,13 +127,14 @@ const App = () => {
       setProductsLoading(true);
       getProducts(params)
         .then((resp) => {
-          console.log({ "resp.status": resp.status });
           if (resp.status === 204) return { products: [], meta: { total: 0 } };
           return resp.json();
         })
         .then((data) => {
           setProducts(data.products);
-          setTotalProducts(data.meta.total);
+          console.log({ data });
+          if (data.meta?.total) setTotalProducts(data.meta.total);
+          else setTotalProducts(data.products.length);
         })
         .catch(console.log)
         .finally(() => setProductsLoading(false));
@@ -224,9 +226,10 @@ const App = () => {
             keyExtractor={(row) => row.id}
             title="this is a title"
             pagination={{
-              limit: 20,
-              page: 1,
               total: totalProducts,
+              limit: 10,
+              page: 1,
+              // type: "static",
             }}
             options={{
               bulkActions: [
@@ -296,7 +299,7 @@ const App = () => {
               // },
               actions: {
                 get: getTableProducts,
-                search: getTableProducts,
+                // search: getTableProducts,
                 delete: {
                   canDelete: (row) => row?.gestion_stock > 25,
                   buttonProps: {

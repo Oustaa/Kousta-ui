@@ -2,28 +2,24 @@ import { Pagination, Select } from "@kousta-ui/components";
 
 import classes from "../DataTable.module.css";
 import { useTableContext } from "../tableContext";
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
 const TableFooter = () => {
   const functionWithTableProps = useFunctionWithTableParams();
 
-  const { pagination, options } = useTableContext();
+  const { pagination, options, rowSelection } = useTableContext();
 
   if (!pagination) return;
 
-  const { limit, page, total = 1, setLimit, setPage } = pagination;
+  const { limit, page, total, setLimit, setPage } = pagination;
 
-  const totalPages = Math.ceil(total / limit);
+  const totalPages = useMemo(() => Math.ceil(total / limit), [total, limit]);
 
-  useEffect(() => {
-    if (page > totalPages) setPage(totalPages);
-  }, [limit, page]);
-
-  if (!options?.actions?.get) return <></>;
+  // if (!options?.actions?.get) return <></>;
 
   return (
-    <div className={[classes["table-footer"]].join(" ")}>
+    <div className={[classes["table-footer"], "kui-table-footer"].join(" ")}>
       <div className={classes["kui-table-footer-section"]}>
         <Select
           data={[
@@ -57,15 +53,14 @@ const TableFooter = () => {
 
       <div className={classes["kui-table-footer-section"]}>
         <Pagination
-          key={total}
           page={page}
           totalPages={totalPages}
           onChange={(page) => {
-            // @ts-expect-error this is not an error
-            functionWithTableProps(options?.actions?.get, {
-              page,
-              limit,
-            });
+            rowSelection.diseclectAll();
+            if (options?.actions?.get)
+              functionWithTableProps(options?.actions?.get, {
+                page,
+              });
 
             setPage(page);
           }}

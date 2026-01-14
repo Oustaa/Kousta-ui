@@ -133,6 +133,7 @@ type TablePagination = {
   total: number;
   page: number;
   limit: number;
+  type?: "static" | "dynamic";
 };
 
 // Table config

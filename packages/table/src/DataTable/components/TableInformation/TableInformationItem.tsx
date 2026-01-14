@@ -1,7 +1,7 @@
 import { FC } from "react";
 import classes from "../../DataTable.module.css";
 
-type TableInformationItemProps = {
+export type TableInformationItemProps = {
   onClear: VoidFunction;
   label: string;
   value: string;
@@ -12,6 +12,11 @@ const TableInformationItem: FC<TableInformationItemProps> = ({
   onClear,
   value,
 }) => {
+  console.log({
+    label,
+    onClear,
+    value,
+  });
   return (
     <div
       className={[

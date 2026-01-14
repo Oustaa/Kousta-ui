@@ -33,15 +33,18 @@ const TableHead = () => {
     }
   }, []);
 
-  return (
-    <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
-      {Object.keys(rowSelection.selectedRows).length ? (
+  if (Object.keys(rowSelection.selectedRows).length) {
+    return (
+      <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
+        <div className={classes["kui-table-head-section"]}></div>
         <div className={classes["kui-table-head-section"]}>
+          <span>{Object.keys(rowSelection.selectedRows).length} Selected</span>
           {options?.bulkActions?.map((action) => {
             if (action.canPerformAction) return null;
 
             return (
               <Button
+                key={action.title}
                 {...(action.buttonProps || {})}
                 onClick={() =>
                   action.onClick(Object.values(rowSelection.selectedRows), () =>
@@ -57,52 +60,58 @@ const TableHead = () => {
             Cancel
           </Button>
         </div>
-      ) : config?.noHead !== true ? (
-        <div
-          className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
-        >
-          {/* Hide Table Rows */}
-          {config?.toggleRows !== false && (
-            <Menu.Menu closeOnClick={false}>
-              <Menu.Target>
-                <Button
-                  variant="neutral"
-                  children={"S/H"}
-                  {...config?.toggleRows}
-                />
-              </Menu.Target>
-              <Menu.DropDown>
-                {headersCanSee.map((headerName) => (
-                  <Menu.Item key={headerName}>
-                    <div
-                      className={`${classes["kui-table-head_sh_label"]} kui-data-table-head-label`}
-                    >
-                      <input
-                        id={headerName}
-                        type="checkbox"
-                        checked={visibleHeaders.includes(headerName)}
-                        onChange={(event) => {
-                          headers.setHeaders((prev) => ({
-                            ...prev,
-                            [headerName]: {
-                              ...prev[headerName],
-                              visible: event.target.checked,
-                            },
-                          }));
-                        }}
-                      />
-                      <label htmlFor={headerName}>
-                        {headerName.toUpperCase()}
-                      </label>
-                    </div>
-                  </Menu.Item>
-                ))}
-              </Menu.DropDown>
-            </Menu.Menu>
-          )}
-          <TableSearch />
-        </div>
-      ) : null}
+      </div>
+    );
+  }
+
+  if (config?.noHead === true) return <></>;
+
+  return (
+    <div className={`${classes["kui-table-head"]} kui-data-table-head`}>
+      <div
+        className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
+      >
+        {/* Hide Table Rows */}
+        {config?.toggleRows !== false && (
+          <Menu.Menu closeOnClick={false}>
+            <Menu.Target>
+              <Button
+                variant="neutral"
+                children={"S/H"}
+                {...config?.toggleRows}
+              />
+            </Menu.Target>
+            <Menu.DropDown>
+              {headersCanSee.map((headerName) => (
+                <Menu.Item key={headerName}>
+                  <div
+                    className={`${classes["kui-table-head_sh_label"]} kui-data-table-head-label`}
+                  >
+                    <input
+                      id={headerName}
+                      type="checkbox"
+                      checked={visibleHeaders.includes(headerName)}
+                      onChange={(event) => {
+                        headers.setHeaders((prev) => ({
+                          ...prev,
+                          [headerName]: {
+                            ...prev[headerName],
+                            visible: event.target.checked,
+                          },
+                        }));
+                      }}
+                    />
+                    <label htmlFor={headerName}>
+                      {headerName.toUpperCase()}
+                    </label>
+                  </div>
+                </Menu.Item>
+              ))}
+            </Menu.DropDown>
+          </Menu.Menu>
+        )}
+        <TableSearch />
+      </div>
       <div
         className={`${classes["kui-table-head-section"]} kui-data-table-head-section`}
       >

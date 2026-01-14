@@ -1,7 +1,9 @@
 import { useTableContext } from "../../tableContext";
 
 import classes from "../../DataTable.module.css";
-import TableInformationItem from "./TableInformationItem";
+import TableInformationItem, {
+  TableInformationItemProps,
+} from "./TableInformationItem";
 import { useGetSearchTableFunction } from "../../hooks/useGetTableData";
 import { useFunctionWithTableParams } from "../../hooks/useFunctionWithTableParams";
 
@@ -10,7 +12,32 @@ const TableInformation = () => {
   const searchFunction = useGetSearchTableFunction();
   const { search } = useTableContext();
 
-  if (!search.query) return <></>;
+  const infos: TableInformationItemProps[] = [];
+
+  if (search.query) {
+    infos.push({
+      label: "Searching for:",
+      value: search.query,
+      onClear() {
+        search.setQuery("");
+        if (typeof searchFunction === "function")
+          functionWithTableProps(searchFunction, { search: "" });
+      },
+    });
+  }
+  // if (Object.keys(rowSelection.selectedRows).length) {
+  //   infos.push({
+  //     label: "Selecting ",
+  //     value: String(Object.keys(rowSelection.selectedRows).length),
+  //     onClear() {
+  //       rowSelection.diseclectAll();
+  //     },
+  //   });
+  // }
+
+  if (infos.length === 0) {
+    return <></>;
+  }
 
   return (
     <div
@@ -19,17 +46,9 @@ const TableInformation = () => {
         "kui-table-information-container",
       ].join(" ")}
     >
-      {search.query && (
-        <TableInformationItem
-          onClear={() => {
-            search.setQuery("");
-            if (typeof searchFunction === "function")
-              functionWithTableProps(searchFunction, { search: "" });
-          }}
-          label="Searching for:"
-          value={search.query}
-        />
-      )}
+      {infos.map((info) => (
+        <TableInformationItem {...info} />
+      ))}
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { useTableContext } from "../tableContext";
 import { Button, Group, Input } from "@kousta-ui/components";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
+import classes from "../DataTable.module.css";
+
 const TableSearch = () => {
   const { options, pagination, search } = useTableContext();
   const [q, setQ] = useState<string>(search.query);
@@ -29,7 +31,12 @@ const TableSearch = () => {
   }, [search.query]);
 
   return (
-    <div className="table-search-container kui-data-table-search-container">
+    <div
+      className={[
+        classes["table-search-container"],
+        "kui-table-search-container",
+      ].join(" ")}
+    >
       <Group>
         <Input
           aria-label="search-input"
