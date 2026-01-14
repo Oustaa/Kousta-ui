@@ -7,6 +7,7 @@ export const BasicVisibilityPreview = () => {
   return (
     <div style={{ height: '150vh', paddingTop: '75vh' }}>
       <WindowBoundary
+        root={null}
         onItemEnter={() => setVisible(true)}
         onItemExit={() => setVisible(false)}
       >
@@ -31,26 +32,26 @@ export const LazyImagePreview = () => {
 
   return (
     <div style={{ height: '150vh', paddingTop: '75vh' }}>
-        <WindowBoundary onceItemEnter={() => setIsInView(true)} threshold={0.1}>
-            <div style={{
-                minHeight: '200px',
-                display: 'grid',
-                placeItems: 'center',
-                background: '#f0f0f0',
-                borderRadius: '8px',
-                color: '#888'
-            }}>
-                {isInView ? (
-                    <img
-                        src="https://via.placeholder.com/400x200.png?text=Image+Loaded"
-                        alt="Lazy Loaded"
-                        style={{ maxWidth: '100%', borderRadius: '8px' }}
-                    />
-                ) : (
-                    'Scroll down to load image...'
-                )}
-            </div>
-        </WindowBoundary>
+      <WindowBoundary root={null} onceItemEnter={() => setIsInView(true)} threshold={0.1}>
+        <div style={{
+          minHeight: '200px',
+          display: 'grid',
+          placeItems: 'center',
+          background: '#f0f0f0',
+          borderRadius: '8px',
+          color: '#888'
+        }}>
+          {isInView ? (
+            <img
+              src="https://via.placeholder.com/400x200.png?text=Image+Loaded"
+              alt="Lazy Loaded"
+              style={{ maxWidth: '100%', borderRadius: '8px' }}
+            />
+          ) : (
+            'Scroll down to load image...'
+          )}
+        </div>
+      </WindowBoundary>
     </div>
   );
 };

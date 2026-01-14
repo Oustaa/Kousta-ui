@@ -21,7 +21,7 @@ const WindowBoundary: WindowBoundaryComponent = ({
   onceItemEnter,
   onceItemExit,
   children,
-  root = document.querySelector("body"),
+  root,
   threshold = 0,
   As = "div",
 }) => {
@@ -38,6 +38,8 @@ const WindowBoundary: WindowBoundaryComponent = ({
   }, [onceItemEnter, onceItemExit]);
 
   useEffect(() => {
+    const rootElement = root === undefined ? document.body : root;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -54,7 +56,7 @@ const WindowBoundary: WindowBoundaryComponent = ({
           }
         }
       },
-      { root, threshold: threshold },
+      { root: rootElement, threshold: threshold },
     );
 
     if (targetRef.current) observer.observe(targetRef.current);
@@ -62,7 +64,7 @@ const WindowBoundary: WindowBoundaryComponent = ({
     return () => {
       if (targetRef.current) observer.unobserve(targetRef.current);
     };
-  }, []);
+  }, [root, threshold, onItemEnter, onItemExit]);
 
   const Component = As as ElementType;
 

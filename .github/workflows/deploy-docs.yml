@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
@@ -29,6 +28,9 @@ jobs:
 
       - name: Install dependencies (root)
         run: yarn install
+
+      - name: Clear all builds
+        run: yarn clean
 
       - name: Build all packages
         run: yarn build
@@ -47,4 +49,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/build/
           cname: ui.kousta.org
-
