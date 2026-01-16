@@ -8,15 +8,13 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 const TableFooter = () => {
   const functionWithTableProps = useFunctionWithTableParams();
 
-  const { pagination, options, rowSelection } = useTableContext();
+  const { pagination, actions, rowSelection } = useTableContext();
 
   if (!pagination) return;
 
   const { limit, page, total, setLimit, setPage } = pagination;
 
   const totalPages = useMemo(() => Math.ceil(total / limit), [total, limit]);
-
-  // if (!options?.actions?.get) return <></>;
 
   return (
     <div className={[classes["table-footer"], "kui-table-footer"].join(" ")}>
@@ -36,12 +34,11 @@ const TableFooter = () => {
             if (page > totalPages) {
               setPage(totalPages);
             }
-
-            // @ts-expect-error this is not an error
-            functionWithTableProps(options?.actions?.get, {
-              page: Math.min(page, totalPages),
-              limit,
-            });
+            if (actions && actions.get)
+              functionWithTableProps(actions.get, {
+                page: Math.min(page, totalPages),
+                limit,
+              });
           }}
         />
         <p className={classes["table-pagination-message"]}>
@@ -57,8 +54,8 @@ const TableFooter = () => {
           totalPages={totalPages}
           onChange={(page) => {
             rowSelection.diseclectAll();
-            if (options?.actions?.get)
-              functionWithTableProps(options?.actions?.get, {
+            if (actions?.get)
+              functionWithTableProps(actions?.get, {
                 page,
               });
 

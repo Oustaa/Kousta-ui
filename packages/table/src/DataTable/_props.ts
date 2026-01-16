@@ -18,13 +18,13 @@ export type TableProps<T> = {
   headers: THeader<T>;
   keyExtractor?: (row: T) => string | number;
   pagination?: TablePagination;
+  actions?: TActions<T>;
 
   options?: TOptions<T>;
   config?: TConfig;
 };
 
 export type TOptions<T> = Partial<{
-  actions: Partial<TActions<T>>;
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
 
@@ -105,21 +105,40 @@ type TExtraView<T> = {
 //   },
 // ) => void;
 
-type TActions<T> = {
-  get: (params: Record<string, number | string | undefined>) => void;
-  edit: {
+type TParams = Record<string, number | string | undefined>;
+
+export type TActions<T> = {
+  get?: (params: TParams) => void;
+  edit?: {
     canEdit?: CanPerformAction<T>;
     onEdit: (row: T) => void;
     title?: string | ReactNode;
     buttonProps?: ButtonProps;
+    // not implemented yet
+    afterEdit?: TAfterAction;
   };
-  delete: {
+  delete?: {
     canDelete?: CanPerformAction<T>;
     onDelete: (row: T) => void;
     title?: string | ReactNode;
     buttonProps?: ButtonProps;
+    // not implemented yet
+    afterDelete?: TAfterAction;
   };
-  search: (params: Record<string, number | string | undefined>) => void;
+  search?: {
+    onSearch: (params: TParams) => void;
+    searchOnType?: boolean;
+    searchTimer?: number;
+  } & (
+    | {
+        searchOnType?: false;
+        searchTimer?: never;
+      }
+    | {
+        searchOnType?: true;
+        searchTimer?: number;
+      }
+  );
 };
 
 type ExtraActions<T> = {
@@ -156,5 +175,7 @@ type TConfig = {
 };
 
 type LoadingIndicator = (props: { visibleHeaders: string[] }) => ReactNode;
+
+type TAfterAction = (props: TParams) => unknown;
 
 export type CanPerformAction<T> = ((row: T) => boolean) | boolean;

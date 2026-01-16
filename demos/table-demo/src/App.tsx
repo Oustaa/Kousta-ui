@@ -11,7 +11,6 @@ import {
 } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
-import { usePagination } from "@kousta-ui/hooks";
 
 import "@kousta-ui/table/esm/index.css";
 import "@kousta-ui/components/esm/index.css";
@@ -164,6 +163,10 @@ const App = () => {
           edit: {
             buttonProps: { variant: "primary" },
           },
+          search: {
+            searchOnType: true,
+            searchTimer: 4000,
+          },
         }}
         toggleRows={{
           children: <BsEye />,
@@ -231,6 +234,41 @@ const App = () => {
               page: 1,
               // type: "static",
             }}
+            actions={{
+              get: getTableProducts,
+              search: {
+                onSearch: getTableProducts,
+                searchOnType: false,
+                // searchTimer: 4000,
+              },
+              delete: {
+                canDelete: (row) => row?.gestion_stock > 25,
+                buttonProps: {
+                  // variant: "danger-link",
+                  // size: "sm",
+                },
+                title: <BsTrash size={12} />,
+                onDelete: (row) => {
+                  console.log({ row });
+                },
+              },
+              edit: {
+                buttonProps: {
+                  // variant: "success-link",
+                  // size: "sm",
+                  // style: {
+                  //   paddingInline: 0,
+                  // },
+                },
+                // title: <BsPen size={".75rem"} />,
+                // canEdit: (row) => {
+                //   return !!row?.flux_fabrication;
+                // },
+                onEdit: (row) => {
+                  console.log({ row });
+                },
+              },
+            }}
             options={{
               bulkActions: [
                 {
@@ -297,37 +335,6 @@ const App = () => {
               //     variant: "primary-link",
               //   },
               // },
-              actions: {
-                get: getTableProducts,
-                // search: getTableProducts,
-                delete: {
-                  canDelete: (row) => row?.gestion_stock > 25,
-                  buttonProps: {
-                    // variant: "danger-link",
-                    // size: "sm",
-                  },
-                  title: <BsTrash size={12} />,
-                  onDelete: (row) => {
-                    console.log({ row });
-                  },
-                },
-                edit: {
-                  buttonProps: {
-                    // variant: "success-link",
-                    // size: "sm",
-                    // style: {
-                    //   paddingInline: 0,
-                    // },
-                  },
-                  // title: <BsPen size={".75rem"} />,
-                  // canEdit: (row) => {
-                  //   return !!row?.flux_fabrication;
-                  // },
-                  onEdit: (row) => {
-                    console.log({ row });
-                  },
-                },
-              },
               extraActions: [
                 {
                   Icon: <BsEye />,
@@ -401,12 +408,11 @@ const App = () => {
               // showHideRow: false
             }}
             config={{
-              // noHead: false,
-              // toggleRows: false,
+              // noHead: true,
               toggleRows: {
                 children: <BsEye />,
               },
-              // disableContextMenu: false,
+              // disableContextMenu: true,
               loadingIndicator(props) {
                 return (
                   <>

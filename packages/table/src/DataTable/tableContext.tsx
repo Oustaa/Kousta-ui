@@ -6,7 +6,10 @@ export type TableHeaders<T> = {
   setHeaders: React.Dispatch<React.SetStateAction<THeader<T>>>;
 };
 
-type TableContextType<T> = Omit<TableProps<T>, "headers" | "pagination"> & {
+export type TableContextType<T> = Omit<
+  TableProps<T>,
+  "headers" | "pagination"
+> & {
   headers: TableHeaders<T>;
   rowSelection: {
     selectedRows: Record<number, unknown>;

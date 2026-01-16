@@ -1,24 +1,25 @@
-import { CanPerformAction, TOptions } from "../_props";
+import { CanPerformAction, TActions, TOptions } from "../_props";
 
-export function hasActions(options?: TOptions<unknown>): boolean {
-  if (
-    options &&
-    (((options.actions || options?.extraActions) &&
+export function hasActions(
+  actions?: TActions<unknown>,
+  options?: TOptions<unknown>,
+): boolean {
+  return !!(
+    ((actions || options?.extraActions) &&
       // has delete action
-      ((options.actions?.delete &&
-        options.actions.delete.canDelete &&
-        typeof options.actions.delete.onDelete === "function") ||
+      ((actions?.delete &&
+        actions.delete.canDelete &&
+        typeof actions.delete.onDelete === "function") ||
         // has edit action
-        (options.actions?.edit &&
-          options.actions.edit.canEdit &&
-          typeof options.actions.edit.onEdit === "function") ||
+        (actions?.edit &&
+          actions.edit.canEdit &&
+          typeof actions.edit.onEdit === "function") ||
         // has extra actions
-        (options.extraActions && options.extraActions?.length > 0))) ||
-      options?.viewComp)
-  )
-    return true;
-
-  return false;
+        (options &&
+          options.extraActions &&
+          options.extraActions?.length > 0))) ||
+    options?.viewComp
+  );
 }
 
 export function hasBulkActions(options?: TOptions<unknown>): boolean {
@@ -26,40 +27,35 @@ export function hasBulkActions(options?: TOptions<unknown>): boolean {
 }
 
 export function hasDeleteAction(
-  options: TOptions<unknown> | undefined,
+  actions?: TActions<unknown>,
   row?: unknown,
 ): boolean {
   if (
-    options &&
-    options.actions &&
-    options.actions.delete &&
-    options.actions.delete.onDelete &&
-    typeof options.actions.delete.onDelete === "function" &&
-    (options.actions.delete.canDelete === undefined ||
-      (typeof options.actions.delete.canDelete === "function" &&
-        options.actions.delete.canDelete?.(row)) ||
-      (typeof options.actions.delete.canDelete === "boolean" &&
-        options.actions.delete.canDelete))
+    actions &&
+    actions.delete &&
+    typeof actions.delete.onDelete === "function" &&
+    (actions.delete.canDelete === undefined ||
+      (typeof actions.delete.canDelete === "function" &&
+        actions.delete.canDelete?.(row)) ||
+      (typeof actions.delete.canDelete === "boolean" &&
+        actions.delete.canDelete))
   )
     return true;
   return false;
 }
 
 export function hasEditAction(
-  options: TOptions<unknown> | undefined,
+  actions: TActions<unknown> | undefined,
   row?: unknown,
 ): boolean {
   if (
-    options &&
-    options.actions &&
-    options.actions.edit &&
-    options.actions.edit.onEdit &&
-    typeof options.actions.edit.onEdit === "function" &&
-    (typeof options?.actions?.edit?.canEdit === "undefined" ||
-      (typeof options.actions.edit.canEdit === "function" &&
-        options.actions.edit.canEdit(row)) ||
-      (typeof options.actions.edit.canEdit === "boolean" &&
-        options.actions.edit.canEdit))
+    actions &&
+    actions.edit &&
+    typeof actions.edit.onEdit === "function" &&
+    (typeof actions?.edit?.canEdit === "undefined" ||
+      (typeof actions.edit.canEdit === "function" &&
+        actions.edit.canEdit(row)) ||
+      (typeof actions.edit.canEdit === "boolean" && actions.edit.canEdit))
   )
     return true;
   return false;

@@ -4,7 +4,7 @@ import classes from "../../DataTable.module.css";
 import TableInformationItem, {
   TableInformationItemProps,
 } from "./TableInformationItem";
-import { useGetSearchTableFunction } from "../../hooks/useGetTableData";
+import { useGetSearchTableFunction } from "../../hooks/useGetSearchTableFunction";
 import { useFunctionWithTableParams } from "../../hooks/useFunctionWithTableParams";
 
 const TableInformation = () => {

@@ -60,29 +60,45 @@ function DataTable<T>(props: TableProps<T>) {
 
       // overwrite the table delete button
       if (actionsProps.delete) {
-        if (actionsProps.delete.title && props.options?.actions?.delete) {
-          if (props.options.actions.delete.title === undefined) {
-            props.options.actions.delete.title = actionsProps.delete.title;
+        if (actionsProps.delete.title && props.actions?.delete) {
+          if (props.actions.delete.title === undefined) {
+            props.actions.delete.title = actionsProps.delete.title;
           }
-          if (props.options.actions.delete.buttonProps === undefined) {
+          if (props.actions.delete.buttonProps === undefined) {
             // combine the provided props with the props buttonProps, props should overwrite the provided one
-            props.options.actions.delete.buttonProps =
-              actionsProps.delete.buttonProps;
+            props.actions.delete.buttonProps = actionsProps.delete.buttonProps;
           }
         }
       }
 
       // overwrite the table edit button
       if (actionsProps.edit) {
-        if (actionsProps.edit.title && props.options?.actions?.edit) {
-          if (props.options.actions.edit.title === undefined) {
-            props.options.actions.edit.title = actionsProps.edit.title;
+        if (actionsProps.edit.title && props.actions?.edit) {
+          if (props.actions.edit.title === undefined) {
+            props.actions.edit.title = actionsProps.edit.title;
           }
-          if (props.options.actions.edit.buttonProps === undefined) {
+          if (props.actions.edit.buttonProps === undefined) {
             // combine the provided props with the props buttonProps, props should overwrite the provided one
-            props.options.actions.edit.buttonProps =
-              actionsProps.edit.buttonProps;
+            props.actions.edit.buttonProps = actionsProps.edit.buttonProps;
           }
+        }
+      }
+
+      if (actionsProps.search) {
+        if (props.actions && props.actions.search) {
+          if (
+            actionsProps.search.searchOnType &&
+            props.actions.search.searchOnType === undefined
+          ) {
+            props.actions.search.searchOnType =
+              actionsProps.search.searchOnType;
+          }
+
+          if (
+            actionsProps.search.searchTimer &&
+            !props.actions.search.searchTimer
+          )
+            props.actions.search.searchTimer = actionsProps.search.searchTimer;
         }
       }
     }

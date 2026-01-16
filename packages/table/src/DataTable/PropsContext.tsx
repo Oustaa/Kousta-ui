@@ -25,6 +25,10 @@ type PropsContextType = Partial<{
       title?: string | ReactNode;
       buttonProps?: ButtonProps;
     };
+    search?: {
+      searchOnType?: boolean;
+      searchTimer?: number;
+    };
   };
   toggleRows: false | Omit<ButtonProps, "onClick">;
   disableContextMenu: boolean;

@@ -9,8 +9,15 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 
 const TableHead = () => {
   const functionWithTableProps = useFunctionWithTableParams();
-  const { headers, options, config, rowSelection, displayAs, setDisplayAs } =
-    useTableContext();
+  const {
+    headers,
+    options,
+    actions,
+    config,
+    rowSelection,
+    displayAs,
+    setDisplayAs,
+  } = useTableContext();
 
   const extraviewsKeys = useMemo(() => {
     if (!options?.extraviews) return [];
@@ -28,8 +35,8 @@ const TableHead = () => {
   );
 
   useEffect(() => {
-    if (options?.actions?.get) {
-      functionWithTableProps(options.actions.get);
+    if (actions?.get) {
+      functionWithTableProps(actions.get);
     }
   }, []);
 

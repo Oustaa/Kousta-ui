@@ -6,12 +6,9 @@ import { Menu } from "@kousta-ui/components";
 
 function TableHeader() {
   const [, setAllSelected] = useState<boolean>(false);
-  // const [filterFunction, setFilterFunction] = useState<
-  //   // eslint-disable-next-line
-  //   Record<string, (row: any) => boolean>
-  // >({});
 
-  const { data, headers, options, config, rowSelection } = useTableContext();
+  const { data, headers, options, actions, config, rowSelection } =
+    useTableContext();
 
   const headersLabel = Object.keys(headers.data).filter((header) => {
     return (
@@ -94,7 +91,7 @@ function TableHeader() {
             </Table.Th>
           );
         })}
-        {hasActions(options) && (
+        {hasActions(actions, options) && (
           <Table.Th {...config?.props?.th}>ACTIONS</Table.Th>
         )}
       </Table.Tr>

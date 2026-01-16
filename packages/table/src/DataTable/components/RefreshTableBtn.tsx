@@ -4,16 +4,15 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 
 const RefreshTableBtn = () => {
   const functionWithTableProps = useFunctionWithTableParams();
-  const { options, config } = useTableContext();
+  const { actions, config } = useTableContext();
 
   return (
-    options?.actions?.get &&
+    actions?.get &&
     config?.useGetAsRefresh !== false && (
       <Button
         variant="neutral"
         onClick={() => {
-          if (options?.actions?.get)
-            functionWithTableProps(options?.actions?.get);
+          if (actions?.get) functionWithTableProps(actions?.get);
         }}
       >
         Refresh

@@ -24,12 +24,10 @@ describe("DataTable Actions", () => {
 
     beforeEach(() => {
       renderTableWithExtraProps({
-        options: {
-          actions: {
-            delete: {
-              canDelete: true,
-              onDelete: deleteFunc,
-            },
+        actions: {
+          delete: {
+            canDelete: true,
+            onDelete: deleteFunc,
           },
         },
       });
@@ -58,12 +56,10 @@ describe("DataTable Actions", () => {
 
     beforeEach(() => {
       renderTableWithExtraProps({
-        options: {
-          actions: {
-            edit: {
-              canEdit: true,
-              onEdit: editFunc,
-            },
+        actions: {
+          edit: {
+            canEdit: true,
+            onEdit: editFunc,
           },
         },
       });
@@ -92,10 +88,8 @@ describe("DataTable Actions", () => {
 
     beforeEach(() => {
       renderTableWithExtraProps({
-        options: {
-          actions: {
-            search: searchFunc,
-          },
+        actions: {
+          search: { onSearch: searchFunc },
         },
       });
     });
@@ -104,6 +98,7 @@ describe("DataTable Actions", () => {
       const user = userEvent.setup();
       const searchTerm = "search";
 
+      screen.logTestingPlaygroundURL();
       const searchInput = screen.getByRole("textbox", {
         name: /search-input/i,
       });
