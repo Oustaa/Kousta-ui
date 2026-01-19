@@ -3,14 +3,18 @@ sidebar_position: 7
 ---
 
 import Badge from '@site/src/components/Badge';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import {
   QuickStartPreview,
-  CustomRenderPreview
+  CustomRenderPreview,
+  GenericTypesPreview,
 } from '@site/src/components/@Components/AsyncSelect';
 
 # AsyncSelect
 
 An advanced **AsyncSelect** component that provides server-side search and infinite scrolling capabilities. Perfect for large datasets where you need to fetch data dynamically from an API.
+
+AsyncSelect uses [`Select`](/docs/Components/Select) internally.
 
 ---
 
@@ -27,24 +31,37 @@ An advanced **AsyncSelect** component that provides server-side search and infin
 
 | Name | Type | Default | Provider? | Description |
 |------|------|---------|-----------|-------------|
-| `getData` | `(params: GetDataParams) => Promise<any>` | **Required** | No | Function to fetch data from your API. |
-| `extractDynamicData` | `(response: any) => T[]` | **Required** | No | Function to extract the data array from the API response. |
-| `hasMore` | `(response: any, page: number) => boolean` | **Required** | No | Function to determine if more pages are available for infinite scrolling. |
+| `getData` | `(params: { page: number; limit: number; searchTerm?: string }) => Promise<unknown>` | **Required** | No | Function that fetches data from your API. |
+| `extractDynamicData` | `(response: any) => T[]` | — | No | Extracts the items array from your API response. If omitted, the component assumes the response itself is `T[]`. |
+| `hasMore` | `(response: any, page: number) => boolean` | — | No | Determines if there are more pages to load. |
+| `searchTimeout` | `number` | `500` | Yes | Debounce timeout (ms) before requesting the server when searching. |
+| `infiniteScroll` | `boolean` | — | No | Enables/disables infinite scrolling (if supported by your usage). |
 | `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | Configuration for extracting value, label, and custom rendering from data items. |
-| `debounceMs` | `number` | `300` | No | Debounce delay in milliseconds for search requests. |
-| `...` | `SelectProps<T>` | | | Inherits all other props from the `Select` component, such as `label`, `placeholder`, `clearable`, `disabled`, etc. |
+| `...` | [`SelectProps<T>`](/docs/Components/Select#props) | | | Inherits all other props from `Select` except `data`, `loading`, and `onSearch`. |
 
-### GetDataParams
+---
+
+## hasMore
+
+`hasMore` controls when AsyncSelect stops requesting additional pages.
+
+It receives:
+
+- The full `response` returned by `getData`
+- The current `page` that was requested
+
+It must return:
+
+- `true` if another page can be requested
+- `false` to stop loading more
+
+For example, if your API returns a pagination meta like `meta.last_page`:
 
 ```ts
-type GetDataParams = {
-  page: number;        // Current page number (starts at 1)
-  limit: number;       // Number of items per page
-  searchTerm: string;  // Current search term
-};
+hasMore={(resp, page) => page < resp.meta.last_page}
 ```
 
-<Badge color="blue">Note</Badge> The component automatically handles loading states, debouncing, and error handling for async operations.
+<Badge color="blue">Note</Badge> AsyncSelect automatically calls `getData` initially and then again when you scroll to the end (and when searching).
 
 ---
 
@@ -54,57 +71,135 @@ type GetDataParams = {
 
 Provide `getData`, `extractDynamicData`, and `hasMore` to handle fetching and pagination. The component manages the loading state and search term.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
 import { AsyncSelect } from "@kousta-ui/components";
 
-// Mock API call
-const searchUsers = ({ page, limit, searchTerm }) => {
-  return fetch(`/api/users?page=${page}&limit=${limit}&q=${searchTerm || ""}`)
-    .then((r) => r.json());
+type Product = {
+  id: number;
+  designation: string;
 };
 
-<AsyncSelect
-  label="Search Users"
-  getData={searchUsers}
-  extractDynamicData={(response) => response.items}
-  hasMore={(response, page) => page < response.totalPages}
-  options={{ value: "id", label: "name" }}
-  placeholder="Type to search users..."
+type ApiResponse = {
+  meta: { last_page: number };
+  products: Product[];
+};
+
+const API_BASE_URL = process.env.API_BASE_URL;
+
+const getProducts = async ({ page, limit, searchTerm }) => {
+  const url = new URL("/api/v1/products", API_BASE_URL);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  url.searchParams.set("search", searchTerm || "");
+
+  const resp = await fetch(url.toString());
+  return resp.json() as Promise<ApiResponse>;
+};
+
+<AsyncSelect<Product>
+  label="Dynamic Select"
+  placeholder="Search products"
+  getData={getProducts}
+  extractDynamicData={(response) => response.products}
+  hasMore={(response, page) => page < response.meta.last_page}
+  options={{ value: "id", label: "id - designation" }}
 />
 ```
 
-### Preview
-<QuickStartPreview />
+</details>
+
+<BrowserOnly>{() => <QuickStartPreview />}</BrowserOnly>
 
 ### With Custom Option Rendering
 
 Just like the `Select` component, you can provide a custom `renderOption` function to display rich content in the dropdown.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<AsyncSelect
-  label="Assign to User"
-  getData={searchUsers}
-  extractDynamicData={(response) => response.users}
-  hasMore={(response, page) => response.hasNextPage}
+import { AsyncSelect } from "@kousta-ui/components";
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ApiResponse = {
+  meta: { last_page: number };
+  products: Product[];
+};
+
+const API_BASE_URL = process.env.API_BASE_URL;
+
+const getProducts = async ({ page, limit, searchTerm }) => {
+  const url = new URL("/api/v1/products", API_BASE_URL);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  url.searchParams.set("search", searchTerm || "");
+  const resp = await fetch(url.toString());
+  return resp.json() as Promise<ApiResponse>;
+};
+
+<AsyncSelect<Product>
+  label="Custom option rendering"
+  placeholder="Search products"
+  getData={getProducts}
+  extractDynamicData={(response) => response.products}
+  hasMore={(response, page) => page < response.meta.last_page}
   options={{
     value: "id",
-    label: "name",
-    renderOption: (user) => (
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <img src={user.avatar} alt={user.name} style={{ width: 24, height: 24, borderRadius: "50%" }} />
-        <div>
-          <div style={{ fontWeight: "bold" }}>{user.name}</div>
-          <div style={{ fontSize: "12px", color: "#666" }}>{user.email}</div>
-        </div>
-      </div>
-    )
+    label: "designation",
+    renderOption: (row) => `id: ${row.id} - ${row.designation}`,
   }}
-  placeholder="Search users by name or email..."
 />
 ```
 
-### Preview
-<CustomRenderPreview />
+</details>
+
+<BrowserOnly>{() => <CustomRenderPreview />}</BrowserOnly>
+
+---
+
+## Generic types
+
+AsyncSelect is a generic component. Passing an explicit type parameter gives you proper type-checking for `options`, `extractDynamicData`, `disabledOption`, and custom renderers.
+
+<details open>
+<summary>Code</summary>
+
+```tsx
+import { AsyncSelect } from "@kousta-ui/components";
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+<AsyncSelect<Product>
+  label="Products"
+  placeholder="Search products"
+  getData={async ({ page, limit, searchTerm }) => {
+    const API_BASE_URL = process.env.API_BASE_URL;
+    const url = new URL("/api/v1/products", API_BASE_URL);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    url.searchParams.set("search", searchTerm || "");
+    const resp = await fetch(url.toString());
+    return resp.json();
+  }}
+  extractDynamicData={(resp) => resp.products}
+  hasMore={(resp, page) => page < resp.meta.last_page}
+  options={{ value: "id", label: "designation" }}
+/>
+```
+
+</details>
+
+<BrowserOnly>{() => <GenericTypesPreview />}</BrowserOnly>
 
 ---
 
@@ -141,9 +236,14 @@ type GetDataParams = {
 };
 
 export type AsyncSelectProps<T extends SelectDataConstraints> = {
-  getData: (params: GetDataParams) => Promise<any>;
-  extractDynamicData: (response: any) => T[];
-  hasMore: (response: any, page: number) => boolean;
-  debounceMs?: number;
-} & Omit<SelectProps<T>, "data" | "onSearch">;
+  getData: (params: {
+    page: number;
+    limit: number;
+    searchTerm?: string;
+  }) => Promise<unknown>;
+  extractDynamicData?: (response: any) => T[];
+  infiniteScroll?: boolean;
+  hasMore?: (responce: any, page: number) => boolean;
+  searchTimeout?: number;
+} & Omit<SelectProps<T>, "data" | "loading" | "onSearch">;
 ```

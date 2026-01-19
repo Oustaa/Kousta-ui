@@ -1,10 +1,12 @@
 ---
-sidebar_position: 9
+sidebar_position: 999
+title: Component Props Provider
+sidebar_label: Component Props Provider
 ---
 
 import Badge from '@site/src/components/Badge';
 
-# ComponentPropsProvider
+# Component Props Provider
 
 A powerful **ComponentPropsProvider** that allows you to set global default props and create custom variants for Kousta UI components. Perfect for maintaining consistent design systems and reducing prop duplication across your application.
 
@@ -65,6 +67,9 @@ The provider accepts configuration for each component type:
   button={ButtonConfiguration}
   modal={ModalConfiguration}
   menu={MenuConfiguration}
+  select={SelectConfiguration}
+  asyncSelect={AsyncSelectConfiguration}
+  pagination={PaginationConfiguration}
 >
   <YourApp />
 </ComponentPropsProvider>
@@ -218,6 +223,131 @@ Create reusable button variants with custom styling:
   </Menu.Menu>
 </ComponentPropsProvider>
 ```
+
+---
+
+## Select configuration
+
+`Select` reads provider defaults from the `select` key.
+
+<details open>
+<summary>Code</summary>
+
+```tsx
+import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+export function Example() {
+  return (
+    <ComponentPropsProvider
+      select={{
+        clearable: false,
+        seachable: false,
+        emptyMessage: "Nothing here",
+        labelProps: { style: { color: "#555" } },
+        icons: {
+          clear: <X size={16} />,
+          open: <ChevronUp size={16} />,
+          close: <ChevronDown size={16} />,
+        },
+      }}
+    >
+      <Select label="Framework" data={frameworkData} placeholder="Provider overrides" />
+    </ComponentPropsProvider>
+  );
+}
+```
+
+</details>
+
+---
+
+## AsyncSelect configuration
+
+`AsyncSelect` reads provider defaults from the `asyncSelect` key.
+
+<details open>
+<summary>Code</summary>
+
+```tsx
+import { AsyncSelect, ComponentPropsProvider } from "@kousta-ui/components";
+
+type Product = { id: number; designation: string };
+
+const API_BASE_URL = process.env.API_BASE_URL;
+
+const getProducts = async ({ page, limit, searchTerm }) => {
+  const url = new URL("/api/v1/products", API_BASE_URL);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  url.searchParams.set("search", searchTerm || "");
+  const resp = await fetch(url.toString());
+  return resp.json();
+};
+
+export function Example() {
+  return (
+    <ComponentPropsProvider
+      asyncSelect={{
+        limit: 20,
+        searchTimeout: 400,
+        extractDynamicData: (resp) => resp.products,
+        hasMore: (resp, page) => page < resp.meta.last_page,
+      }}
+    >
+      <AsyncSelect<Product>
+        label="Dynamic Select"
+        placeholder="Search products"
+        getData={getProducts}
+        options={{ value: "id", label: "designation" }}
+      />
+    </ComponentPropsProvider>
+  );
+}
+```
+
+</details>
+
+---
+
+## Pagination configuration
+
+`Pagination` reads provider defaults from the `pagination` key.
+
+<details open>
+<summary>Code</summary>
+
+```tsx
+import React, { useState } from "react";
+import { ComponentPropsProvider, Pagination } from "@kousta-ui/components";
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
+
+export function Example() {
+  const [page, setPage] = useState(6);
+
+  return (
+    <ComponentPropsProvider
+      pagination={{
+        prevIcon: <ChevronLeft size={16} />,
+        nextIcon: <ChevronRight size={16} />,
+        placeholderIcon: <MoreHorizontal size={16} />,
+        seblings: 1,
+      }}
+    >
+      <Pagination page={page} totalPages={20} onChange={setPage} />
+    </ComponentPropsProvider>
+  );
+}
+```
+
+</details>
 
 ---
 
@@ -435,6 +565,17 @@ const buttonConfig: ButtonPropsProvided = {
 
 ---
 
+## Code review
+
+- **Supported keys**: `ComponentPropsProvider` supports `button`, `menu`, `modal`, `select`, `asyncSelect`, and `pagination`.
+- **No deep merge**: A nested provider replaces the entire context value. If you nest providers and only pass `button`, other keys from an outer provider (like `modal`) won’t be available in the inner tree.
+- **Precedence**: Components generally treat provider values as defaults and local props win when provided.
+- **Select merging**: `Select` merges complex props like `labelProps` and `icons` (provider values are merged with local values).
+- **Button variants**: When the provider defines `button.variants[variant]`, those props are applied first, then local props override. Styles are merged (`variant.style` then `local style`).
+- **Menu defaults**: `Menu.Menu` reads defaults from `menu.menu` and `Menu.Item` reads defaults from `menu.menuItem`.
+
+---
+
 ## Migration guide
 
 ### From individual props
@@ -496,6 +637,9 @@ type PropsContextType = {
   button?: ButtonPropsProvided;
   menu?: MenuPropsProvided;
   modal?: ModalPropsProvided;
+  select?: SelectPropsProvided;
+  asyncSelect?: AsyncSelectPropsProvided;
+  pagination?: PaginationPropsProvided;
 };
 
 // Provider component
