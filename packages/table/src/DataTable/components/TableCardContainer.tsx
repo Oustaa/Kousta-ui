@@ -2,15 +2,17 @@ import { useTableContext } from "../tableContext";
 import { getShownHeders } from "../utils/getShownHeaders";
 
 import classes from "../DataTable.module.css";
+import { useDataToDisplay } from "../hooks/useDataToDisplay";
 
 const TableCardContainer = () => {
-  const { data, keyExtractor, options, headers } = useTableContext();
+  const { keyExtractor, options, headers } = useTableContext();
+  const dataToDisplay = useDataToDisplay();
 
   if (!options?.cards || !options.cards.card) return <>no cards</>;
 
   const Card = options.cards.card;
 
-  if (data.length === 0) {
+  if (dataToDisplay.length === 0) {
     return options.emptyTable;
   }
 
@@ -22,7 +24,7 @@ const TableCardContainer = () => {
       ].join(" ")}
       {...options.cards.cardsContainerProps}
     >
-      {data.map((row, index) => (
+      {dataToDisplay.map((row, index) => (
         <Card
           key={keyExtractor?.(row) || index}
           row={row}

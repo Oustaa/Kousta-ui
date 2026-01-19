@@ -1,9 +1,11 @@
 import { isValidElement } from "react";
 import { useTableContext } from "../tableContext";
 import { getShownHeders } from "../utils/getShownHeaders";
+import { useDataToDisplay } from "../hooks/useDataToDisplay";
 
 const DisplayExtraView = () => {
-  const { data, displayAs, options, headers } = useTableContext();
+  const { displayAs, options, headers } = useTableContext();
+  const dataToDisplay = useDataToDisplay();
 
   if (
     !options?.extraviews ||
@@ -15,7 +17,10 @@ const DisplayExtraView = () => {
   const viewConf = options.extraviews[displayAs];
 
   return (
-    <viewConf.View data={data} visibleHeaders={getShownHeders(headers.data)} />
+    <viewConf.View
+      data={dataToDisplay}
+      visibleHeaders={getShownHeders(headers.data)}
+    />
   );
 };
 

@@ -4,12 +4,10 @@ import classes from "../../DataTable.module.css";
 import TableInformationItem, {
   TableInformationItemProps,
 } from "./TableInformationItem";
-import { useGetSearchTableFunction } from "../../hooks/useGetSearchTableFunction";
-import { useFunctionWithTableParams } from "../../hooks/useFunctionWithTableParams";
+import { useGetSearchFunction } from "../../hooks/useGetSearchFunction";
 
 const TableInformation = () => {
-  const functionWithTableProps = useFunctionWithTableParams();
-  const searchFunction = useGetSearchTableFunction();
+  const searchFunction = useGetSearchFunction();
   const { search } = useTableContext();
 
   const infos: TableInformationItemProps[] = [];
@@ -20,11 +18,11 @@ const TableInformation = () => {
       value: search.query,
       onClear() {
         search.setQuery("");
-        if (typeof searchFunction === "function")
-          functionWithTableProps(searchFunction, { search: "" });
+        searchFunction("");
       },
     });
   }
+
   // if (Object.keys(rowSelection.selectedRows).length) {
   //   infos.push({
   //     label: "Selecting ",

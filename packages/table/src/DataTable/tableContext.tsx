@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useContext } from "react";
+import React, { createContext, PropsWithChildren, useContext } from "react";
 import type { TableProps, THeader } from "./_props";
 
 export type TableHeaders<T> = {
@@ -19,6 +19,10 @@ export type TableContextType<T> = Omit<
   search: {
     query: string;
     setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
+  total: {
+    total: number;
+    setTotal: React.Dispatch<React.SetStateAction<number>>;
   };
   displayAs: string;
   setDisplayAs: (as: string) => void;

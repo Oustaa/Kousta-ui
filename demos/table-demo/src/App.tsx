@@ -141,9 +141,9 @@ const App = () => {
     [],
   );
 
-  // useEffect(() => {
-  //   getTableProducts({});
-  // }, []);
+  useEffect(() => {
+    getTableProducts({});
+  }, []);
 
   return (
     <ComponentPropsProvider
@@ -232,12 +232,24 @@ const App = () => {
               total: totalProducts,
               limit: 10,
               page: 1,
-              // type: "static",
+              type: "static",
             }}
             actions={{
-              get: getTableProducts,
+              // get: getTableProducts,
               search: {
-                onSearch: getTableProducts,
+                static: true,
+                onSearch: (row, { query, reg }) => {
+                  console.log({
+                    row,
+                    query,
+                    result:
+                      reg.test(row.designation) || reg.test(row.category.ref),
+                  });
+
+                  return (
+                    reg.test(row.designation) || reg.test(row.category.ref)
+                  );
+                },
                 searchOnType: false,
                 // searchTimer: 4000,
               },

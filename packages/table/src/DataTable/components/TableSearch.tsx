@@ -1,27 +1,23 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTableContext } from "../tableContext";
 import { Button, Input } from "@kousta-ui/components";
-import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 import { useDebounceCallback } from "@kousta-ui/hooks";
+import { useGetSearchFunction } from "../hooks/useGetSearchFunction";
 
 import classes from "../DataTable.module.css";
-import { useGetSearchTableFunction } from "../hooks/useGetSearchTableFunction";
 
 const TableSearch = () => {
   const { actions, pagination, search } = useTableContext();
   const [q, setQ] = useState<string>(search.query);
-  const functionWithTableProps = useFunctionWithTableParams();
-  const searchFunction = useGetSearchTableFunction();
+  const searchFunction = useGetSearchFunction();
 
   const searchHandler = useCallback(() => {
     const setPage = pagination?.setPage;
 
     setPage?.(1);
     search.setQuery(q);
-    functionWithTableProps(searchFunction, {
-      search: q,
-      page: 1,
-    });
+
+    searchFunction(q);
   }, [q]);
 
   const debouncedSearch = useDebounceCallback(

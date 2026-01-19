@@ -19,6 +19,7 @@ export type TableProps<T> = {
   keyExtractor?: (row: T) => string | number;
   pagination?: TablePagination;
   actions?: TActions<T>;
+  isStatic?: boolean;
 
   options?: TOptions<T>;
   config?: TConfig;
@@ -97,16 +98,6 @@ type TExtraView<T> = {
   loadingIndicator?: LoadingIndicator;
 };
 
-// type TStaticSearch = (
-//   q: string,
-//   options: {
-//     visibleHeaders: string[];
-//     props: Record<string, string | number | Array<string> | Array<number>>;
-//   },
-// ) => void;
-
-type TParams = Record<string, number | string | undefined>;
-
 export type TActions<T> = {
   get?: (params: TParams) => void;
   edit?: {
@@ -125,21 +116,33 @@ export type TActions<T> = {
     // not implemented yet
     afterDelete?: TAfterAction;
   };
-  search?: {
-    onSearch: (params: TParams) => void;
-    searchOnType?: boolean;
-    searchTimer?: number;
-  } & (
+  search?: TSearch<T>;
+};
+
+type TSearch<T> = {
+  searchOnType?: boolean;
+  searchTimer?: number;
+  static?: boolean;
+} & (
+  | {
+      searchOnType?: false;
+      searchTimer?: never;
+    }
+  | {
+      searchOnType?: true;
+      searchTimer?: number;
+    }
+) &
+  (
     | {
-        searchOnType?: false;
-        searchTimer?: never;
+        static: true;
+        onSearch: (row: T, props: { query: string; reg: RegExp }) => boolean;
       }
     | {
-        searchOnType?: true;
-        searchTimer?: number;
+        static?: false | undefined;
+        onSearch: (params: TParams) => void;
       }
   );
-};
 
 type ExtraActions<T> = {
   title: string | ReactNode;
@@ -173,6 +176,8 @@ type TConfig = {
     tr?: ComponentPropsWithoutRef<"tr">;
   };
 };
+
+export type TParams = Record<string, number | string | undefined>;
 
 type LoadingIndicator = (props: { visibleHeaders: string[] }) => ReactNode;
 

@@ -98,7 +98,6 @@ describe("DataTable Actions", () => {
       const user = userEvent.setup();
       const searchTerm = "search";
 
-      screen.logTestingPlaygroundURL();
       const searchInput = screen.getByRole("textbox", {
         name: /search-input/i,
       });

@@ -3,7 +3,7 @@ import Table from "../Table";
 import TableHead from "./components/TableHead";
 import TableHeader from "./components/TableHeader";
 import TableBody from "./components/TableBody";
-import { isValidElement, useCallback, useState } from "react";
+import { isValidElement, useCallback, useEffect, useState } from "react";
 import { TableProps } from "./_props";
 import { TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
@@ -23,7 +23,7 @@ function DataTable<T>(props: TableProps<T>) {
 
   const [displayAs, setDisplayAs] = useState<string>("table");
 
-  const { limit, setPage, setLimit, page, total } = usePagination({
+  const { setTotal, total, setLimit, limit, setPage, page } = usePagination({
     total: props.pagination?.total || 0,
     page: props.pagination?.page || 0,
     limit: props.pagination?.limit || 0,
@@ -50,6 +50,10 @@ function DataTable<T>(props: TableProps<T>) {
     },
     [selectedRows],
   );
+
+  useEffect(() => {
+    setTotal(props.pagination?.total || 0);
+  }, [props.pagination?.total]);
 
   const config = props.config || {};
 
@@ -201,6 +205,7 @@ function DataTable<T>(props: TableProps<T>) {
       config={config}
       headers={{ data: headers, setHeaders }}
       search={{ query, setQuery }}
+      total={{ total, setTotal }}
       rowSelection={{
         selectedRows,
         setSelectedRows: setSelectedRowsFunc,
