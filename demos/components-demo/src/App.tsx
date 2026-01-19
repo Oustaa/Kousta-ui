@@ -176,7 +176,7 @@ function App() {
           placeholderIcon: <BsThreeDots />,
           prevIcon: <FaAngleLeft />,
           nextIcon: <FaAngleRight />,
-          seblings: 3,
+          // seblings: 3,
         }}
       >
         <Button onClick={() => setValue("")}>Clear</Button>
@@ -209,12 +209,13 @@ function App() {
             />
           </div>
           <Pagination
-            page={page}
-            totalPages={Math.ceil(total / limit)}
+            page={10}
+            // totalPages={Math.ceil(total / limit)}
+            totalPages={20}
             onChange={(page) => {
               setPage(page);
             }}
-            // seblings={3}
+            seblings={2}
           />
         </div>
         <br />

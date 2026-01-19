@@ -1,4 +1,4 @@
-import { FC, isValidElement, useMemo, useState } from "react";
+import { FC, isValidElement, useEffect, useMemo, useState } from "react";
 import { PaginationProps } from "./_props";
 import { PaginationPropsProvided, useComponentContext } from "../PropsContext";
 import { getSeblings } from "./getSeblings";
@@ -19,7 +19,6 @@ const Pagination: FC<PaginationProps> = ({
     "pagination",
   ) as PaginationPropsProvided;
 
-  // useEffect(() => {
   if (paginationProps) {
     if (!placeholderIcon) placeholderIcon = paginationProps.placeholderIcon;
     if (!nextIcon) nextIcon = paginationProps.nextIcon;
@@ -28,46 +27,55 @@ const Pagination: FC<PaginationProps> = ({
   }
 
   if (!seblings) seblings = 1;
-  // }, []);
 
   const [currentPage, setCurrentPage] = useState<number>(page);
+
+  useEffect(() => {
+    setCurrentPage(page);
+  }, [page]);
+
+  useEffect(() => {
+    if (totalPages < 1) return;
+    if (currentPage > totalPages) setCurrentPage(Math.max(totalPages, 1));
+    if (currentPage < 1) setCurrentPage(1);
+  }, [currentPage, totalPages]);
+
+  const safeCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
 
   const pagesToDisplay = useMemo(() => {
     let pages: ("" | number)[] = [];
 
-    if (currentPage <= seblings * 2 + 2) {
-      pages = getSeblings(currentPage, totalPages, seblings, "start");
+    if (safeCurrentPage <= seblings * 2 + 2) {
+      pages = getSeblings(safeCurrentPage, totalPages, seblings, "start");
       if (pages[pages.length - 1] !== totalPages) {
         pages.push("", totalPages);
       }
-    } else if (currentPage > totalPages - seblings * 2 - 1) {
-      pages = getSeblings(currentPage, totalPages, seblings, "end");
+    } else if (safeCurrentPage > totalPages - seblings * 2 - 1) {
+      pages = getSeblings(safeCurrentPage, totalPages, seblings, "end");
 
       if (pages[0] !== 1) {
         pages = [1, "", ...pages];
       }
     } else {
-      pages = getSeblings(currentPage, totalPages, seblings);
+      pages = getSeblings(safeCurrentPage, totalPages, seblings);
 
-      if (pages[pages.length - 1] !== totalPages) {
+      if (Number(pages[pages.length - 1]) < totalPages - 1) {
         pages.push("", totalPages);
       }
-      if (pages[0] !== 1) {
+      if (Number(pages[1]) > 2) {
         pages = [1, "", ...pages];
       }
     }
 
-    if (currentPage > totalPages) setCurrentPage(totalPages);
-
     return pages;
-  }, [currentPage, totalPages]);
+  }, [safeCurrentPage, seblings, totalPages]);
 
   if (totalPages < 1) return <></>;
 
   return (
     <div className={classes["pagination-container"]}>
       <button
-        disabled={currentPage === 1 || disabled}
+        disabled={safeCurrentPage === 1 || disabled}
         className={[
           classes["pagination-link"],
           classes["is-control"],
@@ -104,16 +112,16 @@ const Pagination: FC<PaginationProps> = ({
           <button
             key={page}
             onClick={() => {
-              if (page === currentPage) return;
+              if (page === safeCurrentPage) return;
               onChange?.(page);
               setCurrentPage(page);
             }}
             disabled={disabled}
             className={[
               classes["pagination-link"],
-              page === currentPage && classes["active"],
+              page === safeCurrentPage && classes["active"],
               "kui-pagination-link",
-              page === currentPage && "kui-pagination-active-link",
+              page === safeCurrentPage && "kui-pagination-active-link",
             ].join(" ")}
           >
             {page}
@@ -121,7 +129,7 @@ const Pagination: FC<PaginationProps> = ({
         );
       })}
       <button
-        disabled={currentPage === totalPages || disabled}
+        disabled={safeCurrentPage === totalPages || disabled}
         className={[
           classes["pagination-link"],
           classes["is-control"],

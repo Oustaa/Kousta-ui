@@ -48,7 +48,6 @@ const BaseSelect = <T extends SelectDataConstraints>({
     if (clearable === undefined) {
       if (selectProps.clearable !== undefined)
         clearable = selectProps.clearable;
-      else clearable = true;
     }
     if (selectProps.emptyMessage && !emptyMessage) {
       emptyMessage = selectProps.emptyMessage;
@@ -97,6 +96,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
     }
     if (!icons) icons = {};
   }
+
   const selectSearchInput = useRef<HTMLInputElement | null>(null);
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [selectData, setSelectData] = useState<T[]>(data);
@@ -185,7 +185,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
   /* End Select Value Logic */
 
   /* Search Logic */
-  const search = useCallback(
+  const searchHandler = useCallback(
     (term: string) => {
       if (asyncSearch && typeof asyncSearch === "function") {
         asyncSearch(term);
@@ -195,7 +195,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
       ) {
         const regex = new RegExp(term, "i");
 
-        if (term && term.trim() === "") {
+        if ((term && term.trim() === "") || !term) {
           setSelectData(data);
         } else {
           const filteredData = data.filter((row: T) => {
@@ -264,7 +264,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
             }}
             onKeyDown={(e) => {
               if (/^\w$/i.test(e.key)) {
-                if (!seachable) return;
+                if (seachable === false) return;
 
                 if (selectSearchInput.current && !isSearching) {
                   if (!dropDownOpen) OpenDropDown();
@@ -272,7 +272,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
                   selectSearchInput.current.value =
                     selectSearchInput.current.value + e.key;
 
-                  search(selectSearchInput.current.value);
+                  searchHandler(selectSearchInput.current.value);
                   e.stopPropagation();
                   e.preventDefault();
                 }
@@ -299,7 +299,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
             }}
           >
             <SelectSearchInput
-              search={search}
+              search={searchHandler}
               ref={selectSearchInput}
               isSearching={isSearching}
               placeholder={placeholder}
@@ -329,7 +329,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
                 <SelectLoadingIndicator />
               )
             ) : (
-              clearable &&
+              clearable !== false &&
               selectedRow && (
                 <button
                   className={`
@@ -340,6 +340,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
                 `}
                   onClick={(e) => {
                     setValue(undefined);
+                    onChange?.(undefined);
 
                     e.stopPropagation();
                   }}

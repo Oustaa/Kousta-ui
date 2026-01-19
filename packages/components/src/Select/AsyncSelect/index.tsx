@@ -3,16 +3,38 @@ import { SelectDataConstraints } from "../Base/_props";
 import { AsyncSelectProps } from "./_props";
 import Select from "../Base";
 import { useDebounceCallback } from "@kousta-ui/hooks";
+import { AsyncSelectPropsProvided, useComponentContext } from "../../PropsContext";
 
 const AsyncSelect = <T extends SelectDataConstraints>({
   getData,
   extractDynamicData,
-  limit = 50,
+  limit,
   hasMore,
-  searchTimeout = 500,
+  searchTimeout,
   ...rest
 }: AsyncSelectProps<T>) => {
   const isFetchingRef = useRef<boolean>(false);
+
+  const asyncSelectProps = useComponentContext(
+    "asyncSelect",
+  ) as AsyncSelectPropsProvided;
+
+  if (asyncSelectProps) {
+    if (typeof asyncSelectProps.limit !== "undefined" && limit === undefined)
+      limit = asyncSelectProps.limit;
+    if (!extractDynamicData && asyncSelectProps.extractDynamicData)
+      // @ts-expect-error this is not an error
+      extractDynamicData = asyncSelectProps.extractDynamicData;
+    if (!hasMore && asyncSelectProps.hasMore) hasMore = asyncSelectProps.hasMore;
+    if (
+      typeof asyncSelectProps.searchTimeout !== "undefined" &&
+      searchTimeout === undefined
+    )
+      searchTimeout = asyncSelectProps.searchTimeout;
+  }
+
+  if (limit === undefined) limit = 50;
+  if (searchTimeout === undefined) searchTimeout = 500;
 
   const [searchTerm, setSearchTerm] = useState<string>("");
 
@@ -46,7 +68,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
         isFetchingRef.current = false;
         setLoading(false);
       });
-  }, [limit, page, searchTerm, next]);
+  }, [extractDynamicData, getData, hasMore, limit, next, page, searchTerm]);
 
   useEffect(() => {
     handleGetData();
