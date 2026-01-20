@@ -101,6 +101,12 @@ const BaseSelect = <T extends SelectDataConstraints>({
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [selectData, setSelectData] = useState<T[]>(data);
 
+  const dropdownScrollTopRef = useRef<number>(0);
+  const [restoreDropdownScrollTop, setRestoreDropdownScrollTop] =
+    useState<boolean>(false);
+  const prevSelectDataLenRef = useRef<number>(data.length);
+  const prevExtraOptionsLoadingRef = useRef<boolean>(false);
+
   /* Select Value Logic */
   const [value, setValue] = useState<unknown>(props.value);
 
@@ -224,6 +230,26 @@ const BaseSelect = <T extends SelectDataConstraints>({
   useEffect(() => {
     setSelectData(data);
   }, [data]);
+
+  useEffect(() => {
+    const prevLen = prevSelectDataLenRef.current;
+    const prevWasLoadingMore = prevExtraOptionsLoadingRef.current;
+
+    const appended =
+      dropDownOpen &&
+      prevWasLoadingMore &&
+      typeof extraOptionsLoading === "boolean" &&
+      extraOptionsLoading === false &&
+      selectData.length > prevLen;
+
+    if (appended) {
+      setRestoreDropdownScrollTop(true);
+      requestAnimationFrame(() => setRestoreDropdownScrollTop(false));
+    }
+
+    prevSelectDataLenRef.current = selectData.length;
+    prevExtraOptionsLoadingRef.current = Boolean(extraOptionsLoading);
+  }, [dropDownOpen, extraOptionsLoading, selectData.length]);
   /* End of Effects */
 
   return (
@@ -375,7 +401,6 @@ const BaseSelect = <T extends SelectDataConstraints>({
           </div>
           {dropDownOpen && (
             <SelectDropDown
-              key={data.length}
               data={selectData}
               options={options}
               emptyMessage={emptyMessage}
@@ -384,6 +409,11 @@ const BaseSelect = <T extends SelectDataConstraints>({
               value={value}
               disabledOption={disabledOption}
               extraOptionsLoading={Boolean(extraOptionsLoading)}
+              persistedScrollTop={dropdownScrollTopRef.current}
+              restorePersistedScrollTop={restoreDropdownScrollTop}
+              onScrollTopChange={(scrollTop) => {
+                dropdownScrollTopRef.current = scrollTop;
+              }}
               onLastItemRendered={onLastItemRendered}
               disableErrorBoundaries={disableErrorBoundaries}
               optionErrorFallback={optionErrorFallback}

@@ -90,6 +90,7 @@ const AsyncSelect = <T extends SelectDataConstraints>({
         setSearchTerm(term || "");
         setPage(1);
         setNext(true);
+        setData([]);
 
         return debouncedSearch();
       }}

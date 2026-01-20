@@ -26,6 +26,7 @@ const TableFooter = () => {
             { label: 40, value: 40 },
             { label: 50, value: 50 },
           ]}
+          clearable={false}
           value={limit}
           onChange={(limit: any) => {
             setLimit(Number(limit));

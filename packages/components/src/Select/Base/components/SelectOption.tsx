@@ -15,6 +15,7 @@ type SelectOptionProps<T extends SelectDataConstraints> = {
   isHighlighted: boolean;
   highlightOption: VoidFunction;
   dropdownRef: Ref<HTMLDivElement>;
+  shouldScrollIntoView?: boolean;
 } & Pick<SelectProps<T>, "options" | "disabledOption" | "onLastItemRendered">;
 
 const SelectOption = <T extends SelectDataConstraints>({
@@ -27,18 +28,19 @@ const SelectOption = <T extends SelectDataConstraints>({
   disabledOption,
   onLastItemRendered,
   dropdownRef,
+  shouldScrollIntoView = true,
 }: SelectOptionProps<T>) => {
   const optionRef = useRef<HTMLDivElement | null>(null);
   const disabled = disabledOption?.(row) ?? false;
 
   useEffect(() => {
-    if (isHighlighted && optionRef.current) {
+    if (shouldScrollIntoView && isHighlighted && optionRef.current) {
       optionRef.current.scrollIntoView({
         behavior: "auto",
         block: "nearest",
       });
     }
-  }, [isHighlighted]);
+  }, [isHighlighted, shouldScrollIntoView]);
 
   const optionValue = getNestedProperty(row, options?.value as string);
   const isSelected = value === optionValue;

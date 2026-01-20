@@ -296,7 +296,7 @@ function App() {
               // seachable={false}
               // disabled
               // isMultiple
-              // onSearch={(user: User, term: string) => user.first_name === term}
+              onSearch={(user: User, term: string) => user.first_name === term}
               // disableErrorBoundaries={true}
               // loading
             />

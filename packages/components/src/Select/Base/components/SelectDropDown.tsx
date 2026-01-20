@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import classes from "../Select.module.css";
 import SelectOption from "./SelectOption";
@@ -11,6 +11,9 @@ type SelectDropDownProps<T extends SelectDataConstraints> = {
   value?: unknown;
   data: T[];
   extraOptionsLoading: boolean;
+  persistedScrollTop?: number;
+  restorePersistedScrollTop?: boolean;
+  onScrollTopChange?: (scrollTop: number) => void;
 } & Pick<
   SelectProps<T>,
   | "options"
@@ -33,8 +36,13 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   onLastItemRendered,
   disableErrorBoundaries,
   optionErrorFallback,
+  persistedScrollTop,
+  restorePersistedScrollTop,
+  onScrollTopChange,
 }: SelectDropDownProps<T>) => {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const loadingRef = useRef<HTMLDivElement | null>(null);
+  const highlightedByUserRef = useRef(false);
   const [highlitedOptionIndex, setHighlitedOptionIndex] = useState<number>(
     () => {
       if (value) {
@@ -89,12 +97,14 @@ const SelectDropDown = <T extends SelectDataConstraints>({
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeOnClickOutside();
       if (e.key === "ArrowDown") {
+        highlightedByUserRef.current = true;
         setHighlitedOptionIndex((prev) => {
           return goNext(prev + 1);
         });
         e.preventDefault();
       }
       if (e.key === "ArrowUp") {
+        highlightedByUserRef.current = true;
         setHighlitedOptionIndex((prev) => {
           return goPrev(prev - 1);
         });
@@ -110,6 +120,32 @@ const SelectDropDown = <T extends SelectDataConstraints>({
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [data]);
+
+  useEffect(() => {
+    highlightedByUserRef.current = false;
+    setHighlitedOptionIndex((prev) => {
+      if (prev >= data.length) return 0;
+      return prev;
+    });
+  }, [data]);
+
+  useLayoutEffect(() => {
+    if (!restorePersistedScrollTop) return;
+    if (typeof persistedScrollTop !== "number") return;
+    if (!dropdownRef.current) return;
+
+    dropdownRef.current.scrollTop = persistedScrollTop;
+  }, [restorePersistedScrollTop, persistedScrollTop, data.length]);
+
+  useEffect(() => {
+    if (!extraOptionsLoading) return;
+    if (!loadingRef.current) return;
+
+    loadingRef.current.scrollIntoView({
+      behavior: "auto",
+      block: "nearest",
+    });
+  }, [extraOptionsLoading]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -139,6 +175,9 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   return (
     <div
       ref={dropdownRef}
+      onScroll={(e) => {
+        onScrollTopChange?.((e.target as HTMLDivElement).scrollTop);
+      }}
       className={`${classes["select-dropdown"]} kui-select-dropdown`}
     >
       {data.length === 0 && !extraOptionsLoading ? (
@@ -181,7 +220,11 @@ const SelectDropDown = <T extends SelectDataConstraints>({
                   options={options}
                   onSelectValue={onSelectValue}
                   value={value}
-                  highlightOption={() => setHighlitedOption(index)}
+                  highlightOption={() => {
+                    highlightedByUserRef.current = true;
+                    setHighlitedOption(index);
+                  }}
+                  shouldScrollIntoView={highlightedByUserRef.current}
                   disabledOption={disabledOption}
                   onLastItemRendered={
                     index === data.length - 1 ? onLastItemRendered : undefined
@@ -192,16 +235,16 @@ const SelectDropDown = <T extends SelectDataConstraints>({
           })}
           {/* this should be changed */}
           {extraOptionsLoading && (
-            <SelectOption
-              dropdownRef={dropdownRef}
-              row={{ label: "Loading...", value: "" } as unknown as T}
-              highlightOption={() => {}}
-              isHighlighted={false}
-              options={{ value: "value", label: "label" }}
-              onSelectValue={onSelectValue}
-              value={value}
-              disabledOption={() => true}
-            />
+            <div
+              ref={loadingRef}
+              role="option"
+              data-disabled={"true"}
+              className={[classes["select-option"], "kui-select-option"].join(
+                " ",
+              )}
+            >
+              Loading...
+            </div>
           )}
         </>
       )}
