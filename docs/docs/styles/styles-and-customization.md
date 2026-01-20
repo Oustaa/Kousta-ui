@@ -576,6 +576,6 @@ CSS custom properties are supported in all modern browsers:
 ## 📖 Next Steps
 
 - Explore [Components](/docs/category/components) to see variables in action
-- Learn about [Table theming](/docs/category/table)
-- Check out [Helpers](/docs/category/helpers) for utility functions
-- Browse [Hooks](/docs/category/hooks) for state management
+- Learn about [Table](/docs/category/table)
+- Check out [Hooks](/docs/hooks/overview) for state management
+- Browse [Helpers](/docs/helpers/overview) for utility functions

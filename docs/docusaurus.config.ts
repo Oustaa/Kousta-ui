@@ -89,8 +89,8 @@ const config: Config = {
           items: [
             { label: "Table", to: "/docs/category/table" },
             { label: "Components", to: "/docs/category/components" },
-            { label: "Hooks", to: "/docs/category/hooks" },
-            { label: "Helpers", to: "/docs/category/helpers" },
+            { label: "Hooks", to: "/docs/hooks/overview" },
+            { label: "Helpers", to: "/docs/helpers/overview" },
           ],
         },
         {

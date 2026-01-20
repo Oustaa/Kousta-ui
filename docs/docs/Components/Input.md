@@ -41,13 +41,18 @@ A versatile **Input** component that provides form-friendly input fields with in
 
 The most basic usage includes a `label` and `placeholder`.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Input
-  label="Full Name"
-  placeholder="Enter your name"
-  required
-/>
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return <Input label="Email" placeholder="you@example.com" type="email" />;
+}
 ```
+
+</details>
 
 ### Preview
 <QuickStartPreview />
@@ -56,14 +61,25 @@ The most basic usage includes a `label` and `placeholder`.
 
 Pass an array of strings to the `errors` prop to display validation messages. The component will automatically apply error styling.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Input
-  label="Email"
-  placeholder="you@example.com"
-  defaultValue="not-an-email"
-  errors={["Please enter a valid email"]}
-/>
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Input
+      label="Email"
+      placeholder="you@example.com"
+      defaultValue="not-an-email"
+      errors={["Please enter a valid email"]}
+    />
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <WithErrorsPreview />
@@ -72,15 +88,26 @@ Pass an array of strings to the `errors` prop to display validation messages. Th
 
 Use `leftSection` and `rightSection` to add prefixes, suffixes, icons, or buttons inside the input.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Input
-  label="Amount"
-  placeholder="0.00"
-  type="number"
-  leftSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>$</span>}
-  rightSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>USD</span>}
-/>
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Input
+      label="Amount"
+      placeholder="0.00"
+      type="number"
+      leftSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>$</span>}
+      rightSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>USD</span>}
+    />
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <WithSectionsPreview />
@@ -89,9 +116,15 @@ Use `leftSection` and `rightSection` to add prefixes, suffixes, icons, or button
 
 You can use the `rightSection` to create a toggle for password visibility.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-function PasswordInput() {
-  const [visible, setVisible] = React.useState(false);
+import React, { useState } from "react";
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  const [visible, setVisible] = useState(false);
   return (
     <Input
       label="Password"
@@ -101,7 +134,12 @@ function PasswordInput() {
         <button
           type="button"
           onClick={() => setVisible((v) => !v)}
-          style={{ border: "none", background: "transparent", cursor: "pointer" }}
+          style={{
+            border: "none",
+            background: "transparent",
+            cursor: "pointer",
+            padding: "0 8px",
+          }}
           aria-label={visible ? "Hide password" : "Show password"}
         >
           {visible ? "🙈" : "👁️"}
@@ -113,6 +151,8 @@ function PasswordInput() {
 }
 ```
 
+</details>
+
 ### Preview
 <PasswordInputPreview />
 
@@ -120,14 +160,25 @@ function PasswordInput() {
 
 Set `labelPosition="x"` to align the label and input horizontally. You may need to provide a `minWidth` to the label via `labelProps` for alignment.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Input
-  label="Username"
-  placeholder="john_doe"
-  labelPosition="x"
-  labelProps={{ style: { minWidth: "100px" } }}
-/>
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Input
+      label="Username"
+      placeholder="john_doe"
+      labelPosition="x"
+      labelProps={{ style: { minWidth: 100 } }}
+    />
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <HorizontalLabelPreview />
@@ -136,14 +187,25 @@ Set `labelPosition="x"` to align the label and input horizontally. You may need 
 
 Pass the native `disabled` prop to disable interaction and apply disabled styles.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Input
-  label="Disabled Field"
-  placeholder="Cannot edit"
-  disabled
-  defaultValue="Some read-only value"
-/>
+import { Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Input
+      label="Read-only Field"
+      placeholder="Cannot edit"
+      disabled
+      defaultValue="Some read-only value"
+    />
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <DisabledInputPreview />

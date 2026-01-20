@@ -37,14 +37,14 @@ Powerful data table solutions featuring:
 - **Custom Headers**: Flexible header configuration with nested data support
 - **Performance Optimized**: Efficient rendering for large datasets
 
-### [@kousta-ui/hooks](/docs/category/hooks)
+### [@kousta-ui/hooks](/docs/hooks/overview)
 Essential React hooks for common UI patterns:
 - **useDisclosure**: Manage open/close states for modals, dropdowns, etc.
 - **useScrollLock**: Prevent body scroll when overlays are active
 - **usePagination**: Pagination state helpers
 - **useDebounceCallback**: Debounce a callback with cleanup on unmount
 
-### [@kousta-ui/helpers](/docs/category/helpers)
+### [@kousta-ui/helpers](/docs/helpers/overview)
 Utility functions and helpers to streamline your development:
 - **getNestedProperty**: Safely read nested values
 - **updateNestedProperties**: Update nested properties immutably
@@ -169,8 +169,8 @@ Customize the appearance using CSS variables:
 
 - Explore [Components](/docs/category/components) documentation
 - Learn about [Table](/docs/category/table) features
-- Discover [Hooks](/docs/category/hooks) for common patterns
-- Check out [Helpers](/docs/category/helpers) utilities
+- Discover [Hooks](/docs/hooks/overview) for common patterns
+- Check out [Helpers](/docs/helpers/overview) utilities
 
 ## 🔗 Links
 

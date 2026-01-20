@@ -31,15 +31,24 @@ The **Group** is a layout component that arranges its children in a stack (horiz
 
 By default, `Group` arranges its children in a row. It automatically handles the border-radius of the first and last elements to create a unified look.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
 import { Group, Button } from "@kousta-ui/components";
 
-<Group>
-  <Button variant="primary-outline">Button 1</Button>
-  <Button variant="primary-outline">Button 2</Button>
-  <Button variant="primary-outline">Button 3</Button>
-</Group>
+export default function Example() {
+  return (
+    <Group>
+      <Button variant="primary-outline">Button 1</Button>
+      <Button variant="primary-outline">Button 2</Button>
+      <Button variant="primary-outline">Button 3</Button>
+    </Group>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <HorizontalGroupPreview />
@@ -48,13 +57,26 @@ import { Group, Button } from "@kousta-ui/components";
 
 Set `direction="column"` to stack the children vertically.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Group direction="column">
-  <Button variant="neutral-outline">Button 1</Button>
-  <Button variant="neutral-outline">Button 2</Button>
-  <Button variant="neutral-outline">Button 3</Button>
-</Group>
+import { Group, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 200 }}>
+      <Group direction="column">
+        <Button variant="neutral-outline">Button 1</Button>
+        <Button variant="neutral-outline">Button 2</Button>
+        <Button variant="neutral-outline">Button 3</Button>
+      </Group>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <VerticalGroupPreview />
@@ -63,12 +85,23 @@ Set `direction="column"` to stack the children vertically.
 
 You can specify a `gap` between the elements.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Group gap="2rem">
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
-</Group>
+import { Group, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Group gap="2rem">
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+    </Group>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <GapPreview />
@@ -77,12 +110,25 @@ You can specify a `gap` between the elements.
 
 `Group` is also useful for creating input groups with buttons or other elements.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Group>
-  <Input placeholder="Search..." />
-  <Button>Search</Button>
-</Group>
+import { Group, Button, Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 420 }}>
+      <Group>
+        <Input placeholder="Search..." />
+        <Button>Search</Button>
+      </Group>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <InputGroupPreview />

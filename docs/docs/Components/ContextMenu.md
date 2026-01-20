@@ -22,43 +22,41 @@ The **ContextMenu** provides a customizable, nested right‑click menu. It suppo
 
 ## Quick start
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-import ContextMenu from "@kousta-ui/components/ContextMenu";
+import { ContextMenu } from "@kousta-ui/components";
 import { LuCopy, LuTrash2, LuFolderPlus } from "react-icons/lu";
 
 export default function Example() {
   return (
     <ContextMenu
-      onOpen={() => console.log("opened")}
-      onClose={() => console.log("closed")}
+      onOpen={() => {}}
+      onClose={() => {}}
       options={[
         { optionType: "Group", groupTitle: "File" },
-        {
-          title: "New folder",
-          icon: <LuFolderPlus />,
-          onClick: () => console.log("new folder"),
-        },
+        { title: "New folder", icon: <LuFolderPlus />, onClick: () => {} },
         { optionType: "Separator" },
-        {
-          title: "Copy",
-          icon: <LuCopy />,
-          onClick: () => console.log("copy"),
-        },
-        {
-          title: "Delete",
-          icon: <LuTrash2 />,
-          active: true, // disable with active: false
-          onClick: () => console.log("delete"),
-        },
+        { title: "Copy", icon: <LuCopy />, onClick: () => {} },
+        { title: "Delete", icon: <LuTrash2 />, active: true, onClick: () => {} },
       ]}
     >
-      <div style={{ padding: 24, border: "1px dashed var(--kui-neutral-400)" }}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
         Right‑click anywhere in this box
       </div>
     </ContextMenu>
   );
 }
 ```
+
+</details>
 
 ### Preview
 <CM_QuickStartPreview />
@@ -136,58 +134,122 @@ export type ContextMenuOption =
 
 ### Basic right‑click menu
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<ContextMenu options={[{ title: "Rename", onClick() {} }]}>
-  <div>Right‑click me</div>
-</ContextMenu>
+import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ContextMenu options={[{ title: "Rename", onClick() {} }]}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click me
+      </div>
+    </ContextMenu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CM_BasicRightClickPreview />
 
 ### Sub‑menus
 
-```tsx
-const options = [
-  {
-    title: "Share",
-    subOptions: [
-      { title: "Copy link", onClick() {} },
-      { title: "Invite people…", onClick() {} },
-    ],
-  },
-  { optionType: "Separator" },
-  {
-    title: "Move to",
-    subOptions: [
-      { title: "Project A", onClick() {} },
-      { title: "Project B", onClick() {} },
-    ],
-  },
-];
+<details open>
+<summary>Code</summary>
 
-<ContextMenu options={options}>
-  <div style={{ height: 120 }}>Right‑click</div>
-</ContextMenu>
+```tsx
+import { ContextMenu } from "@kousta-ui/components";
+import { LuShare2 } from "react-icons/lu";
+
+export default function Example() {
+  const options = [
+    {
+      title: "Share",
+      icon: <LuShare2 />,
+      subOptions: [
+        { title: "Copy link", onClick() {} },
+        { title: "Invite people…", onClick() {} },
+      ],
+    },
+    { optionType: "Separator" },
+    {
+      title: "Move to",
+      subOptions: [
+        { title: "Project A", onClick() {} },
+        { title: "Project B", onClick() {} },
+      ],
+    },
+  ] as any;
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          height: 120,
+          display: "grid",
+          placeItems: "center",
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click
+      </div>
+    </ContextMenu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CM_SubMenusPreview />
 
 ### Groups, separators, and icons
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
+import { ContextMenu } from "@kousta-ui/components";
 import { LuUserPlus, LuDownload, LuArchive } from "react-icons/lu";
 
-const options = [
-  { optionType: "Group", groupTitle: "Members" },
-  { title: "Invite", icon: <LuUserPlus />, onClick() {} },
-  { optionType: "Separator" },
-  { optionType: "Group", groupTitle: "File" },
-  { title: "Download", icon: <LuDownload />, onClick() {} },
-  { title: "Archive", icon: <LuArchive />, active: false, onClick() {} },
-];
+export default function Example() {
+  const options = [
+    { optionType: "Group", groupTitle: "Members" },
+    { title: "Invite", icon: <LuUserPlus />, onClick() {} },
+    { optionType: "Separator" },
+    { optionType: "Group", groupTitle: "File" },
+    { title: "Download", icon: <LuDownload />, onClick() {} },
+    { title: "Archive", icon: <LuArchive />, active: false, onClick() {} },
+  ] as any;
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click here
+      </div>
+    </ContextMenu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CM_GroupsIconsPreview />
@@ -199,17 +261,35 @@ const options = [
 
 <Badge color="yellow">Implementation note</Badge> In the current implementation, `closeOnClick` defaults to `true` per item. That means items will close the menu on click unless you explicitly set `closeOnClick: false`.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<ContextMenu
-  itemCloseOnClick={false}
-  options={[
-    { title: "Select", onClick() {}, closeOnClick: false }, // stays open
-    { title: "Apply", onClick() {}, closeOnClick: true },   // closes
-  ]}
->
-  <div>Right‑click</div>
-</ContextMenu>
+import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [
+    { title: "Select", onClick() {}, closeOnClick: false },
+    { title: "Apply", onClick() {}, closeOnClick: true },
+  ] as any;
+
+  return (
+    <ContextMenu itemCloseOnClick={false} options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click (menu stays open unless item overrides)
+      </div>
+    </ContextMenu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CM_CloseBehaviorPreview />
@@ -239,11 +319,38 @@ Use the controls to simulate a right‑click at different corners/edges and see 
 
 Use `As` to change the HTML tag of the right‑click area and pass extra props.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<ContextMenu As="section" className="file-tile" options={[{ title: "Open", onClick() {} }]}>
-  <img src="/thumb.png" alt="Thumbnail" />
-</ContextMenu>
+import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [{ title: "Open", onClick() {} }] as any;
+  return (
+    <ContextMenu As="section" options={options}>
+      <section
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        <img
+          alt="Thumbnail"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA=="
+          style={{ width: 48, height: 48, borderRadius: 6 }}
+        />
+        <div style={{ fontSize: 12, opacity: 0.8 }}>
+          Right‑click the tile (section)
+        </div>
+      </section>
+    </ContextMenu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CM_CustomWrapperPreview />

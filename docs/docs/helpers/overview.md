@@ -265,10 +265,10 @@ console.log("Database credentials:", dbCredentials);
 
 ## 📖 Next Steps
 
-- Learn about individual [helpers](/docs/category/helpers)
+- Learn about individual [helpers](/docs/helpers/overview)
 - Check out [Components package](/docs/category/components)
 - Explore [Table package](/docs/category/table)
-- Browse [Hooks](/docs/category/hooks)
+- Browse [Hooks](/docs/hooks/overview)
 
 ---
 

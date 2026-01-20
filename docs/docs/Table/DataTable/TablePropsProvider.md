@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+sidebar_position: 8
+title: TablePropsProvider
 ---
 
 import Badge from '@site/src/components/Badge';

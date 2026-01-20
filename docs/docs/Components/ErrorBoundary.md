@@ -29,14 +29,45 @@ The **ErrorBoundary** is a component that catches JavaScript errors anywhere in 
 
 If you do not provide a `fallback` prop, a default error message will be displayed.
 
-```tsx
-import { ErrorBoundary } from "@kousta-ui/components";
+<details open>
+<summary>Code</summary>
 
-// ProblematicComponent throws an error when the button is clicked.
-<ErrorBoundary>
-  <ProblematicComponent />
-</ErrorBoundary>
+```tsx
+import React, { useState } from "react";
+import { ErrorBoundary, Button } from "@kousta-ui/components";
+
+const ProblematicComponent = () => {
+  const [shouldThrow, setShouldThrow] = useState(false);
+
+  if (shouldThrow) {
+    throw new Error("💥 Kaboom! An error was thrown.");
+  }
+
+  return (
+    <Button onClick={() => setShouldThrow(true)} variant="danger-outline">
+      Click to Trigger Error
+    </Button>
+  );
+};
+
+export default function Example() {
+  return (
+    <div
+      style={{
+        border: "1px solid var(--kui-neutral-300)",
+        padding: "1rem",
+        borderRadius: "var(--kui-rounded)",
+      }}
+    >
+      <ErrorBoundary>
+        <ProblematicComponent />
+      </ErrorBoundary>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <DefaultFallbackPreview />
@@ -45,18 +76,54 @@ import { ErrorBoundary } from "@kousta-ui/components";
 
 You can provide a custom React component or node to the `fallback` prop to render a more user-friendly error message.
 
-```tsx
-const CustomFallback = (
-  <div style={{ color: 'orange', padding: '1rem', border: '1px dashed orange' }}>
-    <p><strong>Oops! Something went wrong.</strong></p>
-    <p>We've been notified and are looking into it.</p>
-  </div>
-);
+<details open>
+<summary>Code</summary>
 
-<ErrorBoundary fallback={CustomFallback}>
-  <ProblematicComponent />
-</ErrorBoundary>
+```tsx
+import React, { useState } from "react";
+import { ErrorBoundary, Button } from "@kousta-ui/components";
+
+const ProblematicComponent = () => {
+  const [shouldThrow, setShouldThrow] = useState(false);
+
+  if (shouldThrow) {
+    throw new Error("💥 Kaboom! An error was thrown.");
+  }
+
+  return (
+    <Button onClick={() => setShouldThrow(true)} variant="danger-outline">
+      Click to Trigger Error
+    </Button>
+  );
+};
+
+export default function Example() {
+  const CustomFallback = (
+    <div style={{ color: "orange", padding: "1rem", border: "1px dashed orange" }}>
+      <p>
+        <strong>Oops! Something went wrong.</strong>
+      </p>
+      <p>We've been notified and are looking into it.</p>
+    </div>
+  );
+
+  return (
+    <div
+      style={{
+        border: "1px solid var(--kui-neutral-300)",
+        padding: "1rem",
+        borderRadius: "var(--kui-rounded)",
+      }}
+    >
+      <ErrorBoundary fallback={CustomFallback}>
+        <ProblematicComponent />
+      </ErrorBoundary>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CustomFallbackPreview />

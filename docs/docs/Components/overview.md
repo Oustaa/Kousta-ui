@@ -118,6 +118,13 @@ import { ComponentPropsProvider } from "@kousta-ui/components";
 </ComponentPropsProvider>
 ```
 
+---
+
+## Related packages
+
+- **[Hooks](/docs/hooks/overview)**
+- **[Helpers](/docs/helpers/overview)**
+
 ### CSS Variables
 
 Customize appearance with CSS variables:
@@ -325,8 +332,8 @@ MIT © [Oustaa](https://github.com/Oustaa)
 ## 🔗 Related Packages
 
 - **[@kousta-ui/table](/docs/category/table)** - Advanced data table components
-- **[@kousta-ui/hooks](/docs/category/hooks)** - Essential React hooks
-- **[@kousta-ui/helpers](/docs/category/helpers)** - Utility functions and helpers
+- **[@kousta-ui/hooks](/docs/hooks/overview)** - Essential React hooks
+- **[@kousta-ui/helpers](/docs/helpers/overview)** - Utility functions and helpers
 
 ---
 
@@ -335,5 +342,5 @@ MIT © [Oustaa](https://github.com/Oustaa)
 - Explore individual [component documentation](/docs/category/components)
 - Learn about [customization](/docs/Components/ComponentPropsProvider)
 - Check out [Table components](/docs/category/table)
-- Discover [Hooks](/docs/category/hooks) for common patterns
-- Browse [Helpers](/docs/category/helpers) utilities
+- Discover [Hooks](/docs/hooks/overview) for common patterns
+- Browse [Helpers](/docs/helpers/overview) utilities

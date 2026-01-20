@@ -48,28 +48,28 @@ pnpm add @kousta-ui/hooks
 ## 🎨 Quick Start
 
 ```tsx
-import { 
-  useDisclosure, 
-  usePagination, 
-  useDebounceCallback, 
-  useScrollLock 
+import {
+  useDisclosure,
+  usePagination,
+  useDebounceCallback,
+  useScrollLock
 } from "@kousta-ui/hooks";
 
 function App() {
   // Modal state management
   const { opened, open, close, toggle } = useDisclosure(false);
-  
+
   // Pagination for data
   const { page, nextPage, prevPage, setPage } = usePagination({
     total: 100,
     limit: 10,
   });
-  
+
   // Debounced search
   const debouncedSearch = useDebounceCallback((query: string) => {
     console.log("Searching for:", query);
   }, 300);
-  
+
   // Scroll lock for modal
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -86,13 +86,13 @@ function App() {
   return (
     <div>
       <button onClick={handleModalOpen}>Open Modal</button>
-      
+
       <input
         type="text"
         placeholder="Search..."
         onChange={(e) => debouncedSearch(e.target.value)}
       />
-      
+
       <div>
         <button onClick={prevPage} disabled={page === 1}>
           Previous
@@ -226,12 +226,12 @@ function SearchableList() {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
       />
-      
+
       {/* Render results */}
       {results.map((item) => (
         <div key={item.id}>{item.name}</div>
       ))}
-      
+
       {/* Pagination controls */}
       <div>
         <button onClick={prevPage}>Previous</button>
@@ -263,7 +263,7 @@ function ModalExample() {
   return (
     <div>
       <button onClick={handleOpen}>Open Modal</button>
-      
+
       {opened && (
         <div className="modal-overlay">
           <div className="modal">
@@ -300,10 +300,10 @@ function ModalExample() {
 
 ## 📖 Next Steps
 
-- Learn about individual [hooks](/docs/category/hooks)
+- Learn about individual [hooks](/docs/hooks/overview)
 - Check out [Components package](/docs/category/components)
 - Explore [Table package](/docs/category/table)
-- Browse [Helpers utilities](/docs/category/helpers)
+- Browse [Helpers](/docs/helpers/overview)
 
 ---
 

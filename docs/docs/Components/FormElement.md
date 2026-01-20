@@ -28,14 +28,25 @@ The **FormElement** is a layout component used to arrange a label and its corres
 
 By default, `FormElement` arranges its children in a column.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
 import { FormElement, Label, Input } from "@kousta-ui/components";
 
-<FormElement labelPosition="y">
-  <Label>Email Address</Label>
-  <Input placeholder="you@example.com" />
-</FormElement>
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 420 }}>
+      <FormElement labelPosition="y">
+        <Label>Email Address</Label>
+        <Input placeholder="you@example.com" />
+      </FormElement>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <VerticalLayoutPreview />
@@ -44,12 +55,25 @@ import { FormElement, Label, Input } from "@kousta-ui/components";
 
 Set `labelPosition="x"` to arrange the label and input in a row. You may need to set a `minWidth` on the `Label` for proper alignment.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<FormElement labelPosition="x">
-  <Label style={{ minWidth: 120 }}>Email Address</Label>
-  <Input placeholder="you@example.com" />
-</FormElement>
+import { FormElement, Label, Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 420 }}>
+      <FormElement labelPosition="x">
+        <Label style={{ minWidth: 120 }}>Email Address</Label>
+        <Input placeholder="you@example.com" />
+      </FormElement>
+    </div>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <HorizontalLayoutPreview />

@@ -32,11 +32,14 @@ The Menu is a composition of small primitives:
 
 ```tsx
 import { Menu } from "@kousta-ui/components";
+import { Button } from "@kousta-ui/components";
 
 export default function Example() {
   return (
     <Menu.Menu>
-      <Menu.Target>Open menu</Menu.Target>
+      <Menu.Target>
+        <Button variant="primary-light">Open menu</Button>
+      </Menu.Target>
       <Menu.DropDown>
         <Menu.Item>Profile</Menu.Item>
         <Menu.Item>Settings</Menu.Item>
@@ -85,15 +88,28 @@ export default function Example() {
 
 The menu opens when the `Menu.Target` is clicked.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Menu.Menu type="click">
-  <Menu.Target>Click me</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Item>Item 1</Menu.Item>
-    <Menu.Item>Item 2</Menu.Item>
-  </Menu.DropDown>
-</Menu.Menu>
+import { Menu, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Menu.Menu type="click">
+      <Menu.Target>
+        <Button>Click me</Button>
+      </Menu.Target>
+      <Menu.DropDown>
+        <Menu.Item>Item 1</Menu.Item>
+        <Menu.Item>Item 2</Menu.Item>
+      </Menu.DropDown>
+    </Menu.Menu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <ClickTriggerPreview />
@@ -102,15 +118,28 @@ The menu opens when the `Menu.Target` is clicked.
 
 Set `type="hover"` to open the menu on mouse enter and close on mouse leave.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Menu.Menu type="hover">
-  <Menu.Target>Hover me</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Item>Item 1</Menu.Item>
-    <Menu.Item>Item 2</Menu.Item>
-  </Menu.DropDown>
-</Menu.Menu>
+import { Menu, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Menu.Menu type="hover">
+      <Menu.Target>
+        <Button variant="primary-light">Hover me</Button>
+      </Menu.Target>
+      <Menu.DropDown>
+        <Menu.Item>Item 1</Menu.Item>
+        <Menu.Item>Item 2</Menu.Item>
+      </Menu.DropDown>
+    </Menu.Menu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <HoverTriggerPreview />
@@ -119,16 +148,29 @@ Set `type="hover"` to open the menu on mouse enter and close on mouse leave.
 
 By default, clicking any item closes the menu (`closeOnClick={true}`). You can override this globally on the container or per-item with `closeMenuOnClick`.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-// Do NOT close when any item is clicked, except for the one that overrides it
-<Menu.Menu closeOnClick={false}>
-  <Menu.Target>Bulk actions</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Item>Pin</Menu.Item>         {/* won't close */}
-    <Menu.Item closeMenuOnClick>Share</Menu.Item> {/* will close */}
-  </Menu.DropDown>
-</Menu.Menu>
+import { Menu, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Menu.Menu closeOnClick={false}>
+      <Menu.Target>
+        <Button variant="neutral-outline">Bulk actions</Button>
+      </Menu.Target>
+      <Menu.DropDown>
+        <Menu.Item>Pin</Menu.Item>
+        <Menu.Item closeMenuOnClick>Share</Menu.Item>
+        <Menu.Item>Archive</Menu.Item>
+      </Menu.DropDown>
+    </Menu.Menu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <CloseBehaviorPreview />
@@ -144,23 +186,35 @@ The dropdown can be placed on any side and alignment relative to the trigger. Us
 
 Compose the menu with `Menu.Label`, `Menu.Divider`, and `leftSection`/`rightSection` props on items for a richer UI.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
+import { Menu, Button } from "@kousta-ui/components";
 import { LuUser, LuSettings, LuLogOut } from "react-icons/lu";
 
-<Menu.Menu>
-  <Menu.Target>Account</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Label>Profile</Menu.Label>
-    <Menu.Item leftSection={<LuUser />}>View profile</Menu.Item>
-    <Menu.Item leftSection={<LuSettings />}>Preferences</Menu.Item>
-    <Menu.Divider />
-    <Menu.Label>Session</Menu.Label>
-    <Menu.Item leftSection={<LuLogOut />} closeMenuOnClick>
-      Log out
-    </Menu.Item>
-  </Menu.DropDown>
-</Menu.Menu>
+export default function Example() {
+  return (
+    <Menu.Menu>
+      <Menu.Target>
+        <Button variant="primary-light">Account</Button>
+      </Menu.Target>
+      <Menu.DropDown>
+        <Menu.Label>Profile</Menu.Label>
+        <Menu.Item leftSection={<LuUser />}>View profile</Menu.Item>
+        <Menu.Item leftSection={<LuSettings />}>Preferences</Menu.Item>
+        <Menu.Divider />
+        <Menu.Label>Session</Menu.Label>
+        <Menu.Item leftSection={<LuLogOut />} closeMenuOnClick>
+          Log out
+        </Menu.Item>
+      </Menu.DropDown>
+    </Menu.Menu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <IconsLabelsDividersPreview />
@@ -169,16 +223,29 @@ import { LuUser, LuSettings, LuLogOut } from "react-icons/lu";
 
 Pass the `disabled` prop to any `Menu.Item` to make it non-interactive.
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
-<Menu.Menu>
-  <Menu.Target>Move</Menu.Target>
-  <Menu.DropDown>
-    <Menu.Item>Project A</Menu.Item>
-    <Menu.Item disabled>Project B (locked)</Menu.Item>
-    <Menu.Item>Project C</Menu.Item>
-  </Menu.DropDown>
-</Menu.Menu>
+import { Menu, Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <Menu.Menu>
+      <Menu.Target>
+        <Button>Move</Button>
+      </Menu.Target>
+      <Menu.DropDown>
+        <Menu.Item>Project A</Menu.Item>
+        <Menu.Item disabled>Project B (locked)</Menu.Item>
+        <Menu.Item>Project C</Menu.Item>
+      </Menu.DropDown>
+    </Menu.Menu>
+  );
+}
 ```
+
+</details>
 
 ### Preview
 <DisabledItemsPreview />

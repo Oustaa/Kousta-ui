@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_class_name: legacy-hidden
 ---
 
 import Badge from '@site/src/components/Badge';

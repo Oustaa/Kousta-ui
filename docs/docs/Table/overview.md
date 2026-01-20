@@ -106,20 +106,22 @@ function AdvancedTable() {
       loading={false}
       title="Users"
       keyExtractor={(row) => row.id}
-      options={{
-        search: (query, { visibleHeaders, props }) => {
-          // Implement search logic
-          console.log("Searching for:", query);
+      actions={{
+        search: {
+          static: true,
+          searchOnType: true,
+          searchTimer: 300,
+          onSearch: (row, { reg }) => {
+            return reg.test(row.name) || reg.test(row.email);
+          },
         },
-        actions: {
-          edit: {
-            onEdit: (user) => console.log("Edit user:", user),
-            title: "Edit",
-          },
-          delete: {
-            onDelete: (user) => console.log("Delete user:", user),
-            title: "Delete",
-          },
+        edit: {
+          title: "Edit",
+          onEdit: (user) => console.log("Edit user:", user),
+        },
+        delete: {
+          title: "Delete",
+          onDelete: (user) => console.log("Delete user:", user),
         },
       }}
     />
@@ -392,8 +394,10 @@ The API is designed to be familiar while providing enhanced features. Most table
 
 ## 📖 Next Steps
 
-- Explore [Table component documentation](/docs/Table/Table)
-- Learn about [DataTable features](/docs/Table/DataTable)
-- Master [TablePropsProvider](/docs/Table/TablePropsProvider)
-- Check out [Components package](/docs/category/components)
-- Discover [Hooks](/docs/category/hooks) for table interactions
+- Explore [Table component documentation](/docs/Table/overview)
+- Learn about [DataTable features](/docs/Table/DataTable/overview)
+- Master [TablePropsProvider](/docs/Table/DataTable/TablePropsProvider)
+- Check out [Table](/docs/Table/overview)
+- [Hooks](/docs/hooks/overview)
+- [Helpers](/docs/helpers/overview)
+ for table interactions

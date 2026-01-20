@@ -21,6 +21,9 @@ Now supports **global default props & per‑variant overrides via a context prov
 
 ## Quick start
 
+<details open>
+<summary>Code</summary>
+
 ```tsx
 import { Button } from "@kousta-ui/components";
 
@@ -34,6 +37,8 @@ export default function Example() {
   );
 }
 ```
+
+</details>
 
 ### Preview
 <QuickStartPreview />
@@ -66,17 +71,67 @@ All color variants are available in **solid**, **outline**, **light**, and **lin
 - `warning`, `warning-outline`, `warning-light`, `warning-link`
 
 ```tsx
-<div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-  <Button variant="primary">Primary</Button>
-  <Button variant="primary-outline">Primary</Button>
-  <Button variant="primary-light">Primary</Button>
-  <Button variant="primary-link">Primary</Button>
+import React, { useMemo, useState } from "react";
+import { Button } from "@kousta-ui/components";
 
-  <Button variant="neutral">Neutral</Button>
-  <Button variant="neutral-outline">Neutral</Button>
-  <Button variant="neutral-light">Neutral</Button>
-  <Button variant="neutral-link">Neutral</Button>
-</div>
+const ALL_VARIANTS = [
+  "primary",
+  "primary-outline",
+  "primary-light",
+  "primary-link",
+  "success",
+  "success-outline",
+  "success-light",
+  "success-link",
+  "danger",
+  "danger-outline",
+  "danger-light",
+  "danger-link",
+  "neutral",
+  "neutral-outline",
+  "neutral-light",
+  "neutral-link",
+  "warning",
+  "warning-outline",
+  "warning-light",
+  "warning-link",
+] as const;
+
+type Variant = (typeof ALL_VARIANTS)[number];
+
+export default function Example() {
+  const [variant, setVariant] = useState<Variant>("primary");
+  const id = useMemo(() => Math.random().toString(36).slice(2, 8), []);
+
+  return (
+    <div style={{ display: "grid", gap: 12 }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <label htmlFor={`btn-variant-${id}`} style={{ fontSize: 14 }}>
+          Variant
+        </label>
+        <select
+          id={`btn-variant-${id}`}
+          value={variant}
+          onChange={(e) => setVariant(e.target.value as Variant)}
+          style={{ padding: "6px 8px", borderRadius: 6 }}
+        >
+          {ALL_VARIANTS.map((v) => (
+            <option key={v} value={v}>
+              {v}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <Button variant={variant}>Button</Button>
+        <Button variant={variant} disabled>
+          Disabled
+        </Button>
+      </div>
+    </div>
+  );
+}
 ```
 
 ### Preview
@@ -117,9 +172,17 @@ import { Button, ComponentPropsProvider } from "@kousta-ui/components";
 `Button` accepts three sizes: `sm`, `md`, `lg`. Default is **md**.
 
 ```tsx
-<Button size="sm">Small Button</Button>
-<Button size="md">Medium Button</Button> {/* default */}
-<Button size="lg">Large Button</Button>
+import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  );
+}
 ```
 
 ### Preview
@@ -132,15 +195,17 @@ Use the provider to set a default size for a subtree. Component props always **o
 ```tsx
 import { Button, ComponentPropsProvider } from "@kousta-ui/components";
 
-<>
-  <Button>Medium (default)</Button>
-  <ComponentPropsProvider button={{ size: "lg" }}>
-    {/* uses provider default: lg */}
-    <Button>Large (provider default)</Button>
-    {/* local prop wins over provider */}
-    <Button size="sm">Small (local override)</Button>
-  </ComponentPropsProvider>
-</>
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Button>Default</Button>
+      <ComponentPropsProvider button={{ size: "lg" }}>
+        <Button>Large (provider default)</Button>
+        <Button size="sm">Small (local override)</Button>
+      </ComponentPropsProvider>
+    </div>
+  );
+}
 ```
 
 ### Preview
@@ -155,15 +220,19 @@ import { Button, ComponentPropsProvider } from "@kousta-ui/components";
 - Use `loadingIndicator` to customize the loading content (text or React node).
 
 ```tsx
-<div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-  <Button loading>Saving…</Button>
-  <Button
-    loading
-    loadingIndicator={<span style={{ display: "inline-flex", gap: 6 }}><i className="spinner" />Please wait</span>}
-    variant="neutral-outline"
-  />
-  <Button disabled variant="neutral-outline">Disabled</Button>
-</div>
+import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button loading>Saving…</Button>
+      <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
+      <Button disabled variant="neutral-outline">
+        Disabled
+      </Button>
+    </div>
+  );
+}
 ```
 
 ### Preview
@@ -194,33 +263,18 @@ export default function App() {
   return (
     <ComponentPropsProvider
       button={{
-        /** default props if not provided by <Button /> */
-        size: "sm",
-        type: "submit",
-        variant: "primary",
-        className: "my-shared-btn-class",
-        style: { borderRadius: 12 },
-
-        /** define custom variants (keys you can pass to `variant`) */
+        variant: "neutral",
         variants: {
-          mine: {
-            // Anything valid for <button>
-            style: { backgroundColor: "red", color: "green" },
-          },
           ghost: {
             className: "btn-ghost",
-            "aria-live": "polite",
           },
         },
-        /** default loading text if <Button loading loadingIndicator /> not provided */
-        loadingIndicator: "Loading…",
       }}
     >
-      {/* uses provider defaults: size=sm, type=submit */}
-      <Button>Submit</Button>
-
-      {/* uses custom provider variant mapping */}
-      <Button variant="mine">Custom</Button>
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+        <Button>Provider default (neutral)</Button>
+        <Button variant="ghost">Ghost (provider variant)</Button>
+      </div>
     </ComponentPropsProvider>
   );
 }
