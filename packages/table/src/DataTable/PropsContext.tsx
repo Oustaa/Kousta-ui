@@ -1,4 +1,4 @@
-import { ButtonProps, MenuProps, ModalProps } from "@kousta-ui/components";
+import { ButtonProps, ModalProps } from "@kousta-ui/components";
 import {
   ComponentPropsWithoutRef,
   createContext,
@@ -6,16 +6,10 @@ import {
   ReactNode,
   useContext,
 } from "react";
+import { TConfig } from "./_props";
 
 type PropsContextType = Partial<{
-  props: {
-    table?: ComponentPropsWithoutRef<"table">;
-    tbody?: ComponentPropsWithoutRef<"tbody">;
-    thead?: ComponentPropsWithoutRef<"thead">;
-    td?: ComponentPropsWithoutRef<"td">;
-    th?: ComponentPropsWithoutRef<"th">;
-    tr?: ComponentPropsWithoutRef<"tr">;
-  };
+  props: TConfig["props"];
   actions: {
     delete?: {
       title?: string | ReactNode;
@@ -30,10 +24,10 @@ type PropsContextType = Partial<{
       searchTimer?: number;
     };
   };
-  toggleRows: false | Omit<ButtonProps, "onClick">;
+  toggleRows: boolean;
   disableContextMenu: boolean;
   noHead: boolean;
-  selectFilter: { icon: ReactNode; menuProps?: MenuProps };
+  icons: TConfig["icons"];
   viewComp: {
     type?: "modal" | "extends";
     modalOptions?: Omit<ModalProps, "opened" | "onClose" | "modalTrigger">;

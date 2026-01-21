@@ -15,7 +15,7 @@ const RefreshTableBtn = () => {
           if (actions?.get) functionWithTableProps(actions?.get);
         }}
       >
-        Refresh
+        {config?.icons?.refresh || "Refresh"}
       </Button>
     )
   );

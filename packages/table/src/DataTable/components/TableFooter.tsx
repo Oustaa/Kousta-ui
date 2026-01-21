@@ -8,7 +8,7 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 const TableFooter = () => {
   const functionWithTableProps = useFunctionWithTableParams();
 
-  const { pagination, actions, rowSelection } = useTableContext();
+  const { pagination, actions, rowSelection, config } = useTableContext();
 
   if (!pagination) return;
 
@@ -27,6 +27,10 @@ const TableFooter = () => {
             { label: 50, value: 50 },
           ]}
           clearable={false}
+          icons={{
+            open: config?.icons?.selectOpened,
+            close: config?.icons?.selectClosed,
+          }}
           value={limit}
           onChange={(limit: any) => {
             setLimit(Number(limit));
@@ -53,6 +57,9 @@ const TableFooter = () => {
         <Pagination
           page={page}
           totalPages={totalPages}
+          nextIcon={config?.icons?.paginationNext}
+          prevIcon={config?.icons?.paginationPrev}
+          placeholderIcon={config?.icons?.paginationDots}
           onChange={(page) => {
             rowSelection.diseclectAll();
             if (actions?.get)

@@ -15,7 +15,7 @@ export function useGetSearchFunction() {
     params.limit = undefined;
   }
 
-  if (actions?.search) {
+  if (actions?.search && actions.search.onSearch) {
     if (actions.search.static !== true)
       searchFunction = actions.search.onSearch;
   } else if (actions?.get) {

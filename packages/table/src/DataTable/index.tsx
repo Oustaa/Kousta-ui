@@ -55,7 +55,9 @@ function DataTable<T>(props: TableProps<T>) {
     setTotal(props.pagination?.total || 0);
   }, [props.pagination?.total]);
 
-  const config = props.config || {};
+  const config = (props.config || {}) as NonNullable<TableProps<T>["config"]>;
+
+  if (!config.icons) config.icons = {};
 
   if (providedProps) {
     // overwrite table actions
@@ -152,13 +154,8 @@ function DataTable<T>(props: TableProps<T>) {
       };
     }
 
-    if (providedProps.selectFilter && props.config) {
-      if (props.config.selectFilter !== undefined)
-        props.config.selectFilter = {
-          ...providedProps.selectFilter,
-          ...props.config.selectFilter,
-        };
-      else props.config.selectFilter = providedProps.selectFilter;
+    if (providedProps.icons) {
+      config.icons = { ...providedProps.icons, ...config.icons };
     }
 
     if (providedProps.props) {

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
 import { ComponentPropsProvider } from "@kousta-ui/components";
 import {
@@ -6,9 +6,11 @@ import {
   BsDash,
   BsEye,
   BsKanbanFill,
+  BsTable,
   BsThreeDots,
   BsTrash,
 } from "react-icons/bs";
+import { IoIosRefresh } from "react-icons/io";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
 
@@ -98,9 +100,10 @@ const App = () => {
   //     value: "location.name",
   //   },
   // };
+
   const headers: THeader<ProductType> = {
     id: { value: "id" },
-    label: { value: "designation" },
+    label: { value: "designation", alwaysVisible: true },
     category: { value: "category.ref" },
   };
 
@@ -141,9 +144,9 @@ const App = () => {
     [],
   );
 
-  useEffect(() => {
-    getTableProducts({});
-  }, []);
+  // useEffect(() => {
+  //   getTableProducts({});
+  // }, []);
 
   return (
     <ComponentPropsProvider
@@ -168,16 +171,12 @@ const App = () => {
             searchTimer: 4000,
           },
         }}
-        toggleRows={{
-          children: <BsEye />,
-        }}
         emptyRowIcon={<BsDash />}
         emptyTable={<h1>There is not data.....</h1>}
         // selectFilter={{ icon: <IoMdArrowDropdown /> }}
         // disableContextMenu={true}
         // toggleRows={{ variant: "warning", children: <BsEye /> }}
         // toggleRows={false}
-        selectFilter={{ icon: <BsChevronDown /> }}
         // props={{
         //   table: {
         //     style: { borderColor: "white" },
@@ -189,6 +188,19 @@ const App = () => {
         //     // style: { backgroundColor: "blue", borderColor: "white" },
         //   },
         // }}
+        icons={{
+          toggleRows: <BsEye />,
+          selectRow: <BsChevronDown />,
+          extraViewsTogle: <BsThreeDots />,
+          tableExtraView: <BsTable />,
+          cardExtraView: <BsKanbanFill />,
+          refresh: <IoIosRefresh />,
+          selectOpened: <BsChevronDown />,
+          selectClosed: <BsChevronDown />,
+          paginationNext: <FaAngleRight />,
+          paginationPrev: <FaAngleLeft />,
+          paginationDots: <BsThreeDots />,
+        }}
       >
         <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
           {/* <Table.Root> */}
@@ -232,26 +244,26 @@ const App = () => {
               total: totalProducts,
               limit: 10,
               page: 1,
-              type: "static",
+              // type: "static",
             }}
             actions={{
-              // get: getTableProducts,
+              get: getTableProducts,
               search: {
-                static: true,
-                onSearch: (row, { query, reg }) => {
-                  console.log({
-                    row,
-                    query,
-                    result:
-                      reg.test(row.designation) || reg.test(row.category.ref),
-                  });
-
-                  return (
-                    reg.test(row.designation) || reg.test(row.category.ref)
-                  );
-                },
-                searchOnType: false,
-                // searchTimer: 4000,
+                // static: true,
+                // onSearch: (row, { query, reg }) => {
+                //   console.log({
+                //     row,
+                //     query,
+                //     result:
+                //       reg.test(row.designation) || reg.test(row.category.ref),
+                //   });
+                //
+                //   return (
+                //     reg.test(row.designation) || reg.test(row.category.ref)
+                //   );
+                // },
+                searchOnType: true,
+                searchTimer: 400,
               },
               delete: {
                 canDelete: (row) => row?.gestion_stock > 25,
@@ -313,14 +325,14 @@ const App = () => {
                     </div>
                   );
                 },
-                cardsContainerProps: {
-                  style: {
-                    display: "grid",
-                    gridColumn: "4",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "var(--kui-spacing-sm)",
-                  },
-                },
+                // cardsContainerProps: {
+                //   style: {
+                //     display: "grid",
+                //     gridColumn: "4",
+                //     gridTemplateColumns: "repeat(4, 1fr)",
+                //     gap: "var(--kui-spacing-sm)",
+                //   },
+                // },
                 loadingIndicator(props) {
                   return (
                     <>
@@ -421,9 +433,6 @@ const App = () => {
             }}
             config={{
               // noHead: true,
-              toggleRows: {
-                children: <BsEye />,
-              },
               // disableContextMenu: true,
               loadingIndicator(props) {
                 return (

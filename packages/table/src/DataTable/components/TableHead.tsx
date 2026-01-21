@@ -84,8 +84,7 @@ const TableHead = () => {
             <Menu.Target>
               <Button
                 variant="neutral"
-                children={"S/H"}
-                {...config?.toggleRows}
+                children={config?.icons?.toggleRows || "S/H"}
               />
             </Menu.Target>
             <Menu.DropDown>
@@ -97,6 +96,7 @@ const TableHead = () => {
                     <input
                       id={headerName}
                       type="checkbox"
+                      disabled={headers.data[headerName].alwaysVisible}
                       checked={visibleHeaders.includes(headerName)}
                       onChange={(event) => {
                         headers.setHeaders((prev) => ({
@@ -126,16 +126,26 @@ const TableHead = () => {
         {(options?.cards || extraviewsKeys.length !== 0) && (
           <Menu.Menu position="Bottom-End">
             <Menu.Target>
-              <Button variant="primary">...</Button>
+              <Button variant="primary">
+                {config?.icons?.extraViewsTogle || "..."}
+              </Button>
             </Menu.Target>
             <Menu.DropDown>
               {displayAs !== "table" && (
-                <Menu.Item onClick={() => setDisplayAs("table")}>
+                <Menu.Item
+                  leftSection={config?.icons?.tableExtraView}
+                  onClick={() => setDisplayAs("table")}
+                >
                   Table
                 </Menu.Item>
               )}
               {displayAs !== "card" && options?.cards && (
-                <Menu.Item onClick={() => setDisplayAs("card")}>Card</Menu.Item>
+                <Menu.Item
+                  leftSection={config?.icons?.cardExtraView}
+                  onClick={() => setDisplayAs("card")}
+                >
+                  Card
+                </Menu.Item>
               )}
 
               {extraviewsKeys.map((key) => {

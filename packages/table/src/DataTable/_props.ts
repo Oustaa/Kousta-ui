@@ -4,12 +4,7 @@ import {
   PropsWithChildren,
   ReactNode,
 } from "react";
-import {
-  ButtonProps,
-  MenuItemProps,
-  MenuProps,
-  ModalProps,
-} from "@kousta-ui/components";
+import { ButtonProps, MenuItemProps, ModalProps } from "@kousta-ui/components";
 
 export type TableProps<T> = {
   data: T[];
@@ -70,6 +65,7 @@ export type THeaderValue<T> = {
   exec?: never | ((row: T) => string | ReactNode);
   visible?: boolean;
   canSee?: boolean;
+  alwaysVisible?: boolean;
 } & (
   | {
       value: string;
@@ -136,11 +132,11 @@ type TSearch<T> = {
   (
     | {
         static: true;
-        onSearch: (row: T, props: { query: string; reg: RegExp }) => boolean;
+        onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
       }
     | {
         static?: false | undefined;
-        onSearch: (params: TParams) => void;
+        onSearch?: (params: TParams) => void;
       }
   );
 
@@ -159,14 +155,26 @@ type TablePagination = {
 };
 
 // Table config
-type TConfig = {
-  toggleRows?: false | Omit<ButtonProps, "onClick">;
+export type TConfig = {
+  toggleRows?: boolean;
   disableContextMenu?: boolean;
   noHead?: boolean;
-  selectFilter?: { icon: ReactNode; menuProps?: MenuProps };
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
   loadingIndicator?: LoadingIndicator;
+  icons?: {
+    toggleRows?: ReactNode;
+    selectRow?: ReactNode;
+    extraViewsTogle?: ReactNode;
+    tableExtraView?: ReactNode;
+    cardExtraView?: ReactNode;
+    refresh?: ReactNode;
+    selectOpened?: ReactNode;
+    selectClosed?: ReactNode;
+    paginationNext?: ReactNode;
+    paginationPrev?: ReactNode;
+    paginationDots?: ReactNode;
+  };
   props?: {
     table?: ComponentPropsWithoutRef<"table">;
     tbody?: ComponentPropsWithoutRef<"tbody">;

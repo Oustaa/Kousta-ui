@@ -49,9 +49,9 @@ function TableHeader() {
                       type="checkbox"
                     />
                   </button>
-                  <button>{config?.selectFilter?.icon || "More"}</button>
+                  <button>{config?.icons?.selectRow || "More"}</button>
                 </Menu.Target>
-                <Menu.DropDown {...config?.selectFilter?.menuProps}>
+                <Menu.DropDown>
                   {Object.keys(options?.selectFilter || {}).map((key) => (
                     <Menu.Item key={key}>
                       <input
