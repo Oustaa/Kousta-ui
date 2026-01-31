@@ -34,7 +34,7 @@ export type TOptions<T> = Partial<{
   viewComp: {
     Component: (row: T) => ReactNode;
     type?: "modal" | "extends";
-    modalOptions?: Omit<ModalProps, "opned" | "onClose" | "modalTrigger">;
+    modalOptions?: Omit<ModalProps, "opened" | "onClose" | "modalTrigger">;
     openModalIcon?: ReactNode;
     extendRowIcon?: ReactNode;
     minimizeRowIcon?: ReactNode;
@@ -42,13 +42,13 @@ export type TOptions<T> = Partial<{
     canView?: CanPerformAction<T>;
   } & (
     | {
-        type: "modal";
-        modalOptions?: Partial<ModalProps>;
-      }
+      type: "modal";
+      modalOptions?: Partial<ModalProps>;
+    }
     | {
-        type?: "extends";
-        modalOptions?: never;
-      }
+      type?: "extends";
+      modalOptions?: never;
+    }
   );
   bulkActions: TBulkActions<T>[];
   extraviews: Record<string, TExtraView<T>>;
@@ -67,15 +67,15 @@ export type THeaderValue<T> = {
   canSee?: boolean;
   alwaysVisible?: boolean;
 } & (
-  | {
+    | {
       value: string;
       exec?: never;
     }
-  | {
+    | {
       value?: never;
       exec: (row: T) => string | ReactNode;
     }
-);
+  );
 
 export type THeader<T> = Record<string, THeaderValue<T>>;
 
@@ -120,24 +120,24 @@ type TSearch<T> = {
   searchTimer?: number;
   static?: boolean;
 } & (
-  | {
+    | {
       searchOnType?: false;
       searchTimer?: never;
     }
-  | {
+    | {
       searchOnType?: true;
       searchTimer?: number;
     }
-) &
+  ) &
   (
     | {
-        static: true;
-        onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
-      }
+      static: true;
+      onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
+    }
     | {
-        static?: false | undefined;
-        onSearch?: (params: TParams) => void;
-      }
+      static?: false | undefined;
+      onSearch?: (params: TParams) => void;
+    }
   );
 
 type ExtraActions<T> = {
