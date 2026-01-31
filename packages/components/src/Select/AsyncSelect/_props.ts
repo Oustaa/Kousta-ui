@@ -13,6 +13,6 @@ export type AsyncSelectProps<T extends SelectDataConstraints> = {
   getData: GetDataFunction;
   extractDynamicData?: ExtractDynamicDataFunction<T>;
   infiniteScroll?: boolean;
-  hasMore?: (responce: any, page: number) => boolean;
+  hasMore?: (response: any, page: number) => boolean;
   searchTimeout?: number;
 } & Omit<SelectProps<T>, "data" | "loading" | "onSearch">;

@@ -1,4 +1,10 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { SelectDataConstraints, SelectProps } from "../_props";
 import classes from "../Select.module.css";
 import SelectOption from "./SelectOption";

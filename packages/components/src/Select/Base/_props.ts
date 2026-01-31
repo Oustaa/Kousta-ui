@@ -63,7 +63,7 @@ export type SelectProps<T extends SelectDataConstraints> = {
   clearable?: boolean;
   emptyMessage?: string;
   disabled?: boolean;
-  onSearch?: (row: T, term: string) => void;
+  onSearch?: (row: T, term: string) => boolean;
   disabledOption?: (row: T) => boolean;
 
   isMultiple?: boolean;
