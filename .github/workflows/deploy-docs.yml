@@ -43,7 +43,7 @@ jobs:
       - name: Set environment variables
         working-directory: ./docs
         run: |
-          echo "DOCUSAURUS_API_BASE_URL=${{ secrets.DOCUSAURUS_API_BASE_URL }}" >> .env
+          echo "API_BASE_URL=${{ secrets.API_BASE_URL }}" >> .env
           echo "DOCSEARCH_APP_ID=${{ secrets.DOCSEARCH_APP_ID }}" >> .env
           echo "DOCSEARCH_API_KEY=${{ secrets.DOCSEARCH_API_KEY }}" >> .env
           echo "DOCSEARCH_INDEX_NAME=${{ secrets.DOCSEARCH_INDEX_NAME }}" >> .env
@@ -53,23 +53,24 @@ jobs:
         run: yarn build
 
       - name: Setup Python
-        if: ${{ secrets.DOCSEARCH_APP_ID != '' && secrets.DOCSEARCH_API_KEY != '' }}
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install pipenv
-        if: ${{ secrets.DOCSEARCH_APP_ID != '' && secrets.DOCSEARCH_API_KEY != '' }}
         run: pip install pipenv
 
       - name: Populate the docs (DocSearch)
-        if: ${{ secrets.DOCSEARCH_APP_ID != '' && secrets.DOCSEARCH_API_KEY != '' }}
         continue-on-error: true
         working-directory: ./docs
         env:
           APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
           API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
         run: |
+          if [ -z "$APPLICATION_ID" ] || [ -z "$API_KEY" ]; then
+            echo "DocSearch credentials not configured, skipping DocSearch population"
+            exit 0
+          fi
           if [ -f "./docsearch.config.json" ]; then
             # Clone docsearch-scraper repository
             SCRAPER_DIR=$(mktemp -d)

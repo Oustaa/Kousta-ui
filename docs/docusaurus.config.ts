@@ -20,7 +20,7 @@ const config: Config = {
   i18n: { defaultLocale: "en", locales: ["en"] },
 
   customFields: {
-    API_BASE_URL: process.env.DOCUSAURUS_API_BASE_URL,
+    API_BASE_URL: process.env.API_BASE_URL,
   },
 
   presets: [
@@ -46,16 +46,16 @@ const config: Config = {
     liveCodeBlock: { playgroundPosition: "bottom" },
     image: "img/logo.png",
     ...(process.env.DOCSEARCH_APP_ID &&
-      process.env.DOCSEARCH_API_KEY &&
-      process.env.DOCSEARCH_INDEX_NAME
+    process.env.DOCSEARCH_API_KEY &&
+    process.env.DOCSEARCH_INDEX_NAME
       ? {
-        algolia: {
-          appId: process.env.DOCSEARCH_APP_ID,
-          apiKey: process.env.DOCSEARCH_API_KEY,
-          indexName: process.env.DOCSEARCH_INDEX_NAME,
-          contextualSearch: false,
-        },
-      }
+          algolia: {
+            appId: process.env.DOCSEARCH_APP_ID,
+            apiKey: process.env.DOCSEARCH_API_KEY,
+            indexName: process.env.DOCSEARCH_INDEX_NAME,
+            contextualSearch: false,
+          },
+        }
       : {}),
     navbar: {
       logo: {
@@ -115,7 +115,6 @@ const config: Config = {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.dracula,
     },
-
   } satisfies Preset.ThemeConfig,
 };
 

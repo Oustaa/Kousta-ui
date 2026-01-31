@@ -9,12 +9,12 @@ Copy `.env.example` to `.env` and update values as needed:
 cp .env.example .env
 ```
 
-### `DOCUSAURUS_API_BASE_URL`
+### `API_BASE_URL`
 
 Used by interactive previews (for example `AsyncSelect` and `DataTable`) to call your backend.
 
 - Default: `http://localhost:8001`
-- Env var: `DOCUSAURUS_API_BASE_URL`
+- Env var: `API_BASE_URL`
 
 If you run the demo backend locally, start it on port `8001` so the docs previews can fetch from:
 
@@ -22,19 +22,19 @@ If you run the demo backend locally, start it on port `8001` so the docs preview
 
 #### Production deployments
 
-Set `DOCUSAURUS_API_BASE_URL` in your hosting provider **build environment**.
+Set `API_BASE_URL` in your hosting provider **build environment**.
 
 - **Netlify**
   - Site settings -> Build & deploy -> Environment -> Environment variables
-  - Add: `DOCUSAURUS_API_BASE_URL=https://api.ui.kousta.org/` (or your API)
+  - Add: `API_BASE_URL=https://api.ui.kousta.org/` (or your API)
 
 - **Vercel**
   - Project settings -> Environment Variables
-  - Add `DOCUSAURUS_API_BASE_URL` for Production (and Preview if needed)
+  - Add `API_BASE_URL` for Production (and Preview if needed)
 
 - **Docker / self-hosted**
   - Provide it at build time (Docusaurus reads it during build):
-    - `DOCUSAURUS_API_BASE_URL=https://api.ui.kousta.org/ yarn build`
+    - `API_BASE_URL=https://api.ui.kousta.org/ yarn build`
 
 ### DocSearch (optional)
 
