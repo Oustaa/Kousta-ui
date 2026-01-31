@@ -1,14 +1,27 @@
 {
-  "extends": [
-    "@commitlint/config-conventional",
-    "@commitlint/config-lerna-scopes"
-  ],
-  "rules": {
-    "body-max-line-length": [2, "always", 2000],
-    'scope-enum': [
-      2,
-      'always',
-      ['components', 'docs', 'helpers', 'hooks', 'styles', 'table', 'release', 'global'],
-    ],
-  }
+	"extends": [
+		"@commitlint/config-conventional",
+		"@commitlint/config-lerna-scopes"
+	],
+	"rules": {
+		"body-max-line-length": [
+			2,
+			"always",
+			2000
+		],
+		"scope-enum": [
+			2,
+			"always",
+			[
+				"components",
+				"docs",
+				"helpers",
+				"hooks",
+				"styles",
+				"table",
+				"release",
+				"global"
+			]
+		]
+	}
 }
