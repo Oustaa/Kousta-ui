@@ -3,6 +3,7 @@ sidebar_position: 9
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   BasicLabelPreview,
   RequiredLabelPreview,
@@ -12,6 +13,20 @@ import {
 # Label
 
 The **Label** component renders a styled `<label>` element with support for required and error states. It is designed to be used with form components like `Input` and `Select`.
+
+---
+
+## Installation
+
+```bash
+npm install @kousta-ui/components
+```
+
+### Import styles
+
+```ts
+import "@kousta-ui/components/esm/index.css";
+```
 
 ---
 
@@ -32,34 +47,70 @@ The **Label** component renders a styled `<label>` element with support for requ
 
 This is the default appearance of the label.
 
-```tsx
-<Label>Default Label</Label>
-```
-
-### Preview
-<BasicLabelPreview />
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicLabel.tsx",
+      code: `<Label>Default Label</Label>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "BasicLabel.jsx",
+      code: `<Label>Default Label</Label>`
+    }
+  ]}
+  preview={<BasicLabelPreview />}
+  defaultTab="ts"
+/>
 
 ### Required Label
 
 Set the `required` prop to `true` to indicate that the associated field is mandatory.
 
-```tsx
-<Label required>Required Label</Label>
-```
-
-### Preview
-<RequiredLabelPreview />
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "RequiredLabel.tsx",
+      code: `<Label required>Required Label</Label>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "RequiredLabel.jsx",
+      code: `<Label required>Required Label</Label>`
+    }
+  ]}
+  preview={<RequiredLabelPreview />}
+  defaultTab="ts"
+/>
 
 ### Label with Error
 
 When the `errors` prop is provided, the label will be styled to indicate an error state.
 
-```tsx
-<Label errors={["This field has an error"]}>Label with Error</Label>
-```
-
-### Preview
-<ErrorLabelPreview />
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "LabelWithError.tsx",
+      code: `<Label errors={["This field has an error"]}>Label with Error</Label>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "LabelWithError.jsx",
+      code: `<Label errors={["This field has an error"]}>Label with Error</Label>`
+    }
+  ]}
+  preview={<ErrorLabelPreview />}
+  defaultTab="ts"
+/>
 
 ---
 

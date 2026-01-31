@@ -3,7 +3,11 @@ sidebar_position: 0
 title: Overview
 ---
 
+import React, { useState } from 'react';
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
+import { Button, Modal, Input, Select, WindowBoundary, Menu, ComponentPropsProvider } from '@kousta-ui/components';
+import { DataTable } from '@kousta-ui/table';
 
 # Components Package
 
@@ -42,8 +46,14 @@ import "@kousta-ui/styles/tokens.css";
 
 ## 🎯 Quick Start
 
-```tsx
-import { Button, Modal, Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "App.tsx",
+      code: `import { Button, Modal, Input } from "@kousta-ui/components";
+import { useState } from "react";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -61,8 +71,58 @@ function App() {
       </Modal>
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "App.jsx",
+      code: `import { Button, Modal, Input } from "@kousta-ui/components";
+import { useState } from "react";
+
+function App() {
+  const [opened, setOpened] = useState(false);
+
+  return (
+    <div>
+      <Button onClick={() => setOpened(true)}>
+        Open Modal
+      </Button>
+
+      <Modal opened={opened} onClose={() => setOpened(false)} title="Form">
+        <Input label="Email" placeholder="you@example.com" />
+        <Input label="Password" type="password" />
+        <Button>Submit</Button>
+      </Modal>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={
+    (() => {
+      const QuickStartPreview = () => {
+        const [opened, setOpened] = useState(false);
+        return (
+          <div>
+            <Button onClick={() => setOpened(true)}>
+              Open Modal
+            </Button>
+            <Modal opened={opened} onClose={() => setOpened(false)} title="Form">
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <Input label="Email" placeholder="you@example.com" />
+                <Input label="Password" type="password" />
+                <Button>Submit</Button>
+              </div>
+            </Modal>
+          </div>
+        );
+      };
+      return <QuickStartPreview />;
+    })()
+  }
+  defaultTab="ts"
+/>
 
 ---
 
@@ -99,8 +159,13 @@ Helper components for performance and advanced interactions.
 
 Set global defaults and create custom variants:
 
-```tsx
-import { ComponentPropsProvider } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ComponentPropsProvider.tsx",
+      code: `import { ComponentPropsProvider } from "@kousta-ui/components";
 
 <ComponentPropsProvider
   button={{
@@ -115,8 +180,64 @@ import { ComponentPropsProvider } from "@kousta-ui/components";
   }}
 >
   <YourApp />
-</ComponentPropsProvider>
-```
+</ComponentPropsProvider>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ComponentPropsProvider.jsx",
+      code: `import { ComponentPropsProvider } from "@kousta-ui/components";
+
+<ComponentPropsProvider
+  button={{
+    size: "sm",
+    variant: "primary",
+    variants: {
+      brand: {
+        className: "brand-btn",
+        style: { background: "#your-brand-color" },
+      },
+    },
+  }}
+>
+  <YourApp />
+</ComponentPropsProvider>`
+    }
+  ]}
+  preview={
+    (() => {
+      const ComponentPropsProviderPreview = () => {
+        return (
+          <ComponentPropsProvider
+            button={{
+              size: "sm",
+              variant: "primary",
+              variants: {
+                brand: {
+                  className: "brand-btn",
+                  style: { background: "#your-brand-color" },
+                },
+              },
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <div>
+                <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Provider defaults (small, primary)</div>
+                <Button>Default Button</Button>
+              </div>
+              <div>
+                <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Custom variant (brand)</div>
+                <Button variant="brand">Brand Button</Button>
+              </div>
+            </div>
+          </ComponentPropsProvider>
+        );
+      };
+      return <ComponentPropsProviderPreview />;
+    })()
+  }
+  defaultTab="ts"
+/>
 
 ---
 
@@ -157,8 +278,14 @@ All components are built with accessibility as a first-class concern:
 
 Full TypeScript support with comprehensive type definitions:
 
-```tsx
-import { Button, ButtonProps } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "CustomButton.tsx",
+      code: `import { Button, ButtonProps } from "@kousta-ui/components";
+import { FC } from "react";
 
 interface CustomButtonProps extends ButtonProps {
   customProp?: string;
@@ -166,8 +293,22 @@ interface CustomButtonProps extends ButtonProps {
 
 const CustomButton: FC<CustomButtonProps> = ({ customProp, ...props }) => {
   return <Button {...props} />;
-};
-```
+};`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "CustomButton.jsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+const CustomButton = ({ customProp, ...props }) => {
+  return <Button {...props} />;
+};`
+    }
+  ]}
+  preview={null}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -175,7 +316,15 @@ const CustomButton: FC<CustomButtonProps> = ({ customProp, ...props }) => {
 
 ### Form with Validation
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContactForm.tsx",
+      code: `import { Input, Button } from "@kousta-ui/components";
+import { useState } from "react";
+
 function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -206,51 +355,133 @@ function ContactForm() {
       </Button>
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContactForm.jsx",
+      code: `import { Input, Button } from "@kousta-ui/components";
+import { useState } from "react";
 
-### Data Table with Actions
-
-```tsx
-function UserTable() {
-  const [selectedUser, setSelectedUser] = useState<User | null>(null);
+function ContactForm() {
+  const [errors, setErrors] = useState({});
 
   return (
     <div>
-      <DataTable
-        data={users}
-        headers={{
-          name: { value: "name" },
-          email: { value: "email" },
-          actions: {
-            exec: (user) => (
-              <Menu.Menu>
-                <Menu.Target>Actions</Menu.Target>
-                <Menu.DropDown>
-                  <Menu.Item onClick={() => setSelectedUser(user)}>
-                    Edit
-                  </Menu.Item>
-                  <Menu.Item onClick={() => deleteUser(user.id)}>
-                    Delete
-                  </Menu.Item>
-                </Menu.DropDown>
-              </Menu.Menu>
-            ),
-          },
+      <Input
+        label="Name"
+        required
+        errors={errors.name ? [errors.name] : []}
+        onChange={(e) => {
+          if (!e.target.value) {
+            setErrors(prev => ({ ...prev, name: "Name is required" }));
+          } else {
+            setErrors(prev => ({ ...prev, name: "" }));
+          }
         }}
       />
 
-      <Modal opened={!!selectedUser} onClose={() => setSelectedUser(null)}>
-        Edit user: {selectedUser?.name}
-      </Modal>
+      <Input
+        label="Email"
+        type="email"
+        required
+        errors={errors.email ? [errors.email] : []}
+      />
+
+      <Button variant="primary" type="submit">
+        Send Message
+      </Button>
     </div>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={
+    (() => {
+      const FormValidationPreview = () => {
+        const [errors, setErrors] = useState({});
+        return (
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 400 }}>
+            <Input
+              label="Name"
+              required
+              errors={errors.name ? [errors.name] : []}
+              onChange={(e) => {
+                if (!e.target.value) {
+                  setErrors(prev => ({ ...prev, name: "Name is required" }));
+                } else {
+                  setErrors(prev => ({ ...prev, name: "" }));
+                }
+              }}
+            />
+            <Input
+              label="Email"
+              type="email"
+              required
+              errors={errors.email ? [errors.email] : []}
+            />
+            <Button variant="primary" type="submit">
+              Send Message
+            </Button>
+          </div>
+        );
+      };
+      return <FormValidationPreview />;
+    })()
+  }
+  defaultTab="ts"
+/>
 
 ### Lazy Loading Content
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "LazyImage.tsx",
+      code: `import { WindowBoundary } from "@kousta-ui/components";
+import { useState } from "react";
+
+function LazyImage({ src, alt }: { src: string; alt: string }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <WindowBoundary
+      onceItemEnter={() => setIsLoaded(true)}
+      threshold={0.1}
+    >
+      <div style={{ minHeight: "200px" }}>
+        {isLoaded ? (
+          <img
+            src={src}
+            alt={alt}
+            style={{ width: "100%", height: "auto" }}
+          />
+        ) : (
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "200px",
+            background: "#f5f5f5"
+          }}>
+            Loading...
+          </div>
+        )}
+      </div>
+    </WindowBoundary>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "LazyImage.jsx",
+      code: `import { WindowBoundary } from "@kousta-ui/components";
+import { useState } from "react";
+
 function LazyImage({ src, alt }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -280,8 +511,45 @@ function LazyImage({ src, alt }) {
       </div>
     </WindowBoundary>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={
+    (() => {
+      const LazyImagePreview = () => {
+        const [isLoaded, setIsLoaded] = useState(false);
+        return (
+          <WindowBoundary
+            onceItemEnter={() => setIsLoaded(true)}
+            threshold={0.1}
+          >
+            <div style={{ minHeight: "200px" }}>
+              {isLoaded ? (
+                <img
+                  src="https://via.placeholder.com/400x200"
+                  alt="Lazy loaded"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              ) : (
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "200px",
+                  background: "#f5f5f5"
+                }}>
+                  Loading...
+                </div>
+              )}
+            </div>
+          </WindowBoundary>
+        );
+      };
+      return <LazyImagePreview />;
+    })()
+  }
+  defaultTab="ts"
+/>
 
 ---
 
@@ -289,8 +557,13 @@ function LazyImage({ src, alt }) {
 
 ### From Material-UI
 
-```tsx
-// Material-UI
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "MigrationMaterialUI.tsx",
+      code: `// Material-UI
 <Button variant="contained" color="primary">
   Click me
 </Button>
@@ -298,13 +571,47 @@ function LazyImage({ src, alt }) {
 // Kousta UI
 <Button variant="primary">
   Click me
+</Button>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "MigrationMaterialUI.jsx",
+      code: `// Material-UI
+<Button variant="contained" color="primary">
+  Click me
 </Button>
-```
+
+// Kousta UI
+<Button variant="primary">
+  Click me
+</Button>`
+    }
+  ]}
+  preview={
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <div>
+        <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Material-UI</div>
+        <Button variant="primary">Click me</Button>
+      </div>
+      <div>
+        <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Kousta UI</div>
+        <Button variant="primary">Click me</Button>
+      </div>
+    </div>
+  }
+  defaultTab="ts"
+/>
 
 ### From Ant Design
 
-```tsx
-// Ant Design
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "MigrationAntDesign.tsx",
+      code: `// Ant Design
 <Input placeholder="Enter text" />
 <Select>
   <Option value="1">Option 1</Option>
@@ -312,8 +619,43 @@ function LazyImage({ src, alt }) {
 
 // Kousta UI
 <Input placeholder="Enter text" />
-<Select data={[{ value: "1", label: "Option 1" }]} />
-```
+<Select data={[{ value: "1", label: "Option 1" }]} />`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "MigrationAntDesign.jsx",
+      code: `// Ant Design
+<Input placeholder="Enter text" />
+<Select>
+  <Option value="1">Option 1</Option>
+</Select>
+
+// Kousta UI
+<Input placeholder="Enter text" />
+<Select data={[{ value: "1", label: "Option 1" }]} />`
+    }
+  ]}
+  preview={
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <div>
+        <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Ant Design</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <Input placeholder="Enter text" />
+          <Select data={[{ value: "1", label: "Option 1" }]} />
+        </div>
+      </div>
+      <div>
+        <div style={{ fontSize: 12, color: "#666", marginBottom: 8 }}>Kousta UI</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <Input placeholder="Enter text" />
+          <Select data={[{ value: "1", label: "Option 1" }]} />
+        </div>
+      </div>
+    </div>
+  }
+  defaultTab="ts"
+/>
 
 ---
 

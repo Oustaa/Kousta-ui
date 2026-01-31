@@ -133,8 +133,11 @@ const apiResponse = {
   }
 };
 
-// Extract user full name
-const userName = getNestedProperty(apiResponse, "data.user.profile.personal.first_name data.user.profile.personal.last_name");
+// Extract user full name (space concatenates values)
+const userName = getNestedProperty(
+  apiResponse,
+  "data.user.profile.personal.first_name data.user.profile.personal.last_name"
+);
 console.log(userName); // "Jane Smith"
 
 // Extract professional info

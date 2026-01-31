@@ -26,7 +26,7 @@ A simple and elegant hook for managing boolean state with common actions like op
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `initialState` | `boolean` | `false` | Initial boolean state value |
+| `menuOpened` | `boolean` | `false` | Initial boolean state value |
 
 ---
 

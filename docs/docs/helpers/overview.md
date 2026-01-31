@@ -11,7 +11,7 @@ The **@kousta-ui/helpers** package provides a small set of framework-agnostic ut
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Framework Agnostic**: Works with any JavaScript environment
 - **TypeScript First**: Full TypeScript support with comprehensive type definitions
@@ -22,7 +22,7 @@ The **@kousta-ui/helpers** package provides a small set of framework-agnostic ut
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @kousta-ui/helpers
@@ -34,7 +34,7 @@ pnpm add @kousta-ui/helpers
 
 ---
 
-## 🎯 Available Helpers
+## Available Helpers
 
 | Helper | Purpose | Common Use Cases |
 |--------|---------|------------------|
@@ -43,7 +43,7 @@ pnpm add @kousta-ui/helpers
 
 ---
 
-## 🎨 Quick Start
+## Quick Start
 
 ```javascript
 // Import individual helpers (recommended for tree shaking)
@@ -70,7 +70,7 @@ const updatedUser = updateNestedProperties(user, "contact.email", "newemail@exam
 
 ---
 
-## 📊 Helper Categories
+## Helper Categories
 
 ### Object Manipulation
 
@@ -87,7 +87,7 @@ This package does not currently export DOM utilities.
 
 ---
 
-## 🎯 When to Use These Helpers
+## When to Use These Helpers
 
 ### Use `getNestedProperty` when:
 
@@ -103,7 +103,7 @@ This package does not currently export DOM utilities.
 - Modifying nested data without mutation
 - Working with React/Vue state management
 
-## 🔧 TypeScript Support
+## TypeScript Support
 
 All helpers provide full TypeScript support:
 
@@ -132,7 +132,7 @@ const updatedUser: User = updateNestedProperties(user, "contact.email", "new@exa
 
 ---
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 - **Optimized Algorithms**: Efficient implementations for common operations
 - **Minimal Memory Footprint**: Zero dependencies and small bundle size
@@ -143,7 +143,7 @@ const updatedUser: User = updateNestedProperties(user, "contact.email", "new@exa
 
 ---
 
-## 🔄 Framework Integration Examples
+## Framework Integration Examples
 
 ### React Integration
 
@@ -245,7 +245,7 @@ console.log("Database credentials:", dbCredentials);
 
 ---
 
-## 📚 Best Practices
+## Best Practices
 
 ### Do's
 
@@ -263,7 +263,7 @@ console.log("Database credentials:", dbCredentials);
 
 ---
 
-## 📖 Next Steps
+## Next Steps
 
 - Learn about individual [helpers](/docs/helpers/overview)
 - Check out [Components package](/docs/category/components)
@@ -272,12 +272,12 @@ console.log("Database credentials:", dbCredentials);
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [contributing guidelines](https://github.com/Oustaa/ousta-ui/blob/main/CONTRIBUTING.md) for details.
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Ousta](https://github.com/Oustaa)

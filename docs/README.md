@@ -20,6 +20,22 @@ If you run the demo backend locally, start it on port `8001` so the docs preview
 
 - `/api/v1/products`
 
+#### Production deployments
+
+Set `DOCUSAURUS_API_BASE_URL` in your hosting provider **build environment**.
+
+- **Netlify**
+  - Site settings -> Build & deploy -> Environment -> Environment variables
+  - Add: `DOCUSAURUS_API_BASE_URL=https://api.ui.kousta.org/` (or your API)
+
+- **Vercel**
+  - Project settings -> Environment Variables
+  - Add `DOCUSAURUS_API_BASE_URL` for Production (and Preview if needed)
+
+- **Docker / self-hosted**
+  - Provide it at build time (Docusaurus reads it during build):
+    - `DOCUSAURUS_API_BASE_URL=https://api.ui.kousta.org/ yarn build`
+
 ### DocSearch (optional)
 
 If you enable Algolia DocSearch:

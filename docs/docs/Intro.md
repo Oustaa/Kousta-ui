@@ -7,7 +7,7 @@ title: Introduction
 
 **Kousta UI** is a modern React UI library built with performance and convenience in mind.
 
-## 🚀 Features
+## Features
 
 - **Performance Focused**: Built with lightweight components and optimized rendering
 - **TypeScript First**: Full TypeScript support with comprehensive type definitions
@@ -15,7 +15,7 @@ title: Introduction
 - **Modern Design**: Clean, customizable components that work out of the box
 - **Easy Customization**: Flexible theming system with CSS variables and providers
 
-## 📦 Packages
+## Packages
 
 Kousta UI is organized into focused packages to help you use only what you need:
 
@@ -49,7 +49,7 @@ Utility functions and helpers to streamline your development:
 - **getNestedProperty**: Safely read nested values
 - **updateNestedProperties**: Update nested properties immutably
 
-## 🏁 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -78,7 +78,7 @@ npm install @kousta-ui/components @kousta-ui/table @kousta-ui/hooks @kousta-ui/h
 import { Modal, Button } from "@kousta-ui/components";
 import { useDisclosure } from "@kousta-ui/hooks";
 
-import "@kousta-ui/styles/tokens.css";
+import "@kousta-ui/components/esm/index.css";
 
 function App() {
   const { opened, close, open } = useDisclosure(false);
@@ -99,7 +99,7 @@ function App() {
 ```tsx
 import { DataTable } from "@kousta-ui/table";
 
-import "@kousta-ui/styles/tokens.css";
+import "@kousta-ui/table/esm/index.css";
 
 interface User {
   id: number;
@@ -129,7 +129,7 @@ function UserTable() {
 }
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Using Providers
 
@@ -165,7 +165,7 @@ Customize the appearance using CSS variables:
 }
 ```
 
-## 📚 Next Steps
+## Next Steps
 
 - Explore [Components](/docs/category/components) documentation
 - Learn about [Table](/docs/category/table) features

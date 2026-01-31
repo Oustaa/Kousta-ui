@@ -20,18 +20,20 @@ It provides built-in:
 
 <Badge color="blue">Note</Badge> This section documents the `DataTable` API as implemented in `packages/table/src/DataTable`.
 
+Type definitions: see [Props](./Props).
+
 ---
 
 ## Core props
 
 - **`data`**: `T[]`
-- **`headers`**: `THeader<T>`
+- **`headers`**: [`THeader<T>`](./Props#theader-t)
 - **`loading`**: `boolean`
 - **`title`**: `string`
-- **`pagination`**: `{ total; page; limit; type?: "static" | "dynamic" }`
-- **`actions`**: `{ get?; search?; edit?; delete? }`
-- **`options`**: `{ bulkActions; extraActions; cards; extraviews; viewComp; emptyTable; selectFilter }`
-- **`config`**: visual/behavior configuration (`toggleRows`, element props, etc.)
+- **`pagination`**: [`TablePagination`](./Props#tablepagination)
+- **`actions`**: [`TActions<T>`](./Props#tactions-t)
+- **`options`**: [`TOptions<T>`](./Props#toptions-t)
+- **`config`**: [`TConfig`](./Props#tconfig)
 
 ---
 

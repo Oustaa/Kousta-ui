@@ -3,6 +3,7 @@ sidebar_position: 8
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   QuickStartPreview,
   SeiblingsPreview,
@@ -39,11 +40,13 @@ The **Pagination** component provides a compact page navigation UI (Prev/Next + 
 
 ### Quick start
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import React, { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationQuickStart.tsx",
+      code: `import React, { useState } from "react";
 import { Pagination } from "@kousta-ui/components";
 
 export function Example() {
@@ -54,22 +57,41 @@ export function Example() {
       <Pagination page={page} totalPages={10} onChange={setPage} />
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationQuickStart.jsx",
+      code: `import React, { useState } from "react";
+import { Pagination } from "@kousta-ui/components";
 
-</details>
+export function Example() {
+  const [page, setPage] = useState(1);
 
-<QuickStartPreview />
+  return (
+    <div style={{ width: "100%" }}>
+      <Pagination page={page} totalPages={10} onChange={setPage} />
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
 
 ### seblings
 
 Use `seblings` to show more pages around the current page.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import React, { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationSiblings.tsx",
+      code: `import React, { useState } from "react";
 import { Pagination } from "@kousta-ui/components";
 
 export function Example() {
@@ -80,20 +102,39 @@ export function Example() {
       <Pagination page={page} totalPages={20} onChange={setPage} seblings={2} />
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationSiblings.jsx",
+      code: `import React, { useState } from "react";
+import { Pagination } from "@kousta-ui/components";
 
-</details>
+export function Example() {
+  const [page, setPage] = useState(10);
 
-<SeiblingsPreview />
+  return (
+    <div style={{ width: "100%" }}>
+      <Pagination page={page} totalPages={20} onChange={setPage} seblings={2} />
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<SeiblingsPreview />}
+  defaultTab="ts"
+/>
 
 ### Disabled
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Pagination } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationDisabled.tsx",
+      code: `import { Pagination } from "@kousta-ui/components";
 
 export function Example() {
   return (
@@ -101,12 +142,26 @@ export function Example() {
       <Pagination page={1} totalPages={10} disabled />
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationDisabled.jsx",
+      code: `import { Pagination } from "@kousta-ui/components";
 
-</details>
-
-<DisabledPreview />
+export function Example() {
+  return (
+    <div style={{ width: "100%" }}>
+      <Pagination page={1} totalPages={10} disabled />
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<DisabledPreview />}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -116,11 +171,13 @@ You can override the built-in content of the control buttons and placeholders.
 
 ### Override icons on a single Pagination
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import React, { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationIconsOverride.tsx",
+      code: `import React, { useState } from "react";
 import { Pagination } from "@kousta-ui/components";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 
@@ -140,20 +197,48 @@ export function Example() {
       />
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationIconsOverride.jsx",
+      code: `import React, { useState } from "react";
+import { Pagination } from "@kousta-ui/components";
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 
-</details>
+export function Example() {
+  const [page, setPage] = useState(6);
 
-<IconsOverrideWithPropPreview />
+  return (
+    <div style={{ width: "100%" }}>
+      <Pagination
+        page={page}
+        totalPages={20}
+        onChange={setPage}
+        prevIcon={<ChevronLeft size={16} />}
+        nextIcon={<ChevronRight size={16} />}
+        placeholderIcon={<MoreHorizontal size={16} />}
+        seblings={1}
+      />
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<IconsOverrideWithPropPreview />}
+  defaultTab="ts"
+/>
 
 ### Override icons with ComponentPropsProvider
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import React, { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationIconsProvider.tsx",
+      code: `import React, { useState } from "react";
 import { ComponentPropsProvider, Pagination } from "@kousta-ui/components";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 
@@ -174,12 +259,39 @@ export function Example() {
       </div>
     </ComponentPropsProvider>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationIconsProvider.jsx",
+      code: `import React, { useState } from "react";
+import { ComponentPropsProvider, Pagination } from "@kousta-ui/components";
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 
-</details>
+export function Example() {
+  const [page, setPage] = useState(6);
 
-<IconsOverrideWithProviderPreview />
+  return (
+    <ComponentPropsProvider
+      pagination={{
+        prevIcon: <ChevronLeft size={16} />,
+        nextIcon: <ChevronRight size={16} />,
+        placeholderIcon: <MoreHorizontal size={16} />,
+        seblings: 1,
+      }}
+    >
+      <div style={{ width: "100%" }}>
+        <Pagination page={page} totalPages={20} onChange={setPage} />
+      </div>
+    </ComponentPropsProvider>
+  );
+}`
+    }
+  ]}
+  preview={<IconsOverrideWithProviderPreview />}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -187,11 +299,13 @@ export function Example() {
 
 If you want the logic (total pages, boundaries, setters) handled for you, use the [`usePagination`](/docs/hooks/usePagination) hook.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Pagination } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PaginationWithHook.tsx",
+      code: `import { Pagination } from "@kousta-ui/components";
 import { usePagination } from "@kousta-ui/hooks";
 
 export function Example() {
@@ -202,12 +316,29 @@ export function Example() {
       <Pagination page={page} totalPages={totalPages} onChange={setPage} />
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "PaginationWithHook.jsx",
+      code: `import { Pagination } from "@kousta-ui/components";
+import { usePagination } from "@kousta-ui/hooks";
 
-</details>
+export function Example() {
+  const { page, totalPages, setPage } = usePagination({ total: 240, limit: 20 });
 
-<UsePaginationHookPreview />
+  return (
+    <div style={{ width: "100%" }}>
+      <Pagination page={page} totalPages={totalPages} onChange={setPage} />
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<UsePaginationHookPreview />}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -217,6 +348,14 @@ export function Example() {
 - **Boundaries**: Prev/Next are disabled at `1` and `totalPages` (and everything is disabled when `disabled` is `true`).
 - **Page calculation**: The component uses `seblings` and the `getSeblings` helper to compute which page numbers to show. It inserts placeholders (`""`) which render as disabled buttons showing `placeholderIcon` (or `"..."`).
 - **Provider overrides**: `ComponentPropsProvider` can override `placeholderIcon`, `nextIcon`, `prevIcon`, and `seblings`. Local props win when provided.
+
+---
+
+## Accessibility
+
+- **Labels**: Provide accessible labels for icon-only pagination controls (for example via `prevIcon` / `nextIcon` content or by wrapping with `aria-label` at the button level if you override rendering).
+- **Current page**: Ensure the active page is clearly indicated visually (the component applies `kui-pagination-active-link`).
+- **Keyboard**: Pagination controls are buttons/links and are keyboard reachable by default; test Tab order when embedding in complex toolbars.
 
 ---
 

@@ -11,7 +11,7 @@ The **@kousta-ui/hooks** package provides a collection of essential, reusable Re
 
 ---
 
-## 🚀 Features
+## Features
 
 - **TypeScript First**: Full TypeScript support with comprehensive type definitions
 - **Performance Optimized**: Efficient implementations with minimal re-renders
@@ -22,7 +22,7 @@ The **@kousta-ui/hooks** package provides a collection of essential, reusable Re
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @kousta-ui/hooks
@@ -34,7 +34,7 @@ pnpm add @kousta-ui/hooks
 
 ---
 
-## 🎯 Available Hooks
+## Available Hooks
 
 | Hook | Purpose | Common Use Cases |
 |------|---------|------------------|
@@ -45,7 +45,7 @@ pnpm add @kousta-ui/hooks
 
 ---
 
-## 🎨 Quick Start
+## Quick Start
 
 ```tsx
 import {
@@ -109,7 +109,7 @@ function App() {
 
 ---
 
-## 📊 Hook Categories
+## Hook Categories
 
 ### State Management Hooks
 
@@ -132,7 +132,7 @@ Hooks that enhance user experience:
 
 ---
 
-## 🎯 When to Use These Hooks
+## When to Use These Hooks
 
 ### Use `useDisclosure` when:
 
@@ -160,7 +160,7 @@ Hooks that enhance user experience:
 
 ---
 
-## 🔧 TypeScript Support
+## TypeScript Support
 
 All hooks provide full TypeScript support:
 
@@ -186,7 +186,7 @@ const debouncedFn = useDebounceCallback(
 
 ---
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 - **Optimized Re-renders**: Hooks use `useCallback` and `useMemo` where appropriate
 - **Minimal Dependencies**: Zero external dependencies for smaller bundle size
@@ -197,7 +197,7 @@ const debouncedFn = useDebounceCallback(
 
 ---
 
-## 🔄 Composition Examples
+## Composition Examples
 
 ### Search with Pagination
 
@@ -280,7 +280,7 @@ function ModalExample() {
 
 ---
 
-## 📚 Best Practices
+## Best Practices
 
 ### Do's
 
@@ -298,7 +298,7 @@ function ModalExample() {
 
 ---
 
-## 📖 Next Steps
+## Next Steps
 
 - Learn about individual [hooks](/docs/hooks/overview)
 - Check out [Components package](/docs/category/components)
@@ -307,12 +307,12 @@ function ModalExample() {
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [contributing guidelines](https://github.com/Oustaa/ousta-ui/blob/main/CONTRIBUTING.md) for details.
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Ousta](https://github.com/Oustaa)

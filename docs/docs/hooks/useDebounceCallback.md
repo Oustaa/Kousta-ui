@@ -37,6 +37,8 @@ A performance-optimized hook that debounces function calls, preventing excessive
 |----------|------|-------------|
 | `debouncedFn` | `(...args: Parameters<T>) => void` | Debounced version of the callback function |
 
+<Badge color="blue">Note</Badge> The hook cleans up its pending timeout automatically on unmount, so you usually don’t need manual cleanup unless you add your own timers.
+
 ---
 
 ## Basic Usage

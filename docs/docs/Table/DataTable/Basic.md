@@ -1,9 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Basic usage
 ---
 
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   BasicPreview,
   HeadersPreview,
@@ -16,16 +17,22 @@ import {
 
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
-| `title` | `string` | — | Table title shown in the header. |
+| `title` | `string` | — | Table title shown in the header. Later it will also be used to fetch table config from local storage (when implemented). |
 | `loading` | `boolean` | `false` | Shows the table loading UI. |
 | `data` | `T[]` | — | Rows to display. |
-| `headers` | `THeader<T>` | — | Column definitions (label -> how to read/render cell). |
+| `headers` | [`THeader<T>`](./Props#theader-t) | — | Column definitions (label -> how to read/render cell). |
 | `keyExtractor` | `(row: T) => string \| number` | — | Stable key for each row. |
+| `isStatic` | `boolean` | — | Marks the table as “static” (no remote actions). Useful when you only use local data + local search/sort/filter. |
 
 ## Minimal example
 
-```tsx
-import React from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicDataTable.tsx",
+      code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
 type Row = {
@@ -50,11 +57,45 @@ export default function Example() {
         title: { value: "title" },
         "start date": { value: "start_date" },
       }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
       keyExtractor={(row) => row.id}
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "BasicDataTable.jsx",
+      code: `import React from "react";
+import { DataTable } from "@kousta-ui/table";
+
+export default function Example() {
+  const data = [
+    { id: 1, title: "First", start_date: "2026-01-01" },
+    { id: 2, title: "Second", start_date: "2026-01-10" },
+  ];
+
+  return (
+    <DataTable
+      title="Projects"
+      loading={false}
+      data={data}
+      headers={{
+        id: { value: "id" },
+        title: { value: "title" },
+        "start date": { value: "start_date" },
+      }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<BrowserOnly>{() => <BasicPreview />}</BrowserOnly>}
+  defaultTab="ts"
+/>
 
 ### Preview
 
@@ -73,6 +114,8 @@ Each header supports:
 - `exec`: a function `(row) => ReactNode`
 - `visible`: whether the column is currently shown (controlled by the "S/H" menu)
 - `canSee`: whether the column can be toggled at all
+
+See [`THeaderValue<T>`](./Props#theadervalue-t).
 
 ```tsx
 import React from "react";
@@ -101,6 +144,7 @@ export default function Example() {
           canSee: false,
         },
       }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
       keyExtractor={(row) => row.id}
     />
   );
@@ -126,6 +170,7 @@ export default function Example() {
       loading={true}
       data={[]}
       headers={{ name: { value: "name" } }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
     />
   );
 }

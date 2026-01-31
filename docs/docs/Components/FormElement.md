@@ -3,6 +3,7 @@ sidebar_position: 10
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   VerticalLayoutPreview,
   HorizontalLayoutPreview
@@ -11,6 +12,20 @@ import {
 # FormElement
 
 The **FormElement** is a layout component used to arrange a label and its corresponding input field either vertically or horizontally.
+
+---
+
+## Installation
+
+```bash
+npm install @kousta-ui/components
+```
+
+### Import styles
+
+```ts
+import "@kousta-ui/components/esm/index.css";
+```
 
 ---
 
@@ -28,11 +43,13 @@ The **FormElement** is a layout component used to arrange a label and its corres
 
 By default, `FormElement` arranges its children in a column.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { FormElement, Label, Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "FormElementVertical.tsx",
+      code: `import { FormElement, Label, Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -43,23 +60,41 @@ export default function Example() {
       </FormElement>
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "FormElementVertical.jsx",
+      code: `import { FormElement, Label, Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<VerticalLayoutPreview />
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 420 }}>
+      <FormElement labelPosition="y">
+        <Label>Email Address</Label>
+        <Input placeholder="you@example.com" />
+      </FormElement>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<VerticalLayoutPreview />}
+  defaultTab="ts"
+/>
 
 ### Horizontal Layout
 
 Set `labelPosition="x"` to arrange the label and input in a row. You may need to set a `minWidth` on the `Label` for proper alignment.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { FormElement, Label, Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "FormElementHorizontal.tsx",
+      code: `import { FormElement, Label, Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -70,13 +105,29 @@ export default function Example() {
       </FormElement>
     </div>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "FormElementHorizontal.jsx",
+      code: `import { FormElement, Label, Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<HorizontalLayoutPreview />
+export default function Example() {
+  return (
+    <div style={{ width: "100%", maxWidth: 420 }}>
+      <FormElement labelPosition="x">
+        <Label style={{ minWidth: 120 }}>Email Address</Label>
+        <Input placeholder="you@example.com" />
+      </FormElement>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<HorizontalLayoutPreview />}
+  defaultTab="ts"
+/>
 
 ---
 

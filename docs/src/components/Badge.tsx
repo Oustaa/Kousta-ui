@@ -5,7 +5,7 @@ export default function Badge({
   color = "warning",
 }: {
   children: React.ReactNode;
-  color?: "info" | "success" | "danger" | "warning";
+  color?: "info" | "success" | "danger" | "warning" | "blue" | "green" | "purple" | "orange";
 }) {
   return <span className={`badge badge-${color}`}>{children}</span>;
 }

@@ -3,6 +3,7 @@ sidebar_position: 5
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   QuickStartPreview,
   WithErrorsPreview,
@@ -41,31 +42,44 @@ A versatile **Input** component that provides form-friendly input fields with in
 
 The most basic usage includes a `label` and `placeholder`.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicInput.tsx",
+      code: `import { Input } from "@kousta-ui/components";
 
 export default function Example() {
   return <Input label="Email" placeholder="you@example.com" type="email" />;
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "BasicInput.jsx",
+      code: `import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<QuickStartPreview />
+export default function Example() {
+  return <Input label="Email" placeholder="you@example.com" type="email" />;
+}`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
 
 ### Input with Errors
 
 Pass an array of strings to the `errors` prop to display validation messages. The component will automatically apply error styling.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InputWithErrors.tsx",
+      code: `import { Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -76,23 +90,41 @@ export default function Example() {
       errors={["Please enter a valid email"]}
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "InputWithErrors.jsx",
+      code: `import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<WithErrorsPreview />
+export default function Example() {
+  return (
+    <Input
+      label="Email"
+      placeholder="you@example.com"
+      defaultValue="not-an-email"
+      errors={["Please enter a valid email"]}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<WithErrorsPreview />}
+  defaultTab="ts"
+/>
 
 ### Input with Sections (Prefix/Suffix)
 
 Use `leftSection` and `rightSection` to add prefixes, suffixes, icons, or buttons inside the input.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InputWithSections.tsx",
+      code: `import { Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -104,23 +136,42 @@ export default function Example() {
       rightSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>USD</span>}
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "InputWithSections.jsx",
+      code: `import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<WithSectionsPreview />
+export default function Example() {
+  return (
+    <Input
+      label="Amount"
+      placeholder="0.00"
+      type="number"
+      leftSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>$</span>}
+      rightSection={<span style={{ padding: "0 8px", opacity: 0.7 }}>USD</span>}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<WithSectionsPreview />}
+  defaultTab="ts"
+/>
 
 ### Password Input with Show/Hide
 
 You can use the `rightSection` to create a toggle for password visibility.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import React, { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InputPassword.tsx",
+      code: `import React, { useState } from "react";
 import { Input } from "@kousta-ui/components";
 
 export default function Example() {
@@ -148,23 +199,58 @@ export default function Example() {
       required
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "InputPassword.jsx",
+      code: `import React, { useState } from "react";
+import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<PasswordInputPreview />
+export default function Example() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <Input
+      label="Password"
+      placeholder="Enter password"
+      type={visible ? "text" : "password"}
+      rightSection={
+        <button
+          type="button"
+          onClick={() => setVisible((v) => !v)}
+          style={{
+            border: "none",
+            background: "transparent",
+            cursor: "pointer",
+            padding: "0 8px",
+          }}
+          aria-label={visible ? "Hide password" : "Show password"}
+        >
+          {visible ? "🙈" : "👁️"}
+        </button>
+      }
+      required
+    />
+  );
+}`
+    }
+  ]}
+  preview={<PasswordInputPreview />}
+  defaultTab="ts"
+/>
 
 ### Horizontal Label Layout
 
 Set `labelPosition="x"` to align the label and input horizontally. You may need to provide a `minWidth` to the label via `labelProps` for alignment.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InputHorizontalLabel.tsx",
+      code: `import { Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -175,23 +261,41 @@ export default function Example() {
       labelProps={{ style: { minWidth: 100 } }}
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "InputHorizontalLabel.jsx",
+      code: `import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<HorizontalLabelPreview />
+export default function Example() {
+  return (
+    <Input
+      label="Username"
+      placeholder="john_doe"
+      labelPosition="x"
+      labelProps={{ style: { minWidth: 100 } }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<HorizontalLabelPreview />}
+  defaultTab="ts"
+/>
 
 ### Disabled Input
 
 Pass the native `disabled` prop to disable interaction and apply disabled styles.
 
-<details open>
-<summary>Code</summary>
-
-```tsx
-import { Input } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InputDisabled.tsx",
+      code: `import { Input } from "@kousta-ui/components";
 
 export default function Example() {
   return (
@@ -202,13 +306,29 @@ export default function Example() {
       defaultValue="Some read-only value"
     />
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "InputDisabled.jsx",
+      code: `import { Input } from "@kousta-ui/components";
 
-</details>
-
-### Preview
-<DisabledInputPreview />
+export default function Example() {
+  return (
+    <Input
+      label="Read-only Field"
+      placeholder="Cannot edit"
+      disabled
+      defaultValue="Some read-only value"
+    />
+  );
+}`
+    }
+  ]}
+  preview={<DisabledInputPreview />}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -254,9 +374,32 @@ export type InputProps = ComponentPropsWithoutRef<"input"> & {
   labelProps?: ComponentPropsWithoutRef<"label">;
   errors?: string[] | string | ReactNode;
   required?: boolean;
-  onMaxExited?: VoidFunction;
   leftSection?: ReactNode;
   rightSection?: ReactNode;
   labelPosition?: LabelPositionBase;
 };
+```
+
+---
+
+## Component Props Provider
+
+You can set default input behavior for a subtree using [`ComponentPropsProvider`](/docs/Components/ComponentPropsProvider). This is especially useful to standardize label layout, icons/sections, or label props.
+
+```tsx
+import { ComponentPropsProvider, Input } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ComponentPropsProvider
+      input={{
+        labelPosition: "y",
+        labelProps: { style: { fontWeight: 600 } },
+      }}
+    >
+      <Input label="Email" placeholder="you@example.com" />
+      <Input label="Password" type="password" />
+    </ComponentPropsProvider>
+  );
+}
 ```

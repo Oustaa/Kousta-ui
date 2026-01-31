@@ -1,7 +1,7 @@
+
 ---
-sidebar_position: 5
-sidebar_class_name: legacy-hidden
-title: Grouping (legacy)
+sidebar_position: 10
+title: Grouping
 ---
 
-This page has been replaced by the combined "Sorting, grouping, filtering" page.
+Coming soon.
