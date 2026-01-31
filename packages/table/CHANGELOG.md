@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/Oustaa/Kousta-ui/compare/@kousta-ui/table@0.1.5...@kousta-ui/table@0.1.6) (2026-01-31)
+
+**Note:** Version bump only for package @kousta-ui/table
+
 ## 0.1.5 (2026-01-31)
 
 ### Features
