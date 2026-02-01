@@ -47,6 +47,7 @@ jobs:
           echo "DOCSEARCH_APP_ID=${{ secrets.DOCSEARCH_APP_ID }}" >> .env
           echo "DOCSEARCH_API_KEY=${{ secrets.DOCSEARCH_API_KEY }}" >> .env
           echo "DOCSEARCH_INDEX_NAME=${{ secrets.DOCSEARCH_INDEX_NAME }}" >> .env
+          echo API_BASE_URL=${{ secrets.DOCSEARCH_INDEX_NAME }}
 
       - name: Build Docusaurus
         working-directory: ./docs
