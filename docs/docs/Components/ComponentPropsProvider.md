@@ -284,7 +284,7 @@ type Product = { id: number; designation: string };
 const API_BASE_URL = process.env.API_BASE_URL;
 
 const getProducts = async ({ page, limit, searchTerm }) => {
-  const url = new URL("/api/v1/products", API_BASE_URL);
+  const url = new URL("/products", API_BASE_URL);
   url.searchParams.set("page", String(page));
   url.searchParams.set("limit", String(limit));
   url.searchParams.set("search", searchTerm || "");

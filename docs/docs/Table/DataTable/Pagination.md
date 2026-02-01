@@ -180,7 +180,7 @@ export default function Example() {
   const API_BASE_URL =
     process.env.NODE_ENV === "production"
       ? "https://api.ui.kousta.org/"
-      : "http://localhost:8001/api/v1";
+      : "http://localhost:8001";
 
   const [loading, setLoading] = useState(false);
   const [rows, setRows] = useState<User[]>([]);
@@ -236,7 +236,7 @@ export default function Example() {
   const API_BASE_URL =
     process.env.NODE_ENV === "production"
       ? "https://api.ui.kousta.org/"
-      : "http://localhost:8001/api/v1";
+      : "http://localhost:8001";
 
   const [loading, setLoading] = useState(false);
   const [rows, setRows] = useState([]);

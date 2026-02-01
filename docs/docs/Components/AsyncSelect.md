@@ -142,7 +142,7 @@ function writeCache<T>(key: string, value: T) {
 const createGetProducts =
   (apiBaseUrl: string = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }: GetDataParams) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
@@ -216,7 +216,7 @@ function writeCache(key, value) {
 const createGetProducts =
   (apiBaseUrl = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
@@ -317,7 +317,7 @@ function writeCache<T>(key: string, value: T) {
 const createGetProducts =
   (apiBaseUrl: string = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }: GetDataParams) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
@@ -395,7 +395,7 @@ function writeCache(key, value) {
 const createGetProducts =
   (apiBaseUrl = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
@@ -502,7 +502,7 @@ function writeCache<T>(key: string, value: T) {
 const createGetProducts =
   (apiBaseUrl: string = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }: GetDataParams) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
@@ -576,7 +576,7 @@ function writeCache(key, value) {
 const createGetProducts =
   (apiBaseUrl = "http://localhost:8001") =>
   async ({ page, limit, searchTerm }) => {
-    const url = new URL("/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
     url.searchParams.set("page", String(page));
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);

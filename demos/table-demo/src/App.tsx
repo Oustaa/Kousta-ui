@@ -60,7 +60,7 @@ const getProducts = (
     if (props[key]) params.append(key, String(props[key]));
   });
 
-  return fetch(`http://localhost:8001/api/v1/products?${params.toString()}`);
+  return fetch(`http://localhost:8001/products?${params.toString()}`);
 };
 
 const App = () => {

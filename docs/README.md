@@ -18,7 +18,7 @@ Used by interactive previews (for example `AsyncSelect` and `DataTable`) to call
 
 If you run the demo backend locally, start it on port `8001` so the docs previews can fetch from:
 
-- `/api/v1/products`
+- `/products`
 
 #### Production deployments
 

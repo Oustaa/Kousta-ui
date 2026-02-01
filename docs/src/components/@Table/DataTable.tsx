@@ -64,10 +64,7 @@ function writeCache<T>(key: string, value: T) {
 
 const createGetProducts =
   (apiBaseUrl: string) => async (params: TableParams) => {
-    const base = new URL(apiBaseUrl);
-    const basePath = base.pathname.replace(/\/+$/, "");
-    const hasV1 = basePath.endsWith("/api/v1");
-    const url = new URL(hasV1 ? "/products" : "/api/v1/products", apiBaseUrl);
+    const url = new URL("/products", apiBaseUrl);
 
     Object.keys(params).forEach((key) => {
       const value = params[key];
@@ -91,7 +88,7 @@ function useApiBaseUrl() {
   const fallback =
     process.env.NODE_ENV === "production"
       ? "https://api.ui.kousta.org/"
-      : "http://localhost:8001/api/v1";
+      : "http://localhost:8001";
   return String(siteConfig.customFields?.API_BASE_URL || fallback);
 }
 
