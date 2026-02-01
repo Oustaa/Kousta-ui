@@ -32,8 +32,7 @@ button {
   flex-direction: column;
   align-items: start;
   gap: 4px;
-  box-shadow: 2px 2px 6px
-    light-dark(var(--kui-neutral-100), var(--kui-neutral-900));
+  box-shadow: 2px 2px 6px light-dark(var(--kui-neutral-100), #181818);
   border: 1px solid light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
   z-index: 1000;
   border-radius: calc(var(--kui-rounded) * 1rem);

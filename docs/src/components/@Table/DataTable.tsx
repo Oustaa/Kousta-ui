@@ -4,6 +4,9 @@ import { DataTable, TablePropsProvider } from "@kousta-ui/table";
 import { Button } from "@kousta-ui/components";
 import { LayoutGrid, Trash2 } from "lucide-react";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type Product = {
   id: number;
   designation: string;
@@ -12,9 +15,9 @@ type Product = {
 
 type ProductsResponse =
   | {
-    meta?: { total?: number; last_page?: number };
-    products?: Product[];
-  }
+      meta?: { total?: number; last_page?: number };
+      products?: Product[];
+    }
   | any;
 
 type TableParams = Record<string, string | number | undefined>;
@@ -89,9 +92,7 @@ function useApiBaseUrl() {
     process.env.NODE_ENV === "production"
       ? "https://api.ui.kousta.org/"
       : "http://localhost:8001/api/v1";
-  return String(
-    siteConfig.customFields?.API_BASE_URL || fallback,
-  );
+  return String(siteConfig.customFields?.API_BASE_URL || fallback);
 }
 
 export const BasicPreview = () => {

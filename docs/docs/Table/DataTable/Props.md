@@ -7,13 +7,13 @@ title: Props
 
 This page contains the TypeScript type definitions used across the DataTable documentation.
 
-## `THeader<T>`
+## `THeader<T>` {#theader-t}
 
 ```ts
 export type THeader<T> = Record<string, THeaderValue<T>>;
 ```
 
-## `THeaderValue<T>`
+## `THeaderValue<T>` {#theadervalue-t}
 
 ```ts
 export type THeaderValue<T> = {
@@ -62,7 +62,7 @@ type TablePagination = {
 };
 ```
 
-## `TActions<T>`
+## `TActions<T>` {#tactions-t}
 
 ```ts
 export type TActions<T> = {
@@ -85,7 +85,7 @@ export type TActions<T> = {
 };
 ```
 
-## `TOptions<T>`
+## `TOptions<T>` {#toptions-t}
 
 ```ts
 export type TOptions<T> = Partial<{
@@ -167,3 +167,7 @@ export type TParams = Record<string, number | string | undefined>;
 ```ts
 export type CanPerformAction<T> = ((row: T) => boolean) | boolean;
 ```
+
+## `PropsContextType` {#propscontexttype}
+
+The type used by `TablePropsProvider`. It is a partial of props/actions/config that the provider can set as defaults for all `DataTable` instances below it. See [TablePropsProvider](./TablePropsProvider) and [`TConfig`](#tconfig).

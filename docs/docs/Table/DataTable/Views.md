@@ -51,6 +51,9 @@ Enable the built-in card view by providing `options.cards.card`.
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string };
 
 export default function Example() {
@@ -88,6 +91,9 @@ export default function Example() {
       filename: "DataTableCardView.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   return (
@@ -140,6 +146,9 @@ Each view entry is keyed by a string; that key becomes the `displayAs` value.
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string };
 
 const GridView = ({ data }: { data: User[] }) => {
@@ -184,6 +193,9 @@ export default function Example() {
       filename: "DataTableCustomViews.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 const GridView = ({ data }) => {
   return (

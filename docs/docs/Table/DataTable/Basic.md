@@ -35,6 +35,9 @@ import {
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type Row = {
   id: number;
   title: string;
@@ -69,6 +72,9 @@ export default function Example() {
       filename: "BasicDataTable.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = [
@@ -121,6 +127,9 @@ See [`THeaderValue<T>`](./Props#theadervalue-t).
 import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string; role: string };
 
 export default function Example() {
@@ -162,6 +171,9 @@ Control loading with the `loading` boolean prop:
 ```tsx
 import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   return (

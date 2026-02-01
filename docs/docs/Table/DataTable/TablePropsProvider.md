@@ -18,6 +18,8 @@ The provider values map to DataTable props/config. Type definitions live in [`Pr
 
 ```tsx
 import { TablePropsProvider, DataTable } from "@kousta-ui/table";
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 function App() {
   return (
