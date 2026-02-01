@@ -8,15 +8,13 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 const TableFooter = () => {
   const functionWithTableProps = useFunctionWithTableParams();
 
-  const { pagination, options, rowSelection } = useTableContext();
+  const { pagination, actions, rowSelection, config } = useTableContext();
 
   if (!pagination) return;
 
   const { limit, page, total, setLimit, setPage } = pagination;
 
   const totalPages = useMemo(() => Math.ceil(total / limit), [total, limit]);
-
-  // if (!options?.actions?.get) return <></>;
 
   return (
     <div className={[classes["table-footer"], "kui-table-footer"].join(" ")}>
@@ -28,6 +26,11 @@ const TableFooter = () => {
             { label: 40, value: 40 },
             { label: 50, value: 50 },
           ]}
+          clearable={false}
+          icons={{
+            open: config?.icons?.selectOpened,
+            close: config?.icons?.selectClosed,
+          }}
           value={limit}
           onChange={(limit: any) => {
             setLimit(Number(limit));
@@ -36,12 +39,11 @@ const TableFooter = () => {
             if (page > totalPages) {
               setPage(totalPages);
             }
-
-            // @ts-expect-error this is not an error
-            functionWithTableProps(options?.actions?.get, {
-              page: Math.min(page, totalPages),
-              limit,
-            });
+            if (actions && actions.get)
+              functionWithTableProps(actions.get, {
+                page: Math.min(page, totalPages),
+                limit,
+              });
           }}
         />
         <p className={classes["table-pagination-message"]}>
@@ -55,10 +57,13 @@ const TableFooter = () => {
         <Pagination
           page={page}
           totalPages={totalPages}
+          nextIcon={config?.icons?.paginationNext}
+          prevIcon={config?.icons?.paginationPrev}
+          placeholderIcon={config?.icons?.paginationDots}
           onChange={(page) => {
             rowSelection.diseclectAll();
-            if (options?.actions?.get)
-              functionWithTableProps(options?.actions?.get, {
+            if (actions?.get)
+              functionWithTableProps(actions?.get, {
                 page,
               });
 

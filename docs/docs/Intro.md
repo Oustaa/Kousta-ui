@@ -7,7 +7,7 @@ title: Introduction
 
 **Kousta UI** is a modern React UI library built with performance and convenience in mind.
 
-## 🚀 Features
+## Features
 
 - **Performance Focused**: Built with lightweight components and optimized rendering
 - **TypeScript First**: Full TypeScript support with comprehensive type definitions
@@ -15,7 +15,7 @@ title: Introduction
 - **Modern Design**: Clean, customizable components that work out of the box
 - **Easy Customization**: Flexible theming system with CSS variables and providers
 
-## 📦 Packages
+## Packages
 
 Kousta UI is organized into focused packages to help you use only what you need:
 
@@ -37,19 +37,19 @@ Powerful data table solutions featuring:
 - **Custom Headers**: Flexible header configuration with nested data support
 - **Performance Optimized**: Efficient rendering for large datasets
 
-### [@kousta-ui/hooks](/docs/category/hooks)
+### [@kousta-ui/hooks](/docs/hooks/overview)
 Essential React hooks for common UI patterns:
 - **useDisclosure**: Manage open/close states for modals, dropdowns, etc.
 - **useScrollLock**: Prevent body scroll when overlays are active
 - **usePagination**: Pagination state helpers
 - **useDebounceCallback**: Debounce a callback with cleanup on unmount
 
-### [@kousta-ui/helpers](/docs/category/helpers)
+### [@kousta-ui/helpers](/docs/helpers/overview)
 Utility functions and helpers to streamline your development:
 - **getNestedProperty**: Safely read nested values
 - **updateNestedProperties**: Update nested properties immutably
 
-## 🏁 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -78,7 +78,7 @@ npm install @kousta-ui/components @kousta-ui/table @kousta-ui/hooks @kousta-ui/h
 import { Modal, Button } from "@kousta-ui/components";
 import { useDisclosure } from "@kousta-ui/hooks";
 
-import "@kousta-ui/styles/tokens.css";
+import "@kousta-ui/components/esm/index.css";
 
 function App() {
   const { opened, close, open } = useDisclosure(false);
@@ -99,7 +99,7 @@ function App() {
 ```tsx
 import { DataTable } from "@kousta-ui/table";
 
-import "@kousta-ui/styles/tokens.css";
+import "@kousta-ui/table/esm/index.css";
 
 interface User {
   id: number;
@@ -129,7 +129,7 @@ function UserTable() {
 }
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Using Providers
 
@@ -165,12 +165,12 @@ Customize the appearance using CSS variables:
 }
 ```
 
-## 📚 Next Steps
+## Next Steps
 
 - Explore [Components](/docs/category/components) documentation
 - Learn about [Table](/docs/category/table) features
-- Discover [Hooks](/docs/category/hooks) for common patterns
-- Check out [Helpers](/docs/category/helpers) utilities
+- Discover [Hooks](/docs/hooks/overview) for common patterns
+- Check out [Helpers](/docs/helpers/overview) utilities
 
 ## 🔗 Links
 

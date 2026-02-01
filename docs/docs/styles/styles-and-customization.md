@@ -18,8 +18,8 @@ All styling in Kousta UI is controlled through CSS custom properties that can be
 ### Importing Styles
 
 ```css
-/* Import the complete token system */
-@import "@kousta-ui/styles/tokens.css";
+/* Import the component styles (includes tokens) */
+@import "@kousta-ui/components/esm/index.css";
 ```
 
 ---
@@ -32,7 +32,7 @@ The `--kui-rounded` variable is a **border-radius multiplier** that applies glob
 
 - **Multiplier Value**: A number that gets multiplied by `1rem` to calculate border radius
 - **Global Application**: Affects all components (buttons, inputs, modals, etc.)
-- **Definition**: You define this variable in your global styles (it is used by components, but not defined in `@kousta-ui/styles/tokens.css`)
+- **Definition**: You define this variable in your global styles (it is used by components, but not defined in the default package CSS)
 - **Calculation**: `border-radius: calc(var(--kui-rounded) * 1rem)`
 
 ### Visual Examples
@@ -366,7 +366,7 @@ Form elements benefit from consistent rounding:
 
 ---
 
-## 🔧 Customization Examples
+## Customization Examples
 
 ### Brand Theme
 
@@ -576,6 +576,6 @@ CSS custom properties are supported in all modern browsers:
 ## 📖 Next Steps
 
 - Explore [Components](/docs/category/components) to see variables in action
-- Learn about [Table theming](/docs/category/table)
-- Check out [Helpers](/docs/category/helpers) for utility functions
-- Browse [Hooks](/docs/category/hooks) for state management
+- Learn about [Table](/docs/category/table)
+- Check out [Hooks](/docs/hooks/overview) for state management
+- Browse [Helpers](/docs/helpers/overview) for utility functions

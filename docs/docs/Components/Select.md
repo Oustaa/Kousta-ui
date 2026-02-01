@@ -3,6 +3,7 @@ sidebar_position: 6
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   QuickStartPreview,
   DisabledOptionsPreview,
@@ -10,6 +11,15 @@ import {
   NonSearchablePreview,
   WithErrorsPreview,
   CustomRenderPreview,
+  GenericTypesPreview,
+  IconsOverrideWithPropPreview,
+  IconsOverrideWithProviderPreview,
+  ComponentPropsProviderPreview,
+  OnSearchPreview,
+  ErrorHandlingPreview,
+  EmptyMessagePreview,
+  OnBlurPreview,
+  RawValuePreview,
 } from '@site/src/components/@Components/Select';
 
 # Select
@@ -22,20 +32,30 @@ A flexible **Select** component that provides searchable dropdown functionality 
 
 | Name | Type | Default | Provider? | Description |
 |------|------|---------|-----------|-------------|
-| `data` | `T[]` | `[]` | No | Array of data items to display. |
-| `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | Configuration for extracting value, label, and custom rendering from data items. |
-| `onChange` | `(value: unknown) => void` | — | No | Callback when selection changes. |
-| `seachable` | `boolean` | `true` | Yes | Enables search input for filtering options. |
-| `clearable` | `boolean` | `true` | Yes | Shows a clear button to reset selection. |
-| `disabled` | `boolean` | `false` | No | Disables the entire component. |
-| `disabledOption` | `(row: T) => boolean` | — | No | Function to disable specific options from being selected. |
-| `label` | `string` | — | No | Label text displayed above the select. |
-| `placeholder` | `string` | — | No | Placeholder text when no value is selected. |
-| `errors` | `string[] | string | ReactNode` | — | No | Error message(s) displayed below the select. |
-| `required` | `boolean` | `false` | Yes | Shows required indicator next to label. |
-| `isMultiple` | `boolean` | `false` | No | Allows multiple values to be selected. |
-| `loading` | `boolean` | `false` | No | Shows a loading indicator instead of the dropdown arrow. |
-| `icons` | `{ open, close, clear, loading }` | — | Yes | Override the default icons for dropdown toggle, clear button, and loading state. |
+| `data` | `T[]` | — | No | Array of options data. |
+| `value` | `string \| number` | — | No | Controlled selected value (matched against `options.value`). |
+| `onChange` | `(value: unknown) => void` | — | No | Called when the selection changes. If `rawValue` is `true`, the callback receives the full selected row instead of just the extracted value. |
+| `rawValue` | `boolean` | — | Yes | If `true`, `onChange` receives the entire selected row object instead of the value. |
+| `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | How to extract value/label and/or render each option. |
+| `placeholder` | `string` | — | No | Placeholder when nothing is selected. |
+| `loading` | `boolean` | — | No | Shows loading indicator instead of toggle icon and prevents opening. |
+| `onBlur` | `(target: HTMLDivElement & { clear: VoidFunction }) => void` | — | No | Called when the dropdown closes. Receives a target with a `clear()` helper to reset selection. |
+| `errors` | `string[] \| string \| ReactNode` | — | No | Error(s) shown under the select (also applies error styles). |
+| `label` | `string` | — | No | Label text. |
+| `labelProps` | `ComponentPropsWithoutRef<'label'>` | — | Yes | Props forwarded to the `Label` component. Provider values are merged with local values. |
+| `labelPosition` | `LabelPositionBase` | — | Yes | Label position for form layout. |
+| `required` | `boolean` | — | Yes | Marks the field as required (visual indicator). |
+| `seachable` | `boolean` | `true` | Yes | Enables the built-in search input and keyboard search behavior. |
+| `onSearch` | `(row: T, term: string) => boolean` | — | No | Custom filtering logic for local search. Return `true` to keep a row. |
+| `clearable` | `boolean` | `true` | Yes | Shows a clear button when a value is selected. |
+| `emptyMessage` | `string` | `"No option found"` | Yes | Message shown when the dropdown list is empty. |
+| `disabled` | `boolean` | — | No | Disables the whole select. |
+| `disabledOption` | `(row: T) => boolean` | — | No | Disables specific rows. |
+| `isMultiple` | `boolean` | — | No | <Badge color="orange">Coming soon</Badge> Multi-select support is not finalized yet. |
+| `icons` | `{ close?: ReactNode; open?: ReactNode; clear?: ReactNode; loading?: ReactNode }` | — | Yes | Override icons used for open/close, clear, and loading. |
+| `disableErrorBoundaries` | `boolean` | — | Yes | When `true`, errors thrown in option rendering will be re-thrown instead of being caught. |
+| `optionErrorFallback` | `FC<{ row: T }>` | — | Yes | Custom fallback UI when an option throws while rendering. |
+| `selectErrorFallback` | `ReactNode` | — | Yes | Fallback for select-level rendering errors. |
 
 <Badge color="blue">Note</Badge> Props marked with **Yes** in the **Provider?** column can be configured globally using the `ComponentPropsProvider`.
 
@@ -47,7 +67,14 @@ A flexible **Select** component that provides searchable dropdown functionality 
 
 The most basic usage requires a `label` and a `data` array. By default, it's searchable.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicSelect.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
 const frameworkData = [
   { value: "react", label: "React" },
   { value: "vue", label: "Vue" },
@@ -60,82 +87,251 @@ const frameworkData = [
   placeholder="Choose a framework"
   data={frameworkData}
   onChange={(value) => console.log(value)}
-/>
-```
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "BasicSelect.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<QuickStartPreview />
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  onChange={(value) => console.log(value)}
+/>`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
 
 ### Disabled Options
 
 Use the `disabledOption` prop to conditionally disable items in the list. Disabled items are visible but not selectable.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectDisabledOptions.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
 <Select
   label="Framework"
   placeholder="Svelte is disabled"
   data={frameworkData}
-  disabledOption={(item) => item.value === 'svelte'}
-/>
-```
+  disabledOption={(item) => item.value === "svelte"}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectDisabledOptions.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<DisabledOptionsPreview />
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Svelte is disabled"
+  data={frameworkData}
+  disabledOption={(item) => item.value === "svelte"}
+/>`
+    }
+  ]}
+  preview={<DisabledOptionsPreview />}
+  defaultTab="ts"
+/>
 
 ### Clearable
 
 Set `clearable` to `true` to allow users to deselect the current value.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectClearable.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
 <Select
   label="Framework"
   placeholder="Choose a framework"
   data={frameworkData}
   clearable
-/>
-```
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectClearable.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<ClearablePreview />
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  clearable
+/>`
+    }
+  ]}
+  preview={<ClearablePreview />}
+  defaultTab="ts"
+/>
 
 ### Non-Searchable
 
 Set `seachable={false}` to disable the search input. The dropdown will still open, but the user cannot filter the list.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectNonSearchable.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
 <Select
   label="Framework"
   placeholder="Search is disabled"
   data={frameworkData}
   seachable={false}
-/>
-```
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectNonSearchable.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<NonSearchablePreview />
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Search is disabled"
+  data={frameworkData}
+  seachable={false}
+/>`
+    }
+  ]}
+  preview={<NonSearchablePreview />}
+  defaultTab="ts"
+/>
 
 ### With Errors
 
 Pass an array of strings to the `errors` prop to display validation messages and apply error styling.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectWithErrors.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
 <Select
   label="Framework"
   placeholder="Choose a framework"
   data={frameworkData}
   errors={["This field is required"]}
   required
-/>
-```
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectWithErrors.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<WithErrorsPreview />
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  errors={["This field is required"]}
+  required
+/>`
+    }
+  ]}
+  preview={<WithErrorsPreview />}
+  defaultTab="ts"
+/>
 
 ### Custom Option Rendering
 
 Use `options.renderOption` to provide a custom component for rendering each item in the dropdown list.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectCustomRender.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
 const userData = [
   { id: 1, name: "John Doe", email: "john@work.com", online: true },
   { id: 2, name: "Jane Smith", email: "jane@work.com", online: false },
@@ -150,22 +346,662 @@ const userData = [
     label: "name",
     renderOption: (user) => (
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{
-          width: 8, height: 8, borderRadius: '50%',
-          background: user.online ? 'green' : 'gray'
-        }} />
+        <span
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: "50%",
+            background: user.online ? "green" : "gray",
+          }}
+        />
         <div>
           <div>{user.name}</div>
-          <div style={{ fontSize: '0.8em', opacity: 0.7 }}>{user.email}</div>
+          <div style={{ fontSize: "0.8em", opacity: 0.7 }}>{user.email}</div>
         </div>
       </div>
     ),
   }}
-/>
-```
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectCustomRender.jsx",
+      code: `import { Select } from "@kousta-ui/components";
 
-### Preview
-<CustomRenderPreview />
+const userData = [
+  { id: 1, name: "John Doe", email: "john@work.com", online: true },
+  { id: 2, name: "Jane Smith", email: "jane@work.com", online: false },
+];
+
+<Select
+  label="Assign to"
+  placeholder="Select a user"
+  data={userData}
+  options={{
+    value: "id",
+    label: "name",
+    renderOption: (user) => (
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: "50%",
+            background: user.online ? "green" : "gray",
+          }}
+        />
+        <div>
+          <div>{user.name}</div>
+          <div style={{ fontSize: "0.8em", opacity: 0.7 }}>{user.email}</div>
+        </div>
+      </div>
+    ),
+  }}
+/>`
+    }
+  ]}
+  preview={<CustomRenderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Icon overriding
+
+You can override the built-in icons either:
+
+- Directly on the `Select` via the `icons` prop
+- Globally via `ComponentPropsProvider` (recommended if you want a consistent look)
+
+### Override icons on a single Select
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectIconsOverride.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  data={frameworkData}
+  label="Framework"
+  placeholder="With custom icons"
+  clearable
+  icons={{
+    clear: <X size={16} />,
+    open: <ChevronUp size={16} />,
+    close: <ChevronDown size={16} />,
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectIconsOverride.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  data={frameworkData}
+  label="Framework"
+  placeholder="With custom icons"
+  clearable
+  icons={{
+    clear: <X size={16} />,
+    open: <ChevronUp size={16} />,
+    close: <ChevronDown size={16} />,
+  }}
+/>`
+    }
+  ]}
+  preview={<IconsOverrideWithPropPreview />}
+  defaultTab="ts"
+/>
+
+### Override icons with ComponentPropsProvider
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectIconsProvider.tsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select data={frameworkData} label="Framework" placeholder="Icons from provider" clearable />
+</ComponentPropsProvider>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectIconsProvider.jsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select data={frameworkData} label="Framework" placeholder="Icons from provider" clearable />
+</ComponentPropsProvider>`
+    }
+  ]}
+  preview={<IconsOverrideWithProviderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Component Props Provider
+
+Use `ComponentPropsProvider` to set default props globally for all `Select` instances in a subtree.
+
+### Provider supported overrides
+
+The `select` key supports overriding the following props:
+
+- `rawValue`
+- `options`
+- `labelPosition`
+- `emptyMessage`
+- `seachable`
+- `required`
+- `labelProps`
+- `clearable`
+- `disableErrorBoundaries`
+- `optionErrorFallback`
+- `selectErrorFallback`
+- `icons`
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectComponentPropsProvider.tsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    seachable: false,
+    clearable: false,
+    emptyMessage: "Nothing here",
+    labelProps: { style: { color: "#555" } },
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select label="Framework" placeholder="Provider overrides" data={frameworkData} />
+</ComponentPropsProvider>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectComponentPropsProvider.jsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    seachable: false,
+    clearable: false,
+    emptyMessage: "Nothing here",
+    labelProps: { style: { color: "#555" } },
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select label="Framework" placeholder="Provider overrides" data={frameworkData} />
+</ComponentPropsProvider>`
+    }
+  ]}
+  preview={<ComponentPropsProviderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## onSearch
+
+By default, the select filters by the extracted label (`options.label`). If you need custom filtering logic (e.g. multiple fields, strict matching, or locale-specific search), provide `onSearch`.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectOnSearch.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const users = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Search by exact first name"
+  data={users}
+  options={{ value: "id", label: "first_name last_name" }}
+  onSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectOnSearch.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const users = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Search by exact first name"
+  data={users}
+  options={{ value: "id", label: "first_name last_name" }}
+  onSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}
+/>`
+    }
+  ]}
+  preview={<OnSearchPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Error handling
+
+If your `options.renderOption` (or label extraction) throws, options are rendered inside an internal error boundary.
+
+Use:
+
+- `optionErrorFallback` to render a custom UI for a broken option
+- `disableErrorBoundaries` to re-throw errors (useful during development/tests)
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectErrorHandling.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { XCircle } from "lucide-react";
+
+const users = [
+  { id: 5, first_name: "Safe", last_name: "User" },
+  { id: 6, first_name: "Broken", last_name: "Option" },
+  { id: 7, first_name: "Another", last_name: "User" },
+];
+
+<Select
+  label="Option error boundary"
+  placeholder="Option with id 6 throws"
+  data={users}
+  options={{
+    value: "id",
+    label: "first_name last_name",
+    renderOption: (row) => {
+      if (row.id === 6) throw new Error("Option render failed");
+      return \`\${row.first_name} \${row.last_name}\`;
+    },
+  }}
+  optionErrorFallback={({ row }) => (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "6px 8px",
+        borderRadius: 8,
+        background: "rgba(220, 38, 38, 0.12)",
+        color: "#dc2626",
+        fontSize: 12,
+      }}
+    >
+      <XCircle size={14} />
+      Failed to render option (id: {row.id})
+    </span>
+  )}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectErrorHandling.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { XCircle } from "lucide-react";
+
+const users = [
+  { id: 5, first_name: "Safe", last_name: "User" },
+  { id: 6, first_name: "Broken", last_name: "Option" },
+  { id: 7, first_name: "Another", last_name: "User" },
+];
+
+<Select
+  label="Option error boundary"
+  placeholder="Option with id 6 throws"
+  data={users}
+  options={{
+    value: "id",
+    label: "first_name last_name",
+    renderOption: (row) => {
+      if (row.id === 6) throw new Error("Option render failed");
+      return \`\${row.first_name} \${row.last_name}\`;
+    },
+  }}
+  optionErrorFallback={({ row }) => (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "6px 8px",
+        borderRadius: 8,
+        background: "rgba(220, 38, 38, 0.12)",
+        color: "#dc2626",
+        fontSize: 12,
+      }}
+    >
+      <XCircle size={14} />
+      Failed to render option (id: {row.id})
+    </span>
+  )}
+/>`
+    }
+  ]}
+  preview={<ErrorHandlingPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## emptyMessage
+
+Use `emptyMessage` to customize what users see when the dropdown has no options.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectEmptyMessage.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+<Select
+  label="Framework"
+  placeholder="No options"
+  data={[]}
+  emptyMessage="Nothing to show"
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectEmptyMessage.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+<Select
+  label="Framework"
+  placeholder="No options"
+  data={[]}
+  emptyMessage="Nothing to show"
+/>`
+    }
+  ]}
+  preview={<EmptyMessagePreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## onBlur
+
+`onBlur` is called when the dropdown closes. It receives a `target` object that includes a `clear()` helper to reset the selection.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectOnBlur.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  onBlur={(target) => {
+    target.clear();
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectOnBlur.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  onBlur={(target) => {
+    target.clear();
+  }}
+/>`
+    }
+  ]}
+  preview={<OnBlurPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## rawValue
+
+When `rawValue` is enabled, `onChange` receives the full selected data row instead of just the extracted value.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectRawValue.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  rawValue
+  onChange={(row) => {
+    console.log(row); // => { value: "react", label: "React", ... }
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectRawValue.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  rawValue
+  onChange={(row) => {
+    console.log(row); // => { value: "react", label: "React", ... }
+  }}
+/>`
+    }
+  ]}
+  preview={<RawValuePreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Generic types
+
+Select is a generic component. Passing an explicit type parameter gives you type-checking for `options`, `disabledOption`, `onSearch`, and custom renderers.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectGenericTypes.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+type UserRow = {
+  id: number;
+  first_name: string;
+  last_name: string;
+};
+
+const usersData: UserRow[] = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select<UserRow>
+  label="Users"
+  placeholder="Select a user"
+  data={usersData}
+  options={{ value: "id", label: "first_name last_name" }}
+  onChange={(value) => console.log(value)}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectGenericTypes.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const usersData = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Select a user"
+  data={usersData}
+  options={{ value: "id", label: "first_name last_name" }}
+  onChange={(value) => console.log(value)}
+/>`
+    }
+  ]}
+  preview={<GenericTypesPreview />}
+  defaultTab="ts"
+/>
 
 ---
 

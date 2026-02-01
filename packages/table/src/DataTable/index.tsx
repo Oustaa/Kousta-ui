@@ -3,7 +3,7 @@ import Table from "../Table";
 import TableHead from "./components/TableHead";
 import TableHeader from "./components/TableHeader";
 import TableBody from "./components/TableBody";
-import { isValidElement, useCallback, useState } from "react";
+import { isValidElement, useCallback, useEffect, useState } from "react";
 import { TableProps } from "./_props";
 import { TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
@@ -23,7 +23,7 @@ function DataTable<T>(props: TableProps<T>) {
 
   const [displayAs, setDisplayAs] = useState<string>("table");
 
-  const { limit, setPage, setLimit, page, total } = usePagination({
+  const { setTotal, total, setLimit, limit, setPage, page } = usePagination({
     total: props.pagination?.total || 0,
     page: props.pagination?.page || 0,
     limit: props.pagination?.limit || 0,
@@ -51,7 +51,13 @@ function DataTable<T>(props: TableProps<T>) {
     [selectedRows],
   );
 
-  const config = props.config || {};
+  useEffect(() => {
+    setTotal(props.pagination?.total || 0);
+  }, [props.pagination?.total]);
+
+  const config = (props.config || {}) as NonNullable<TableProps<T>["config"]>;
+
+  if (!config.icons) config.icons = {};
 
   if (providedProps) {
     // overwrite table actions
@@ -60,29 +66,45 @@ function DataTable<T>(props: TableProps<T>) {
 
       // overwrite the table delete button
       if (actionsProps.delete) {
-        if (actionsProps.delete.title && props.options?.actions?.delete) {
-          if (props.options.actions.delete.title === undefined) {
-            props.options.actions.delete.title = actionsProps.delete.title;
+        if (actionsProps.delete.title && props.actions?.delete) {
+          if (props.actions.delete.title === undefined) {
+            props.actions.delete.title = actionsProps.delete.title;
           }
-          if (props.options.actions.delete.buttonProps === undefined) {
+          if (props.actions.delete.buttonProps === undefined) {
             // combine the provided props with the props buttonProps, props should overwrite the provided one
-            props.options.actions.delete.buttonProps =
-              actionsProps.delete.buttonProps;
+            props.actions.delete.buttonProps = actionsProps.delete.buttonProps;
           }
         }
       }
 
       // overwrite the table edit button
       if (actionsProps.edit) {
-        if (actionsProps.edit.title && props.options?.actions?.edit) {
-          if (props.options.actions.edit.title === undefined) {
-            props.options.actions.edit.title = actionsProps.edit.title;
+        if (actionsProps.edit.title && props.actions?.edit) {
+          if (props.actions.edit.title === undefined) {
+            props.actions.edit.title = actionsProps.edit.title;
           }
-          if (props.options.actions.edit.buttonProps === undefined) {
+          if (props.actions.edit.buttonProps === undefined) {
             // combine the provided props with the props buttonProps, props should overwrite the provided one
-            props.options.actions.edit.buttonProps =
-              actionsProps.edit.buttonProps;
+            props.actions.edit.buttonProps = actionsProps.edit.buttonProps;
           }
+        }
+      }
+
+      if (actionsProps.search) {
+        if (props.actions && props.actions.search) {
+          if (
+            actionsProps.search.searchOnType &&
+            props.actions.search.searchOnType === undefined
+          ) {
+            props.actions.search.searchOnType =
+              actionsProps.search.searchOnType;
+          }
+
+          if (
+            actionsProps.search.searchTimer &&
+            !props.actions.search.searchTimer
+          )
+            props.actions.search.searchTimer = actionsProps.search.searchTimer;
         }
       }
     }
@@ -132,13 +154,8 @@ function DataTable<T>(props: TableProps<T>) {
       };
     }
 
-    if (providedProps.selectFilter && props.config) {
-      if (props.config.selectFilter !== undefined)
-        props.config.selectFilter = {
-          ...providedProps.selectFilter,
-          ...props.config.selectFilter,
-        };
-      else props.config.selectFilter = providedProps.selectFilter;
+    if (providedProps.icons) {
+      config.icons = { ...providedProps.icons, ...config.icons };
     }
 
     if (providedProps.props) {
@@ -185,6 +202,7 @@ function DataTable<T>(props: TableProps<T>) {
       config={config}
       headers={{ data: headers, setHeaders }}
       search={{ query, setQuery }}
+      total={{ total, setTotal }}
       rowSelection={{
         selectedRows,
         setSelectedRows: setSelectedRowsFunc,

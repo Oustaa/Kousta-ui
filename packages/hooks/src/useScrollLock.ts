@@ -9,6 +9,7 @@ export const useScrollLock = () => {
 
   const unlockScroll = useCallback(() => {
     document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
   }, []);
 
   return {

@@ -1,15 +1,22 @@
 import Table from "../../Table";
-import { usePaginationData } from "../hooks/usePaginationData";
+import { useDataToDisplay } from "../hooks/useDataToDisplay";
 import { useTableContext } from "../tableContext";
 import TableRow from "./TableRow";
 
 const TableBody = <T extends Record<string, unknown>>() => {
-  const { config } = useTableContext();
+  const { config, keyExtractor } = useTableContext();
+  const dataToDisplay = useDataToDisplay();
 
   return (
     <Table.Tbody {...config?.props?.tbody}>
-      {usePaginationData().map((row, index) => {
-        return <TableRow<T> index={index} key={index} row={row as T} />;
+      {dataToDisplay.map((row, index) => {
+        return (
+          <TableRow<T>
+            index={index}
+            key={keyExtractor?.(row) || index}
+            row={row as T}
+          />
+        );
       })}
     </Table.Tbody>
   );

@@ -7,26 +7,1071 @@
   --ifm-color-primary-darker: #7f3695;
   --ifm-color-primary-darkest: #692e7a;
   --ifm-code-font-size: 95%;
+  
+  /* Enhanced spacing */
+  --ifm-spacing-vertical: 1.5rem;
+  --ifm-heading-vertical-rhythm-top: 2;
+  --ifm-heading-vertical-rhythm-bottom: 1;
+  
+  /* Better typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'Fira Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  
+  /* Enhanced colors */
+  --ifm-color-content: #1c1e21;
+  --ifm-color-content-secondary: #606770;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+  
+  /* Border radius */
+  --ifm-global-radius: 0.5rem;
+  --ifm-code-border-radius: 0.375rem;
+  
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="dark"] {
   --ifm-color-primary: #cc8fe3;
+  --ifm-color-primary-dark: #b364d1;
+  --ifm-color-primary-darker: #7f3695;
+  --ifm-color-primary-darkest: #692e7a;
+  --ifm-color-primary-light: #deb9ee;
+  --ifm-color-primary-lighter: #ecd8f6;
+  --ifm-color-primary-lightest: #f6ecfb;
+  
+  --ifm-color-content: #e4e6eb;
+  --ifm-color-content-secondary: #b0b3b8;
+  --ifm-background-color: #18191a;
+  --ifm-background-surface-color: #242526;
+}
 
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+/* Enhanced Typography */
+.markdown > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.markdown > h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  line-height: 1.3;
+}
+
+.markdown > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.markdown > h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown > p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-content);
+}
+
+.markdown > ul,
+.markdown > ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.markdown > ul li,
+.markdown > ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* Enhanced Code Blocks */
+.prism-code {
+  border-radius: 0;
+  box-shadow: none;
+  background: #1e1e1e !important;
+}
+
+[data-theme="dark"] .prism-code {
+  background: #1e1e1e !important;
+}
+
+.theme-code-block {
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: #1e1e1e;
+}
+
+[data-theme="dark"] .theme-code-block {
+  background: #1e1e1e;
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+/* Code block title styling - Docusaurus code block titles */
+/* Docusaurus automatically renders titles when using title="filename" in code blocks */
+.code-block-title {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  background: #252526 !important;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem;
+  color: #cccccc !important;
+  font-weight: 500;
+  font-family: var(--ifm-font-family-base);
+  margin-bottom: 0 !important;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+/* Add language icon before filename - default TS */
+.code-block-title::before {
+  content: 'TS';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #007acc;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--ifm-font-family-monospace);
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+/* JS icon for .jsx/.js files - check title text content */
+.code-block-title:has-text(".jsx")::before,
+.code-block-title:has-text(".js")::before {
+  content: 'JS';
+  background: #f7df1e;
+  color: #000;
+}
+
+/* Alternative: Use adjacent sibling to detect JS code blocks */
+.theme-code-block[class*="language-jsx"] {
+  /* JSX code block */
+}
+
+.theme-code-block[class*="language-js"] {
+  /* JS code block */
+}
+
+/* When code block follows a title, adjust styling */
+.code-block-title + .theme-code-block {
+  border-radius: 0 0 0.5rem 0.5rem !important;
+  margin-top: 0 !important;
+  border-top: none;
+}
+
+/* Ensure proper spacing between code blocks and previews */
+.code-block-title + .theme-code-block + div[class*="Preview"],
+.theme-code-block + div[class*="Preview"] {
+  margin-top: 1.5rem;
+}
+
+/* Code Preview Component - Groups code and preview with shared border */
+.code-preview-wrapper {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  overflow: visible;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+[data-theme="dark"] .code-preview-wrapper {
+  border-color: var(--ifm-color-emphasis-400);
+  background: var(--ifm-background-color);
+}
+
+/* Code block section */
+.code-preview-code-block {
+  background: #1e1e1e;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Custom header with tab buttons */
+.code-preview-header {
+  background: #252526;
+  border-bottom: 1px solid #3e3e42;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 36px;
+}
+
+.code-preview-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.code-preview-tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #cccccc;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--ifm-font-family-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.code-preview-tab-button:hover {
+  background: #2d2d30;
+  border-color: #3e3e42;
+}
+
+.code-preview-tab-button.active {
+  background: #1e1e1e;
+  border-color: #3e3e42;
+  color: #ffffff;
+}
+
+.code-preview-tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--ifm-font-family-monospace);
+  flex-shrink: 0;
+}
+
+.code-preview-tab-filename {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.code-preview-filename-only {
+  color: #cccccc;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* Code content area */
+.code-preview-code-content {
+  padding: 1rem 1.25rem;
+  background: #1e1e1e;
+  overflow-x: auto;
+}
+
+.code-preview-code-content pre {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.code-preview-code-content code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #d4d4d4 !important;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  display: block;
+}
+
+/* Syntax highlighting for code preview - Comprehensive Prism token styles */
+.code-preview-code-content .token.keyword,
+.code-preview-code-content .token.operator,
+.code-preview-code-content .token.boolean,
+.code-preview-code-content .token.number,
+.code-preview-code-content .token.function,
+.code-preview-code-content .token.class-name,
+.code-preview-code-content .token.string,
+.code-preview-code-content .token.comment,
+.code-preview-code-content .token.punctuation,
+.code-preview-code-content .token.property,
+.code-preview-code-content .token.tag,
+.code-preview-code-content .token.attr-name,
+.code-preview-code-content .token.attr-value,
+.code-preview-code-content .token.selector,
+.code-preview-code-content .token.variable,
+.code-preview-code-content .token.constant {
+  /* Let Prism theme handle colors, but ensure visibility */
+  font-family: var(--ifm-font-family-monospace) !important;
+}
+
+/* Ensure Prism highlighting is visible */
+.code-preview-code-content code[class*="language-"] {
+  color: #d4d4d4 !important;
+  font-family: var(--ifm-font-family-monospace) !important;
+}
+
+/* Ensure Prism tokens are visible and properly styled */
+.code-preview-code-content code[class*="language-"] .token {
+  font-family: var(--ifm-font-family-monospace) !important;
+}
+
+.code-preview-code-content .token.keyword {
+  color: #c586c0 !important;
+}
+
+.code-preview-code-content .token.string {
+  color: #ce9178 !important;
+}
+
+.code-preview-code-content .token.function {
+  color: #dcdcaa !important;
+}
+
+.code-preview-code-content .token.class-name {
+  color: #4ec9b0 !important;
+}
+
+.code-preview-code-content .token.punctuation {
+  color: #d4d4d4 !important;
+}
+
+.code-preview-code-content .token.operator {
+  color: #d4d4d4 !important;
+}
+
+.code-preview-code-content .token.comment {
+  color: #6a9955 !important;
+  font-style: italic;
+}
+
+.code-preview-code-content .token.number {
+  color: #b5cea8 !important;
+}
+
+.code-preview-code-content .token.boolean {
+  color: #569cd6 !important;
+}
+
+.code-preview-code-content .token.property {
+  color: #9cdcfe !important;
+}
+
+.code-preview-code-content .token.tag {
+  color: #569cd6 !important;
+}
+
+.code-preview-code-content .token.attr-name {
+  color: #9cdcfe !important;
+}
+
+.code-preview-code-content .token.attr-value {
+  color: #ce9178 !important;
+}
+
+.code-preview-code-content .token.selector {
+  color: #d7ba7d !important;
+}
+
+.code-preview-code-content .token.variable {
+  color: #9cdcfe !important;
+}
+
+.code-preview-code-content .token.constant {
+  color: #4fc1ff !important;
+}
+
+/* Preview section - overflow visible so Select/Menu dropdowns can extend outside */
+.code-preview-preview-section {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  overflow: visible;
+}
+
+[data-theme="dark"] .code-preview-preview-section {
+  background: var(--ifm-background-color);
+  border-top-color: var(--ifm-color-emphasis-400);
+}
+
+/* Ensure preview content takes full width */
+.code-preview-preview-section > * {
+  width: 100%;
+}
+
+/* Hide default Docusaurus tabs when using CodePreview */
+.code-preview-wrapper + .tabs-container,
+.code-preview-wrapper ~ .tabs-container {
+  display: none;
+}
+
+/* Code block wrapper for filename above */
+.code-block-wrapper {
+  margin: 1.5rem 0;
+}
+
+.code-block-filename {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #252526;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #cccccc;
+  font-weight: 500;
+  font-family: var(--ifm-font-family-base);
+}
+
+.code-block-filename-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--ifm-font-family-monospace);
+  flex-shrink: 0;
+}
+
+.code-block-filename-icon.ts {
+  background: #007acc;
+  color: white;
+}
+
+.code-block-filename-icon.js {
+  background: #f7df1e;
+  color: #000;
+}
+
+/* Style the button container as a header - Docusaurus structure */
+.theme-code-block > div:first-child {
+  background: #252526 !important;
+  border-bottom: 1px solid #3e3e42 !important;
+  padding: 0.5rem 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #cccccc !important;
+  font-family: var(--ifm-font-family-base);
+  margin: 0 !important;
+  border-radius: 0 !important;
+  min-height: 36px;
+  position: relative;
+}
+
+/* Remove the old pseudo-elements from button container */
+.theme-code-block > div:first-child::before,
+.theme-code-block > div:first-child::after {
+  display: none;
+}
+
+/* Ensure buttons are positioned correctly */
+.theme-code-block > div:first-child button {
+  margin-left: 0;
+  order: 999;
+}
+
+/* When code block has filename wrapper, adjust border radius */
+.code-block-wrapper .theme-code-block {
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: 0;
+}
+
+.theme-code-block pre {
+  margin: 0 !important;
+  padding: 1rem 1.25rem !important;
+  background: #1e1e1e !important;
+  border-radius: 0 !important;
+}
+
+.theme-code-block code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #d4d4d4 !important;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Syntax highlighting colors to match reference */
+.theme-code-block .token.keyword {
+  color: #c586c0 !important;
+}
+
+.theme-code-block .token.string {
+  color: #ce9178 !important;
+}
+
+.theme-code-block .token.function {
+  color: #dcdcaa !important;
+}
+
+.theme-code-block .token.class-name {
+  color: #4ec9b0 !important;
+}
+
+.theme-code-block .token.punctuation {
+  color: #d4d4d4 !important;
+}
+
+.theme-code-block .token.operator {
+  color: #d4d4d4 !important;
 }
 
 .theme-code-block-highlighted-line {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(204, 143, 227, 0.15);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid var(--ifm-color-primary);
 }
 
 [data-theme="dark"] .theme-code-block-highlighted-line {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(204, 143, 227, 0.2);
+}
+
+/* Code block action buttons */
+.theme-code-block button {
+  background: transparent;
+  border: 1px solid #3e3e42;
+  color: #cccccc;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.theme-code-block button:hover {
+  background: #2d2d30;
+  border-color: #007acc;
+  color: #ffffff;
+  transform: none;
+}
+
+/* Inline code */
+code {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--ifm-color-primary-dark);
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] code {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-primary-light);
+}
+
+/* Enhanced Props Tables */
+.markdown table {
+  display: table;
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+  background: var(--ifm-background-surface-color);
+  table-layout: auto;
+}
+
+/* Ensure table cells expand to fill available width */
+.markdown table tbody td,
+.markdown table thead th {
+  width: auto;
+  min-width: 0;
+}
+
+.markdown table tbody tr {
+  display: table-row;
+}
+
+/* Allow content in cells to expand */
+.markdown table tbody td {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.markdown table thead {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+}
+
+.markdown table thead th {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border: none;
+}
+
+.markdown table tbody tr {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown table tbody tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.markdown table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.markdown table tbody td {
+  padding: 1rem 1.25rem;
+  border: none;
+  vertical-align: top;
+}
+
+.markdown table tbody td:first-child {
+  font-weight: 600;
+  color: var(--ifm-color-primary-dark);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9em;
+}
+
+[data-theme="dark"] .markdown table tbody td:first-child {
+  color: var(--ifm-color-primary-light);
+}
+
+.markdown table tbody td code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.9em;
+  color: inherit;
+}
+
+/* Enhanced Badges */
+.badge {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.badge-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.badge-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.badge-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.badge-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.badge-blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.badge-green {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.badge-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+}
+
+.badge-orange {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+/* Enhanced Details/Summary */
+details {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  transition: all 0.2s ease;
+}
+
+details:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ifm-color-primary-dark);
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: calc(var(--ifm-global-radius) - 2px);
+  transition: background-color 0.2s ease;
+}
+
+details summary:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme="dark"] details summary {
+  color: var(--ifm-color-primary-light);
+}
+
+details[open] {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Component Preview Containers */
+.markdown > div[class*="Preview"] {
+  margin: 1.5rem 0 2rem 0;
+  padding: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+}
+
+/* Align previews with code blocks */
+.markdown > h3 + div[class*="Preview"],
+.markdown > h4 + div[class*="Preview"],
+.markdown > details + div[class*="Preview"] {
+  margin-top: 1rem;
+}
+
+/* Ensure code blocks after previews are aligned */
+.markdown > div[class*="Preview"] + .theme-code-block,
+.markdown > div[class*="Preview"] + details {
+  margin-top: 1.5rem;
+}
+
+/* Align code blocks with previews */
+.markdown > details + .theme-code-block {
+  margin-top: 1rem;
+}
+
+.markdown > .theme-code-block + div[class*="Preview"] {
+  margin-top: 1rem;
+}
+
+/* Ensure tables in preview containers take full width */
+.markdown > div[class*="Preview"] {
+  display: block;
+}
+
+.markdown > div[class*="Preview"] > div {
+  width: 100%;
+}
+
+.markdown > div[class*="Preview"] table {
+  width: 100% !important;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.markdown > div[class*="Preview"] table thead th,
+.markdown > div[class*="Preview"] table tbody td {
+  width: auto;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.markdown > div[class*="Preview"] table tbody td {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Force table cells to expand */
+.markdown > div[class*="Preview"] table tbody tr {
+  display: table-row;
+  width: 100%;
+}
+
+/* Ensure action buttons and content in cells expand properly */
+.markdown > div[class*="Preview"] table tbody td > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+}
+
+.markdown > div[class*="Preview"] table tbody td > div > * {
+  flex-shrink: 0;
+}
+
+/* Ensure table wrapper takes full width */
+.markdown > div[class*="Preview"] > div > div {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.markdown > div[class*="Preview"] > div > div > table {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* Horizontal Rules */
+.markdown > hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 2px solid var(--ifm-color-emphasis-300);
+  background: none;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+  font-style: italic;
+  color: var(--ifm-color-content-secondary);
+}
+
+[data-theme="dark"] .markdown blockquote {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Links */
+.markdown a {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.markdown a:hover {
+  color: var(--ifm-color-primary-darker);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .markdown a {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme="dark"] .markdown a:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-left-width: 4px;
+  margin: 1.5rem 0;
+}
+
+.admonition-heading {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.admonition-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Sidebar enhancements */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Fix sidebar chevron icon width */
+.theme-doc-sidebar-item-link,
+.theme-doc-sidebar-item-category {
+  position: relative;
+}
+
+.theme-doc-sidebar-item-link-level-1 > .menu__link,
+.theme-doc-sidebar-item-category-level-1 > .menu__link {
+  padding-right: 0.5rem;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+}
+
+.menu__link .menu__link--sublist::after {
+  width: 1rem;
+  min-width: 1rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Main content area */
+.main-wrapper {
+  background: var(--ifm-background-color);
+}
+
+/* Ensure markdown content and code blocks take full width */
+.theme-doc-markdown {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.theme-doc-markdown .markdown {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Override Docusaurus container constraints */
+.theme-doc-markdown .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure all content within markdown takes full width */
+.theme-doc-markdown .markdown > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure code preview wrapper takes full width */
+.markdown .code-preview-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure code blocks take full width */
+.markdown .code-preview-code-content {
+  width: 100%;
+}
+
+.markdown .code-preview-code-content pre {
+  width: 100%;
+  max-width: 100%;
+}
+
+.markdown .code-preview-code-content code {
+  width: 100%;
+  display: block;
+}
+
+/* Ensure regular code blocks also take full width */
+.markdown .theme-code-block {
+  width: 100%;
+  max-width: 100%;
+}
+
+.markdown pre {
+  width: 100%;
+  max-width: 100%;
+}
+
+.markdown code[class*="language-"] {
+  width: 100%;
+  display: block;
+}
+
+/* Better spacing for sections */
+.markdown > section {
+  margin-bottom: 3rem;
+}
+
+/* Enhanced code block buttons */
+.theme-code-block button {
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.theme-code-block button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 996px) {
+  .markdown > h1 {
+    font-size: 2rem;
+  }
+  
+  .markdown > h2 {
+    font-size: 1.75rem;
+  }
+  
+  .markdown table {
+    font-size: 0.9rem;
+  }
+  
+  .markdown table thead th,
+  .markdown table tbody td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .markdown table {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .theme-code-block {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
 }

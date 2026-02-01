@@ -2,10 +2,10 @@ import { useCallback } from "react";
 import { useTableContext } from "../tableContext";
 
 export const useGetTableData = () => {
-  const { pagination, search, options } = useTableContext();
+  const { pagination, search, actions } = useTableContext();
 
   const getTableDate = useCallback(() => {
-    if (!options?.actions?.get) return;
+    if (!actions?.get) return;
 
     const props: Record<string, string | number | undefined> = {};
 
@@ -16,18 +16,8 @@ export const useGetTableData = () => {
 
     if (search.query) props.search = search.query;
 
-    options.actions.get(props);
+    actions.get(props);
   }, []);
 
   return { getTableDate };
 };
-
-export function useGetSearchTableFunction() {
-  const { options } = useTableContext();
-
-  if (options?.actions?.search) {
-    return options.actions.search;
-  } else if (options?.actions?.get) {
-    return options.actions.get;
-  }
-}

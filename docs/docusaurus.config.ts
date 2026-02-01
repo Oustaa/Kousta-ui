@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
@@ -18,6 +19,10 @@ const config: Config = {
 
   i18n: { defaultLocale: "en", locales: ["en"] },
 
+  customFields: {
+    API_BASE_URL: process.env.API_BASE_URL,
+  },
+
   presets: [
     [
       "classic",
@@ -27,6 +32,11 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/Oustaa/Kousta-ui/blob/main/docs/",
         },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+        },
         theme: { customCss: "./src/css/custom.css" },
       } satisfies Preset.Options,
     ],
@@ -35,6 +45,18 @@ const config: Config = {
   themeConfig: {
     liveCodeBlock: { playgroundPosition: "bottom" },
     image: "img/logo.png",
+    ...(process.env.DOCSEARCH_APP_ID &&
+    process.env.DOCSEARCH_API_KEY &&
+    process.env.DOCSEARCH_INDEX_NAME
+      ? {
+          algolia: {
+            appId: process.env.DOCSEARCH_APP_ID,
+            apiKey: process.env.DOCSEARCH_API_KEY,
+            indexName: process.env.DOCSEARCH_INDEX_NAME,
+            contextualSearch: false,
+          },
+        }
+      : {}),
     navbar: {
       logo: {
         alt: "kousta-ui logo",
@@ -47,6 +69,10 @@ const config: Config = {
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "Docs",
+        },
+        {
+          type: "search",
+          position: "right",
         },
         {
           href: "https://github.com/oustaa/kousta-ui",
@@ -63,8 +89,8 @@ const config: Config = {
           items: [
             { label: "Table", to: "/docs/category/table" },
             { label: "Components", to: "/docs/category/components" },
-            { label: "Hooks", to: "/docs/category/hooks" },
-            { label: "Helpers", to: "/docs/category/helpers" },
+            { label: "Hooks", to: "/docs/hooks/overview" },
+            { label: "Helpers", to: "/docs/helpers/overview" },
           ],
         },
         {

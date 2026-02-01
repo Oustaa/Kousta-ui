@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useContext } from "react";
+import React, { createContext, PropsWithChildren, useContext } from "react";
 import type { TableProps, THeader } from "./_props";
 
 export type TableHeaders<T> = {
@@ -6,7 +6,10 @@ export type TableHeaders<T> = {
   setHeaders: React.Dispatch<React.SetStateAction<THeader<T>>>;
 };
 
-type TableContextType<T> = Omit<TableProps<T>, "headers" | "pagination"> & {
+export type TableContextType<T> = Omit<
+  TableProps<T>,
+  "headers" | "pagination"
+> & {
   headers: TableHeaders<T>;
   rowSelection: {
     selectedRows: Record<number, unknown>;
@@ -16,6 +19,10 @@ type TableContextType<T> = Omit<TableProps<T>, "headers" | "pagination"> & {
   search: {
     query: string;
     setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
+  total: {
+    total: number;
+    setTotal: React.Dispatch<React.SetStateAction<number>>;
   };
   displayAs: string;
   setDisplayAs: (as: string) => void;

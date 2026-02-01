@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Zap, Shield, Settings } from 'lucide-react';
 import FormExample from '@site/src/components/HomepageFeatures/FormExample';
@@ -36,11 +35,11 @@ function HomepageHeader() {
         <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
         <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
+          <a
             className="button button--primary button--lg"
-            to="/docs/intro">
+            href="/docs/Intro">
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
     </header>
@@ -81,7 +80,12 @@ export default function Home(): JSX.Element {
           <div className="container">
             <h2 className={styles.sectionTitle}>Component Examples</h2>
             <FormExample />
-            <div style={{ marginTop: '2rem' }}><TableExample /></div>
+          </div>
+        </section>
+        <section className={styles.examplesSection}>
+          <div className="container">
+            <h2 className={styles.sectionTitle}>Table Example</h2>
+            <TableExample />
           </div>
         </section>
         <section className={styles.examplesSection}>

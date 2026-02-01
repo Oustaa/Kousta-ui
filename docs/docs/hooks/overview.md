@@ -11,7 +11,7 @@ The **@kousta-ui/hooks** package provides a collection of essential, reusable Re
 
 ---
 
-## 🚀 Features
+## Features
 
 - **TypeScript First**: Full TypeScript support with comprehensive type definitions
 - **Performance Optimized**: Efficient implementations with minimal re-renders
@@ -22,7 +22,7 @@ The **@kousta-ui/hooks** package provides a collection of essential, reusable Re
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @kousta-ui/hooks
@@ -34,7 +34,7 @@ pnpm add @kousta-ui/hooks
 
 ---
 
-## 🎯 Available Hooks
+## Available Hooks
 
 | Hook | Purpose | Common Use Cases |
 |------|---------|------------------|
@@ -45,31 +45,31 @@ pnpm add @kousta-ui/hooks
 
 ---
 
-## 🎨 Quick Start
+## Quick Start
 
 ```tsx
-import { 
-  useDisclosure, 
-  usePagination, 
-  useDebounceCallback, 
-  useScrollLock 
+import {
+  useDisclosure,
+  usePagination,
+  useDebounceCallback,
+  useScrollLock
 } from "@kousta-ui/hooks";
 
 function App() {
   // Modal state management
   const { opened, open, close, toggle } = useDisclosure(false);
-  
+
   // Pagination for data
   const { page, nextPage, prevPage, setPage } = usePagination({
     total: 100,
     limit: 10,
   });
-  
+
   // Debounced search
   const debouncedSearch = useDebounceCallback((query: string) => {
     console.log("Searching for:", query);
   }, 300);
-  
+
   // Scroll lock for modal
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -86,13 +86,13 @@ function App() {
   return (
     <div>
       <button onClick={handleModalOpen}>Open Modal</button>
-      
+
       <input
         type="text"
         placeholder="Search..."
         onChange={(e) => debouncedSearch(e.target.value)}
       />
-      
+
       <div>
         <button onClick={prevPage} disabled={page === 1}>
           Previous
@@ -109,7 +109,7 @@ function App() {
 
 ---
 
-## 📊 Hook Categories
+## Hook Categories
 
 ### State Management Hooks
 
@@ -132,7 +132,7 @@ Hooks that enhance user experience:
 
 ---
 
-## 🎯 When to Use These Hooks
+## When to Use These Hooks
 
 ### Use `useDisclosure` when:
 
@@ -160,7 +160,7 @@ Hooks that enhance user experience:
 
 ---
 
-## 🔧 TypeScript Support
+## TypeScript Support
 
 All hooks provide full TypeScript support:
 
@@ -186,7 +186,7 @@ const debouncedFn = useDebounceCallback(
 
 ---
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 - **Optimized Re-renders**: Hooks use `useCallback` and `useMemo` where appropriate
 - **Minimal Dependencies**: Zero external dependencies for smaller bundle size
@@ -197,7 +197,7 @@ const debouncedFn = useDebounceCallback(
 
 ---
 
-## 🔄 Composition Examples
+## Composition Examples
 
 ### Search with Pagination
 
@@ -226,12 +226,12 @@ function SearchableList() {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
       />
-      
+
       {/* Render results */}
       {results.map((item) => (
         <div key={item.id}>{item.name}</div>
       ))}
-      
+
       {/* Pagination controls */}
       <div>
         <button onClick={prevPage}>Previous</button>
@@ -263,7 +263,7 @@ function ModalExample() {
   return (
     <div>
       <button onClick={handleOpen}>Open Modal</button>
-      
+
       {opened && (
         <div className="modal-overlay">
           <div className="modal">
@@ -280,7 +280,7 @@ function ModalExample() {
 
 ---
 
-## 📚 Best Practices
+## Best Practices
 
 ### Do's
 
@@ -298,21 +298,21 @@ function ModalExample() {
 
 ---
 
-## 📖 Next Steps
+## Next Steps
 
-- Learn about individual [hooks](/docs/category/hooks)
+- Learn about individual [hooks](/docs/hooks/overview)
 - Check out [Components package](/docs/category/components)
 - Explore [Table package](/docs/category/table)
-- Browse [Helpers utilities](/docs/category/helpers)
+- Browse [Helpers](/docs/helpers/overview)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [contributing guidelines](https://github.com/Oustaa/ousta-ui/blob/main/CONTRIBUTING.md) for details.
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Ousta](https://github.com/Oustaa)

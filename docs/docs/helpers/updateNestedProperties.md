@@ -49,6 +49,14 @@ The `key` parameter uses dot notation to specify nested property locations:
 
 ---
 
+## Edge cases & gotchas
+
+- **Overwriting non-objects**: If an intermediate value is not an object (or is `null`), it will be replaced with a new object so the path can be created.
+- **Arrays are treated as objects**: The helper does not do special array operations; using keys like `"items.0.name"` will create plain objects unless your existing structure already contains arrays.
+- **Type changes**: Setting a path can change the type at that location (e.g. string → object). This is expected—validate inputs if you need stricter guarantees.
+
+---
+
 ## Basic Usage
 
 ```javascript

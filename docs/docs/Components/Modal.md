@@ -3,6 +3,7 @@ sidebar_position: 4
 ---
 
 import Badge from '@site/src/components/Badge';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   UncontrolledModal,
   ControlledModal,
@@ -20,13 +21,31 @@ The **Modal** component provides an accessible and flexible dialog interface for
 
 ## Usage
 
-```tsx
-import { Modal } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ModalExample.tsx",
+      code: `import { Modal } from "@kousta-ui/components";
 
 <Modal modalTrigger="Open Modal">
   {/* Modal Content */}
-</Modal>
-```
+</Modal>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ModalExample.jsx",
+      code: `import { Modal } from "@kousta-ui/components";
+
+<Modal modalTrigger="Open Modal">
+  {/* Modal Content */}
+</Modal>`
+    }
+  ]}
+  defaultTab="ts"
+/>
 
 The modal can be controlled **internally** (uncontrolled) or **externally** (controlled) via props.
 
@@ -45,6 +64,7 @@ The modal can be controlled **internally** (uncontrolled) or **externally** (con
 | `withBackdrop` | `boolean` | Displays a backdrop overlay behind the modal. | No | `true` |
 | `position` | [`ModalPosition`](#modal-positions) | Controls modal position relative to the viewport. | No | `"center"` |
 | `offset` | `number` | Distance in pixels from viewport edge (used with `top`, `bottom`, etc.). | No | `undefined` |
+| `modalTriggerBtnVariant` | [`ButtonVariant`](/docs/Components/Button#types-reference) | — | Variant for the trigger button when using `modalTrigger`. |
 | `fullHeight` | `boolean` | Makes the modal occupy the full viewport height (`100vh`). | No | `false` |
 | `fullWidth` | `boolean` | Makes the modal occupy the full viewport width (`100vw`). | No | `false` |
 | `beforeOpen` | `() => void \| boolean` | Executes before opening. Returning `false` cancels opening. | No | - |
@@ -62,15 +82,28 @@ An **uncontrolled modal** manages its open state internally. Use this when the m
 Use **uncontrolled modals** for simple UI dialogs such as confirmations or local information.
 :::
 
-```tsx
-<Modal modalTrigger="Open Modal">
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "UncontrolledModal.tsx",
+      code: `<Modal modalTrigger="Open Modal">
   <p>This is a simple uncontrolled modal.</p>
-</Modal>
-```
-
-#### Preview
-<UncontrolledModal />
-<br/><br/>
+</Modal>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "UncontrolledModal.jsx",
+      code: `<Modal modalTrigger="Open Modal">
+  <p>This is a simple uncontrolled modal.</p>
+</Modal>`
+    }
+  ]}
+  preview={<><UncontrolledModal /><br/><br/></>}
+  defaultTab="ts"
+/>
 
 :::warning When not to use it
 Avoid uncontrolled modals for complex or data-heavy components since they mount immediately when the page loads.
@@ -82,8 +115,13 @@ Avoid uncontrolled modals for complex or data-heavy components since they mount 
 
 A **controlled modal** allows parent components to manage its open/close state manually. This is useful for modals that depend on asynchronous data or need to be programmatically opened/closed.
 
-```tsx
-import { useDisclosure } from "@kousta-ui/hooks";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ControlledModal.tsx",
+      code: `import { useDisclosure } from "@kousta-ui/hooks";
 
 const Example = () => {
   const { close, open, opened } = useDisclosure(false);
@@ -96,11 +134,31 @@ const Example = () => {
       </Modal>
     </>
   );
-};
-```
-#### Preview
-<ControlledModal />
-<br/><br/>
+};`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ControlledModal.jsx",
+      code: `import { useDisclosure } from "@kousta-ui/hooks";
+
+const Example = () => {
+  const { close, open, opened } = useDisclosure(false);
+
+  return (
+    <>
+      <button onClick={open}>Open Modal</button>
+      <Modal opened={opened} onClose={close} title="Controlled Modal">
+        <p>This modal is controlled from outside.</p>
+      </Modal>
+    </>
+  );
+};`
+    }
+  ]}
+  preview={<><ControlledModal /><br/><br/></>}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -108,18 +166,36 @@ const Example = () => {
 
 By combining `position` and `fullHeight`, you can create **Drawer-like modals** anchored to screen edges.
 
-```tsx
-<Modal
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ModalDrawer.tsx",
+      code: `<Modal
   modalTrigger="Open Drawer"
   position="left-top"
   fullHeight
 >
   <p>This modal behaves like a drawer.</p>
-</Modal>
-```
-#### Preview
-<ModalAsDrawer />
-<br/><br/>
+</Modal>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ModalDrawer.jsx",
+      code: `<Modal
+  modalTrigger="Open Drawer"
+  position="left-top"
+  fullHeight
+>
+  <p>This modal behaves like a drawer.</p>
+</Modal>`
+    }
+  ]}
+  preview={<><ModalAsDrawer /><br/><br/></>}
+  defaultTab="ts"
+/>
 
 
 ---
@@ -169,8 +245,13 @@ The modal can close on:
 
 Disable either behavior explicitly:
 
-```tsx
-import { Modal } from "@kousta-ui/components";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ModalCloseBehavior.tsx",
+      code: `import { Modal } from "@kousta-ui/components";
 import { useDisclosure } from "@kousta-ui/hooks";
 
 export function Example() {
@@ -189,12 +270,37 @@ export function Example() {
       </Modal>
     </>
   );
-}
-```
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ModalCloseBehavior.jsx",
+      code: `import { Modal } from "@kousta-ui/components";
+import { useDisclosure } from "@kousta-ui/hooks";
 
-### Preview
+export function Example() {
+  const { open, close, opened } = useDisclosure(false);
 
-<ModalCloseBehaviorPreview />
+  return (
+    <>
+      <button onClick={open}>Open</button>
+      <Modal
+        opened={opened}
+        onClose={close}
+        closeOnClickEsc={false}
+        closeOnClickOutside={false}
+      >
+        <p>Use the close button (X) to close this modal.</p>
+      </Modal>
+    </>
+  );
+}`
+    }
+  ]}
+  preview={<ModalCloseBehaviorPreview />}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -241,6 +347,44 @@ export type ModalProps = { /* see props table above */ }
 - The modal automatically handles body scroll locking.
 - Use `withBackdrop={false}` for non-blocking overlays.
 - Combine `fullWidth` and `position="bottom"` for a **mobile sheet** effect.
+
+---
+
+## Accessibility
+
+- **Focus & keyboard**: Ensure keyboard users can reach the modal content. If you render important actions in the footer, keep their tab order logical.
+- **Escape key**: The modal supports closing with Escape by default (`closeOnClickEsc={true}`).
+- **Outside click**: The modal supports closing on outside click by default (`closeOnClickOutside={true}`).
+- **Accessible title**: Prefer providing a `title` so screen readers have a clear dialog heading.
+
+<Badge color="yellow">Note</Badge> If you render a custom `modalTrigger` element, ensure it has an accessible name (text content or `aria-label`).
+
+---
+
+## Component Props Provider
+
+You can set default modal behavior for a subtree using [`ComponentPropsProvider`](/docs/Components/ComponentPropsProvider):
+
+```tsx
+import { ComponentPropsProvider, Modal } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ComponentPropsProvider
+      modal={{
+        size: "lg",
+        position: "center",
+        withBackdrop: true,
+        withCloseBtn: true,
+      }}
+    >
+      <Modal modalTrigger="Open modal" title="Settings">
+        Content
+      </Modal>
+    </ComponentPropsProvider>
+  );
+}
+```
 
 ---
 

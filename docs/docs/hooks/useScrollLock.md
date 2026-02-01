@@ -35,6 +35,8 @@ This hook doesn't accept any parameters.
 | `lockScroll` | `() => void` | Function to lock body scrolling |
 | `unlockScroll` | `() => void` | Function to unlock body scrolling |
 
+<Badge color="green">Note</Badge> `unlockScroll()` resets both `overflow` and `paddingRight` so the page layout returns to normal after unlocking.
+
 ---
 
 ## Basic Usage

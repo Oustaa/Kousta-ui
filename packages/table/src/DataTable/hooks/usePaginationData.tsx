@@ -1,7 +1,7 @@
 import { useTableContext } from "../tableContext";
 
-export const usePaginationData = () => {
-  const { data, pagination } = useTableContext();
+export const usePaginationData = ({ data }: { data: unknown[] }) => {
+  const { pagination } = useTableContext();
 
   if (!pagination) {
     return data || [];

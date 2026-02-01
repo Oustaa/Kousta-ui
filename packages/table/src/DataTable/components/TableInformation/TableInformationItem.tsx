@@ -12,11 +12,6 @@ const TableInformationItem: FC<TableInformationItemProps> = ({
   onClear,
   value,
 }) => {
-  console.log({
-    label,
-    onClear,
-    value,
-  });
   return (
     <div
       className={[

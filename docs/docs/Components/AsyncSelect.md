@@ -3,14 +3,33 @@ sidebar_position: 7
 ---
 
 import Badge from '@site/src/components/Badge';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
   QuickStartPreview,
-  CustomRenderPreview
+  CustomRenderPreview,
+  GenericTypesPreview,
 } from '@site/src/components/@Components/AsyncSelect';
 
 # AsyncSelect
 
 An advanced **AsyncSelect** component that provides server-side search and infinite scrolling capabilities. Perfect for large datasets where you need to fetch data dynamically from an API.
+
+AsyncSelect uses [`Select`](/docs/Components/Select) internally.
+
+---
+
+## Installation
+
+```bash
+npm install @kousta-ui/components
+```
+
+### Import styles
+
+```ts
+import "@kousta-ui/components/esm/index.css";
+```
 
 ---
 
@@ -27,24 +46,37 @@ An advanced **AsyncSelect** component that provides server-side search and infin
 
 | Name | Type | Default | Provider? | Description |
 |------|------|---------|-----------|-------------|
-| `getData` | `(params: GetDataParams) => Promise<any>` | **Required** | No | Function to fetch data from your API. |
-| `extractDynamicData` | `(response: any) => T[]` | **Required** | No | Function to extract the data array from the API response. |
-| `hasMore` | `(response: any, page: number) => boolean` | **Required** | No | Function to determine if more pages are available for infinite scrolling. |
+| `getData` | `(params: { page: number; limit: number; searchTerm?: string }) => Promise<unknown>` | **Required** | No | Function that fetches data from your API. |
+| `extractDynamicData` | `(response: any) => T[]` | — | No | Extracts the items array from your API response. If omitted, the component assumes the response itself is `T[]`. |
+| `hasMore` | `(response: any, page: number) => boolean` | — | No | Determines if there are more pages to load. |
+| `searchTimeout` | `number` | `500` | Yes | Debounce timeout (ms) before requesting the server when searching. |
+| `infiniteScroll` | `boolean` | — | No | Enables/disables infinite scrolling (if supported by your usage). |
 | `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | Configuration for extracting value, label, and custom rendering from data items. |
-| `debounceMs` | `number` | `300` | No | Debounce delay in milliseconds for search requests. |
-| `...` | `SelectProps<T>` | | | Inherits all other props from the `Select` component, such as `label`, `placeholder`, `clearable`, `disabled`, etc. |
+| `...` | [`SelectProps<T>`](/docs/Components/Select#props) | | | Inherits all other props from `Select` except `data`, `loading`, and `onSearch`. |
 
-### GetDataParams
+---
+
+## hasMore
+
+`hasMore` controls when AsyncSelect stops requesting additional pages.
+
+It receives:
+
+- The full `response` returned by `getData`
+- The current `page` that was requested
+
+It must return:
+
+- `true` if another page can be requested
+- `false` to stop loading more
+
+For example, if your API returns a pagination meta like `meta.last_page`:
 
 ```ts
-type GetDataParams = {
-  page: number;        // Current page number (starts at 1)
-  limit: number;       // Number of items per page
-  searchTerm: string;  // Current search term
-};
+hasMore={(resp, page) => page < resp.meta.last_page}
 ```
 
-<Badge color="blue">Note</Badge> The component automatically handles loading states, debouncing, and error handling for async operations.
+<Badge color="blue">Note</Badge> AsyncSelect automatically calls `getData` initially and then again when you scroll to the end (and when searching).
 
 ---
 
@@ -54,57 +86,536 @@ type GetDataParams = {
 
 Provide `getData`, `extractDynamicData`, and `hasMore` to handle fetching and pagination. The component manages the loading state and search term.
 
-```tsx
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectBasic.tsx",
+      code: `import React from "react";
 import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-// Mock API call
-const searchUsers = ({ page, limit, searchTerm }) => {
-  return fetch(`/api/users?page=${page}&limit=${limit}&q=${searchTerm || ""}`)
-    .then((r) => r.json());
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
 };
 
-<AsyncSelect
-  label="Search Users"
-  getData={searchUsers}
-  extractDynamicData={(response) => response.items}
-  hasMore={(response, page) => page < response.totalPages}
-  options={{ value: "id", label: "name" }}
-  placeholder="Type to search users..."
-/>
-```
+type Product = {
+  id: number;
+  designation: string;
+};
 
-### Preview
-<QuickStartPreview />
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Dynamic Select"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "id - designation" }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectBasic.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Dynamic Select"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "id - designation" }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<BrowserOnly>{() => <QuickStartPreview />}</BrowserOnly>}
+  defaultTab="ts"
+/>
 
 ### With Custom Option Rendering
 
 Just like the `Select` component, you can provide a custom `renderOption` function to display rich content in the dropdown.
 
-```tsx
-<AsyncSelect
-  label="Assign to User"
-  getData={searchUsers}
-  extractDynamicData={(response) => response.users}
-  hasMore={(response, page) => response.hasNextPage}
-  options={{
-    value: "id",
-    label: "name",
-    renderOption: (user) => (
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <img src={user.avatar} alt={user.name} style={{ width: 24, height: 24, borderRadius: "50%" }} />
-        <div>
-          <div style={{ fontWeight: "bold" }}>{user.name}</div>
-          <div style={{ fontSize: "12px", color: "#666" }}>{user.email}</div>
-        </div>
-      </div>
-    )
-  }}
-  placeholder="Search users by name or email..."
-/>
-```
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectCustomRender.tsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-### Preview
-<CustomRenderPreview />
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+};
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Custom option rendering"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{
+        value: "id",
+        label: "designation",
+        renderOption: (row) => \`id: \${row.id} - \${row.designation}\`,
+      }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectCustomRender.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Custom option rendering"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{
+        value: "id",
+        label: "designation",
+        renderOption: (row) => \`id: \${row.id} - \${row.designation}\`,
+      }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<BrowserOnly>{() => <CustomRenderPreview />}</BrowserOnly>}
+  defaultTab="ts"
+/>
+
+---
+
+## Generic types
+
+AsyncSelect is a generic component. Passing an explicit type parameter gives you proper type-checking for `options`, `extractDynamicData`, `disabledOption`, and custom renderers.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectGeneric.tsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+};
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Products"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "designation" }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectGeneric.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/api/v1/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const { siteConfig } = useDocusaurusContext();
+  const API_BASE_URL = String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Products"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "designation" }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<BrowserOnly>{() => <GenericTypesPreview />}</BrowserOnly>}
+  defaultTab="ts"
+/>
 
 ---
 
@@ -141,9 +652,14 @@ type GetDataParams = {
 };
 
 export type AsyncSelectProps<T extends SelectDataConstraints> = {
-  getData: (params: GetDataParams) => Promise<any>;
-  extractDynamicData: (response: any) => T[];
-  hasMore: (response: any, page: number) => boolean;
-  debounceMs?: number;
-} & Omit<SelectProps<T>, "data" | "onSearch">;
+  getData: (params: {
+    page: number;
+    limit: number;
+    searchTerm?: string;
+  }) => Promise<unknown>;
+  extractDynamicData?: (response: any) => T[];
+  infiniteScroll?: boolean;
+  hasMore?: (response: any, page: number) => boolean;
+  searchTimeout?: number;
+} & Omit<SelectProps<T>, "data" | "loading" | "onSearch">;
 ```

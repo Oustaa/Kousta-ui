@@ -9,8 +9,15 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 
 const TableHead = () => {
   const functionWithTableProps = useFunctionWithTableParams();
-  const { headers, options, config, rowSelection, displayAs, setDisplayAs } =
-    useTableContext();
+  const {
+    headers,
+    options,
+    actions,
+    config,
+    rowSelection,
+    displayAs,
+    setDisplayAs,
+  } = useTableContext();
 
   const extraviewsKeys = useMemo(() => {
     if (!options?.extraviews) return [];
@@ -28,8 +35,8 @@ const TableHead = () => {
   );
 
   useEffect(() => {
-    if (options?.actions?.get) {
-      functionWithTableProps(options.actions.get);
+    if (actions?.get) {
+      functionWithTableProps(actions.get);
     }
   }, []);
 
@@ -77,8 +84,7 @@ const TableHead = () => {
             <Menu.Target>
               <Button
                 variant="neutral"
-                children={"S/H"}
-                {...config?.toggleRows}
+                children={config?.icons?.toggleRows || "S/H"}
               />
             </Menu.Target>
             <Menu.DropDown>
@@ -90,6 +96,7 @@ const TableHead = () => {
                     <input
                       id={headerName}
                       type="checkbox"
+                      disabled={headers.data[headerName].alwaysVisible}
                       checked={visibleHeaders.includes(headerName)}
                       onChange={(event) => {
                         headers.setHeaders((prev) => ({
@@ -119,16 +126,26 @@ const TableHead = () => {
         {(options?.cards || extraviewsKeys.length !== 0) && (
           <Menu.Menu position="Bottom-End">
             <Menu.Target>
-              <Button variant="primary">...</Button>
+              <Button variant="primary">
+                {config?.icons?.extraViewsTogle || "..."}
+              </Button>
             </Menu.Target>
             <Menu.DropDown>
               {displayAs !== "table" && (
-                <Menu.Item onClick={() => setDisplayAs("table")}>
+                <Menu.Item
+                  leftSection={config?.icons?.tableExtraView}
+                  onClick={() => setDisplayAs("table")}
+                >
                   Table
                 </Menu.Item>
               )}
               {displayAs !== "card" && options?.cards && (
-                <Menu.Item onClick={() => setDisplayAs("card")}>Card</Menu.Item>
+                <Menu.Item
+                  leftSection={config?.icons?.cardExtraView}
+                  onClick={() => setDisplayAs("card")}
+                >
+                  Card
+                </Menu.Item>
               )}
 
               {extraviewsKeys.map((key) => {

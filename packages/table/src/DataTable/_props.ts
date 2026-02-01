@@ -4,12 +4,7 @@ import {
   PropsWithChildren,
   ReactNode,
 } from "react";
-import {
-  ButtonProps,
-  MenuItemProps,
-  MenuProps,
-  ModalProps,
-} from "@kousta-ui/components";
+import { ButtonProps, MenuItemProps, ModalProps } from "@kousta-ui/components";
 
 export type TableProps<T> = {
   data: T[];
@@ -18,13 +13,14 @@ export type TableProps<T> = {
   headers: THeader<T>;
   keyExtractor?: (row: T) => string | number;
   pagination?: TablePagination;
+  actions?: TActions<T>;
+  isStatic?: boolean;
 
   options?: TOptions<T>;
   config?: TConfig;
 };
 
 export type TOptions<T> = Partial<{
-  actions: Partial<TActions<T>>;
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
 
@@ -38,7 +34,7 @@ export type TOptions<T> = Partial<{
   viewComp: {
     Component: (row: T) => ReactNode;
     type?: "modal" | "extends";
-    modalOptions?: Omit<ModalProps, "opned" | "onClose" | "modalTrigger">;
+    modalOptions?: Omit<ModalProps, "opened" | "onClose" | "modalTrigger">;
     openModalIcon?: ReactNode;
     extendRowIcon?: ReactNode;
     minimizeRowIcon?: ReactNode;
@@ -46,13 +42,13 @@ export type TOptions<T> = Partial<{
     canView?: CanPerformAction<T>;
   } & (
     | {
-        type: "modal";
-        modalOptions?: Partial<ModalProps>;
-      }
+      type: "modal";
+      modalOptions?: Partial<ModalProps>;
+    }
     | {
-        type?: "extends";
-        modalOptions?: never;
-      }
+      type?: "extends";
+      modalOptions?: never;
+    }
   );
   bulkActions: TBulkActions<T>[];
   extraviews: Record<string, TExtraView<T>>;
@@ -69,16 +65,17 @@ export type THeaderValue<T> = {
   exec?: never | ((row: T) => string | ReactNode);
   visible?: boolean;
   canSee?: boolean;
+  alwaysVisible?: boolean;
 } & (
-  | {
+    | {
       value: string;
       exec?: never;
     }
-  | {
+    | {
       value?: never;
       exec: (row: T) => string | ReactNode;
     }
-);
+  );
 
 export type THeader<T> = Record<string, THeaderValue<T>>;
 
@@ -97,30 +94,51 @@ type TExtraView<T> = {
   loadingIndicator?: LoadingIndicator;
 };
 
-// type TStaticSearch = (
-//   q: string,
-//   options: {
-//     visibleHeaders: string[];
-//     props: Record<string, string | number | Array<string> | Array<number>>;
-//   },
-// ) => void;
-
-type TActions<T> = {
-  get: (params: Record<string, number | string | undefined>) => void;
-  edit: {
+export type TActions<T> = {
+  get?: (params: TParams) => void;
+  edit?: {
     canEdit?: CanPerformAction<T>;
     onEdit: (row: T) => void;
     title?: string | ReactNode;
     buttonProps?: ButtonProps;
+    // not implemented yet
+    afterEdit?: TAfterAction;
   };
-  delete: {
+  delete?: {
     canDelete?: CanPerformAction<T>;
     onDelete: (row: T) => void;
     title?: string | ReactNode;
     buttonProps?: ButtonProps;
+    // not implemented yet
+    afterDelete?: TAfterAction;
   };
-  search: (params: Record<string, number | string | undefined>) => void;
+  search?: TSearch<T>;
 };
+
+type TSearch<T> = {
+  searchOnType?: boolean;
+  searchTimer?: number;
+  static?: boolean;
+} & (
+    | {
+      searchOnType?: false;
+      searchTimer?: never;
+    }
+    | {
+      searchOnType?: true;
+      searchTimer?: number;
+    }
+  ) &
+  (
+    | {
+      static: true;
+      onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
+    }
+    | {
+      static?: false | undefined;
+      onSearch?: (params: TParams) => void;
+    }
+  );
 
 type ExtraActions<T> = {
   title: string | ReactNode;
@@ -137,14 +155,26 @@ type TablePagination = {
 };
 
 // Table config
-type TConfig = {
-  toggleRows?: false | Omit<ButtonProps, "onClick">;
+export type TConfig = {
+  toggleRows?: boolean;
   disableContextMenu?: boolean;
   noHead?: boolean;
-  selectFilter?: { icon: ReactNode; menuProps?: MenuProps };
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
   loadingIndicator?: LoadingIndicator;
+  icons?: {
+    toggleRows?: ReactNode;
+    selectRow?: ReactNode;
+    extraViewsTogle?: ReactNode;
+    tableExtraView?: ReactNode;
+    cardExtraView?: ReactNode;
+    refresh?: ReactNode;
+    selectOpened?: ReactNode;
+    selectClosed?: ReactNode;
+    paginationNext?: ReactNode;
+    paginationPrev?: ReactNode;
+    paginationDots?: ReactNode;
+  };
   props?: {
     table?: ComponentPropsWithoutRef<"table">;
     tbody?: ComponentPropsWithoutRef<"tbody">;
@@ -155,6 +185,10 @@ type TConfig = {
   };
 };
 
+export type TParams = Record<string, number | string | undefined>;
+
 type LoadingIndicator = (props: { visibleHeaders: string[] }) => ReactNode;
+
+type TAfterAction = (props: TParams) => unknown;
 
 export type CanPerformAction<T> = ((row: T) => boolean) | boolean;

@@ -13,10 +13,11 @@ export const usePagination = ({
 }: usePaginationProps) => {
   const [currentPage, setCurrentPage] = useState<number>(page);
   const [currentLimit, setCurrentLimit] = useState<number>(limit);
+  const [currentTotal, setCurrentTotal] = useState<number>(total);
 
   const totalPages = useMemo(() => {
-    return Math.ceil(total / currentLimit);
-  }, [total, currentLimit]);
+    return Math.ceil(currentTotal / currentLimit);
+  }, [currentTotal, currentLimit]);
 
   const nextPage = useCallback(() => {
     if (currentPage === totalPages) return;
@@ -41,7 +42,8 @@ export const usePagination = ({
   }, []);
 
   return {
-    total,
+    total: currentTotal,
+    setTotal: setCurrentTotal,
     totalPages,
     limit: currentLimit,
     page: currentPage,

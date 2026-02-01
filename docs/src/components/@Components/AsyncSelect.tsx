@@ -1,95 +1,136 @@
 import React from "react";
 import { AsyncSelect } from "@kousta-ui/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-// --- Mock API ---
-type User = {
-  id: string;
-  name: string;
-  email: string;
-  avatar: string;
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
 };
 
-type ApiResponse = {
-  items: User[];
-  totalItems: number;
-  totalPages: number;
-  currentPage: number;
+type Product = {
+  id: number;
+  designation: string;
 };
 
-const allUsers: User[] = [
-  { id: '1', name: 'John Doe', email: 'john.d@example.com', avatar: 'https://i.pravatar.cc/40?u=1' },
-  { id: '2', name: 'Jane Smith', email: 'jane.s@example.com', avatar: 'https://i.pravatar.cc/40?u=2' },
-  { id: '3', name: 'Peter Jones', email: 'peter.j@example.com', avatar: 'https://i.pravatar.cc/40?u=3' },
-  { id: '4', name: 'Mary Williams', email: 'mary.w@example.com', avatar: 'https://i.pravatar.cc/40?u=4' },
-  { id: '5', name: 'David Brown', email: 'david.b@example.com', avatar: 'https://i.pravatar.cc/40?u=5' },
-  { id: '6', name: 'Susan Davis', email: 'susan.d@example.com', avatar: 'https://i.pravatar.cc/40?u=6' },
-  { id: '7', name: 'Michael Miller', email: 'michael.m@example.com', avatar: 'https://i.pravatar.cc/40?u=7' },
-  { id: '8', name: 'Linda Wilson', email: 'linda.w@example.com', avatar: 'https://i.pravatar.cc/40?u=8' },
-];
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
 
-const mockApi = ({ page, limit, searchTerm }): Promise<ApiResponse> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const filteredUsers = allUsers.filter(user =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.email.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
 
-      const totalItems = filteredUsers.length;
-      const totalPages = Math.ceil(totalItems / limit);
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const items = filteredUsers.slice(startIndex, endIndex);
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
 
-      resolve({
-        items,
-        totalItems,
-        totalPages,
-        currentPage: page,
-      });
-    }, 500); // Simulate network delay
-  });
-};
-// --- End Mock API ---
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
 
-export const QuickStartPreview = () => (
-  <div style={{ width: "100%", maxWidth: 420 }}>
-    <AsyncSelect<User>
-      label="Search Users"
-      getData={mockApi}
-      extractDynamicData={(response: ApiResponse) => response.items}
-      hasMore={(response: ApiResponse, page) => page < response.totalPages}
-      options={{ value: "id", label: "name" }}
-      placeholder="Type to search users..."
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+    async ({ page, limit, searchTerm }: GetDataParams) => {
+      const url = new URL("/api/v1/products", apiBaseUrl);
+      url.searchParams.set("page", String(page));
+      url.searchParams.set("limit", String(limit));
+      if (searchTerm) url.searchParams.set("search", searchTerm);
+
+      const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+      const cached = readCache<unknown>(cacheKey);
+      if (cached) return cached;
+
+      const resp = await fetch(url.toString());
+      const json = await resp.json();
+      writeCache(cacheKey, json);
+      return json;
+    };
+
+export const QuickStartPreview = () => {
+  const { siteConfig } = useDocusaurusContext();
+
+  const API_BASE_URL =
+    String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return <div style={{ width: "100%", maxWidth: 420 }}>
+    <AsyncSelect<Product>
+      label="Dynamic Select"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "id - designation" }}
     />
   </div>
-);
+};
 
-export const CustomRenderPreview = () => (
-    <div style={{ width: "100%", maxWidth: 420 }}>
-    <AsyncSelect<User>
-      label="Assign to User"
-      getData={mockApi}
-      extractDynamicData={(response: ApiResponse) => response.items}
-      hasMore={(response: ApiResponse, page) => page < response.totalPages}
+export const GenericTypesPreview = () => {
+  const { siteConfig } = useDocusaurusContext();
+
+  const API_BASE_URL =
+    String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return <div style={{ width: "100%", maxWidth: 420 }}>
+    <AsyncSelect<Product>
+      label="Products"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "designation" }}
+    />
+  </div>
+}
+
+export const CustomRenderPreview = () => {
+  const { siteConfig } = useDocusaurusContext();
+
+  const API_BASE_URL =
+    String(siteConfig.customFields?.API_BASE_URL || "http://localhost:8001");
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+  return <div style={{ width: "100%", maxWidth: 420 }}>
+    <AsyncSelect<Product>
+      label="Custom option rendering"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
       options={{
         value: "id",
-        label: "name",
-        renderOption: (user: User) => (
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <img
-              src={user.avatar}
-              alt={user.name}
-              style={{ width: 24, height: 24, borderRadius: "50%" }}
-            />
-            <div>
-              <div style={{ fontWeight: "bold" }}>{user.name}</div>
-              <div style={{ fontSize: "12px", color: "#666" }}>{user.email}</div>
-            </div>
-          </div>
-        )
+        label: "designation",
+        renderOption: (row: Product) => `id: ${row.id} - ${row.designation}`,
       }}
-      placeholder="Search users by name or email..."
     />
   </div>
-);
+};

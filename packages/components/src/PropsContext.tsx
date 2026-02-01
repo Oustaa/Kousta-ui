@@ -68,7 +68,7 @@ type PropsContextType = {
   menu?: MenuPropsProvided;
   modal?: ModalPropsProvided;
   select?: SelectPropsProvided;
-  asyncSelect?: SelectPropsProvided;
+  asyncSelect?: AsyncSelectPropsProvided;
   pagination?: PaginationPropsProvided;
 };
 

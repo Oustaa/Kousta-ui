@@ -30,15 +30,15 @@ const TableRow = <T extends Record<string, unknown>>({
 }) => {
   const [highlighted, setHighlighted] = useState(false);
   const { open, opened: rowExtended, close, toggle } = useDisclosure(false);
-  const { keyExtractor, headers, options, config } = useTableContext();
+  const { keyExtractor, headers, actions, options, config } = useTableContext();
   const key = keyExtractor?.(row);
 
   const contextMenuOptions: ContextMenuTypeOption[] = [];
   const tableActions: ReactNode[] = [];
 
-  if (options && options.actions) {
-    if (hasDeleteAction(options, row)) {
-      const action = options!.actions!.delete;
+  if (actions) {
+    if (hasDeleteAction(actions, row)) {
+      const action = actions!.delete;
       contextMenuOptions.push({
         title: "Delete",
         onClick: () => action?.onDelete!(row),
@@ -56,8 +56,8 @@ const TableRow = <T extends Record<string, unknown>>({
         </Button>,
       );
     }
-    if (hasEditAction(options, row)) {
-      const action = options!.actions!.edit;
+    if (hasEditAction(actions, row)) {
+      const action = actions!.edit;
       contextMenuOptions.push({
         title: "Edit",
         onClick: () => action?.onEdit!(row),
@@ -92,29 +92,31 @@ const TableRow = <T extends Record<string, unknown>>({
       }
     }
 
-    if (options.extraActions && options.extraActions.length > 0) {
-      options.extraActions.forEach((action) => {
-        if (canPerformActionResolver(row, action.allowed)) {
-          contextMenuOptions.push({
-            title: action.title,
-            icon: action.Icon,
-            active: canPerformActionResolver(row, action.allowed),
-            onClick: action.onClick.bind(null, row),
-          });
-          tableActions.push(
-            canPerformActionResolver(row, action.allowed) && (
-              <Button
-                key={action.title as string}
-                variant="neutral-light"
-                size="sm"
-                onClick={() => options!.actions!.edit?.onEdit!(row)}
-              >
-                {action.Icon} {action.title}
-              </Button>
-            ),
-          );
-        }
-      });
+    if (options) {
+      if (options.extraActions && options.extraActions.length > 0) {
+        options.extraActions.forEach((action) => {
+          if (canPerformActionResolver(row, action.allowed)) {
+            contextMenuOptions.push({
+              title: action.title,
+              icon: action.Icon,
+              active: canPerformActionResolver(row, action.allowed),
+              onClick: action.onClick.bind(null, row),
+            });
+            tableActions.push(
+              canPerformActionResolver(row, action.allowed) && (
+                <Button
+                  key={action.title as string}
+                  variant="neutral-light"
+                  size="sm"
+                  onClick={() => actions!.edit?.onEdit!(row)}
+                >
+                  {action.Icon} {action.title}
+                </Button>
+              ),
+            );
+          }
+        });
+      }
     }
   }
 
@@ -179,7 +181,12 @@ const TableRow = <T extends Record<string, unknown>>({
         {...config?.props?.tr}
       >
         {hasBulkActions(options) && (
-          <TableRowCheckbox index={index} row={row} highlighted={highlighted} />
+          <TableRowCheckbox
+            key={`${keyExtractor?.(row) || index}-checkbox`}
+            index={index}
+            row={row}
+            highlighted={highlighted}
+          />
         )}
         {Object.keys(headers.data).map((headerName) => {
           const headerValue = headers.data[headerName];
@@ -193,7 +200,7 @@ const TableRow = <T extends Record<string, unknown>>({
             />
           );
         })}
-        {hasActions(options) && (
+        {hasActions(actions, options) && (
           <Table.Td
             {...config?.props?.td}
             style={{
@@ -221,7 +228,7 @@ const TableRow = <T extends Record<string, unknown>>({
             {...config?.props?.td}
             colSpan={
               getShownHeders(headers.data)?.length +
-              (hasActions(options) ? 1 : 0) +
+              (hasActions(actions, options) ? 1 : 0) +
               (hasBulkActions(options) ? 1 : 0)
             }
           >

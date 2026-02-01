@@ -1,33 +1,60 @@
-# Website
 
-This folder contains the Kousta UI documentation website.
+# Kousta UI Docs
 
-### Installation
+## Environment variables
 
-```
-$ yarn
-```
+Copy `.env.example` to `.env` and update values as needed:
 
-### Local Development
-
-```
-$ yarn docs:start
+```bash
+cp .env.example .env
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### `API_BASE_URL`
 
-### Build
+Used by interactive previews (for example `AsyncSelect` and `DataTable`) to call your backend.
 
+- Default: `http://localhost:8001`
+- Env var: `API_BASE_URL`
+
+If you run the demo backend locally, start it on port `8001` so the docs previews can fetch from:
+
+- `/api/v1/products`
+
+#### Production deployments
+
+Set `API_BASE_URL` in your hosting provider **build environment**.
+
+- **Netlify**
+  - Site settings -> Build & deploy -> Environment -> Environment variables
+  - Add: `API_BASE_URL=https://api.ui.kousta.org/` (or your API)
+
+- **Vercel**
+  - Project settings -> Environment Variables
+  - Add `API_BASE_URL` for Production (and Preview if needed)
+
+- **Docker / self-hosted**
+  - Provide it at build time (Docusaurus reads it during build):
+    - `API_BASE_URL=https://api.ui.kousta.org/ yarn build`
+
+### DocSearch (optional)
+
+If you enable Algolia DocSearch:
+
+- `DOCSEARCH_APP_ID`
+- `DOCSEARCH_API_KEY`
+- `DOCSEARCH_INDEX_NAME`
+
+These are already conditionally read in `docusaurus.config.ts`.
+
+## Local development
+
+```bash
+yarn start
 ```
-$ yarn docs:build
+
+## Build
+
+```bash
+yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Build the site and serve the output locally:
-
-```
-$ yarn docs:serve
-```

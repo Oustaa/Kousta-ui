@@ -1,6 +1,6 @@
 {
   "name": "@kousta-ui/styles",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "type": "module",
   "private": true,
   "scripts": {

@@ -38,9 +38,13 @@ A comprehensive pagination hook that handles all pagination logic including boun
 |----------|------|-------------|
 | `page` | `number` | Current page number (1-based) |
 | `limit` | `number` | Items per page |
+| `total` | `number` | Total number of items |
+| `totalPages` | `number` | Total number of pages (\( \lceil total / limit \rceil \)) |
 | `nextPage` | `() => void` | Function to go to next page |
 | `prevPage` | `() => void` | Function to go to previous page |
 | `setPage` | `(page: number) => void` | Function to jump to specific page |
+| `setLimit` | `(limit: number) => void` | Function to change items per page |
+| `setTotal` | `(total: number) => void` | Function to update total items |
 
 ---
 
@@ -86,9 +90,8 @@ function DataTableExample() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   
-  const totalItems = 250;
-  const { page, nextPage, prevPage, setPage, limit } = usePagination({
-    total: totalItems,
+  const { page, nextPage, prevPage, setPage, limit, setTotal, totalPages } = usePagination({
+    total: 0,
     limit: 20,
   });
 
@@ -99,6 +102,8 @@ function DataTableExample() {
       try {
         const response = await fetch(`/api/users?page=${page}&limit=${limit}`);
         const result = await response.json();
+        // If your API returns total, update it so totalPages stays correct
+        if (typeof result.total === "number") setTotal(result.total);
         setData(result.data);
       } catch (error) {
         console.error("Failed to fetch data:", error);
@@ -109,8 +114,6 @@ function DataTableExample() {
 
     fetchData();
   }, [page, limit]);
-
-  const totalPages = Math.ceil(totalItems / limit);
 
   return (
     <div>
