@@ -204,9 +204,10 @@ const TableRow = <T extends Record<string, unknown>>({
           <Table.Td
             {...config?.props?.td}
             style={{
-              backgroundColor: highlighted
-                ? "light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800))"
-                : "unset",
+              ...(highlighted && {
+                backgroundColor:
+                  "light-dark(var(--Oui-neutral-100), var(--Oui-neutral-800))",
+              }),
               ...config?.props?.td?.style,
             }}
           >

@@ -25,6 +25,8 @@ A lightweight, accessible **Table** component that provides the fundamental buil
 ```tsx
 import { Table } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+
 export default function BasicTable() {
   return (
     <Table.Root>
@@ -140,6 +142,10 @@ All native `<td>` props are supported:
 ### Basic data table
 
 ```tsx
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function UserTable() {
   const users = [
     { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
@@ -173,6 +179,10 @@ function UserTable() {
 ### Pricing table
 
 ```tsx
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function PricingTable() {
   const plans = [
     {
@@ -226,6 +236,10 @@ function PricingTable() {
 ### Table with custom styling
 
 ```tsx
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function StyledTable() {
   return (
     <Table
@@ -277,6 +291,10 @@ function StyledTable() {
 ### Responsive table with horizontal scroll
 
 ```tsx
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function ResponsiveTable() {
   return (
     <div style={{ overflowX: "auto" }}>
@@ -304,6 +322,11 @@ function ResponsiveTable() {
 ### Table with interactive rows
 
 ```tsx
+import { useState } from "react";
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function InteractiveTable() {
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
 
@@ -345,6 +368,10 @@ function InteractiveTable() {
 ### Table with complex cell content
 
 ```tsx
+import { Table } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+
 function ComplexTable() {
   return (
     <Table>

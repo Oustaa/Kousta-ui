@@ -3,6 +3,7 @@ sidebar_position: 6
 title: Actions
 ---
 
+import Badge from '@site/src/components/Badge';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import CodePreviewWrapper from '@site/src/components/CodePreviewWrapper';
 import {
@@ -51,6 +52,9 @@ Use `actions.edit` and/or `actions.delete`.
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string; role: string };
 
 export default function Example() {
@@ -88,6 +92,9 @@ export default function Example() {
       filename: "RowActions.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = [
@@ -138,6 +145,9 @@ Use `options.extraActions` for additional per-row actions.
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; active: boolean };
 
 export default function Example() {
@@ -173,6 +183,9 @@ export default function Example() {
       filename: "ExtraActions.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = [
@@ -224,6 +237,9 @@ Bulk actions become available when you enable row selection by providing `option
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string };
 
 export default function Example() {
@@ -261,6 +277,9 @@ export default function Example() {
       filename: "BulkActions.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = [
@@ -314,6 +333,9 @@ Use `options.viewComp` to add a dedicated "view" action.
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string };
 
 export default function Example() {
@@ -349,6 +371,9 @@ export default function Example() {
       filename: "ViewComponent.jsx",
       code: `import React from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = [

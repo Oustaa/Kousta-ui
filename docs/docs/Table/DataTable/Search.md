@@ -48,6 +48,9 @@ Static search means filtering rows client-side. Enable it with:
       code: `import React, { useMemo } from "react";
 import { DataTable } from "@kousta-ui/table";
 
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
 type User = { id: number; name: string; email: string };
 
 export default function Example() {
@@ -89,6 +92,9 @@ export default function Example() {
       filename: "StaticSearch.jsx",
       code: `import React, { useMemo } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = useMemo(
@@ -147,6 +153,9 @@ You can implement it in either of these ways:
       filename: "DynamicSearch.tsx",
       code: `import React, { useEffect, useState } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 import axios from "axios";
 
 type User = { id: number; name: string; email: string };
@@ -217,6 +226,9 @@ export default function Example() {
       filename: "DynamicSearch.jsx",
       code: `import React, { useEffect, useState } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 import axios from "axios";
 
 export default function Example() {

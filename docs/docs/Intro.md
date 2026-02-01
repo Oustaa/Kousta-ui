@@ -100,6 +100,7 @@ function App() {
 import { DataTable } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 interface User {
   id: number;

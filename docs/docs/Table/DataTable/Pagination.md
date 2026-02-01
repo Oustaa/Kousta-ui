@@ -11,6 +11,7 @@ import {
 } from '@site/src/components/@Table/DataTable';
 
 import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 # Pagination
 
@@ -46,6 +47,9 @@ Use this when you already have all rows in memory.
       filename: "DataTableStaticPagination.tsx",
       code: `import React, { useMemo } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 type User = {
   id: number;
@@ -90,6 +94,9 @@ export default function Example() {
       filename: "DataTableStaticPagination.jsx",
       code: `import React, { useMemo } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 
 export default function Example() {
   const data = useMemo(
@@ -151,6 +158,9 @@ Don't use `pagination.type = "static"` with `actions.get` (API-driven data). It 
       filename: "DataTableDynamicPagination.tsx",
       code: `import React, { useEffect, useState } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 import axios from "axios";
 
 type User = {
@@ -217,6 +227,9 @@ export default function Example() {
       filename: "DataTableDynamicPagination.jsx",
       code: `import React, { useEffect, useState } from "react";
 import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
 import axios from "axios";
 
 export default function Example() {
