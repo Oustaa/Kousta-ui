@@ -16,6 +16,6 @@ export const useFunctionWithTableParams = () => {
   if (search.query) props.search = search.query;
 
   return (cb: (props: PropsType) => unknown, localProps: PropsType = {}) => {
-    return cb({ ...props, ...localProps });
+    return cb?.({ ...props, ...localProps });
   };
 };

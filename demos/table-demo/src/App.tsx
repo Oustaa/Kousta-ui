@@ -60,7 +60,7 @@ const getProducts = (
     if (props[key]) params.append(key, String(props[key]));
   });
 
-  return fetch(`http://localhost:8001/products?${params.toString()}`);
+  return fetch(`http://localhost:8001/api/v1/products?${params.toString()}`);
 };
 
 const App = () => {
@@ -143,7 +143,7 @@ const App = () => {
   );
 
   // useEffect(() => {
-  //   getTableProducts({});
+  //   getTableProducts({ page: 1, limit: 20 });
   // }, []);
 
   return (
@@ -165,16 +165,16 @@ const App = () => {
             buttonProps: { variant: "primary" },
           },
         }}
-        toggleRows={{
-          children: <BsEye />,
-        }}
+        // toggleRows={{
+        //   children: <BsEye />,
+        // }}
         emptyRowIcon={<BsDash />}
         emptyTable={<h1>There is not data.....</h1>}
         // selectFilter={{ icon: <IoMdArrowDropdown /> }}
         // disableContextMenu={true}
         // toggleRows={{ variant: "warning", children: <BsEye /> }}
         // toggleRows={false}
-        selectFilter={{ icon: <BsChevronDown /> }}
+        // selectFilter={{ icon: <BsChevronDown /> }}
         // props={{
         //   table: {
         //     style: { borderColor: "white" },
@@ -230,6 +230,37 @@ const App = () => {
               limit: 10,
               page: 1,
               // type: "static",
+            }}
+            actions={{
+              get: getTableProducts,
+              // search: getTableProducts,
+              delete: {
+                canDelete: (row) => row?.gestion_stock > 25,
+                buttonProps: {
+                  // variant: "danger-link",
+                  // size: "sm",
+                },
+                title: <BsTrash size={12} />,
+                onDelete: (row) => {
+                  console.log({ row });
+                },
+              },
+              edit: {
+                buttonProps: {
+                  // variant: "success-link",
+                  // size: "sm",
+                  // style: {
+                  //   paddingInline: 0,
+                  // },
+                },
+                // title: <BsPen size={".75rem"} />,
+                // canEdit: (row) => {
+                //   return !!row?.flux_fabrication;
+                // },
+                onEdit: (row) => {
+                  console.log({ row });
+                },
+              },
             }}
             options={{
               bulkActions: [
@@ -297,37 +328,6 @@ const App = () => {
               //     variant: "primary-link",
               //   },
               // },
-              actions: {
-                get: getTableProducts,
-                // search: getTableProducts,
-                delete: {
-                  canDelete: (row) => row?.gestion_stock > 25,
-                  buttonProps: {
-                    // variant: "danger-link",
-                    // size: "sm",
-                  },
-                  title: <BsTrash size={12} />,
-                  onDelete: (row) => {
-                    console.log({ row });
-                  },
-                },
-                edit: {
-                  buttonProps: {
-                    // variant: "success-link",
-                    // size: "sm",
-                    // style: {
-                    //   paddingInline: 0,
-                    // },
-                  },
-                  // title: <BsPen size={".75rem"} />,
-                  // canEdit: (row) => {
-                  //   return !!row?.flux_fabrication;
-                  // },
-                  onEdit: (row) => {
-                    console.log({ row });
-                  },
-                },
-              },
               extraActions: [
                 {
                   Icon: <BsEye />,
@@ -403,9 +403,9 @@ const App = () => {
             config={{
               // noHead: false,
               // toggleRows: false,
-              toggleRows: {
-                children: <BsEye />,
-              },
+              // toggleRows: {
+              //   children: <BsEye />,
+              // },
               // disableContextMenu: false,
               loadingIndicator(props) {
                 return (

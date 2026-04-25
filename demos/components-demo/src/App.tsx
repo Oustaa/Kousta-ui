@@ -54,7 +54,10 @@ async function getProducts({
   search?: string;
 }) {
   const resp = await fetch(
-    `http://localhost:8001/products?limit=${limit}&page=${page}&search=${search}`,
+    `http://localhost:8001/api/v1/products?limit=${limit}&page=${page}&search=${search}`,
+    {
+      cache: "force-cache",
+    },
   );
 
   const result = await resp.json();

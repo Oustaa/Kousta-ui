@@ -10,7 +10,7 @@ const config: Config = {
   url: "https://ui.kousta.org",
   baseUrl: "/",
 
-  organizationName: "Oustaa",
+  organizationName: "ousta.dev",
   projectName: "Kousta-ui",
 
   trailingSlash: false,

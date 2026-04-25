@@ -289,7 +289,12 @@ const BaseSelect = <T extends SelectDataConstraints>({
               closeOnClickOutside(e as any);
             }}
             onKeyDown={(e) => {
-              if (/^\w$/i.test(e.key)) {
+              if (
+                /^\w$/i.test(e.key) &&
+                !e.altKey &&
+                !e.ctrlKey &&
+                !e.shiftKey
+              ) {
                 if (seachable === false) return;
 
                 if (selectSearchInput.current && !isSearching) {
