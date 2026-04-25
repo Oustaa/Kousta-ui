@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+"use client";
+
+import React, { useState } from "react";
 import { updateNestedProperties } from '@kousta-ui/helpers';
 import { Input, Button, Group } from '@kousta-ui/components';
 
@@ -26,7 +28,7 @@ export default function HelpersExample() {
     };
 
     return (
-        <div style={{ padding: '2rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 'var(--ifm-card-border-radius)', background: 'var(--ifm-background-color)' }}>
+        <div style={{ padding: '2rem', border: '1px solid #cbd5e1', borderRadius: '0.5rem', background: '#ffffff' }}>
             <Group direction="column" gap="1rem">
                 <Input
                     label="Key (e.g., user.address.city)"
@@ -40,7 +42,7 @@ export default function HelpersExample() {
                 />
                 <Button onClick={handleUpdate}>Update Property</Button>
             </Group>
-            <pre style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--ifm-color-emphasis-100)', borderRadius: 'var(--ifm-card-border-radius)', whiteSpace: 'pre-wrap' }}>
+            <pre style={{ marginTop: '1.5rem', padding: '1rem', background: '#f1f5f9', borderRadius: '0.5rem', whiteSpace: 'pre-wrap' }}>
                 {JSON.stringify(data, null, 2)}
             </pre>
         </div>

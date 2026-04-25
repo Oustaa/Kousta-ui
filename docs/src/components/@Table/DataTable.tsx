@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useEffect, useMemo, useState } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
+import { getApiBaseUrl } from "@/lib/api-base-url";
 import { Button } from "@kousta-ui/components";
 import { LayoutGrid, Trash2 } from "lucide-react";
 
@@ -52,12 +54,7 @@ const createGetProducts =
   };
 
 function useApiBaseUrl() {
-  const { siteConfig } = useDocusaurusContext();
-  const fallback =
-    process.env.NODE_ENV === "production"
-      ? "https://api.ui.kousta.org/"
-      : "http://localhost:8001";
-  return String(siteConfig.customFields?.API_BASE_URL || fallback);
+  return getApiBaseUrl();
 }
 
 export const BasicPreview = () => {

@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo, useState } from "react";
 import { Menu, Button } from "@kousta-ui/components";
 import { LuUser, LuSettings, LuLogOut } from "react-icons/lu";

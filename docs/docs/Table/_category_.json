@@ -1,8 +1,0 @@
-{
-  "label": "Table",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Table package provides two main component, Table and Datatable"
-  }
-}

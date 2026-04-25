@@ -1,5 +1,8 @@
-import React, { useState, ReactNode, useEffect, useRef } from "react";
+"use client";
+
 import clsx from "clsx";
+import { Highlight, themes } from "prism-react-renderer";
+import { useState, type ReactNode } from "react";
 
 interface CodeTab {
   value: string;
@@ -14,6 +17,13 @@ interface CodePreviewWrapperProps {
   defaultTab?: string;
 }
 
+function prismLanguage(language: CodeTab["language"]): "tsx" | "jsx" {
+  if (language === "ts" || language === "tsx") {
+    return "tsx";
+  }
+  return "jsx";
+}
+
 export default function CodePreviewWrapper({
   tabs,
   preview,
@@ -22,53 +32,8 @@ export default function CodePreviewWrapper({
   const [activeTab, setActiveTab] = useState(
     defaultTab || tabs[0]?.value || "",
   );
-  const codeRef = useRef<HTMLElement>(null);
 
   const activeTabData = tabs.find((tab) => tab.value === activeTab) || tabs[0];
-
-  // Trigger Prism highlighting when tab changes or component mounts
-  useEffect(() => {
-    if (typeof window !== "undefined" && codeRef.current && activeTabData) {
-      const highlightCode = () => {
-        const Prism = (window as any).Prism;
-        if (Prism && codeRef.current) {
-          // Ensure the code element has the correct class and content
-          const codeElement = codeRef.current;
-          if (codeElement.textContent === activeTabData.code) {
-            // Use Prism to highlight the specific code element
-            Prism.highlightElement(codeElement);
-          }
-        }
-      };
-
-      // Try immediately
-      highlightCode();
-
-      // Also try after a small delay to ensure DOM is ready and content is set
-      const timer1 = setTimeout(highlightCode, 50);
-      const timer2 = setTimeout(highlightCode, 100);
-
-      // Also listen for Prism to be available if it loads later
-      if (!(window as any).Prism) {
-        const checkPrism = setInterval(() => {
-          if ((window as any).Prism) {
-            highlightCode();
-            clearInterval(checkPrism);
-          }
-        }, 100);
-        return () => {
-          clearTimeout(timer1);
-          clearTimeout(timer2);
-          clearInterval(checkPrism);
-        };
-      }
-
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-      };
-    }
-  }, [activeTab, activeTabData]);
 
   const getLanguageIcon = (language: string) => {
     return language.startsWith("ts") ? "TS" : "JS";
@@ -84,9 +49,7 @@ export default function CodePreviewWrapper({
 
   return (
     <div className="code-preview-wrapper">
-      {/* Code block with custom tabs in header */}
       <div className="code-preview-code-block">
-        {/* Custom tab buttons in header */}
         <div className="code-preview-header">
           <div className="code-preview-tabs">
             {tabs.map((tab) => {
@@ -121,23 +84,29 @@ export default function CodePreviewWrapper({
           </div>
         </div>
 
-        {/* Code content */}
         <div className="code-preview-code-content">
           {activeTabData && (
-            <pre className={`language-${activeTabData.language}`}>
-              <code
-                ref={codeRef}
-                className={`language-${activeTabData.language}`}
-                data-language={activeTabData.language}
-              >
-                {activeTabData.code}
-              </code>
-            </pre>
+            <Highlight
+              code={activeTabData.code.trimEnd()}
+              language={prismLanguage(activeTabData.language)}
+              theme={themes.vsDark}
+            >
+              {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre className={className} style={{ ...style, margin: 0 }}>
+                  {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({ line })}>
+                      {line.map((token, key) => (
+                        <span key={key} {...getTokenProps({ token })} />
+                      ))}
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
           )}
         </div>
       </div>
 
-      {/* Preview section */}
       {preview && <div className="code-preview-preview-section">{preview}</div>}
     </div>
   );

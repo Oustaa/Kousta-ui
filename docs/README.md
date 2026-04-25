@@ -1,60 +1,52 @@
-
 # Kousta UI Docs
+
+This site is built with [Next.js](https://nextjs.org/) and [Nextra](https://nextra.site/) (`nextra-theme-docs`).
+
+Documentation pages live in `src/content/` as `.mdx` files. Interactive previews and tabbed code samples use components in `src/components/`.
 
 ## Environment variables
 
-Copy `.env.example` to `.env` and update values as needed:
+Copy `.env.example` to `.env.local` (or `.env`) in this `docs/` folder:
 
 ```bash
-cp .env.example .env
+cp .env.example .env.local
 ```
 
-### `API_BASE_URL`
+### `NEXT_PUBLIC_API_BASE_URL`
 
-Used by interactive previews (for example `AsyncSelect` and `DataTable`) to call your backend.
+Used by interactive previews (for example `AsyncSelect` and `DataTable`) when they call your backend.
 
-- Default: `http://localhost:8001`
-- Env var: `API_BASE_URL`
+- Default in code when unset: `http://localhost:8001` in development, `https://api.ui.kousta.org/` in production builds.
+- Set `NEXT_PUBLIC_API_BASE_URL` so the browser can reach your API (must be public — do not use server-only secrets here).
 
-If you run the demo backend locally, start it on port `8001` so the docs previews can fetch from:
-
-- `/products`
+If you run the demo backend locally, start it on port `8001` so the docs previews can fetch from `/products`.
 
 #### Production deployments
 
-Set `API_BASE_URL` in your hosting provider **build environment**.
+Set `NEXT_PUBLIC_API_BASE_URL` in your hosting provider’s environment for **production** (and preview if needed).
 
-- **Netlify**
-  - Site settings -> Build & deploy -> Environment -> Environment variables
-  - Add: `API_BASE_URL=https://api.ui.kousta.org/` (or your API)
-
-- **Vercel**
-  - Project settings -> Environment Variables
-  - Add `API_BASE_URL` for Production (and Preview if needed)
-
-- **Docker / self-hosted**
-  - Provide it at build time (Docusaurus reads it during build):
-    - `API_BASE_URL=https://api.ui.kousta.org/ yarn build`
-
-### DocSearch (optional)
-
-If you enable Algolia DocSearch:
-
-- `DOCSEARCH_APP_ID`
-- `DOCSEARCH_API_KEY`
-- `DOCSEARCH_INDEX_NAME`
-
-These are already conditionally read in `docusaurus.config.ts`.
+- **Vercel** — Project → Settings → Environment Variables.
+- **Netlify** — Site settings → Environment variables.
+- **Docker / self-hosted** — pass at build time: `NEXT_PUBLIC_API_BASE_URL=https://api.example.com yarn build`.
 
 ## Local development
 
+From the monorepo root:
+
 ```bash
-yarn start
+yarn docs:start
+```
+
+Or inside `docs/`:
+
+```bash
+yarn dev
 ```
 
 ## Build
 
 ```bash
-yarn build
+yarn docs:build
 ```
 
+Static output is produced by `next build` (default `.next/`; use a platform integration or `next export` if you need fully static hosting without a Node server — follow Next.js deployment docs for your host).

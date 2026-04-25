@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React from "react";
 import { Input, Select, AsyncSelect, Button, FormElement, Group } from '@kousta-ui/components';
 
 const frameworkData = [
@@ -14,12 +16,22 @@ const allUsers = [
     { id: '3', name: 'Peter Jones', email: 'peter.j@example.com' },
 ];
 
-const mockApi = ({ page, limit, searchTerm }) => {
+const mockApi = ({
+  page,
+  limit,
+  searchTerm,
+}: {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+}) => {
     return new Promise(resolve => {
         setTimeout(() => {
-            const filteredUsers = allUsers.filter(user =>
-                user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                user.email.toLowerCase().includes(searchTerm.toLowerCase())
+            const term = (searchTerm ?? "").toLowerCase();
+            const filteredUsers = allUsers.filter(
+              (user) =>
+                user.name.toLowerCase().includes(term) ||
+                user.email.toLowerCase().includes(term),
             );
             resolve({ items: filteredUsers, totalPages: 1 });
         }, 500);
@@ -28,7 +40,7 @@ const mockApi = ({ page, limit, searchTerm }) => {
 
 export default function FormExample() {
     return (
-        <div style={{ padding: '2rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 'var(--ifm-card-border-radius)', background: 'var(--ifm-background-color)' }}>
+        <div style={{ padding: '2rem', border: '1px solid #cbd5e1', borderRadius: '0.5rem', background: '#ffffff' }}>
             <Group direction="column" gap="1.5rem">
                 <FormElement>
                     <Input label="Project Name" placeholder="Enter a name for your project" />

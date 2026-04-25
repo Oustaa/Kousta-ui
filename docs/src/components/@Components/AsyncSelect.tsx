@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { AsyncSelect } from "@kousta-ui/components";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { getApiBaseUrl } from "@/lib/api-base-url";
 
 type GetDataParams = {
   page: number;
@@ -37,11 +39,7 @@ const createGetProducts =
   };
 
 export const QuickStartPreview = () => {
-  const { siteConfig } = useDocusaurusContext();
-
-  const API_BASE_URL = String(
-    siteConfig.customFields?.API_BASE_URL || "http://localhost:8001",
-  );
+  const API_BASE_URL = getApiBaseUrl();
 
   const getProducts = React.useMemo(
     () => createGetProducts(String(API_BASE_URL)),
@@ -63,11 +61,7 @@ export const QuickStartPreview = () => {
 };
 
 export const GenericTypesPreview = () => {
-  const { siteConfig } = useDocusaurusContext();
-
-  const API_BASE_URL = String(
-    siteConfig.customFields?.API_BASE_URL || "http://localhost:8001",
-  );
+  const API_BASE_URL = getApiBaseUrl();
 
   const getProducts = React.useMemo(
     () => createGetProducts(String(API_BASE_URL)),
@@ -89,11 +83,7 @@ export const GenericTypesPreview = () => {
 };
 
 export const CustomRenderPreview = () => {
-  const { siteConfig } = useDocusaurusContext();
-
-  const API_BASE_URL = String(
-    siteConfig.customFields?.API_BASE_URL || "http://localhost:8001",
-  );
+  const API_BASE_URL = getApiBaseUrl();
 
   const getProducts = React.useMemo(
     () => createGetProducts(String(API_BASE_URL)),

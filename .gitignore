@@ -26,6 +26,8 @@ build/
 lib/
 cjs/
 esm/
+.next/
+**/.next/
 
 # Temporary files
 temp/

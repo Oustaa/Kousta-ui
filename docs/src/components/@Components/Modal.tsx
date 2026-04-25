@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo, useState } from "react";
 import { Button, Modal } from "@kousta-ui/components";
 import { useDisclosure } from "@kousta-ui/hooks";
