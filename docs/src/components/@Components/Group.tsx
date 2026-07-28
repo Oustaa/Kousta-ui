@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Group, Button, Input } from "@kousta-ui/components";
 

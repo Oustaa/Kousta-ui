@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { ErrorBoundary, Button } from "@kousta-ui/components";
 

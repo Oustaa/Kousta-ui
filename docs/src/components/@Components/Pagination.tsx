@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { ComponentPropsProvider, Pagination } from "@kousta-ui/components";
 import { usePagination } from "@kousta-ui/hooks";

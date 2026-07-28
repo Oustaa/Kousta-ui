@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { ComponentPropsProvider, Select } from "@kousta-ui/components";
 import {
@@ -33,7 +34,7 @@ export const DisabledOptionsPreview = () => (
       label="Framework"
       placeholder="Svelte is disabled"
       data={frameworkData}
-      disabledOption={(item) => item.disabled}
+      disabledOption={(item) => Boolean(item.disabled)}
     />
   </div>
 );

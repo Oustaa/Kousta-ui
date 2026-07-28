@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FormElement, Label, Input } from "@kousta-ui/components";
 
