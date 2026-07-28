@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Input, Select, AsyncSelect, Button, FormElement, Group } from '@kousta-ui/components';
+import styles from './examples.module.css';
 
 const frameworkData = [
     { value: 'react', label: 'React' },
@@ -40,7 +41,7 @@ const mockApi = ({
 
 export default function FormExample() {
     return (
-        <div style={{ padding: '2rem', border: '1px solid #cbd5e1', borderRadius: '0.5rem', background: '#ffffff' }}>
+        <div className={styles.card}>
             <Group direction="column" gap="1.5rem">
                 <FormElement>
                     <Input label="Project Name" placeholder="Enter a name for your project" />

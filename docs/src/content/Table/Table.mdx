@@ -209,7 +209,7 @@ function PricingTable() {
           <Table.Th>Plan</Table.Th>
           <Table.Th>Price</Table.Th>
           <Table.Th>Features</Table.Th>
-        </Table.Str>
+        </Table.Tr>
       </Table.Thead>
       <Table.Tbody>
         {plans.map((plan, index) => (
@@ -440,55 +440,58 @@ function ComplexTable() {
 
 ### CSS Classes
 
-Each component applies specific CSS classes:
+Each component applies a stable, unhashed global class you can target from your own stylesheet:
 
 | Component | Class Name | Purpose |
 |-----------|------------|---------|
 | `Table.Root` | `.kui-table` | Main table styling |
-| `Table.Thead` | `.Ouithead` | Header section styling |
-| `Table.Tbody` | `.Ouitbody` | Body section styling |
-| `Table.Tr` | `.Ouitr` | Row styling |
-| `Table.Th` | `.Ouith` | Header cell styling |
-| `Table.Td` | `.Ouitd` | Data cell styling |
+| `Table.Thead` | `.kui-table-thead` | Header section styling |
+| `Table.Tbody` | `.kui-table-tbody` | Body section styling |
+| `Table.Tr` | `.kui-table-tr` | Row styling |
+| `Table.Th` | `.kui-table-th` | Header cell styling |
+| `Table.Td` | `.kui-table-td` | Data cell styling |
 
 ### CSS Variables
 
-Customize appearance using CSS variables:
+`Table` doesn't define its own variables — it inherits color and spacing from the shared design tokens:
 
 ```css
 :root {
-  --ousta-table-border: #e5e7eb;
-  --ousta-table-header-bg: #f9fafb;
-  --ousta-table-row-hover: #f3f4f6;
-  --ousta-table-cell-padding: 12px;
+  --kui-neutral-50: #ffffff;   /* Table.Td background (light) */
+  --kui-neutral-100: #efefef;  /* Table.Thead background (light) */
+  --kui-neutral-200: #dcdcdc;  /* border color (light) */
+  --kui-spacing-xs: 0.5rem;    /* Table.Th padding */
+  --kui-spacing-sm: 0.75rem;   /* Table.Td padding */
 }
 ```
+
+See [Styles & Customization](/docs/styles/styles-and-customization) for the full token reference, including the dark-mode equivalents (`--kui-neutral-800`, `--kui-neutral-900`, `--kui-neutral-950`) used via `light-dark()`.
 
 ### Custom styling example
 
 ```css
 .custom-table .kui-table {
-  border: 1px solid var(--ousta-table-border);
+  border: 1px solid var(--kui-neutral-200);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.custom-table .Ouithead {
-  background: var(--ousta-table-header-bg);
+.custom-table .kui-table-thead {
+  background: var(--kui-neutral-100);
 }
 
-.custom-table .Ouitr:hover {
-  background: var(--ousta-table-row-hover);
+.custom-table .kui-table-tr:hover {
+  background: var(--kui-neutral-100);
 }
 
-.custom-table .Ouith,
-.custom-table .Ouitd {
-  padding: var(--ousta-table-cell-padding);
+.custom-table .kui-table-th,
+.custom-table .kui-table-td {
+  padding: var(--kui-spacing-sm);
   text-align: left;
-  border-bottom: 1px solid var(--ousta-table-border);
+  border-bottom: 1px solid var(--kui-neutral-200);
 }
 
-.custom-table .Ouitr:last-child .Ouitd {
+.custom-table .kui-table-tr:last-child .kui-table-td {
   border-bottom: none;
 }
 ```

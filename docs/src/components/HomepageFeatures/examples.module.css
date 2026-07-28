@@ -1,0 +1,26 @@
+.card {
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+:global(html.dark) .card {
+  border-color: #2b3545;
+  background: #0b1220;
+}
+
+.cardCompact {
+  composes: card;
+  padding: 1rem;
+}
+
+.panel {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+}
+
+:global(html.dark) .panel {
+  background: #1e293b;
+}

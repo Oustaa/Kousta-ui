@@ -2,17 +2,11 @@
 
 import React from "react";
 import { HomepageTablePreview } from "@/components/@Table/DataTable";
+import styles from "./examples.module.css";
 
 export default function TableExample() {
   return (
-    <div
-      style={{
-        padding: "1rem",
-        border: "1px solid #cbd5e1",
-        borderRadius: "0.5rem",
-        background: "#ffffff",
-      }}
-    >
+    <div className={styles.cardCompact}>
       <HomepageTablePreview />
     </div>
   );
