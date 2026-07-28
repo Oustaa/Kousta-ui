@@ -1,1 +1,13 @@
-{}
+{
+  "index_name": "docsearch",
+  "start_urls": ["https://ui.kousta.org/"],
+  "selectors": {
+    "lvl0": "article h1",
+    "lvl1": "article h2",
+    "lvl2": "article h3",
+    "lvl3": "article h4",
+    "lvl4": "article h5, article h6",
+    "text": "article p, article li, article td"
+  },
+  "strip_chars": " .,;:#"
+}

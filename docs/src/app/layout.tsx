@@ -4,6 +4,12 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "../../styles/docs-extra.css";
 import type { ReactNode } from "react";
+import DocSearchWidget from "@/components/DocSearch";
+
+const docSearchConfigured =
+  !!process.env.NEXT_PUBLIC_DOCSEARCH_APP_ID &&
+  !!process.env.NEXT_PUBLIC_DOCSEARCH_SEARCH_API_KEY &&
+  !!process.env.NEXT_PUBLIC_DOCSEARCH_INDEX_NAME;
 
 export const metadata = {
   metadataBase: new URL("https://ui.kousta.org"),
@@ -84,6 +90,7 @@ export default async function RootLayout({
           footer={footer}
           navbar={navbar}
           pageMap={pageMap}
+          search={docSearchConfigured ? <DocSearchWidget /> : undefined}
           sidebar={{ defaultMenuCollapseLevel: 2 }}
         >
           {children}

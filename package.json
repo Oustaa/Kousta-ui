@@ -35,7 +35,7 @@
     "table:demo": "cd ./demos/table-demo && yarn run dev",
     "demos": "concurrently \"yarn run components:demo\" \"yarn run table:demo\"",
     "knip": "knip",
-    "docs:start": "yarn workspace docs start",
+    "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
     "docs:serve": "yarn workspace docs start"
   },

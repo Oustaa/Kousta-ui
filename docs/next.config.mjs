@@ -12,6 +12,7 @@ const withNextra = nextra({
 });
 
 export default withNextra({
+  output: "export",
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,

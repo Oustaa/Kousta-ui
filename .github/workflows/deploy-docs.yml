@@ -36,19 +36,22 @@ jobs:
       - name: Build all packages
         run: yarn build
 
-      - name: Install Docusaurus dependencies
+      - name: Install docs dependencies
         working-directory: ./docs
         run: yarn install
 
       - name: Set environment variables
         working-directory: ./docs
         run: |
-          echo "API_BASE_URL=${{ secrets.API_BASE_URL }}" >> .env
-          echo "DOCSEARCH_APP_ID=${{ secrets.DOCSEARCH_APP_ID }}" >> .env
-          echo "DOCSEARCH_API_KEY=${{ secrets.DOCSEARCH_API_KEY }}" >> .env
-          echo "DOCSEARCH_INDEX_NAME=${{ secrets.DOCSEARCH_INDEX_NAME }}" >> .env
+          echo "NEXT_PUBLIC_API_BASE_URL=${{ secrets.NEXT_PUBLIC_API_BASE_URL }}" >> .env
+          echo "NEXT_PUBLIC_DOCSEARCH_APP_ID=${{ secrets.DOCSEARCH_APP_ID }}" >> .env
+          echo "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME=${{ secrets.DOCSEARCH_INDEX_NAME }}" >> .env
+          # Public, search-only key — safe to ship to the browser. This is a
+          # DIFFERENT secret than DOCSEARCH_API_KEY below, which is an
+          # admin/write key and must never be exposed client-side.
+          echo "NEXT_PUBLIC_DOCSEARCH_SEARCH_API_KEY=${{ secrets.DOCSEARCH_SEARCH_API_KEY }}" >> .env
 
-      - name: Build Docusaurus
+      - name: Build docs (Next.js static export)
         working-directory: ./docs
         run: yarn build
 
@@ -91,5 +94,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build/
+          publish_dir: ./docs/out/
           cname: ui.kousta.org

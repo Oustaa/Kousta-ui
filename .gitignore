@@ -20,12 +20,13 @@ lerna-debug.log*
 **/dist
 **/.cache
 
-# Build output
-dist/
-build/
-lib/
-cjs/
-esm/
+# Build output (package build artifacts only — do not use bare patterns here,
+# they will also match legitimate app source dirs like docs/src/lib)
+packages/*/dist/
+packages/*/build/
+packages/*/lib/
+packages/*/cjs/
+packages/*/esm/
 .next/
 **/.next/
 
