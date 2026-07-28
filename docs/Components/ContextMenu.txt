@@ -1,0 +1,980 @@
+1:"$Sreact.fragment"
+3:I[5204,[],""]
+4:I[2642,[],""]
+6:I[433,[],"OutletBoundary"]
+8:I[9884,[],"AsyncMetadataOutlet"]
+a:I[433,[],"ViewportBoundary"]
+c:I[433,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[3536,[],""]
+:HL["/_next/static/css/f1d677badafb2d1e.css","style"]
+:HL["/_next/static/css/5fbaaa7083528bad.css","style"]
+:HL["/_next/static/css/2d82b615fcca1590.css","style"]
+0:{"P":null,"b":"-tWldb8AZ1EFhN552jUnO","p":"","c":["","docs","Components","ContextMenu"],"i":false,"f":[[["",{"children":["docs",{"children":[["mdxPath","Components/ContextMenu","oc"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f1d677badafb2d1e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5fbaaa7083528bad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2d82b615fcca1590.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["docs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["mdxPath","Components/ContextMenu","oc"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],null],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[6117,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeConfigProvider"]
+11:I[1455,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LastUpdated"]
+12:I[8782,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"Search"]
+13:I[6921,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"ThemeProvider"]
+14:I[270,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"SkipNavLink"]
+15:I[3728,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ConfigProvider"]
+2:["$","html",null,{"dir":"ltr","lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L10",null,{"value":{"copyPageButton":true,"darkMode":true,"docsRepositoryBase":"https://github.com/Oustaa/kousta-ui/tree/main/docs","editLink":"Edit this page on GitHub","feedback":{"content":"Question? Give us feedback","labels":"feedback"},"i18n":[],"lastUpdated":["$","$L11",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L12",null,{}],"sidebar":{"defaultMenuCollapseLevel":2,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L13",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L14",null,{}],"$undefined",["$","$L15",null,{"pageMap":[{"name":"index","route":"/","frontMatter":{},"title":"Index"},{"name":"docs","route":"/docs","children":[{"name":"Components","route":"/docs/Components","children":[{"name":"AsyncSelect","route":"/docs/Components/AsyncSelect","frontMatter":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1785249920000},"title":"AsyncSelect"},{"name":"Button","route":"/docs/Components/Button","frontMatter":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1785249920000},"title":"Button"},{"name":"ComponentPropsProvider","route":"/docs/Components/ComponentPropsProvider","frontMatter":{"title":"Component Props Provider","sidebar_label":"Component Props Provider","filePath":"src/content/Components/ComponentPropsProvider.mdx","timestamp":1785249920000},"title":"Component Props Provider"},{"name":"ContextMenu","route":"/docs/Components/ContextMenu","frontMatter":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1785249920000},"title":"Context Menu"},{"name":"ErrorBoundary","route":"/docs/Components/ErrorBoundary","frontMatter":{"title":"ErrorBoundary","filePath":"src/content/Components/ErrorBoundary.mdx","timestamp":1785249920000},"title":"ErrorBoundary"},{"name":"FormElement","route":"/docs/Components/FormElement","frontMatter":{"title":"FormElement","filePath":"src/content/Components/FormElement.mdx","timestamp":1785249920000},"title":"FormElement"},{"name":"Group","route":"/docs/Components/Group","frontMatter":{"title":"Group","filePath":"src/content/Components/Group.mdx","timestamp":1785249920000},"title":"Group"},{"name":"Input","route":"/docs/Components/Input","frontMatter":{"title":"Input","filePath":"src/content/Components/Input.mdx","timestamp":1785249920000},"title":"Input"},{"name":"Label","route":"/docs/Components/Label","frontMatter":{"title":"Label","filePath":"src/content/Components/Label.mdx","timestamp":1785249920000},"title":"Label"},{"name":"Menu","route":"/docs/Components/Menu","frontMatter":{"title":"Menu","filePath":"src/content/Components/Menu.mdx","timestamp":1785249920000},"title":"Menu"},{"name":"Modal","route":"/docs/Components/Modal","frontMatter":{"title":"Modal","filePath":"src/content/Components/Modal.mdx","timestamp":1785249920000},"title":"Modal"},{"name":"Pagination","route":"/docs/Components/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Components/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Select","route":"/docs/Components/Select","frontMatter":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1785249920000},"title":"Select"},{"name":"WindowBoundary","route":"/docs/Components/WindowBoundary","frontMatter":{"title":"WindowBoundary","filePath":"src/content/Components/WindowBoundary.mdx","timestamp":1785249920000},"title":"WindowBoundary"},{"name":"overview","route":"/docs/Components/overview","frontMatter":{"title":"Overview","filePath":"src/content/Components/overview.mdx","timestamp":1785249920000},"title":"Overview"}],"title":"Components"},{"name":"Intro","route":"/docs/Intro","frontMatter":{"title":"Introduction","filePath":"src/content/Intro.mdx","timestamp":1785249920000},"title":"Introduction"},{"name":"Table","route":"/docs/Table","children":[{"name":"DataTable","route":"/docs/Table/DataTable","children":[{"name":"Actions","route":"/docs/Table/DataTable/Actions","frontMatter":{"title":"Actions","filePath":"src/content/Table/DataTable/Actions.mdx","timestamp":1785249920000},"title":"Actions"},{"name":"Basic","route":"/docs/Table/DataTable/Basic","frontMatter":{"title":"Basic usage","filePath":"src/content/Table/DataTable/Basic.mdx","timestamp":1785249920000},"title":"Basic usage"},{"name":"Config","route":"/docs/Table/DataTable/Config","frontMatter":{"title":"Config","filePath":"src/content/Table/DataTable/Config.mdx","timestamp":1785249920000},"title":"Config"},{"name":"Filtering","route":"/docs/Table/DataTable/Filtering","frontMatter":{"title":"Filtering","filePath":"src/content/Table/DataTable/Filtering.mdx","timestamp":1785249920000},"title":"Filtering"},{"name":"Grouping","route":"/docs/Table/DataTable/Grouping","frontMatter":{"title":"Grouping","filePath":"src/content/Table/DataTable/Grouping.mdx","timestamp":1785249920000},"title":"Grouping"},{"name":"Pagination","route":"/docs/Table/DataTable/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Table/DataTable/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Props","route":"/docs/Table/DataTable/Props","frontMatter":{"title":"Props","filePath":"src/content/Table/DataTable/Props.mdx","timestamp":1785249920000},"title":"Props"},{"name":"Search","route":"/docs/Table/DataTable/Search","frontMatter":{"title":"Search","filePath":"src/content/Table/DataTable/Search.mdx","timestamp":1785249920000},"title":"Search"},{"name":"Sorting","route":"/docs/Table/DataTable/Sorting","frontMatter":{"title":"Sorting","filePath":"src/content/Table/DataTable/Sorting.mdx","timestamp":1785249920000},"title":"Sorting"},{"name":"TablePropsProvider","route":"/docs/Table/DataTable/TablePropsProvider","frontMatter":{"title":"Table Props Provider","filePath":"src/content/Table/DataTable/TablePropsProvider.mdx","timestamp":1785249920000},"title":"Table Props Provider"},{"name":"Views","route":"/docs/Table/DataTable/Views","frontMatter":{"title":"Views","filePath":"src/content/Table/DataTable/Views.mdx","timestamp":1785249920000},"title":"Views"},{"name":"overview","route":"/docs/Table/DataTable/overview","frontMatter":{"title":"DataTable","filePath":"src/content/Table/DataTable/overview.mdx","timestamp":1785249920000},"title":"DataTable"}],"title":"Datatable"},{"name":"Table","route":"/docs/Table/Table","frontMatter":{"title":"Table","filePath":"src/content/Table/Table.mdx","timestamp":1785249920000},"title":"Table"}],"title":"Table"},{"name":"helpers","route":"/docs/helpers","children":[{"name":"getNestedProperty","route":"/docs/helpers/getNestedProperty","frontMatter":{"title":"getNestedProperty","filePath":"src/content/helpers/getNestedProperty.mdx","timestamp":1785249920000},"title":"getNestedProperty"},{"name":"overview","route":"/docs/helpers/overview","frontMatter":{"title":"Helpers Overview","filePath":"src/content/helpers/overview.mdx","timestamp":1785249920000},"title":"Helpers Overview"},{"name":"updateNestedProperties","route":"/docs/helpers/updateNestedProperties","frontMatter":{"title":"updateNestedProperties","filePath":"src/content/helpers/updateNestedProperties.mdx","timestamp":1785249920000},"title":"updateNestedProperties"}],"title":"Helpers"},{"name":"hooks","route":"/docs/hooks","children":[{"name":"overview","route":"/docs/hooks/overview","frontMatter":{"title":"Overview","filePath":"src/content/hooks/overview.mdx","timestamp":1785249920000},"title":"Overview"},{"name":"useDebounceCallback","route":"/docs/hooks/useDebounceCallback","frontMatter":{"title":"useDebounceCallback","filePath":"src/content/hooks/useDebounceCallback.mdx","timestamp":1785249920000},"title":"useDebounceCallback"},{"name":"useDisclosure","route":"/docs/hooks/useDisclosure","frontMatter":{"title":"useDisclosure","filePath":"src/content/hooks/useDisclosure.mdx","timestamp":1785249920000},"title":"useDisclosure"},{"name":"usePagination","route":"/docs/hooks/usePagination","frontMatter":{"title":"usePagination","filePath":"src/content/hooks/usePagination.mdx","timestamp":1785249920000},"title":"usePagination"},{"name":"useScrollLock","route":"/docs/hooks/useScrollLock","frontMatter":{"title":"useScrollLock","filePath":"src/content/hooks/useScrollLock.mdx","timestamp":1785249920000},"title":"useScrollLock"}],"title":"Hooks"},{"name":"styles","route":"/docs/styles","children":[{"name":"styles-and-customization","route":"/docs/styles/styles-and-customization","frontMatter":{"title":"Styles & Customization","filePath":"src/content/styles/styles-and-customization.mdx","timestamp":1785249920000},"title":"Styles & Customization"}],"title":"Styles"}],"title":"Docs"}],"navbar":"$L16","footer":"$L17","children":["$L18","$L19"]}]]}]}]}]]}]
+1a:I[8197,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],""]
+1b:I[1449,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientNavbar"]
+1d:I[9209,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Switchers"]
+1e:I[7163,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LocaleSwitch"]
+1f:I[8783,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeSwitch"]
+20:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"MobileNav"]
+1c:T481,M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z16:["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L1a",null,{"href":"/","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":[["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--light","height":28,"src":"/img/logo-light.png","width":120}],["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--dark","height":28,"src":"/img/logo-dark.png","width":120}]]}],["$","$L1b",null,{"className":"","children":[["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","target":"_blank","rel":"noreferrer","children":[["$","svg",null,{"fill":"currentColor","viewBox":"3 3 18 18","height":"24","aria-label":"Project repository","children":["$","path",null,{"d":"$1c"}]}],false],"className":"x:focus-visible:nextra-focus"}],"$undefined","$undefined"]}]]}]]}]
+17:["$","div",null,{"className":"x:bg-gray-100 x:pb-[env(safe-area-inset-bottom)] x:dark:bg-neutral-900 x:print:bg-transparent","children":[["$","$L1d",null,{"children":["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:gap-2 x:py-2 x:px-4","children":[["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}],["$","hr",null,{"className":"nextra-border"}],["$","footer",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:justify-center x:py-12 x:text-gray-600 x:dark:text-gray-400 x:md:justify-start x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)]","children":[["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.5rem","justifyContent":"center","width":"100%"},"children":[["$","a",null,{"href":"/docs/Intro","children":"Docs"}],["$","a",null,{"href":"/docs/Table/Table","children":"Table"}],["$","a",null,{"href":"/docs/Components/overview","children":"Components"}],["$","a",null,{"href":"/docs/hooks/overview","children":"Hooks"}],["$","a",null,{"href":"/docs/helpers/overview","children":"Helpers"}],["$","a",null,{"href":"https://discord.gg/5zDJG79A","children":"Discord"}],["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","children":"GitHub"}]]}],["$","p",null,{"style":{"marginTop":"1.5rem","textAlign":"center","width":"100%"},"children":["Copyright © ",2026," kousta-ui, Kousta."]}]]}]]}]
+18:["$","$L20",null,{}]
+19:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]
+21:I[7823,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"TOCProvider"]
+22:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Sidebar"]
+23:I[9235,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientWrapper"]
+24:T5011,---
+---
+
+import Badge from '@/components/Badge';
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import {
+  CM_QuickStartPreview,
+  CM_BasicRightClickPreview,
+  CM_SubMenusPreview,
+  CM_GroupsIconsPreview,
+  CM_CloseBehaviorPreview,
+  CM_PositioningInteractivePreview,
+  CM_CustomWrapperPreview,
+  CM_AccessibilityPreview,
+} from '@/components/@Components/ContextMenu';
+
+# Context Menu
+
+The **ContextMenu** provides a customizable, nested right‑click menu. It supports options, groups, separators, sub‑menus, per‑item enable/disable, and automatic viewport‑aware placement.
+
+---
+
+## Installation
+
+```bash
+npm install @kousta-ui/components
+```
+
+### Import styles
+
+```ts
+import "@kousta-ui/components/esm/index.css";
+```
+
+---
+
+## Quick start
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuExample.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuCopy, LuTrash2, LuFolderPlus } from "react-icons/lu";
+
+export default function Example() {
+  return (
+    <ContextMenu
+      onOpen={() => {}}
+      onClose={() => {}}
+      options={[
+        { optionType: "Group", groupTitle: "File" },
+        { title: "New folder", icon: <LuFolderPlus />, onClick: () => {} },
+        { optionType: "Separator" },
+        { title: "Copy", icon: <LuCopy />, onClick: () => {} },
+        { title: "Delete", icon: <LuTrash2 />, active: true, onClick: () => {} },
+      ]}
+    >
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click anywhere in this box
+      </div>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuExample.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuCopy, LuTrash2, LuFolderPlus } from "react-icons/lu";
+
+export default function Example() {
+  return (
+    <ContextMenu
+      onOpen={() => {}}
+      onClose={() => {}}
+      options={[
+        { optionType: "Group", groupTitle: "File" },
+        { title: "New folder", icon: <LuFolderPlus />, onClick: () => {} },
+        { optionType: "Separator" },
+        { title: "Copy", icon: <LuCopy />, onClick: () => {} },
+        { title: "Delete", icon: <LuTrash2 />, active: true, onClick: () => {} },
+      ]}
+    >
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click anywhere in this box
+      </div>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_QuickStartPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Anatomy
+
+The Context Menu is built from these pieces:
+
+- **`<ContextMenu …>` (Provider)** – wraps the target area and holds state/positioning
+- **`ContextMenuMenu`** – internal popover that renders the menu list
+- **`ContextMenuItem`** – a single actionable option
+- **`ContextMenuItemWithSubs`** – an option revealing a nested submenu on click
+- **`ContextMenuSeparator`** – horizontal separator line
+- **`ContextmenuGroup`** – visual group header
+
+You typically only import and use the **Provider**; the other parts are wired internally.
+
+### Preview
+<CM_GroupsIconsPreview />
+
+---
+
+## Provider props
+
+```ts
+type ContextmenuProviderProps = {
+  /** Menu options (items, groups, separators, and sub‑menus) */
+  options: ContextMenuOption[];
+  /** Wrapper element/tag for the target area; defaults to "div" */
+  As?: string;
+  /** Disables the context menu (prevents opening) */
+  disabled?: boolean;
+  /** Called when the menu opens */
+  onOpen?: () => void;
+  /** Called when the menu closes (outside click, etc.) */
+  onClose?: () => void;
+  /** Global default: whether clicking an item closes the menu */
+  itemCloseOnClick?: boolean; // default: true
+} & React.PropsWithChildren;
+```
+
+### Options model
+
+```ts
+export type ContextMenuTypeOption = {
+  optionType?: "option";
+  icon?: ReactNode;
+  title?: string | ReactNode;
+  active?: boolean;        // default: true
+  hidden?: boolean;        // if true, item is not rendered
+  deactiveMessage?: string;
+  closeOnClick?: boolean;  // per-item override
+} & (
+  | { onClick: () => void; subOptions?: never } // leaf action
+  | {
+      subOptions: (ContextMenuOption & { type?: "click" | "hover" })[]; // submenu
+      onClick?: never;
+    }
+);
+
+export type ContextMenuTypeSeparato = { optionType: "Separator" };
+export type ContextMenuTypeGroup = { optionType: "Group"; groupTitle: string };
+
+export type ContextMenuOption =
+  | ContextMenuTypeSeparato
+  | ContextMenuTypeGroup
+  | ContextMenuTypeOption;
+```
+
+> **Tip:** Use `active: false` to disable an option, and `hidden: true` to conditionally hide it.
+
+---
+
+## Usage patterns
+
+### Basic right‑click menu
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuBasic.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ContextMenu options={[{ title: "Rename", onClick() {} }]}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click me
+      </div>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuBasic.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ContextMenu options={[{ title: "Rename", onClick() {} }]}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click me
+      </div>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_BasicRightClickPreview />}
+  defaultTab="ts"
+/>
+
+### Sub‑menus
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuSubMenus.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuShare2 } from "react-icons/lu";
+
+export default function Example() {
+  const options = [
+    {
+      title: "Share",
+      icon: <LuShare2 />,
+      subOptions: [
+        { title: "Copy link", onClick() {} },
+        { title: "Invite people…", onClick() {} },
+      ],
+    },
+    { optionType: "Separator" },
+    {
+      title: "Move to",
+      subOptions: [
+        { title: "Project A", onClick() {} },
+        { title: "Project B", onClick() {} },
+      ],
+    },
+  ] as any;
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          height: 120,
+          display: "grid",
+          placeItems: "center",
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click
+      </div>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuSubMenus.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuShare2 } from "react-icons/lu";
+
+export default function Example() {
+  const options = [
+    {
+      title: "Share",
+      icon: <LuShare2 />,
+      subOptions: [
+        { title: "Copy link", onClick() {} },
+        { title: "Invite people…", onClick() {} },
+      ],
+    },
+    { optionType: "Separator" },
+    {
+      title: "Move to",
+      subOptions: [
+        { title: "Project A", onClick() {} },
+        { title: "Project B", onClick() {} },
+      ],
+    },
+  ];
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          height: 120,
+          display: "grid",
+          placeItems: "center",
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click
+      </div>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_SubMenusPreview />}
+  defaultTab="ts"
+/>
+
+### Groups, separators, and icons
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuGroupsIcons.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuUserPlus, LuDownload, LuArchive } from "react-icons/lu";
+
+export default function Example() {
+  const options = [
+    { optionType: "Group", groupTitle: "Members" },
+    { title: "Invite", icon: <LuUserPlus />, onClick() {} },
+    { optionType: "Separator" },
+    { optionType: "Group", groupTitle: "File" },
+    { title: "Download", icon: <LuDownload />, onClick() {} },
+    { title: "Archive", icon: <LuArchive />, active: false, onClick() {} },
+  ] as any;
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click here
+      </div>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuGroupsIcons.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+import { LuUserPlus, LuDownload, LuArchive } from "react-icons/lu";
+
+export default function Example() {
+  const options = [
+    { optionType: "Group", groupTitle: "Members" },
+    { title: "Invite", icon: <LuUserPlus />, onClick() {} },
+    { optionType: "Separator" },
+    { optionType: "Group", groupTitle: "File" },
+    { title: "Download", icon: <LuDownload />, onClick() {} },
+    { title: "Archive", icon: <LuArchive />, active: false, onClick() {} },
+  ];
+
+  return (
+    <ContextMenu options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click here
+      </div>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_GroupsIconsPreview />}
+  defaultTab="ts"
+/>
+
+### Close behavior
+
+- Global default is controlled by **`itemCloseOnClick`** on the provider (default `true`).
+- Per-item override with **`closeOnClick`**.
+
+<Badge color="yellow">Implementation note</Badge> In the current implementation, `closeOnClick` defaults to `true` per item. That means items will close the menu on click unless you explicitly set `closeOnClick: false`.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuCloseBehavior.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [
+    { title: "Select", onClick() {}, closeOnClick: false },
+    { title: "Apply", onClick() {}, closeOnClick: true },
+  ] as any;
+
+  return (
+    <ContextMenu itemCloseOnClick={false} options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click (menu stays open unless item overrides)
+      </div>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuCloseBehavior.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [
+    { title: "Select", onClick() {}, closeOnClick: false },
+    { title: "Apply", onClick() {}, closeOnClick: true },
+  ];
+
+  return (
+    <ContextMenu itemCloseOnClick={false} options={options}>
+      <div
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        Right‑click (menu stays open unless item overrides)
+      </div>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_CloseBehaviorPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Positioning & viewport awareness
+
+The ContextMenu automatically positions itself at the pointer coordinates (`pageX`, `pageY`) when right-clicked and **intelligently adjusts** if it would overflow the viewport boundaries.
+
+### How it works
+
+- **Automatic measurement**: The provider measures the rendered menu dimensions via a `ref` after it's rendered
+- **Vertical flipping**: If `(menuHeight + y) > pageHeight`, the menu flips upward by setting a negative `offsetY`
+- **Horizontal flipping**: If `(menuWidth + x) > pageWidth`, the menu flips leftward by setting a negative `offsetX`
+- **Sub-menu inheritance**: Nested sub-menus automatically inherit these offsets to render inward (left/up) when needed, ensuring they stay within the viewport
+
+### Benefits
+
+- **No configuration needed**: Viewport awareness is enabled by default—you don't need to pass any props
+- **Smart positioning**: The menu always tries to stay visible, even near screen edges
+- **Consistent behavior**: Works the same way for all menu items and sub-menus
+
+### Preview (interactive)
+
+Use the controls to simulate a right‑click at different corners/edges and see how the menu flips to stay within the viewport.
+
+<CM_PositioningInteractivePreview />
+
+---
+
+## Custom wrapper element
+
+Use `As` to change the HTML tag of the right‑click area and pass extra props.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ContextMenuCustomWrapper.tsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [{ title: "Open", onClick() {} }] as any;
+  return (
+    <ContextMenu As="section" options={options}>
+      <section
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        <img
+          alt="Thumbnail"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA=="
+          style={{ width: 48, height: 48, borderRadius: 6 }}
+        />
+        <div style={{ fontSize: 12, opacity: 0.8 }}>
+          Right‑click the tile (section)
+        </div>
+      </section>
+    </ContextMenu>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ContextMenuCustomWrapper.jsx",
+      code: `import { ContextMenu } from "@kousta-ui/components";
+
+export default function Example() {
+  const options = [{ title: "Open", onClick() {} }];
+  return (
+    <ContextMenu As="section" options={options}>
+      <section
+        style={{
+          padding: 16,
+          border: "1px dashed var(--kui-neutral-400)",
+          borderRadius: 8,
+        }}
+      >
+        <img
+          alt="Thumbnail"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA=="
+          style={{ width: 48, height: 48, borderRadius: 6 }}
+        />
+        <div style={{ fontSize: 12, opacity: 0.8 }}>
+          Right‑click the tile (section)
+        </div>
+      </section>
+    </ContextMenu>
+  );
+}`
+    }
+  ]}
+  preview={<CM_CustomWrapperPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Accessibility
+
+The ContextMenu component provides basic accessibility features:
+
+- **Right-click trigger**: Opens on `contextmenu` event (right-click) and closes on outside click or item selection
+- **Semantic HTML**: Menu items render as `<button>` elements with proper disabled states
+- **Disabled state**: Use `active: false` to disable items, which prevents interaction and provides visual feedback
+- **Hidden items**: Use `hidden: true` to conditionally hide items without affecting layout
+
+### Limitations
+
+<Badge color="yellow">Note</Badge> The following accessibility features are **not implemented by default**:
+
+- **Keyboard navigation**: Arrow keys, Enter, Escape, etc. are not handled
+- **ARIA roles**: The menu does not use `role="menu"` or `role="menuitem"` attributes
+- **Focus management**: Focus is not automatically managed when the menu opens/closes
+- **Screen reader announcements**: No live region announcements for menu state changes
+
+### Enhancing accessibility
+
+If you need full keyboard navigation and screen reader support, you can:
+
+1. **Wrap the component** to add keyboard event handlers
+2. **Add ARIA attributes** manually using the `As` prop and custom wrapper
+3. **Implement focus management** to trap focus within the menu when open
+4. **Add live regions** for screen reader announcements
+
+### Preview
+<CM_AccessibilityPreview />
+
+---
+
+## Styles & customization
+
+### Runtime classes
+
+You can target these classes with CSS to customize the ContextMenu appearance:
+
+- **Provider container**
+  - `kui-contextmenu-container`
+- **Menu panel**
+  - `kui-contextmenu`
+- **Icon gutter (empty spacer column)**
+  - `kui-contextmenu-icons`
+- **Item**
+  - `kui-contextmenu-item`
+  - `kui-disabled` (added when `active: false`)
+- **Item icon cell**
+  - `kui-contextmenu-item-icon`
+- **Separator**
+  - `kui-contextmenu-separator-container`
+  - `kui-contextmenu-separator-icon`
+  - `kui-contextmenu-separator`
+- **Group**
+  - `kui-contextmenu-group-container`
+  - `kui-contextmenu-group-title`
+
+### Customization with kui-classnames
+
+```css
+/* Customize the menu panel */
+.kui-contextmenu {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+}
+
+/* Style menu items on hover */
+.kui-contextmenu-item:hover {
+  background-color: var(--kui-primary-100);
+  border-radius: 6px;
+}
+
+/* Customize disabled items */
+.kui-contextmenu-item.kui-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Style group titles */
+.kui-contextmenu-group-title {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--kui-neutral-600);
+}
+```
+
+### Tokens used by the default styles
+
+- **Colors**
+  - `--kui-neutral-50`, `--kui-neutral-100`, `--kui-neutral-200`, `--kui-neutral-300`, `--kui-neutral-500`, `--kui-neutral-600`, `--kui-neutral-700`, `--kui-neutral-800`, `--kui-neutral-900`
+- **Rounding**
+  - `--kui-rounded`
+
+---
+
+## Component Props Provider
+
+Currently, ContextMenu does not support the `ComponentPropsProvider` for global defaults. All configuration must be done via props on the `ContextMenu` component itself.
+
+<Badge color="blue">Future enhancement</Badge> Support for `ComponentPropsProvider` may be added in a future release.
+
+---
+
+## Testing recipes
+
+The test suite can follow these patterns:
+
+```tsx
+import { render, screen, fireEvent } from "@testing-library/react";
+import ContextMenu from "@kousta-ui/components/ContextMenu";
+
+const onLeaf = jest.fn();
+const onSub = jest.fn();
+
+const options = [
+  { title: "Leaf", onClick: onLeaf, closeOnClick: false },
+  { title: "Has sub", subOptions: [{ title: "Sub leaf", onClick: onSub }] },
+];
+
+test("opens on right-click and executes leaf click", () => {
+  render(<ContextMenu options={options}>Area</ContextMenu>);
+  fireEvent.contextMenu(screen.getByText(/area/i)); // open
+  fireEvent.click(screen.getByText(/leaf/i));       // click
+  expect(onLeaf).toHaveBeenCalled();
+});
+
+test("opens submenu and executes sub click", () => {
+  render(<ContextMenu options={options}>Area</ContextMenu>);
+  fireEvent.contextMenu(screen.getByText(/area/i));
+  fireEvent.click(screen.getByText(/has sub/i)); // reveal submenu
+  fireEvent.click(screen.getByText(/sub leaf/i));
+  expect(onSub).toHaveBeenCalled();
+});
+```
+
+---
+
+## Tips & gotchas
+
+- **Don’t render hidden items**: use `hidden: true` to skip an item conditionally.
+- **Disable instead of removing** when preserving layout: `active: false` gives a consistent visual state without interaction.
+- **Per‑item close behavior**: `closeOnClick` overrides the provider’s `itemCloseOnClick`.
+- **Nested sub‑menus** are supported recursively—each submenu honors auto‑flip logic using `offsetX/offsetY`.
+- The target area uses `onContextMenu` to intercept the native menu; call `preventDefault()` yourself if you extend behavior.
+
+---
+
+## Types (reference)
+
+```ts
+export type ContextMenuTypeOption = {
+  optionType?: "option";
+  icon?: ReactNode;
+  title?: string | ReactNode;
+  active?: boolean;
+  hidden?: boolean;
+  deactiveMessage?: string;
+  closeOnClick?: boolean;
+} & (
+  | { onClick: () => void; subOptions?: never }
+  | { subOptions: (ContextMenuOption & { type?: "click" | "hover" })[]; onClick?: never }
+);
+
+export type ContextMenuTypeSeparato = {
+  optionType: "Separator";
+};
+
+export type ContextMenuTypeGroup = {
+  optionType: "Group";
+  groupTitle: string;
+};
+
+export type ContextMenuOption =
+  | ContextMenuTypeSeparato
+  | ContextMenuTypeGroup
+  | ContextMenuTypeOption;
+
+export type ContextmenuProviderProps = {
+  options: ContextMenuOption[];
+  disabled?: boolean;
+  As?: string;
+  onOpen?: () => void;
+  onClose?: () => void;
+  itemCloseOnClick?: boolean;
+} & React.PropsWithChildren;
+```5:["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L21",null,{"value":[{"value":"Installation","id":"installation","depth":2},{"value":"Import styles","id":"import-styles","depth":3},{"value":"Quick start","id":"quick-start","depth":2},{"value":"Anatomy","id":"anatomy","depth":2},{"value":"Preview","id":"preview","depth":3},{"value":"Provider props","id":"provider-props","depth":2},{"value":"Options model","id":"options-model","depth":3},{"value":"Usage patterns","id":"usage-patterns","depth":2},{"value":"Basic right‑click menu","id":"basic-rightclick-menu","depth":3},{"value":"Sub‑menus","id":"submenus","depth":3},{"value":"Groups, separators, and icons","id":"groups-separators-and-icons","depth":3},{"value":"Close behavior","id":"close-behavior","depth":3},{"value":"Positioning & viewport awareness","id":"positioning--viewport-awareness","depth":2},{"value":"How it works","id":"how-it-works","depth":3},{"value":"Benefits","id":"benefits","depth":3},{"value":"Preview (interactive)","id":"preview-interactive","depth":3},{"value":"Custom wrapper element","id":"custom-wrapper-element","depth":2},{"value":"Accessibility","id":"accessibility","depth":2},{"value":"Limitations","id":"limitations","depth":3},{"value":"Enhancing accessibility","id":"enhancing-accessibility","depth":3},{"value":"Preview","id":"preview-1","depth":3},{"value":"Styles & customization","id":"styles--customization","depth":2},{"value":"Runtime classes","id":"runtime-classes","depth":3},{"value":"Customization with kui-classnames","id":"customization-with-kui-classnames","depth":3},{"value":"Tokens used by the default styles","id":"tokens-used-by-the-default-styles","depth":3},{"value":"Component Props Provider","id":"component-props-provider","depth":2},{"value":"Testing recipes","id":"testing-recipes","depth":2},{"value":"Tips & gotchas","id":"tips--gotchas","depth":2},{"value":"Types (reference)","id":"types-reference","depth":2}],"children":[["$","$L22",null,{}],["$","$L23",null,{"metadata":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1785249920000},"bottomContent":"$undefined","sourceCode":"$24","children":["$L25","$L26"]}]]}]}]
+27:I[4168,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"HeadingAnchor"]
+28:I[1946,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ToggleWordWrapButton"]
+25:["$","div",null,{"id":"nextra-skip-nav"}]
+26:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Context Menu","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The ",["$","strong",null,{"children":"ContextMenu"}]," provides a customizable, nested right‑click menu. It supports options, groups, separators, sub‑menus, per‑item enable/disable, and automatic viewport‑aware placement."]}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"installation","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Installation",["$","$L27",null,{"id":"installation"}]]}],"\n",["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"npm"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" install"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" @kousta-ui/components"}]]}]}]]}]]}],"\n",["$","h3",null,{"id":"import-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Import styles",["$","$L27",null,{"id":"import-styles"}]]}],"\n",["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"@kousta-ui/components/esm/index.css\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]}]]}]]}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"quick-start","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Quick start","$L29"]}],"\n","$L2a","\n","$L2b","\n","$L2c","\n","$L2d","\n","$L2e","\n","$L2f","\n","$L30","\n","$L31","\n","$L32","\n","$L33","\n","$L34","\n","$L35","\n","$L36","\n","$L37","\n","$L38","\n","$L39","\n","$L3a","\n","$L3b","\n","$L3c","\n","$L3d","\n","$L3e","\n","$L3f","\n","$L40","\n","$L41","\n","$L42","\n","$L43","\n","$L44","\n","$L45","\n","$L46","\n","$L47","\n","$L48","\n","$L49","\n","$L4a","\n","$L4b","\n","$L4c","\n","$L4d","\n","$L4e","\n","$L4f","\n","$L50","\n","$L51","\n","$L52","\n","$L53","\n","$L54","\n","$L55","\n","$L56","\n","$L57","\n","$L58","\n","$L59","\n","$L5a","\n","$L5b","\n","$L5c","\n","$L5d","\n","$L5e","\n","$L5f","\n","$L60","\n","$L61","\n","$L62","\n","$L63","\n","$L64","\n","$L65","\n","$L66","\n","$L67","\n","$L68","\n","$L69","\n","$L6a","\n","$L6b","\n","$L6c","\n","$L6d","\n","$L6e","\n","$L6f","\n","$L70","\n","$L71","\n","$L72","\n","$L73","\n","$L74"]}]
+75:I[7411,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"default"]
+76:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_QuickStartPreview"]
+77:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_GroupsIconsPreview"]
+8f:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_BasicRightClickPreview"]
+90:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_SubMenusPreview"]
+91:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_CloseBehaviorPreview"]
+92:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_PositioningInteractivePreview"]
+93:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_CustomWrapperPreview"]
+94:I[7166,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CM_AccessibilityPreview"]
+29:["$","$L27",null,{"id":"quick-start"}]
+2a:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuExample.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuCopy, LuTrash2, LuFolderPlus } from \"react-icons/lu\";\n\nexport default function Example() {\nreturn (\n  <ContextMenu\n    onOpen={() => {}}\n    onClose={() => {}}\n    options={[\n      { optionType: \"Group\", groupTitle: \"File\" },\n      { title: \"New folder\", icon: <LuFolderPlus />, onClick: () => {} },\n      { optionType: \"Separator\" },\n      { title: \"Copy\", icon: <LuCopy />, onClick: () => {} },\n      { title: \"Delete\", icon: <LuTrash2 />, active: true, onClick: () => {} },\n    ]}\n  >\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click anywhere in this box\n    </div>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuExample.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuCopy, LuTrash2, LuFolderPlus } from \"react-icons/lu\";\n\nexport default function Example() {\nreturn (\n  <ContextMenu\n    onOpen={() => {}}\n    onClose={() => {}}\n    options={[\n      { optionType: \"Group\", groupTitle: \"File\" },\n      { title: \"New folder\", icon: <LuFolderPlus />, onClick: () => {} },\n      { optionType: \"Separator\" },\n      { title: \"Copy\", icon: <LuCopy />, onClick: () => {} },\n      { title: \"Delete\", icon: <LuTrash2 />, active: true, onClick: () => {} },\n    ]}\n  >\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click anywhere in this box\n    </div>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L76",null,{}],"defaultTab":"ts"}]
+2b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+2c:["$","h2",null,{"id":"anatomy","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Anatomy",["$","$L27",null,{"id":"anatomy"}]]}]
+2d:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The Context Menu is built from these pieces:"}]
+2e:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<ContextMenu …>"}]," (Provider)"]}]," – wraps the target area and holds state/positioning"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextMenuMenu"}]}]," – internal popover that renders the menu list"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextMenuItem"}]}]," – a single actionable option"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextMenuItemWithSubs"}]}]," – an option revealing a nested submenu on click"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextMenuSeparator"}]}]," – horizontal separator line"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextmenuGroup"}]}]," – visual group header"]}],"\n"]}]
+2f:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["You typically only import and use the ",["$","strong",null,{"children":"Provider"}],"; the other parts are wired internally."]}]
+30:["$","h3",null,{"id":"preview","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Preview",["$","$L27",null,{"id":"preview"}]]}]
+31:["$","$L77",null,{}]
+32:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+33:["$","h2",null,{"id":"provider-props","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Provider props",["$","$L27",null,{"id":"provider-props"}]]}]
+34:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextmenuProviderProps"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Menu options (items, groups, separators, and sub‑menus) */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[];"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Wrapper element/tag for the target area; defaults to \"div\" */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  As"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Disables the context menu (prevents opening) */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  disabled"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Called when the menu opens */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onOpen"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Called when the menu closes (outside click, etc.) */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onClose"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],"$L78","$L79","$L7a","$L7b"]}],"\n","$L7c","\n","$L7d","\n","$L7e"]}]]}]]}]
+35:["$","h3",null,{"id":"options-model","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Options model",["$","$L27",null,{"id":"options-model"}]]}]
+36:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"option\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  icon"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  title"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  active"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";        "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// default: true"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  hidden"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";        "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// if true, item is not rendered"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  deactiveMessage"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n","$L7f","\n","$L80","\n","$L81","\n","$L82","\n","$L83","\n","$L84","\n","$L85","\n","$L86","\n","$L87","\n","$L88","\n","$L89","\n","$L8a","\n","$L8b","\n","$L8c","\n","$L8d","\n","$L8e"]}]]}]]}]
+37:["$","blockquote",null,{"className":"x:not-first:mt-[1.25em] x:border-gray-300 x:italic x:text-gray-700 x:dark:border-gray-700 x:dark:text-gray-400 x:border-s-2 x:ps-[1.5em]","children":["\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","strong",null,{"children":"Tip:"}]," Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"active: false"}]," to disable an option, and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hidden: true"}]," to conditionally hide it."]}],"\n"]}]
+38:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+39:["$","h2",null,{"id":"usage-patterns","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Usage patterns",["$","$L27",null,{"id":"usage-patterns"}]]}]
+3a:["$","h3",null,{"id":"basic-rightclick-menu","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Basic right‑click menu",["$","$L27",null,{"id":"basic-rightclick-menu"}]]}]
+3b:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuBasic.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <ContextMenu options={[{ title: \"Rename\", onClick() {} }]}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click me\n    </div>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuBasic.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <ContextMenu options={[{ title: \"Rename\", onClick() {} }]}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click me\n    </div>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L8f",null,{}],"defaultTab":"ts"}]
+3c:["$","h3",null,{"id":"submenus","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Sub‑menus",["$","$L27",null,{"id":"submenus"}]]}]
+3d:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuSubMenus.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuShare2 } from \"react-icons/lu\";\n\nexport default function Example() {\nconst options = [\n  {\n    title: \"Share\",\n    icon: <LuShare2 />,\n    subOptions: [\n      { title: \"Copy link\", onClick() {} },\n      { title: \"Invite people…\", onClick() {} },\n    ],\n  },\n  { optionType: \"Separator\" },\n  {\n    title: \"Move to\",\n    subOptions: [\n      { title: \"Project A\", onClick() {} },\n      { title: \"Project B\", onClick() {} },\n    ],\n  },\n] as any;\n\nreturn (\n  <ContextMenu options={options}>\n    <div\n      style={{\n        height: 120,\n        display: \"grid\",\n        placeItems: \"center\",\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click\n    </div>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuSubMenus.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuShare2 } from \"react-icons/lu\";\n\nexport default function Example() {\nconst options = [\n  {\n    title: \"Share\",\n    icon: <LuShare2 />,\n    subOptions: [\n      { title: \"Copy link\", onClick() {} },\n      { title: \"Invite people…\", onClick() {} },\n    ],\n  },\n  { optionType: \"Separator\" },\n  {\n    title: \"Move to\",\n    subOptions: [\n      { title: \"Project A\", onClick() {} },\n      { title: \"Project B\", onClick() {} },\n    ],\n  },\n];\n\nreturn (\n  <ContextMenu options={options}>\n    <div\n      style={{\n        height: 120,\n        display: \"grid\",\n        placeItems: \"center\",\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click\n    </div>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L90",null,{}],"defaultTab":"ts"}]
+3e:["$","h3",null,{"id":"groups-separators-and-icons","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Groups, separators, and icons",["$","$L27",null,{"id":"groups-separators-and-icons"}]]}]
+3f:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuGroupsIcons.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuUserPlus, LuDownload, LuArchive } from \"react-icons/lu\";\n\nexport default function Example() {\nconst options = [\n  { optionType: \"Group\", groupTitle: \"Members\" },\n  { title: \"Invite\", icon: <LuUserPlus />, onClick() {} },\n  { optionType: \"Separator\" },\n  { optionType: \"Group\", groupTitle: \"File\" },\n  { title: \"Download\", icon: <LuDownload />, onClick() {} },\n  { title: \"Archive\", icon: <LuArchive />, active: false, onClick() {} },\n] as any;\n\nreturn (\n  <ContextMenu options={options}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click here\n    </div>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuGroupsIcons.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\nimport { LuUserPlus, LuDownload, LuArchive } from \"react-icons/lu\";\n\nexport default function Example() {\nconst options = [\n  { optionType: \"Group\", groupTitle: \"Members\" },\n  { title: \"Invite\", icon: <LuUserPlus />, onClick() {} },\n  { optionType: \"Separator\" },\n  { optionType: \"Group\", groupTitle: \"File\" },\n  { title: \"Download\", icon: <LuDownload />, onClick() {} },\n  { title: \"Archive\", icon: <LuArchive />, active: false, onClick() {} },\n];\n\nreturn (\n  <ContextMenu options={options}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click here\n    </div>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L77",null,{}],"defaultTab":"ts"}]
+40:["$","h3",null,{"id":"close-behavior","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Close behavior",["$","$L27",null,{"id":"close-behavior"}]]}]
+41:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["Global default is controlled by ",["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"itemCloseOnClick"}]}]," on the provider (default ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],")."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Per-item override with ",["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"closeOnClick"}]}],"."]}],"\n"]}]
+42:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Implementation note"}]," In the current implementation, ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"closeOnClick"}]," defaults to ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}]," per item. That means items will close the menu on click unless you explicitly set ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"closeOnClick: false"}],"."]}]
+43:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuCloseBehavior.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nconst options = [\n  { title: \"Select\", onClick() {}, closeOnClick: false },\n  { title: \"Apply\", onClick() {}, closeOnClick: true },\n] as any;\n\nreturn (\n  <ContextMenu itemCloseOnClick={false} options={options}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click (menu stays open unless item overrides)\n    </div>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuCloseBehavior.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nconst options = [\n  { title: \"Select\", onClick() {}, closeOnClick: false },\n  { title: \"Apply\", onClick() {}, closeOnClick: true },\n];\n\nreturn (\n  <ContextMenu itemCloseOnClick={false} options={options}>\n    <div\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      Right‑click (menu stays open unless item overrides)\n    </div>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L91",null,{}],"defaultTab":"ts"}]
+44:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+45:["$","h2",null,{"id":"positioning--viewport-awareness","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Positioning & viewport awareness",["$","$L27",null,{"id":"positioning--viewport-awareness"}]]}]
+46:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The ContextMenu automatically positions itself at the pointer coordinates (",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"pageX"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"pageY"}],") when right-clicked and ",["$","strong",null,{"children":"intelligently adjusts"}]," if it would overflow the viewport boundaries."]}]
+47:["$","h3",null,{"id":"how-it-works","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["How it works",["$","$L27",null,{"id":"how-it-works"}]]}]
+48:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Automatic measurement"}],": The provider measures the rendered menu dimensions via a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ref"}]," after it’s rendered"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Vertical flipping"}],": If ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(menuHeight + y) > pageHeight"}],", the menu flips upward by setting a negative ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"offsetY"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Horizontal flipping"}],": If ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(menuWidth + x) > pageWidth"}],", the menu flips leftward by setting a negative ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"offsetX"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Sub-menu inheritance"}],": Nested sub-menus automatically inherit these offsets to render inward (left/up) when needed, ensuring they stay within the viewport"]}],"\n"]}]
+49:["$","h3",null,{"id":"benefits","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Benefits",["$","$L27",null,{"id":"benefits"}]]}]
+4a:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"No configuration needed"}],": Viewport awareness is enabled by default—you don’t need to pass any props"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Smart positioning"}],": The menu always tries to stay visible, even near screen edges"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Consistent behavior"}],": Works the same way for all menu items and sub-menus"]}],"\n"]}]
+4b:["$","h3",null,{"id":"preview-interactive","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Preview (interactive)",["$","$L27",null,{"id":"preview-interactive"}]]}]
+4c:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Use the controls to simulate a right‑click at different corners/edges and see how the menu flips to stay within the viewport."}]
+4d:["$","$L92",null,{}]
+4e:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+4f:["$","h2",null,{"id":"custom-wrapper-element","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Custom wrapper element",["$","$L27",null,{"id":"custom-wrapper-element"}]]}]
+50:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"As"}]," to change the HTML tag of the right‑click area and pass extra props."]}]
+51:["$","$L75",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ContextMenuCustomWrapper.tsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nconst options = [{ title: \"Open\", onClick() {} }] as any;\nreturn (\n  <ContextMenu As=\"section\" options={options}>\n    <section\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      <img\n        alt=\"Thumbnail\"\n        src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==\"\n        style={{ width: 48, height: 48, borderRadius: 6 }}\n      />\n      <div style={{ fontSize: 12, opacity: 0.8 }}>\n        Right‑click the tile (section)\n      </div>\n    </section>\n  </ContextMenu>\n);\n}"},{"value":"js","language":"jsx","filename":"ContextMenuCustomWrapper.jsx","code":"import { ContextMenu } from \"@kousta-ui/components\";\n\nexport default function Example() {\nconst options = [{ title: \"Open\", onClick() {} }];\nreturn (\n  <ContextMenu As=\"section\" options={options}>\n    <section\n      style={{\n        padding: 16,\n        border: \"1px dashed var(--kui-neutral-400)\",\n        borderRadius: 8,\n      }}\n    >\n      <img\n        alt=\"Thumbnail\"\n        src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==\"\n        style={{ width: 48, height: 48, borderRadius: 6 }}\n      />\n      <div style={{ fontSize: 12, opacity: 0.8 }}>\n        Right‑click the tile (section)\n      </div>\n    </section>\n  </ContextMenu>\n);\n}"}],"preview":["$","$L93",null,{}],"defaultTab":"ts"}]
+52:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+53:["$","h2",null,{"id":"accessibility","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Accessibility",["$","$L27",null,{"id":"accessibility"}]]}]
+54:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The ContextMenu component provides basic accessibility features:"}]
+55:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Right-click trigger"}],": Opens on ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"contextmenu"}]," event (right-click) and closes on outside click or item selection"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Semantic HTML"}],": Menu items render as ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<button>"}]," elements with proper disabled states"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Disabled state"}],": Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"active: false"}]," to disable items, which prevents interaction and provides visual feedback"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Hidden items"}],": Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hidden: true"}]," to conditionally hide items without affecting layout"]}],"\n"]}]
+56:["$","h3",null,{"id":"limitations","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Limitations",["$","$L27",null,{"id":"limitations"}]]}]
+57:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Note"}]," The following accessibility features are ",["$","strong",null,{"children":"not implemented by default"}],":"]}]
+58:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Keyboard navigation"}],": Arrow keys, Enter, Escape, etc. are not handled"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"ARIA roles"}],": The menu does not use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"role=\"menu\""}]," or ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"role=\"menuitem\""}]," attributes"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Focus management"}],": Focus is not automatically managed when the menu opens/closes"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Screen reader announcements"}],": No live region announcements for menu state changes"]}],"\n"]}]
+59:["$","h3",null,{"id":"enhancing-accessibility","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Enhancing accessibility",["$","$L27",null,{"id":"enhancing-accessibility"}]]}]
+5a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"If you need full keyboard navigation and screen reader support, you can:"}]
+5b:["$","ol",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-decimal x:ms-6","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Wrap the component"}]," to add keyboard event handlers"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Add ARIA attributes"}]," manually using the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"As"}]," prop and custom wrapper"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Implement focus management"}]," to trap focus within the menu when open"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Add live regions"}]," for screen reader announcements"]}],"\n"]}]
+5c:["$","h3",null,{"id":"preview-1","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Preview",["$","$L27",null,{"id":"preview-1"}]]}]
+5d:["$","$L94",null,{}]
+5e:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+5f:["$","h2",null,{"id":"styles--customization","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Styles & customization",["$","$L27",null,{"id":"styles--customization"}]]}]
+60:["$","h3",null,{"id":"runtime-classes","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Runtime classes",["$","$L27",null,{"id":"runtime-classes"}]]}]
+61:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"You can target these classes with CSS to customize the ContextMenu appearance:"}]
+62:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Provider container"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-container"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Menu panel"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Icon gutter (empty spacer column)"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-icons"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Item"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-item"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-disabled"}]," (added when ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"active: false"}],")"]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Item icon cell"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-item-icon"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Separator"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-separator-container"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-separator-icon"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-separator"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Group"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-group-container"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-contextmenu-group-title"}]}],"\n"]}],"\n"]}],"\n"]}]
+63:["$","h3",null,{"id":"customization-with-kui-classnames","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Customization with kui-classnames",["$","$L27",null,{"id":"customization-with-kui-classnames"}]]}]
+64:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* Customize the menu panel */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":".kui-contextmenu"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  border-radius"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"12"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"px"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  box-shadow"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 4"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"px"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 12"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"px"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" rgba"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0.15"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":");"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  padding"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0.5"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"rem"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* Style menu items on hover */"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":".kui-contextmenu-item:hover"}],"$L95"]}],"\n","$L96","\n","$L97","\n","$L98","\n","$L99","\n","$L9a","\n","$L9b","\n","$L9c","\n","$L9d","\n","$L9e","\n","$L9f","\n","$La0","\n","$La1","\n","$La2","\n","$La3","\n","$La4","\n","$La5","\n","$La6"]}]]}]]}]
+65:["$","h3",null,{"id":"tokens-used-by-the-default-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Tokens used by the default styles",["$","$L27",null,{"id":"tokens-used-by-the-default-styles"}]]}]
+66:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Colors"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-50"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-100"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-200"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-300"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-500"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-600"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-700"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-800"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-900"}]]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Rounding"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-rounded"}]}],"\n"]}],"\n"]}],"\n"]}]
+67:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+68:["$","h2",null,{"id":"component-props-provider","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Component Props Provider",["$","$L27",null,{"id":"component-props-provider"}]]}]
+69:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Currently, ContextMenu does not support the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]," for global defaults. All configuration must be done via props on the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ContextMenu"}]," component itself."]}]
+6a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-blue","children":"Future enhancement"}]," Support for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]," may be added in a future release."]}]
+6b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+6c:["$","h2",null,{"id":"testing-recipes","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Testing recipes",["$","$L27",null,{"id":"testing-recipes"}]]}]
+6d:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The test suite can follow these patterns:"}]
+6e:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { render, screen, fireEvent } "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"from"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"@testing-library/react\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ContextMenu "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"from"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"@kousta-ui/components/ContextMenu\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" onLeaf"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" jest."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"fn"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"();"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" onSub"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" jest."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"fn"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"();"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ["}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  { title: "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Leaf\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", onClick: onLeaf, closeOnClick: "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"false"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" },"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  { title: "}],"$La7","$La8","$La9","$Laa"]}],"\n","$Lab","\n","$Lac","\n","$Lad","\n","$Lae","\n","$Laf","\n","$Lb0","\n","$Lb1","\n","$Lb2","\n","$Lb3","\n","$Lb4","\n","$Lb5","\n","$Lb6","\n","$Lb7","\n","$Lb8","\n","$Lb9","\n","$Lba"]}]]}]]}]
+6f:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+70:["$","h2",null,{"id":"tips--gotchas","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Tips & gotchas",["$","$L27",null,{"id":"tips--gotchas"}]]}]
+71:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Don’t render hidden items"}],": use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hidden: true"}]," to skip an item conditionally."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Disable instead of removing"}]," when preserving layout: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"active: false"}]," gives a consistent visual state without interaction."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Per‑item close behavior"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"closeOnClick"}]," overrides the provider’s ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"itemCloseOnClick"}],"."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Nested sub‑menus"}]," are supported recursively—each submenu honors auto‑flip logic using ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"offsetX/offsetY"}],"."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["The target area uses ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onContextMenu"}]," to intercept the native menu; call ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"preventDefault()"}]," yourself if you extend behavior."]}],"\n"]}]
+72:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+73:["$","h2",null,{"id":"types-reference","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Types (reference)",["$","$L27",null,{"id":"types-reference"}]]}]
+74:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"option\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  icon"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  title"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  active"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  hidden"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  deactiveMessage"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  closeOnClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],"$Lbb","$Lbc"]}],"\n","$Lbd","\n","$Lbe","\n","$Lbf","\n","$Lc0","\n","$Lc1","\n","$Lc2","\n","$Lc3","\n","$Lc4","\n","$Lc5","\n","$Lc6","\n","$Lc7","\n","$Lc8","\n","$Lc9","\n","$Lca","\n","$Lcb","\n","$Lcc","\n","$Lcd","\n","$Lce","\n","$Lcf","\n","$Ld0","\n","$Ld1","\n","$Ld2","\n","$Ld3","\n","$Ld4","\n","$Ld5","\n","$Ld6","\n","$Ld7"]}]]}]]}]
+78:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}]
+79:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}]
+7a:["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}]
+7b:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]
+7c:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  /** Global default: whether clicking an item closes the menu */"}]}]
+7d:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  itemCloseOnClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"; "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// default: true"}]]}]
+7e:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" React"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"PropsWithChildren"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+7f:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  closeOnClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";  "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// per-item override"}]]}]
+80:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}]]}]
+81:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"; "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"subOptions"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" never"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" } "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// leaf action"}]]}]
+82:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+83:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"      subOptions"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" &"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"click\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"hover\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" })[]; "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// submenu"}]]}]
+84:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"      onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" never"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+85:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"    }"}]}]
+86:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":");"}]}]
+87:["$","span",null,{"children":" "}]
+88:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeSeparato"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"Separator\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" };"}]]}]
+89:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeGroup"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"Group\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"; "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"groupTitle"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" };"}]]}]
+8a:["$","span",null,{"children":" "}]
+8b:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}]]}]
+8c:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeSeparato"}]]}]
+8d:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeGroup"}]]}]
+8e:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeOption"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+95:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]
+96:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  background-color"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"var"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"--kui-primary-100"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":");"}]]}]
+97:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  border-radius"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"6"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"px"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+98:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]}]
+99:["$","span",null,{"children":" "}]
+9a:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* Customize disabled items */"}]}]
+9b:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":".kui-contextmenu-item.kui-disabled"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+9c:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  opacity"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0.5"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+9d:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  cursor"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"not-allowed"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+9e:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]}]
+9f:["$","span",null,{"children":" "}]
+a0:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* Style group titles */"}]}]
+a1:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":".kui-contextmenu-group-title"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+a2:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  font-weight"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"600"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a3:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  font-size"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"0.75"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"rem"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a4:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  text-transform"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"uppercase"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a5:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"  color"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"var"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"--kui-neutral-600"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":");"}]]}]
+a6:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]}]
+a7:["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Has sub\""}]
+a8:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", subOptions: [{ title: "}]
+a9:["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Sub leaf\""}]
+aa:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", onClick: onSub }] },"}]
+ab:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"];"}]}]
+ac:["$","span",null,{"children":" "}]
+ad:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"test"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"opens on right-click and executes leaf click\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+ae:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  render"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ContextMenu"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{options}>Area</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ContextMenu"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">);"}]]}]
+af:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  fireEvent."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"contextMenu"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(screen."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getByText"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#DBEDFF"},"children":"area"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"i"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":")); "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// open"}]]}]
+b0:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  fireEvent."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"click"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(screen."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getByText"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#DBEDFF"},"children":"leaf"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"i"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"));       "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// click"}]]}]
+b1:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  expect"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(onLeaf)."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"toHaveBeenCalled"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"();"}]]}]
+b2:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"});"}]}]
+b3:["$","span",null,{"children":" "}]
+b4:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"test"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"opens submenu and executes sub click\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+b5:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  render"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ContextMenu"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{options}>Area</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ContextMenu"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">);"}]]}]
+b6:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  fireEvent."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"contextMenu"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(screen."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getByText"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#DBEDFF"},"children":"area"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"i"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"));"}]]}]
+b7:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  fireEvent."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"click"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(screen."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getByText"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#DBEDFF"},"children":"has sub"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"i"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":")); "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// reveal submenu"}]]}]
+b8:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  fireEvent."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"click"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(screen."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getByText"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#DBEDFF"},"children":"sub leaf"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"/"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"i"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"));"}]]}]
+b9:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  expect"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(onSub)."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"toHaveBeenCalled"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"();"}]]}]
+ba:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"});"}]}]
+bb:["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}]
+bc:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]
+bd:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}]]}]
+be:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"; "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"subOptions"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" never"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" }"}]]}]
+bf:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"subOptions"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" &"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"click\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"hover\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" })[]; "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" never"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" }"}]]}]
+c0:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":");"}]}]
+c1:["$","span",null,{"children":" "}]
+c2:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeSeparato"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+c3:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"Separator\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+c4:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}]
+c5:["$","span",null,{"children":" "}]
+c6:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeGroup"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+c7:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  optionType"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"Group\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+c8:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  groupTitle"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+c9:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}]
+ca:["$","span",null,{"children":" "}]
+cb:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}]]}]
+cc:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeSeparato"}]]}]
+cd:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeGroup"}]]}]
+ce:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuTypeOption"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+cf:["$","span",null,{"children":" "}]
+d0:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextmenuProviderProps"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+d1:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ContextMenuOption"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[];"}]]}]
+d2:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  disabled"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+d3:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  As"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+d4:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onOpen"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+d5:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onClose"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+d6:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  itemCloseOnClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+d7:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" React"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"PropsWithChildren"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+d8:I[6644,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"Context Menu | Kousta UI"}],["$","meta","1",{"name":"description","content":"A React UI library focused on performance, accessibility, and convenience."}],["$","link","2",{"rel":"icon","href":"/img/logo.png"}],["$","$Ld8","3",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"

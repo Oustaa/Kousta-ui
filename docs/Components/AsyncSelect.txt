@@ -1,0 +1,1210 @@
+1:"$Sreact.fragment"
+3:I[5204,[],""]
+4:I[2642,[],""]
+6:I[433,[],"OutletBoundary"]
+8:I[9884,[],"AsyncMetadataOutlet"]
+a:I[433,[],"ViewportBoundary"]
+c:I[433,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[3536,[],""]
+:HL["/_next/static/css/f1d677badafb2d1e.css","style"]
+:HL["/_next/static/css/5fbaaa7083528bad.css","style"]
+:HL["/_next/static/css/2d82b615fcca1590.css","style"]
+0:{"P":null,"b":"-tWldb8AZ1EFhN552jUnO","p":"","c":["","docs","Components","AsyncSelect"],"i":false,"f":[[["",{"children":["docs",{"children":[["mdxPath","Components/AsyncSelect","oc"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f1d677badafb2d1e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5fbaaa7083528bad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2d82b615fcca1590.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["docs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["mdxPath","Components/AsyncSelect","oc"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],null],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[6117,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeConfigProvider"]
+11:I[1455,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LastUpdated"]
+12:I[8782,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"Search"]
+13:I[6921,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"ThemeProvider"]
+14:I[270,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"SkipNavLink"]
+15:I[3728,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ConfigProvider"]
+2:["$","html",null,{"dir":"ltr","lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L10",null,{"value":{"copyPageButton":true,"darkMode":true,"docsRepositoryBase":"https://github.com/Oustaa/kousta-ui/tree/main/docs","editLink":"Edit this page on GitHub","feedback":{"content":"Question? Give us feedback","labels":"feedback"},"i18n":[],"lastUpdated":["$","$L11",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L12",null,{}],"sidebar":{"defaultMenuCollapseLevel":2,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L13",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L14",null,{}],"$undefined",["$","$L15",null,{"pageMap":[{"name":"index","route":"/","frontMatter":{},"title":"Index"},{"name":"docs","route":"/docs","children":[{"name":"Components","route":"/docs/Components","children":[{"name":"AsyncSelect","route":"/docs/Components/AsyncSelect","frontMatter":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1785249920000},"title":"AsyncSelect"},{"name":"Button","route":"/docs/Components/Button","frontMatter":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1785249920000},"title":"Button"},{"name":"ComponentPropsProvider","route":"/docs/Components/ComponentPropsProvider","frontMatter":{"title":"Component Props Provider","sidebar_label":"Component Props Provider","filePath":"src/content/Components/ComponentPropsProvider.mdx","timestamp":1785249920000},"title":"Component Props Provider"},{"name":"ContextMenu","route":"/docs/Components/ContextMenu","frontMatter":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1785249920000},"title":"Context Menu"},{"name":"ErrorBoundary","route":"/docs/Components/ErrorBoundary","frontMatter":{"title":"ErrorBoundary","filePath":"src/content/Components/ErrorBoundary.mdx","timestamp":1785249920000},"title":"ErrorBoundary"},{"name":"FormElement","route":"/docs/Components/FormElement","frontMatter":{"title":"FormElement","filePath":"src/content/Components/FormElement.mdx","timestamp":1785249920000},"title":"FormElement"},{"name":"Group","route":"/docs/Components/Group","frontMatter":{"title":"Group","filePath":"src/content/Components/Group.mdx","timestamp":1785249920000},"title":"Group"},{"name":"Input","route":"/docs/Components/Input","frontMatter":{"title":"Input","filePath":"src/content/Components/Input.mdx","timestamp":1785249920000},"title":"Input"},{"name":"Label","route":"/docs/Components/Label","frontMatter":{"title":"Label","filePath":"src/content/Components/Label.mdx","timestamp":1785249920000},"title":"Label"},{"name":"Menu","route":"/docs/Components/Menu","frontMatter":{"title":"Menu","filePath":"src/content/Components/Menu.mdx","timestamp":1785249920000},"title":"Menu"},{"name":"Modal","route":"/docs/Components/Modal","frontMatter":{"title":"Modal","filePath":"src/content/Components/Modal.mdx","timestamp":1785249920000},"title":"Modal"},{"name":"Pagination","route":"/docs/Components/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Components/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Select","route":"/docs/Components/Select","frontMatter":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1785249920000},"title":"Select"},{"name":"WindowBoundary","route":"/docs/Components/WindowBoundary","frontMatter":{"title":"WindowBoundary","filePath":"src/content/Components/WindowBoundary.mdx","timestamp":1785249920000},"title":"WindowBoundary"},{"name":"overview","route":"/docs/Components/overview","frontMatter":{"title":"Overview","filePath":"src/content/Components/overview.mdx","timestamp":1785249920000},"title":"Overview"}],"title":"Components"},{"name":"Intro","route":"/docs/Intro","frontMatter":{"title":"Introduction","filePath":"src/content/Intro.mdx","timestamp":1785249920000},"title":"Introduction"},{"name":"Table","route":"/docs/Table","children":[{"name":"DataTable","route":"/docs/Table/DataTable","children":[{"name":"Actions","route":"/docs/Table/DataTable/Actions","frontMatter":{"title":"Actions","filePath":"src/content/Table/DataTable/Actions.mdx","timestamp":1785249920000},"title":"Actions"},{"name":"Basic","route":"/docs/Table/DataTable/Basic","frontMatter":{"title":"Basic usage","filePath":"src/content/Table/DataTable/Basic.mdx","timestamp":1785249920000},"title":"Basic usage"},{"name":"Config","route":"/docs/Table/DataTable/Config","frontMatter":{"title":"Config","filePath":"src/content/Table/DataTable/Config.mdx","timestamp":1785249920000},"title":"Config"},{"name":"Filtering","route":"/docs/Table/DataTable/Filtering","frontMatter":{"title":"Filtering","filePath":"src/content/Table/DataTable/Filtering.mdx","timestamp":1785249920000},"title":"Filtering"},{"name":"Grouping","route":"/docs/Table/DataTable/Grouping","frontMatter":{"title":"Grouping","filePath":"src/content/Table/DataTable/Grouping.mdx","timestamp":1785249920000},"title":"Grouping"},{"name":"Pagination","route":"/docs/Table/DataTable/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Table/DataTable/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Props","route":"/docs/Table/DataTable/Props","frontMatter":{"title":"Props","filePath":"src/content/Table/DataTable/Props.mdx","timestamp":1785249920000},"title":"Props"},{"name":"Search","route":"/docs/Table/DataTable/Search","frontMatter":{"title":"Search","filePath":"src/content/Table/DataTable/Search.mdx","timestamp":1785249920000},"title":"Search"},{"name":"Sorting","route":"/docs/Table/DataTable/Sorting","frontMatter":{"title":"Sorting","filePath":"src/content/Table/DataTable/Sorting.mdx","timestamp":1785249920000},"title":"Sorting"},{"name":"TablePropsProvider","route":"/docs/Table/DataTable/TablePropsProvider","frontMatter":{"title":"Table Props Provider","filePath":"src/content/Table/DataTable/TablePropsProvider.mdx","timestamp":1785249920000},"title":"Table Props Provider"},{"name":"Views","route":"/docs/Table/DataTable/Views","frontMatter":{"title":"Views","filePath":"src/content/Table/DataTable/Views.mdx","timestamp":1785249920000},"title":"Views"},{"name":"overview","route":"/docs/Table/DataTable/overview","frontMatter":{"title":"DataTable","filePath":"src/content/Table/DataTable/overview.mdx","timestamp":1785249920000},"title":"DataTable"}],"title":"Datatable"},{"name":"Table","route":"/docs/Table/Table","frontMatter":{"title":"Table","filePath":"src/content/Table/Table.mdx","timestamp":1785249920000},"title":"Table"}],"title":"Table"},{"name":"helpers","route":"/docs/helpers","children":[{"name":"getNestedProperty","route":"/docs/helpers/getNestedProperty","frontMatter":{"title":"getNestedProperty","filePath":"src/content/helpers/getNestedProperty.mdx","timestamp":1785249920000},"title":"getNestedProperty"},{"name":"overview","route":"/docs/helpers/overview","frontMatter":{"title":"Helpers Overview","filePath":"src/content/helpers/overview.mdx","timestamp":1785249920000},"title":"Helpers Overview"},{"name":"updateNestedProperties","route":"/docs/helpers/updateNestedProperties","frontMatter":{"title":"updateNestedProperties","filePath":"src/content/helpers/updateNestedProperties.mdx","timestamp":1785249920000},"title":"updateNestedProperties"}],"title":"Helpers"},{"name":"hooks","route":"/docs/hooks","children":[{"name":"overview","route":"/docs/hooks/overview","frontMatter":{"title":"Overview","filePath":"src/content/hooks/overview.mdx","timestamp":1785249920000},"title":"Overview"},{"name":"useDebounceCallback","route":"/docs/hooks/useDebounceCallback","frontMatter":{"title":"useDebounceCallback","filePath":"src/content/hooks/useDebounceCallback.mdx","timestamp":1785249920000},"title":"useDebounceCallback"},{"name":"useDisclosure","route":"/docs/hooks/useDisclosure","frontMatter":{"title":"useDisclosure","filePath":"src/content/hooks/useDisclosure.mdx","timestamp":1785249920000},"title":"useDisclosure"},{"name":"usePagination","route":"/docs/hooks/usePagination","frontMatter":{"title":"usePagination","filePath":"src/content/hooks/usePagination.mdx","timestamp":1785249920000},"title":"usePagination"},{"name":"useScrollLock","route":"/docs/hooks/useScrollLock","frontMatter":{"title":"useScrollLock","filePath":"src/content/hooks/useScrollLock.mdx","timestamp":1785249920000},"title":"useScrollLock"}],"title":"Hooks"},{"name":"styles","route":"/docs/styles","children":[{"name":"styles-and-customization","route":"/docs/styles/styles-and-customization","frontMatter":{"title":"Styles & Customization","filePath":"src/content/styles/styles-and-customization.mdx","timestamp":1785249920000},"title":"Styles & Customization"}],"title":"Styles"}],"title":"Docs"}],"navbar":"$L16","footer":"$L17","children":["$L18","$L19"]}]]}]}]}]]}]
+1a:I[8197,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],""]
+1b:I[1449,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientNavbar"]
+1d:I[9209,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Switchers"]
+1e:I[7163,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LocaleSwitch"]
+1f:I[8783,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeSwitch"]
+20:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"MobileNav"]
+1c:T481,M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z16:["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L1a",null,{"href":"/","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":[["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--light","height":28,"src":"/img/logo-light.png","width":120}],["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--dark","height":28,"src":"/img/logo-dark.png","width":120}]]}],["$","$L1b",null,{"className":"","children":[["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","target":"_blank","rel":"noreferrer","children":[["$","svg",null,{"fill":"currentColor","viewBox":"3 3 18 18","height":"24","aria-label":"Project repository","children":["$","path",null,{"d":"$1c"}]}],false],"className":"x:focus-visible:nextra-focus"}],"$undefined","$undefined"]}]]}]]}]
+17:["$","div",null,{"className":"x:bg-gray-100 x:pb-[env(safe-area-inset-bottom)] x:dark:bg-neutral-900 x:print:bg-transparent","children":[["$","$L1d",null,{"children":["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:gap-2 x:py-2 x:px-4","children":[["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}],["$","hr",null,{"className":"nextra-border"}],["$","footer",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:justify-center x:py-12 x:text-gray-600 x:dark:text-gray-400 x:md:justify-start x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)]","children":[["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.5rem","justifyContent":"center","width":"100%"},"children":[["$","a",null,{"href":"/docs/Intro","children":"Docs"}],["$","a",null,{"href":"/docs/Table/Table","children":"Table"}],["$","a",null,{"href":"/docs/Components/overview","children":"Components"}],["$","a",null,{"href":"/docs/hooks/overview","children":"Hooks"}],["$","a",null,{"href":"/docs/helpers/overview","children":"Helpers"}],["$","a",null,{"href":"https://discord.gg/5zDJG79A","children":"Discord"}],["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","children":"GitHub"}]]}],["$","p",null,{"style":{"marginTop":"1.5rem","textAlign":"center","width":"100%"},"children":["Copyright © ",2026," kousta-ui, Kousta."]}]]}]]}]
+18:["$","$L20",null,{}]
+19:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]
+21:I[7823,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"TOCProvider"]
+22:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Sidebar"]
+23:I[9235,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientWrapper"]
+24:T46b5,---
+---
+
+import Badge from '@/components/Badge';
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import {
+  QuickStartPreview,
+  CustomRenderPreview,
+  GenericTypesPreview,
+} from '@/components/@Components/AsyncSelect';
+
+# AsyncSelect
+
+An advanced **AsyncSelect** component that provides server-side search and infinite scrolling capabilities. Perfect for large datasets where you need to fetch data dynamically from an API.
+
+AsyncSelect uses [`Select`](/docs/Components/Select) internally.
+
+---
+
+## Installation
+
+```bash
+npm install @kousta-ui/components
+```
+
+### Import styles
+
+```ts
+import "@kousta-ui/components/esm/index.css";
+```
+
+---
+
+## When to use
+
+- **Large datasets**: When you have thousands of options and need server-side filtering.
+- **Infinite scrolling**: For paginated data that loads as users scroll.
+- **Search APIs**: When you need to query a backend search endpoint.
+- **Dynamic data**: When options change based on user input or other conditions.
+
+---
+
+## Props
+
+| Name | Type | Default | Provider? | Description |
+|------|------|---------|-----------|-------------|
+| `getData` | `(params: { page: number; limit: number; searchTerm?: string }) => Promise<unknown>` | **Required** | No | Function that fetches data from your API. |
+| `extractDynamicData` | `(response: any) => T[]` | — | No | Extracts the items array from your API response. If omitted, the component assumes the response itself is `T[]`. |
+| `hasMore` | `(response: any, page: number) => boolean` | — | No | Determines if there are more pages to load. |
+| `searchTimeout` | `number` | `500` | Yes | Debounce timeout (ms) before requesting the server when searching. |
+| `infiniteScroll` | `boolean` | — | No | Enables/disables infinite scrolling (if supported by your usage). |
+| `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | Configuration for extracting value, label, and custom rendering from data items. |
+| `...` | [`SelectProps<T>`](/docs/Components/Select#props) | | | Inherits all other props from `Select` except `data`, `loading`, and `onSearch`. |
+
+---
+
+## hasMore
+
+`hasMore` controls when AsyncSelect stops requesting additional pages.
+
+It receives:
+
+- The full `response` returned by `getData`
+- The current `page` that was requested
+
+It must return:
+
+- `true` if another page can be requested
+- `false` to stop loading more
+
+For example, if your API returns a pagination meta like `meta.last_page`:
+
+```ts
+hasMore={(resp, page) => page < resp.meta.last_page}
+```
+
+<Badge color="blue">Note</Badge> AsyncSelect automatically calls `getData` initially and then again when you scroll to the end (and when searching).
+
+---
+
+## Usage
+
+### Basic Async Search
+
+Provide `getData`, `extractDynamicData`, and `hasMore` to handle fetching and pagination. The component manages the loading state and search term.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectBasic.tsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+};
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Dynamic Select"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "id - designation" }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectBasic.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Dynamic Select"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "id - designation" }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
+
+### With Custom Option Rendering
+
+Just like the `Select` component, you can provide a custom `renderOption` function to display rich content in the dropdown.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectCustomRender.tsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+};
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Custom option rendering"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{
+        value: "id",
+        label: "designation",
+        renderOption: (row) => \`id: \${row.id} - \${row.designation}\`,
+      }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectCustomRender.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Custom option rendering"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{
+        value: "id",
+        label: "designation",
+        renderOption: (row) => \`id: \${row.id} - \${row.designation}\`,
+      }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<CustomRenderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Generic types
+
+AsyncSelect is a generic component. Passing an explicit type parameter gives you proper type-checking for `options`, `extractDynamicData`, `disabledOption`, and custom renderers.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "AsyncSelectGeneric.tsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+};
+
+type Product = {
+  id: number;
+  designation: string;
+};
+
+type ProductsResponse = {
+  meta: { last_page: number };
+  products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache<T>(key: string, value: T) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl: string = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }: GetDataParams) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache<unknown>(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect<Product>
+      label="Products"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp: ProductsResponse) => resp.products}
+      hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "designation" }}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "AsyncSelectGeneric.jsx",
+      code: `import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+      localStorage.removeItem(key);
+      return undefined;
+    }
+    return parsed.value;
+  } catch {
+    return undefined;
+  }
+}
+
+function writeCache(key, value) {
+  try {
+    const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+    localStorage.setItem(key, payload);
+  } catch {
+    // ignore (quota exceeded, etc.)
+  }
+}
+
+const createGetProducts =
+  (apiBaseUrl = "http://localhost:8001") =>
+  async ({ page, limit, searchTerm }) => {
+    const url = new URL("/products", apiBaseUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(limit));
+    if (searchTerm) url.searchParams.set("search", searchTerm);
+
+    const cacheKey = \`\${CACHE_PREFIX}\${url.toString()}\`;
+    const cached = readCache(cacheKey);
+    if (cached) return cached;
+
+    const resp = await fetch(url.toString());
+    const json = await resp.json();
+    writeCache(cacheKey, json);
+    return json;
+  };
+
+export function Example() {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+  const getProducts = React.useMemo(
+    () => createGetProducts(String(API_BASE_URL)),
+    [API_BASE_URL]
+  );
+
+  return (
+    <AsyncSelect
+      label="Products"
+      placeholder="Search products"
+      getData={getProducts}
+      extractDynamicData={(resp) => resp.products}
+      hasMore={(resp, page) => page < resp.meta.last_page}
+      options={{ value: "id", label: "designation" }}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<GenericTypesPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Styles & customization
+
+The `AsyncSelect` component uses the same styling as the `Select` component.
+
+### Runtime classes
+
+- **`kui-select-container`**: The main wrapper for the label, select, and error message.
+- **`kui-select-inner`**: The clickable input area.
+- **`kui-select-dropdown`**: The dropdown container that holds the options.
+- **`kui-select-option`**: An individual option item in the dropdown.
+- ...and all other classes from the `Select` component.
+
+### Tokens used by the default styles
+
+- **Colors**: `--kui-neutral-*`, `--kui-primary-*`, `--kui-danger-*`
+- **Spacing**: `--kui-spacing-2xs`, `--kui-spacing-xs`, `--kui-spacing-sm`
+- **Typography**: `--kui-text-base`, `--kui-text-sm`
+- **Rounding**: `--kui-rounded`
+
+---
+
+## Types (reference)
+
+```ts
+import { SelectProps, SelectDataConstraints } from "./Select";
+
+type GetDataParams = {
+  page: number;
+  limit: number;
+  searchTerm: string;
+};
+
+export type AsyncSelectProps<T extends SelectDataConstraints> = {
+  getData: (params: {
+    page: number;
+    limit: number;
+    searchTerm?: string;
+  }) => Promise<unknown>;
+  extractDynamicData?: (response: any) => T[];
+  infiniteScroll?: boolean;
+  hasMore?: (response: any, page: number) => boolean;
+  searchTimeout?: number;
+} & Omit<SelectProps<T>, "data" | "loading" | "onSearch">;
+```5:["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L21",null,{"value":[{"value":"Installation","id":"installation","depth":2},{"value":"Import styles","id":"import-styles","depth":3},{"value":"When to use","id":"when-to-use","depth":2},{"value":"Props","id":"props","depth":2},{"value":"hasMore","id":"hasmore","depth":2},{"value":"Usage","id":"usage","depth":2},{"value":"Basic Async Search","id":"basic-async-search","depth":3},{"value":"With Custom Option Rendering","id":"with-custom-option-rendering","depth":3},{"value":"Generic types","id":"generic-types","depth":2},{"value":"Styles & customization","id":"styles--customization","depth":2},{"value":"Runtime classes","id":"runtime-classes","depth":3},{"value":"Tokens used by the default styles","id":"tokens-used-by-the-default-styles","depth":3},{"value":"Types (reference)","id":"types-reference","depth":2}],"children":[["$","$L22",null,{}],["$","$L23",null,{"metadata":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1785249920000},"bottomContent":"$undefined","sourceCode":"$24","children":["$L25","$L26"]}]]}]}]
+27:I[4168,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"HeadingAnchor"]
+28:I[1946,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ToggleWordWrapButton"]
+25:["$","div",null,{"id":"nextra-skip-nav"}]
+26:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["AsyncSelect","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["An advanced ",["$","strong",null,{"children":"AsyncSelect"}]," component that provides server-side search and infinite scrolling capabilities. Perfect for large datasets where you need to fetch data dynamically from an API."]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["AsyncSelect uses ",["$","$L1a",null,{"href":"/docs/Components/Select","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]}]," internally."]}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"installation","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Installation",["$","$L27",null,{"id":"installation"}]]}],"\n",["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"npm"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" install"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" @kousta-ui/components"}]]}]}]]}]]}],"\n",["$","h3",null,{"id":"import-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Import styles",["$","$L27",null,{"id":"import-styles"}]]}],"\n",["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],"$L29","$L2a"]}]}]]}]]}],"\n","$L2b","\n","$L2c","\n","$L2d","\n","$L2e","\n","$L2f","\n","$L30","\n","$L31","\n","$L32","\n","$L33","\n","$L34","\n","$L35","\n","$L36","\n","$L37","\n","$L38","\n","$L39","\n","$L3a","\n","$L3b","\n","$L3c","\n","$L3d","\n","$L3e","\n","$L3f","\n","$L40","\n","$L41","\n","$L42","\n","$L43","\n","$L44","\n","$L45","\n","$L46","\n","$L47","\n","$L48","\n","$L49","\n","$L4a","\n","$L4b","\n","$L4c","\n","$L4d","\n","$L4e","\n","$L4f","\n","$L50"]}]
+55:I[7411,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"default"]
+29:["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"@kousta-ui/components/esm/index.css\""}]
+2a:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]
+2b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+2c:["$","h2",null,{"id":"when-to-use","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["When to use",["$","$L27",null,{"id":"when-to-use"}]]}]
+2d:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Large datasets"}],": When you have thousands of options and need server-side filtering."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Infinite scrolling"}],": For paginated data that loads as users scroll."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Search APIs"}],": When you need to query a backend search endpoint."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Dynamic data"}],": When options change based on user input or other conditions."]}],"\n"]}]
+2e:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+2f:["$","h2",null,{"id":"props","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Props",["$","$L27",null,{"id":"props"}]]}]
+30:["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Name","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Type","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Default","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Provider?","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Description","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"getData"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(params: { page: number; limit: number; searchTerm?: string }) => Promise<unknown>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","strong",null,{"children":"Required"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Function that fetches data from your API.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"extractDynamicData"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(response: any) => T[]"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Extracts the items array from your API response. If omitted, the component assumes the response itself is ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"T[]"}],"."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hasMore"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(response: any, page: number) => boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Determines if there are more pages to load.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],"$L51","$L52","$L53","$L54"]}]]}]
+31:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+32:["$","h2",null,{"id":"hasmore","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["hasMore",["$","$L27",null,{"id":"hasmore"}]]}]
+33:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hasMore"}]," controls when AsyncSelect stops requesting additional pages."]}]
+34:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"It receives:"}]
+35:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["The full ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"response"}]," returned by ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"getData"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["The current ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," that was requested"]}],"\n"]}]
+36:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"It must return:"}]
+37:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}]," if another page can be requested"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"false"}]," to stop loading more"]}],"\n"]}]
+38:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["For example, if your API returns a pagination meta like ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"meta.last_page"}],":"]}]
+39:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"hasMore"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{(resp, page) => page < resp.meta.last_page}"}]]}]}]]}]]}]
+3a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-blue","children":"Note"}]," AsyncSelect automatically calls ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"getData"}]," initially and then again when you scroll to the end (and when searching)."]}]
+3b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+3c:["$","h2",null,{"id":"usage","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Usage",["$","$L27",null,{"id":"usage"}]]}]
+3d:["$","h3",null,{"id":"basic-async-search","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Basic Async Search",["$","$L27",null,{"id":"basic-async-search"}]]}]
+3e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Provide ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"getData"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"extractDynamicData"}],", and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"hasMore"}]," to handle fetching and pagination. The component manages the loading state and search term."]}]
+56:T867,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+page: number;
+limit: number;
+searchTerm?: string;
+};
+
+type Product = {
+id: number;
+designation: string;
+};
+
+type ProductsResponse = {
+meta: { last_page: number };
+products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache<T>(key: string, value: T) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl: string = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }: GetDataParams) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache<unknown>(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect<Product>
+    label="Dynamic Select"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp: ProductsResponse) => resp.products}
+    hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+    options={{ value: "id", label: "id - designation" }}
+  />
+);
+}57:T6f6,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw);
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache(key, value) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect
+    label="Dynamic Select"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp) => resp.products}
+    hasMore={(resp, page) => page < resp.meta.last_page}
+    options={{ value: "id", label: "id - designation" }}
+  />
+);
+}3f:["$","$L55",null,{"tabs":[{"value":"ts","language":"tsx","filename":"AsyncSelectBasic.tsx","code":"$56"},{"value":"js","language":"jsx","filename":"AsyncSelectBasic.jsx","code":"$57"}],"preview":"$L58","defaultTab":"ts"}]
+40:["$","h3",null,{"id":"with-custom-option-rendering","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["With Custom Option Rendering",["$","$L27",null,{"id":"with-custom-option-rendering"}]]}]
+41:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Just like the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," component, you can provide a custom ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"renderOption"}]," function to display rich content in the dropdown."]}]
+59:T8bf,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+page: number;
+limit: number;
+searchTerm?: string;
+};
+
+type Product = {
+id: number;
+designation: string;
+};
+
+type ProductsResponse = {
+meta: { last_page: number };
+products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache<T>(key: string, value: T) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl: string = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }: GetDataParams) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache<unknown>(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect<Product>
+    label="Custom option rendering"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp: ProductsResponse) => resp.products}
+    hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+    options={{
+      value: "id",
+      label: "designation",
+      renderOption: (row) => `id: ${row.id} - ${row.designation}`,
+    }}
+  />
+);
+}5a:T74e,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw);
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache(key, value) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect
+    label="Custom option rendering"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp) => resp.products}
+    hasMore={(resp, page) => page < resp.meta.last_page}
+    options={{
+      value: "id",
+      label: "designation",
+      renderOption: (row) => `id: ${row.id} - ${row.designation}`,
+    }}
+  />
+);
+}42:["$","$L55",null,{"tabs":[{"value":"ts","language":"tsx","filename":"AsyncSelectCustomRender.tsx","code":"$59"},{"value":"js","language":"jsx","filename":"AsyncSelectCustomRender.jsx","code":"$5a"}],"preview":"$L5b","defaultTab":"ts"}]
+43:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+44:["$","h2",null,{"id":"generic-types","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Generic types",["$","$L27",null,{"id":"generic-types"}]]}]
+45:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["AsyncSelect is a generic component. Passing an explicit type parameter gives you proper type-checking for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"extractDynamicData"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabledOption"}],", and custom renderers."]}]
+5c:T85c,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+type GetDataParams = {
+page: number;
+limit: number;
+searchTerm?: string;
+};
+
+type Product = {
+id: number;
+designation: string;
+};
+
+type ProductsResponse = {
+meta: { last_page: number };
+products: Product[];
+} | any;
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache<T>(key: string): T | undefined {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw) as { value: T; expiresAt: number };
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache<T>(key: string, value: T) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl: string = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }: GetDataParams) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache<unknown>(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect<Product>
+    label="Products"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp: ProductsResponse) => resp.products}
+    hasMore={(resp: ProductsResponse, page) => page < resp.meta.last_page}
+    options={{ value: "id", label: "designation" }}
+  />
+);
+}5d:T6eb,import React from "react";
+import { AsyncSelect } from "@kousta-ui/components";
+
+const CACHE_PREFIX = "kousta_ui_docs_async_select:";
+const CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 365 * 10;
+
+function readCache(key) {
+try {
+  const raw = localStorage.getItem(key);
+  if (!raw) return undefined;
+  const parsed = JSON.parse(raw);
+  if (!parsed?.expiresAt || Date.now() > parsed.expiresAt) {
+    localStorage.removeItem(key);
+    return undefined;
+  }
+  return parsed.value;
+} catch {
+  return undefined;
+}
+}
+
+function writeCache(key, value) {
+try {
+  const payload = JSON.stringify({ value, expiresAt: Date.now() + CACHE_TTL_MS });
+  localStorage.setItem(key, payload);
+} catch {
+  // ignore (quota exceeded, etc.)
+}
+}
+
+const createGetProducts =
+(apiBaseUrl = "http://localhost:8001") =>
+async ({ page, limit, searchTerm }) => {
+  const url = new URL("/products", apiBaseUrl);
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", String(limit));
+  if (searchTerm) url.searchParams.set("search", searchTerm);
+
+  const cacheKey = `${CACHE_PREFIX}${url.toString()}`;
+  const cached = readCache(cacheKey);
+  if (cached) return cached;
+
+  const resp = await fetch(url.toString());
+  const json = await resp.json();
+  writeCache(cacheKey, json);
+  return json;
+};
+
+export function Example() {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8001";
+
+const getProducts = React.useMemo(
+  () => createGetProducts(String(API_BASE_URL)),
+  [API_BASE_URL]
+);
+
+return (
+  <AsyncSelect
+    label="Products"
+    placeholder="Search products"
+    getData={getProducts}
+    extractDynamicData={(resp) => resp.products}
+    hasMore={(resp, page) => page < resp.meta.last_page}
+    options={{ value: "id", label: "designation" }}
+  />
+);
+}46:["$","$L55",null,{"tabs":[{"value":"ts","language":"tsx","filename":"AsyncSelectGeneric.tsx","code":"$5c"},{"value":"js","language":"jsx","filename":"AsyncSelectGeneric.jsx","code":"$5d"}],"preview":"$L5e","defaultTab":"ts"}]
+47:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+48:["$","h2",null,{"id":"styles--customization","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Styles & customization",["$","$L27",null,{"id":"styles--customization"}]]}]
+49:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"AsyncSelect"}]," component uses the same styling as the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," component."]}]
+4a:["$","h3",null,{"id":"runtime-classes","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Runtime classes",["$","$L27",null,{"id":"runtime-classes"}]]}]
+4b:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-container"}]}],": The main wrapper for the label, select, and error message."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-inner"}]}],": The clickable input area."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-dropdown"}]}],": The dropdown container that holds the options."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-option"}]}],": An individual option item in the dropdown."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["…and all other classes from the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," component."]}],"\n"]}]
+4c:["$","h3",null,{"id":"tokens-used-by-the-default-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Tokens used by the default styles",["$","$L27",null,{"id":"tokens-used-by-the-default-styles"}]]}]
+4d:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Colors"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-primary-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-danger-*"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Spacing"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-2xs"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-xs"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-sm"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Typography"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-text-base"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-text-sm"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Rounding"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-rounded"}]]}],"\n"]}]
+4e:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+4f:["$","h2",null,{"id":"types-reference","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Types (reference)",["$","$L27",null,{"id":"types-reference"}]]}]
+50:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { SelectProps, SelectDataConstraints } "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"from"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"./Select\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" GetDataParams"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  page"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  limit"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  searchTerm"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" AsyncSelectProps"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" extends"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectDataConstraints"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  getData"}],"$L5f","$L60","$L61","$L62","$L63"]}],"\n","$L64","\n","$L65","\n","$L66","\n","$L67","\n","$L68","\n","$L69","\n","$L6a","\n","$L6b","\n","$L6c"]}]]}]]}]
+6d:I[9990,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"QuickStartPreview"]
+6e:I[9990,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CustomRenderPreview"]
+6f:I[9990,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"GenericTypesPreview"]
+51:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"searchTimeout"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"number"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"500"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Debounce timeout (ms) before requesting the server when searching.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+52:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"infiniteScroll"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Enables/disables infinite scrolling (if supported by your usage).","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+53:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"SelectOptionType<T>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"{ value: \"value\", label: \"label\" }"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Configuration for extracting value, label, and custom rendering from data items.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+54:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"..."}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","$L1a",null,{"href":"/docs/Components/Select#props","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"SelectProps<T>"}]}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Inherits all other props from ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," except ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"data"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loading"}],", and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onSearch"}],"."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+58:["$","$L6d",null,{}]
+5b:["$","$L6e",null,{}]
+5e:["$","$L6f",null,{}]
+5f:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}]
+60:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}]
+61:["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"params"}]
+62:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}]
+63:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]
+64:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"    page"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+65:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"    limit"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+66:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"    searchTerm"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+67:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  }) "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" Promise"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"unknown"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}]
+68:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  extractDynamicData"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"response"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" any"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[];"}]]}]
+69:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  infiniteScroll"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+6a:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  hasMore"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"response"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" any"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"page"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+6b:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  searchTimeout"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+6c:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" Omit"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"SelectProps"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">, "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"data\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"loading\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"onSearch\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+70:I[6644,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"AsyncSelect | Kousta UI"}],["$","meta","1",{"name":"description","content":"A React UI library focused on performance, accessibility, and convenience."}],["$","link","2",{"rel":"icon","href":"/img/logo.png"}],["$","$L70","3",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"

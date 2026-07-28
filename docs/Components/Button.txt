@@ -1,0 +1,871 @@
+1:"$Sreact.fragment"
+3:I[5204,[],""]
+4:I[2642,[],""]
+6:I[433,[],"OutletBoundary"]
+8:I[9884,[],"AsyncMetadataOutlet"]
+a:I[433,[],"ViewportBoundary"]
+c:I[433,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[3536,[],""]
+:HL["/_next/static/css/f1d677badafb2d1e.css","style"]
+:HL["/_next/static/css/5fbaaa7083528bad.css","style"]
+:HL["/_next/static/css/2d82b615fcca1590.css","style"]
+0:{"P":null,"b":"-tWldb8AZ1EFhN552jUnO","p":"","c":["","docs","Components","Button"],"i":false,"f":[[["",{"children":["docs",{"children":[["mdxPath","Components/Button","oc"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f1d677badafb2d1e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5fbaaa7083528bad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2d82b615fcca1590.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["docs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["mdxPath","Components/Button","oc"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],null],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[6117,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeConfigProvider"]
+11:I[1455,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LastUpdated"]
+12:I[8782,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"Search"]
+13:I[6921,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"ThemeProvider"]
+14:I[270,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"SkipNavLink"]
+15:I[3728,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ConfigProvider"]
+2:["$","html",null,{"dir":"ltr","lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L10",null,{"value":{"copyPageButton":true,"darkMode":true,"docsRepositoryBase":"https://github.com/Oustaa/kousta-ui/tree/main/docs","editLink":"Edit this page on GitHub","feedback":{"content":"Question? Give us feedback","labels":"feedback"},"i18n":[],"lastUpdated":["$","$L11",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L12",null,{}],"sidebar":{"defaultMenuCollapseLevel":2,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L13",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L14",null,{}],"$undefined",["$","$L15",null,{"pageMap":[{"name":"index","route":"/","frontMatter":{},"title":"Index"},{"name":"docs","route":"/docs","children":[{"name":"Components","route":"/docs/Components","children":[{"name":"AsyncSelect","route":"/docs/Components/AsyncSelect","frontMatter":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1785249920000},"title":"AsyncSelect"},{"name":"Button","route":"/docs/Components/Button","frontMatter":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1785249920000},"title":"Button"},{"name":"ComponentPropsProvider","route":"/docs/Components/ComponentPropsProvider","frontMatter":{"title":"Component Props Provider","sidebar_label":"Component Props Provider","filePath":"src/content/Components/ComponentPropsProvider.mdx","timestamp":1785249920000},"title":"Component Props Provider"},{"name":"ContextMenu","route":"/docs/Components/ContextMenu","frontMatter":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1785249920000},"title":"Context Menu"},{"name":"ErrorBoundary","route":"/docs/Components/ErrorBoundary","frontMatter":{"title":"ErrorBoundary","filePath":"src/content/Components/ErrorBoundary.mdx","timestamp":1785249920000},"title":"ErrorBoundary"},{"name":"FormElement","route":"/docs/Components/FormElement","frontMatter":{"title":"FormElement","filePath":"src/content/Components/FormElement.mdx","timestamp":1785249920000},"title":"FormElement"},{"name":"Group","route":"/docs/Components/Group","frontMatter":{"title":"Group","filePath":"src/content/Components/Group.mdx","timestamp":1785249920000},"title":"Group"},{"name":"Input","route":"/docs/Components/Input","frontMatter":{"title":"Input","filePath":"src/content/Components/Input.mdx","timestamp":1785249920000},"title":"Input"},{"name":"Label","route":"/docs/Components/Label","frontMatter":{"title":"Label","filePath":"src/content/Components/Label.mdx","timestamp":1785249920000},"title":"Label"},{"name":"Menu","route":"/docs/Components/Menu","frontMatter":{"title":"Menu","filePath":"src/content/Components/Menu.mdx","timestamp":1785249920000},"title":"Menu"},{"name":"Modal","route":"/docs/Components/Modal","frontMatter":{"title":"Modal","filePath":"src/content/Components/Modal.mdx","timestamp":1785249920000},"title":"Modal"},{"name":"Pagination","route":"/docs/Components/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Components/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Select","route":"/docs/Components/Select","frontMatter":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1785249920000},"title":"Select"},{"name":"WindowBoundary","route":"/docs/Components/WindowBoundary","frontMatter":{"title":"WindowBoundary","filePath":"src/content/Components/WindowBoundary.mdx","timestamp":1785249920000},"title":"WindowBoundary"},{"name":"overview","route":"/docs/Components/overview","frontMatter":{"title":"Overview","filePath":"src/content/Components/overview.mdx","timestamp":1785249920000},"title":"Overview"}],"title":"Components"},{"name":"Intro","route":"/docs/Intro","frontMatter":{"title":"Introduction","filePath":"src/content/Intro.mdx","timestamp":1785249920000},"title":"Introduction"},{"name":"Table","route":"/docs/Table","children":[{"name":"DataTable","route":"/docs/Table/DataTable","children":[{"name":"Actions","route":"/docs/Table/DataTable/Actions","frontMatter":{"title":"Actions","filePath":"src/content/Table/DataTable/Actions.mdx","timestamp":1785249920000},"title":"Actions"},{"name":"Basic","route":"/docs/Table/DataTable/Basic","frontMatter":{"title":"Basic usage","filePath":"src/content/Table/DataTable/Basic.mdx","timestamp":1785249920000},"title":"Basic usage"},{"name":"Config","route":"/docs/Table/DataTable/Config","frontMatter":{"title":"Config","filePath":"src/content/Table/DataTable/Config.mdx","timestamp":1785249920000},"title":"Config"},{"name":"Filtering","route":"/docs/Table/DataTable/Filtering","frontMatter":{"title":"Filtering","filePath":"src/content/Table/DataTable/Filtering.mdx","timestamp":1785249920000},"title":"Filtering"},{"name":"Grouping","route":"/docs/Table/DataTable/Grouping","frontMatter":{"title":"Grouping","filePath":"src/content/Table/DataTable/Grouping.mdx","timestamp":1785249920000},"title":"Grouping"},{"name":"Pagination","route":"/docs/Table/DataTable/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Table/DataTable/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Props","route":"/docs/Table/DataTable/Props","frontMatter":{"title":"Props","filePath":"src/content/Table/DataTable/Props.mdx","timestamp":1785249920000},"title":"Props"},{"name":"Search","route":"/docs/Table/DataTable/Search","frontMatter":{"title":"Search","filePath":"src/content/Table/DataTable/Search.mdx","timestamp":1785249920000},"title":"Search"},{"name":"Sorting","route":"/docs/Table/DataTable/Sorting","frontMatter":{"title":"Sorting","filePath":"src/content/Table/DataTable/Sorting.mdx","timestamp":1785249920000},"title":"Sorting"},{"name":"TablePropsProvider","route":"/docs/Table/DataTable/TablePropsProvider","frontMatter":{"title":"Table Props Provider","filePath":"src/content/Table/DataTable/TablePropsProvider.mdx","timestamp":1785249920000},"title":"Table Props Provider"},{"name":"Views","route":"/docs/Table/DataTable/Views","frontMatter":{"title":"Views","filePath":"src/content/Table/DataTable/Views.mdx","timestamp":1785249920000},"title":"Views"},{"name":"overview","route":"/docs/Table/DataTable/overview","frontMatter":{"title":"DataTable","filePath":"src/content/Table/DataTable/overview.mdx","timestamp":1785249920000},"title":"DataTable"}],"title":"Datatable"},{"name":"Table","route":"/docs/Table/Table","frontMatter":{"title":"Table","filePath":"src/content/Table/Table.mdx","timestamp":1785249920000},"title":"Table"}],"title":"Table"},{"name":"helpers","route":"/docs/helpers","children":[{"name":"getNestedProperty","route":"/docs/helpers/getNestedProperty","frontMatter":{"title":"getNestedProperty","filePath":"src/content/helpers/getNestedProperty.mdx","timestamp":1785249920000},"title":"getNestedProperty"},{"name":"overview","route":"/docs/helpers/overview","frontMatter":{"title":"Helpers Overview","filePath":"src/content/helpers/overview.mdx","timestamp":1785249920000},"title":"Helpers Overview"},{"name":"updateNestedProperties","route":"/docs/helpers/updateNestedProperties","frontMatter":{"title":"updateNestedProperties","filePath":"src/content/helpers/updateNestedProperties.mdx","timestamp":1785249920000},"title":"updateNestedProperties"}],"title":"Helpers"},{"name":"hooks","route":"/docs/hooks","children":[{"name":"overview","route":"/docs/hooks/overview","frontMatter":{"title":"Overview","filePath":"src/content/hooks/overview.mdx","timestamp":1785249920000},"title":"Overview"},{"name":"useDebounceCallback","route":"/docs/hooks/useDebounceCallback","frontMatter":{"title":"useDebounceCallback","filePath":"src/content/hooks/useDebounceCallback.mdx","timestamp":1785249920000},"title":"useDebounceCallback"},{"name":"useDisclosure","route":"/docs/hooks/useDisclosure","frontMatter":{"title":"useDisclosure","filePath":"src/content/hooks/useDisclosure.mdx","timestamp":1785249920000},"title":"useDisclosure"},{"name":"usePagination","route":"/docs/hooks/usePagination","frontMatter":{"title":"usePagination","filePath":"src/content/hooks/usePagination.mdx","timestamp":1785249920000},"title":"usePagination"},{"name":"useScrollLock","route":"/docs/hooks/useScrollLock","frontMatter":{"title":"useScrollLock","filePath":"src/content/hooks/useScrollLock.mdx","timestamp":1785249920000},"title":"useScrollLock"}],"title":"Hooks"},{"name":"styles","route":"/docs/styles","children":[{"name":"styles-and-customization","route":"/docs/styles/styles-and-customization","frontMatter":{"title":"Styles & Customization","filePath":"src/content/styles/styles-and-customization.mdx","timestamp":1785249920000},"title":"Styles & Customization"}],"title":"Styles"}],"title":"Docs"}],"navbar":"$L16","footer":"$L17","children":["$L18","$L19"]}]]}]}]}]]}]
+1a:I[8197,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],""]
+1b:I[1449,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientNavbar"]
+1d:I[9209,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Switchers"]
+1e:I[7163,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LocaleSwitch"]
+1f:I[8783,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeSwitch"]
+20:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"MobileNav"]
+1c:T481,M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z16:["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L1a",null,{"href":"/","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":[["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--light","height":28,"src":"/img/logo-light.png","width":120}],["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--dark","height":28,"src":"/img/logo-dark.png","width":120}]]}],["$","$L1b",null,{"className":"","children":[["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","target":"_blank","rel":"noreferrer","children":[["$","svg",null,{"fill":"currentColor","viewBox":"3 3 18 18","height":"24","aria-label":"Project repository","children":["$","path",null,{"d":"$1c"}]}],false],"className":"x:focus-visible:nextra-focus"}],"$undefined","$undefined"]}]]}]]}]
+17:["$","div",null,{"className":"x:bg-gray-100 x:pb-[env(safe-area-inset-bottom)] x:dark:bg-neutral-900 x:print:bg-transparent","children":[["$","$L1d",null,{"children":["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:gap-2 x:py-2 x:px-4","children":[["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}],["$","hr",null,{"className":"nextra-border"}],["$","footer",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:justify-center x:py-12 x:text-gray-600 x:dark:text-gray-400 x:md:justify-start x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)]","children":[["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.5rem","justifyContent":"center","width":"100%"},"children":[["$","a",null,{"href":"/docs/Intro","children":"Docs"}],["$","a",null,{"href":"/docs/Table/Table","children":"Table"}],["$","a",null,{"href":"/docs/Components/overview","children":"Components"}],["$","a",null,{"href":"/docs/hooks/overview","children":"Hooks"}],["$","a",null,{"href":"/docs/helpers/overview","children":"Helpers"}],["$","a",null,{"href":"https://discord.gg/5zDJG79A","children":"Discord"}],["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","children":"GitHub"}]]}],["$","p",null,{"style":{"marginTop":"1.5rem","textAlign":"center","width":"100%"},"children":["Copyright © ",2026," kousta-ui, Kousta."]}]]}]]}]
+18:["$","$L20",null,{}]
+19:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]
+21:I[7823,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"TOCProvider"]
+22:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Sidebar"]
+23:I[9235,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientWrapper"]
+24:T4496,---
+---
+
+import Badge from '@/components/Badge';
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import {
+  QuickStartPreview,
+  VariantsPreview,
+  SizesPreview,
+  LoadingDisabledPreview,
+  ProviderDefaultsPreview,
+  ProviderVariantsPreview,
+} from '@/components/@Components/Button';
+
+# Button
+
+A theme‑aware **Button** with variants, sizes, disabled and loading states.
+Now supports **global default props & per‑variant overrides via a context provider**.
+
+---
+
+## Quick start
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonExample.tsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12 }}>
+      <Button>Primary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="danger">Delete</Button>
+    </div>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonExample.jsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12 }}>
+      <Button>Primary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="danger">Delete</Button>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Props
+
+| Name | Type | Description | Required | Default |
+|------|------|-------------|----------|---------|
+| `loading` | `boolean` | Shows a loading indicator and disables interaction. | No | `false` |
+| `loadingIndicator` | `string \| ReactNode` | Custom content to render while loading. | No | `"Loading..."` |
+| `disabled` | `boolean` | Disables the button. | No | `false` |
+| `variant` | [`ButtonVariant`](#types-reference) \| `string` | Visual style (supports built‑in and custom provider variants). | No | `"primary"` |
+| `size` | `"sm" \| "md" \| "lg"` | Size scale. | No | `"md"` |
+| `type` | `"submit" \| "reset" \| "button"` | Native button type. | No | `"button"` |
+| `onClick` | `(e: React.MouseEvent<HTMLButtonElement>) => void` | Click handler. | No | — |
+| `...rest` | `ComponentPropsWithoutRef<"button">` | Any native `<button>` props (e.g., `aria-*`, `style`). | — | — |
+
+---
+
+## Variants
+
+All color variants are available in **solid**, **outline**, **light**, and **link** styles for each color:
+
+- `primary`, `primary-outline`, `primary-light`, `primary-link`
+- `success`, `success-outline`, `success-light`, `success-link`
+- `danger`, `danger-outline`, `danger-light`, `danger-link`
+- `neutral`, `neutral-outline`, `neutral-light`, `neutral-link`
+- `warning`, `warning-outline`, `warning-light`, `warning-link`
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonVariants.tsx",
+      code: `import React, { useMemo, useState } from "react";
+import { Button } from "@kousta-ui/components";
+
+const ALL_VARIANTS = [
+  "primary",
+  "primary-outline",
+  "primary-light",
+  "primary-link",
+  "success",
+  "success-outline",
+  "success-light",
+  "success-link",
+  "danger",
+  "danger-outline",
+  "danger-light",
+  "danger-link",
+  "neutral",
+  "neutral-outline",
+  "neutral-light",
+  "neutral-link",
+  "warning",
+  "warning-outline",
+  "warning-light",
+  "warning-link",
+] as const;
+
+type Variant = (typeof ALL_VARIANTS)[number];
+
+export default function Example() {
+  const [variant, setVariant] = useState<Variant>("primary");
+  const id = useMemo(() => Math.random().toString(36).slice(2, 8), []);
+
+  return (
+    <div style={{ display: "grid", gap: 12 }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <label htmlFor={"btn-variant-" + id} style={{ fontSize: 14 }}>
+          Variant
+        </label>
+        <select
+          id={"btn-variant-" + id}
+          value={variant}
+          onChange={(e) => setVariant(e.target.value as Variant)}
+          style={{ padding: "6px 8px", borderRadius: 6 }}
+        >
+          {ALL_VARIANTS.map((v) => (
+            <option key={v} value={v}>
+              {v}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <Button variant={variant}>Button</Button>
+        <Button variant={variant} disabled>
+          Disabled
+        </Button>
+      </div>
+    </div>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonVariants.jsx",
+      code: `import React, { useMemo, useState } from "react";
+import { Button } from "@kousta-ui/components";
+
+const ALL_VARIANTS = [
+  "primary",
+  "primary-outline",
+  "primary-light",
+  "primary-link",
+  "success",
+  "success-outline",
+  "success-light",
+  "success-link",
+  "danger",
+  "danger-outline",
+  "danger-light",
+  "danger-link",
+  "neutral",
+  "neutral-outline",
+  "neutral-light",
+  "neutral-link",
+  "warning",
+  "warning-outline",
+  "warning-light",
+  "warning-link",
+];
+
+export default function Example() {
+  const [variant, setVariant] = useState("primary");
+  const id = useMemo(() => Math.random().toString(36).slice(2, 8), []);
+
+  return (
+    <div style={{ display: "grid", gap: 12 }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <label htmlFor={"btn-variant-" + id} style={{ fontSize: 14 }}>
+          Variant
+        </label>
+        <select
+          id={"btn-variant-" + id}
+          value={variant}
+          onChange={(e) => setVariant(e.target.value)}
+          style={{ padding: "6px 8px", borderRadius: 6 }}
+        >
+          {ALL_VARIANTS.map((v) => (
+            <option key={v} value={v}>
+              {v}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <Button variant={variant}>Button</Button>
+        <Button variant={variant} disabled>
+          Disabled
+        </Button>
+      </div>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<VariantsPreview />}
+  defaultTab="ts"
+/>
+
+### Define your own variants
+
+With the [`ComponentPropsProvider`](/docs/Components/ComponentPropsProvider) you can provide your own pre‑defined button **variant**, as well as override the existing ones.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "CustomVariants.tsx",
+      code: `import { Button, ComponentPropsProvider } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ComponentPropsProvider
+      button={{
+        /* override default variant for all Buttons (unless locally set) */
+        variant: "neutral",
+        /* new custom variants */
+        variants: {
+          ghost: {
+            className: "btn-ghost",
+          },
+          info: {
+            className: "bg-blue-500 text-white rounded-md",
+          },
+        },
+      }}
+    >
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="info">Info</Button>
+    </ComponentPropsProvider>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "CustomVariants.jsx",
+      code: `import { Button, ComponentPropsProvider } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <ComponentPropsProvider
+      button={{
+        /* override default variant for all Buttons (unless locally set) */
+        variant: "neutral",
+        /* new custom variants */
+        variants: {
+          ghost: {
+            className: "btn-ghost",
+          },
+          info: {
+            className: "bg-blue-500 text-white rounded-md",
+          },
+        },
+      }}
+    >
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="info">Info</Button>
+    </ComponentPropsProvider>
+  );
+}`
+    }
+  ]}
+  preview={<ProviderVariantsPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Size
+
+`Button` accepts three sizes: `sm`, `md`, `lg`. Default is **md**.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonSizes.tsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonSizes.jsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<SizesPreview />}
+  defaultTab="ts"
+/>
+
+### Override size app‑wide
+
+Use the provider to set a default size for a subtree. Component props always **override** provider defaults.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonSizeProvider.tsx",
+      code: `import { Button, ComponentPropsProvider } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Button>Default</Button>
+      <ComponentPropsProvider button={{ size: "lg" }}>
+        <Button>Large (provider default)</Button>
+        <Button size="sm">Small (local override)</Button>
+      </ComponentPropsProvider>
+    </div>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonSizeProvider.jsx",
+      code: `import { Button, ComponentPropsProvider } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Button>Default</Button>
+      <ComponentPropsProvider button={{ size: "lg" }}>
+        <Button>Large (provider default)</Button>
+        <Button size="sm">Small (local override)</Button>
+      </ComponentPropsProvider>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<ProviderDefaultsPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Loading & disabled
+
+- When `loading` is `true`, the component sets `data-loading="true"` **and** is disabled to prevent duplicate actions.
+- When `disabled` is `true`, the button is non‑interactive.
+- Use `loadingIndicator` to customize the loading content (text or React node).
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonLoading.tsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button loading>Saving…</Button>
+      <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
+      <Button disabled variant="neutral-outline">
+        Disabled
+      </Button>
+    </div>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonLoading.jsx",
+      code: `import { Button } from "@kousta-ui/components";
+
+export default function Example() {
+  return (
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button loading>Saving…</Button>
+      <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
+      <Button disabled variant="neutral-outline">
+        Disabled
+      </Button>
+    </div>
+  );
+}`
+    }
+  ]}
+  preview={<LoadingDisabledPreview />}
+  defaultTab="ts"
+/>
+
+### Override `loadingIndicator`
+
+<Badge color="yellow">Important</Badge> When you override `loadingIndicator` via the `ComponentPropsProvider`, the override will be **app-wide** (or subtree-wide) for all buttons within that provider scope. This means all buttons using the provider will use the same loading indicator text unless explicitly overridden at the component level.
+
+```tsx
+// Local override (component-level)
+<Button loading loadingIndicator="Submitting…">Submit</Button>
+
+// Provider default for a subtree (app-wide)
+<ComponentPropsProvider button={{ loadingIndicator: "Please wait…" }}>
+  <Button loading>Submit</Button> {/* renders "Please wait…" */}
+  <Button loading>Save</Button> {/* also renders "Please wait…" */}
+  <Button loading loadingIndicator="Custom…">Custom</Button> {/* local override wins */}
+</ComponentPropsProvider>
+```
+
+---
+
+## Global defaults & per‑variant overrides (via Provider) <Badge color="purple">New</Badge>
+
+Use `ComponentPropsProvider` to define **app‑wide defaults** for Button and to create **custom variants** that map to native button props (style/className/aria/etc.).
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ButtonProviderVariants.tsx",
+      code: `import { ComponentPropsProvider, Button } from "@kousta-ui/components";
+
+export default function App() {
+  return (
+    <ComponentPropsProvider
+      button={{
+        variant: "neutral",
+        variants: {
+          ghost: {
+            className: "btn-ghost",
+          },
+        },
+      }}
+    >
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+        <Button>Provider default (neutral)</Button>
+        <Button variant="ghost">Ghost (provider variant)</Button>
+      </div>
+    </ComponentPropsProvider>
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "ButtonProviderVariants.jsx",
+      code: `import { ComponentPropsProvider, Button } from "@kousta-ui/components";
+
+export default function App() {
+  return (
+    <ComponentPropsProvider
+      button={{
+        variant: "neutral",
+        variants: {
+          ghost: {
+            className: "btn-ghost",
+          },
+        },
+      }}
+    >
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+        <Button>Provider default (neutral)</Button>
+        <Button variant="ghost">Ghost (provider variant)</Button>
+      </div>
+    </ComponentPropsProvider>
+  );
+}`
+    }
+  ]}
+  preview={<ProviderVariantsPreview />}
+  defaultTab="ts"
+/>
+
+### How precedence works
+
+- **Component props win** over provider defaults. If you pass `size="lg"` on a button, it overrides the provider’s `size`.
+- **Provider `variants[variant]` are merged** with the component props. For `style`, provider style is merged first, then the component `style` is applied so your local styles win.
+- **Class names** are concatenated in this order: `provider.className` → CSS classes for `variant` and `size` → component `className`.
+
+---
+
+## Accessibility
+
+- **Semantic HTML**: Uses native `<button type="button|submit|reset">` elements.
+- **Disabled and loading states**: Both states set `disabled` to block interaction and prevent duplicate actions.
+- **ARIA attributes**: Add `aria-busy={loading}` if you customize the loading UI to indicate the button is in a loading state.
+- **Color contrast**: Ensure contrast between text and background meets **WCAG AA** standards (minimum 4.5:1 for normal text, 3:1 for large text).
+- **Accessible labels**: If the label is just an icon, add an accessible name with `aria-label` or `aria-labelledby`.
+
+<Badge color="green">Tip</Badge> When customizing button styles, always test color contrast ratios to ensure accessibility compliance.
+
+---
+
+## Patterns
+
+### Submit buttons in forms
+
+```tsx
+<form onSubmit={handleSubmit}>
+  <Button type="submit" loading={isSaving} loadingIndicator="Saving…">
+    Save changes
+  </Button>
+</form>
+```
+
+### Destructive action
+
+```tsx
+<Button variant="danger" onClick={onDelete}>Delete</Button>
+```
+
+### Secondary emphasis
+
+```tsx
+<Button variant="neutral-outline">Cancel</Button>
+```
+
+### App‑wide sizing & type defaults
+
+```tsx
+<ComponentPropsProvider button={{ size: "sm", type: "submit" }}>
+  {/* becomes a small submit button unless overridden */}
+  <Button>Save</Button>
+</ComponentPropsProvider>
+```
+
+### Custom “ghost” variant via provider
+
+```tsx
+<ComponentPropsProvider button={{ variants: { ghost: { className: "btn-ghost" } } }}>
+  <Button variant="ghost">Ghost</Button>
+</ComponentPropsProvider>
+```
+
+---
+
+## Types (reference)
+
+```ts
+import { ComponentPropsWithoutRef, ReactNode } from "react";
+
+type ButtonColor = "primary" | "warning" | "neutral" | "danger" | "success";
+type ButtonColoringStyle = "outline" | "light" | "link" | "";
+
+export type ButtonVariant =
+  | ButtonColor
+  | `${ButtonColor}-${Exclude<ButtonColoringStyle, "">}`;
+
+export type ButtonProps = {
+  loading?: boolean;
+  loadingIndicator?: string | ReactNode;
+  disabled?: boolean;
+  variant?: ButtonVariant | string;
+  size?: "sm" | "md" | "lg";
+  type?: "submit" | "reset" | "button";
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+} & ComponentPropsWithoutRef<"button">;
+```
+
+---
+
+## Styles & customization
+
+### Runtime classes
+
+- **Base**
+  - `kui-button`
+- **Variant**
+  - `kui-button-{variant}` (example: `kui-button-primary-light`)
+- **Size**
+  - `kui-button-{size}` (example: `kui-button-lg`)
+- **Loading UI**
+  - `kui-button-loading` (rendered inside the button when `loading` is true)
+
+### Tokens used by the default styles
+
+- **Spacing**
+  - `--kui-spacing-xs`, `--kui-spacing-sm`, `--kui-spacing-md`, `--kui-spacing-lg`
+- **Rounding**
+  - `--kui-rounded`
+- **Colors**
+  - `--kui-primary-*`, `--kui-success-*`, `--kui-danger-*`, `--kui-neutral-*`, `--kui-warning-*`5:["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L21",null,{"value":[{"value":"Quick start","id":"quick-start","depth":2},{"value":"Props","id":"props","depth":2},{"value":"Variants","id":"variants","depth":2},{"value":"Define your own variants","id":"define-your-own-variants","depth":3},{"value":"Size","id":"size","depth":2},{"value":"Override size app‑wide","id":"override-size-appwide","depth":3},{"value":"Loading & disabled","id":"loading--disabled","depth":2},{"value":[["$","$1",".0",{"children":["Override ",["$","code",".1",{"className":"nextra-code","dir":"ltr","children":"loadingIndicator"}]]}]],"id":"override-loadingindicator","depth":3},{"value":[["$","$1",".0",{"children":["Global defaults & per‑variant overrides (via Provider) ",["$","span",".1",{"className":"badge badge-purple","children":"New"}]]}]],"id":"global-defaults--pervariant-overrides-via-provider-new","depth":2},{"value":"How precedence works","id":"how-precedence-works","depth":3},{"value":"Accessibility","id":"accessibility","depth":2},{"value":"Patterns","id":"patterns","depth":2},{"value":"Submit buttons in forms","id":"submit-buttons-in-forms","depth":3},{"value":"Destructive action","id":"destructive-action","depth":3},{"value":"Secondary emphasis","id":"secondary-emphasis","depth":3},{"value":"App‑wide sizing & type defaults","id":"appwide-sizing--type-defaults","depth":3},{"value":"Custom “ghost” variant via provider","id":"custom-ghost-variant-via-provider","depth":3},{"value":"Types (reference)","id":"types-reference","depth":2},{"value":"Styles & customization","id":"styles--customization","depth":2},{"value":"Runtime classes","id":"runtime-classes","depth":3},{"value":"Tokens used by the default styles","id":"tokens-used-by-the-default-styles","depth":3}],"children":[["$","$L22",null,{}],["$","$L23",null,{"metadata":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1785249920000},"bottomContent":"$undefined","sourceCode":"$24","children":["$L25","$L26"]}]]}]}]
+27:I[4168,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"HeadingAnchor"]
+28:I[7411,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"default"]
+29:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"QuickStartPreview"]
+25:["$","div",null,{"id":"nextra-skip-nav"}]
+26:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Button","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["A theme‑aware ",["$","strong",null,{"children":"Button"}]," with variants, sizes, disabled and loading states.\nNow supports ",["$","strong",null,{"children":"global default props & per‑variant overrides via a context provider"}],"."]}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"quick-start","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Quick start",["$","$L27",null,{"id":"quick-start"}]]}],"\n",["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonExample.tsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12 }}>\n    <Button>Primary</Button>\n    <Button variant=\"success\">Success</Button>\n    <Button variant=\"danger\">Delete</Button>\n  </div>\n);\n}"},{"value":"js","language":"jsx","filename":"ButtonExample.jsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12 }}>\n    <Button>Primary</Button>\n    <Button variant=\"success\">Success</Button>\n    <Button variant=\"danger\">Delete</Button>\n  </div>\n);\n}"}],"preview":["$","$L29",null,{}],"defaultTab":"ts"}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"props","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Props",["$","$L27",null,{"id":"props"}]]}],"\n",["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Name","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Type","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Description","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Required","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Default","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loading"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Shows a loading indicator and disables interaction.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"false"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],"$L2a","$L2b","$L2c","$L2d","$L2e","$L2f","$L30"]}]]}],"\n","$L31","\n","$L32","\n","$L33","\n","$L34","\n","$L35","\n","$L36","\n","$L37","\n","$L38","\n","$L39","\n","$L3a","\n","$L3b","\n","$L3c","\n","$L3d","\n","$L3e","\n","$L3f","\n","$L40","\n","$L41","\n","$L42","\n","$L43","\n","$L44","\n","$L45","\n","$L46","\n","$L47","\n","$L48","\n","$L49","\n","$L4a","\n","$L4b","\n","$L4c","\n","$L4d","\n","$L4e","\n","$L4f","\n","$L50","\n","$L51","\n","$L52","\n","$L53","\n","$L54","\n","$L55","\n","$L56","\n","$L57","\n","$L58","\n","$L59","\n","$L5a","\n","$L5b","\n","$L5c","\n","$L5d","\n","$L5e","\n","$L5f","\n","$L60","\n","$L61","\n","$L62","\n","$L63","\n","$L64","\n","$L65"]}]
+68:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"VariantsPreview"]
+69:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ProviderVariantsPreview"]
+6a:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"SizesPreview"]
+6b:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ProviderDefaultsPreview"]
+6c:I[2390,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LoadingDisabledPreview"]
+6d:I[1946,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ToggleWordWrapButton"]
+2a:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loadingIndicator"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string | ReactNode"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Custom content to render while loading.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"Loading...\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2b:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabled"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Disables the button.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"false"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2c:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"variant"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","a",null,{"href":"#types-reference","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ButtonVariant"}]}]," | ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string"}]],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Visual style (supports built‑in and custom provider variants).","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"primary\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2d:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"size"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"sm\" | \"md\" | \"lg\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Size scale.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"md\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2e:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"type"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"submit\" | \"reset\" | \"button\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Native button type.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"button\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2f:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onClick"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(e: React.MouseEvent<HTMLButtonElement>) => void"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Click handler.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+30:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"...rest"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsWithoutRef<\"button\">"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Any native ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<button>"}]," props (e.g., ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"aria-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"style"}],")."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+31:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+32:["$","h2",null,{"id":"variants","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Variants",["$","$L27",null,{"id":"variants"}]]}]
+33:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["All color variants are available in ",["$","strong",null,{"children":"solid"}],", ",["$","strong",null,{"children":"outline"}],", ",["$","strong",null,{"children":"light"}],", and ",["$","strong",null,{"children":"link"}]," styles for each color:"]}]
+34:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"primary"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"primary-outline"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"primary-light"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"primary-link"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"success"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"success-outline"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"success-light"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"success-link"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"danger"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"danger-outline"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"danger-light"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"danger-link"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"neutral"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"neutral-outline"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"neutral-light"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"neutral-link"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"warning"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"warning-outline"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"warning-light"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"warning-link"}]]}],"\n"]}]
+66:T5ca,import React, { useMemo, useState } from "react";
+import { Button } from "@kousta-ui/components";
+
+const ALL_VARIANTS = [
+"primary",
+"primary-outline",
+"primary-light",
+"primary-link",
+"success",
+"success-outline",
+"success-light",
+"success-link",
+"danger",
+"danger-outline",
+"danger-light",
+"danger-link",
+"neutral",
+"neutral-outline",
+"neutral-light",
+"neutral-link",
+"warning",
+"warning-outline",
+"warning-light",
+"warning-link",
+] as const;
+
+type Variant = (typeof ALL_VARIANTS)[number];
+
+export default function Example() {
+const [variant, setVariant] = useState<Variant>("primary");
+const id = useMemo(() => Math.random().toString(36).slice(2, 8), []);
+
+return (
+  <div style={{ display: "grid", gap: 12 }}>
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <label htmlFor={"btn-variant-" + id} style={{ fontSize: 14 }}>
+        Variant
+      </label>
+      <select
+        id={"btn-variant-" + id}
+        value={variant}
+        onChange={(e) => setVariant(e.target.value as Variant)}
+        style={{ padding: "6px 8px", borderRadius: 6 }}
+      >
+        {ALL_VARIANTS.map((v) => (
+          <option key={v} value={v}>
+            {v}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button variant={variant}>Button</Button>
+      <Button variant={variant} disabled>
+        Disabled
+      </Button>
+    </div>
+  </div>
+);
+}67:T57e,import React, { useMemo, useState } from "react";
+import { Button } from "@kousta-ui/components";
+
+const ALL_VARIANTS = [
+"primary",
+"primary-outline",
+"primary-light",
+"primary-link",
+"success",
+"success-outline",
+"success-light",
+"success-link",
+"danger",
+"danger-outline",
+"danger-light",
+"danger-link",
+"neutral",
+"neutral-outline",
+"neutral-light",
+"neutral-link",
+"warning",
+"warning-outline",
+"warning-light",
+"warning-link",
+];
+
+export default function Example() {
+const [variant, setVariant] = useState("primary");
+const id = useMemo(() => Math.random().toString(36).slice(2, 8), []);
+
+return (
+  <div style={{ display: "grid", gap: 12 }}>
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <label htmlFor={"btn-variant-" + id} style={{ fontSize: 14 }}>
+        Variant
+      </label>
+      <select
+        id={"btn-variant-" + id}
+        value={variant}
+        onChange={(e) => setVariant(e.target.value)}
+        style={{ padding: "6px 8px", borderRadius: 6 }}
+      >
+        {ALL_VARIANTS.map((v) => (
+          <option key={v} value={v}>
+            {v}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      <Button variant={variant}>Button</Button>
+      <Button variant={variant} disabled>
+        Disabled
+      </Button>
+    </div>
+  </div>
+);
+}35:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonVariants.tsx","code":"$66"},{"value":"js","language":"jsx","filename":"ButtonVariants.jsx","code":"$67"}],"preview":["$","$L68",null,{}],"defaultTab":"ts"}]
+36:["$","h3",null,{"id":"define-your-own-variants","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Define your own variants",["$","$L27",null,{"id":"define-your-own-variants"}]]}]
+37:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["With the ",["$","$L1a",null,{"href":"/docs/Components/ComponentPropsProvider","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]}]," you can provide your own pre‑defined button ",["$","strong",null,{"children":"variant"}],", as well as override the existing ones."]}]
+38:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"CustomVariants.tsx","code":"import { Button, ComponentPropsProvider } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <ComponentPropsProvider\n    button={{\n      /* override default variant for all Buttons (unless locally set) */\n      variant: \"neutral\",\n      /* new custom variants */\n      variants: {\n        ghost: {\n          className: \"btn-ghost\",\n        },\n        info: {\n          className: \"bg-blue-500 text-white rounded-md\",\n        },\n      },\n    }}\n  >\n    <Button variant=\"ghost\">Ghost</Button>\n    <Button variant=\"info\">Info</Button>\n  </ComponentPropsProvider>\n);\n}"},{"value":"js","language":"jsx","filename":"CustomVariants.jsx","code":"import { Button, ComponentPropsProvider } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <ComponentPropsProvider\n    button={{\n      /* override default variant for all Buttons (unless locally set) */\n      variant: \"neutral\",\n      /* new custom variants */\n      variants: {\n        ghost: {\n          className: \"btn-ghost\",\n        },\n        info: {\n          className: \"bg-blue-500 text-white rounded-md\",\n        },\n      },\n    }}\n  >\n    <Button variant=\"ghost\">Ghost</Button>\n    <Button variant=\"info\">Info</Button>\n  </ComponentPropsProvider>\n);\n}"}],"preview":["$","$L69",null,{}],"defaultTab":"ts"}]
+39:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+3a:["$","h2",null,{"id":"size","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Size",["$","$L27",null,{"id":"size"}]]}]
+3b:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Button"}]," accepts three sizes: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sm"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"md"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"lg"}],". Default is ",["$","strong",null,{"children":"md"}],"."]}]
+3c:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonSizes.tsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, alignItems: \"center\", flexWrap: \"wrap\" }}>\n    <Button size=\"sm\">Small</Button>\n    <Button size=\"md\">Medium</Button>\n    <Button size=\"lg\">Large</Button>\n  </div>\n);\n}"},{"value":"js","language":"jsx","filename":"ButtonSizes.jsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, alignItems: \"center\", flexWrap: \"wrap\" }}>\n    <Button size=\"sm\">Small</Button>\n    <Button size=\"md\">Medium</Button>\n    <Button size=\"lg\">Large</Button>\n  </div>\n);\n}"}],"preview":["$","$L6a",null,{}],"defaultTab":"ts"}]
+3d:["$","h3",null,{"id":"override-size-appwide","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Override size app‑wide",["$","$L27",null,{"id":"override-size-appwide"}]]}]
+3e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use the provider to set a default size for a subtree. Component props always ",["$","strong",null,{"children":"override"}]," provider defaults."]}]
+3f:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonSizeProvider.tsx","code":"import { Button, ComponentPropsProvider } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, flexWrap: \"wrap\", alignItems: \"center\" }}>\n    <Button>Default</Button>\n    <ComponentPropsProvider button={{ size: \"lg\" }}>\n      <Button>Large (provider default)</Button>\n      <Button size=\"sm\">Small (local override)</Button>\n    </ComponentPropsProvider>\n  </div>\n);\n}"},{"value":"js","language":"jsx","filename":"ButtonSizeProvider.jsx","code":"import { Button, ComponentPropsProvider } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, flexWrap: \"wrap\", alignItems: \"center\" }}>\n    <Button>Default</Button>\n    <ComponentPropsProvider button={{ size: \"lg\" }}>\n      <Button>Large (provider default)</Button>\n      <Button size=\"sm\">Small (local override)</Button>\n    </ComponentPropsProvider>\n  </div>\n);\n}"}],"preview":["$","$L6b",null,{}],"defaultTab":"ts"}]
+40:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+41:["$","h2",null,{"id":"loading--disabled","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Loading & disabled",["$","$L27",null,{"id":"loading--disabled"}]]}]
+42:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["When ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loading"}]," is ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],", the component sets ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"data-loading=\"true\""}]," ",["$","strong",null,{"children":"and"}]," is disabled to prevent duplicate actions."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["When ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabled"}]," is ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],", the button is non‑interactive."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loadingIndicator"}]," to customize the loading content (text or React node)."]}],"\n"]}]
+43:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonLoading.tsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, alignItems: \"center\", flexWrap: \"wrap\" }}>\n    <Button loading>Saving…</Button>\n    <Button loading variant=\"neutral-outline\" loadingIndicator=\"Please wait…\" />\n    <Button disabled variant=\"neutral-outline\">\n      Disabled\n    </Button>\n  </div>\n);\n}"},{"value":"js","language":"jsx","filename":"ButtonLoading.jsx","code":"import { Button } from \"@kousta-ui/components\";\n\nexport default function Example() {\nreturn (\n  <div style={{ display: \"flex\", gap: 12, alignItems: \"center\", flexWrap: \"wrap\" }}>\n    <Button loading>Saving…</Button>\n    <Button loading variant=\"neutral-outline\" loadingIndicator=\"Please wait…\" />\n    <Button disabled variant=\"neutral-outline\">\n      Disabled\n    </Button>\n  </div>\n);\n}"}],"preview":["$","$L6c",null,{}],"defaultTab":"ts"}]
+44:["$","h3",null,{"id":"override-loadingindicator","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":[["Override ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loadingIndicator"}]],["$","$L27",null,{"id":"override-loadingindicator"}]]}]
+45:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Important"}]," When you override ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loadingIndicator"}]," via the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}],", the override will be ",["$","strong",null,{"children":"app-wide"}]," (or subtree-wide) for all buttons within that provider scope. This means all buttons using the provider will use the same loading indicator text unless explicitly overridden at the component level."]}]
+46:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// Local override (component-level)"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loading"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loadingIndicator"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Submitting…\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Submit</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// Provider default for a subtree (app-wide)"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" button"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ loadingIndicator: "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Please wait…\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" }}>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loading"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Submit</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> {"}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* renders \"Please wait…\" */"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loading"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Save</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> {"}],"$L6e","$L6f"]}],"\n","$L70","\n","$L71"]}]]}]]}]
+47:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+48:["$","h2",null,{"id":"global-defaults--pervariant-overrides-via-provider-new","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":[["Global defaults & per‑variant overrides (via Provider) ",["$","span",null,{"className":"badge badge-purple","children":"New"}]],["$","$L27",null,{"id":"global-defaults--pervariant-overrides-via-provider-new"}]]}]
+49:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]," to define ",["$","strong",null,{"children":"app‑wide defaults"}]," for Button and to create ",["$","strong",null,{"children":"custom variants"}]," that map to native button props (style/className/aria/etc.)."]}]
+4a:["$","$L28",null,{"tabs":[{"value":"ts","language":"tsx","filename":"ButtonProviderVariants.tsx","code":"import { ComponentPropsProvider, Button } from \"@kousta-ui/components\";\n\nexport default function App() {\nreturn (\n  <ComponentPropsProvider\n    button={{\n      variant: \"neutral\",\n      variants: {\n        ghost: {\n          className: \"btn-ghost\",\n        },\n      },\n    }}\n  >\n    <div style={{ display: \"flex\", gap: 12, flexWrap: \"wrap\", alignItems: \"center\" }}>\n      <Button>Provider default (neutral)</Button>\n      <Button variant=\"ghost\">Ghost (provider variant)</Button>\n    </div>\n  </ComponentPropsProvider>\n);\n}"},{"value":"js","language":"jsx","filename":"ButtonProviderVariants.jsx","code":"import { ComponentPropsProvider, Button } from \"@kousta-ui/components\";\n\nexport default function App() {\nreturn (\n  <ComponentPropsProvider\n    button={{\n      variant: \"neutral\",\n      variants: {\n        ghost: {\n          className: \"btn-ghost\",\n        },\n      },\n    }}\n  >\n    <div style={{ display: \"flex\", gap: 12, flexWrap: \"wrap\", alignItems: \"center\" }}>\n      <Button>Provider default (neutral)</Button>\n      <Button variant=\"ghost\">Ghost (provider variant)</Button>\n    </div>\n  </ComponentPropsProvider>\n);\n}"}],"preview":["$","$L69",null,{}],"defaultTab":"ts"}]
+4b:["$","h3",null,{"id":"how-precedence-works","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["How precedence works",["$","$L27",null,{"id":"how-precedence-works"}]]}]
+4c:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Component props win"}]," over provider defaults. If you pass ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"size=\"lg\""}]," on a button, it overrides the provider’s ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"size"}],"."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["Provider ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"variants[variant]"}]," are merged"]}]," with the component props. For ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"style"}],", provider style is merged first, then the component ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"style"}]," is applied so your local styles win."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Class names"}]," are concatenated in this order: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"provider.className"}]," → CSS classes for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"variant"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"size"}]," → component ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"className"}],"."]}],"\n"]}]
+4d:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+4e:["$","h2",null,{"id":"accessibility","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Accessibility",["$","$L27",null,{"id":"accessibility"}]]}]
+4f:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Semantic HTML"}],": Uses native ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<button type=\"button|submit|reset\">"}]," elements."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Disabled and loading states"}],": Both states set ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabled"}]," to block interaction and prevent duplicate actions."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"ARIA attributes"}],": Add ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"aria-busy={loading}"}]," if you customize the loading UI to indicate the button is in a loading state."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Color contrast"}],": Ensure contrast between text and background meets ",["$","strong",null,{"children":"WCAG AA"}]," standards (minimum 4.5:1 for normal text, 3:1 for large text)."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Accessible labels"}],": If the label is just an icon, add an accessible name with ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"aria-label"}]," or ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"aria-labelledby"}],"."]}],"\n"]}]
+50:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-green","children":"Tip"}]," When customizing button styles, always test color contrast ratios to ensure accessibility compliance."]}]
+51:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+52:["$","h2",null,{"id":"patterns","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Patterns",["$","$L27",null,{"id":"patterns"}]]}]
+53:["$","h3",null,{"id":"submit-buttons-in-forms","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Submit buttons in forms",["$","$L27",null,{"id":"submit-buttons-in-forms"}]]}]
+54:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#22863A","--shiki-dark":"#85E89D"},"children":"form"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" onSubmit"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{handleSubmit}>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"submit\""}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loading"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{isSaving} "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"loadingIndicator"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Saving…\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"    Save changes"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  </"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"</"}],["$","span",null,{"style":{"--shiki-light":"#22863A","--shiki-dark":"#85E89D"},"children":"form"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]]}]]}]]}]
+55:["$","h3",null,{"id":"destructive-action","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Destructive action",["$","$L27",null,{"id":"destructive-action"}]]}]
+56:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" variant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"danger\""}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{onDelete}>Delete</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]}]]}]]}]
+57:["$","h3",null,{"id":"secondary-emphasis","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Secondary emphasis",["$","$L27",null,{"id":"secondary-emphasis"}]]}]
+58:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" variant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"neutral-outline\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Cancel</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]}]]}]]}]
+59:["$","h3",null,{"id":"appwide-sizing--type-defaults","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["App‑wide sizing & type defaults",["$","$L27",null,{"id":"appwide-sizing--type-defaults"}]]}]
+5a:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" button"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ size: "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"sm\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", type: "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"submit\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" }}>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  {"}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* becomes a small submit button unless overridden */"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Save</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]]}]]}]]}]
+5b:["$","h3",null,{"id":"custom-ghost-variant-via-provider","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Custom “ghost” variant via provider",["$","$L27",null,{"id":"custom-ghost-variant-via-provider"}]]}]
+5c:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" button"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ variants: { ghost: { className: "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"btn-ghost\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" } } }}>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" variant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"ghost\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Ghost</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]]}]]}]]}]
+5d:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+5e:["$","h2",null,{"id":"types-reference","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Types (reference)",["$","$L27",null,{"id":"types-reference"}]]}]
+5f:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L6d",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { ComponentPropsWithoutRef, ReactNode } "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"from"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"react\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonColor"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"primary\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"warning\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"neutral\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"danger\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"success\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonColoringStyle"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"outline\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"light\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"link\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonVariant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}]]}],"\n","$L72","\n","$L73","\n","$L74","\n","$L75","\n","$L76","\n","$L77","\n","$L78","\n","$L79","\n","$L7a","\n","$L7b","\n","$L7c","\n","$L7d"]}]]}]]}]
+60:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+61:["$","h2",null,{"id":"styles--customization","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Styles & customization",["$","$L27",null,{"id":"styles--customization"}]]}]
+62:["$","h3",null,{"id":"runtime-classes","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Runtime classes",["$","$L27",null,{"id":"runtime-classes"}]]}]
+63:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Base"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Variant"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button-{variant}"}]," (example: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button-primary-light"}],")"]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Size"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button-{size}"}]," (example: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button-lg"}],")"]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Loading UI"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-button-loading"}]," (rendered inside the button when ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loading"}]," is true)"]}],"\n"]}],"\n"]}],"\n"]}]
+64:["$","h3",null,{"id":"tokens-used-by-the-default-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Tokens used by the default styles",["$","$L27",null,{"id":"tokens-used-by-the-default-styles"}]]}]
+65:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Spacing"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-xs"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-sm"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-md"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-lg"}]]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Rounding"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-rounded"}]}],"\n"]}],"\n"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Colors"}],"\n",["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-primary-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-success-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-danger-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-warning-*"}]]}],"\n"]}],"\n"]}],"\n"]}]
+6e:["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* also renders \"Please wait…\" */"}]
+6f:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]
+70:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  <"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loading"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" loadingIndicator"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"Custom…\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">Custom</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"Button"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> {"}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"/* local override wins */"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}"}]]}]
+71:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"</"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"ComponentPropsProvider"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">"}]]}]
+72:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonColor"}]]}]
+73:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"  |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" `${"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"ButtonColor"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"}-${"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"Exclude"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"ButtonColoringStyle"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"\""}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":">"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"}`"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+74:["$","span",null,{"children":" "}]
+75:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonProps"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+76:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  loading"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+77:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  loadingIndicator"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+78:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  disabled"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+79:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  variant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ButtonVariant"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+7a:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  size"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"sm\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"md\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"lg\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+7b:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  type"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"submit\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"reset\""}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"button\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+7c:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onClick"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"e"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" React"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"MouseEvent"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"HTMLButtonElement"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">) "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+7d:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"&"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ComponentPropsWithoutRef"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"button\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+7e:I[6644,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"Button | Kousta UI"}],["$","meta","1",{"name":"description","content":"A React UI library focused on performance, accessibility, and convenience."}],["$","link","2",{"rel":"icon","href":"/img/logo.png"}],["$","$L7e","3",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"

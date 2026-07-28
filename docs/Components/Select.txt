@@ -1,0 +1,1245 @@
+1:"$Sreact.fragment"
+3:I[5204,[],""]
+4:I[2642,[],""]
+6:I[433,[],"OutletBoundary"]
+8:I[9884,[],"AsyncMetadataOutlet"]
+a:I[433,[],"ViewportBoundary"]
+c:I[433,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[3536,[],""]
+:HL["/_next/static/css/f1d677badafb2d1e.css","style"]
+:HL["/_next/static/css/5fbaaa7083528bad.css","style"]
+:HL["/_next/static/css/2d82b615fcca1590.css","style"]
+0:{"P":null,"b":"-tWldb8AZ1EFhN552jUnO","p":"","c":["","docs","Components","Select"],"i":false,"f":[[["",{"children":["docs",{"children":[["mdxPath","Components/Select","oc"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f1d677badafb2d1e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5fbaaa7083528bad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2d82b615fcca1590.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["docs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["mdxPath","Components/Select","oc"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],null],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[6117,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeConfigProvider"]
+11:I[1455,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LastUpdated"]
+12:I[8782,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"Search"]
+13:I[6921,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","177","static/chunks/app/layout-b35516476f920d86.js"],"ThemeProvider"]
+14:I[270,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"SkipNavLink"]
+15:I[3728,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ConfigProvider"]
+2:["$","html",null,{"dir":"ltr","lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L10",null,{"value":{"copyPageButton":true,"darkMode":true,"docsRepositoryBase":"https://github.com/Oustaa/kousta-ui/tree/main/docs","editLink":"Edit this page on GitHub","feedback":{"content":"Question? Give us feedback","labels":"feedback"},"i18n":[],"lastUpdated":["$","$L11",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L12",null,{}],"sidebar":{"defaultMenuCollapseLevel":2,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L13",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L14",null,{}],"$undefined",["$","$L15",null,{"pageMap":[{"name":"index","route":"/","frontMatter":{},"title":"Index"},{"name":"docs","route":"/docs","children":[{"name":"Components","route":"/docs/Components","children":[{"name":"AsyncSelect","route":"/docs/Components/AsyncSelect","frontMatter":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1785249920000},"title":"AsyncSelect"},{"name":"Button","route":"/docs/Components/Button","frontMatter":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1785249920000},"title":"Button"},{"name":"ComponentPropsProvider","route":"/docs/Components/ComponentPropsProvider","frontMatter":{"title":"Component Props Provider","sidebar_label":"Component Props Provider","filePath":"src/content/Components/ComponentPropsProvider.mdx","timestamp":1785249920000},"title":"Component Props Provider"},{"name":"ContextMenu","route":"/docs/Components/ContextMenu","frontMatter":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1785249920000},"title":"Context Menu"},{"name":"ErrorBoundary","route":"/docs/Components/ErrorBoundary","frontMatter":{"title":"ErrorBoundary","filePath":"src/content/Components/ErrorBoundary.mdx","timestamp":1785249920000},"title":"ErrorBoundary"},{"name":"FormElement","route":"/docs/Components/FormElement","frontMatter":{"title":"FormElement","filePath":"src/content/Components/FormElement.mdx","timestamp":1785249920000},"title":"FormElement"},{"name":"Group","route":"/docs/Components/Group","frontMatter":{"title":"Group","filePath":"src/content/Components/Group.mdx","timestamp":1785249920000},"title":"Group"},{"name":"Input","route":"/docs/Components/Input","frontMatter":{"title":"Input","filePath":"src/content/Components/Input.mdx","timestamp":1785249920000},"title":"Input"},{"name":"Label","route":"/docs/Components/Label","frontMatter":{"title":"Label","filePath":"src/content/Components/Label.mdx","timestamp":1785249920000},"title":"Label"},{"name":"Menu","route":"/docs/Components/Menu","frontMatter":{"title":"Menu","filePath":"src/content/Components/Menu.mdx","timestamp":1785249920000},"title":"Menu"},{"name":"Modal","route":"/docs/Components/Modal","frontMatter":{"title":"Modal","filePath":"src/content/Components/Modal.mdx","timestamp":1785249920000},"title":"Modal"},{"name":"Pagination","route":"/docs/Components/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Components/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Select","route":"/docs/Components/Select","frontMatter":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1785249920000},"title":"Select"},{"name":"WindowBoundary","route":"/docs/Components/WindowBoundary","frontMatter":{"title":"WindowBoundary","filePath":"src/content/Components/WindowBoundary.mdx","timestamp":1785249920000},"title":"WindowBoundary"},{"name":"overview","route":"/docs/Components/overview","frontMatter":{"title":"Overview","filePath":"src/content/Components/overview.mdx","timestamp":1785249920000},"title":"Overview"}],"title":"Components"},{"name":"Intro","route":"/docs/Intro","frontMatter":{"title":"Introduction","filePath":"src/content/Intro.mdx","timestamp":1785249920000},"title":"Introduction"},{"name":"Table","route":"/docs/Table","children":[{"name":"DataTable","route":"/docs/Table/DataTable","children":[{"name":"Actions","route":"/docs/Table/DataTable/Actions","frontMatter":{"title":"Actions","filePath":"src/content/Table/DataTable/Actions.mdx","timestamp":1785249920000},"title":"Actions"},{"name":"Basic","route":"/docs/Table/DataTable/Basic","frontMatter":{"title":"Basic usage","filePath":"src/content/Table/DataTable/Basic.mdx","timestamp":1785249920000},"title":"Basic usage"},{"name":"Config","route":"/docs/Table/DataTable/Config","frontMatter":{"title":"Config","filePath":"src/content/Table/DataTable/Config.mdx","timestamp":1785249920000},"title":"Config"},{"name":"Filtering","route":"/docs/Table/DataTable/Filtering","frontMatter":{"title":"Filtering","filePath":"src/content/Table/DataTable/Filtering.mdx","timestamp":1785249920000},"title":"Filtering"},{"name":"Grouping","route":"/docs/Table/DataTable/Grouping","frontMatter":{"title":"Grouping","filePath":"src/content/Table/DataTable/Grouping.mdx","timestamp":1785249920000},"title":"Grouping"},{"name":"Pagination","route":"/docs/Table/DataTable/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Table/DataTable/Pagination.mdx","timestamp":1785249920000},"title":"Pagination"},{"name":"Props","route":"/docs/Table/DataTable/Props","frontMatter":{"title":"Props","filePath":"src/content/Table/DataTable/Props.mdx","timestamp":1785249920000},"title":"Props"},{"name":"Search","route":"/docs/Table/DataTable/Search","frontMatter":{"title":"Search","filePath":"src/content/Table/DataTable/Search.mdx","timestamp":1785249920000},"title":"Search"},{"name":"Sorting","route":"/docs/Table/DataTable/Sorting","frontMatter":{"title":"Sorting","filePath":"src/content/Table/DataTable/Sorting.mdx","timestamp":1785249920000},"title":"Sorting"},{"name":"TablePropsProvider","route":"/docs/Table/DataTable/TablePropsProvider","frontMatter":{"title":"Table Props Provider","filePath":"src/content/Table/DataTable/TablePropsProvider.mdx","timestamp":1785249920000},"title":"Table Props Provider"},{"name":"Views","route":"/docs/Table/DataTable/Views","frontMatter":{"title":"Views","filePath":"src/content/Table/DataTable/Views.mdx","timestamp":1785249920000},"title":"Views"},{"name":"overview","route":"/docs/Table/DataTable/overview","frontMatter":{"title":"DataTable","filePath":"src/content/Table/DataTable/overview.mdx","timestamp":1785249920000},"title":"DataTable"}],"title":"Datatable"},{"name":"Table","route":"/docs/Table/Table","frontMatter":{"title":"Table","filePath":"src/content/Table/Table.mdx","timestamp":1785249920000},"title":"Table"}],"title":"Table"},{"name":"helpers","route":"/docs/helpers","children":[{"name":"getNestedProperty","route":"/docs/helpers/getNestedProperty","frontMatter":{"title":"getNestedProperty","filePath":"src/content/helpers/getNestedProperty.mdx","timestamp":1785249920000},"title":"getNestedProperty"},{"name":"overview","route":"/docs/helpers/overview","frontMatter":{"title":"Helpers Overview","filePath":"src/content/helpers/overview.mdx","timestamp":1785249920000},"title":"Helpers Overview"},{"name":"updateNestedProperties","route":"/docs/helpers/updateNestedProperties","frontMatter":{"title":"updateNestedProperties","filePath":"src/content/helpers/updateNestedProperties.mdx","timestamp":1785249920000},"title":"updateNestedProperties"}],"title":"Helpers"},{"name":"hooks","route":"/docs/hooks","children":[{"name":"overview","route":"/docs/hooks/overview","frontMatter":{"title":"Overview","filePath":"src/content/hooks/overview.mdx","timestamp":1785249920000},"title":"Overview"},{"name":"useDebounceCallback","route":"/docs/hooks/useDebounceCallback","frontMatter":{"title":"useDebounceCallback","filePath":"src/content/hooks/useDebounceCallback.mdx","timestamp":1785249920000},"title":"useDebounceCallback"},{"name":"useDisclosure","route":"/docs/hooks/useDisclosure","frontMatter":{"title":"useDisclosure","filePath":"src/content/hooks/useDisclosure.mdx","timestamp":1785249920000},"title":"useDisclosure"},{"name":"usePagination","route":"/docs/hooks/usePagination","frontMatter":{"title":"usePagination","filePath":"src/content/hooks/usePagination.mdx","timestamp":1785249920000},"title":"usePagination"},{"name":"useScrollLock","route":"/docs/hooks/useScrollLock","frontMatter":{"title":"useScrollLock","filePath":"src/content/hooks/useScrollLock.mdx","timestamp":1785249920000},"title":"useScrollLock"}],"title":"Hooks"},{"name":"styles","route":"/docs/styles","children":[{"name":"styles-and-customization","route":"/docs/styles/styles-and-customization","frontMatter":{"title":"Styles & Customization","filePath":"src/content/styles/styles-and-customization.mdx","timestamp":1785249920000},"title":"Styles & Customization"}],"title":"Styles"}],"title":"Docs"}],"navbar":"$L16","footer":"$L17","children":["$L18","$L19"]}]]}]}]}]]}]
+1a:I[8197,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],""]
+1b:I[1449,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientNavbar"]
+1d:I[9209,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Switchers"]
+1e:I[7163,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"LocaleSwitch"]
+1f:I[8783,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ThemeSwitch"]
+20:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"MobileNav"]
+1c:T481,M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z16:["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L1a",null,{"href":"/","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":[["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--light","height":28,"src":"/img/logo-light.png","width":120}],["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--dark","height":28,"src":"/img/logo-dark.png","width":120}]]}],["$","$L1b",null,{"className":"","children":[["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","target":"_blank","rel":"noreferrer","children":[["$","svg",null,{"fill":"currentColor","viewBox":"3 3 18 18","height":"24","aria-label":"Project repository","children":["$","path",null,{"d":"$1c"}]}],false],"className":"x:focus-visible:nextra-focus"}],"$undefined","$undefined"]}]]}]]}]
+17:["$","div",null,{"className":"x:bg-gray-100 x:pb-[env(safe-area-inset-bottom)] x:dark:bg-neutral-900 x:print:bg-transparent","children":[["$","$L1d",null,{"children":["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:gap-2 x:py-2 x:px-4","children":[["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}],["$","hr",null,{"className":"nextra-border"}],["$","footer",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:justify-center x:py-12 x:text-gray-600 x:dark:text-gray-400 x:md:justify-start x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)]","children":[["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.5rem","justifyContent":"center","width":"100%"},"children":[["$","a",null,{"href":"/docs/Intro","children":"Docs"}],["$","a",null,{"href":"/docs/Table/Table","children":"Table"}],["$","a",null,{"href":"/docs/Components/overview","children":"Components"}],["$","a",null,{"href":"/docs/hooks/overview","children":"Hooks"}],["$","a",null,{"href":"/docs/helpers/overview","children":"Helpers"}],["$","a",null,{"href":"https://discord.gg/5zDJG79A","children":"Discord"}],["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","children":"GitHub"}]]}],["$","p",null,{"style":{"marginTop":"1.5rem","textAlign":"center","width":"100%"},"children":["Copyright © ",2026," kousta-ui, Kousta."]}]]}]]}]
+18:["$","$L20",null,{}]
+19:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]
+21:I[7823,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"TOCProvider"]
+22:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"Sidebar"]
+23:I[9235,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClientWrapper"]
+24:T6b45,---
+---
+
+import Badge from '@/components/Badge';
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import {
+  QuickStartPreview,
+  DisabledOptionsPreview,
+  ClearablePreview,
+  NonSearchablePreview,
+  WithErrorsPreview,
+  CustomRenderPreview,
+  GenericTypesPreview,
+  IconsOverrideWithPropPreview,
+  IconsOverrideWithProviderPreview,
+  ComponentPropsProviderPreview,
+  OnSearchPreview,
+  ErrorHandlingPreview,
+  EmptyMessagePreview,
+  OnBlurPreview,
+  RawValuePreview,
+} from '@/components/@Components/Select';
+
+# Select
+
+A flexible **Select** component that provides searchable dropdown functionality with local filtering, disabled options, and customizable rendering. Perfect for choosing from a list of options with search capabilities.
+
+---
+
+## Props
+
+| Name | Type | Default | Provider? | Description |
+|------|------|---------|-----------|-------------|
+| `data` | `T[]` | — | No | Array of options data. |
+| `value` | `string \| number` | — | No | Controlled selected value (matched against `options.value`). |
+| `onChange` | `(value: unknown) => void` | — | No | Called when the selection changes. If `rawValue` is `true`, the callback receives the full selected row instead of just the extracted value. |
+| `rawValue` | `boolean` | — | Yes | If `true`, `onChange` receives the entire selected row object instead of the value. |
+| `options` | `SelectOptionType<T>` | `{ value: "value", label: "label" }` | Yes | How to extract value/label and/or render each option. |
+| `placeholder` | `string` | — | No | Placeholder when nothing is selected. |
+| `loading` | `boolean` | — | No | Shows loading indicator instead of toggle icon and prevents opening. |
+| `onBlur` | `(target: HTMLDivElement & { clear: VoidFunction }) => void` | — | No | Called when the dropdown closes. Receives a target with a `clear()` helper to reset selection. |
+| `errors` | `string[] \| string \| ReactNode` | — | No | Error(s) shown under the select (also applies error styles). |
+| `label` | `string` | — | No | Label text. |
+| `labelProps` | `ComponentPropsWithoutRef<'label'>` | — | Yes | Props forwarded to the `Label` component. Provider values are merged with local values. |
+| `labelPosition` | `LabelPositionBase` | — | Yes | Label position for form layout. |
+| `required` | `boolean` | — | Yes | Marks the field as required (visual indicator). |
+| `seachable` | `boolean` | `true` | Yes | Enables the built-in search input and keyboard search behavior. |
+| `onSearch` | `(row: T, term: string) => boolean` | — | No | Custom filtering logic for local search. Return `true` to keep a row. |
+| `clearable` | `boolean` | `true` | Yes | Shows a clear button when a value is selected. |
+| `emptyMessage` | `string` | `"No option found"` | Yes | Message shown when the dropdown list is empty. |
+| `disabled` | `boolean` | — | No | Disables the whole select. |
+| `disabledOption` | `(row: T) => boolean` | — | No | Disables specific rows. |
+| `isMultiple` | `boolean` | — | No | <Badge color="orange">Coming soon</Badge> Multi-select support is not finalized yet. |
+| `icons` | `{ close?: ReactNode; open?: ReactNode; clear?: ReactNode; loading?: ReactNode }` | — | Yes | Override icons used for open/close, clear, and loading. |
+| `disableErrorBoundaries` | `boolean` | — | Yes | When `true`, errors thrown in option rendering will be re-thrown instead of being caught. |
+| `optionErrorFallback` | `FC<{ row: T }>` | — | Yes | Custom fallback UI when an option throws while rendering. |
+| `selectErrorFallback` | `ReactNode` | — | Yes | Fallback for select-level rendering errors. |
+
+<Badge color="blue">Note</Badge> Props marked with **Yes** in the **Provider?** column can be configured globally using the `ComponentPropsProvider`.
+
+---
+
+## Usage
+
+### Basic Select
+
+The most basic usage requires a `label` and a `data` array. By default, it's searchable.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicSelect.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  onChange={(value) => console.log(value)}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "BasicSelect.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  onChange={(value) => console.log(value)}
+/>`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultTab="ts"
+/>
+
+### Disabled Options
+
+Use the `disabledOption` prop to conditionally disable items in the list. Disabled items are visible but not selectable.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectDisabledOptions.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Svelte is disabled"
+  data={frameworkData}
+  disabledOption={(item) => item.value === "svelte"}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectDisabledOptions.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Svelte is disabled"
+  data={frameworkData}
+  disabledOption={(item) => item.value === "svelte"}
+/>`
+    }
+  ]}
+  preview={<DisabledOptionsPreview />}
+  defaultTab="ts"
+/>
+
+### Clearable
+
+Set `clearable` to `true` to allow users to deselect the current value.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectClearable.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  clearable
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectClearable.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  clearable
+/>`
+    }
+  ]}
+  preview={<ClearablePreview />}
+  defaultTab="ts"
+/>
+
+### Non-Searchable
+
+Set `seachable={false}` to disable the search input. The dropdown will still open, but the user cannot filter the list.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectNonSearchable.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Search is disabled"
+  data={frameworkData}
+  seachable={false}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectNonSearchable.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Search is disabled"
+  data={frameworkData}
+  seachable={false}
+/>`
+    }
+  ]}
+  preview={<NonSearchablePreview />}
+  defaultTab="ts"
+/>
+
+### With Errors
+
+Pass an array of strings to the `errors` prop to display validation messages and apply error styling.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectWithErrors.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  errors={["This field is required"]}
+  required
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectWithErrors.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  data={frameworkData}
+  errors={["This field is required"]}
+  required
+/>`
+    }
+  ]}
+  preview={<WithErrorsPreview />}
+  defaultTab="ts"
+/>
+
+### Custom Option Rendering
+
+Use `options.renderOption` to provide a custom component for rendering each item in the dropdown list.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectCustomRender.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const userData = [
+  { id: 1, name: "John Doe", email: "john@work.com", online: true },
+  { id: 2, name: "Jane Smith", email: "jane@work.com", online: false },
+];
+
+<Select
+  label="Assign to"
+  placeholder="Select a user"
+  data={userData}
+  options={{
+    value: "id",
+    label: "name",
+    renderOption: (user) => (
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: "50%",
+            background: user.online ? "green" : "gray",
+          }}
+        />
+        <div>
+          <div>{user.name}</div>
+          <div style={{ fontSize: "0.8em", opacity: 0.7 }}>{user.email}</div>
+        </div>
+      </div>
+    ),
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectCustomRender.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const userData = [
+  { id: 1, name: "John Doe", email: "john@work.com", online: true },
+  { id: 2, name: "Jane Smith", email: "jane@work.com", online: false },
+];
+
+<Select
+  label="Assign to"
+  placeholder="Select a user"
+  data={userData}
+  options={{
+    value: "id",
+    label: "name",
+    renderOption: (user) => (
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: "50%",
+            background: user.online ? "green" : "gray",
+          }}
+        />
+        <div>
+          <div>{user.name}</div>
+          <div style={{ fontSize: "0.8em", opacity: 0.7 }}>{user.email}</div>
+        </div>
+      </div>
+    ),
+  }}
+/>`
+    }
+  ]}
+  preview={<CustomRenderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Icon overriding
+
+You can override the built-in icons either:
+
+- Directly on the `Select` via the `icons` prop
+- Globally via `ComponentPropsProvider` (recommended if you want a consistent look)
+
+### Override icons on a single Select
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectIconsOverride.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  data={frameworkData}
+  label="Framework"
+  placeholder="With custom icons"
+  clearable
+  icons={{
+    clear: <X size={16} />,
+    open: <ChevronUp size={16} />,
+    close: <ChevronDown size={16} />,
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectIconsOverride.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  data={frameworkData}
+  label="Framework"
+  placeholder="With custom icons"
+  clearable
+  icons={{
+    clear: <X size={16} />,
+    open: <ChevronUp size={16} />,
+    close: <ChevronDown size={16} />,
+  }}
+/>`
+    }
+  ]}
+  preview={<IconsOverrideWithPropPreview />}
+  defaultTab="ts"
+/>
+
+### Override icons with ComponentPropsProvider
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectIconsProvider.tsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select data={frameworkData} label="Framework" placeholder="Icons from provider" clearable />
+</ComponentPropsProvider>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectIconsProvider.jsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select data={frameworkData} label="Framework" placeholder="Icons from provider" clearable />
+</ComponentPropsProvider>`
+    }
+  ]}
+  preview={<IconsOverrideWithProviderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Component Props Provider
+
+Use `ComponentPropsProvider` to set default props globally for all `Select` instances in a subtree.
+
+### Provider supported overrides
+
+The `select` key supports overriding the following props:
+
+- `rawValue`
+- `options`
+- `labelPosition`
+- `emptyMessage`
+- `seachable`
+- `required`
+- `labelProps`
+- `clearable`
+- `disableErrorBoundaries`
+- `optionErrorFallback`
+- `selectErrorFallback`
+- `icons`
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectComponentPropsProvider.tsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    seachable: false,
+    clearable: false,
+    emptyMessage: "Nothing here",
+    labelProps: { style: { color: "#555" } },
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select label="Framework" placeholder="Provider overrides" data={frameworkData} />
+</ComponentPropsProvider>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectComponentPropsProvider.jsx",
+      code: `import { ComponentPropsProvider, Select } from "@kousta-ui/components";
+import { ChevronDown, ChevronUp, X } from "lucide-react";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<ComponentPropsProvider
+  select={{
+    seachable: false,
+    clearable: false,
+    emptyMessage: "Nothing here",
+    labelProps: { style: { color: "#555" } },
+    icons: {
+      clear: <X size={16} />,
+      open: <ChevronUp size={16} />,
+      close: <ChevronDown size={16} />,
+    },
+  }}
+>
+  <Select label="Framework" placeholder="Provider overrides" data={frameworkData} />
+</ComponentPropsProvider>`
+    }
+  ]}
+  preview={<ComponentPropsProviderPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## onSearch
+
+By default, the select filters by the extracted label (`options.label`). If you need custom filtering logic (e.g. multiple fields, strict matching, or locale-specific search), provide `onSearch`.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectOnSearch.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const users = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Search by exact first name"
+  data={users}
+  options={{ value: "id", label: "first_name last_name" }}
+  onSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectOnSearch.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const users = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Search by exact first name"
+  data={users}
+  options={{ value: "id", label: "first_name last_name" }}
+  onSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}
+/>`
+    }
+  ]}
+  preview={<OnSearchPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Error handling
+
+If your `options.renderOption` (or label extraction) throws, options are rendered inside an internal error boundary.
+
+Use:
+
+- `optionErrorFallback` to render a custom UI for a broken option
+- `disableErrorBoundaries` to re-throw errors (useful during development/tests)
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectErrorHandling.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { XCircle } from "lucide-react";
+
+const users = [
+  { id: 5, first_name: "Safe", last_name: "User" },
+  { id: 6, first_name: "Broken", last_name: "Option" },
+  { id: 7, first_name: "Another", last_name: "User" },
+];
+
+<Select
+  label="Option error boundary"
+  placeholder="Option with id 6 throws"
+  data={users}
+  options={{
+    value: "id",
+    label: "first_name last_name",
+    renderOption: (row) => {
+      if (row.id === 6) throw new Error("Option render failed");
+      return \`\${row.first_name} \${row.last_name}\`;
+    },
+  }}
+  optionErrorFallback={({ row }) => (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "6px 8px",
+        borderRadius: 8,
+        background: "rgba(220, 38, 38, 0.12)",
+        color: "#dc2626",
+        fontSize: 12,
+      }}
+    >
+      <XCircle size={14} />
+      Failed to render option (id: {row.id})
+    </span>
+  )}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectErrorHandling.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+import { XCircle } from "lucide-react";
+
+const users = [
+  { id: 5, first_name: "Safe", last_name: "User" },
+  { id: 6, first_name: "Broken", last_name: "Option" },
+  { id: 7, first_name: "Another", last_name: "User" },
+];
+
+<Select
+  label="Option error boundary"
+  placeholder="Option with id 6 throws"
+  data={users}
+  options={{
+    value: "id",
+    label: "first_name last_name",
+    renderOption: (row) => {
+      if (row.id === 6) throw new Error("Option render failed");
+      return \`\${row.first_name} \${row.last_name}\`;
+    },
+  }}
+  optionErrorFallback={({ row }) => (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "6px 8px",
+        borderRadius: 8,
+        background: "rgba(220, 38, 38, 0.12)",
+        color: "#dc2626",
+        fontSize: 12,
+      }}
+    >
+      <XCircle size={14} />
+      Failed to render option (id: {row.id})
+    </span>
+  )}
+/>`
+    }
+  ]}
+  preview={<ErrorHandlingPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## emptyMessage
+
+Use `emptyMessage` to customize what users see when the dropdown has no options.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectEmptyMessage.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+<Select
+  label="Framework"
+  placeholder="No options"
+  data={[]}
+  emptyMessage="Nothing to show"
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectEmptyMessage.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+<Select
+  label="Framework"
+  placeholder="No options"
+  data={[]}
+  emptyMessage="Nothing to show"
+/>`
+    }
+  ]}
+  preview={<EmptyMessagePreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## onBlur
+
+`onBlur` is called when the dropdown closes. It receives a `target` object that includes a `clear()` helper to reset the selection.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectOnBlur.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  onBlur={(target) => {
+    target.clear();
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectOnBlur.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  onBlur={(target) => {
+    target.clear();
+  }}
+/>`
+    }
+  ]}
+  preview={<OnBlurPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## rawValue
+
+When `rawValue` is enabled, `onChange` receives the full selected data row instead of just the extracted value.
+
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectRawValue.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  rawValue
+  onChange={(row) => {
+    console.log(row); // => { value: "react", label: "React", ... }
+  }}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectRawValue.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const frameworkData = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "svelte", label: "Svelte" },
+  { value: "angular", label: "Angular" },
+];
+
+<Select
+  label="Framework"
+  data={frameworkData}
+  rawValue
+  onChange={(row) => {
+    console.log(row); // => { value: "react", label: "React", ... }
+  }}
+/>`
+    }
+  ]}
+  preview={<RawValuePreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Generic types
+
+Select is a generic component. Passing an explicit type parameter gives you type-checking for `options`, `disabledOption`, `onSearch`, and custom renderers.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "SelectGenericTypes.tsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+type UserRow = {
+  id: number;
+  first_name: string;
+  last_name: string;
+};
+
+const usersData: UserRow[] = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select<UserRow>
+  label="Users"
+  placeholder="Select a user"
+  data={usersData}
+  options={{ value: "id", label: "first_name last_name" }}
+  onChange={(value) => console.log(value)}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "SelectGenericTypes.jsx",
+      code: `import { Select } from "@kousta-ui/components";
+
+const usersData = [
+  { id: 1, first_name: "Nova", last_name: "Reed" },
+  { id: 2, first_name: "Kai", last_name: "Morgan" },
+  { id: 3, first_name: "Zara", last_name: "Quinn" },
+  { id: 4, first_name: "Milo", last_name: "Hayes" },
+];
+
+<Select
+  label="Users"
+  placeholder="Select a user"
+  data={usersData}
+  options={{ value: "id", label: "first_name last_name" }}
+  onChange={(value) => console.log(value)}
+/>`
+    }
+  ]}
+  preview={<GenericTypesPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Styles & customization
+
+### Runtime classes
+
+- **`kui-select-container`**: The main wrapper for the label, select, and error message.
+- **`kui-select-outer`**: The direct wrapper around the select input that handles positioning.
+- **`kui-select-inner`**: The clickable input area.
+- **`kui-select-label`**: The `<label>` element.
+- **`kui-select-value`**: The `<span>` displaying the selected value.
+- **`kui-select-placeholder`**: The `<span>` for the placeholder text.
+- **`kui-select-toggle`**: The dropdown arrow button.
+- **`kui-select-clear`**: The clear button.
+- **`kui-select-dropdown`**: The dropdown container that holds the options.
+- **`kui-select-option`**: An individual option item in the dropdown.
+- **`kui-error`**: Added to `kui-select-inner` and `kui-select-clear` when `errors` are present.
+
+### Tokens used by the default styles
+
+- **Colors**: `--kui-neutral-*`, `--kui-primary-*`, `--kui-danger-*`
+- **Spacing**: `--kui-spacing-2xs`, `--kui-spacing-xs`, `--kui-spacing-sm`
+- **Typography**: `--kui-text-base`, `--kui-text-sm`
+- **Rounding**: `--kui-rounded`
+
+---
+
+## Types (reference)
+
+```ts
+import { ReactNode } from "react";
+
+export type SelectDataConstraints = Record<string | number, unknown>;
+
+type RenderOptionFunction<T> = (row: T) => ReactNode | string;
+
+export type SelectOptionType<T> = {
+  value: string;
+  label?: string;
+  renderOption?: RenderOptionFunction<T>;
+};
+
+export type SelectProps<T extends SelectDataConstraints> = {
+  data: T[];
+  onChange?: (value: unknown) => void;
+  value?: string | number;
+  options?: SelectOptionType<T>;
+  label?: string;
+  placeholder?: string;
+  errors?: string[] | string | ReactNode;
+  required?: boolean;
+  seachable?: boolean;
+  clearable?: boolean;
+  disabled?: boolean;
+  disabledOption?: (row: T) => boolean;
+  isMultiple?: boolean;
+  // ... and other base props
+};
+```5:["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L21",null,{"value":[{"value":"Props","id":"props","depth":2},{"value":"Usage","id":"usage","depth":2},{"value":"Basic Select","id":"basic-select","depth":3},{"value":"Disabled Options","id":"disabled-options","depth":3},{"value":"Clearable","id":"clearable","depth":3},{"value":"Non-Searchable","id":"non-searchable","depth":3},{"value":"With Errors","id":"with-errors","depth":3},{"value":"Custom Option Rendering","id":"custom-option-rendering","depth":3},{"value":"Icon overriding","id":"icon-overriding","depth":2},{"value":"Override icons on a single Select","id":"override-icons-on-a-single-select","depth":3},{"value":"Override icons with ComponentPropsProvider","id":"override-icons-with-componentpropsprovider","depth":3},{"value":"Component Props Provider","id":"component-props-provider","depth":2},{"value":"Provider supported overrides","id":"provider-supported-overrides","depth":3},{"value":"onSearch","id":"onsearch","depth":2},{"value":"Error handling","id":"error-handling","depth":2},{"value":"emptyMessage","id":"emptymessage","depth":2},{"value":"onBlur","id":"onblur","depth":2},{"value":"rawValue","id":"rawvalue","depth":2},{"value":"Generic types","id":"generic-types","depth":2},{"value":"Styles & customization","id":"styles--customization","depth":2},{"value":"Runtime classes","id":"runtime-classes","depth":3},{"value":"Tokens used by the default styles","id":"tokens-used-by-the-default-styles","depth":3},{"value":"Types (reference)","id":"types-reference","depth":2}],"children":[["$","$L22",null,{}],["$","$L23",null,{"metadata":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1785249920000},"bottomContent":"$undefined","sourceCode":"$24","children":["$L25","$L26"]}]]}]}]
+27:I[4168,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"HeadingAnchor"]
+25:["$","div",null,{"id":"nextra-skip-nav"}]
+26:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Select","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["A flexible ",["$","strong",null,{"children":"Select"}]," component that provides searchable dropdown functionality with local filtering, disabled options, and customizable rendering. Perfect for choosing from a list of options with search capabilities."]}],"\n",["$","hr",null,{"className":"x:my-[2em] nextra-border"}],"\n",["$","h2",null,{"id":"props","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Props",["$","$L27",null,{"id":"props"}]]}],"\n",["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Name","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Type","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Default","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Provider?","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Description","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"data"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"T[]"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Array of options data.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"value"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string | number"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Controlled selected value (matched against ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.value"}],")."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onChange"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],"$L28","$L29","$L2a","$L2b"],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],"$L2c","$L2d","$L2e","$L2f","$L30","$L31","$L32","$L33","$L34","$L35","$L36","$L37","$L38","$L39","$L3a","$L3b","$L3c","$L3d","$L3e","$L3f","$L40"]}]]}],"\n","$L41","\n","$L42","\n","$L43","\n","$L44","\n","$L45","\n","$L46","\n","$L47","\n","$L48","\n","$L49","\n","$L4a","\n","$L4b","\n","$L4c","\n","$L4d","\n","$L4e","\n","$L4f","\n","$L50","\n","$L51","\n","$L52","\n","$L53","\n","$L54","\n","$L55","\n","$L56","\n","$L57","\n","$L58","\n","$L59","\n","$L5a","\n","$L5b","\n","$L5c","\n","$L5d","\n","$L5e","\n","$L5f","\n","$L60","\n","$L61","\n","$L62","\n","$L63","\n","$L64","\n","$L65","\n","$L66","\n","$L67","\n","$L68","\n","$L69","\n","$L6a","\n","$L6b","\n","$L6c","\n","$L6d","\n","$L6e","\n","$L6f","\n","$L70","\n","$L71","\n","$L72","\n","$L73","\n","$L74","\n","$L75","\n","$L76","\n","$L77","\n","$L78","\n","$L79","\n","$L7a","\n","$L7b","\n","$L7c","\n","$L7d","\n","$L7e","\n","$L7f","\n","$L80","\n","$L81","\n","$L82","\n","$L83","\n","$L84","\n","$L85","\n","$L86","\n","$L87"]}]
+88:I[7411,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"default"]
+89:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"QuickStartPreview"]
+8a:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"DisabledOptionsPreview"]
+8b:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ClearablePreview"]
+8c:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"NonSearchablePreview"]
+8d:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"WithErrorsPreview"]
+8e:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"CustomRenderPreview"]
+8f:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"IconsOverrideWithPropPreview"]
+90:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"IconsOverrideWithProviderPreview"]
+91:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ComponentPropsProviderPreview"]
+92:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"OnSearchPreview"]
+93:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ErrorHandlingPreview"]
+94:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"EmptyMessagePreview"]
+95:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"OnBlurPreview"]
+96:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"RawValuePreview"]
+97:I[4074,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"GenericTypesPreview"]
+98:I[1946,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","490","static/chunks/490-1749b0c7e1041835.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-e16f265660824d52.js","535","static/chunks/535-1f45676db8a3b1cc.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-7a94e0e7ac9ef13a.js"],"ToggleWordWrapButton"]
+28:["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(value: unknown) => void"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]
+29:["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]
+2a:["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]
+2b:["$","td",null,{"children":["Called when the selection changes. If ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"rawValue"}]," is ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],", the callback receives the full selected row instead of just the extracted value."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]
+2c:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"rawValue"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["If ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onChange"}]," receives the entire selected row object instead of the value."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2d:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"SelectOptionType<T>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"{ value: \"value\", label: \"label\" }"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"How to extract value/label and/or render each option.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2e:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"placeholder"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Placeholder when nothing is selected.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+2f:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"loading"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Shows loading indicator instead of toggle icon and prevents opening.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+30:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onBlur"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(target: HTMLDivElement & { clear: VoidFunction }) => void"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Called when the dropdown closes. Receives a target with a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"clear()"}]," helper to reset selection."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+31:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"errors"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string[] | string | ReactNode"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Error(s) shown under the select (also applies error styles).","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+32:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"label"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Label text.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+33:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"labelProps"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsWithoutRef<'label'>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Props forwarded to the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Label"}]," component. Provider values are merged with local values."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+34:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"labelPosition"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"LabelPositionBase"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Label position for form layout.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+35:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"required"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Marks the field as required (visual indicator).","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+36:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"seachable"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Enables the built-in search input and keyboard search behavior.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+37:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onSearch"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(row: T, term: string) => boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Custom filtering logic for local search. Return ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}]," to keep a row."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+38:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"clearable"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Shows a clear button when a value is selected.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+39:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"emptyMessage"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"string"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"No option found\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Message shown when the dropdown list is empty.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3a:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabled"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Disables the whole select.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3b:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabledOption"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(row: T) => boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Disables specific rows.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3c:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"isMultiple"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"No","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","span",null,{"className":"badge badge-orange","children":"Coming soon"}]," Multi-select support is not finalized yet."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3d:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"icons"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"{ close?: ReactNode; open?: ReactNode; clear?: ReactNode; loading?: ReactNode }"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Override icons used for open/close, clear, and loading.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3e:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disableErrorBoundaries"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"boolean"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["When ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}],", errors thrown in option rendering will be re-thrown instead of being caught."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+3f:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"optionErrorFallback"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"FC<{ row: T }>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Custom fallback UI when an option throws while rendering.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+40:["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"selectErrorFallback"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ReactNode"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"—","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Yes","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":"Fallback for select-level rendering errors.","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]
+41:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-blue","children":"Note"}]," Props marked with ",["$","strong",null,{"children":"Yes"}]," in the ",["$","strong",null,{"children":"Provider?"}]," column can be configured globally using the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}],"."]}]
+42:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+43:["$","h2",null,{"id":"usage","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Usage",["$","$L27",null,{"id":"usage"}]]}]
+44:["$","h3",null,{"id":"basic-select","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Basic Select",["$","$L27",null,{"id":"basic-select"}]]}]
+45:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The most basic usage requires a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"label"}]," and a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"data"}]," array. By default, it’s searchable."]}]
+46:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"BasicSelect.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nonChange={(value) => console.log(value)}\n/>"},{"value":"js","language":"jsx","filename":"BasicSelect.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nonChange={(value) => console.log(value)}\n/>"}],"preview":["$","$L89",null,{}],"defaultTab":"ts"}]
+47:["$","h3",null,{"id":"disabled-options","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Disabled Options",["$","$L27",null,{"id":"disabled-options"}]]}]
+48:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabledOption"}]," prop to conditionally disable items in the list. Disabled items are visible but not selectable."]}]
+49:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectDisabledOptions.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Svelte is disabled\"\ndata={frameworkData}\ndisabledOption={(item) => item.value === \"svelte\"}\n/>"},{"value":"js","language":"jsx","filename":"SelectDisabledOptions.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Svelte is disabled\"\ndata={frameworkData}\ndisabledOption={(item) => item.value === \"svelte\"}\n/>"}],"preview":["$","$L8a",null,{}],"defaultTab":"ts"}]
+4a:["$","h3",null,{"id":"clearable","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Clearable",["$","$L27",null,{"id":"clearable"}]]}]
+4b:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Set ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"clearable"}]," to ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"true"}]," to allow users to deselect the current value."]}]
+4c:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectClearable.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nclearable\n/>"},{"value":"js","language":"jsx","filename":"SelectClearable.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nclearable\n/>"}],"preview":["$","$L8b",null,{}],"defaultTab":"ts"}]
+4d:["$","h3",null,{"id":"non-searchable","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Non-Searchable",["$","$L27",null,{"id":"non-searchable"}]]}]
+4e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Set ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"seachable={false}"}]," to disable the search input. The dropdown will still open, but the user cannot filter the list."]}]
+4f:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectNonSearchable.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Search is disabled\"\ndata={frameworkData}\nseachable={false}\n/>"},{"value":"js","language":"jsx","filename":"SelectNonSearchable.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Search is disabled\"\ndata={frameworkData}\nseachable={false}\n/>"}],"preview":["$","$L8c",null,{}],"defaultTab":"ts"}]
+50:["$","h3",null,{"id":"with-errors","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["With Errors",["$","$L27",null,{"id":"with-errors"}]]}]
+51:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Pass an array of strings to the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"errors"}]," prop to display validation messages and apply error styling."]}]
+52:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectWithErrors.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nerrors={[\"This field is required\"]}\nrequired\n/>"},{"value":"js","language":"jsx","filename":"SelectWithErrors.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"Choose a framework\"\ndata={frameworkData}\nerrors={[\"This field is required\"]}\nrequired\n/>"}],"preview":["$","$L8d",null,{}],"defaultTab":"ts"}]
+53:["$","h3",null,{"id":"custom-option-rendering","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Custom Option Rendering",["$","$L27",null,{"id":"custom-option-rendering"}]]}]
+54:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.renderOption"}]," to provide a custom component for rendering each item in the dropdown list."]}]
+55:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectCustomRender.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst userData = [\n{ id: 1, name: \"John Doe\", email: \"john@work.com\", online: true },\n{ id: 2, name: \"Jane Smith\", email: \"jane@work.com\", online: false },\n];\n\n<Select\nlabel=\"Assign to\"\nplaceholder=\"Select a user\"\ndata={userData}\noptions={{\n  value: \"id\",\n  label: \"name\",\n  renderOption: (user) => (\n    <div style={{ display: \"flex\", alignItems: \"center\", gap: 8 }}>\n      <span\n        style={{\n          width: 8,\n          height: 8,\n          borderRadius: \"50%\",\n          background: user.online ? \"green\" : \"gray\",\n        }}\n      />\n      <div>\n        <div>{user.name}</div>\n        <div style={{ fontSize: \"0.8em\", opacity: 0.7 }}>{user.email}</div>\n      </div>\n    </div>\n  ),\n}}\n/>"},{"value":"js","language":"jsx","filename":"SelectCustomRender.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst userData = [\n{ id: 1, name: \"John Doe\", email: \"john@work.com\", online: true },\n{ id: 2, name: \"Jane Smith\", email: \"jane@work.com\", online: false },\n];\n\n<Select\nlabel=\"Assign to\"\nplaceholder=\"Select a user\"\ndata={userData}\noptions={{\n  value: \"id\",\n  label: \"name\",\n  renderOption: (user) => (\n    <div style={{ display: \"flex\", alignItems: \"center\", gap: 8 }}>\n      <span\n        style={{\n          width: 8,\n          height: 8,\n          borderRadius: \"50%\",\n          background: user.online ? \"green\" : \"gray\",\n        }}\n      />\n      <div>\n        <div>{user.name}</div>\n        <div style={{ fontSize: \"0.8em\", opacity: 0.7 }}>{user.email}</div>\n      </div>\n    </div>\n  ),\n}}\n/>"}],"preview":["$","$L8e",null,{}],"defaultTab":"ts"}]
+56:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+57:["$","h2",null,{"id":"icon-overriding","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Icon overriding",["$","$L27",null,{"id":"icon-overriding"}]]}]
+58:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"You can override the built-in icons either:"}]
+59:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["Directly on the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," via the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"icons"}]," prop"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Globally via ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]," (recommended if you want a consistent look)"]}],"\n"]}]
+5a:["$","h3",null,{"id":"override-icons-on-a-single-select","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Override icons on a single Select",["$","$L27",null,{"id":"override-icons-on-a-single-select"}]]}]
+5b:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectIconsOverride.tsx","code":"import { Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\ndata={frameworkData}\nlabel=\"Framework\"\nplaceholder=\"With custom icons\"\nclearable\nicons={{\n  clear: <X size={16} />,\n  open: <ChevronUp size={16} />,\n  close: <ChevronDown size={16} />,\n}}\n/>"},{"value":"js","language":"jsx","filename":"SelectIconsOverride.jsx","code":"import { Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\ndata={frameworkData}\nlabel=\"Framework\"\nplaceholder=\"With custom icons\"\nclearable\nicons={{\n  clear: <X size={16} />,\n  open: <ChevronUp size={16} />,\n  close: <ChevronDown size={16} />,\n}}\n/>"}],"preview":["$","$L8f",null,{}],"defaultTab":"ts"}]
+5c:["$","h3",null,{"id":"override-icons-with-componentpropsprovider","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Override icons with ComponentPropsProvider",["$","$L27",null,{"id":"override-icons-with-componentpropsprovider"}]]}]
+5d:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectIconsProvider.tsx","code":"import { ComponentPropsProvider, Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<ComponentPropsProvider\nselect={{\n  icons: {\n    clear: <X size={16} />,\n    open: <ChevronUp size={16} />,\n    close: <ChevronDown size={16} />,\n  },\n}}\n>\n<Select data={frameworkData} label=\"Framework\" placeholder=\"Icons from provider\" clearable />\n</ComponentPropsProvider>"},{"value":"js","language":"jsx","filename":"SelectIconsProvider.jsx","code":"import { ComponentPropsProvider, Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<ComponentPropsProvider\nselect={{\n  icons: {\n    clear: <X size={16} />,\n    open: <ChevronUp size={16} />,\n    close: <ChevronDown size={16} />,\n  },\n}}\n>\n<Select data={frameworkData} label=\"Framework\" placeholder=\"Icons from provider\" clearable />\n</ComponentPropsProvider>"}],"preview":["$","$L90",null,{}],"defaultTab":"ts"}]
+5e:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+5f:["$","h2",null,{"id":"component-props-provider","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Component Props Provider",["$","$L27",null,{"id":"component-props-provider"}]]}]
+60:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"ComponentPropsProvider"}]," to set default props globally for all ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"Select"}]," instances in a subtree."]}]
+61:["$","h3",null,{"id":"provider-supported-overrides","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Provider supported overrides",["$","$L27",null,{"id":"provider-supported-overrides"}]]}]
+62:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"select"}]," key supports overriding the following props:"]}]
+63:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"rawValue"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"labelPosition"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"emptyMessage"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"seachable"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"required"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"labelProps"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"clearable"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disableErrorBoundaries"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"optionErrorFallback"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"selectErrorFallback"}]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"icons"}]}],"\n"]}]
+64:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectComponentPropsProvider.tsx","code":"import { ComponentPropsProvider, Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<ComponentPropsProvider\nselect={{\n  seachable: false,\n  clearable: false,\n  emptyMessage: \"Nothing here\",\n  labelProps: { style: { color: \"#555\" } },\n  icons: {\n    clear: <X size={16} />,\n    open: <ChevronUp size={16} />,\n    close: <ChevronDown size={16} />,\n  },\n}}\n>\n<Select label=\"Framework\" placeholder=\"Provider overrides\" data={frameworkData} />\n</ComponentPropsProvider>"},{"value":"js","language":"jsx","filename":"SelectComponentPropsProvider.jsx","code":"import { ComponentPropsProvider, Select } from \"@kousta-ui/components\";\nimport { ChevronDown, ChevronUp, X } from \"lucide-react\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<ComponentPropsProvider\nselect={{\n  seachable: false,\n  clearable: false,\n  emptyMessage: \"Nothing here\",\n  labelProps: { style: { color: \"#555\" } },\n  icons: {\n    clear: <X size={16} />,\n    open: <ChevronUp size={16} />,\n    close: <ChevronDown size={16} />,\n  },\n}}\n>\n<Select label=\"Framework\" placeholder=\"Provider overrides\" data={frameworkData} />\n</ComponentPropsProvider>"}],"preview":["$","$L91",null,{}],"defaultTab":"ts"}]
+65:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+66:["$","h2",null,{"id":"onsearch","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["onSearch",["$","$L27",null,{"id":"onsearch"}]]}]
+67:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["By default, the select filters by the extracted label (",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.label"}],"). If you need custom filtering logic (e.g. multiple fields, strict matching, or locale-specific search), provide ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onSearch"}],"."]}]
+68:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectOnSearch.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst users = [\n{ id: 1, first_name: \"Nova\", last_name: \"Reed\" },\n{ id: 2, first_name: \"Kai\", last_name: \"Morgan\" },\n{ id: 3, first_name: \"Zara\", last_name: \"Quinn\" },\n{ id: 4, first_name: \"Milo\", last_name: \"Hayes\" },\n];\n\n<Select\nlabel=\"Users\"\nplaceholder=\"Search by exact first name\"\ndata={users}\noptions={{ value: \"id\", label: \"first_name last_name\" }}\nonSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}\n/>"},{"value":"js","language":"jsx","filename":"SelectOnSearch.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst users = [\n{ id: 1, first_name: \"Nova\", last_name: \"Reed\" },\n{ id: 2, first_name: \"Kai\", last_name: \"Morgan\" },\n{ id: 3, first_name: \"Zara\", last_name: \"Quinn\" },\n{ id: 4, first_name: \"Milo\", last_name: \"Hayes\" },\n];\n\n<Select\nlabel=\"Users\"\nplaceholder=\"Search by exact first name\"\ndata={users}\noptions={{ value: \"id\", label: \"first_name last_name\" }}\nonSearch={(row, term) => row.first_name.toLowerCase() === term.toLowerCase()}\n/>"}],"preview":["$","$L92",null,{}],"defaultTab":"ts"}]
+69:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+6a:["$","h2",null,{"id":"error-handling","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Error handling",["$","$L27",null,{"id":"error-handling"}]]}]
+6b:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["If your ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.renderOption"}]," (or label extraction) throws, options are rendered inside an internal error boundary."]}]
+6c:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Use:"}]
+6d:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"optionErrorFallback"}]," to render a custom UI for a broken option"]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disableErrorBoundaries"}]," to re-throw errors (useful during development/tests)"]}],"\n"]}]
+6e:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectErrorHandling.tsx","code":"import { Select } from \"@kousta-ui/components\";\nimport { XCircle } from \"lucide-react\";\n\nconst users = [\n{ id: 5, first_name: \"Safe\", last_name: \"User\" },\n{ id: 6, first_name: \"Broken\", last_name: \"Option\" },\n{ id: 7, first_name: \"Another\", last_name: \"User\" },\n];\n\n<Select\nlabel=\"Option error boundary\"\nplaceholder=\"Option with id 6 throws\"\ndata={users}\noptions={{\n  value: \"id\",\n  label: \"first_name last_name\",\n  renderOption: (row) => {\n    if (row.id === 6) throw new Error(\"Option render failed\");\n    return `${row.first_name} ${row.last_name}`;\n  },\n}}\noptionErrorFallback={({ row }) => (\n  <span\n    style={{\n      display: \"inline-flex\",\n      alignItems: \"center\",\n      gap: 8,\n      padding: \"6px 8px\",\n      borderRadius: 8,\n      background: \"rgba(220, 38, 38, 0.12)\",\n      color: \"#dc2626\",\n      fontSize: 12,\n    }}\n  >\n    <XCircle size={14} />\n    Failed to render option (id: {row.id})\n  </span>\n)}\n/>"},{"value":"js","language":"jsx","filename":"SelectErrorHandling.jsx","code":"import { Select } from \"@kousta-ui/components\";\nimport { XCircle } from \"lucide-react\";\n\nconst users = [\n{ id: 5, first_name: \"Safe\", last_name: \"User\" },\n{ id: 6, first_name: \"Broken\", last_name: \"Option\" },\n{ id: 7, first_name: \"Another\", last_name: \"User\" },\n];\n\n<Select\nlabel=\"Option error boundary\"\nplaceholder=\"Option with id 6 throws\"\ndata={users}\noptions={{\n  value: \"id\",\n  label: \"first_name last_name\",\n  renderOption: (row) => {\n    if (row.id === 6) throw new Error(\"Option render failed\");\n    return `${row.first_name} ${row.last_name}`;\n  },\n}}\noptionErrorFallback={({ row }) => (\n  <span\n    style={{\n      display: \"inline-flex\",\n      alignItems: \"center\",\n      gap: 8,\n      padding: \"6px 8px\",\n      borderRadius: 8,\n      background: \"rgba(220, 38, 38, 0.12)\",\n      color: \"#dc2626\",\n      fontSize: 12,\n    }}\n  >\n    <XCircle size={14} />\n    Failed to render option (id: {row.id})\n  </span>\n)}\n/>"}],"preview":["$","$L93",null,{}],"defaultTab":"ts"}]
+6f:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+70:["$","h2",null,{"id":"emptymessage","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["emptyMessage",["$","$L27",null,{"id":"emptymessage"}]]}]
+71:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Use ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"emptyMessage"}]," to customize what users see when the dropdown has no options."]}]
+72:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectEmptyMessage.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"No options\"\ndata={[]}\nemptyMessage=\"Nothing to show\"\n/>"},{"value":"js","language":"jsx","filename":"SelectEmptyMessage.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\n<Select\nlabel=\"Framework\"\nplaceholder=\"No options\"\ndata={[]}\nemptyMessage=\"Nothing to show\"\n/>"}],"preview":["$","$L94",null,{}],"defaultTab":"ts"}]
+73:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+74:["$","h2",null,{"id":"onblur","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["onBlur",["$","$L27",null,{"id":"onblur"}]]}]
+75:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onBlur"}]," is called when the dropdown closes. It receives a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"target"}]," object that includes a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"clear()"}]," helper to reset the selection."]}]
+76:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectOnBlur.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\ndata={frameworkData}\nonBlur={(target) => {\n  target.clear();\n}}\n/>"},{"value":"js","language":"jsx","filename":"SelectOnBlur.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\ndata={frameworkData}\nonBlur={(target) => {\n  target.clear();\n}}\n/>"}],"preview":["$","$L95",null,{}],"defaultTab":"ts"}]
+77:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+78:["$","h2",null,{"id":"rawvalue","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["rawValue",["$","$L27",null,{"id":"rawvalue"}]]}]
+79:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["When ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"rawValue"}]," is enabled, ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onChange"}]," receives the full selected data row instead of just the extracted value."]}]
+7a:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectRawValue.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\ndata={frameworkData}\nrawValue\nonChange={(row) => {\n  console.log(row); // => { value: \"react\", label: \"React\", ... }\n}}\n/>"},{"value":"js","language":"jsx","filename":"SelectRawValue.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst frameworkData = [\n{ value: \"react\", label: \"React\" },\n{ value: \"vue\", label: \"Vue\" },\n{ value: \"svelte\", label: \"Svelte\" },\n{ value: \"angular\", label: \"Angular\" },\n];\n\n<Select\nlabel=\"Framework\"\ndata={frameworkData}\nrawValue\nonChange={(row) => {\n  console.log(row); // => { value: \"react\", label: \"React\", ... }\n}}\n/>"}],"preview":["$","$L96",null,{}],"defaultTab":"ts"}]
+7b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+7c:["$","h2",null,{"id":"generic-types","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Generic types",["$","$L27",null,{"id":"generic-types"}]]}]
+7d:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Select is a generic component. Passing an explicit type parameter gives you type-checking for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"disabledOption"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"onSearch"}],", and custom renderers."]}]
+7e:["$","$L88",null,{"tabs":[{"value":"ts","language":"tsx","filename":"SelectGenericTypes.tsx","code":"import { Select } from \"@kousta-ui/components\";\n\ntype UserRow = {\nid: number;\nfirst_name: string;\nlast_name: string;\n};\n\nconst usersData: UserRow[] = [\n{ id: 1, first_name: \"Nova\", last_name: \"Reed\" },\n{ id: 2, first_name: \"Kai\", last_name: \"Morgan\" },\n{ id: 3, first_name: \"Zara\", last_name: \"Quinn\" },\n{ id: 4, first_name: \"Milo\", last_name: \"Hayes\" },\n];\n\n<Select<UserRow>\nlabel=\"Users\"\nplaceholder=\"Select a user\"\ndata={usersData}\noptions={{ value: \"id\", label: \"first_name last_name\" }}\nonChange={(value) => console.log(value)}\n/>"},{"value":"js","language":"jsx","filename":"SelectGenericTypes.jsx","code":"import { Select } from \"@kousta-ui/components\";\n\nconst usersData = [\n{ id: 1, first_name: \"Nova\", last_name: \"Reed\" },\n{ id: 2, first_name: \"Kai\", last_name: \"Morgan\" },\n{ id: 3, first_name: \"Zara\", last_name: \"Quinn\" },\n{ id: 4, first_name: \"Milo\", last_name: \"Hayes\" },\n];\n\n<Select\nlabel=\"Users\"\nplaceholder=\"Select a user\"\ndata={usersData}\noptions={{ value: \"id\", label: \"first_name last_name\" }}\nonChange={(value) => console.log(value)}\n/>"}],"preview":["$","$L97",null,{}],"defaultTab":"ts"}]
+7f:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+80:["$","h2",null,{"id":"styles--customization","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Styles & customization",["$","$L27",null,{"id":"styles--customization"}]]}]
+81:["$","h3",null,{"id":"runtime-classes","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Runtime classes",["$","$L27",null,{"id":"runtime-classes"}]]}]
+82:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-container"}]}],": The main wrapper for the label, select, and error message."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-outer"}]}],": The direct wrapper around the select input that handles positioning."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-inner"}]}],": The clickable input area."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-label"}]}],": The ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<label>"}]," element."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-value"}]}],": The ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<span>"}]," displaying the selected value."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-placeholder"}]}],": The ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"<span>"}]," for the placeholder text."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-toggle"}]}],": The dropdown arrow button."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-clear"}]}],": The clear button."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-dropdown"}]}],": The dropdown container that holds the options."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-option"}]}],": An individual option item in the dropdown."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-error"}]}],": Added to ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-inner"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"kui-select-clear"}]," when ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"errors"}]," are present."]}],"\n"]}]
+83:["$","h3",null,{"id":"tokens-used-by-the-default-styles","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Tokens used by the default styles",["$","$L27",null,{"id":"tokens-used-by-the-default-styles"}]]}]
+84:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Colors"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-neutral-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-primary-*"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-danger-*"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Spacing"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-2xs"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-xs"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-spacing-sm"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Typography"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-text-base"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-text-sm"}]]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Rounding"}],": ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"--kui-rounded"}]]}],"\n"]}]
+85:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+86:["$","h2",null,{"id":"types-reference","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Types (reference)",["$","$L27",null,{"id":"types-reference"}]]}]
+87:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L98",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"import"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" { ReactNode } "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"from"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"react\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectDataConstraints"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" Record"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"unknown"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" RenderOptionFunction"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"row"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],"$L99","$L9a","$L9b","$L9c","$L9d","$L9e","$L9f"]}],"\n","$La0","\n","$La1","\n","$La2","\n","$La3","\n","$La4","\n","$La5","\n","$La6","\n","$La7","\n","$La8","\n","$La9","\n","$Laa","\n","$Lab","\n","$Lac","\n","$Lad","\n","$Lae","\n","$Laf","\n","$Lb0","\n","$Lb1","\n","$Lb2","\n","$Lb3","\n","$Lb4"]}]]}]]}]
+99:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}]
+9a:["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectOptionType"}]
+9b:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}]
+9c:["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}]
+9d:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> "}]
+9e:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}]
+9f:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]
+a0:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  value"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a1:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  label"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a2:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  renderOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" RenderOptionFunction"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}]
+a3:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}]
+a4:["$","span",null,{"children":" "}]
+a5:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"export"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectProps"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" extends"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectDataConstraints"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"> "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}]
+a6:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  data"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[];"}]]}]
+a7:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  onChange"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"value"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" unknown"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" void"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a8:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  value"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" number"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+a9:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" SelectOptionType"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":">;"}]]}]
+aa:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  label"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+ab:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  placeholder"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+ac:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  errors"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[] "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"|"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" ReactNode"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+ad:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  required"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+ae:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  seachable"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+af:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  clearable"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+b0:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  disabled"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+b1:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  disabledOption"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"row"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" T"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+b2:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  isMultiple"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"?:"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" boolean"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}]
+b3:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"  // ... and other base props"}]}]
+b4:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+b5:I[6644,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"Select | Kousta UI"}],["$","meta","1",{"name":"description","content":"A React UI library focused on performance, accessibility, and convenience."}],["$","link","2",{"rel":"icon","href":"/img/logo.png"}],["$","$Lb5","3",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"
