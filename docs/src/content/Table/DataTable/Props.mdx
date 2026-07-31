@@ -4,15 +4,63 @@ title: Props
 
 # Props
 
-This page contains the TypeScript type definitions used across the DataTable documentation.
+This page describes what every `DataTable` prop is for, alongside the TypeScript
+type definitions used across the DataTable documentation (source of truth:
+`packages/table/src/DataTable/_props.ts`).
+
+## `TableProps<T>`
+
+The top-level props accepted by `DataTable`.
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | `T[]` | Rows to display. |
+| `loading` | `boolean` | Shows the table loading UI. |
+| `title` | `string` | Table title shown in the header. Later it will also be used to fetch table config from local storage (when implemented). |
+| `headers` | [`THeader<T>`](#theadert) | Column definitions (label -> how to read/render each cell). |
+| `keyExtractor` | `(row: T) => string \| number` | Stable key for each row. |
+| `pagination` | [`TablePagination`](#tablepagination) | Enables pagination — see [Pagination](./Pagination). |
+| `actions` | [`TActions<T>`](#tactionst) | Row actions, remote fetching, and search — see [Actions](./Actions) and [Search](./Search). |
+| `isStatic` | `boolean` | Marks the table as "static" (no remote actions). Useful when you only use local data + local search/sort/filter. |
+| `options` | [`TOptions<T>`](#toptionst) | Extra row actions, bulk actions, views, and select filters — see [Actions](./Actions) and [Views](./Views). |
+| `config` | [`TConfig`](#tconfig) | Behavior and element-prop customization — see [Config](./Config). |
+
+```ts
+export type TableProps<T> = {
+  data: T[];
+  loading: boolean;
+  title: string;
+  headers: THeader<T>;
+  keyExtractor?: (row: T) => string | number;
+  pagination?: TablePagination;
+  actions?: TActions<T>;
+  isStatic?: boolean;
+  options?: TOptions<T>;
+  config?: TConfig;
+};
+```
+
+---
 
 ## `THeader<T>`
+
+`headers` is a map from column label to a [`THeaderValue<T>`](#theadervaluet) definition of how to read or render that column's cells.
 
 ```ts
 export type THeader<T> = Record<string, THeaderValue<T>>;
 ```
 
+---
+
 ## `THeaderValue<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `value` | `string` | A key on your row object to read the cell value from. Mutually exclusive with `exec`. |
+| `exec` | `(row: T) => string \| ReactNode` | Compute the cell content instead of reading `value`. Mutually exclusive with `value`. |
+| `visible` | `boolean` | Whether the column is currently shown. Controlled by the column show/hide ("S/H") menu. |
+| `canSee` | `boolean` | Whether the column can be toggled at all in the "S/H" menu. |
+| `alwaysVisible` | `boolean` | Keeps the column visible regardless of the "S/H" menu state. |
 
 ```ts
 export type THeaderValue<T> = {
@@ -33,24 +81,16 @@ export type THeaderValue<T> = {
 );
 ```
 
-## `TableProps<T>`
-
-```ts
-export type TableProps<T> = {
-  data: T[];
-  loading: boolean;
-  title: string;
-  headers: THeader<T>;
-  keyExtractor?: (row: T) => string | number;
-  pagination?: TablePagination;
-  actions?: TActions<T>;
-  isStatic?: boolean;
-  options?: TOptions<T>;
-  config?: TConfig;
-};
-```
+---
 
 ## `TablePagination`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `total` | `number` | Total number of rows (used for page count and the "Showing X to Y" message). |
+| `page` | `number` | Initial page (1-indexed). |
+| `limit` | `number` | Initial rows per page. |
+| `type` | `"static" \| "dynamic"` | `static` slices `data` client-side. `dynamic` expects you to fetch and update `data` yourself, driven by `actions.get`. |
 
 ```ts
 type TablePagination = {
@@ -61,7 +101,16 @@ type TablePagination = {
 };
 ```
 
+---
+
 ## `TActions<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `get` | `(params: TParams) => void` | Fetch table data remotely. Called with `{ page, limit, search }` when pagination/search changes (when configured). |
+| `edit` | `{ onEdit(row); canEdit?; title?; buttonProps? }` | Adds an edit action for each row (button + context menu). `afterEdit` exists in the type but isn't implemented yet. |
+| `delete` | `{ onDelete(row); canDelete?; title?; buttonProps? }` | Adds a delete action for each row (button + context menu). `afterDelete` exists in the type but isn't implemented yet. |
+| `search` | [`TSearch<T>`](#tsearcht) | Configures search behavior — see [Search](./Search). |
 
 ```ts
 export type TActions<T> = {
@@ -84,7 +133,49 @@ export type TActions<T> = {
 };
 ```
 
+### `TSearch<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `static` | `boolean` | When `true`, filtering happens on the client via `onSearch(row, { query, reg }) => boolean`. When `false`/omitted, `onSearch(params) => void` is called like `actions.get`. |
+| `onSearch` | depends on `static` | The search callback. Its signature switches based on `static` (see above). |
+| `searchOnType` | `boolean` | If `true`, triggers search while typing (debounced). If `false`, the user must press Enter or click the search button. |
+| `searchTimer` | `number` | Debounce duration in ms when `searchOnType: true`. |
+
+```ts
+type TSearch<T> = {
+  searchOnType?: boolean;
+  searchTimer?: number;
+  static?: boolean;
+} & (
+  | { searchOnType?: false; searchTimer?: never }
+  | { searchOnType?: true; searchTimer?: number }
+) &
+  (
+    | {
+        static: true;
+        onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
+      }
+    | {
+        static?: false | undefined;
+        onSearch?: (params: TParams) => void;
+      }
+  );
+```
+
+---
+
 ## `TOptions<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `extraActions` | [`ExtraActions<T>[]`](#extraactionst) | Additional per-row actions beyond edit/delete. |
+| `emptyTable` | `ReactNode` | Content rendered when there's no data. |
+| `cards` | `{ card(props); cardsContainerProps?; menuProps?; loadingIndicator? }` | Enables the built-in card view. `card` receives `{ row, visibleHeaders }` — see [Views](./Views). |
+| `viewComp` | `{ Component(row); type?: "modal" \| "extends"; ...modal/expand options }` | Adds a dedicated "view" action that expands the row or opens a modal — see [Actions](./Actions). |
+| `bulkActions` | [`TBulkActions<T>[]`](#tbulkactionst) | Enables row selection and bulk actions on the selection. |
+| `extraviews` | `Record<string, `[`TExtraView<T>`](#textraviewt)`>` | Adds custom views beyond table/card, keyed by name — see [Views](./Views). |
+| `selectFilter` | `Record<string, (row: T, clearAll?) => boolean>` | Adds a "select by filter" menu next to the header checkbox (requires `bulkActions`) — see [Actions](./Actions). |
 
 ```ts
 export type TOptions<T> = Partial<{
@@ -107,13 +198,13 @@ export type TOptions<T> = Partial<{
     canView?: CanPerformAction<T>;
   } & (
     | {
-      type: "modal";
-      modalOptions?: Partial<ModalProps>;
-    }
+        type: "modal";
+        modalOptions?: Partial<ModalProps>;
+      }
     | {
-      type?: "extends";
-      modalOptions?: never;
-    }
+        type?: "extends";
+        modalOptions?: never;
+      }
   );
   bulkActions: TBulkActions<T>[];
   extraviews: Record<string, TExtraView<T>>;
@@ -121,7 +212,76 @@ export type TOptions<T> = Partial<{
 }>;
 ```
 
+### `ExtraActions<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `title` | `string \| ReactNode` | Label shown for the action. |
+| `onClick` | `(row: T) => void` | Called when the action is triggered. |
+| `Icon` | `ReactNode` | Optional icon shown next to the label. |
+| `allowed` | [`CanPerformAction<T>`](#canperformactiont) | Whether the action is available for a given row. |
+
+```ts
+type ExtraActions<T> = {
+  title: string | ReactNode;
+  onClick: (row: T) => void;
+  Icon?: ReactNode;
+  allowed?: CanPerformAction<T>;
+};
+```
+
+### `TBulkActions<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `title` | `string` | Label shown for the bulk action. |
+| `onClick` | `(rows: T[], clearSelected: VoidFunction) => void \| Promise<unknown>` | Called with the selected rows; call `clearSelected()` to reset the selection afterward. |
+| `valueExtractor` | `(rows: T[]) => unknown` | Computes an aggregate value from the selected rows (for example, a sum to display). |
+| `buttonProps` | `Omit<ButtonProps, "onClick">` | Props forwarded to the action's button. |
+| `canPerformAction` | `boolean` | Whether the bulk action is currently enabled. |
+
+```ts
+type TBulkActions<T> = {
+  title: string;
+  onClick: (rows: T[], clearSelected: VoidFunction) => void | Promise<unknown>;
+  valueExtractor?: (rows: T[]) => unknown;
+  buttonProps?: Omit<ButtonProps, "onClick">;
+  canPerformAction?: boolean;
+};
+```
+
+### `TExtraView<T>`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `View` | `FC<{ data: T[]; visibleHeaders: string[] }>` | The component rendered for this view. |
+| `canView` | `boolean` | Whether this view is available. |
+| `menuProps` | `Omit<MenuItemProps, "onClick" \| "closeMenuOnClick">` | Props for the menu item used to switch to this view. |
+| `loadingIndicator` | [`LoadingIndicator`](#loadingindicator) | Overrides the loading UI for this view. |
+
+```ts
+type TExtraView<T> = {
+  View: FC<{ data: T[]; visibleHeaders: string[] }>;
+  canView?: boolean;
+  menuProps?: Omit<MenuItemProps, "onClick" | "closeMenuOnClick">;
+  loadingIndicator?: LoadingIndicator;
+};
+```
+
+---
+
 ## `TConfig`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `toggleRows` | `boolean` | Enables the column show/hide menu button ("S/H"). |
+| `disableContextMenu` | `boolean` | Disables the row right-click context menu. |
+| `noHead` | `boolean` | Hides the entire table head section (search, refresh, view switcher, etc.). |
+| `emptyRowIcon` | `ReactNode` | Placeholder shown when a row has no actions. |
+| `useGetAsRefresh` | `boolean` | When enabled, the refresh button triggers `actions.get`. |
+| `loadingIndicator` | [`LoadingIndicator`](#loadingindicator) | Overrides the loading UI for card/extra views. |
+| `icons` | `{ toggleRows?; selectRow?; extraViewsTogle?; tableExtraView?; cardExtraView?; refresh?; selectOpened?; selectClosed?; paginationNext?; paginationPrev?; paginationDots? }` | Overrides the icons used by DataTable UI elements — see [Config](./Config#configicons) for what each key controls. |
+| `props` | `{ table?; thead?; tbody?; tr?; th?; td? }` | Props forwarded directly to the underlying table elements. |
 
 ```ts
 export type TConfig = {
@@ -155,18 +315,42 @@ export type TConfig = {
 };
 ```
 
-## `TParams`
+---
+
+## Supporting types
+
+### `TParams`
+
+The params object passed to `actions.get` and non-static `actions.search.onSearch`.
 
 ```ts
 export type TParams = Record<string, number | string | undefined>;
 ```
 
-## `CanPerformAction<T>`
+### `CanPerformAction<T>`
+
+Either a plain boolean, or a function evaluated per-row, used to conditionally enable/disable an action (`canEdit`, `canDelete`, `allowed`, `canView`, etc.).
 
 ```ts
 export type CanPerformAction<T> = ((row: T) => boolean) | boolean;
 ```
 
-## `PropsContextType`
+### `LoadingIndicator`
 
-The type used by `TablePropsProvider`. It is a partial of props/actions/config that the provider can set as defaults for all `DataTable` instances below it. See [TablePropsProvider](./TablePropsProvider) and [`TConfig`](#tconfig).
+Renders custom loading content for card/extra views, given the currently visible headers.
+
+```ts
+type LoadingIndicator = (props: { visibleHeaders: string[] }) => ReactNode;
+```
+
+### `TAfterAction`
+
+Reserved for a future post-edit/post-delete callback. Present in the types but **not implemented yet**.
+
+```ts
+type TAfterAction = (props: TParams) => unknown;
+```
+
+### `PropsContextType`
+
+The type used by [`TablePropsProvider`](./TablePropsProvider). It's a partial of props/actions/config that the provider can set as defaults for all `DataTable` instances below it.

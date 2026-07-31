@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -44,12 +45,12 @@ jobs:
         working-directory: ./docs
         run: |
           echo "NEXT_PUBLIC_API_BASE_URL=${{ secrets.NEXT_PUBLIC_API_BASE_URL }}" >> .env
-          echo "NEXT_PUBLIC_DOCSEARCH_APP_ID=${{ secrets.DOCSEARCH_APP_ID }}" >> .env
-          echo "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME=${{ secrets.DOCSEARCH_INDEX_NAME }}" >> .env
+          echo "NEXT_PUBLIC_DOCSEARCH_APP_ID=${{ secrets.NEXT_PUBLIC_DOCSEARCH_APP_ID }}" >> .env
+          echo "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME=${{ secrets.NEXT_PUBLIC_DOCSEARCH_INDEX_NAME }}" >> .env
           # Public, search-only key — safe to ship to the browser. This is a
-          # DIFFERENT secret than DOCSEARCH_API_KEY below, which is an
+          # DIFFERENT secret than DOCSEARCH_ADMIN_API_KEY below, which is an
           # admin/write key and must never be exposed client-side.
-          echo "NEXT_PUBLIC_DOCSEARCH_SEARCH_API_KEY=${{ secrets.DOCSEARCH_SEARCH_API_KEY }}" >> .env
+          echo "NEXT_PUBLIC_DOCSEARCH_SEARCH_API_KEY=${{ secrets.NEXT_PUBLIC_DOCSEARCH_SEARCH_API_KEY }}" >> .env
 
       - name: Build docs (Next.js static export)
         working-directory: ./docs
@@ -67,8 +68,8 @@ jobs:
         continue-on-error: true
         working-directory: ./docs
         env:
-          APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
-          API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          APPLICATION_ID: ${{ secrets.NEXT_PUBLIC_DOCSEARCH_APP_ID }}
+          API_KEY: ${{ secrets.DOCSEARCH_ADMIN_API_KEY }}
         run: |
           if [ -z "$APPLICATION_ID" ] || [ -z "$API_KEY" ]; then
             echo "DocSearch credentials not configured, skipping DocSearch population"

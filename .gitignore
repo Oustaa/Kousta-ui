@@ -40,16 +40,7 @@ tmp/
 
 # TypeScript
 *.tsbuildinfo
-
-# Compiled source
-*.d.ts
-*.js
-*.jsx
-*.map
-*.log
-!build.js
-
-!global.d.ts
+next-env.d.ts
 
 # Storybook
 .out/
@@ -78,14 +69,10 @@ Thumbs.db
 .idea/
 *.iml
 
-!eslint.config.js
-
 *storybook.log
-
 
 .parcel-cache
 **/*.gz
-!packages/styles/src/scripts/build.js
 
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md

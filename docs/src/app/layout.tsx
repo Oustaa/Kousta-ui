@@ -29,7 +29,7 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const pageMap = await getPageMap();
+  const pageMap = await getPageMap("/docs");
 
   const navbar = (
     <Navbar

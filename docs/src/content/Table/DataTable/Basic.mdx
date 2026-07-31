@@ -18,7 +18,7 @@ import {
 | `title` | `string` | — | Table title shown in the header. Later it will also be used to fetch table config from local storage (when implemented). |
 | `loading` | `boolean` | `false` | Shows the table loading UI. |
 | `data` | `T[]` | — | Rows to display. |
-| `headers` | [`THeader<T>`](./Props#theader-t) | — | Column definitions (label -> how to read/render cell). |
+| `headers` | [`THeader<T>`](./Props#theadert) | — | Column definitions (label -> how to read/render cell). |
 | `keyExtractor` | `(row: T) => string \| number` | — | Stable key for each row. |
 | `isStatic` | `boolean` | — | Marks the table as “static” (no remote actions). Useful when you only use local data + local search/sort/filter. |
 
@@ -119,7 +119,7 @@ Each header supports:
 - `visible`: whether the column is currently shown (controlled by the "S/H" menu)
 - `canSee`: whether the column can be toggled at all
 
-See [`THeaderValue<T>`](./Props#theadervalue-t).
+See [`THeaderValue<T>`](./Props#theadervaluet).
 
 ```tsx
 import React from "react";
