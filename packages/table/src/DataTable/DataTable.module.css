@@ -76,6 +76,23 @@
   }
 }
 
+.kui-dtable-th-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kui-dtable-th-orderBy {
+  color: var(--kui-primary-400);
+}
+
+.kui-dtable-th-orderBy-buttons-container {
+  display: flex;
+
+  & > div {
+    rotate: 90deg;
+  }
+}
+
 .kui-dtable-cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

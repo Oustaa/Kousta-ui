@@ -17,10 +17,13 @@ export const useDataToDisplay = <T>() => {
         return actions.search?.onSearch(row, { query: search.query, reg });
       });
 
-      console.log({ filteredData, length: filteredData.length });
-
       setDataToDisplay(filteredData);
       total.setTotal(filteredData.length);
+    } else {
+      // Keep dataToDisplay in sync with the `data` prop for non-static-search
+      // tables too — otherwise updates from actions.get (pagination, dynamic
+      // search, sorting, refresh) never reach the rendered rows after mount.
+      setDataToDisplay(data || []);
     }
   }, [search.query, data]);
 

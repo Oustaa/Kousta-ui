@@ -3,12 +3,26 @@ import Table from "../../Table";
 import { useTableContext } from "../tableContext";
 import { hasActions, hasBulkActions } from "../utils/tableAction";
 import { Menu } from "@kousta-ui/components";
+import classes from "../DataTable.module.css";
+import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
 function TableHeader() {
   const [, setAllSelected] = useState<boolean>(false);
 
-  const { data, headers, options, actions, config, rowSelection } =
-    useTableContext();
+  const functionWithTableProps = useFunctionWithTableParams();
+
+  const {
+    data,
+    headers,
+    options,
+    actions,
+    config,
+    rowSelection,
+    isStatic,
+    order,
+  } = useTableContext();
+
+  const { orderBy, setOrderBy } = order;
 
   const headersLabel = Object.keys(headers.data).filter((header) => {
     return (
@@ -25,6 +39,38 @@ function TableHeader() {
         rowSelection.setSelectedRows(index, row, true);
       }
     });
+  };
+
+  const onSort = (header: string) => {
+    const valueName = headers.data[header].value || "";
+
+    let props: Record<string, number | string> = {
+      sortBy: valueName,
+      direction: orderBy.direction,
+    };
+
+    if (orderBy.by === valueName) {
+      props.direction = Number(props.direction) * -1;
+    }
+
+    // @ts-expect-error this is not an error for now
+    setOrderBy(props);
+
+    if (isStatic) {
+    } else {
+      if (actions?.get) {
+        // change the props the send to the backend with the get function
+        if (options?.sort?.props) {
+          // @ts-expect-error this is not an error for now
+          props = options.sort.props(props);
+        } else if (config?.sort?.props) {
+          // @ts-expect-error this is not an error for now
+          props = config.sort.props(props);
+        }
+
+        functionWithTableProps(actions.get, props);
+      }
+    }
   };
 
   return (
@@ -87,7 +133,41 @@ function TableHeader() {
               role="th"
               key={`${header} - ${index}`}
             >
-              {header.toUpperCase()}
+              <div
+                className={classes["kui-dtable-th-content"]}
+                onClick={() => onSort(header)}
+              >
+                <span>{header.toUpperCase()}</span>
+
+                {headers.data[header].sortBy && (
+                  <div
+                    className={
+                      classes["kui-dtable-th-orderBy-buttons-container"]
+                    }
+                  >
+                    <div
+                      className={
+                        headers.data[header].value === orderBy.by &&
+                        orderBy.direction === 1
+                          ? classes["kui-dtable-th-orderBy"]
+                          : ""
+                      }
+                    >
+                      &gt;
+                    </div>
+                    <div
+                      className={
+                        headers.data[header].value === orderBy.by &&
+                        orderBy.direction === -1
+                          ? classes["kui-dtable-th-orderBy"]
+                          : ""
+                      }
+                    >
+                      &lt;
+                    </div>
+                  </div>
+                )}
+              </div>
             </Table.Th>
           );
         })}

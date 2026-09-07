@@ -61,6 +61,7 @@ export type THeader<T> = Record<string, THeaderValue<T>>;
 | `visible` | `boolean` | Whether the column is currently shown. Controlled by the column show/hide ("S/H") menu. |
 | `canSee` | `boolean` | Whether the column can be toggled at all in the "S/H" menu. |
 | `alwaysVisible` | `boolean` | Keeps the column visible regardless of the "S/H" menu state. |
+| `sortBy` | `true` | Marks the column sortable — see [Sorting](./Sorting). Requires `value` (not `exec`). The type also accepts a `{ name?: string }` object, but only `true` has an effect today. |
 
 ```ts
 export type THeaderValue<T> = {
@@ -69,6 +70,7 @@ export type THeaderValue<T> = {
   visible?: boolean;
   canSee?: boolean;
   alwaysVisible?: boolean;
+  sortBy?: THeaderSort | true;
 } & (
   | {
       value: string;
@@ -79,6 +81,10 @@ export type THeaderValue<T> = {
       exec: (row: T) => string | ReactNode;
     }
 );
+
+type THeaderSort = {
+  name?: string; // declared in the type, not read by the current implementation
+};
 ```
 
 ---
@@ -171,6 +177,7 @@ type TSearch<T> = {
 |------|------|-------------|
 | `extraActions` | [`ExtraActions<T>[]`](#extraactionst) | Additional per-row actions beyond edit/delete. |
 | `emptyTable` | `ReactNode` | Content rendered when there's no data. |
+| `sort` | [`SortProps`](#sortprops) | Remaps the params sent to `actions.get` when a sortable column is clicked — see [Sorting](./Sorting). Same shape and effect as `config.sort`; this one takes precedence if both are set. |
 | `cards` | `{ card(props); cardsContainerProps?; menuProps?; loadingIndicator? }` | Enables the built-in card view. `card` receives `{ row, visibleHeaders }` — see [Views](./Views). |
 | `viewComp` | `{ Component(row); type?: "modal" \| "extends"; ...modal/expand options }` | Adds a dedicated "view" action that expands the row or opens a modal — see [Actions](./Actions). |
 | `bulkActions` | [`TBulkActions<T>[]`](#tbulkactionst) | Enables row selection and bulk actions on the selection. |
@@ -181,6 +188,7 @@ type TSearch<T> = {
 export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
+  sort: SortProps;
   cards: {
     card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
     cardsContainerProps?: ComponentPropsWithoutRef<"div">;
@@ -250,6 +258,21 @@ type TBulkActions<T> = {
 };
 ```
 
+### `SortProps`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `props` | `(props: { sortBy: string; direction: number }) => Record<string, string \| number>` | Maps the internal sort state (`sortBy`/`direction`) to whatever param shape your `actions.get` handler expects — see [Sorting](./Sorting). |
+
+```ts
+type SortProps = {
+  props: (props: {
+    sortBy: string;
+    direction: number;
+  }) => Record<string, string | number>;
+};
+```
+
 ### `TExtraView<T>`
 
 | Name | Type | Description |
@@ -280,6 +303,7 @@ type TExtraView<T> = {
 | `emptyRowIcon` | `ReactNode` | Placeholder shown when a row has no actions. |
 | `useGetAsRefresh` | `boolean` | When enabled, the refresh button triggers `actions.get`. |
 | `loadingIndicator` | [`LoadingIndicator`](#loadingindicator) | Overrides the loading UI for card/extra views. |
+| `sort` | [`SortProps`](#sortprops) | Same as `options.sort` — see [Sorting](./Sorting). `options.sort` takes precedence if both are set. |
 | `icons` | `{ toggleRows?; selectRow?; extraViewsTogle?; tableExtraView?; cardExtraView?; refresh?; selectOpened?; selectClosed?; paginationNext?; paginationPrev?; paginationDots? }` | Overrides the icons used by DataTable UI elements — see [Config](./Config#configicons) for what each key controls. |
 | `props` | `{ table?; thead?; tbody?; tr?; th?; td? }` | Props forwarded directly to the underlying table elements. |
 
@@ -291,6 +315,7 @@ export type TConfig = {
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
   loadingIndicator?: LoadingIndicator;
+  sort?: SortProps;
   icons?: {
     toggleRows?: ReactNode;
     selectRow?: ReactNode;

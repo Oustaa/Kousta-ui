@@ -4,7 +4,17 @@ import tseslint from "typescript-eslint";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  { ignores: ["**/cjs/**", "**/dist/**", "**/build/**", "**/esm/**", "**/demos/**"] },
+  {
+    ignores: [
+      "**/cjs/**",
+      "**/lib/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/esm/**",
+      "**/lib/**",
+      "**/demos/**",
+    ],
+  },
   {
     languageOptions: {
       globals: globals.browser,
@@ -12,12 +22,12 @@ export default [
         ecmaVersion: "latest",
         sourceType: "module",
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         },
         project: true,
-        tsconfigRootDir: import.meta.dirname
-      }
-    }
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
   },
   {
     rules: {

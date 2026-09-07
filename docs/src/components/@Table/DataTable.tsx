@@ -628,6 +628,123 @@ export const ViewCompPreview = () => {
   );
 };
 
+export const SortingPreview = () => {
+  const baseData = useMemo<Product[]>(
+    () => [
+      { id: 3, designation: "Widget C", category: { ref: "TABLE" } },
+      { id: 1, designation: "Widget A", category: { ref: "UI" } },
+      { id: 2, designation: "Widget B", category: { ref: "UI" } },
+    ],
+    [],
+  );
+
+  const [rows, setRows] = useState<Product[]>(baseData);
+  const [lastParams, setLastParams] = useState<TableParams | null>(null);
+
+  const get = async (params: TableParams) => {
+    setLastParams(params);
+    const { sortBy, direction } = params;
+
+    if (!sortBy) {
+      setRows(baseData);
+      return;
+    }
+
+    const sorted = [...baseData].sort((a, b) => {
+      const av = (a as any)[sortBy as string];
+      const bv = (b as any)[sortBy as string];
+      if (av === bv) return 0;
+      return (av > bv ? 1 : -1) * (Number(direction) || 1);
+    });
+    setRows(sorted);
+  };
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<Product>
+        title="Sorting"
+        loading={false}
+        data={rows}
+        headers={{
+          id: { value: "id", sortBy: true },
+          designation: { value: "designation", sortBy: true },
+          category: { exec: (row) => row.category?.ref ?? "-" },
+        }}
+        actions={{ get }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        Params sent to <code>actions.get</code> on the last click:{" "}
+        <code>{lastParams ? JSON.stringify(lastParams) : "(none yet)"}</code>
+      </p>
+    </div>
+  );
+};
+
+export const SortingCustomPropsPreview = () => {
+  const baseData = useMemo<Product[]>(
+    () => [
+      { id: 3, designation: "Widget C", category: { ref: "TABLE" } },
+      { id: 1, designation: "Widget A", category: { ref: "UI" } },
+      { id: 2, designation: "Widget B", category: { ref: "UI" } },
+    ],
+    [],
+  );
+
+  const [rows, setRows] = useState<Product[]>(baseData);
+  const [lastParams, setLastParams] = useState<TableParams | null>(null);
+
+  const get = async (params: TableParams) => {
+    setLastParams(params);
+    const orderBy = params.order_by as string | undefined;
+    const orderDir = params.order_dir as string | undefined;
+
+    if (!orderBy) {
+      setRows(baseData);
+      return;
+    }
+
+    const sorted = [...baseData].sort((a, b) => {
+      const av = (a as any)[orderBy];
+      const bv = (b as any)[orderBy];
+      if (av === bv) return 0;
+      return (av > bv ? 1 : -1) * (orderDir === "desc" ? -1 : 1);
+    });
+    setRows(sorted);
+  };
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<Product>
+        title="Sorting (custom param names)"
+        loading={false}
+        data={rows}
+        headers={{
+          id: { value: "id", sortBy: true },
+          designation: { value: "designation", sortBy: true },
+          category: { exec: (row) => row.category?.ref ?? "-" },
+        }}
+        options={{
+          sort: {
+            props: ({ sortBy, direction }) => ({
+              order_by: sortBy,
+              order_dir: direction === -1 ? "desc" : "asc",
+            }),
+          },
+        }}
+        actions={{ get }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        Params sent to <code>actions.get</code> on the last click:{" "}
+        <code>{lastParams ? JSON.stringify(lastParams) : "(none yet)"}</code>
+      </p>
+    </div>
+  );
+};
+
 export const ConfigPreview = () => {
   const data: Product[] = [
     { id: 1, designation: "Kousta UI", category: { ref: "UI" } },

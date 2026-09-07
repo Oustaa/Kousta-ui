@@ -15,7 +15,10 @@ function transformItems<T extends { url: string }>(items: T[]): T[] {
   return items.map((item) => {
     try {
       const url = new URL(item.url);
-      return { ...item, url: `${window.location.origin}${url.pathname}${url.hash}` };
+      return {
+        ...item,
+        url: `${window.location.origin}${url.pathname}${url.hash}`,
+      };
     } catch {
       return item;
     }

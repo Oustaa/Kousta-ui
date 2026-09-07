@@ -3,4 +3,220 @@
 title: Sorting
 ---
 
-Coming soon.
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import Badge from '@/components/Badge';
+import {
+  SortingPreview,
+  SortingCustomPropsPreview,
+} from '@/components/@Table/DataTable';
+
+# Sorting
+
+`DataTable` supports column sorting for **dynamic** (remote) tables. You mark a column as sortable, and clicking its header calls `actions.get` with the current sort state, merged with whatever pagination/search params are already in play — the same way `actions.get` already drives [pagination](./Pagination) and [dynamic search](./Search). Actually applying the sort (an `ORDER BY` on your API, or your own sort logic) is up to your `actions.get` implementation.
+
+Type definitions: see [Props](./Props).
+
+## Enabling sort on a column
+
+Set `sortBy: true` on any header that uses `value` (not `exec`) — sort reads the column's `value` as the sort key, so `exec`-based columns can't be marked sortable:
+
+```ts
+headers={{
+  name: { value: "name", sortBy: true },
+}}
+```
+
+<Badge color="yellow">Note</Badge> `sortBy` is typed to also accept an object (`{ name?: string }`), but only the boolean `true` has any effect in the current implementation — use `true`.
+
+## What happens when you click a sortable header
+
+- Clicking a column that isn't currently sorted starts it ascending.
+- Clicking the currently-sorted column again toggles its direction (ascending ↔ descending).
+- The header shows a small ascending/descending indicator next to sortable columns, highlighting whichever direction is active.
+- If `actions.get` is provided, it's called with `sortBy` (the column's `value`) and `direction` (`1` for ascending, `-1` for descending), merged with the current pagination/search params — unless you override the shape with `options.sort.props` (see below).
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableSorting.tsx",
+      code: `import React, { useMemo, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type Product = { id: number; designation: string };
+type Params = { sortBy?: string; direction?: number };
+
+export default function Example() {
+  const baseData = useMemo<Product[]>(
+    () => [
+      { id: 3, designation: "Widget C" },
+      { id: 1, designation: "Widget A" },
+      { id: 2, designation: "Widget B" },
+    ],
+    [],
+  );
+  const [rows, setRows] = useState(baseData);
+
+  const get = async ({ sortBy, direction }: Params) => {
+    if (!sortBy) {
+      setRows(baseData);
+      return;
+    }
+    const sorted = [...baseData].sort((a, b) => {
+      const av = (a as any)[sortBy];
+      const bv = (b as any)[sortBy];
+      if (av === bv) return 0;
+      return (av > bv ? 1 : -1) * (direction ?? 1);
+    });
+    setRows(sorted);
+  };
+
+  return (
+    <DataTable<Product>
+      title="Products"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: true },
+        designation: { value: "designation", sortBy: true },
+      }}
+      actions={{ get }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableSorting.jsx",
+      code: `import React, { useMemo, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+export default function Example() {
+  const baseData = useMemo(
+    () => [
+      { id: 3, designation: "Widget C" },
+      { id: 1, designation: "Widget A" },
+      { id: 2, designation: "Widget B" },
+    ],
+    [],
+  );
+  const [rows, setRows] = useState(baseData);
+
+  const get = async ({ sortBy, direction }) => {
+    if (!sortBy) {
+      setRows(baseData);
+      return;
+    }
+    const sorted = [...baseData].sort((a, b) => {
+      const av = a[sortBy];
+      const bv = b[sortBy];
+      if (av === bv) return 0;
+      return (av > bv ? 1 : -1) * (direction ?? 1);
+    });
+    setRows(sorted);
+  };
+
+  return (
+    <DataTable
+      title="Products"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: true },
+        designation: { value: "designation", sortBy: true },
+      }}
+      actions={{ get }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<SortingPreview />}
+  defaultTab="ts"
+/>
+
+The line under the preview shows the exact params your `actions.get` receives on the last click — useful for checking what your API would actually be called with.
+
+---
+
+## `options.sort` / `config.sort` (custom param names)
+
+If your backend expects different query-param names than `sortBy`/`direction`, provide `props` to remap them. Either `options.sort.props` or `config.sort.props` works — `options.sort.props` wins if both are set.
+
+| Name | Type | Description |
+|------|------|-------------|
+| `props` | `(props: { sortBy: string; direction: number }) => Record<string, string \| number>` | Maps the internal sort state to whatever shape your `actions.get` handler expects. If omitted, `actions.get` receives `sortBy`/`direction` directly. |
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableSortingCustomProps.tsx",
+      code: `<DataTable<Product>
+  title="Products"
+  data={rows}
+  headers={{
+    id: { value: "id", sortBy: true },
+    designation: { value: "designation", sortBy: true },
+  }}
+  options={{
+    sort: {
+      props: ({ sortBy, direction }) => ({
+        order_by: sortBy,
+        order_dir: direction === -1 ? "desc" : "asc",
+      }),
+    },
+  }}
+  actions={{ get: fetchProducts }}
+  keyExtractor={(row) => row.id}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableSortingCustomProps.jsx",
+      code: `<DataTable
+  title="Products"
+  data={rows}
+  headers={{
+    id: { value: "id", sortBy: true },
+    designation: { value: "designation", sortBy: true },
+  }}
+  options={{
+    sort: {
+      props: ({ sortBy, direction }) => ({
+        order_by: sortBy,
+        order_dir: direction === -1 ? "desc" : "asc",
+      }),
+    },
+  }}
+  actions={{ get: fetchProducts }}
+  keyExtractor={(row) => row.id}
+/>`
+    }
+  ]}
+  preview={<SortingCustomPropsPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## Current limitations
+
+<Badge color="yellow">Note</Badge> Sorting is wired up for dynamic tables only right now.
+
+- **Static tables** (`isStatic: true`, no `actions.get`): clicking a sortable header still updates the ascending/descending indicator, but the local `data` array isn't reordered — static sorting isn't implemented yet. There's also no exposed callback to hook into the click yourself for static tables today, so you can't work around this from outside the component either. If you need sorted local data right now, sort `data` yourself (for example, from your own "sort by" UI) before passing it to `DataTable`, independently of `sortBy`.
+- `sortBy` requires a `value`-based header; `exec`-based columns can't be marked sortable.

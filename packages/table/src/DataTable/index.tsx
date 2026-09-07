@@ -5,7 +5,7 @@ import TableHeader from "./components/TableHeader";
 import TableBody from "./components/TableBody";
 import { isValidElement, useCallback, useEffect, useState } from "react";
 import { TableProps } from "./_props";
-import { TableContextProvider } from "./tableContext";
+import { OrderBy, TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
 import TableCardContainer from "./components/TableCardContainer";
 import DisplayExtraView from "./components/DisplayExtraView";
@@ -20,6 +20,10 @@ function DataTable<T>(props: TableProps<T>) {
   const [headers, setHeaders] = useState(props.headers);
   const [selectedRows, setSelectedRows] = useState<Record<number, unknown>>({});
   const [query, setQuery] = useState<string>("");
+  const [orderBy, setOrderBy] = useState<OrderBy>({
+    by: "",
+    direction: 1,
+  });
 
   const [displayAs, setDisplayAs] = useState<string>("table");
 
@@ -202,6 +206,7 @@ function DataTable<T>(props: TableProps<T>) {
       config={config}
       headers={{ data: headers, setHeaders }}
       search={{ query, setQuery }}
+      order={{ orderBy, setOrderBy }}
       total={{ total, setTotal }}
       rowSelection={{
         selectedRows,

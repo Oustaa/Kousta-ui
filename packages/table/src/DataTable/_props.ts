@@ -23,6 +23,7 @@ export type TableProps<T> = {
 export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
+  sort?: SortProps;
 
   cards: {
     card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
@@ -42,13 +43,13 @@ export type TOptions<T> = Partial<{
     canView?: CanPerformAction<T>;
   } & (
     | {
-      type: "modal";
-      modalOptions?: Partial<ModalProps>;
-    }
+        type: "modal";
+        modalOptions?: Partial<ModalProps>;
+      }
     | {
-      type?: "extends";
-      modalOptions?: never;
-    }
+        type?: "extends";
+        modalOptions?: never;
+      }
   );
   bulkActions: TBulkActions<T>[];
   extraviews: Record<string, TExtraView<T>>;
@@ -66,16 +67,21 @@ export type THeaderValue<T> = {
   visible?: boolean;
   canSee?: boolean;
   alwaysVisible?: boolean;
+  sortBy?: THeaderSort | true;
 } & (
-    | {
+  | {
       value: string;
       exec?: never;
     }
-    | {
+  | {
       value?: never;
       exec: (row: T) => string | ReactNode;
     }
-  );
+);
+
+type THeaderSort = {
+  name?: string;
+};
 
 export type THeader<T> = Record<string, THeaderValue<T>>;
 
@@ -120,24 +126,24 @@ type TSearch<T> = {
   searchTimer?: number;
   static?: boolean;
 } & (
-    | {
+  | {
       searchOnType?: false;
       searchTimer?: never;
     }
-    | {
+  | {
       searchOnType?: true;
       searchTimer?: number;
     }
-  ) &
+) &
   (
     | {
-      static: true;
-      onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
-    }
+        static: true;
+        onSearch?: (row: T, props: { query: string; reg: RegExp }) => boolean;
+      }
     | {
-      static?: false | undefined;
-      onSearch?: (params: TParams) => void;
-    }
+        static?: false | undefined;
+        onSearch?: (params: TParams) => void;
+      }
   );
 
 type ExtraActions<T> = {
@@ -154,6 +160,13 @@ type TablePagination = {
   type?: "static" | "dynamic";
 };
 
+type SortProps = {
+  props: (props: {
+    sortBy: string;
+    direction: number;
+  }) => Record<string, string | number>;
+};
+
 // Table config
 export type TConfig = {
   toggleRows?: boolean;
@@ -162,6 +175,7 @@ export type TConfig = {
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
   loadingIndicator?: LoadingIndicator;
+  sort?: SortProps;
   icons?: {
     toggleRows?: ReactNode;
     selectRow?: ReactNode;
@@ -174,6 +188,8 @@ export type TConfig = {
     paginationNext?: ReactNode;
     paginationPrev?: ReactNode;
     paginationDots?: ReactNode;
+    sordtDesc?: ReactNode;
+    sordtAsc?: ReactNode;
   };
   props?: {
     table?: ComponentPropsWithoutRef<"table">;

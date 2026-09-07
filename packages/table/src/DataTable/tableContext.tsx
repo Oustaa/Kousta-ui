@@ -6,6 +6,8 @@ export type TableHeaders<T> = {
   setHeaders: React.Dispatch<React.SetStateAction<THeader<T>>>;
 };
 
+export type OrderBy = { by: string; direction: number };
+
 export type TableContextType<T> = Omit<
   TableProps<T>,
   "headers" | "pagination"
@@ -19,6 +21,10 @@ export type TableContextType<T> = Omit<
   search: {
     query: string;
     setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
+  order: {
+    orderBy: OrderBy;
+    setOrderBy: React.Dispatch<React.SetStateAction<OrderBy>>;
   };
   total: {
     total: number;

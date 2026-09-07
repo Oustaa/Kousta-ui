@@ -100,9 +100,9 @@ const App = () => {
   //   },
   // };
   const headers: THeader<ProductType> = {
-    id: { value: "id" },
+    id: { value: "id", sortBy: true },
     label: { value: "designation" },
-    category: { value: "category.ref" },
+    category: { value: "category.ref", sortBy: true },
   };
 
   // const searchHandler = useCallback(
@@ -263,6 +263,13 @@ const App = () => {
               },
             }}
             options={{
+              sort: {
+                props(props) {
+                  return {
+                    order: `${props.direction === -1 ? "-" : ""}${props.sortBy}`,
+                  };
+                },
+              },
               bulkActions: [
                 {
                   title: "Delete All",

@@ -1,11 +1,5 @@
 import { ButtonProps, ModalProps } from "@kousta-ui/components";
-import {
-  ComponentPropsWithoutRef,
-  createContext,
-  PropsWithChildren,
-  ReactNode,
-  useContext,
-} from "react";
+import { createContext, PropsWithChildren, ReactNode, useContext } from "react";
 import { TConfig } from "./_props";
 
 type PropsContextType = Partial<{
