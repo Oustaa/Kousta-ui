@@ -79,18 +79,37 @@
 .kui-dtable-th-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: var(--kui-spacing-sm);
 }
 
-.kui-dtable-th-orderBy {
-  color: var(--kui-primary-400);
-}
-
-.kui-dtable-th-orderBy-buttons-container {
+.kui-dtable-sort-icon-group {
   display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-  & > div {
-    rotate: 90deg;
-  }
+.kui-dtable-sort-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--kui-neutral-400);
+  opacity: 0.5;
+  transition:
+    color 120ms ease,
+    opacity 120ms ease;
+}
+
+.kui-dtable-th-content:hover .kui-dtable-sort-icon {
+  opacity: 0.8;
+}
+
+.kui-dtable-sort-icon-active {
+  color: var(--kui-primary-400);
+  opacity: 1;
+}
+
+.kui-dtable-th-content:hover .kui-dtable-sort-icon-active {
+  opacity: 1;
 }
 
 .kui-dtable-cards-container {

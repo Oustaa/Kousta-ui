@@ -9,7 +9,13 @@ import {
   BsThreeDots,
   BsTrash,
 } from "react-icons/bs";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaSort,
+  FaSortAlphaDown,
+  FaSortAlphaUp,
+} from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
 import { usePagination } from "@kousta-ui/hooks";
 
@@ -18,6 +24,7 @@ import "@kousta-ui/components/esm/index.css";
 import "./App.css";
 
 import { THeader } from "@kousta-ui/table/lib/DataTable/_props";
+import { users } from "./data/users";
 
 export type UserType = {
   name: string;
@@ -68,41 +75,50 @@ const App = () => {
   const [productsLoading, setProductsLoading] = useState(false);
   const [totalProducts, setTotalProducts] = useState(0);
 
-  // const headers: THeader<UserType> = {
-  //   user: {
-  //     exec(user: UserType) {
-  //       return (
-  //         <div>
-  //           <h2>{user.email}</h2>
-  //         </div>
-  //       );
-  //     },
-  //     visible: false,
-  //   },
-  //   name: {
-  //     exec() {
-  //       return "WHAAAAAAAAAA";
-  //     },
-  //     visible: false,
-  //     canSee: false,
-  //   },
-  //   age: {
-  //     value: "age",
-  //   },
-  //   email: {
-  //     value: "email",
-  //   },
-  //   address: {
-  //     value: "address",
-  //   },
-  //   local: {
-  //     value: "location.name",
-  //   },
-  // };
+  const staticTHeaders: THeader<UserType> = {
+    user: {
+      exec(user: UserType) {
+        return (
+          <div>
+            <h2>{user.email}</h2>
+          </div>
+        );
+      },
+      visible: false,
+      sortBy: {
+        name: "email",
+        // sortFunc(a, b) {
+        //   return a.email.localeCompare(b.email);
+        // },
+      },
+    },
+    name: {
+      value: "name",
+      // exec() {
+      //   return "WHAAAAAAAAAA";
+      // },
+      // visible: false,
+      // canSee: false,
+      sortBy: {},
+    },
+    age: {
+      value: "age",
+      sortBy: {},
+    },
+    email: {
+      value: "email",
+    },
+    address: {
+      value: "address",
+    },
+    local: {
+      value: "location.name",
+    },
+  };
   const headers: THeader<ProductType> = {
-    id: { value: "id", sortBy: true },
+    id: { value: "id", sortBy: {} },
     label: { value: "designation" },
-    category: { value: "category.ref", sortBy: true },
+    category: { value: "category.ref", sortBy: {} },
   };
 
   // const searchHandler = useCallback(
@@ -186,6 +202,9 @@ const App = () => {
         //     // style: { backgroundColor: "blue", borderColor: "white" },
         //   },
         // }}
+        icons={{
+          sordtDesc: <FaSort />,
+        }}
       >
         <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
           {/* <Table.Root> */}
@@ -216,12 +235,38 @@ const App = () => {
           {/*   seblings={3} */}
           {/*   onChange={setPage} */}
           {/* /> */}
+          <DataTable<UserType>
+            loading={false}
+            title="users-static-table"
+            data={users}
+            headers={staticTHeaders}
+            config={{
+              icons: {
+                sort: ({ direction }) => {
+                  switch (direction) {
+                    case -1:
+                      return <FaSortAlphaUp />;
+                    default:
+                      return <FaSortAlphaDown />;
+                  }
+                },
+              },
+            }}
+          />
           <br />
           <br />
           <br />
           <DataTable<ProductType>
             data={products}
-            headers={headers}
+            headers={{
+              ...headers,
+              id: {
+                value: "id",
+                sortBy: {
+                  name: "ido",
+                },
+              },
+            }}
             loading={productsLoading}
             keyExtractor={(row) => row.id}
             title="this is a title"

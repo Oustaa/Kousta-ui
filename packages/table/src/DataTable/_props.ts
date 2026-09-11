@@ -14,10 +14,17 @@ export type TableProps<T> = {
   keyExtractor?: (row: T) => string | number;
   pagination?: TablePagination;
   actions?: TActions<T>;
-  isStatic?: boolean;
+  // isStatic?: boolean;
 
   options?: TOptions<T>;
   config?: TConfig;
+};
+
+export type SortProps = {
+  props: (props: {
+    sortBy: string;
+    direction: number;
+  }) => Record<string, string | number>;
 };
 
 export type TOptions<T> = Partial<{
@@ -67,7 +74,7 @@ export type THeaderValue<T> = {
   visible?: boolean;
   canSee?: boolean;
   alwaysVisible?: boolean;
-  sortBy?: THeaderSort | true;
+  sortBy?: THeaderSort<T>;
 } & (
   | {
       value: string;
@@ -79,8 +86,13 @@ export type THeaderValue<T> = {
     }
 );
 
-type THeaderSort = {
+type THeaderSort<T> = {
+  // this is the name of the props the user want to sort by
+  // if not passed the it will goes check by value passed to the THeaderValue.
+  // the purpose behine this is if the backend uses a different name for example ( to show a category that is comming in a object yout value might be something like category.name, and when sorting the table will send category.name, but if the backend expect a string category, here you should make the name in the sortBy equal to category ).
   name?: string;
+  // this will be called inside the data.sort function, for datatypes that are complex
+  sortFunc?: (a: T, b: T) => number;
 };
 
 export type THeader<T> = Record<string, THeaderValue<T>>;
@@ -160,13 +172,6 @@ type TablePagination = {
   type?: "static" | "dynamic";
 };
 
-type SortProps = {
-  props: (props: {
-    sortBy: string;
-    direction: number;
-  }) => Record<string, string | number>;
-};
-
 // Table config
 export type TConfig = {
   toggleRows?: boolean;
@@ -175,7 +180,6 @@ export type TConfig = {
   emptyRowIcon?: ReactNode;
   useGetAsRefresh?: boolean;
   loadingIndicator?: LoadingIndicator;
-  sort?: SortProps;
   icons?: {
     toggleRows?: ReactNode;
     selectRow?: ReactNode;
@@ -188,8 +192,6 @@ export type TConfig = {
     paginationNext?: ReactNode;
     paginationPrev?: ReactNode;
     paginationDots?: ReactNode;
-    sordtDesc?: ReactNode;
-    sordtAsc?: ReactNode;
   };
   props?: {
     table?: ComponentPropsWithoutRef<"table">;

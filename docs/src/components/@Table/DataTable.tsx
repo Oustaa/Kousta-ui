@@ -628,7 +628,42 @@ export const ViewCompPreview = () => {
   );
 };
 
-export const SortingPreview = () => {
+export const StaticSortingPreview = () => {
+  const baseData: Product[] = [
+    { id: 3, designation: "Widget C", category: { ref: "TABLE" } },
+    { id: 1, designation: "Widget A", category: { ref: "UI" } },
+    { id: 2, designation: "Widget B", category: { ref: "UI" } },
+  ];
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<Product>
+        title="Sorting (static)"
+        loading={false}
+        data={baseData}
+        headers={{
+          id: { value: "id", sortBy: {} },
+          designation: { value: "designation", sortBy: {} },
+          category: {
+            exec: (row) => row.category?.ref ?? "-",
+            sortBy: {
+              sortFunc: (a, b) =>
+                (a.category?.ref ?? "").localeCompare(b.category?.ref ?? ""),
+            },
+          },
+        }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        No <code>actions.get</code> here — clicking a header re-sorts{" "}
+        <code>data</code> in place, client-side.
+      </p>
+    </div>
+  );
+};
+
+export const DynamicSortingPreview = () => {
   const baseData = useMemo<Product[]>(
     () => [
       { id: 3, designation: "Widget C", category: { ref: "TABLE" } },
@@ -662,12 +697,12 @@ export const SortingPreview = () => {
   return (
     <div style={previewContainerStyle}>
       <DataTable<Product>
-        title="Sorting"
+        title="Sorting (dynamic)"
         loading={false}
         data={rows}
         headers={{
-          id: { value: "id", sortBy: true },
-          designation: { value: "designation", sortBy: true },
+          id: { value: "id", sortBy: {} },
+          designation: { value: "designation", sortBy: {} },
           category: { exec: (row) => row.category?.ref ?? "-" },
         }}
         actions={{ get }}
@@ -682,7 +717,7 @@ export const SortingPreview = () => {
   );
 };
 
-export const SortingCustomPropsPreview = () => {
+export const DynamicSortingCustomPropsPreview = () => {
   const baseData = useMemo<Product[]>(
     () => [
       { id: 3, designation: "Widget C", category: { ref: "TABLE" } },
@@ -717,12 +752,12 @@ export const SortingCustomPropsPreview = () => {
   return (
     <div style={previewContainerStyle}>
       <DataTable<Product>
-        title="Sorting (custom param names)"
+        title="Sorting (dynamic, custom param names)"
         loading={false}
         data={rows}
         headers={{
-          id: { value: "id", sortBy: true },
-          designation: { value: "designation", sortBy: true },
+          id: { value: "id", sortBy: {} },
+          designation: { value: "designation", sortBy: {} },
           category: { exec: (row) => row.category?.ref ?? "-" },
         }}
         options={{

@@ -33,6 +33,14 @@ function DataTable<T>(props: TableProps<T>) {
     limit: props.pagination?.limit || 0,
   });
 
+  const [data, setData] = useState<T[]>(props.data);
+
+  // @ts-expect-error this is not an erro
+  Array.prototype.setData = (data: T[]) => {
+    console.log("Array.prototype.setData was Called");
+    setData(data);
+  };
+
   const setSelectedRowsFunc = useCallback(
     (index: number, row: unknown, all: boolean = false) => {
       if (all && Object.keys(selectedRows).length > 0) {
@@ -60,6 +68,9 @@ function DataTable<T>(props: TableProps<T>) {
   }, [props.pagination?.total]);
 
   const config = (props.config || {}) as NonNullable<TableProps<T>["config"]>;
+  const options = (props.options || {}) as NonNullable<
+    TableProps<T>["options"]
+  >;
 
   if (!config.icons) config.icons = {};
 
@@ -80,7 +91,6 @@ function DataTable<T>(props: TableProps<T>) {
           }
         }
       }
-
       // overwrite the table edit button
       if (actionsProps.edit) {
         if (actionsProps.edit.title && props.actions?.edit) {
@@ -144,17 +154,23 @@ function DataTable<T>(props: TableProps<T>) {
     if (
       providedProps.emptyTable &&
       isValidElement(providedProps.emptyTable) &&
-      props.options &&
-      props.options?.emptyTable === undefined
+      options.emptyTable === undefined
     ) {
-      props.options.emptyTable = providedProps.emptyTable;
+      options.emptyTable = providedProps.emptyTable;
     }
 
-    if (providedProps.viewComp && props.options?.viewComp) {
+    if (providedProps.sort) {
+      options.sort = {
+        ...providedProps.sort,
+        ...options.sort,
+      };
+    }
+
+    if (providedProps.viewComp && options.viewComp) {
       // @ts-expect-error this is not an error, Component prop should be passed to the props
-      props.options.viewComp = {
+      options.viewComp = {
         ...providedProps.viewComp,
-        ...props.options.viewComp,
+        ...options.viewComp,
       };
     }
 
@@ -200,10 +216,16 @@ function DataTable<T>(props: TableProps<T>) {
   // reset the emptyRowIcon to '--' in case non was provided
   if (!props.config?.emptyRowIcon) if (props.config) config.emptyRowIcon = "--";
 
+  useEffect(() => {
+    setData(props.data);
+  }, [props.data]);
+
   return (
     <TableContextProvider
       {...props}
+      data={{ data, setData }}
       config={config}
+      options={options}
       headers={{ data: headers, setHeaders }}
       search={{ query, setQuery }}
       order={{ orderBy, setOrderBy }}
@@ -231,7 +253,7 @@ function DataTable<T>(props: TableProps<T>) {
       <TableHead />
       <TableInformation />
       <TableLoading>
-        {props.data?.length === 0 ? (
+        {data?.length === 0 ? (
           <EmptyTable />
         ) : displayAs === "table" ? (
           <Table.Root {...props.config?.props?.table}>

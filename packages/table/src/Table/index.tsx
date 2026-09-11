@@ -66,7 +66,6 @@ const Tr: FC<PropsWithChildren<ComponentPropsWithRef<"tr">>> = ({
   return (
     <tr
       {...rest}
-      role="tr"
       className={`${classes["kui-tr"]} ${className || ""} kui-table-tr`}
     >
       {children}

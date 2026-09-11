@@ -1,6 +1,6 @@
 import { ButtonProps, ModalProps } from "@kousta-ui/components";
 import { createContext, PropsWithChildren, ReactNode, useContext } from "react";
-import { TConfig } from "./_props";
+import { SortProps, TConfig } from "./_props";
 
 type PropsContextType = Partial<{
   props: TConfig["props"];
@@ -22,6 +22,7 @@ type PropsContextType = Partial<{
   disableContextMenu: boolean;
   noHead: boolean;
   icons: TConfig["icons"];
+  sort: SortProps;
   viewComp: {
     type?: "modal" | "extends";
     modalOptions?: Omit<ModalProps, "opened" | "onClose" | "modalTrigger">;

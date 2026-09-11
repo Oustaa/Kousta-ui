@@ -19,9 +19,11 @@ export const headers: THeader<UserType> = {
   },
   name: {
     value: "name",
+    sortBy: {},
   },
   age: {
     value: "age",
+    sortBy: {},
   },
   email: {
     value: "email",

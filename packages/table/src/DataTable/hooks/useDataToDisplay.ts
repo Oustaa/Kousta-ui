@@ -4,7 +4,13 @@ import { useTableContext } from "../tableContext";
 import { usePaginationData } from "./usePaginationData";
 
 export const useDataToDisplay = <T>() => {
-  const { data, actions, search, total } = useTableContext();
+  const {
+    data: { data },
+    actions,
+    search,
+    total,
+  } = useTableContext();
+
   const [dataToDisplay, setDataToDisplay] = useState(data || []);
 
   const paginatedData = usePaginationData({ data: dataToDisplay });

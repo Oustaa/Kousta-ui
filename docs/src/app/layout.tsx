@@ -34,7 +34,7 @@ export default async function RootLayout({
   const navbar = (
     <Navbar
       logo={
-        <>
+        <span className="kui-logo-wrapper">
           <img
             alt="Kousta UI"
             className="kui-logo kui-logo--light"
@@ -49,7 +49,8 @@ export default async function RootLayout({
             src="/img/logo-dark.png"
             width={120}
           />
-        </>
+          <span className="kui-logo-docs-badge">docs</span>
+        </span>
       }
       projectLink="https://github.com/Oustaa/kousta-ui"
     />
@@ -91,7 +92,7 @@ export default async function RootLayout({
           navbar={navbar}
           pageMap={pageMap}
           search={docSearchConfigured ? <DocSearchWidget /> : undefined}
-          sidebar={{ defaultMenuCollapseLevel: 2 }}
+          sidebar={{ autoCollapse: true, defaultMenuCollapseLevel: 1 }}
         >
           {children}
         </Layout>

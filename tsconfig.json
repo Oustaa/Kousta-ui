@@ -9,7 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["DOM", "DOM.Iterable", "ES2021"],
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
     "paths": {
       "@ousta-ui/styles/*": ["../styles/src/*"],
       "@ousta-ui/helpers/*": ["../helpers/src/*"],

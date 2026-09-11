@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Table from "../../Table";
 import { useTableContext } from "../tableContext";
 import { hasActions, hasBulkActions } from "../utils/tableAction";
@@ -6,19 +6,62 @@ import { Menu } from "@kousta-ui/components";
 import classes from "../DataTable.module.css";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
 
-function TableHeader() {
+const ChevronIcon: FC<{ direction: "up" | "down" }> = ({ direction }) => (
+  <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+    <path
+      d={direction === "up" ? "M1 5L5 1L9 5" : "M1 1L5 5L9 1"}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const DefaultSortIcon: FC<{
+  direction?: number;
+  isActive: boolean;
+}> = ({ direction, isActive }) => {
+  const isAsc = isActive && direction === -1;
+  const isDesc = isActive && direction === 1;
+
+  return (
+    <span className={classes["kui-dtable-sort-icon-group"]}>
+      <span
+        className={
+          isAsc
+            ? `${classes["kui-dtable-sort-icon"]} ${classes["kui-dtable-sort-icon-active"]}`
+            : classes["kui-dtable-sort-icon"]
+        }
+      >
+        {<ChevronIcon direction="up" />}
+      </span>
+      <span
+        className={
+          isDesc
+            ? `${classes["kui-dtable-sort-icon"]} ${classes["kui-dtable-sort-icon-active"]}`
+            : classes["kui-dtable-sort-icon"]
+        }
+      >
+        {<ChevronIcon direction="down" />}
+      </span>
+    </span>
+  );
+};
+
+const TableHeader = <T extends Record<string, unknown>>() => {
   const [, setAllSelected] = useState<boolean>(false);
 
   const functionWithTableProps = useFunctionWithTableParams();
 
   const {
-    data,
+    data: { data, setData },
     headers,
     options,
     actions,
     config,
     rowSelection,
-    isStatic,
     order,
   } = useTableContext();
 
@@ -42,30 +85,60 @@ function TableHeader() {
   };
 
   const onSort = (header: string) => {
-    const valueName = headers.data[header].value || "";
+    let valueName = headers.data[header].value || "";
 
-    let props: Record<string, number | string> = {
+    if (headers.data[header].sortBy?.name) {
+      valueName = headers.data[header].sortBy?.name;
+    }
+
+    let props: { sortBy: string; direction: number } = {
       sortBy: valueName,
       direction: orderBy.direction,
     };
 
-    if (orderBy.by === valueName) {
-      props.direction = Number(props.direction) * -1;
-    }
+    if (
+      orderBy.by === valueName ||
+      orderBy.by === headers.data[header].sortBy?.name
+    )
+      props.direction = (orderBy.direction || 1) * -1;
+    else props.direction = 1;
 
-    // @ts-expect-error this is not an error for now
-    setOrderBy(props);
+    setOrderBy({ direction: props.direction, by: props.sortBy });
 
-    if (isStatic) {
+    // table is static and data is possed to the table staticlly
+    if (!actions?.get) {
+      const sorted = data.toSorted((first: any, second: any) => {
+        const firstValue = first[valueName];
+        const secondValue = second[valueName];
+
+        if (typeof firstValue === typeof secondValue) {
+          console.log("Sorting");
+          if (typeof firstValue === "string") {
+            return firstValue.localeCompare(secondValue) * props.direction;
+          }
+
+          if (typeof firstValue === "number") {
+            return (firstValue - secondValue) * props.direction;
+          }
+        }
+
+        if (headers.data[header].sortBy?.sortFunc) {
+          return (
+            headers.data[header].sortBy?.sortFunc(first, second) *
+            props.direction
+          );
+        }
+
+        return 0;
+      });
+
+      setData(sorted);
     } else {
       if (actions?.get) {
         // change the props the send to the backend with the get function
         if (options?.sort?.props) {
           // @ts-expect-error this is not an error for now
           props = options.sort.props(props);
-        } else if (config?.sort?.props) {
-          // @ts-expect-error this is not an error for now
-          props = config.sort.props(props);
         }
 
         functionWithTableProps(actions.get, props);
@@ -126,46 +199,38 @@ function TableHeader() {
           </Table.Th>
         )}
         {headersLabel.map((header, index) => {
+          const isSortable = !!headers.data[header].sortBy;
+          const isActive =
+            headers.data[header].value === orderBy.by ||
+            headers.data[header].sortBy?.name === orderBy.by;
+
+          const ariaSort = !isSortable
+            ? undefined
+            : isActive
+              ? orderBy.direction === 1
+                ? "ascending"
+                : "descending"
+              : "none";
+
           return (
             <Table.Th
               {...config?.props?.th}
-              aria-checked="true"
               role="th"
+              aria-sort={ariaSort}
               key={`${header} - ${index}`}
             >
               <div
                 className={classes["kui-dtable-th-content"]}
-                onClick={() => onSort(header)}
+                onClick={isSortable ? () => onSort(header) : undefined}
+                style={isSortable ? { cursor: "pointer" } : undefined}
               >
                 <span>{header.toUpperCase()}</span>
 
-                {headers.data[header].sortBy && (
-                  <div
-                    className={
-                      classes["kui-dtable-th-orderBy-buttons-container"]
-                    }
-                  >
-                    <div
-                      className={
-                        headers.data[header].value === orderBy.by &&
-                        orderBy.direction === 1
-                          ? classes["kui-dtable-th-orderBy"]
-                          : ""
-                      }
-                    >
-                      &gt;
-                    </div>
-                    <div
-                      className={
-                        headers.data[header].value === orderBy.by &&
-                        orderBy.direction === -1
-                          ? classes["kui-dtable-th-orderBy"]
-                          : ""
-                      }
-                    >
-                      &lt;
-                    </div>
-                  </div>
+                {isSortable && (
+                  <DefaultSortIcon
+                    direction={isActive ? orderBy.direction : undefined}
+                    isActive={isActive}
+                  />
                 )}
               </div>
             </Table.Th>
@@ -177,6 +242,6 @@ function TableHeader() {
       </Table.Tr>
     </Table.Thead>
   );
-}
+};
 
 export default TableHeader;

@@ -10,9 +10,13 @@ export type OrderBy = { by: string; direction: number };
 
 export type TableContextType<T> = Omit<
   TableProps<T>,
-  "headers" | "pagination"
+  "headers" | "pagination" | "data"
 > & {
   headers: TableHeaders<T>;
+  data: {
+    data: T[];
+    setData: React.Dispatch<React.SetStateAction<T[]>>;
+  };
   rowSelection: {
     selectedRows: Record<number, unknown>;
     setSelectedRows: (index: number, row: unknown, all?: boolean) => void;
