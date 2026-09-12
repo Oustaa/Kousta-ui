@@ -25,6 +25,7 @@ import "./App.css";
 
 import { THeader } from "@kousta-ui/table/lib/DataTable/_props";
 import { users } from "./data/users";
+import TableWithTotal from "./components/TableWithTotal";
 
 export type UserType = {
   name: string;
@@ -240,22 +241,15 @@ const App = () => {
             title="users-static-table"
             data={users}
             headers={staticTHeaders}
-            config={{
-              icons: {
-                sort: ({ direction }) => {
-                  switch (direction) {
-                    case -1:
-                      return <FaSortAlphaUp />;
-                    default:
-                      return <FaSortAlphaDown />;
-                  }
-                },
-              },
-            }}
           />
           <br />
           <br />
           <br />
+          <TableWithTotal />
+          <br />
+          <br />
+          <br />
+          <h2>Dynamic Table</h2>
           <DataTable<ProductType>
             data={products}
             headers={{

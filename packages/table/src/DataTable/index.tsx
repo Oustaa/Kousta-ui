@@ -35,12 +35,6 @@ function DataTable<T>(props: TableProps<T>) {
 
   const [data, setData] = useState<T[]>(props.data);
 
-  // @ts-expect-error this is not an erro
-  Array.prototype.setData = (data: T[]) => {
-    console.log("Array.prototype.setData was Called");
-    setData(data);
-  };
-
   const setSelectedRowsFunc = useCallback(
     (index: number, row: unknown, all: boolean = false) => {
       if (all && Object.keys(selectedRows).length > 0) {

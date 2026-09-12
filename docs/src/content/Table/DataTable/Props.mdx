@@ -60,6 +60,7 @@ export type THeader<T> = Record<string, THeaderValue<T>>;
 | `canSee` | `boolean` | Whether the column can be toggled at all in the "S/H" menu. |
 | `alwaysVisible` | `boolean` | Keeps the column visible regardless of the "S/H" menu state. |
 | `sortBy` | [`THeaderSort<T>`](#theadersortt) | Marks the column sortable — see [Sorting](./Sorting). An empty object (`{}`) is enough to enable it; `name` and `sortFunc` are both optional. Works with `exec`-based columns too, as long as `sortFunc` is provided. |
+| `total` | `boolean \| { name?: string; func?: (prev: number, current: number) => number }` | Adds this column to the totals row at the bottom of the table body — see [Total](./Total). `true` or `{}` sums the column's `value` across every currently-displayed row. |
 
 ```ts
 export type THeaderValue<T> = {
@@ -69,6 +70,12 @@ export type THeaderValue<T> = {
   canSee?: boolean;
   alwaysVisible?: boolean;
   sortBy?: THeaderSort<T>;
+  total?:
+    | boolean
+    | {
+        name?: string;
+        func?: (prev: number, current: number) => number;
+      };
 } & (
   | {
       value: string;
@@ -94,6 +101,15 @@ type THeaderSort<T> = {
   sortFunc?: (a: T, b: T) => number;
 };
 ```
+
+### `total` object shape
+
+Unlike `sortBy`, this isn't a separately-named type in `_props.ts` — it's declared inline on `THeaderValue<T>`, shown above. The object form:
+
+| Name | Type | Description |
+|------|------|-------------|
+| `name` | `string` | The key to read and sum instead of the header's `value` — see [Total](./Total#reading-a-different-field). |
+| `func` | `(prev: number, current: number) => number` | Custom reducer called once per row instead of a plain sum. Must return a number — see [Total's current limitations](./Total#current-limitations) for what happens if it doesn't. |
 
 ---
 

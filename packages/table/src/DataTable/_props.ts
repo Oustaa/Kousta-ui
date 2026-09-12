@@ -75,6 +75,13 @@ export type THeaderValue<T> = {
   canSee?: boolean;
   alwaysVisible?: boolean;
   sortBy?: THeaderSort<T>;
+  // for now lets focuse on the calculating of the total, and not worrying about users spiciffications
+  total?:
+    | boolean
+    | {
+        name?: string;
+        func?: (prev: number, current: number) => number;
+      };
 } & (
   | {
       value: string;

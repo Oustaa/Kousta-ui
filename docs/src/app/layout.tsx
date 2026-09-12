@@ -33,6 +33,7 @@ export default async function RootLayout({
 
   const navbar = (
     <Navbar
+      logoLink="/docs/Intro"
       logo={
         <span className="kui-logo-wrapper">
           <img

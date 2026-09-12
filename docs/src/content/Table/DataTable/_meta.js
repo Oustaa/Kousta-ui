@@ -4,6 +4,7 @@ export default {
   Pagination: "Pagination",
   Search: "Search",
   Sorting: "Sorting",
+  Total: "Total",
   Views: "Views",
   Actions: "Actions",
   Config: "Config",

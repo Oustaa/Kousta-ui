@@ -32,7 +32,6 @@ const TableRow = <T extends Record<string, unknown>>({
   const { open, opened: rowExtended, close, toggle } = useDisclosure(false);
   const { keyExtractor, headers, actions, options, config } = useTableContext();
   const key = keyExtractor?.(row);
-
   const contextMenuOptions: ContextMenuTypeOption[] = [];
   const tableActions: ReactNode[] = [];
 

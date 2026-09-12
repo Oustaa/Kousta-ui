@@ -1,0 +1,197 @@
+---
+title: Total
+---
+
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import Badge from '@/components/Badge';
+import { TotalPreview, TotalWithPaginationPreview } from '@/components/@Table/DataTable';
+
+# Total
+
+`DataTable` can render a totals row at the bottom of the table body — one aggregate value per column, computed from whatever rows are currently displayed. Mark a column with `total` on its header to include it.
+
+Type definitions: see [Props](./Props).
+
+## Enabling a total for a column
+
+Set `total: true` (or an empty object, `total: {}` — both do the same thing) on any `value`-based header. It sums that column's `value` across every row:
+
+```ts
+headers={{
+  qty: { value: "qty", total: {} },
+}}
+```
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableTotal.tsx",
+      code: `import React from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type OrderLine = { id: number; item: string; qty: number; price: number };
+
+const orderLines: OrderLine[] = [
+  { id: 1, item: "Widget A", qty: 12, price: 27.88 },
+  { id: 2, item: "Widget B", qty: 20, price: 5 },
+  { id: 3, item: "Widget C", qty: 34, price: 9.99 },
+];
+
+export default function Example() {
+  return (
+    <DataTable<OrderLine>
+      title="Order lines"
+      loading={false}
+      data={orderLines}
+      headers={{
+        id: { value: "id" },
+        item: { value: "item" },
+        qty: { value: "qty", total: {} },
+        price: { value: "price", total: {} },
+      }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableTotal.jsx",
+      code: `import React from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+const orderLines = [
+  { id: 1, item: "Widget A", qty: 12, price: 27.88 },
+  { id: 2, item: "Widget B", qty: 20, price: 5 },
+  { id: 3, item: "Widget C", qty: 34, price: 9.99 },
+];
+
+export default function Example() {
+  return (
+    <DataTable
+      title="Order lines"
+      loading={false}
+      data={orderLines}
+      headers={{
+        id: { value: "id" },
+        item: { value: "item" },
+        qty: { value: "qty", total: {} },
+        price: { value: "price", total: {} },
+      }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<TotalPreview />}
+  defaultTab="ts"
+/>
+
+## How the total row is laid out
+
+Columns without `total` don't get their own cell in the totals row — consecutive non-total columns are merged into a single spanned cell (empty), and only the columns that actually have a `total` get a cell showing their computed value. In the preview above, `id` and `item` (no `total`) collapse into one blank, 2-column-wide cell, followed by `qty`'s total and `price`'s total each in their own cell.
+
+This layout is driven entirely by column order and which headers have `total` set — there's no way to override it (no custom label cell, no "insert total under this specific column" positioning beyond where that column already sits).
+
+<Badge color="yellow">Note</Badge> The totals row also reacts live to the column show/hide ("S/H") menu — hiding a total column removes it from the sums and the layout; hiding a non-total column shrinks the merged blank cell next to it.
+
+## Reading a different field
+
+`total.name` reads a different key off each row than the header's own `value` — the same idea as [`sortBy.name`](./Sorting#enabling-sort-on-a-column), useful when you want a total to show up under a column whose `value` isn't what you actually want summed:
+
+```ts
+headers={{
+  name: { value: "name", total: { name: "qty" } },
+}}
+```
+
+This puts the sum of every row's `qty` under the `name` column's total cell instead of trying to sum `name` itself.
+
+## Custom aggregation
+
+`total.func` replaces the plain sum with your own reducer, called once per row as `func(runningValue, currentRowValue)`:
+
+```ts
+headers={{
+  qty: {
+    value: "qty",
+    total: { func: (prev, current) => Math.max(prev, current) },
+  },
+}}
+```
+
+`current` is read from `total.name` if set, otherwise from the header's `value` — same resolution as the plain-sum case. Because `func` fully replaces the aggregation, it isn't limited to numeric columns either: it can ignore its arguments entirely and return any fixed or derived number, regardless of what the column actually displays.
+
+<Badge color="yellow">Note</Badge> `func` must always return a number. If it returns `undefined` on some row (for example, a mock without a return value, or an early-return branch), the running total resets to `0` before the next row instead of carrying forward — so a reducer that occasionally returns nothing will silently drop everything accumulated so far rather than throwing.
+
+---
+
+## Totals and pagination
+
+The totals row sums whatever rows `DataTable` is currently displaying — not necessarily your whole dataset. With [static pagination](./Pagination), that means only the current page's rows are summed, because pagination slices `data` down to a page before the total is computed.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableTotalPagination.tsx",
+      code: `<DataTable<OrderLine>
+  title="Order lines"
+  loading={false}
+  data={orderLines}
+  headers={{
+    id: { value: "id" },
+    item: { value: "item" },
+    qty: { value: "qty", total: {} },
+    price: { value: "price", total: {} },
+  }}
+  pagination={{ total: orderLines.length, page: 1, limit: 2, type: "static" }}
+  keyExtractor={(row) => row.id}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableTotalPagination.jsx",
+      code: `<DataTable
+  title="Order lines"
+  loading={false}
+  data={orderLines}
+  headers={{
+    id: { value: "id" },
+    item: { value: "item" },
+    qty: { value: "qty", total: {} },
+    price: { value: "price", total: {} },
+  }}
+  pagination={{ total: orderLines.length, page: 1, limit: 2, type: "static" }}
+  keyExtractor={(row) => row.id}
+/>`
+    }
+  ]}
+  preview={<TotalWithPaginationPreview />}
+  defaultTab="ts"
+/>
+
+The same applies to dynamic pagination and dynamic search: `data` only ever holds what your `actions.get`/`onSearch` last fetched, so the totals row sums exactly that — there's no built-in "grand total across all pages." If you need one, compute it yourself (from your API's own aggregate, for example) and display it outside `DataTable`.
+
+## Current limitations
+
+<Badge color="yellow">Note</Badge> These are gaps in the current implementation, not just missing docs:
+
+- If a column explicitly sets `visible: true` **and** `canSee: true` together with `total`, it's silently excluded from the totals row — the internal check that decides which columns get totaled only picks up columns where at least one of those is left unset. Leaving both `visible` and `canSee` unset (the common case) works fine.
+- `total.func` must return a number every time — see the note above.
+- No exposed way to read the computed totals from outside `DataTable`, and no way to customize the totals row's own styling separately from the rest of the table (it renders as a plain `<tr>`, using the same `config.props.tr`/`config.props.td` as every other row).
+- As covered above, totals reflect only the currently-displayed rows, not the full dataset, whenever pagination or dynamic fetching is in play.

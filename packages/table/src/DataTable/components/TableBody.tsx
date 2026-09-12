@@ -2,9 +2,10 @@ import Table from "../../Table";
 import { useDataToDisplay } from "../hooks/useDataToDisplay";
 import { useTableContext } from "../tableContext";
 import TableRow from "./TableRow";
+import TableTotalRow from "./TotalRow";
 
 const TableBody = <T extends Record<string, unknown>>() => {
-  const { config, keyExtractor } = useTableContext();
+  const { config, keyExtractor, headers } = useTableContext();
   const dataToDisplay = useDataToDisplay();
 
   return (
@@ -18,6 +19,7 @@ const TableBody = <T extends Record<string, unknown>>() => {
           />
         );
       })}
+      <TableTotalRow />
     </Table.Tbody>
   );
 };

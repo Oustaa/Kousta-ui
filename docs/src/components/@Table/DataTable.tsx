@@ -780,6 +780,69 @@ export const DynamicSortingCustomPropsPreview = () => {
   );
 };
 
+type OrderLine = {
+  id: number;
+  item: string;
+  qty: number;
+  price: number;
+};
+
+const orderLines: OrderLine[] = [
+  { id: 1, item: "Widget A", qty: 12, price: 27.88 },
+  { id: 2, item: "Widget B", qty: 20, price: 5 },
+  { id: 3, item: "Widget C", qty: 34, price: 9.99 },
+];
+
+export const TotalPreview = () => {
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<OrderLine>
+        title="Order lines"
+        loading={false}
+        data={orderLines}
+        headers={{
+          id: { value: "id" },
+          item: { value: "item" },
+          qty: { value: "qty", total: {} },
+          price: { value: "price", total: {} },
+        }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+    </div>
+  );
+};
+
+export const TotalWithPaginationPreview = () => {
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<OrderLine>
+        title="Order lines (static pagination, limit 2)"
+        loading={false}
+        data={orderLines}
+        headers={{
+          id: { value: "id" },
+          item: { value: "item" },
+          qty: { value: "qty", total: {} },
+          price: { value: "price", total: {} },
+        }}
+        pagination={{
+          total: orderLines.length,
+          page: 1,
+          limit: 2,
+          type: "static",
+        }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        Page through this table — the total recomputes from whatever rows are
+        on the current page, not all 3 order lines.
+      </p>
+    </div>
+  );
+};
+
 export const ConfigPreview = () => {
   const data: Product[] = [
     { id: 1, designation: "Kousta UI", category: { ref: "UI" } },
