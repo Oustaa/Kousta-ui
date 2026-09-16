@@ -14,7 +14,6 @@ export type TableProps<T> = {
   keyExtractor?: (row: T) => string | number;
   pagination?: TablePagination;
   actions?: TActions<T>;
-  // isStatic?: boolean;
 
   options?: TOptions<T>;
   config?: TConfig;
@@ -27,10 +26,32 @@ export type SortProps = {
   }) => Record<string, string | number>;
 };
 
+// Table Props
+export type TablePropsInterface = {
+  // search
+  query: string;
+  // sort by
+  sortBy: string;
+  direction: -1 | 1;
+  // display as
+  displayAs: string;
+};
+// End Table Props
+
 export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
-  sort?: SortProps;
+  sort: SortProps;
+
+  props: {
+    // this will be exectuted by table, so the users can do whatever he want with the passed props, save them in the url, save them in local storage
+    set: (
+      props: TablePropsInterface & { page: number; limit: number },
+      tableTitle: string,
+    ) => void;
+    // this will be executed by the table to get the saved props and restart the table state based on the return props
+    get?: null | (() => Partial<TablePropsInterface>);
+  };
 
   cards: {
     card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
@@ -73,9 +94,7 @@ export type THeaderValue<T> = {
   exec?: never | ((row: T) => string | ReactNode);
   visible?: boolean;
   canSee?: boolean;
-  alwaysVisible?: boolean;
   sortBy?: THeaderSort<T>;
-  // for now lets focuse on the calculating of the total, and not worrying about users spiciffications
   total?:
     | boolean
     | {

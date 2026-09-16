@@ -1,21 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import DataTable from "..";
-import { data, headers, UserType } from "./test-setup";
-import { TableProps } from "../_props";
-
-function renderTableWithExtraProps(props?: Partial<TableProps<unknown>>) {
-  render(
-    // @ts-expect-error this is not an error
-    <DataTable<UserType>
-      {...props}
-      data={data}
-      headers={headers}
-      loading={false}
-      title="this is a title"
-      keyExtractor={(row) => row.name}
-    />,
-  );
-}
+import { data, headers, renderTableWithExtraProps } from "./test-setup";
 
 describe("Table Rows", () => {
   it("All Rows should be rendered", () => {

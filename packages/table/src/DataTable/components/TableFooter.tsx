@@ -8,7 +8,8 @@ import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams"
 const TableFooter = () => {
   const functionWithTableProps = useFunctionWithTableParams();
 
-  const { pagination, actions, rowSelection, config } = useTableContext();
+  const { pagination, actions, rowSelection, config, setProps } =
+    useTableContext();
 
   if (!pagination) return;
 
@@ -44,6 +45,8 @@ const TableFooter = () => {
                 page: Math.min(page, totalPages),
                 limit,
               });
+
+            setProps({ limit });
           }}
         />
         <p className={classes["table-pagination-message"]}>
@@ -68,6 +71,7 @@ const TableFooter = () => {
               });
 
             setPage(page);
+            setProps({ page });
           }}
           seblings={3}
         />

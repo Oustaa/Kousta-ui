@@ -146,7 +146,9 @@ describe("Table Sorting", () => {
 
       expect(totalRowCells[0]).toHaveProperty("colSpan", 2);
 
-      const toggleRows = screen.getByText(/s\/h/i);
+      const toggleRows = screen.getByRole("button", {
+        name: /toggle columns/i,
+      });
       expect(toggleRows).toBeInTheDocument();
       fireEvent.click(toggleRows);
 

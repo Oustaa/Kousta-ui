@@ -2,6 +2,8 @@
 title: Props
 ---
 
+import Badge from '@/components/Badge';
+
 # Props
 
 This page describes what every `DataTable` prop is for, alongside the TypeScript
@@ -202,6 +204,7 @@ type TSearch<T> = {
 | `extraActions` | [`ExtraActions<T>[]`](#extraactionst) | Additional per-row actions beyond edit/delete. |
 | `emptyTable` | `ReactNode` | Content rendered when there's no data. |
 | `sort` | [`SortProps`](#sortprops) | Remaps the params sent to `actions.get` when a sortable column is clicked — see [Sorting](./Sorting). |
+| `props` | `{ set; get? }` | Hands you the table's state on every change (`set`) and asks for it back on mount (`get`), so you can persist it to storage or the URL — see [Props preserving](./PropsPreserving). |
 | `cards` | `{ card(props); cardsContainerProps?; menuProps?; loadingIndicator? }` | Enables the built-in card view. `card` receives `{ row, visibleHeaders }` — see [Views](./Views). |
 | `viewComp` | `{ Component(row); type?: "modal" \| "extends"; ...modal/expand options }` | Adds a dedicated "view" action that expands the row or opens a modal — see [Actions](./Actions). |
 | `bulkActions` | [`TBulkActions<T>[]`](#tbulkactionst) | Enables row selection and bulk actions on the selection. |
@@ -213,6 +216,13 @@ export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
   sort: SortProps;
+  props: {
+    set: (
+      props: TablePropsInterface & { page: number; limit: number },
+      tableTitle: string,
+    ) => void;
+    get?: null | (() => Partial<TablePropsInterface>);
+  };
   cards: {
     card: (props: { row: T; visibleHeaders: string[] }) => JSX.Element;
     cardsContainerProps?: ComponentPropsWithoutRef<"div">;
@@ -296,6 +306,28 @@ type SortProps = {
   }) => Record<string, string | number>;
 };
 ```
+
+### `TablePropsInterface`
+
+The table state handed to `options.props.set` and read back from `options.props.get` — see [Props preserving](./PropsPreserving).
+
+| Name | Type | Description |
+|------|------|-------------|
+| `query` | `string` | The current search term. |
+| `sortBy` | `string` | The value (or `sortBy.name`) of the sorted column; `""` when nothing is sorted. |
+| `direction` | `-1 \| 1` | `1` ascending, `-1` descending. |
+| `displayAs` | `string` | The active view — `"table"`, `"card"`, or an `extraviews` key. |
+
+```ts
+export type TablePropsInterface = {
+  query: string;
+  sortBy: string;
+  direction: -1 | 1;
+  displayAs: string;
+};
+```
+
+<Badge color="yellow">Note</Badge> `set` also receives `page` and `limit` on top of these, but only on the call that changed them. `get` doesn't restore either — pagination goes back in through the [`pagination`](#tablepagination) prop.
 
 ### `TExtraView<T>`
 

@@ -4,7 +4,7 @@ import TableHead from "./components/TableHead";
 import TableHeader from "./components/TableHeader";
 import TableBody from "./components/TableBody";
 import { isValidElement, useCallback, useEffect, useState } from "react";
-import { TableProps } from "./_props";
+import { TableProps, TablePropsInterface } from "./_props";
 import { OrderBy, TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
 import TableCardContainer from "./components/TableCardContainer";
@@ -15,17 +15,29 @@ import EmptyTable from "./components/EmptyTable";
 import TableInformation from "./components/TableInformation";
 import TableLoading from "./components/TableLoading";
 
+function getParams<T extends keyof TablePropsInterface>(
+  props: TableProps<any>,
+  propName: T,
+  defaultValue: TablePropsInterface[T],
+): TablePropsInterface[T] {
+  const params = props.options?.props?.get?.();
+  const param = params?.[propName];
+  return param ?? defaultValue;
+}
+
 function DataTable<T>(props: TableProps<T>) {
   const providedProps = useComponentContext();
   const [headers, setHeaders] = useState(props.headers);
   const [selectedRows, setSelectedRows] = useState<Record<number, unknown>>({});
-  const [query, setQuery] = useState<string>("");
+  const [query, setQuery] = useState<string>(getParams(props, "query", ""));
   const [orderBy, setOrderBy] = useState<OrderBy>({
-    by: "",
-    direction: 1,
+    by: getParams(props, "sortBy", ""),
+    direction: getParams(props, "direction", 1),
   });
 
-  const [displayAs, setDisplayAs] = useState<string>("table");
+  const [displayAs, setDisplayAs] = useState<string>(
+    getParams(props, "displayAs", "table"),
+  );
 
   const { setTotal, total, setLimit, limit, setPage, page } = usePagination({
     total: props.pagination?.total || 0,
@@ -229,6 +241,19 @@ function DataTable<T>(props: TableProps<T>) {
         setSelectedRows: setSelectedRowsFunc,
         diseclectAll: () => setSelectedRows({}),
       }}
+      setProps={(params: Partial<TablePropsInterface>) =>
+        props.options?.props?.set(
+          {
+            // @ts-expect-error
+            direction: orderBy.direction,
+            sortBy: orderBy.by,
+            query,
+            displayAs,
+            ...params,
+          },
+          props.title,
+        )
+      }
       displayAs={displayAs}
       setDisplayAs={(as: string) => setDisplayAs(as)}
       pagination={

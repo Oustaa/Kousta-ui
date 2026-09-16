@@ -7,7 +7,7 @@ import { useGetSearchFunction } from "../hooks/useGetSearchFunction";
 import classes from "../DataTable.module.css";
 
 const TableSearch = () => {
-  const { actions, pagination, search } = useTableContext();
+  const { actions, pagination, search, setProps } = useTableContext();
   const [q, setQ] = useState<string>(search.query);
   const searchFunction = useGetSearchFunction();
 
@@ -16,6 +16,8 @@ const TableSearch = () => {
 
     setPage?.(1);
     search.setQuery(q);
+
+    setProps({ query: q, page: 1 });
 
     searchFunction(q);
   }, [q]);

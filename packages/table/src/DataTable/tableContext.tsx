@@ -1,5 +1,5 @@
 import React, { createContext, PropsWithChildren, useContext } from "react";
-import type { TableProps, THeader } from "./_props";
+import type { TableProps, TablePropsInterface, THeader } from "./_props";
 
 export type TableHeaders<T> = {
   data: THeader<T>;
@@ -34,6 +34,9 @@ export type TableContextType<T> = Omit<
     total: number;
     setTotal: React.Dispatch<React.SetStateAction<number>>;
   };
+  setProps: (
+    props: Partial<TablePropsInterface & { page: number; limit: number }>,
+  ) => void;
   displayAs: string;
   setDisplayAs: (as: string) => void;
   pagination?: {

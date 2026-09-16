@@ -6,6 +6,7 @@ import TableSearch from "./TableSearch";
 import classes from "../DataTable.module.css";
 import RefreshTableBtn from "./RefreshTableBtn";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
+import { CardViewIcon, DotsIcon, EyeIcon, TableViewIcon } from "./icons";
 
 const TableHead = () => {
   const functionWithTableProps = useFunctionWithTableParams();
@@ -17,6 +18,7 @@ const TableHead = () => {
     rowSelection,
     displayAs,
     setDisplayAs,
+    setProps,
   } = useTableContext();
 
   const extraviewsKeys = useMemo(() => {
@@ -84,7 +86,8 @@ const TableHead = () => {
             <Menu.Target>
               <Button
                 variant="neutral"
-                children={config?.icons?.toggleRows || "S/H"}
+                aria-label="toggle columns"
+                children={config?.icons?.toggleRows || <EyeIcon />}
               />
             </Menu.Target>
             <Menu.DropDown>
@@ -96,7 +99,7 @@ const TableHead = () => {
                     <input
                       id={headerName}
                       type="checkbox"
-                      disabled={headers.data[headerName].alwaysVisible}
+                      // disabled={headers.data[headerName].alwaysVisible}
                       checked={visibleHeaders.includes(headerName)}
                       onChange={(event) => {
                         headers.setHeaders((prev) => ({
@@ -126,23 +129,31 @@ const TableHead = () => {
         {(options?.cards || extraviewsKeys.length !== 0) && (
           <Menu.Menu position="Bottom-End">
             <Menu.Target>
-              <Button variant="primary">
-                {config?.icons?.extraViewsTogle || "..."}
+              <Button variant="primary" aria-label="change view">
+                {config?.icons?.extraViewsTogle || <DotsIcon />}
               </Button>
             </Menu.Target>
             <Menu.DropDown>
               {displayAs !== "table" && (
                 <Menu.Item
-                  leftSection={config?.icons?.tableExtraView}
-                  onClick={() => setDisplayAs("table")}
+                  leftSection={
+                    config?.icons?.tableExtraView || <TableViewIcon />
+                  }
+                  onClick={() => {
+                    setProps({ displayAs: "table" });
+                    setDisplayAs("table");
+                  }}
                 >
                   Table
                 </Menu.Item>
               )}
               {displayAs !== "card" && options?.cards && (
                 <Menu.Item
-                  leftSection={config?.icons?.cardExtraView}
-                  onClick={() => setDisplayAs("card")}
+                  leftSection={config?.icons?.cardExtraView || <CardViewIcon />}
+                  onClick={() => {
+                    setProps({ displayAs: "card" });
+                    setDisplayAs("card");
+                  }}
                 >
                   Card
                 </Menu.Item>
@@ -158,7 +169,10 @@ const TableHead = () => {
                   <Menu.Item
                     {...view.menuProps}
                     key={key}
-                    onClick={() => setDisplayAs(key)}
+                    onClick={() => {
+                      setProps({ displayAs: key });
+                      setDisplayAs(key);
+                    }}
                   >
                     {key}
                   </Menu.Item>

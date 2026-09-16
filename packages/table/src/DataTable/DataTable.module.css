@@ -76,6 +76,12 @@
   }
 }
 
+.kui-dtable-select-all {
+  display: flex;
+  align-items: center;
+  gap: var(--kui-spacing-xs);
+}
+
 .kui-dtable-th-content {
   display: flex;
   justify-content: space-between;

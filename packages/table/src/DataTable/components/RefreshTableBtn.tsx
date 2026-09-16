@@ -1,6 +1,7 @@
 import { Button } from "@kousta-ui/components";
 import { useTableContext } from "../tableContext";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
+import { RefreshIcon } from "./icons";
 
 const RefreshTableBtn = () => {
   const functionWithTableProps = useFunctionWithTableParams();
@@ -11,11 +12,12 @@ const RefreshTableBtn = () => {
     config?.useGetAsRefresh !== false && (
       <Button
         variant="neutral"
+        aria-label="refresh"
         onClick={() => {
           if (actions?.get) functionWithTableProps(actions?.get);
         }}
       >
-        {config?.icons?.refresh || "Refresh"}
+        {config?.icons?.refresh || <RefreshIcon />}
       </Button>
     )
   );

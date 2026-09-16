@@ -843,6 +843,129 @@ export const TotalWithPaginationPreview = () => {
   );
 };
 
+type PreservedState = {
+  query?: string;
+  sortBy?: string;
+  direction?: 1 | -1;
+  displayAs?: string;
+  page?: number;
+  limit?: number;
+};
+
+const preservingRows: OrderLine[] = [
+  { id: 1, item: "Widget A", qty: 12, price: 27.88 },
+  { id: 2, item: "Widget B", qty: 20, price: 5 },
+  { id: 3, item: "Widget C", qty: 34, price: 9.99 },
+  { id: 4, item: "Widget D", qty: 7, price: 14.5 },
+];
+
+export const PropsPreservingPreview = () => {
+  const [saved, setSaved] = useState<PreservedState>({});
+  const [mountKey, setMountKey] = useState(0);
+
+  // `get` runs while DataTable renders, so read from a ref to stay current
+  const savedRef = React.useRef(saved);
+  savedRef.current = saved;
+
+  // restoring a sort restores the indicator, not the order — so apply it here
+  const rows = useMemo(() => {
+    const { sortBy, direction } = saved;
+    if (!sortBy) return preservingRows;
+
+    return [...preservingRows].sort((a, b) => {
+      const av = (a as any)[sortBy];
+      const bv = (b as any)[sortBy];
+      if (av === bv) return 0;
+      return (av > bv ? 1 : -1) * (direction ?? 1);
+    });
+  }, [saved.sortBy, saved.direction]);
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<OrderLine>
+        key={mountKey}
+        title="Order lines"
+        loading={false}
+        data={rows}
+        headers={{
+          id: { value: "id", sortBy: {} },
+          item: { value: "item", sortBy: {} },
+          qty: { value: "qty", sortBy: {} },
+        }}
+        actions={{
+          search: {
+            static: true,
+            onSearch: (row, { reg }) => reg.test(row.item),
+          },
+        }}
+        pagination={{
+          total: preservingRows.length,
+          // page and limit are NOT restored by `get` — you feed them back in here
+          page: saved.page ?? 1,
+          limit: saved.limit ?? 10,
+          type: "static",
+        }}
+        options={{
+          cards: {
+            card: ({ row }) => (
+              <div
+                style={{
+                  border: "1px solid rgb(148 163 184 / 0.4)",
+                  borderRadius: 6,
+                  padding: 8,
+                }}
+              >
+                <strong>{row.item}</strong>
+                <div style={{ fontSize: 13, opacity: 0.75 }}>qty {row.qty}</div>
+              </div>
+            ),
+          },
+          props: {
+            // merge, don't replace — page/limit only arrive on the call that changed them
+            set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+            get: () => savedRef.current,
+          },
+        }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+
+      <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
+        <div style={{ fontSize: 13 }}>
+          Preserved state:{" "}
+          <code>
+            {Object.keys(saved).length ? JSON.stringify(saved) : "(nothing yet)"}
+          </code>
+        </div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <Button
+            variant="primary"
+            onClick={() => setMountKey((key) => key + 1)}
+          >
+            Remount table
+          </Button>
+          <Button
+            variant="neutral"
+            onClick={() => {
+              setSaved({});
+              setMountKey((key) => key + 1);
+            }}
+          >
+            Clear + remount
+          </Button>
+        </div>
+        <p style={{ fontSize: 13, opacity: 0.75, margin: 0 }}>
+          Sort a column, search, or switch to the card view, then hit{" "}
+          <strong>Remount table</strong> — the table is thrown away and rebuilt,
+          and <code>get</code> puts it back exactly how you left it. (This
+          preview re-applies the saved sort to <code>data</code> itself, since
+          restoring a sort only restores the indicator.)
+        </p>
+      </div>
+    </div>
+  );
+};
+
 export const ConfigPreview = () => {
   const data: Product[] = [
     { id: 1, designation: "Kousta UI", category: { ref: "UI" } },

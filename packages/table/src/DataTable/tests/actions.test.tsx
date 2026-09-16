@@ -1,22 +1,6 @@
-import DataTable from "..";
-import { render, screen, fireEvent } from "@testing-library/react";
-import { TableProps } from "../_props";
+import { renderTableWithExtraProps } from "./test-setup";
+import { screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { data, headers, UserType } from "./test-setup";
-
-function renderTableWithExtraProps(props: Partial<TableProps<unknown>>) {
-  render(
-    // @ts-expect-error this is not an error
-    <DataTable<UserType>
-      {...props}
-      data={data}
-      headers={headers}
-      loading={false}
-      title="this is a title"
-      keyExtractor={(row) => row.name}
-    />,
-  );
-}
 
 describe("DataTable Actions", () => {
   describe("Delete action", () => {

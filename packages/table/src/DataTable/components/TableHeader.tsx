@@ -5,19 +5,7 @@ import { hasActions, hasBulkActions } from "../utils/tableAction";
 import { Menu } from "@kousta-ui/components";
 import classes from "../DataTable.module.css";
 import { useFunctionWithTableParams } from "../hooks/useFunctionWithTableParams";
-
-const ChevronIcon: FC<{ direction: "up" | "down" }> = ({ direction }) => (
-  <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
-    <path
-      d={direction === "up" ? "M1 5L5 1L9 5" : "M1 1L5 5L9 1"}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 const DefaultSortIcon: FC<{
   direction?: number;
@@ -35,7 +23,7 @@ const DefaultSortIcon: FC<{
             : classes["kui-dtable-sort-icon"]
         }
       >
-        {<ChevronIcon direction="up" />}
+        {<ChevronUpIcon />}
       </span>
       <span
         className={
@@ -44,7 +32,7 @@ const DefaultSortIcon: FC<{
             : classes["kui-dtable-sort-icon"]
         }
       >
-        {<ChevronIcon direction="down" />}
+        {<ChevronDownIcon />}
       </span>
     </span>
   );
@@ -63,6 +51,7 @@ const TableHeader = <T extends Record<string, unknown>>() => {
     config,
     rowSelection,
     order,
+    setProps,
   } = useTableContext();
 
   const { orderBy, setOrderBy } = order;
@@ -104,6 +93,8 @@ const TableHeader = <T extends Record<string, unknown>>() => {
     else props.direction = 1;
 
     setOrderBy({ direction: props.direction, by: props.sortBy });
+
+    setProps({ direction: props.direction as 1, sortBy: props.sortBy });
 
     // table is static and data is possed to the table staticlly
     if (!actions?.get) {
@@ -158,17 +149,23 @@ const TableHeader = <T extends Record<string, unknown>>() => {
             Object.keys(options.selectFilter).length > 0 ? (
               <Menu.Menu>
                 <Menu.Target>
-                  <button onClick={(e) => e.stopPropagation()}>
-                    <input
-                      checked={!!Object.keys(rowSelection.selectedRows).length}
-                      onChange={() => {
-                        setAllSelected((prev) => !prev);
-                        selectAll();
-                      }}
-                      type="checkbox"
-                    />
-                  </button>
-                  <button>{config?.icons?.selectRow || "More"}</button>
+                  <div className={classes["kui-dtable-select-all"]}>
+                    <button onClick={(e) => e.stopPropagation()}>
+                      <input
+                        checked={
+                          !!Object.keys(rowSelection.selectedRows).length
+                        }
+                        onChange={() => {
+                          setAllSelected((prev) => !prev);
+                          selectAll();
+                        }}
+                        type="checkbox"
+                      />
+                    </button>
+                    <button>
+                      {config?.icons?.selectRow || <ChevronDownIcon />}
+                    </button>
+                  </div>
                 </Menu.Target>
                 <Menu.DropDown>
                   {Object.keys(options?.selectFilter || {}).map((key) => (

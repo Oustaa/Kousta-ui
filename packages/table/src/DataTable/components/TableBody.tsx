@@ -5,7 +5,7 @@ import TableRow from "./TableRow";
 import TableTotalRow from "./TotalRow";
 
 const TableBody = <T extends Record<string, unknown>>() => {
-  const { config, keyExtractor, headers } = useTableContext();
+  const { config, keyExtractor } = useTableContext();
   const dataToDisplay = useDataToDisplay();
 
   return (

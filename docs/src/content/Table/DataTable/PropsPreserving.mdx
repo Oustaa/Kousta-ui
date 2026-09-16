@@ -1,0 +1,506 @@
+---
+title: Props preserving
+---
+
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import Badge from '@/components/Badge';
+import { PropsPreservingPreview } from '@/components/@Table/DataTable';
+
+# Props preserving
+
+By default a `DataTable` forgets everything the moment it unmounts — the search box empties, the sort resets, the card view flips back to the table. `options.props` gives you two hooks to change that: `set`, which hands you the table's state every time it changes, and `get`, which the table calls once on mount to ask for it back.
+
+Where that state actually lives is entirely up to you. The table never touches `localStorage`, the URL, or a server — it just hands you an object and asks for one back. [Local storage](#recipe-local-storage) and [URL query params](#recipe-url-query-params) are both a few lines below.
+
+Type definitions: see [Props](./Props).
+
+## The shape
+
+```ts
+options={{
+  props: {
+    set: (props, tableTitle) => void,  // required — called on every state change
+    get: () => Partial,                // optional — called once, on mount
+  },
+}}
+```
+
+| Name | Type | Description |
+|------|------|-------------|
+| `set` | `(props: TablePropsInterface & { page: number; limit: number }, tableTitle: string) => void` | Called whenever the user sorts, searches, switches view, or pages. The second argument is the table's `title` — see [One handler for every table](#one-handler-for-every-table). Required if you set `options.props` at all. |
+| `get` | `() => Partial<TablePropsInterface>` | Called once while the table first renders, to seed its initial state. Takes no arguments (no title). Optional — and nullable, so `get: null` is fine too. |
+
+The state itself:
+
+```ts
+type TablePropsInterface = {
+  query: string;
+  sortBy: string;
+  direction: -1 | 1;
+  displayAs: string;
+};
+```
+
+`set` additionally receives `page` and `limit`; `get` does not restore them — see [Pagination is different](#pagination-is-different).
+
+---
+
+## Try it
+
+The preview below stores state in a plain React state object instead of `localStorage`, so it resets when you leave the page. Everything else is the real thing.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTablePropsPreserving.tsx",
+      code: `import React, { useRef, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type OrderLine = { id: number; item: string; qty: number };
+type Preserved = {
+  query?: string;
+  sortBy?: string;
+  direction?: 1 | -1;
+  displayAs?: string;
+  page?: number;
+  limit?: number;
+};
+
+export default function Example({ rows }: { rows: OrderLine[] }) {
+  const [saved, setSaved] = useState<Preserved>({});
+
+  // \`get\` runs while DataTable renders, so read from a ref to stay current
+  const savedRef = useRef(saved);
+  savedRef.current = saved;
+
+  return (
+    <DataTable<OrderLine>
+      title="Order lines"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: {} },
+        item: { value: "item", sortBy: {} },
+        qty: { value: "qty", sortBy: {} },
+      }}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+        type: "static",
+      }}
+      options={{
+        props: {
+          set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+          get: () => savedRef.current,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTablePropsPreserving.jsx",
+      code: `import React, { useRef, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+export default function Example({ rows }) {
+  const [saved, setSaved] = useState({});
+
+  // \`get\` runs while DataTable renders, so read from a ref to stay current
+  const savedRef = useRef(saved);
+  savedRef.current = saved;
+
+  return (
+    <DataTable
+      title="Order lines"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: {} },
+        item: { value: "item", sortBy: {} },
+        qty: { value: "qty", sortBy: {} },
+      }}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+        type: "static",
+      }}
+      options={{
+        props: {
+          set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+          get: () => savedRef.current,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<PropsPreservingPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## `set` — saving state
+
+`set` fires on every interaction that changes table state:
+
+| Interaction | What it sends |
+|---|---|
+| Clicking a sortable header | `sortBy`, `direction` |
+| Running a search | `query`, and `page: 1` (searching resets to the first page) |
+| Switching to table / card / a custom view | `displayAs` |
+| Changing the page | `page` |
+| Changing the rows-per-page | `limit` |
+
+It is **not** called on mount — only in response to a real interaction.
+
+### Every call carries the whole state
+
+`set` never sends you just the delta. Sorting a column sends the current query and view along with the new sort:
+
+```ts
+// after clicking the "age" header, with a search already applied
+{ sortBy: "age", direction: 1, query: "kaoutar", displayAs: "table" }
+```
+
+That means you can persist the payload wholesale without merging it into anything you saved before — for `query`, `sortBy`, `direction` and `displayAs`.
+
+<Badge color="yellow">Note</Badge> `page` and `limit` are the exception: they only appear on the call that changed them. Sorting sends no `page` key at all, and changing the page sends no `limit`. So if you write the payload straight into the URL or a storage key, a sort will wipe whatever page the user was on. **Merge into what you already have** rather than replacing it:
+
+```ts
+set: (params) => setSaved((prev) => ({ ...prev, ...params }))
+```
+
+---
+
+## `get` — restoring state
+
+`get` is called once, while the table renders for the first time, and its return value seeds the initial state. It's read per-key with a fallback, so a partial object is fine — anything you leave out just gets the default:
+
+| Key | Default when absent |
+|---|---|
+| `query` | `""` |
+| `sortBy` | `""` (no column sorted) |
+| `direction` | `1` (ascending) |
+| `displayAs` | `"table"` |
+
+It seeds the initial state and then gets out of the way — it is never consulted again, so it can't fight the user's later interactions.
+
+### Restoring the sort restores the indicator, not the order
+
+<Badge color="yellow">Note</Badge> This one will bite you if you don't plan for it. A restored `sortBy`/`direction` puts the arrow back on the right column, but **nothing re-applies that sort to your rows**:
+
+- On a **static** table, `data` is re-read from the prop you passed, so the rows come back in their original order under a header that claims they're sorted.
+- On a **dynamic** table, the fetch the table fires on mount sends `page`, `limit` and `search` — but not `sortBy` or `direction` — so your API returns unsorted rows.
+
+The restored **query** does make it into that mount fetch (as `search`), so search restores end-to-end. It's specifically sort that needs help from you:
+
+```ts
+// static: sort the data yourself before handing it over
+const saved = read();
+const rows = useMemo(() => sortRows(allRows, saved.sortBy, saved.direction), [saved]);
+
+// dynamic: include the saved sort in your own initial fetch
+useEffect(() => {
+  fetchRows({ ...saved, page: saved.page ?? 1 });
+}, []);
+```
+
+### Pagination is different
+
+<Badge color="yellow">Note</Badge> `get` must not return `page` or `limit`. They aren't part of `TablePropsInterface` and the table ignores them there. Pagination is restored through the [`pagination`](./Pagination) prop instead:
+
+```ts
+<DataTable
+  pagination={{
+    total,
+    page: saved.page ?? 1,     // ← restored here
+    limit: saved.limit ?? 10,  // ← and here
+  }}
+  options={{
+    props: {
+      set: saveSomewhere,
+      get: () => ({ query, sortBy, direction, displayAs }), // ← not page/limit
+    },
+  }}
+/>
+```
+
+The asymmetry is deliberate: `set` reports page and limit so you can persist them, but the table takes them back as ordinary props, the same way it takes `total`.
+
+---
+
+## Recipe: local storage
+
+Good for "remember how I like this table" — survives reloads and new tabs, scoped to the browser.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "useTableStorage.ts",
+      code: `const KEY = "orders-table";
+
+type Preserved = {
+  query?: string;
+  sortBy?: string;
+  direction?: 1 | -1;
+  displayAs?: string;
+  page?: number;
+  limit?: number;
+};
+
+function read(): Preserved {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export default function OrdersTable({ rows }: { rows: Order[] }) {
+  // read once, so the first render and the pagination prop agree
+  const [saved] = useState(read);
+
+  return (
+    <DataTable<Order>
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+      }}
+      options={{
+        props: {
+          // merge so a sort doesn't drop the saved page
+          set: (params) =>
+            localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),
+          get: read,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "useTableStorage.js",
+      code: `const KEY = "orders-table";
+
+function read() {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export default function OrdersTable({ rows }) {
+  // read once, so the first render and the pagination prop agree
+  const [saved] = useState(read);
+
+  return (
+    <DataTable
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+      }}
+      options={{
+        props: {
+          // merge so a sort doesn't drop the saved page
+          set: (params) =>
+            localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),
+          get: read,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  defaultTab="ts"
+/>
+
+<Badge color="blue">Note</Badge> Use a key that includes the table's identity (`"orders-table"`, not `"table"`) — two tables sharing one key will overwrite each other's state. If you'd rather not hard-code one key per table, `set` hands you the table's `title` as its second argument — see [One handler for every table](#one-handler-for-every-table).
+
+---
+
+## Recipe: URL query params
+
+Good for "send someone this exact view" — the state lives in the address bar, so the URL is shareable, bookmarkable, and survives the back button.
+
+Opening `/orders` gives you a clean table. Opening `/orders?limit=20&query=search&sortBy=total&direction=-1` gives you the same table already searched for `search`, sorted by `total` descending, showing 20 rows a page — because those params are what `get` and the `pagination` prop read on the way in.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "OrdersTable.tsx",
+      code: `import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }: { rows: Order[] }) {
+  const [params, setParams] = useSearchParams();
+
+  return (
+    <DataTable<Order>
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        // page and limit come out of the URL, through the pagination prop
+        page: Number(params.get("page")) || 1,
+        limit: Number(params.get("limit")) || 10,
+      }}
+      options={{
+        props: {
+          set: (next) => {
+            // start from the current URL so untouched params survive
+            const merged = new URLSearchParams(params);
+
+            Object.entries(next).forEach(([key, value]) => {
+              if (value === "" || value === undefined) merged.delete(key);
+              else merged.set(key, String(value));
+            });
+
+            setParams(merged, { replace: true });
+          },
+          get: () => ({
+            query: params.get("query") ?? "",
+            sortBy: params.get("sortBy") ?? "",
+            direction: params.get("direction") === "-1" ? -1 : 1,
+            displayAs: params.get("displayAs") ?? "table",
+          }),
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "OrdersTable.jsx",
+      code: `import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }) {
+  const [params, setParams] = useSearchParams();
+
+  return (
+    <DataTable
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        // page and limit come out of the URL, through the pagination prop
+        page: Number(params.get("page")) || 1,
+        limit: Number(params.get("limit")) || 10,
+      }}
+      options={{
+        props: {
+          set: (next) => {
+            // start from the current URL so untouched params survive
+            const merged = new URLSearchParams(params);
+
+            Object.entries(next).forEach(([key, value]) => {
+              if (value === "" || value === undefined) merged.delete(key);
+              else merged.set(key, String(value));
+            });
+
+            setParams(merged, { replace: true });
+          },
+          get: () => ({
+            query: params.get("query") ?? "",
+            sortBy: params.get("sortBy") ?? "",
+            direction: params.get("direction") === "-1" ? -1 : 1,
+            displayAs: params.get("displayAs") ?? "table",
+          }),
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  defaultTab="ts"
+/>
+
+Two details worth copying from that snippet:
+
+- **Seed the merge from the current URL** (`new URLSearchParams(params)`), not from an empty one. Because a sort sends no `page` key, replacing the whole query string would silently drop the page the user was on.
+- **Delete empty values** instead of writing them. Otherwise clearing the search box leaves `?query=` hanging around in every link the user copies.
+
+For a dynamic table, the URL and your `actions.get` are reading the same state from two directions — the table calls `actions.get` with its own params, and `set` writes those same values to the URL. They stay in step because both are driven by the same interaction.
+
+---
+
+## One handler for every table
+
+`set` receives the table's `title` as a second argument, so a single shared handler can key its own storage per table instead of you writing one handler per table:
+
+```ts
+const setTableProps = (props, tableTitle) =>
+  localStorage.setItem(tableTitle, JSON.stringify(props));
+
+<DataTable title="orders" options={{ props: { set: setTableProps } }} />
+<DataTable title="invoices" options={{ props: { set: setTableProps } }} />
+```
+
+Both tables share one function and still write to their own key. The same title arrives on every kind of change — sort, search, view switch, page and limit.
+
+<Badge color="yellow">Note</Badge> `get` does **not** receive the title — it takes no arguments at all. To read state back per table you still need a handler that knows which table it belongs to, usually a small factory:
+
+```ts
+const tableProps = (tableTitle: string) => ({
+  set: (props) => localStorage.setItem(tableTitle, JSON.stringify(props)),
+  get: () => JSON.parse(localStorage.getItem(tableTitle) || "{}"),
+});
+
+<DataTable title="orders" options={{ props: tableProps("orders") }} />
+```
+
+Since `title` is also what the table displays in its header, treat it as a storage key you're committing to: renaming the table later orphans whatever was saved under the old name.
+
+## Current limitations
+
+- **Restoring a sort doesn't re-sort anything** — you get the indicator back, not the order. See [above](#restoring-the-sort-restores-the-indicator-not-the-order) for the workaround on both static and dynamic tables.
+- `set` is required as soon as you provide `options.props`; there's no read-only mode where you restore state without also being handed every change.
+- `page` and `limit` are reported by `set` but not restored by `get` — they have to round-trip through the `pagination` prop.
+- The payload's type says `page` and `limit` are always present, but at runtime they only appear on the call that changed them. Treat them as optional.
+- Column visibility (the show/hide menu) isn't part of the preserved state.

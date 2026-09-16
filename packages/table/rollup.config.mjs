@@ -28,6 +28,7 @@ const makeConfig = (format, outDir, cssFile) => ({
     dir: path.resolve(outDir),
     entryFileNames: "[name]." + (format === "es" ? "mjs.js" : "cjs.js"),
     preserveModules: true,
+    preserveModulesRoot: path.resolve(".."),
     sourcemap: true,
     interop: "auto",
     assetFileNames: (assetInfo) => {

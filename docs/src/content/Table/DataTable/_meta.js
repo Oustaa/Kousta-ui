@@ -8,6 +8,7 @@ export default {
   Views: "Views",
   Actions: "Actions",
   Config: "Config",
+  PropsPreserving: "Props preserving",
   Props: "Props",
   TablePropsProvider: "TablePropsProvider",
   Grouping: "Grouping",
