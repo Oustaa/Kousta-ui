@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/Oustaa/Kousta-ui/compare/@kousta-ui/table@0.1.6...@kousta-ui/table@0.2.0) (2026-09-22)
+
+### Features
+
+- **table:** add column filtering ([8831c6d](https://github.com/Oustaa/Kousta-ui/commit/8831c6d44722aad95d4322c99fff0897090a8d6a))
+- **table:** added a way for users to preserve preserve props, add better icons, and refactore tests ([5792013](https://github.com/Oustaa/Kousta-ui/commit/57920130a2bfe84136584d6a9c4fd198158a893e))
+- **table:** adding table row to the table, needs more work ([cbcf033](https://github.com/Oustaa/Kousta-ui/commit/cbcf033eeb71b7088b171bab0edb836cdf408638))
+- **table:** completing the table sorting and adding it's docs ([5e6285a](https://github.com/Oustaa/Kousta-ui/commit/5e6285a46bdb6ad7c20fe218a22e24783314dab6))
+- **table:** enhance DataTable functionality and update documentation ([b464b6b](https://github.com/Oustaa/Kousta-ui/commit/b464b6b70263a5095f51781d0019a28dfb6b46ac))
+- **table:** start working on the table sorting ([1749daf](https://github.com/Oustaa/Kousta-ui/commit/1749daf560c23d4e99563330582659ff735fee44))
+
 ## [0.1.6](https://github.com/Oustaa/Kousta-ui/compare/@kousta-ui/table@0.1.5...@kousta-ui/table@0.1.6) (2026-01-31)
 
 **Note:** Version bump only for package @kousta-ui/table

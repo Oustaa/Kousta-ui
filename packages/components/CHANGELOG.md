@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/Oustaa/Kousta-ui/compare/@kousta-ui/components@0.1.6...@kousta-ui/components@0.2.0) (2026-09-22)
+
+### Features
+
+- **components:** use icons for pagination, select and menu controls ([ef0a23d](https://github.com/Oustaa/Kousta-ui/commit/ef0a23d70bb48608bff14be35730a2b39ea955b1))
+- **table:** enhance DataTable functionality and update documentation ([b464b6b](https://github.com/Oustaa/Kousta-ui/commit/b464b6b70263a5095f51781d0019a28dfb6b46ac))
+
+### Bug Fixes
+
+- **components:** variant classes, control heights and dropdown placement ([ebf450a](https://github.com/Oustaa/Kousta-ui/commit/ebf450a5d30204f2a5d880a96ed8564d84995f4f))
+
 ## [0.1.6](https://github.com/Oustaa/Kousta-ui/compare/@kousta-ui/components@0.1.5...@kousta-ui/components@0.1.6) (2026-01-31)
 
 **Note:** Version bump only for package @kousta-ui/components
