@@ -1,0 +1,764 @@
+1:"$Sreact.fragment"
+3:I[5204,[],""]
+4:I[2642,[],""]
+6:I[433,[],"OutletBoundary"]
+8:I[9884,[],"AsyncMetadataOutlet"]
+a:I[433,[],"ViewportBoundary"]
+c:I[433,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[3536,[],""]
+:HL["/_next/static/css/ba9d43a28416de25.css","style"]
+:HL["/_next/static/css/7bb045c1b6bca46d.css","style"]
+:HL["/_next/static/css/2d82b615fcca1590.css","style"]
+0:{"P":null,"b":"2ecH1qZWnGImiIsnAcub-","p":"","c":["","docs","Table","DataTable","PropsPreserving"],"i":false,"f":[[["",{"children":["docs",{"children":[["mdxPath","Table/DataTable/PropsPreserving","oc"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ba9d43a28416de25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/7bb045c1b6bca46d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2d82b615fcca1590.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["docs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["mdxPath","Table/DataTable/PropsPreserving","oc"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],null],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[6117,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ThemeConfigProvider"]
+11:I[1455,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"LastUpdated"]
+12:I[9661,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","177","static/chunks/app/layout-9bfe1766922d5774.js"],"default"]
+13:I[6921,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","529","static/chunks/529-7b553db3f0092420.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","177","static/chunks/app/layout-9bfe1766922d5774.js"],"ThemeProvider"]
+14:I[270,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"SkipNavLink"]
+15:I[3728,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ConfigProvider"]
+2:["$","html",null,{"dir":"ltr","lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L10",null,{"value":{"copyPageButton":false,"darkMode":true,"docsRepositoryBase":"https://github.com/Oustaa/kousta-ui/tree/main/docs","editLink":"Edit this page on GitHub","feedback":{"content":"Question? Give us feedback","labels":"feedback"},"i18n":[],"lastUpdated":["$","$L11",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L12",null,{}],"sidebar":{"autoCollapse":true,"defaultMenuCollapseLevel":1,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L13",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L14",null,{}],"$undefined",["$","$L15",null,{"pageMap":[{"data":{"Intro":{"title":"Getting started"},"Components":{"title":"Components"},"Table":{"title":"Table"},"hooks":{"title":"Hooks"},"helpers":{"title":"Helpers"},"styles":{"title":"Styles"}}},{"name":"Intro","route":"/docs/Intro","frontMatter":{"title":"Getting started","filePath":"src/content/Intro.mdx","timestamp":1790101089000},"title":"Getting started"},{"name":"Components","route":"/docs/Components","children":[{"data":{"overview":{"title":"Overview"},"Label":{"title":"Label"},"Input":{"title":"Input"},"Select":{"title":"Select"},"AsyncSelect":{"title":"AsyncSelect"},"FormElement":{"title":"FormElement"},"Group":{"title":"Group"},"Button":{"title":"Button"},"Modal":{"title":"Modal"},"Menu":{"title":"Menu"},"ContextMenu":{"title":"ContextMenu"},"Pagination":{"title":"Pagination"},"WindowBoundary":{"title":"WindowBoundary"},"ErrorBoundary":{"title":"ErrorBoundary"},"ComponentPropsProvider":{"title":"ComponentPropsProvider"}}},{"name":"overview","route":"/docs/Components/overview","frontMatter":{"title":"Overview","filePath":"src/content/Components/overview.mdx","timestamp":1790101089000},"title":"Overview"},{"name":"Label","route":"/docs/Components/Label","frontMatter":{"title":"Label","filePath":"src/content/Components/Label.mdx","timestamp":1790101089000},"title":"Label"},{"name":"Input","route":"/docs/Components/Input","frontMatter":{"title":"Input","filePath":"src/content/Components/Input.mdx","timestamp":1790101089000},"title":"Input"},{"name":"Select","route":"/docs/Components/Select","frontMatter":{"title":"Select","filePath":"src/content/Components/Select.mdx","timestamp":1790101089000},"title":"Select"},{"name":"AsyncSelect","route":"/docs/Components/AsyncSelect","frontMatter":{"title":"AsyncSelect","filePath":"src/content/Components/AsyncSelect.mdx","timestamp":1790101089000},"title":"AsyncSelect"},{"name":"FormElement","route":"/docs/Components/FormElement","frontMatter":{"title":"FormElement","filePath":"src/content/Components/FormElement.mdx","timestamp":1790101089000},"title":"FormElement"},{"name":"Group","route":"/docs/Components/Group","frontMatter":{"title":"Group","filePath":"src/content/Components/Group.mdx","timestamp":1790101089000},"title":"Group"},{"name":"Button","route":"/docs/Components/Button","frontMatter":{"title":"Button","filePath":"src/content/Components/Button.mdx","timestamp":1790101089000},"title":"Button"},{"name":"Modal","route":"/docs/Components/Modal","frontMatter":{"title":"Modal","filePath":"src/content/Components/Modal.mdx","timestamp":1790101089000},"title":"Modal"},{"name":"Menu","route":"/docs/Components/Menu","frontMatter":{"title":"Menu","filePath":"src/content/Components/Menu.mdx","timestamp":1790101089000},"title":"Menu"},{"name":"ContextMenu","route":"/docs/Components/ContextMenu","frontMatter":{"title":"Context Menu","filePath":"src/content/Components/ContextMenu.mdx","timestamp":1790101089000},"title":"ContextMenu"},{"name":"Pagination","route":"/docs/Components/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Components/Pagination.mdx","timestamp":1790101089000},"title":"Pagination"},{"name":"WindowBoundary","route":"/docs/Components/WindowBoundary","frontMatter":{"title":"WindowBoundary","filePath":"src/content/Components/WindowBoundary.mdx","timestamp":1790101089000},"title":"WindowBoundary"},{"name":"ErrorBoundary","route":"/docs/Components/ErrorBoundary","frontMatter":{"title":"ErrorBoundary","filePath":"src/content/Components/ErrorBoundary.mdx","timestamp":1790101089000},"title":"ErrorBoundary"},{"name":"ComponentPropsProvider","route":"/docs/Components/ComponentPropsProvider","frontMatter":{"title":"Component Props Provider","sidebar_label":"Component Props Provider","filePath":"src/content/Components/ComponentPropsProvider.mdx","timestamp":1790101089000},"title":"ComponentPropsProvider"}],"title":"Components"},{"name":"Table","route":"/docs/Table","children":[{"data":{"Table":{"title":"Table"},"DataTable":{"title":"DataTable"}}},{"name":"Table","route":"/docs/Table/Table","frontMatter":{"title":"Table","filePath":"src/content/Table/Table.mdx","timestamp":1790101089000},"title":"Table"},{"name":"DataTable","route":"/docs/Table/DataTable","children":[{"data":{"overview":{"title":"Overview"},"Props":{"title":"Props"},"Basic":{"title":"Basic"},"Actions":{"title":"Actions"},"Pagination":{"title":"Pagination"},"Search":{"title":"Search"},"Sorting":{"title":"Sorting"},"Filtering":{"title":"Filtering"},"Total":{"title":"Total"},"Views":{"title":"Views"},"PropsPreserving":{"title":"Props preserving"},"Config":{"title":"Config"},"TablePropsProvider":{"title":"TablePropsProvider"},"Grouping":{"display":"hidden"}}},{"name":"overview","route":"/docs/Table/DataTable/overview","frontMatter":{"title":"DataTable","filePath":"src/content/Table/DataTable/overview.mdx","timestamp":1790101089000},"title":"Overview"},{"name":"Props","route":"/docs/Table/DataTable/Props","frontMatter":{"title":"Props","filePath":"src/content/Table/DataTable/Props.mdx","timestamp":1790101089000},"title":"Props"},{"name":"Basic","route":"/docs/Table/DataTable/Basic","frontMatter":{"title":"Basic usage","filePath":"src/content/Table/DataTable/Basic.mdx","timestamp":1790101089000},"title":"Basic"},{"name":"Actions","route":"/docs/Table/DataTable/Actions","frontMatter":{"title":"Actions","filePath":"src/content/Table/DataTable/Actions.mdx","timestamp":1790101089000},"title":"Actions"},{"name":"Pagination","route":"/docs/Table/DataTable/Pagination","frontMatter":{"title":"Pagination","filePath":"src/content/Table/DataTable/Pagination.mdx","timestamp":1790101089000},"title":"Pagination"},{"name":"Search","route":"/docs/Table/DataTable/Search","frontMatter":{"title":"Search","filePath":"src/content/Table/DataTable/Search.mdx","timestamp":1790101089000},"title":"Search"},{"name":"Sorting","route":"/docs/Table/DataTable/Sorting","frontMatter":{"title":"Sorting","filePath":"src/content/Table/DataTable/Sorting.mdx","timestamp":1790101089000},"title":"Sorting"},{"name":"Filtering","route":"/docs/Table/DataTable/Filtering","frontMatter":{"title":"Filtering","filePath":"src/content/Table/DataTable/Filtering.mdx","timestamp":1790101089000},"title":"Filtering"},{"name":"Total","route":"/docs/Table/DataTable/Total","frontMatter":{"title":"Total","filePath":"src/content/Table/DataTable/Total.mdx","timestamp":1790101089000},"title":"Total"},{"name":"Views","route":"/docs/Table/DataTable/Views","frontMatter":{"title":"Views","filePath":"src/content/Table/DataTable/Views.mdx","timestamp":1790101089000},"title":"Views"},{"name":"PropsPreserving","route":"/docs/Table/DataTable/PropsPreserving","frontMatter":{"title":"Props preserving","filePath":"src/content/Table/DataTable/PropsPreserving.mdx","timestamp":1790101089000},"title":"Props preserving"},{"name":"Config","route":"/docs/Table/DataTable/Config","frontMatter":{"title":"Config","filePath":"src/content/Table/DataTable/Config.mdx","timestamp":1790101089000},"title":"Config"},{"name":"TablePropsProvider","route":"/docs/Table/DataTable/TablePropsProvider","frontMatter":{"title":"Table Props Provider","filePath":"src/content/Table/DataTable/TablePropsProvider.mdx","timestamp":1790101089000},"title":"TablePropsProvider"},{"name":"Grouping","route":"/docs/Table/DataTable/Grouping","frontMatter":{"title":"Grouping","filePath":"src/content/Table/DataTable/Grouping.mdx","timestamp":1790101089000},"title":"Grouping"}],"title":"DataTable"}],"title":"Table"},{"name":"hooks","route":"/docs/hooks","children":[{"data":{"overview":{"title":"Overview"},"useDisclosure":{"title":"useDisclosure"},"usePagination":{"title":"usePagination"},"useDebounceCallback":{"title":"useDebounceCallback"},"useScrollLock":{"title":"useScrollLock"}}},{"name":"overview","route":"/docs/hooks/overview","frontMatter":{"title":"Overview","filePath":"src/content/hooks/overview.mdx","timestamp":1790101089000},"title":"Overview"},{"name":"useDisclosure","route":"/docs/hooks/useDisclosure","frontMatter":{"title":"useDisclosure","filePath":"src/content/hooks/useDisclosure.mdx","timestamp":1790101089000},"title":"useDisclosure"},{"name":"usePagination","route":"/docs/hooks/usePagination","frontMatter":{"title":"usePagination","filePath":"src/content/hooks/usePagination.mdx","timestamp":1790101089000},"title":"usePagination"},{"name":"useDebounceCallback","route":"/docs/hooks/useDebounceCallback","frontMatter":{"title":"useDebounceCallback","filePath":"src/content/hooks/useDebounceCallback.mdx","timestamp":1790101089000},"title":"useDebounceCallback"},{"name":"useScrollLock","route":"/docs/hooks/useScrollLock","frontMatter":{"title":"useScrollLock","filePath":"src/content/hooks/useScrollLock.mdx","timestamp":1790101089000},"title":"useScrollLock"}],"title":"Hooks"},{"name":"helpers","route":"/docs/helpers","children":[{"data":{"overview":{"title":"Overview"},"getNestedProperty":{"title":"getNestedProperty"},"updateNestedProperties":{"title":"updateNestedProperties"}}},{"name":"overview","route":"/docs/helpers/overview","frontMatter":{"title":"Helpers Overview","filePath":"src/content/helpers/overview.mdx","timestamp":1790101089000},"title":"Overview"},{"name":"getNestedProperty","route":"/docs/helpers/getNestedProperty","frontMatter":{"title":"getNestedProperty","filePath":"src/content/helpers/getNestedProperty.mdx","timestamp":1790101089000},"title":"getNestedProperty"},{"name":"updateNestedProperties","route":"/docs/helpers/updateNestedProperties","frontMatter":{"title":"updateNestedProperties","filePath":"src/content/helpers/updateNestedProperties.mdx","timestamp":1790101089000},"title":"updateNestedProperties"}],"title":"Helpers"},{"name":"styles","route":"/docs/styles","children":[{"data":{"styles-and-customization":{"title":"Styles & customization"}}},{"name":"styles-and-customization","route":"/docs/styles/styles-and-customization","frontMatter":{"title":"Styles & Customization","filePath":"src/content/styles/styles-and-customization.mdx","timestamp":1790101089000},"title":"Styles & customization"}],"title":"Styles"}],"navbar":"$L16","footer":"$L17","children":["$L18","$L19"]}]]}]}]}]]}]
+1a:I[8197,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],""]
+1b:I[1449,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ClientNavbar"]
+1d:I[9209,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"Switchers"]
+1e:I[7163,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"LocaleSwitch"]
+1f:I[8783,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ThemeSwitch"]
+20:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"MobileNav"]
+1c:T481,M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z16:["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L1a",null,{"href":"/docs/Intro","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":["$","span",null,{"className":"kui-logo-wrapper","children":[["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--light","height":28,"src":"/img/logo-light.png","width":120}],["$","img",null,{"alt":"Kousta UI","className":"kui-logo kui-logo--dark","height":28,"src":"/img/logo-dark.png","width":120}],["$","span",null,{"className":"kui-logo-docs-badge","children":"docs"}]]}]}],["$","$L1b",null,{"className":"","children":[["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","target":"_blank","rel":"noreferrer","children":[["$","svg",null,{"fill":"currentColor","viewBox":"3 3 18 18","height":"24","aria-label":"Project repository","children":["$","path",null,{"d":"$1c"}]}],false],"className":"x:focus-visible:nextra-focus"}],"$undefined","$undefined"]}]]}]]}]
+17:["$","div",null,{"className":"x:bg-gray-100 x:pb-[env(safe-area-inset-bottom)] x:dark:bg-neutral-900 x:print:bg-transparent","children":[["$","$L1d",null,{"children":["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:gap-2 x:py-2 x:px-4","children":[["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}],["$","hr",null,{"className":"nextra-border"}],["$","footer",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:justify-center x:py-12 x:text-gray-600 x:dark:text-gray-400 x:md:justify-start x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)]","children":[["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.5rem","justifyContent":"center","width":"100%"},"children":[["$","a",null,{"href":"/docs/Intro","children":"Docs"}],["$","a",null,{"href":"/docs/Table/Table","children":"Table"}],["$","a",null,{"href":"/docs/Components/overview","children":"Components"}],["$","a",null,{"href":"/docs/hooks/overview","children":"Hooks"}],["$","a",null,{"href":"/docs/helpers/overview","children":"Helpers"}],["$","a",null,{"href":"https://discord.gg/5zDJG79A","children":"Discord"}],["$","a",null,{"href":"https://github.com/Oustaa/kousta-ui","children":"GitHub"}]]}],["$","p",null,{"style":{"marginTop":"1.5rem","textAlign":"center","width":"100%"},"children":["Copyright © ",2026," kousta-ui, Kousta."]}]]}]]}]
+18:["$","$L20",null,{}]
+19:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]
+21:I[7823,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"TOCProvider"]
+22:I[4023,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"Sidebar"]
+23:I[9235,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ClientWrapper"]
+24:T444f,---
+title: Props preserving
+---
+
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import Badge from '@/components/Badge';
+import { PropsPreservingPreview } from '@/components/@Table/DataTable';
+
+# Props preserving
+
+By default a `DataTable` forgets everything the moment it unmounts — the search box empties, the sort resets, the card view flips back to the table. `options.props` gives you two hooks to change that: `set`, which hands you the table's state every time it changes, and `get`, which the table calls once on mount to ask for it back.
+
+Where that state actually lives is entirely up to you. The table never touches `localStorage`, the URL, or a server — it just hands you an object and asks for one back. [Local storage](#recipe-local-storage) and [URL query params](#recipe-url-query-params) are both a few lines below.
+
+Type definitions: see [Props](./Props).
+
+## The shape
+
+```ts
+options={{
+  props: {
+    set: (props, tableTitle) => void,  // required — called on every state change
+    get: () => Partial,                // optional — called once, on mount
+  },
+}}
+```
+
+| Name | Type | Description |
+|------|------|-------------|
+| `set` | `(props: TablePropsInterface & { page: number; limit: number }, tableTitle: string) => void` | Called whenever the user sorts, searches, filters, switches view, or pages. The second argument is the table's `title` — see [One handler for every table](#one-handler-for-every-table). Required if you set `options.props` at all. |
+| `get` | `() => Partial<TablePropsInterface>` | Called once while the table first renders, to seed its initial state. Takes no arguments (no title). Optional — and nullable, so `get: null` is fine too. |
+
+The state itself:
+
+```ts
+type TablePropsInterface = {
+  query: string;
+  sortBy: string;
+  direction: -1 | 1;
+  displayAs: string;
+  filters: TableFilter[];
+};
+```
+
+`set` additionally receives `page` and `limit`; `get` does not restore them — see [Pagination is different](#pagination-is-different).
+
+---
+
+## Try it
+
+The preview below stores state in a plain React state object instead of `localStorage`, so it resets when you leave the page. Everything else is the real thing.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTablePropsPreserving.tsx",
+      code: `import React, { useRef, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type OrderLine = { id: number; item: string; qty: number };
+type Preserved = {
+  query?: string;
+  sortBy?: string;
+  direction?: 1 | -1;
+  displayAs?: string;
+  page?: number;
+  limit?: number;
+};
+
+export default function Example({ rows }: { rows: OrderLine[] }) {
+  const [saved, setSaved] = useState<Preserved>({});
+
+  // \`get\` runs while DataTable renders, so read from a ref to stay current
+  const savedRef = useRef(saved);
+  savedRef.current = saved;
+
+  return (
+    <DataTable<OrderLine>
+      title="Order lines"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: {} },
+        item: { value: "item", sortBy: {} },
+        qty: { value: "qty", sortBy: {} },
+      }}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+        type: "static",
+      }}
+      options={{
+        props: {
+          set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+          get: () => savedRef.current,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTablePropsPreserving.jsx",
+      code: `import React, { useRef, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+export default function Example({ rows }) {
+  const [saved, setSaved] = useState({});
+
+  // \`get\` runs while DataTable renders, so read from a ref to stay current
+  const savedRef = useRef(saved);
+  savedRef.current = saved;
+
+  return (
+    <DataTable
+      title="Order lines"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id", sortBy: {} },
+        item: { value: "item", sortBy: {} },
+        qty: { value: "qty", sortBy: {} },
+      }}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+        type: "static",
+      }}
+      options={{
+        props: {
+          set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+          get: () => savedRef.current,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<PropsPreservingPreview />}
+  defaultTab="ts"
+/>
+
+---
+
+## `set` — saving state
+
+`set` fires on every interaction that changes table state:
+
+| Interaction | What it sends |
+|---|---|
+| Clicking a sortable header | `sortBy`, `direction` |
+| Running a search | `query`, and `page: 1` (searching resets to the first page) |
+| Switching to table / card / a custom view | `displayAs` |
+| Applying or clearing filters | `filters`, and `page: 1` (a changed filter resets to the first page) |
+| Changing the page | `page` |
+| Changing the rows-per-page | `limit` |
+
+It is **not** called on mount — only in response to a real interaction.
+
+### Every call carries the whole state
+
+`set` never sends you just the delta. Sorting a column sends the current query and view along with the new sort:
+
+```ts
+// after clicking the "age" header, with a search already applied
+{ sortBy: "age", direction: 1, query: "kaoutar", displayAs: "table" }
+```
+
+That means you can persist the payload wholesale without merging it into anything you saved before — for `query`, `sortBy`, `direction`, `displayAs` and `filters`.
+
+<Badge color="yellow">Note</Badge> `page` and `limit` are the exception: they only appear on the call that changed them. Sorting sends no `page` key at all, and changing the page sends no `limit`. So if you write the payload straight into the URL or a storage key, a sort will wipe whatever page the user was on. **Merge into what you already have** rather than replacing it:
+
+```ts
+set: (params) => setSaved((prev) => ({ ...prev, ...params }))
+```
+
+---
+
+## `get` — restoring state
+
+`get` is called once, while the table renders for the first time, and its return value seeds the initial state. It's read per-key with a fallback, so a partial object is fine — anything you leave out just gets the default:
+
+| Key | Default when absent |
+|---|---|
+| `query` | `""` |
+| `sortBy` | `""` (no column sorted) |
+| `direction` | `1` (ascending) |
+| `displayAs` | `"table"` |
+| `filters` | `[]` (nothing filtered) |
+
+It seeds the initial state and then gets out of the way — it is never consulted again, so it can't fight the user's later interactions.
+
+### Restoring the sort restores the indicator, not the order
+
+<Badge color="yellow">Note</Badge> This one will bite you if you don't plan for it. A restored `sortBy`/`direction` puts the arrow back on the right column, but **nothing re-applies that sort to your rows**:
+
+- On a **static** table, `data` is re-read from the prop you passed, so the rows come back in their original order under a header that claims they're sorted.
+- On a **dynamic** table, the fetch the table fires on mount sends `page`, `limit` and `search` — but not `sortBy` or `direction` — so your API returns unsorted rows.
+
+The restored **query** does make it into that mount fetch (as `search`), so search restores end-to-end. It's specifically sort that needs help from you:
+
+```ts
+// static: sort the data yourself before handing it over
+const saved = read();
+const rows = useMemo(() => sortRows(allRows, saved.sortBy, saved.direction), [saved]);
+
+// dynamic: include the saved sort in your own initial fetch
+useEffect(() => {
+  fetchRows({ ...saved, page: saved.page ?? 1 });
+}, []);
+```
+
+### Pagination is different
+
+<Badge color="yellow">Note</Badge> `get` must not return `page` or `limit`. They aren't part of `TablePropsInterface` and the table ignores them there. Pagination is restored through the [`pagination`](./Pagination) prop instead:
+
+```ts
+<DataTable
+  pagination={{
+    total,
+    page: saved.page ?? 1,     // ← restored here
+    limit: saved.limit ?? 10,  // ← and here
+  }}
+  options={{
+    props: {
+      set: saveSomewhere,
+      get: () => ({ query, sortBy, direction, displayAs }), // ← not page/limit
+    },
+  }}
+/>
+```
+
+The asymmetry is deliberate: `set` reports page and limit so you can persist them, but the table takes them back as ordinary props, the same way it takes `total`.
+
+---
+
+## Recipe: local storage
+
+Good for "remember how I like this table" — survives reloads and new tabs, scoped to the browser.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "useTableStorage.ts",
+      code: `const KEY = "orders-table";
+
+type Preserved = {
+  query?: string;
+  sortBy?: string;
+  direction?: 1 | -1;
+  displayAs?: string;
+  page?: number;
+  limit?: number;
+};
+
+function read(): Preserved {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export default function OrdersTable({ rows }: { rows: Order[] }) {
+  // read once, so the first render and the pagination prop agree
+  const [saved] = useState(read);
+
+  return (
+    <DataTable<Order>
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+      }}
+      options={{
+        props: {
+          // merge so a sort doesn't drop the saved page
+          set: (params) =>
+            localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),
+          get: read,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "useTableStorage.js",
+      code: `const KEY = "orders-table";
+
+function read() {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export default function OrdersTable({ rows }) {
+  // read once, so the first render and the pagination prop agree
+  const [saved] = useState(read);
+
+  return (
+    <DataTable
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        page: saved.page ?? 1,
+        limit: saved.limit ?? 10,
+      }}
+      options={{
+        props: {
+          // merge so a sort doesn't drop the saved page
+          set: (params) =>
+            localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),
+          get: read,
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  defaultTab="ts"
+/>
+
+<Badge color="blue">Note</Badge> Use a key that includes the table's identity (`"orders-table"`, not `"table"`) — two tables sharing one key will overwrite each other's state. If you'd rather not hard-code one key per table, `set` hands you the table's `title` as its second argument — see [One handler for every table](#one-handler-for-every-table).
+
+---
+
+## Recipe: URL query params
+
+Good for "send someone this exact view" — the state lives in the address bar, so the URL is shareable, bookmarkable, and survives the back button.
+
+Opening `/orders` gives you a clean table. Opening `/orders?limit=20&query=search&sortBy=total&direction=-1` gives you the same table already searched for `search`, sorted by `total` descending, showing 20 rows a page — because those params are what `get` and the `pagination` prop read on the way in.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "OrdersTable.tsx",
+      code: `import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }: { rows: Order[] }) {
+  const [params, setParams] = useSearchParams();
+
+  return (
+    <DataTable<Order>
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        // page and limit come out of the URL, through the pagination prop
+        page: Number(params.get("page")) || 1,
+        limit: Number(params.get("limit")) || 10,
+      }}
+      options={{
+        props: {
+          set: (next) => {
+            // start from the current URL so untouched params survive
+            const merged = new URLSearchParams(params);
+
+            Object.entries(next).forEach(([key, value]) => {
+              if (value === "" || value === undefined) merged.delete(key);
+              else merged.set(key, String(value));
+            });
+
+            setParams(merged, { replace: true });
+          },
+          get: () => ({
+            query: params.get("query") ?? "",
+            sortBy: params.get("sortBy") ?? "",
+            direction: params.get("direction") === "-1" ? -1 : 1,
+            displayAs: params.get("displayAs") ?? "table",
+          }),
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "OrdersTable.jsx",
+      code: `import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }) {
+  const [params, setParams] = useSearchParams();
+
+  return (
+    <DataTable
+      title="Orders"
+      loading={false}
+      data={rows}
+      headers={headers}
+      pagination={{
+        total: rows.length,
+        // page and limit come out of the URL, through the pagination prop
+        page: Number(params.get("page")) || 1,
+        limit: Number(params.get("limit")) || 10,
+      }}
+      options={{
+        props: {
+          set: (next) => {
+            // start from the current URL so untouched params survive
+            const merged = new URLSearchParams(params);
+
+            Object.entries(next).forEach(([key, value]) => {
+              if (value === "" || value === undefined) merged.delete(key);
+              else merged.set(key, String(value));
+            });
+
+            setParams(merged, { replace: true });
+          },
+          get: () => ({
+            query: params.get("query") ?? "",
+            sortBy: params.get("sortBy") ?? "",
+            direction: params.get("direction") === "-1" ? -1 : 1,
+            displayAs: params.get("displayAs") ?? "table",
+          }),
+        },
+      }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  defaultTab="ts"
+/>
+
+Two details worth copying from that snippet:
+
+- **Seed the merge from the current URL** (`new URLSearchParams(params)`), not from an empty one. Because a sort sends no `page` key, replacing the whole query string would silently drop the page the user was on.
+- **Delete empty values** instead of writing them. Otherwise clearing the search box leaves `?query=` hanging around in every link the user copies.
+
+For a dynamic table, the URL and your `actions.get` are reading the same state from two directions — the table calls `actions.get` with its own params, and `set` writes those same values to the URL. They stay in step because both are driven by the same interaction.
+
+---
+
+## One handler for every table
+
+`set` receives the table's `title` as a second argument, so a single shared handler can key its own storage per table instead of you writing one handler per table:
+
+```ts
+const setTableProps = (props, tableTitle) =>
+  localStorage.setItem(tableTitle, JSON.stringify(props));
+
+<DataTable title="orders" options={{ props: { set: setTableProps } }} />
+<DataTable title="invoices" options={{ props: { set: setTableProps } }} />
+```
+
+Both tables share one function and still write to their own key. The same title arrives on every kind of change — sort, search, view switch, page and limit.
+
+<Badge color="yellow">Note</Badge> `get` does **not** receive the title — it takes no arguments at all. To read state back per table you still need a handler that knows which table it belongs to, usually a small factory:
+
+```ts
+const tableProps = (tableTitle: string) => ({
+  set: (props) => localStorage.setItem(tableTitle, JSON.stringify(props)),
+  get: () => JSON.parse(localStorage.getItem(tableTitle) || "{}"),
+});
+
+<DataTable title="orders" options={{ props: tableProps("orders") }} />
+```
+
+Since `title` is also what the table displays in its header, treat it as a storage key you're committing to: renaming the table later orphans whatever was saved under the old name.
+
+## Current limitations
+
+- **Restoring a sort doesn't re-sort anything** — you get the indicator back, not the order. See [above](#restoring-the-sort-restores-the-indicator-not-the-order) for the workaround on both static and dynamic tables.
+- `set` is required as soon as you provide `options.props`; there's no read-only mode where you restore state without also being handed every change.
+- `page` and `limit` are reported by `set` but not restored by `get` — they have to round-trip through the `pagination` prop.
+- The payload's type says `page` and `limit` are always present, but at runtime they only appear on the call that changed them. Treat them as optional.
+- Column visibility (the show/hide menu) isn't part of the preserved state.5:["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L21",null,{"value":[{"value":"The shape","id":"the-shape","depth":2},{"value":"Try it","id":"try-it","depth":2},{"value":[["$","$1",".0",{"children":[["$","code",".0",{"className":"nextra-code","dir":"ltr","children":"set"}]," — saving state"]}]],"id":"set--saving-state","depth":2},{"value":"Every call carries the whole state","id":"every-call-carries-the-whole-state","depth":3},{"value":[["$","$1",".0",{"children":[["$","code",".0",{"className":"nextra-code","dir":"ltr","children":"get"}]," — restoring state"]}]],"id":"get--restoring-state","depth":2},{"value":"Restoring the sort restores the indicator, not the order","id":"restoring-the-sort-restores-the-indicator-not-the-order","depth":3},{"value":"Pagination is different","id":"pagination-is-different","depth":3},{"value":"Recipe: local storage","id":"recipe-local-storage","depth":2},{"value":"Recipe: URL query params","id":"recipe-url-query-params","depth":2},{"value":"One handler for every table","id":"one-handler-for-every-table","depth":2},{"value":"Current limitations","id":"current-limitations","depth":2}],"children":[["$","$L22",null,{}],["$","$L23",null,{"metadata":{"title":"Props preserving","filePath":"src/content/Table/DataTable/PropsPreserving.mdx","timestamp":1790101089000},"bottomContent":"$undefined","sourceCode":"$24","children":["$L25","$L26"]}]]}]}]
+27:I[4168,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"HeadingAnchor"]
+28:I[1946,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"ToggleWordWrapButton"]
+25:["$","div",null,{"id":"nextra-skip-nav"}]
+26:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Props preserving","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["By default a ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"DataTable"}]," forgets everything the moment it unmounts — the search box empties, the sort resets, the card view flips back to the table. ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.props"}]," gives you two hooks to change that: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}],", which hands you the table’s state every time it changes, and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}],", which the table calls once on mount to ask for it back."]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Where that state actually lives is entirely up to you. The table never touches ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"localStorage"}],", the URL, or a server — it just hands you an object and asks for one back. ",["$","a",null,{"href":"#recipe-local-storage","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"Local storage"}]," and ",["$","a",null,{"href":"#recipe-url-query-params","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"URL query params"}]," are both a few lines below."]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Type definitions: see ",["$","$L1a",null,{"href":"./Props","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"Props"}],"."]}],"\n",["$","h2",null,{"id":"the-shape","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["The shape",["$","$L27",null,{"id":"the-shape"}]]}],"\n",["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"    set"}],"$L29","$L2a","$L2b","$L2c","$L2d","$L2e","$L2f","$L30","$L31"]}],"\n","$L32","\n","$L33","\n","$L34"]}]]}]]}],"\n","$L35","\n","$L36","\n","$L37","\n","$L38","\n","$L39","\n","$L3a","\n","$L3b","\n","$L3c","\n","$L3d","\n","$L3e","\n","$L3f","\n","$L40","\n","$L41","\n","$L42","\n","$L43","\n","$L44","\n","$L45","\n","$L46","\n","$L47","\n","$L48","\n","$L49","\n","$L4a","\n","$L4b","\n","$L4c","\n","$L4d","\n","$L4e","\n","$L4f","\n","$L50","\n","$L51","\n","$L52","\n","$L53","\n","$L54","\n","$L55","\n","$L56","\n","$L57","\n","$L58","\n","$L59","\n","$L5a","\n","$L5b","\n","$L5c","\n","$L5d","\n","$L5e","\n","$L5f","\n","$L60","\n","$L61","\n","$L62","\n","$L63","\n","$L64","\n","$L65","\n","$L66","\n","$L67","\n","$L68","\n","$L69","\n","$L6a","\n","$L6b","\n","$L6c"]}]
+6d:I[7411,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"default"]
+6f:I[7024,["140","static/chunks/c5aa9e7b-ee68b2e384761c56.js","696","static/chunks/1e87141b-63a9a54655b64694.js","1","static/chunks/1-907d9deaebace80b.js","759","static/chunks/759-1c1b4ba4939df011.js","643","static/chunks/643-71d46c54ea8a0162.js","959","static/chunks/959-cb35e0ca29e96957.js","847","static/chunks/app/docs/%5B%5B...mdxPath%5D%5D/page-ecf672400b0bb01b.js"],"PropsPreservingPreview"]
+29:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": ("}]
+2a:["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"props"}]
+2b:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}]
+2c:["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"tableTitle"}]
+2d:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}]
+2e:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}]
+2f:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" void"}]
+30:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":",  "}]
+31:["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// required — called on every state change"}]
+32:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"    get"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" Partial,                "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// optional — called once, on mount"}]]}]
+33:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  },"}]}]
+34:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}}"}]}]
+35:["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Name","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Type","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Description","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"(props: TablePropsInterface & { page: number; limit: number }, tableTitle: string) => void"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Called whenever the user sorts, searches, filters, switches view, or pages. The second argument is the table’s ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"title"}]," — see ",["$","a",null,{"href":"#one-handler-for-every-table","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"One handler for every table"}],". Required if you set ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.props"}]," at all."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"() => Partial<TablePropsInterface>"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["Called once while the table first renders, to seed its initial state. Takes no arguments (no title). Optional — and nullable, so ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get: null"}]," is fine too."],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]]}]]}]
+36:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The state itself:"}]
+37:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"type"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" TablePropsInterface"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  query"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  sortBy"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  direction"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" -"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"1"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" |"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 1"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  displayAs"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":";"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"  filters"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" TableFilter"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"[];"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"};"}]}]]}]]}]]}]
+38:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," additionally receives ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}],"; ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," does not restore them — see ",["$","a",null,{"href":"#pagination-is-different","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"Pagination is different"}],"."]}]
+39:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+3a:["$","h2",null,{"id":"try-it","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Try it",["$","$L27",null,{"id":"try-it"}]]}]
+3b:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The preview below stores state in a plain React state object instead of ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"localStorage"}],", so it resets when you leave the page. Everything else is the real thing."]}]
+6e:T4a9,import React, { useRef, useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type OrderLine = { id: number; item: string; qty: number };
+type Preserved = {
+query?: string;
+sortBy?: string;
+direction?: 1 | -1;
+displayAs?: string;
+page?: number;
+limit?: number;
+};
+
+export default function Example({ rows }: { rows: OrderLine[] }) {
+const [saved, setSaved] = useState<Preserved>({});
+
+// `get` runs while DataTable renders, so read from a ref to stay current
+const savedRef = useRef(saved);
+savedRef.current = saved;
+
+return (
+  <DataTable<OrderLine>
+    title="Order lines"
+    loading={false}
+    data={rows}
+    headers={{
+      id: { value: "id", sortBy: {} },
+      item: { value: "item", sortBy: {} },
+      qty: { value: "qty", sortBy: {} },
+    }}
+    pagination={{
+      total: rows.length,
+      page: saved.page ?? 1,
+      limit: saved.limit ?? 10,
+      type: "static",
+    }}
+    options={{
+      props: {
+        set: (params) => setSaved((prev) => ({ ...prev, ...params })),
+        get: () => savedRef.current,
+      },
+    }}
+    keyExtractor={(row) => row.id}
+  />
+);
+}3c:["$","$L6d",null,{"tabs":[{"value":"ts","language":"tsx","filename":"DataTablePropsPreserving.tsx","code":"$6e"},{"value":"js","language":"jsx","filename":"DataTablePropsPreserving.jsx","code":"import React, { useRef, useState } from \"react\";\nimport { DataTable } from \"@kousta-ui/table\";\n\nimport \"@kousta-ui/table/esm/index.css\";\nimport \"@kousta-ui/components/esm/index.css\";\n\nexport default function Example({ rows }) {\nconst [saved, setSaved] = useState({});\n\n// `get` runs while DataTable renders, so read from a ref to stay current\nconst savedRef = useRef(saved);\nsavedRef.current = saved;\n\nreturn (\n  <DataTable\n    title=\"Order lines\"\n    loading={false}\n    data={rows}\n    headers={{\n      id: { value: \"id\", sortBy: {} },\n      item: { value: \"item\", sortBy: {} },\n      qty: { value: \"qty\", sortBy: {} },\n    }}\n    pagination={{\n      total: rows.length,\n      page: saved.page ?? 1,\n      limit: saved.limit ?? 10,\n      type: \"static\",\n    }}\n    options={{\n      props: {\n        set: (params) => setSaved((prev) => ({ ...prev, ...params })),\n        get: () => savedRef.current,\n      },\n    }}\n    keyExtractor={(row) => row.id}\n  />\n);\n}"}],"preview":["$","$L6f",null,{}],"defaultTab":"ts"}]
+3d:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+3e:["$","h2",null,{"id":"set--saving-state","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":[[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," — saving state"],["$","$L27",null,{"id":"set--saving-state"}]]}]
+3f:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," fires on every interaction that changes table state:"]}]
+40:["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Interaction","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"What it sends","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Clicking a sortable header","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sortBy"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"direction"}]],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":"Running a search","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"query"}],", and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page: 1"}]," (searching resets to the first page)"],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":"Switching to table / card / a custom view","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"displayAs"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":"Applying or clearing filters","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"filters"}],", and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page: 1"}]," (a changed filter resets to the first page)"],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":"Changing the page","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":"Changing the rows-per-page","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]]}]]}]
+41:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["It is ",["$","strong",null,{"children":"not"}]," called on mount — only in response to a real interaction."]}]
+42:["$","h3",null,{"id":"every-call-carries-the-whole-state","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Every call carries the whole state",["$","$L27",null,{"id":"every-call-carries-the-whole-state"}]]}]
+43:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," never sends you just the delta. Sorting a column sends the current query and view along with the new sort:"]}]
+44:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// after clicking the \"age\" header, with a search already applied"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{ "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"sortBy"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"age\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"direction"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"1"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"query"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"kaoutar\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"displayAs"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"table\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" }"}]]}]]}]]}]]}]
+45:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["That means you can persist the payload wholesale without merging it into anything you saved before — for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"query"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sortBy"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"direction"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"displayAs"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"filters"}],"."]}]
+46:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Note"}]," ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}]," are the exception: they only appear on the call that changed them. Sorting sends no ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," key at all, and changing the page sends no ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}],". So if you write the payload straight into the URL or a storage key, a sort will wipe whatever page the user was on. ",["$","strong",null,{"children":"Merge into what you already have"}]," rather than replacing it:"]}]
+47:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"set"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"params"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" setSaved"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"prev"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ({ "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"..."}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"prev, "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"..."}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"params }))"}]]}]}]]}]]}]
+48:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+49:["$","h2",null,{"id":"get--restoring-state","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":[[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," — restoring state"],["$","$L27",null,{"id":"get--restoring-state"}]]}]
+4a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," is called once, while the table renders for the first time, and its return value seeds the initial state. It’s read per-key with a fallback, so a partial object is fine — anything you leave out just gets the default:"]}]
+4b:["$","table",null,{"className":"x:block x:overflow-x-auto nextra-scrollbar x:not-first:mt-[1.25em] x:p-0","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Key","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}],["$","th",null,{"children":"Default when absent","className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"query"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sortBy"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"\""}]," (no column sorted)"],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"direction"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"1"}]," (ascending)"],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"displayAs"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"table\""}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}],["$","tr",null,{"children":[["$","td",null,{"children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"filters"}],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}],["$","td",null,{"children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"[]"}]," (nothing filtered)"],"className":"x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600"}]],"className":"x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20"}]]}]]}]
+4c:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"It seeds the initial state and then gets out of the way — it is never consulted again, so it can’t fight the user’s later interactions."}]
+4d:["$","h3",null,{"id":"restoring-the-sort-restores-the-indicator-not-the-order","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Restoring the sort restores the indicator, not the order",["$","$L27",null,{"id":"restoring-the-sort-restores-the-indicator-not-the-order"}]]}]
+4e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Note"}]," This one will bite you if you don’t plan for it. A restored ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sortBy"}],"/",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"direction"}]," puts the arrow back on the right column, but ",["$","strong",null,{"children":"nothing re-applies that sort to your rows"}],":"]}]
+4f:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["On a ",["$","strong",null,{"children":"static"}]," table, ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"data"}]," is re-read from the prop you passed, so the rows come back in their original order under a header that claims they’re sorted."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["On a ",["$","strong",null,{"children":"dynamic"}]," table, the fetch the table fires on mount sends ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}],", ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"search"}]," — but not ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"sortBy"}]," or ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"direction"}]," — so your API returns unsorted rows."]}],"\n"]}]
+50:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The restored ",["$","strong",null,{"children":"query"}]," does make it into that mount fetch (as ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"search"}],"), so search restores end-to-end. It’s specifically sort that needs help from you:"]}]
+51:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// static: sort the data yourself before handing it over"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" saved"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" read"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"();"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" rows"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" useMemo"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(() "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" sortRows"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(allRows, saved.sortBy, saved.direction), [saved]);"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// dynamic: include the saved sort in your own initial fetch"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"useEffect"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(() "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  fetchRows"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"({ "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"..."}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"saved, page: saved.page "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"??"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 1"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" });"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"}, []);"}]}]]}]]}]]}]
+52:["$","h3",null,{"id":"pagination-is-different","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Pagination is different",["$","$L27",null,{"id":"pagination-is-different"}]]}]
+53:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Note"}]," ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," must not return ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," or ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}],". They aren’t part of ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"TablePropsInterface"}]," and the table ignores them there. Pagination is restored through the ",["$","$L1a",null,{"href":"./Pagination","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["$","code",null,{"className":"nextra-code","dir":"ltr","children":"pagination"}]}]," prop instead:"]}]
+54:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"DataTable"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  pagination"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"    total,"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"    page"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": saved.page "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"??"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 1"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":",     "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// ← restored here"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"    limit"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": saved.limit "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"??"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" 10"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":",  "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// ← and here"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  }}"}]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"    props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": {"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"      set"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": saveSomewhere,"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"      get"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ({ query, sortBy, direction, displayAs }), "}],["$","span",null,{"style":{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"},"children":"// ← not page/limit"}]]}],"\n",["$","span",null,{"children":"$L70"}],"\n","$L71","\n","$L72"]}]]}]]}]
+55:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The asymmetry is deliberate: ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," reports page and limit so you can persist them, but the table takes them back as ordinary props, the same way it takes ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"total"}],"."]}]
+56:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+57:["$","h2",null,{"id":"recipe-local-storage","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Recipe: local storage",["$","$L27",null,{"id":"recipe-local-storage"}]]}]
+58:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Good for “remember how I like this table” — survives reloads and new tabs, scoped to the browser."}]
+59:["$","$L6d",null,{"tabs":[{"value":"ts","language":"tsx","filename":"useTableStorage.ts","code":"const KEY = \"orders-table\";\n\ntype Preserved = {\nquery?: string;\nsortBy?: string;\ndirection?: 1 | -1;\ndisplayAs?: string;\npage?: number;\nlimit?: number;\n};\n\nfunction read(): Preserved {\ntry {\n  return JSON.parse(localStorage.getItem(KEY) || \"{}\");\n} catch {\n  return {};\n}\n}\n\nexport default function OrdersTable({ rows }: { rows: Order[] }) {\n// read once, so the first render and the pagination prop agree\nconst [saved] = useState(read);\n\nreturn (\n  <DataTable<Order>\n    title=\"Orders\"\n    loading={false}\n    data={rows}\n    headers={headers}\n    pagination={{\n      total: rows.length,\n      page: saved.page ?? 1,\n      limit: saved.limit ?? 10,\n    }}\n    options={{\n      props: {\n        // merge so a sort doesn't drop the saved page\n        set: (params) =>\n          localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),\n        get: read,\n      },\n    }}\n    keyExtractor={(row) => row.id}\n  />\n);\n}"},{"value":"js","language":"jsx","filename":"useTableStorage.js","code":"const KEY = \"orders-table\";\n\nfunction read() {\ntry {\n  return JSON.parse(localStorage.getItem(KEY) || \"{}\");\n} catch {\n  return {};\n}\n}\n\nexport default function OrdersTable({ rows }) {\n// read once, so the first render and the pagination prop agree\nconst [saved] = useState(read);\n\nreturn (\n  <DataTable\n    title=\"Orders\"\n    loading={false}\n    data={rows}\n    headers={headers}\n    pagination={{\n      total: rows.length,\n      page: saved.page ?? 1,\n      limit: saved.limit ?? 10,\n    }}\n    options={{\n      props: {\n        // merge so a sort doesn't drop the saved page\n        set: (params) =>\n          localStorage.setItem(KEY, JSON.stringify({ ...read(), ...params })),\n        get: read,\n      },\n    }}\n    keyExtractor={(row) => row.id}\n  />\n);\n}"}],"defaultTab":"ts"}]
+5a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-blue","children":"Note"}]," Use a key that includes the table’s identity (",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"orders-table\""}],", not ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"\"table\""}],") — two tables sharing one key will overwrite each other’s state. If you’d rather not hard-code one key per table, ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," hands you the table’s ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"title"}]," as its second argument — see ",["$","a",null,{"href":"#one-handler-for-every-table","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"One handler for every table"}],"."]}]
+5b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+5c:["$","h2",null,{"id":"recipe-url-query-params","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Recipe: URL query params",["$","$L27",null,{"id":"recipe-url-query-params"}]]}]
+5d:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Good for “send someone this exact view” — the state lives in the address bar, so the URL is shareable, bookmarkable, and survives the back button."}]
+5e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Opening ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"/orders"}]," gives you a clean table. Opening ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"/orders?limit=20&query=search&sortBy=total&direction=-1"}]," gives you the same table already searched for ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"search"}],", sorted by ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"total"}]," descending, showing 20 rows a page — because those params are what ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," and the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"pagination"}]," prop read on the way in."]}]
+73:T512,import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }: { rows: Order[] }) {
+const [params, setParams] = useSearchParams();
+
+return (
+  <DataTable<Order>
+    title="Orders"
+    loading={false}
+    data={rows}
+    headers={headers}
+    pagination={{
+      total: rows.length,
+      // page and limit come out of the URL, through the pagination prop
+      page: Number(params.get("page")) || 1,
+      limit: Number(params.get("limit")) || 10,
+    }}
+    options={{
+      props: {
+        set: (next) => {
+          // start from the current URL so untouched params survive
+          const merged = new URLSearchParams(params);
+
+          Object.entries(next).forEach(([key, value]) => {
+            if (value === "" || value === undefined) merged.delete(key);
+            else merged.set(key, String(value));
+          });
+
+          setParams(merged, { replace: true });
+        },
+        get: () => ({
+          query: params.get("query") ?? "",
+          sortBy: params.get("sortBy") ?? "",
+          direction: params.get("direction") === "-1" ? -1 : 1,
+          displayAs: params.get("displayAs") ?? "table",
+        }),
+      },
+    }}
+    keyExtractor={(row) => row.id}
+  />
+);
+}74:T4f8,import { useSearchParams } from "react-router-dom";
+// or: import { useSearchParams, useRouter } from "next/navigation";
+
+export default function OrdersTable({ rows }) {
+const [params, setParams] = useSearchParams();
+
+return (
+  <DataTable
+    title="Orders"
+    loading={false}
+    data={rows}
+    headers={headers}
+    pagination={{
+      total: rows.length,
+      // page and limit come out of the URL, through the pagination prop
+      page: Number(params.get("page")) || 1,
+      limit: Number(params.get("limit")) || 10,
+    }}
+    options={{
+      props: {
+        set: (next) => {
+          // start from the current URL so untouched params survive
+          const merged = new URLSearchParams(params);
+
+          Object.entries(next).forEach(([key, value]) => {
+            if (value === "" || value === undefined) merged.delete(key);
+            else merged.set(key, String(value));
+          });
+
+          setParams(merged, { replace: true });
+        },
+        get: () => ({
+          query: params.get("query") ?? "",
+          sortBy: params.get("sortBy") ?? "",
+          direction: params.get("direction") === "-1" ? -1 : 1,
+          displayAs: params.get("displayAs") ?? "table",
+        }),
+      },
+    }}
+    keyExtractor={(row) => row.id}
+  />
+);
+}5f:["$","$L6d",null,{"tabs":[{"value":"ts","language":"tsx","filename":"OrdersTable.tsx","code":"$73"},{"value":"js","language":"jsx","filename":"OrdersTable.jsx","code":"$74"}],"defaultTab":"ts"}]
+60:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Two details worth copying from that snippet:"}]
+61:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Seed the merge from the current URL"}]," (",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"new URLSearchParams(params)"}],"), not from an empty one. Because a sort sends no ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," key, replacing the whole query string would silently drop the page the user was on."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Delete empty values"}]," instead of writing them. Otherwise clearing the search box leaves ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"?query="}]," hanging around in every link the user copies."]}],"\n"]}]
+62:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["For a dynamic table, the URL and your ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"actions.get"}]," are reading the same state from two directions — the table calls ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"actions.get"}]," with its own params, and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," writes those same values to the URL. They stay in step because both are driven by the same interaction."]}]
+63:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+64:["$","h2",null,{"id":"one-handler-for-every-table","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["One handler for every table",["$","$L27",null,{"id":"one-handler-for-every-table"}]]}]
+65:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," receives the table’s ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"title"}]," as a second argument, so a single shared handler can key its own storage per table instead of you writing one handler per table:"]}]
+66:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" setTableProps"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":", "}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"tableTitle"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  localStorage."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"setItem"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(tableTitle, "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"JSON"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"stringify"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(props));"}]]}],"\n",["$","span",null,{"children":" "}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"DataTable title"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"orders\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": { "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"set"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": setTableProps } }} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"/>"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"DataTable title"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"invoices\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],"$L75","$L76","$L77","$L78","$L79","$L7a"]}]]}]]}]]}]
+67:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Both tables share one function and still write to their own key. The same title arrives on every kind of change — sort, search, view switch, page and limit."}]
+68:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","span",null,{"className":"badge badge-yellow","children":"Note"}]," ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," does ",["$","strong",null,{"children":"not"}]," receive the title — it takes no arguments at all. To read state back per table you still need a handler that knows which table it belongs to, usually a small factory:"]}]
+69:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":["$undefined",["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-2","children":[["$","$L28",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":[["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"const"}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":" tableProps"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":" ="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"tableTitle"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":":"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" string"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" ({"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  set"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": ("}],["$","span",null,{"style":{"--shiki-light":"#E36209","--shiki-dark":"#FFAB70"},"children":"props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" localStorage."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"setItem"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(tableTitle, "}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":"JSON"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"stringify"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(props)),"}]]}],"\n",["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"  get"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": () "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"=>"}],["$","span",null,{"style":{"--shiki-light":"#005CC5","--shiki-dark":"#79B8FF"},"children":" JSON"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"parse"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(localStorage."}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"getItem"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"(tableTitle) "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"||"}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":" \"{}\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"),"}]]}],"\n",["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"});"}]}],"\n","$L7b","\n","$L7c"]}]]}]]}]
+6a:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Since ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"title"}]," is also what the table displays in its header, treat it as a storage key you’re committing to: renaming the table later orphans whatever was saved under the old name."]}]
+6b:["$","h2",null,{"id":"current-limitations","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Current limitations",["$","$L27",null,{"id":"current-limitations"}]]}]
+6c:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Restoring a sort doesn’t re-sort anything"}]," — you get the indicator back, not the order. See ",["$","a",null,{"href":"#restoring-the-sort-restores-the-indicator-not-the-order","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"above"}]," for the workaround on both static and dynamic tables."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," is required as soon as you provide ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"options.props"}],"; there’s no read-only mode where you restore state without also being handed every change."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}]," are reported by ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"set"}]," but not restored by ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"get"}]," — they have to round-trip through the ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"pagination"}]," prop."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["The payload’s type says ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"page"}]," and ",["$","code",null,{"className":"nextra-code","dir":"ltr","children":"limit"}]," are always present, but at runtime they only appear on the call that changed them. Treat them as optional."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":"Column visibility (the show/hide menu) isn’t part of the preserved state."}],"\n"]}]
+70:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"    },"}]
+71:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"  }}"}]}]
+72:["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"/>"}]}]
+75:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ "}]
+76:["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"props"}]
+77:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": { "}]
+78:["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"set"}]
+79:["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": setTableProps } }} "}]
+7a:["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"/>"}]
+7b:["$","span",null,{"children":" "}]
+7c:["$","span",null,{"children":[["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"<"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"DataTable title"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"orders\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":" options"}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"="}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"{{ "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"props"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":": "}],["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"tableProps"}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":"("}],["$","span",null,{"style":{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"},"children":"\"orders\""}],["$","span",null,{"style":{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"},"children":") }} "}],["$","span",null,{"style":{"--shiki-light":"#D73A49","--shiki-dark":"#F97583"},"children":"/>"}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+7d:I[6644,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"Props preserving | Kousta UI"}],["$","meta","1",{"name":"description","content":"A React UI library focused on performance, accessibility, and convenience."}],["$","link","2",{"rel":"icon","href":"/img/logo.png"}],["$","$L7d","3",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"
