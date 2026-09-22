@@ -1,23 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
 import { DataTable, TablePropsProvider } from "@kousta-ui/table";
 import { ComponentPropsProvider } from "@kousta-ui/components";
-import {
-  BsChevronDown,
-  BsDash,
-  BsEye,
-  BsKanbanFill,
-  BsThreeDots,
-  BsTrash,
-} from "react-icons/bs";
-import {
-  FaAngleLeft,
-  FaAngleRight,
-  FaSort,
-  FaSortAlphaDown,
-  FaSortAlphaUp,
-} from "react-icons/fa";
-import { FaMap } from "react-icons/fa";
-import { usePagination } from "@kousta-ui/hooks";
+import { BsDash, BsThreeDots, BsTrash } from "react-icons/bs";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import "@kousta-ui/table/esm/index.css";
 import "@kousta-ui/components/esm/index.css";
@@ -26,6 +10,7 @@ import "./App.css";
 import { THeader } from "@kousta-ui/table/lib/DataTable/_props";
 import { users } from "./data/users";
 import TableWithTotal from "./components/TableWithTotal";
+import DynamicTable from "./components/DynamicTable";
 
 export type UserType = {
   name: string;
@@ -35,7 +20,7 @@ export type UserType = {
   location: { name: string };
 };
 
-type ProductType = {
+export type ProductType = {
   id: number;
   ref: string;
   designation: string;
@@ -59,23 +44,7 @@ type ProductType = {
   };
 };
 
-const getProducts = (
-  props: Record<string, number | string | undefined> = {},
-) => {
-  const params = new URLSearchParams();
-
-  Object.keys(props).forEach((key) => {
-    if (props[key]) params.append(key, String(props[key]));
-  });
-
-  return fetch(`http://localhost:8001/api/v1/products?${params.toString()}`);
-};
-
 const App = () => {
-  const [products, setProducts] = useState([]);
-  const [productsLoading, setProductsLoading] = useState(false);
-  const [totalProducts, setTotalProducts] = useState(0);
-
   const staticTHeaders: THeader<UserType> = {
     user: {
       exec(user: UserType) {
@@ -116,11 +85,6 @@ const App = () => {
       value: "location.name",
     },
   };
-  const headers: THeader<ProductType> = {
-    id: { value: "id", sortBy: {} },
-    label: { value: "designation" },
-    category: { value: "category.ref", sortBy: {} },
-  };
 
   // const searchHandler = useCallback(
   //   (q: string, { visibleHeaders: vh }: { visibleHeaders: string[] }) => {
@@ -138,26 +102,6 @@ const App = () => {
   //   },
   //   [],
   // );
-
-  const getTableProducts = useCallback(
-    (params: Record<string, string | number | undefined>) => {
-      setProductsLoading(true);
-      getProducts(params)
-        .then((resp) => {
-          if (resp.status === 204) return { products: [], meta: { total: 0 } };
-          return resp.json();
-        })
-        .then((data) => {
-          setProducts(data.products);
-          console.log({ data });
-          if (data.meta?.total) setTotalProducts(data.meta.total);
-          else setTotalProducts(data.products.length);
-        })
-        .catch(console.log)
-        .finally(() => setProductsLoading(false));
-    },
-    [],
-  );
 
   // useEffect(() => {
   //   getTableProducts({ page: 1, limit: 20 });
@@ -203,9 +147,6 @@ const App = () => {
         //     // style: { backgroundColor: "blue", borderColor: "white" },
         //   },
         // }}
-        icons={{
-          sordtDesc: <FaSort />,
-        }}
       >
         <div style={{ width: "90%", marginInline: "auto", marginTop: "2rem" }}>
           {/* <Table.Root> */}
@@ -249,222 +190,7 @@ const App = () => {
           <br />
           <br />
           <br />
-          <h2>Dynamic Table</h2>
-          <DataTable<ProductType>
-            data={products}
-            headers={{
-              ...headers,
-              id: {
-                value: "id",
-                sortBy: {
-                  name: "ido",
-                },
-              },
-            }}
-            loading={productsLoading}
-            keyExtractor={(row) => row.id}
-            title="this is a title"
-            pagination={{
-              total: totalProducts,
-              limit: 10,
-              page: 1,
-              // type: "static",
-            }}
-            actions={{
-              get: getTableProducts,
-              // search: getTableProducts,
-              delete: {
-                canDelete: (row) => row?.gestion_stock > 25,
-                buttonProps: {
-                  // variant: "danger-link",
-                  // size: "sm",
-                },
-                title: <BsTrash size={12} />,
-                onDelete: (row) => {
-                  console.log({ row });
-                },
-              },
-              edit: {
-                buttonProps: {
-                  // variant: "success-link",
-                  // size: "sm",
-                  // style: {
-                  //   paddingInline: 0,
-                  // },
-                },
-                // title: <BsPen size={".75rem"} />,
-                // canEdit: (row) => {
-                //   return !!row?.flux_fabrication;
-                // },
-                onEdit: (row) => {
-                  console.log({ row });
-                },
-              },
-            }}
-            options={{
-              sort: {
-                props(props) {
-                  return {
-                    order: `${props.direction === -1 ? "-" : ""}${props.sortBy}`,
-                  };
-                },
-              },
-              bulkActions: [
-                {
-                  title: "Delete All",
-                  onClick: (rows, clearSelected) => {
-                    console.log({ rows });
-                    clearSelected();
-                  },
-                  buttonProps: {
-                    variant: "danger",
-                  },
-                },
-              ],
-              cards: {
-                card({ row, visibleHeaders }) {
-                  return (
-                    <div
-                      style={{
-                        background: "var(--kui-neutral-700)",
-                        padding: "var(--kui-spacing-sm)",
-                        borderRadius: "var(--kui-spacing-xs)",
-                      }}
-                    >
-                      {visibleHeaders.includes("label") && (
-                        <h2>{row.designation}</h2>
-                      )}
-                      {visibleHeaders.includes("category") && (
-                        <p>{row.category.ref}</p>
-                      )}
-                    </div>
-                  );
-                },
-                cardsContainerProps: {
-                  style: {
-                    display: "grid",
-                    gridColumn: "4",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "var(--kui-spacing-sm)",
-                  },
-                },
-                loadingIndicator(props) {
-                  return (
-                    <>
-                      <h1>Card Loading</h1>
-                      {JSON.stringify(props)}
-                    </>
-                  );
-                },
-              },
-              emptyTable: <h1>Nop Nop Nop</h1>,
-              // viewComp: {
-              //   Component: (row) => {
-              //     return <h2>{row.email}</h2>;
-              //   },
-              //   canView(row) {
-              //     return row?.name !== "Imane Berrada";
-              //   },
-              //
-              //   // type: "extends",
-              //   extendRowIcon: <BsChevronDown />,
-              //   minimizeRowIcon: <BsChevronUp />,
-              //   openModalIcon: <BsEye />,
-              //   openButtonProps: {
-              //     variant: "primary-link",
-              //   },
-              // },
-              extraActions: [
-                {
-                  Icon: <BsEye />,
-                  title: "do Something",
-                  onClick(row) {
-                    console.log(row);
-                  },
-                  allowed(row) {
-                    return !!row.stock_negatif;
-                  },
-                },
-              ],
-              extraviews: {
-                map: {
-                  View: ({ data }) => {
-                    return (
-                      <>
-                        <h1>Map View</h1>
-                        <p>{data.length}</p>
-                      </>
-                    );
-                  },
-                  menuProps: {
-                    leftSection: <FaMap />,
-                  },
-                  loadingIndicator(props) {
-                    return (
-                      <>
-                        <h1>Map Loading</h1>
-                        {JSON.stringify(props)}
-                      </>
-                    );
-                  },
-                },
-                kanban: {
-                  View: ({ data }) => {
-                    return (
-                      <>
-                        <h1>Kanban View</h1>
-                        <p>{data.length}</p>
-                      </>
-                    );
-                  },
-                  menuProps: {
-                    leftSection: <BsKanbanFill />,
-                  },
-                  loadingIndicator(props) {
-                    return (
-                      <>
-                        <h1>Kanban Loading</h1>
-                        {JSON.stringify(props)}
-                      </>
-                    );
-                  },
-                },
-              },
-              // extraActions: [
-              //   {
-              //     title: "Do Something",
-              //     onClick: () => {},
-              //     allowed: (row) => row.age < 23,
-              //     Icon: <Bs123 />,
-              //   },
-              // ],
-              selectFilter: {
-                "Stock Negative allowed": (row) => !!row.stock_negatif,
-                "Flux Fabrication": (row) => !!row.flux_fabrication,
-              },
-              // emptyTable: <div style={{ color: "red" }}>Whaaat The fuck</div>,
-              // search: searchHandler,
-              // showHideRow: false
-            }}
-            config={{
-              // noHead: false,
-              // toggleRows: false,
-              // toggleRows: {
-              //   children: <BsEye />,
-              // },
-              // disableContextMenu: false,
-              loadingIndicator(props) {
-                return (
-                  <>
-                    <h1>Table Loading</h1>
-                    {JSON.stringify(props)}
-                  </>
-                );
-              },
-            }}
-          />
-          <br />
-          <br />
+          <DynamicTable />
           <br />
           <br />
           <br />

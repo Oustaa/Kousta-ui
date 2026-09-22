@@ -31,11 +31,36 @@ const TableWithTotal = () => {
   const headers: THeader<any> = {
     id: { value: "id", sortBy: {} },
     name: { value: "name", sortBy: {}, total: { func: () => 2_000_000 } },
-    category: { value: "category", sortBy: {} },
-    "Unit Price": { value: "u_price", sortBy: {}, total: {} },
+    category: {
+      value: "category",
+      sortBy: {},
+      filterBy: {
+        type: "select",
+        options: [
+          { id: "cat 1", label: "category one" },
+          { id: "cat 2", label: "category two" },
+          { id: "cat 3", label: "category three" },
+        ],
+      },
+    },
+    "Unit Price": {
+      value: "u_price",
+      sortBy: {},
+      total: {},
+      filterBy: {
+        type: "number",
+      },
+    },
     tva: { value: "tva" },
     units: { value: "qte", sortBy: {}, total: {} },
-    "total Price": { value: "total_price", sortBy: {}, total: {} },
+    "total Price": {
+      value: "total_price",
+      sortBy: {},
+      total: {},
+      filterBy: {
+        type: "number",
+      },
+    },
   };
 
   return (

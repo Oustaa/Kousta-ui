@@ -18,8 +18,6 @@ import {
   BsAlphabet,
   BsAmazon,
   BsArchive,
-  BsArchiveFill,
-  BsFacebook,
   BsHouseLock,
   BsThreeDots,
   BsX,
@@ -37,6 +35,7 @@ import {
   FaAngleRight,
   FaAngleUp,
 } from "react-icons/fa";
+import ModalContent from "./modalContent";
 
 // import { getUsers } from "./app";
 // import { useDebounceCallback } from "@kousta-ui/hooks";
@@ -182,7 +181,9 @@ function App() {
           // seblings: 3,
         }}
       >
-        <Button onClick={() => setValue("")}>Clear</Button>
+        <Button size="sm" variant="neutral-light" onClick={() => setValue("")}>
+          Clear
+        </Button>
         <br />
         <br />
         <br />
@@ -441,9 +442,7 @@ function App() {
           fullHeight
           // fullWidth
         >
-          Hello I Am A Modal Hello I Am A Modal Hello I Am A Modal Hello I Am A
-          Modal Hello I Am A Modal Hello I Am A Modal Hello I Am A Modal Hello I
-          Am A Modal cs dsfdsg f
+          <ModalContent />
         </Modal>
 
         <Button
