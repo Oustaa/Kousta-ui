@@ -24,16 +24,19 @@
 .btn-sm {
   composes: btn;
   padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
+  font-size: var(--kui-text-sm);
 }
 
 .btn-md {
   composes: btn;
   padding: var(--kui-spacing-sm) var(--kui-spacing-md);
+  font-size: var(--kui-text-base);
 }
 
 .btn-lg {
   composes: btn;
   padding: var(--kui-spacing-md) var(--kui-spacing-lg);
+  font-size: var(--kui-text-medium);
 }
 
 /* Button Variants */

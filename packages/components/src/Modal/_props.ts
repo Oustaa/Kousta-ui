@@ -1,5 +1,5 @@
 // _props.ts
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import { ButtonVariant } from "../Button/_props";
 
 export type ModalSize = "xs" | "sm" | "md" | "lg" | "xl";
@@ -37,6 +37,8 @@ export type ModalProps = {
   closeOnClickOutside?: boolean;
   modalTriggerBtnVariant?: ButtonVariant;
 
+  closeIcon?: ReactNode;
+
   // Animations will not be implemented now
   // animation?: ModalAnimation;
   // animationDurationMs?: number;
@@ -63,3 +65,7 @@ export type ModalProps = {
       onClose?: never;
     }
 );
+
+export type ModalExtraProps = {
+  setModalTitle: Dispatch<SetStateAction<string | ReactNode>>;
+};

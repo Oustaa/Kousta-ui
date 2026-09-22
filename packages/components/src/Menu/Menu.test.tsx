@@ -85,8 +85,8 @@ describe("Menu", () => {
     const target = screen.getByText("Menu");
     await userEvent.hover(target);
 
-    const dropdown = screen.getByText("Menu Item 1")
-      .parentElement as HTMLElement;
+    const dropdown = screen.getByRole("menu");
+    expect(dropdown).toBeInTheDocument();
     expect(dropdown).toHaveStyle({ right: "calc(100% + 4px)", bottom: "0" });
   });
 

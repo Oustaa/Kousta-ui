@@ -12,6 +12,7 @@ import {
   SelectPropsProvided,
   useComponentContext,
 } from "components/src/PropsContext";
+import { ChevronIcon, ClearIcon } from "./icons";
 
 const BaseSelect = <T extends SelectDataConstraints>({
   label,
@@ -376,7 +377,7 @@ const BaseSelect = <T extends SelectDataConstraints>({
                     e.stopPropagation();
                   }}
                 >
-                  {icons?.clear ? icons.clear : "X"}
+                  {icons?.clear ? icons.clear : <ClearIcon />}
                 </button>
               )
             )}
@@ -398,10 +399,10 @@ const BaseSelect = <T extends SelectDataConstraints>({
               {dropDownOpen
                 ? icons?.open
                   ? icons.open
-                  : "V"
+                  : <ChevronIcon direction="up" />
                 : icons?.close
                   ? icons.close
-                  : "V"}
+                  : <ChevronIcon direction="down" />}
             </button>
           </div>
           {dropDownOpen && (

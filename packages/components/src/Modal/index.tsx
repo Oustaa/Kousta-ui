@@ -1,6 +1,9 @@
 import {
+  cloneElement,
   FC,
+  isValidElement,
   PropsWithChildren,
+  ReactNode,
   useCallback,
   useEffect,
   useRef,
@@ -51,7 +54,9 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
   closeOnClickEsc,
   closeOnClickOutside,
   modalTriggerBtnVariant,
+  closeIcon,
 }) => {
+  const [modalTitle, setModalTitle] = useState<string | ReactNode>(title);
   const modalProps = useComponentContext("modal") as ModalPropsProvided;
 
   // props provider
@@ -65,6 +70,8 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
       closeOnClickEsc === undefined
     )
       closeOnClickEsc = modalProps.closeOnClickEsc;
+    if (typeof modalProps.closeIcon !== "undefined" && closeIcon === undefined)
+      closeIcon = modalProps.closeIcon;
     if (
       typeof modalProps.closeOnClickOutside !== "undefined" &&
       closeOnClickOutside === undefined
@@ -186,6 +193,10 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
     };
   }, [modalOpened, opened, handleCloseModal]);
 
+  useEffect(() => {
+    setModalTitle(title);
+  }, [title]);
+
   return (
     <>
       {!isControlled && modalTrigger && (
@@ -214,11 +225,11 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
           }}
           className={`${classes["modal-container"]} kui-modal kui-modal-${size || defaultProps.size} kui-modal-${position || defaultProps.position}`}
         >
-          {(title || withCloseBtn) && (
+          {(modalTitle || withCloseBtn) && (
             <header className={`${classes["modal-header"]} kui-modal-header`}>
-              {title ? (
+              {modalTitle ? (
                 <h3 className={`${classes["modal-title"]} kui-modal-title`}>
-                  {title}
+                  {modalTitle}
                 </h3>
               ) : (
                 <h3 />
@@ -229,7 +240,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
                   className="kui-modal-close"
                   onClick={handleCloseModal}
                 >
-                  X
+                  {closeIcon !== undefined ? closeIcon : "X"}
                 </button>
               ) : (
                 <div />
@@ -237,7 +248,12 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
             </header>
           )}
           <div className={`${classes["modal-body"]} kui-modal-body`}>
-            {children}
+            {isValidElement(children)
+              ? cloneElement(children, {
+                  setModalTitle,
+                  name: "clonned",
+                })
+              : children}
           </div>
           <div className={`${classes["modal-footer"]} kui-modal-footer`}></div>
         </div>

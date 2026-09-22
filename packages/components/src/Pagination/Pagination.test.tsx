@@ -29,6 +29,7 @@ describe("Paginaiton", () => {
         render(<Pagination {...renderProps} />);
 
         expected.elements.forEach((item) => {
+          if (item === "...") return; // icon-only, asserted by role below
           const element = screen.getByText(String(item));
           expect(element).toBeInTheDocument();
 
@@ -38,7 +39,9 @@ describe("Paginaiton", () => {
         });
 
         if (expected.dots !== undefined) {
-          expect(screen.getAllByText("...")).toHaveLength(expected.dots);
+            expect(
+            screen.getAllByRole("button", { name: /more pages/i }),
+          ).toHaveLength(expected.dots);
         }
       },
     );
@@ -70,11 +73,14 @@ describe("Paginaiton", () => {
         render(<Pagination {...renderProps} />);
 
         expected.elements.forEach((item) => {
+          if (item === "...") return; // icon-only, asserted by role below
           expect(screen.getByText(String(item))).toBeInTheDocument();
         });
 
         if (expected.dots !== undefined) {
-          expect(screen.getAllByText("...")).toHaveLength(expected.dots);
+            expect(
+            screen.getAllByRole("button", { name: /more pages/i }),
+          ).toHaveLength(expected.dots);
         }
       },
     );
@@ -131,9 +137,16 @@ describe("Paginaiton", () => {
       <Pagination page={1} totalPages={10} disabled onChange={onChange} />,
     );
 
-    [1, 2, 3, 4, 5, "...", 10].forEach((item) => {
-      const element = screen.getByText(item);
-      expect(element).toHaveProperty("disabled", true);
+    [1, 2, 3, 4, 5, 10].forEach((item) => {
+      expect(screen.getByText(String(item))).toHaveProperty("disabled", true);
+    });
+
+    // the ellipsis and the two controls carry no text — check them by name
+    ["more pages", "previous page", "next page"].forEach((name) => {
+      expect(screen.getByRole("button", { name })).toHaveProperty(
+        "disabled",
+        true,
+      );
     });
   });
 });

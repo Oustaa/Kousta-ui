@@ -1,4 +1,5 @@
 import {
+  ComponentPropsWithoutRef,
   CSSProperties,
   FC,
   PropsWithChildren,
@@ -152,11 +153,15 @@ const MenuContainer: FC<PropsWithChildren<MenuProps>> = ({
   );
 };
 
-const MenuTarget: FC<PropsWithChildren> = ({ children }) => {
+const MenuTarget: FC<PropsWithChildren<ComponentPropsWithoutRef<"div">>> = ({
+  children,
+  ...rest
+}) => {
   const { toggle, type } = useMenuContext();
 
   return (
     <div
+      {...rest}
       onClick={() => {
         if (type === "hover") return;
 
@@ -214,7 +219,7 @@ const MenuItem: FC<PropsWithChildren<MenuItemProps>> = ({
       className={`${classes["menu_item"]} kui-menu-item ${disabled ? "kui-disabled" : ""}`}
     >
       {leftSection && leftSection}
-      {children}
+      <span>{children}</span>
       {rightSection && rightSection}
     </button>
   );

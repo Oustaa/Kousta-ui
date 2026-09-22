@@ -4,6 +4,7 @@ import { PaginationPropsProvided, useComponentContext } from "../PropsContext";
 import { getSeblings } from "./getSeblings";
 
 import classes from "./Pagination.module.css";
+import { ChevronLeftIcon, ChevronRightIcon, DotsIcon } from "./icons";
 
 const Pagination: FC<PaginationProps> = ({
   page = 1,
@@ -75,6 +76,7 @@ const Pagination: FC<PaginationProps> = ({
   return (
     <div className={classes["pagination-container"]}>
       <button
+        aria-label="previous page"
         disabled={safeCurrentPage === 1 || disabled}
         className={[
           classes["pagination-link"],
@@ -88,7 +90,7 @@ const Pagination: FC<PaginationProps> = ({
           })
         }
       >
-        {prevIcon && isValidElement(prevIcon) ? prevIcon : "Prev"}
+        {prevIcon && isValidElement(prevIcon) ? prevIcon : <ChevronLeftIcon />}
       </button>
 
       {pagesToDisplay.map((page, index) => {
@@ -96,6 +98,7 @@ const Pagination: FC<PaginationProps> = ({
           return (
             <button
               key={` ${index} `}
+              aria-label="more pages"
               disabled
               className={[
                 classes["pagination-link"],
@@ -104,7 +107,7 @@ const Pagination: FC<PaginationProps> = ({
             >
               {placeholderIcon && isValidElement(placeholderIcon)
                 ? placeholderIcon
-                : "..."}
+                : <DotsIcon />}
             </button>
           );
         }
@@ -129,6 +132,7 @@ const Pagination: FC<PaginationProps> = ({
         );
       })}
       <button
+        aria-label="next page"
         disabled={safeCurrentPage === totalPages || disabled}
         className={[
           classes["pagination-link"],
@@ -142,7 +146,7 @@ const Pagination: FC<PaginationProps> = ({
           })
         }
       >
-        {nextIcon && isValidElement(nextIcon) ? nextIcon : "Next"}
+        {nextIcon && isValidElement(nextIcon) ? nextIcon : <ChevronRightIcon />}
       </button>
     </div>
   );
