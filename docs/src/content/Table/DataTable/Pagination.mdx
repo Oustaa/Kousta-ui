@@ -1,6 +1,7 @@
 ---
 title: Pagination
 ---
+import { Callout } from 'nextra/components';
 
 import CodePreviewWrapper from '@/components/CodePreviewWrapper';
 import {
@@ -144,9 +145,11 @@ Use this when your data comes from an API.
 - `limit`
 - `search` (if the user has searched)
 
-:::warning
-Don't use `pagination.type = "static"` with `actions.get` (API-driven data). It can lead to empty pages because the table will slice the already paginated data again.
-:::
+<Callout type="warning">
+Don't use `pagination.type = "static"` with `actions.get` (API-driven data). It
+can lead to empty pages, because the table slices the already-paginated data a
+second time.
+</Callout>
 
 <CodePreviewWrapper
   tabs={[

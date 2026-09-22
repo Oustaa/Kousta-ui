@@ -1,6 +1,436 @@
-
 ---
 title: Filtering
 ---
 
-Coming soon.
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import Badge from '@/components/Badge';
+import {
+  StaticFilteringPreview,
+  DynamicFilteringPreview,
+  FilterCustomPropsPreview,
+} from '@/components/@Table/DataTable';
+
+# Filtering
+
+`DataTable` builds a filter panel out of your headers. Mark a column with `filterBy` and a **Filters** button appears in the table head; opening it shows one row per filterable column — the column name, an **operator** select, and a **value** control matched to the column's type. Pressing **Apply** either narrows the local `data`, or calls `actions.get` with the active filters — the same static/dynamic split that already drives [sorting](./Sorting) and [search](./Search).
+
+Which one happens is decided by whether you pass `actions.get`, with no separate flag:
+
+<Badge color="yellow">Note</Badge> No `actions.get` and no `filter.filterFunction` → **Apply** filters `data` in the browser. Either one present → **Apply** calls it instead, and nothing is filtered locally; your handler decides what the new `data` looks like.
+
+Type definitions: see [Props](./Props).
+
+## Enabling a filter on a column
+
+Set `filterBy` on a header. The only required field is `type`:
+
+```ts
+headers={{
+  designation: { value: "designation", filterBy: { type: "string" } },
+  price: { value: "price", filterBy: { type: "number" } },
+}}
+```
+
+| Name | Type | Description |
+|------|------|-------------|
+| `type` | `"string" \| "number" \| "select"` | Picks the operator list and the value control. Required. |
+| `options` | `THF[]` | The choices for a `select` filter. Required when `type` is `"select"`, not allowed otherwise. |
+| `getOption` | `(item: THF) => { label: string; value: string \| number }` | Maps one of your option objects to what the control shows and stores. Without it, `value`/`id` is used as the value and `label` as the label. |
+
+The column's `value` is the path the filter reads, so nested paths work the same as everywhere else — `filterBy` on a column whose `value` is `"category.name"` filters on `category.name`.
+
+<Badge color="yellow">Note</Badge> A column with `exec` and no `value` has nothing to read, so `filterBy` on it has nothing to filter by. Give the column a `value` if you want it filterable.
+
+## Operators by type
+
+Each type has its own operator list and its own comparison rules — a number is never compared as text, and a select is never substring-matched.
+
+| Type | Operators | Default |
+|------|-----------|---------|
+| `string` | Contains, Does not contain, Is, Is not, Starts with, Ends with, Is empty, Is not empty | **Contains** |
+| `number` | `=`, `≠`, `>`, `≥`, `<`, `≤`, Between | **`=`** |
+| `select` | Is, Is not, Is any of, Is none of, Is empty, Is not empty | **Is** |
+
+Every row opens on its type's default, so the shortest path to a filter is: type a value, press Apply.
+
+A few behaviours worth knowing:
+
+- **String comparisons are case-insensitive.** `Contains "wid"` matches `Widget A`.
+- **`Between` treats an empty bound as unbounded.** Fill only `min` for "at least", only `max` for "at most".
+- **`Is empty` / `Is not empty` take no value**, so their value control is disabled, and any value typed before switching to them is dropped rather than sent.
+- **Filters combine with AND.** Every active row has to pass.
+
+## Validation
+
+A filter row is only applied once it can actually decide something:
+
+| Row state | Applied? |
+|-----------|----------|
+| Operator set, value filled | Yes |
+| Operator takes no value (`Is empty`, `Is not empty`) | Yes |
+| `Between` with either bound filled | Yes |
+| Value empty on an operator that needs one | No — skipped |
+
+Skipped rows aren't errors; they just don't narrow anything, and they never reach `actions.get`.
+
+---
+
+## Static filtering
+
+With no `actions.get`, pressing **Apply** filters the `data` you passed in, in the browser. The footer's total updates to the filtered count, and the table returns to page 1 so a filtered-down set can't leave you on an empty page.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableStaticFiltering.tsx",
+      code: `import React from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type Product = {
+  id: number;
+  designation: string;
+  category: string;
+  price: number;
+};
+
+const data: Product[] = [
+  { id: 1, designation: "Widget A", category: "ui", price: 30 },
+  { id: 2, designation: "Widget B", category: "table", price: 200 },
+  { id: 3, designation: "Gadget C", category: "ui", price: 20 },
+  { id: 4, designation: "Gizmo D", category: "forms", price: 60 },
+];
+
+export default function Example() {
+  return (
+    <DataTable<Product>
+      title="Products"
+      loading={false}
+      data={data}
+      headers={{
+        id: { value: "id" },
+        designation: { value: "designation", filterBy: { type: "string" } },
+        category: {
+          value: "category",
+          filterBy: {
+            type: "select",
+            options: [
+              { value: "ui", label: "UI" },
+              { value: "table", label: "Table" },
+              { value: "forms", label: "Forms" },
+            ],
+          },
+        },
+        price: { value: "price", filterBy: { type: "number" } },
+      }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableStaticFiltering.jsx",
+      code: `import React from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+const data = [
+  { id: 1, designation: "Widget A", category: "ui", price: 30 },
+  { id: 2, designation: "Widget B", category: "table", price: 200 },
+  { id: 3, designation: "Gadget C", category: "ui", price: 20 },
+  { id: 4, designation: "Gizmo D", category: "forms", price: 60 },
+];
+
+export default function Example() {
+  return (
+    <DataTable
+      title="Products"
+      loading={false}
+      data={data}
+      headers={{
+        id: { value: "id" },
+        designation: { value: "designation", filterBy: { type: "string" } },
+        category: {
+          value: "category",
+          filterBy: {
+            type: "select",
+            options: [
+              { value: "ui", label: "UI" },
+              { value: "table", label: "Table" },
+              { value: "forms", label: "Forms" },
+            ],
+          },
+        },
+        price: { value: "price", filterBy: { type: "number" } },
+      }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<StaticFilteringPreview />}
+  defaultTab="ts"
+/>
+
+**Clear** empties every row and drops the filters, so the table goes back to the full `data`.
+
+---
+
+## Dynamic filtering
+
+Pass `actions.get` and **Apply** calls it instead, with the active filters merged into the pagination/search params it already receives. By default they arrive as a JSON string under a single `filters` key:
+
+```js
+{
+  limit: 10,
+  page: 1,
+  filters: '[{"header":"price","name":"price","type":"number","operator":"gt","value":"50"}]',
+}
+```
+
+`page` is reset to `1` on every apply, since a changed filter invalidates the page the user was on.
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableDynamicFiltering.tsx",
+      code: `import React, { useState } from "react";
+import { DataTable, type TableFilter, type TParams } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+type Product = {
+  id: number;
+  designation: string;
+  category: string;
+  price: number;
+};
+
+export default function Example() {
+  const [rows, setRows] = useState<Product[]>([]);
+
+  const get = async (params: TParams) => {
+    const filters: TableFilter[] = params.filters
+      ? JSON.parse(params.filters as string)
+      : [];
+
+    // hand them to your API however it expects them
+    const response = await fetch(
+      "/products?" + new URLSearchParams({ filters: JSON.stringify(filters) }),
+    );
+    setRows(await response.json());
+  };
+
+  return (
+    <DataTable<Product>
+      title="Products"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id" },
+        designation: { value: "designation", filterBy: { type: "string" } },
+        price: { value: "price", filterBy: { type: "number" } },
+      }}
+      actions={{ get }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableDynamicFiltering.jsx",
+      code: `import React, { useState } from "react";
+import { DataTable } from "@kousta-ui/table";
+
+import "@kousta-ui/table/esm/index.css";
+import "@kousta-ui/components/esm/index.css";
+
+export default function Example() {
+  const [rows, setRows] = useState([]);
+
+  const get = async (params) => {
+    const filters = params.filters ? JSON.parse(params.filters) : [];
+
+    const response = await fetch(
+      "/products?" + new URLSearchParams({ filters: JSON.stringify(filters) }),
+    );
+    setRows(await response.json());
+  };
+
+  return (
+    <DataTable
+      title="Products"
+      loading={false}
+      data={rows}
+      headers={{
+        id: { value: "id" },
+        designation: { value: "designation", filterBy: { type: "string" } },
+        price: { value: "price", filterBy: { type: "number" } },
+      }}
+      actions={{ get }}
+      config={{ props: { table: { style: { width: "100%" } } } }}
+      keyExtractor={(row) => row.id}
+    />
+  );
+}`
+    }
+  ]}
+  preview={<DynamicFilteringPreview />}
+  defaultTab="ts"
+/>
+
+The line under the preview shows exactly what your `actions.get` receives.
+
+### `TableFilter`
+
+One entry per applied filter:
+
+| Name | Type | Description |
+|------|------|-------------|
+| `header` | `string` | The header label the row came from — the key in your `headers` object. |
+| `name` | `string` | The column's `value` — the path the filter reads, and usually what your backend wants. |
+| `type` | `FilterType` | `"string"`, `"number"` or `"select"`. |
+| `operator` | `FilterOperator` | The chosen operator, or the type's default if it was never touched. |
+| `value` | `string \| number \| Array<string \| number> \| null` | The value to compare against. `undefined` for `Is empty` / `Is not empty`. |
+| `to` | `string \| number \| null` | The upper bound — only set for `between`. |
+
+<Badge color="yellow">Note</Badge> Values arrive as **strings** when they came from an input, because that is what an `<input>` gives back — `price > 50` sends `value: "50"`, not `50`. Coerce on your side, or reshape with `options.filter.props` below.
+
+### `options.filter.props` (custom param names)
+
+If a JSON blob isn't what your API wants, `options.filter.props` reshapes the active filters into whatever params your `actions.get` should receive. It's the filter twin of [`options.sort.props`](./Sorting#optionssort-custom-param-names), and it replaces the default `filters` key rather than adding to it.
+
+| Name | Type | Description |
+|------|------|-------------|
+| `props` | `(filters: TableFilter[]) => TParams` | Maps the active filters to the param shape your handler expects. |
+| `filterFunction` | `(params: TParams) => void` | Called **instead of** `actions.get` when you want filtering to go somewhere else entirely. |
+
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "DataTableFilterCustomProps.tsx",
+      code: `<DataTable<Product>
+  title="Products"
+  data={rows}
+  headers={headers}
+  options={{
+    filter: {
+      // { "filter[price][gt]": "50", "filter[category][is]": "ui" }
+      props: (filters) =>
+        filters.reduce(
+          (params, filter) => ({
+            ...params,
+            [\`filter[\${filter.name}][\${filter.operator}]\`]: String(filter.value ?? ""),
+          }),
+          {},
+        ),
+    },
+  }}
+  actions={{ get: fetchProducts }}
+  keyExtractor={(row) => row.id}
+/>`
+    },
+    {
+      value: "js",
+      language: "jsx",
+      filename: "DataTableFilterCustomProps.jsx",
+      code: `<DataTable
+  title="Products"
+  data={rows}
+  headers={headers}
+  options={{
+    filter: {
+      props: (filters) =>
+        filters.reduce(
+          (params, filter) => ({
+            ...params,
+            [\`filter[\${filter.name}][\${filter.operator}]\`]: String(filter.value ?? ""),
+          }),
+          {},
+        ),
+    },
+  }}
+  actions={{ get: fetchProducts }}
+  keyExtractor={(row) => row.id}
+/>`
+    }
+  ]}
+  preview={<FilterCustomPropsPreview />}
+  defaultTab="ts"
+/>
+
+### `options.filter.filterFunction`
+
+`filterFunction` takes over the fetch completely — when it's set, `actions.get` is **not** called on apply, and the table doesn't filter locally either. Use it when filtering hits a different endpoint than the table's normal load, or when you want to drive something other than a fetch.
+
+```ts
+options={{
+  filter: {
+    filterFunction: (params) => {
+      // params holds the reshaped filters plus page/limit/search
+      router.push({ query: { ...router.query, ...params } });
+    },
+  },
+}}
+```
+
+---
+
+## Saving and restoring filters
+
+Active filters are part of the table's state, so they travel with [props preserving](./PropsPreserving) like the sort and the search term do. `options.props.set` receives them under `filters`, and `options.props.get` can hand them back on mount:
+
+```ts
+options={{
+  props: {
+    set: (props, tableTitle) =>
+      localStorage.setItem(tableTitle, JSON.stringify(props)),
+    get: () => JSON.parse(localStorage.getItem("Products") ?? "{}"),
+  },
+}}
+```
+
+<Badge color="yellow">Note</Badge> Unlike a restored sort — which brings back the indicator but not the order — a restored filter really does narrow the rows on a static table, and it repopulates the filter rows so the panel shows what's being applied.
+
+---
+
+## Static vs. dynamic, at a glance
+
+| | Static (no `actions.get`) | Dynamic (`actions.get` or `filterFunction`) |
+|---|---|---|
+| Trigger | **Apply** | **Apply** |
+| What runs | The table filters its own copy of `data` | `actions.get({ filters, page: 1, ...pagination/search })`, or `filterFunction` |
+| Who narrows the rows | `DataTable` itself | Your handler |
+| Footer total | Recomputed from the filtered rows | Whatever you pass back in `pagination.total` |
+| Page reset | Yes | Yes — `page: 1` is sent |
+
+---
+
+## Current limitations
+
+<Badge color="yellow">Note</Badge> These are gaps in the current implementation, not just missing docs:
+
+- **`Is any of` / `Is none of` can't be built from the UI.** The operators work — including against an array `value` restored from `props.get` or supplied to a `filterFunction` — but the select control only takes one value at a time, so the panel can't produce a multi-value filter yet.
+- **Filters always combine with AND.** There's no OR, and no grouping of conditions.
+- **One filter per column.** A column can't carry two conditions (`price > 10` *and* `price < 100`) other than through `Between`.
+- **The panel's controls aren't customizable** — no `config.icons` entries for it, and the **Clear** / **Apply** labels are fixed.
+- **Values from inputs stay strings.** Nothing coerces `"50"` to `50` before it reaches your handler.

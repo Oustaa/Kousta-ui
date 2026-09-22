@@ -399,17 +399,17 @@ export default function Example() {
       value: "ts",
       language: "tsx",
       filename: "ButtonLoading.tsx",
-      code: `import { Button } from "@kousta-ui/components";
+      code: `import { Button, Group } from "@kousta-ui/components";
 
 export default function Example() {
   return (
-    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+    <Group gap="12px">
       <Button loading>Saving…</Button>
       <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
       <Button disabled variant="neutral-outline">
         Disabled
       </Button>
-    </div>
+    </Group>
   );
 }`
     },
@@ -417,17 +417,17 @@ export default function Example() {
       value: "js",
       language: "jsx",
       filename: "ButtonLoading.jsx",
-      code: `import { Button } from "@kousta-ui/components";
+      code: `import { Button, Group } from "@kousta-ui/components";
 
 export default function Example() {
   return (
-    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+    <Group gap="12px">
       <Button loading>Saving…</Button>
       <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
       <Button disabled variant="neutral-outline">
         Disabled
       </Button>
-    </div>
+    </Group>
   );
 }`
     }
@@ -464,7 +464,7 @@ Use `ComponentPropsProvider` to define **app‑wide defaults** for Button and to
       value: "ts",
       language: "tsx",
       filename: "ButtonProviderVariants.tsx",
-      code: `import { ComponentPropsProvider, Button } from "@kousta-ui/components";
+      code: `import { ComponentPropsProvider, Button, Group } from "@kousta-ui/components";
 
 export default function App() {
   return (
@@ -472,16 +472,27 @@ export default function App() {
       button={{
         variant: "neutral",
         variants: {
-          ghost: {
-            className: "btn-ghost",
+          // a variant can be a class you own …
+          ghost: { className: "btn-ghost" },
+          // … or any other button props, with no CSS of your own
+          loud: {
+            type: "button",
+            title: "Styled entirely through props",
+            style: {
+              background: "var(--kui-success-600)",
+              color: "#fff",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+            },
           },
         },
       }}
     >
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Group gap="12px">
         <Button>Provider default (neutral)</Button>
-        <Button variant="ghost">Ghost (provider variant)</Button>
-      </div>
+        <Button variant="ghost">Ghost (class variant)</Button>
+        <Button variant="loud">Loud (props variant)</Button>
+      </Group>
     </ComponentPropsProvider>
   );
 }`
@@ -490,7 +501,7 @@ export default function App() {
       value: "js",
       language: "jsx",
       filename: "ButtonProviderVariants.jsx",
-      code: `import { ComponentPropsProvider, Button } from "@kousta-ui/components";
+      code: `import { ComponentPropsProvider, Button, Group } from "@kousta-ui/components";
 
 export default function App() {
   return (
@@ -498,16 +509,27 @@ export default function App() {
       button={{
         variant: "neutral",
         variants: {
-          ghost: {
-            className: "btn-ghost",
+          // a variant can be a class you own …
+          ghost: { className: "btn-ghost" },
+          // … or any other button props, with no CSS of your own
+          loud: {
+            type: "button",
+            title: "Styled entirely through props",
+            style: {
+              background: "var(--kui-success-600)",
+              color: "#fff",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+            },
           },
         },
       }}
     >
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Group gap="12px">
         <Button>Provider default (neutral)</Button>
-        <Button variant="ghost">Ghost (provider variant)</Button>
-      </div>
+        <Button variant="ghost">Ghost (class variant)</Button>
+        <Button variant="loud">Loud (props variant)</Button>
+      </Group>
     </ComponentPropsProvider>
   );
 }`

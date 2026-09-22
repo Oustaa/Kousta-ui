@@ -30,12 +30,8 @@ const createGetProducts =
     url.searchParams.set("limit", String(limit));
     if (searchTerm) url.searchParams.set("search", searchTerm);
 
-    const resp = await fetch(url.toString(), {
-      cache: "force-cache",
-    });
-
-    const json = await resp.json();
-    return json;
+    const resp = await fetch(url.toString());
+    return resp.json();
   };
 
 export const QuickStartPreview = () => {

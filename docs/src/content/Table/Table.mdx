@@ -3,6 +3,16 @@ title: Table
 ---
 
 import Badge from '@/components/Badge';
+import CodePreviewWrapper from '@/components/CodePreviewWrapper';
+import {
+  QuickStartPreview,
+  BasicDataTablePreview,
+  PricingTablePreview,
+  StyledTablePreview,
+  ResponsiveTablePreview,
+  InteractiveTablePreview,
+  ComplexCellPreview,
+} from '@/components/@Table/TablePrimitives';
 
 # Table
 
@@ -22,8 +32,13 @@ A lightweight, accessible **Table** component that provides the fundamental buil
 
 ## Quick start
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "BasicTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
@@ -51,8 +66,12 @@ export default function BasicTable() {
       </Table.Tbody>
     </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<QuickStartPreview />}
+  defaultExpanded
+/>
 
 ---
 
@@ -141,8 +160,13 @@ All native `<td>` props are supported:
 
 ### Basic data table
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "UserTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
@@ -154,7 +178,7 @@ function UserTable() {
   ];
 
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Name</Table.Th>
@@ -171,15 +195,23 @@ function UserTable() {
           </Table.Tr>
         ))}
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<BasicDataTablePreview />}
+/>
 
 ### Pricing table
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "PricingTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
@@ -203,7 +235,7 @@ function PricingTable() {
   ];
 
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Plan</Table.Th>
@@ -228,45 +260,47 @@ function PricingTable() {
           </Table.Tr>
         ))}
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<PricingTablePreview />}
+/>
 
 ### Table with custom styling
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "StyledTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
 function StyledTable() {
   return (
-    <Table
-      style={{
-        borderCollapse: "collapse",
-        width: "100%",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
-      }}
-    >
+    <Table.Root style={{ borderCollapse: "collapse", width: "100%" }}>
       <Table.Thead>
         <Table.Tr>
           <Table.Th
             style={{
-              background: "#f8fafc",
+              background: "var(--kui-primary-600)",
+              color: "#fff",
               padding: "12px",
               textAlign: "left",
-              borderBottom: "2px solid #e2e8f0"
             }}
           >
             Column 1
           </Table.Th>
           <Table.Th
             style={{
-              background: "#f8fafc",
+              background: "var(--kui-primary-600)",
+              color: "#fff",
               padding: "12px",
               textAlign: "left",
-              borderBottom: "2px solid #e2e8f0"
             }}
           >
             Column 2
@@ -275,30 +309,39 @@ function StyledTable() {
       </Table.Thead>
       <Table.Tbody>
         <Table.Tr>
-          <Table.Td style={{ padding: "12px", borderBottom: "1px solid #e2e8f0" }}>
-            Data 1
-          </Table.Td>
-          <Table.Td style={{ padding: "12px", borderBottom: "1px solid #e2e8f0" }}>
-            Data 2
-          </Table.Td>
+          <Table.Td style={{ padding: "12px" }}>Data 1</Table.Td>
+          <Table.Td style={{ padding: "12px" }}>Data 2</Table.Td>
+        </Table.Tr>
+        <Table.Tr>
+          <Table.Td style={{ padding: "12px" }}>Data 3</Table.Td>
+          <Table.Td style={{ padding: "12px" }}>Data 4</Table.Td>
         </Table.Tr>
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<StyledTablePreview />}
+/>
 
 ### Responsive table with horizontal scroll
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ResponsiveTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
 function ResponsiveTable() {
   return (
+    // the scroll container is yours — Table.Root does not add one
     <div style={{ overflowX: "auto" }}>
-      <Table style={{ minWidth: "600px" }}>
+      <Table.Root style={{ minWidth: "600px" }}>
         <Table.Thead>
           <Table.Tr>
             <Table.Th>ID</Table.Th>
@@ -311,18 +354,36 @@ function ResponsiveTable() {
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
-          {/* Table rows */}
+          {rows.map((row) => (
+            <Table.Tr key={row.id}>
+              <Table.Td>{row.id}</Table.Td>
+              <Table.Td>{row.name}</Table.Td>
+              <Table.Td>{row.email}</Table.Td>
+              <Table.Td>{row.phone}</Table.Td>
+              <Table.Td>{row.address}</Table.Td>
+              <Table.Td>{row.city}</Table.Td>
+              <Table.Td>{row.country}</Table.Td>
+            </Table.Tr>
+          ))}
         </Table.Tbody>
-      </Table>
+      </Table.Root>
     </div>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<ResponsiveTablePreview />}
+/>
 
 ### Table with interactive rows
 
-```tsx
-import { useState } from "react";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "InteractiveTable.tsx",
+      code: `import { useState } from "react";
 import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
@@ -335,7 +396,7 @@ function InteractiveTable() {
   };
 
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Name</Table.Th>
@@ -352,7 +413,11 @@ function InteractiveTable() {
             onClick={() => handleRowClick(user.id)}
             style={{
               cursor: "pointer",
-              background: selectedRow === user.id ? "#e0f2fe" : "transparent",
+              background:
+                selectedRow === user.id
+                  ? "var(--kui-primary-600)"
+                  : "transparent",
+              color: selectedRow === user.id ? "#fff" : undefined,
             }}
           >
             <Table.Td>{user.name}</Table.Td>
@@ -360,21 +425,29 @@ function InteractiveTable() {
           </Table.Tr>
         ))}
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<InteractiveTablePreview />}
+/>
 
 ### Table with complex cell content
 
-```tsx
-import { Table } from "@kousta-ui/table";
+<CodePreviewWrapper
+  tabs={[
+    {
+      value: "ts",
+      language: "tsx",
+      filename: "ComplexTable.tsx",
+      code: `import { Table } from "@kousta-ui/table";
 
 import "@kousta-ui/table/esm/index.css";
 
 function ComplexTable() {
   return (
-    <Table>
+    <Table.Root>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>User</Table.Th>
@@ -390,13 +463,17 @@ function ComplexTable() {
                 width: "32px",
                 height: "32px",
                 borderRadius: "50%",
-                background: "#e0e7ff"
+                display: "grid",
+                placeItems: "center",
+                fontSize: "12px",
+                background: "var(--kui-primary-600)",
+                color: "#fff"
               }}>
                 JD
               </div>
               <div>
                 <div style={{ fontWeight: "bold" }}>John Doe</div>
-                <div style={{ fontSize: "12px", color: "#666" }}>john@example.com</div>
+                <div style={{ fontSize: "12px", opacity: 0.7 }}>john@example.com</div>
               </div>
             </div>
           </Table.Td>
@@ -404,14 +481,14 @@ function ComplexTable() {
             <div style={{ width: "100px" }}>
               <div style={{
                 height: "8px",
-                background: "#e5e7eb",
+                background: "var(--kui-neutral-700)",
                 borderRadius: "4px",
                 overflow: "hidden"
               }}>
                 <div style={{
                   height: "100%",
                   width: "75%",
-                  background: "#10b981"
+                  background: "var(--kui-success-600)"
                 }} />
               </div>
               <div style={{ fontSize: "12px", marginTop: "4px" }}>75%</div>
@@ -429,10 +506,13 @@ function ComplexTable() {
           </Table.Td>
         </Table.Tr>
       </Table.Tbody>
-    </Table>
+    </Table.Root>
   );
-}
-```
+}`
+    }
+  ]}
+  preview={<ComplexCellPreview />}
+/>
 
 ---
 
@@ -551,7 +631,7 @@ The Table component provides built-in accessibility features:
 
 **After:**
 ```tsx
-<Table>
+<Table.Root>
   <Table.Thead>
     <Table.Tr>
       <Table.Th>Name</Table.Th>
@@ -564,7 +644,7 @@ The Table component provides built-in accessibility features:
       <Table.Td>30</Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</Table.Root>
 ```
 
 ---

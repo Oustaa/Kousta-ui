@@ -3,6 +3,82 @@ import React, { useState } from "react";
 import CodePreviewWrapper from "@/components/CodePreviewWrapper";
 import { Button, Modal, Input, Select, WindowBoundary, ComponentPropsProvider } from "@kousta-ui/components";
 
+
+/** a tiny inline image, so the lazy-loading demo never depends on a host */
+const LAZY_IMAGE =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+       <rect width="400" height="200" fill="#9141ac"/>
+       <text x="200" y="108" font-family="system-ui, sans-serif" font-size="20"
+             fill="#fff" text-anchor="middle">Loaded when scrolled into view</text>
+     </svg>`,
+  );
+
+const validate = (values: { name: string; email: string }) => {
+  const next: Record<string, string> = {};
+  if (!values.name.trim()) next.name = "Name is required";
+  if (!values.email.trim()) next.email = "Email is required";
+  else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email))
+    next.email = "Enter a valid email address";
+  return next;
+};
+
+function FormValidationPreview() {
+  const [values, setValues] = useState({ name: "", email: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
+
+  const update = (field: "name" | "email") => (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const next = { ...values, [field]: event.target.value };
+    setValues(next);
+    setSent(false);
+    // re-validate as they type, but only once the field has been flagged
+    if (errors[field]) setErrors(validate(next));
+  };
+
+  const onSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const found = validate(values);
+    setErrors(found);
+    setSent(Object.keys(found).length === 0);
+  };
+
+  return (
+    <form
+      noValidate
+      onSubmit={onSubmit}
+      style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 400 }}
+    >
+      <Input
+        label="Name"
+        required
+        value={values.name}
+        errors={errors.name ? [errors.name] : []}
+        onChange={update("name")}
+      />
+      <Input
+        label="Email"
+        type="email"
+        required
+        value={values.email}
+        errors={errors.email ? [errors.email] : []}
+        onChange={update("email")}
+      />
+      <Button variant="primary" type="submit">
+        Send Message
+      </Button>
+      {sent && (
+        <span style={{ fontSize: 13, color: "var(--kui-success-600)" }}>
+          Looks good — this is where you would submit.
+        </span>
+      )}
+    </form>
+  );
+}
+
 export function OverviewQuickStart() {
   return (
 <CodePreviewWrapper
@@ -216,35 +292,52 @@ export function OverviewFormValidation() {
       code: `import { Input, Button } from "@kousta-ui/components";
 import { useState } from "react";
 
+const validate = (values) => {
+  const errors = {};
+  if (!values.name.trim()) errors.name = "Name is required";
+  if (!values.email.trim()) errors.email = "Email is required";
+  else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email))
+    errors.email = "Enter a valid email address";
+  return errors;
+};
+
 function ContactForm() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [values, setValues] = useState({ name: "", email: "" });
+  const [errors, setErrors] = useState({});
+
+  const update = (field) => (event) => {
+    const next = { ...values, [field]: event.target.value };
+    setValues(next);
+    // only re-check a field once it has already been flagged
+    if (errors[field]) setErrors(validate(next));
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    setErrors(validate(values));
+  };
 
   return (
-    <div>
+    <form noValidate onSubmit={onSubmit}>
       <Input
         label="Name"
         required
+        value={values.name}
         errors={errors.name ? [errors.name] : []}
-        onChange={(e) => {
-          if (!e.target.value) {
-            setErrors(prev => ({ ...prev, name: "Name is required" }));
-          } else {
-            setErrors(prev => ({ ...prev, name: "" }));
-          }
-        }}
+        onChange={update("name")}
       />
-
       <Input
         label="Email"
         type="email"
         required
+        value={values.email}
         errors={errors.email ? [errors.email] : []}
+        onChange={update("email")}
       />
-
       <Button variant="primary" type="submit">
         Send Message
       </Button>
-    </div>
+    </form>
   );
 }`
     },
@@ -255,69 +348,58 @@ function ContactForm() {
       code: `import { Input, Button } from "@kousta-ui/components";
 import { useState } from "react";
 
+const validate = (values) => {
+  const errors = {};
+  if (!values.name.trim()) errors.name = "Name is required";
+  if (!values.email.trim()) errors.email = "Email is required";
+  else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email))
+    errors.email = "Enter a valid email address";
+  return errors;
+};
+
 function ContactForm() {
+  const [values, setValues] = useState({ name: "", email: "" });
   const [errors, setErrors] = useState({});
 
+  const update = (field) => (event) => {
+    const next = { ...values, [field]: event.target.value };
+    setValues(next);
+    // only re-check a field once it has already been flagged
+    if (errors[field]) setErrors(validate(next));
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    setErrors(validate(values));
+  };
+
   return (
-    <div>
+    <form noValidate onSubmit={onSubmit}>
       <Input
         label="Name"
         required
+        value={values.name}
         errors={errors.name ? [errors.name] : []}
-        onChange={(e) => {
-          if (!e.target.value) {
-            setErrors(prev => ({ ...prev, name: "Name is required" }));
-          } else {
-            setErrors(prev => ({ ...prev, name: "" }));
-          }
-        }}
+        onChange={update("name")}
       />
-
       <Input
         label="Email"
         type="email"
         required
+        value={values.email}
         errors={errors.email ? [errors.email] : []}
+        onChange={update("email")}
       />
-
       <Button variant="primary" type="submit">
         Send Message
       </Button>
-    </div>
+    </form>
   );
 }`
     }
   ]}
   preview={
     (() => {
-      const FormValidationPreview = () => {
-        const [errors, setErrors] = useState<Record<string, string>>({});
-        return (
-          <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 400 }}>
-            <Input
-              label="Name"
-              required
-              errors={errors.name ? [errors.name] : []}
-              onChange={(e) => {
-                if (!e.target.value) {
-                  setErrors(prev => ({ ...prev, name: "Name is required" }));
-                } else {
-                  setErrors(prev => ({ ...prev, name: "" }));
-                }
-              }}
-            />
-            <Input
-              label="Email"
-              type="email"
-              required
-              errors={errors.email ? [errors.email] : []}
-            />
-            <Button variant="primary" type="submit">
-              Send Message
-            </Button>
-          </div>
-        );
-      };
       return <FormValidationPreview />;
     })()
   }
@@ -419,9 +501,9 @@ function LazyImage({ src, alt }) {
             <div style={{ minHeight: "200px" }}>
               {isLoaded ? (
                 <img
-                  src="https://via.placeholder.com/400x200"
+                  src={LAZY_IMAGE}
                   alt="Lazy loaded"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: "100%", height: "auto", display: "block" }}
                 />
               ) : (
                 <div style={{

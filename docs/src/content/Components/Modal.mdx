@@ -1,5 +1,6 @@
 ---
 ---
+import { Callout } from 'nextra/components';
 
 import Badge from '@/components/Badge';
 import CodePreviewWrapper from '@/components/CodePreviewWrapper';
@@ -77,9 +78,9 @@ The modal can be controlled **internally** (uncontrolled) or **externally** (con
 
 An **uncontrolled modal** manages its open state internally. Use this when the modal is lightweight and doesn’t depend on heavy data or async requests.
 
-:::info
+<Callout type="info">
 Use **uncontrolled modals** for simple UI dialogs such as confirmations or local information.
-:::
+</Callout>
 
 <CodePreviewWrapper
   tabs={[
@@ -104,9 +105,10 @@ Use **uncontrolled modals** for simple UI dialogs such as confirmations or local
   defaultTab="ts"
 />
 
-:::warning When not to use it
-Avoid uncontrolled modals for complex or data-heavy components since they mount immediately when the page loads.
-:::
+<Callout type="warning">
+**When not to use it** — avoid uncontrolled modals for complex or data-heavy
+components, since they mount immediately when the page loads.
+</Callout>
 
 ---
 

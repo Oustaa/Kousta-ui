@@ -87,6 +87,7 @@ export default async function RootLayout({
       <Head />
       <body>
         <Layout
+          copyPageButton={false}
           docsRepositoryBase="https://github.com/Oustaa/kousta-ui/tree/main/docs"
           editLink="Edit this page on GitHub"
           footer={footer}

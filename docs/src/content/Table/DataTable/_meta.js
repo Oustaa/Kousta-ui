@@ -1,16 +1,19 @@
 export default {
   overview: "Overview",
+  Props: "Props",
   Basic: "Basic",
+  Actions: "Actions",
   Pagination: "Pagination",
   Search: "Search",
   Sorting: "Sorting",
+  Filtering: "Filtering",
   Total: "Total",
   Views: "Views",
-  Actions: "Actions",
-  Config: "Config",
   PropsPreserving: "Props preserving",
-  Props: "Props",
+  Config: "Config",
   TablePropsProvider: "TablePropsProvider",
-  Grouping: "Grouping",
-  Filtering: "Filtering",
+  // parked until the grouping API settles — the page stays reachable by URL
+  Grouping: {
+    display: "hidden",
+  },
 };

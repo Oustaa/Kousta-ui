@@ -27,7 +27,7 @@ options={{
 
 | Name | Type | Description |
 |------|------|-------------|
-| `set` | `(props: TablePropsInterface & { page: number; limit: number }, tableTitle: string) => void` | Called whenever the user sorts, searches, switches view, or pages. The second argument is the table's `title` — see [One handler for every table](#one-handler-for-every-table). Required if you set `options.props` at all. |
+| `set` | `(props: TablePropsInterface & { page: number; limit: number }, tableTitle: string) => void` | Called whenever the user sorts, searches, filters, switches view, or pages. The second argument is the table's `title` — see [One handler for every table](#one-handler-for-every-table). Required if you set `options.props` at all. |
 | `get` | `() => Partial<TablePropsInterface>` | Called once while the table first renders, to seed its initial state. Takes no arguments (no title). Optional — and nullable, so `get: null` is fine too. |
 
 The state itself:
@@ -38,6 +38,7 @@ type TablePropsInterface = {
   sortBy: string;
   direction: -1 | 1;
   displayAs: string;
+  filters: TableFilter[];
 };
 ```
 
@@ -165,6 +166,7 @@ export default function Example({ rows }) {
 | Clicking a sortable header | `sortBy`, `direction` |
 | Running a search | `query`, and `page: 1` (searching resets to the first page) |
 | Switching to table / card / a custom view | `displayAs` |
+| Applying or clearing filters | `filters`, and `page: 1` (a changed filter resets to the first page) |
 | Changing the page | `page` |
 | Changing the rows-per-page | `limit` |
 
@@ -179,7 +181,7 @@ It is **not** called on mount — only in response to a real interaction.
 { sortBy: "age", direction: 1, query: "kaoutar", displayAs: "table" }
 ```
 
-That means you can persist the payload wholesale without merging it into anything you saved before — for `query`, `sortBy`, `direction` and `displayAs`.
+That means you can persist the payload wholesale without merging it into anything you saved before — for `query`, `sortBy`, `direction`, `displayAs` and `filters`.
 
 <Badge color="yellow">Note</Badge> `page` and `limit` are the exception: they only appear on the call that changed them. Sorting sends no `page` key at all, and changing the page sends no `limit`. So if you write the payload straight into the URL or a storage key, a sort will wipe whatever page the user was on. **Merge into what you already have** rather than replacing it:
 
@@ -199,6 +201,7 @@ set: (params) => setSaved((prev) => ({ ...prev, ...params }))
 | `sortBy` | `""` (no column sorted) |
 | `direction` | `1` (ascending) |
 | `displayAs` | `"table"` |
+| `filters` | `[]` (nothing filtered) |
 
 It seeds the initial state and then gets out of the way — it is never consulted again, so it can't fight the user's later interactions.
 

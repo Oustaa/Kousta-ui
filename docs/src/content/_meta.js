@@ -1,5 +1,5 @@
 export default {
-  Intro: { title: "Introduction" },
+  Intro: { title: "Getting started" },
   Components: { title: "Components" },
   Table: { title: "Table" },
   hooks: { title: "Hooks" },

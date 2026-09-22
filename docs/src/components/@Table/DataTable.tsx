@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { DataTable, TablePropsProvider } from "@kousta-ui/table";
+import {
+  DataTable,
+  TablePropsProvider,
+  type TableFilter,
+  type THeader,
+} from "@kousta-ui/table";
 import { getApiBaseUrl } from "@/lib/api-base-url";
 import { Button } from "@kousta-ui/components";
 import { LayoutGrid, Trash2 } from "lucide-react";
@@ -55,6 +60,38 @@ const createGetProducts =
 
 function useApiBaseUrl() {
   return getApiBaseUrl();
+}
+
+const MOCK_PRODUCTS: Product[] = Array.from({ length: 24 }, (_, i) => ({
+  id: i + 1,
+  designation: `Mock Product ${i + 1}`,
+  category: { ref: i % 2 ? "UI" : "TABLE" },
+}));
+
+/**
+ * These demos talk to a real API, and the published docs have none behind them.
+ * Handing back the whole mock list on failure would render all 24 rows under a
+ * footer claiming to show ten, so the fallback searches and pages the way the
+ * API does — the demo then behaves the same offline as it does online.
+ */
+function mockProducts(params: TableParams = {}) {
+  const query = String(params.search ?? "")
+    .trim()
+    .toLowerCase();
+
+  const matches = query
+    ? MOCK_PRODUCTS.filter(
+        (row) =>
+          row.designation.toLowerCase().includes(query) ||
+          (row.category?.ref ?? "").toLowerCase().includes(query),
+      )
+    : MOCK_PRODUCTS;
+
+  const page = Number(params.page ?? 1) || 1;
+  const limit = Number(params.limit ?? 10) || 10;
+  const start = (page - 1) * limit;
+
+  return { products: matches.slice(start, start + limit), total: matches.length };
 }
 
 export const BasicPreview = () => {
@@ -175,13 +212,9 @@ export const DynamicPaginationPreview = () => {
       setRows(products);
       setTotal(totalFromApi);
     } catch {
-      const fallback = Array.from({ length: 24 }, (_, i) => ({
-        id: i + 1,
-        designation: `Mock Product ${i + 1}`,
-        category: { ref: i % 2 ? "UI" : "TABLE" },
-      }));
-      setRows(fallback);
-      setTotal(fallback.length);
+      const fallback = mockProducts(params);
+      setRows(fallback.products);
+      setTotal(fallback.total);
     } finally {
       setLoading(false);
     }
@@ -271,13 +304,9 @@ export const DynamicSearchPreview = () => {
       setRows(products);
       setTotal(totalFromApi);
     } catch {
-      const fallback = Array.from({ length: 24 }, (_, i) => ({
-        id: i + 1,
-        designation: `Mock Product ${i + 1}`,
-        category: { ref: i % 2 ? "UI" : "TABLE" },
-      }));
-      setRows(fallback);
-      setTotal(fallback.length);
+      const fallback = mockProducts(params);
+      setRows(fallback.products);
+      setTotal(fallback.total);
     } finally {
       setLoading(false);
     }
@@ -793,6 +822,175 @@ const orderLines: OrderLine[] = [
   { id: 3, item: "Widget C", qty: 34, price: 9.99 },
 ];
 
+/* ------------------------------------------------------------------ *
+ * Filtering
+ * ------------------------------------------------------------------ */
+
+type FilterProduct = {
+  id: number;
+  designation: string;
+  category: string;
+  price: number;
+};
+
+const filterProducts: FilterProduct[] = [
+  { id: 1, designation: "Widget A", category: "ui", price: 30 },
+  { id: 2, designation: "Widget B", category: "table", price: 200 },
+  { id: 3, designation: "Gadget C", category: "ui", price: 20 },
+  { id: 4, designation: "Gizmo D", category: "forms", price: 60 },
+];
+
+const filterHeaders: THeader<FilterProduct> = {
+  id: { value: "id" },
+  designation: { value: "designation", filterBy: { type: "string" } },
+  category: {
+    value: "category",
+    filterBy: {
+      type: "select",
+      options: [
+        { value: "ui", label: "UI" },
+        { value: "table", label: "Table" },
+        { value: "forms", label: "Forms" },
+      ],
+    },
+  },
+  price: { value: "price", filterBy: { type: "number" } },
+};
+
+/** a deliberately small stand-in for whatever your backend would do */
+const applyFiltersOnServer = (
+  rows: FilterProduct[],
+  filters: TableFilter[],
+): FilterProduct[] =>
+  rows.filter((row) =>
+    filters.every((filter) => {
+      const cell = (row as any)[filter.name];
+      const value = filter.value;
+
+      switch (filter.operator) {
+        case "contains":
+          return String(cell)
+            .toLowerCase()
+            .includes(String(value).toLowerCase());
+        case "is":
+          return String(cell) === String(value);
+        case "is-not":
+          return String(cell) !== String(value);
+        case "eq":
+          return Number(cell) === Number(value);
+        case "gt":
+          return Number(cell) > Number(value);
+        case "lt":
+          return Number(cell) < Number(value);
+        case "between":
+          return (
+            Number(cell) >= Number(value) && Number(cell) <= Number(filter.to)
+          );
+        default:
+          return true;
+      }
+    }),
+  );
+
+export const StaticFilteringPreview = () => (
+  <div style={previewContainerStyle}>
+    <DataTable<FilterProduct>
+      title="Filtering (static)"
+      loading={false}
+      data={filterProducts}
+      headers={filterHeaders}
+      config={{ props: fullWidthTableProps }}
+      keyExtractor={(row) => row.id}
+    />
+    <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+      Open <strong>Filters</strong> above. No <code>actions.get</code> here, so
+      pressing <strong>Apply</strong> narrows <code>data</code> in the browser.
+      Every row starts on its type&apos;s default operator, so you can just type
+      a value and apply.
+    </p>
+  </div>
+);
+
+export const DynamicFilteringPreview = () => {
+  const [rows, setRows] = useState<FilterProduct[]>(filterProducts);
+  const [lastParams, setLastParams] = useState<TableParams | null>(null);
+
+  const get = async (params: TableParams) => {
+    setLastParams(params);
+
+    const active: TableFilter[] = params.filters
+      ? JSON.parse(params.filters as string)
+      : [];
+
+    setRows(applyFiltersOnServer(filterProducts, active));
+  };
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<FilterProduct>
+        title="Filtering (dynamic)"
+        loading={false}
+        data={rows}
+        headers={filterHeaders}
+          actions={{ get }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        Open <strong>Filters</strong> above, then apply. Params sent to{" "}
+        <code>actions.get</code> on the last apply:{" "}
+        <code>{lastParams ? JSON.stringify(lastParams) : "(none yet)"}</code>
+      </p>
+    </div>
+  );
+};
+
+export const FilterCustomPropsPreview = () => {
+  const [rows, setRows] = useState<FilterProduct[]>(filterProducts);
+  const [lastParams, setLastParams] = useState<TableParams | null>(null);
+  const [active, setActive] = useState<TableFilter[]>([]);
+
+  const get = async (params: TableParams) => {
+    setLastParams(params);
+    setRows(applyFiltersOnServer(filterProducts, active));
+  };
+
+  return (
+    <div style={previewContainerStyle}>
+      <DataTable<FilterProduct>
+        title="Filtering (custom params)"
+        loading={false}
+        data={rows}
+        headers={filterHeaders}
+        options={{
+          filter: {
+            props: (filters) => {
+              // keep them around so this preview can still filter its rows
+              setActive(filters);
+              return filters.reduce(
+                (params, filter) => ({
+                  ...params,
+                  [`filter[${filter.name}][${filter.operator}]`]: String(
+                    filter.value ?? "",
+                  ),
+                }),
+                {} as TableParams,
+              );
+            },
+          },
+        }}
+        actions={{ get }}
+        config={{ props: fullWidthTableProps }}
+        keyExtractor={(row) => row.id}
+      />
+      <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
+        Reshaped params on the last apply:{" "}
+        <code>{lastParams ? JSON.stringify(lastParams) : "(none yet)"}</code>
+      </p>
+    </div>
+  );
+};
+
 export const TotalPreview = () => {
   return (
     <div style={previewContainerStyle}>
@@ -836,8 +1034,8 @@ export const TotalWithPaginationPreview = () => {
         keyExtractor={(row) => row.id}
       />
       <p style={{ marginTop: 8, fontSize: 13, opacity: 0.75 }}>
-        Page through this table — the total recomputes from whatever rows are
-        on the current page, not all 3 order lines.
+        Page through this table — the total recomputes from whatever rows are on
+        the current page, not all 3 order lines.
       </p>
     </div>
   );
@@ -934,7 +1132,9 @@ export const PropsPreservingPreview = () => {
         <div style={{ fontSize: 13 }}>
           Preserved state:{" "}
           <code>
-            {Object.keys(saved).length ? JSON.stringify(saved) : "(nothing yet)"}
+            {Object.keys(saved).length
+              ? JSON.stringify(saved)
+              : "(nothing yet)"}
           </code>
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import { Button, ComponentPropsProvider } from "@kousta-ui/components";
+import { Button, ComponentPropsProvider, Group } from "@kousta-ui/components";
 
 export const QuickStartPreview = () => {
   return (
@@ -83,13 +83,13 @@ export const SizesPreview = () => {
 
 export const LoadingDisabledPreview = () => {
   return (
-    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+    <Group gap="12px">
       <Button loading>Saving…</Button>
       <Button loading variant="neutral-outline" loadingIndicator="Please wait…" />
       <Button disabled variant="neutral-outline">
         Disabled
       </Button>
-    </div>
+    </Group>
   );
 };
 
@@ -111,16 +111,29 @@ export const ProviderVariantsPreview = () => {
       button={{
         variant: "neutral",
         variants: {
+          // a variant can be a class you own …
           ghost: {
             className: "btn-ghost",
+          },
+          // … or any other button props, with no CSS of your own
+          loud: {
+            type: "button",
+            title: "Styled entirely through props",
+            style: {
+              background: "var(--kui-success-600)",
+              color: "#fff",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+            },
           },
         },
       }}
     >
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+      <Group gap="12px">
         <Button>Provider default (neutral)</Button>
-        <Button variant="ghost">Ghost (provider variant)</Button>
-      </div>
+        <Button variant="ghost">Ghost (class variant)</Button>
+        <Button variant="loud">Loud (props variant)</Button>
+      </Group>
     </ComponentPropsProvider>
   );
 };

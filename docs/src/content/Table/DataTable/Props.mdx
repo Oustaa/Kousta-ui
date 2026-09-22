@@ -63,6 +63,7 @@ export type THeader<T> = Record<string, THeaderValue<T>>;
 | `alwaysVisible` | `boolean` | Keeps the column visible regardless of the "S/H" menu state. |
 | `sortBy` | [`THeaderSort<T>`](#theadersortt) | Marks the column sortable — see [Sorting](./Sorting). An empty object (`{}`) is enough to enable it; `name` and `sortFunc` are both optional. Works with `exec`-based columns too, as long as `sortFunc` is provided. |
 | `total` | `boolean \| { name?: string; func?: (prev: number, current: number) => number }` | Adds this column to the totals row at the bottom of the table body — see [Total](./Total). `true` or `{}` sums the column's `value` across every currently-displayed row. |
+| `filterBy` | [`TableHeaderFilter`](#tableheaderfilter) | Gives the column a row in the filter panel — see [Filtering](./Filtering). `type` is the only required field; it decides both the operator list and the value control. Needs a `value` to read, so it does nothing on an `exec`-only column. |
 
 ```ts
 export type THeaderValue<T> = {
@@ -72,6 +73,7 @@ export type THeaderValue<T> = {
   canSee?: boolean;
   alwaysVisible?: boolean;
   sortBy?: THeaderSort<T>;
+  filterBy?: TableHeaderFilter;
   total?:
     | boolean
     | {
@@ -102,6 +104,37 @@ type THeaderSort<T> = {
   name?: string;
   sortFunc?: (a: T, b: T) => number;
 };
+```
+
+### `TableHeaderFilter`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `type` | `"string" \| "number" \| "select"` | Picks the operator list and the value control — see [Operators by type](./Filtering#operators-by-type). Required. |
+| `options` | `THF[]` | The choices for a `select` filter. Required when `type` is `"select"`, and not allowed on the other two. |
+| `getOption` | `(item: THF) => { label: string; value: string \| number }` | Maps one of your option objects onto what the control shows and stores. Without it the control reads `value` (falling back to `id`) and `label`. |
+
+```ts
+export type TableHeaderFilter<
+  THF extends { label: string; value: string | number } = any,
+> = {
+  type: FilterType;
+  options?: THF[] | never;
+  getOption?:
+    | never
+    | ((item: THF) => { label: string; value: string | number });
+} & (
+  | {
+      type: "select";
+      options: THF[];
+      getOption?: (item: THF) => { label: string; value: string | number };
+    }
+  | {
+      type: "string" | "number";
+      options?: never;
+      getOption?: never;
+    }
+);
 ```
 
 ### `total` object shape
@@ -204,6 +237,7 @@ type TSearch<T> = {
 | `extraActions` | [`ExtraActions<T>[]`](#extraactionst) | Additional per-row actions beyond edit/delete. |
 | `emptyTable` | `ReactNode` | Content rendered when there's no data. |
 | `sort` | [`SortProps`](#sortprops) | Remaps the params sent to `actions.get` when a sortable column is clicked — see [Sorting](./Sorting). |
+| `filter` | [`FilterProps`](#filterprops) | Remaps the params sent to `actions.get` when filters are applied, or replaces the fetch entirely — see [Filtering](./Filtering). |
 | `props` | `{ set; get? }` | Hands you the table's state on every change (`set`) and asks for it back on mount (`get`), so you can persist it to storage or the URL — see [Props preserving](./PropsPreserving). |
 | `cards` | `{ card(props); cardsContainerProps?; menuProps?; loadingIndicator? }` | Enables the built-in card view. `card` receives `{ row, visibleHeaders }` — see [Views](./Views). |
 | `viewComp` | `{ Component(row); type?: "modal" \| "extends"; ...modal/expand options }` | Adds a dedicated "view" action that expands the row or opens a modal — see [Actions](./Actions). |
@@ -216,6 +250,7 @@ export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
   sort: SortProps;
+  filter: FilterProps;
   props: {
     set: (
       props: TablePropsInterface & { page: number; limit: number },
@@ -307,6 +342,84 @@ type SortProps = {
 };
 ```
 
+### `FilterProps`
+
+| Name | Type | Description |
+|------|------|-------------|
+| `props` | `(filters: `[`TableFilter[]`](#tablefilter)`) => TParams` | Maps the active filters to whatever param shape your `actions.get` expects. Without it they're sent as a JSON string under a single `filters` key — see [Filtering](./Filtering#optionsfilterprops-custom-param-names). |
+| `filterFunction` | `(params: TParams) => void` | Called **instead of** `actions.get` when filters are applied. Setting it also stops the table filtering locally. |
+
+```ts
+export type FilterProps = {
+  props?: (filters: TableFilter[]) => TParams;
+  filterFunction?: (params: TParams) => void;
+};
+```
+
+### `TableFilter`
+
+One applied filter. This is what `options.filter.props` receives, what a JSON `filters` param decodes to, and what `TablePropsInterface.filters` holds.
+
+| Name | Type | Description |
+|------|------|-------------|
+| `header` | `string` | The header label the filter came from — the key in your `headers` object. |
+| `name` | `string` | The column's `value`, i.e. the path the filter reads. |
+| `type` | `FilterType` | `"string"`, `"number"` or `"select"`. |
+| `operator` | [`FilterOperator`](#filteroperator) | The chosen operator, or the type's default if it was never changed. |
+| `value` | `string \| number \| Array<string \| number> \| null` | The value compared against. `undefined` for operators that take none. Values typed into an input arrive as strings. |
+| `to` | `string \| number \| null` | The upper bound — set only when `operator` is `"between"`. |
+
+```ts
+export type TableFilterDraft = {
+  operator?: FilterOperator;
+  value?: string | number | Array<string | number> | null;
+  to?: string | number | null;
+};
+
+export type TableFilter = TableFilterDraft & {
+  header: string;
+  name: string;
+  type: FilterType;
+  operator: FilterOperator;
+};
+```
+
+### `FilterOperator`
+
+```ts
+export type StringFilterOperator =
+  | "contains"
+  | "not-contains"
+  | "is"
+  | "is-not"
+  | "starts-with"
+  | "ends-with"
+  | "is-empty"
+  | "is-not-empty";
+
+export type NumberFilterOperator =
+  | "eq"
+  | "neq"
+  | "gt"
+  | "gte"
+  | "lt"
+  | "lte"
+  | "between";
+
+export type SelectFilterOperator =
+  | "is"
+  | "is-not"
+  | "is-any-of"
+  | "is-none-of"
+  | "is-empty"
+  | "is-not-empty";
+
+export type FilterOperator =
+  | StringFilterOperator
+  | NumberFilterOperator
+  | SelectFilterOperator;
+```
+
 ### `TablePropsInterface`
 
 The table state handed to `options.props.set` and read back from `options.props.get` — see [Props preserving](./PropsPreserving).
@@ -317,6 +430,7 @@ The table state handed to `options.props.set` and read back from `options.props.
 | `sortBy` | `string` | The value (or `sortBy.name`) of the sorted column; `""` when nothing is sorted. |
 | `direction` | `-1 \| 1` | `1` ascending, `-1` descending. |
 | `displayAs` | `string` | The active view — `"table"`, `"card"`, or an `extraviews` key. |
+| `filters` | [`TableFilter[]`](#tablefilter) | The applied filters; `[]` when nothing is filtered — see [Filtering](./Filtering#saving-and-restoring-filters). |
 
 ```ts
 export type TablePropsInterface = {
@@ -324,6 +438,7 @@ export type TablePropsInterface = {
   sortBy: string;
   direction: -1 | 1;
   displayAs: string;
+  filters: TableFilter[];
 };
 ```
 
