@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { useTableContext } from "../tableContext";
 
 import { usePaginationData } from "./usePaginationData";
+import { applyFilters } from "../utils/tableFilters";
 
 export const useDataToDisplay = <T>() => {
   const {
     data: { data },
     actions,
+    options,
     search,
+    filters,
     total,
   } = useTableContext();
 
@@ -15,23 +18,30 @@ export const useDataToDisplay = <T>() => {
 
   const paginatedData = usePaginationData({ data: dataToDisplay });
 
-  useEffect(() => {
-    if (actions?.search?.static) {
-      const filteredData = data.filter((row) => {
-        const reg = new RegExp(search.query, "i");
-        // @ts-expect-error this is not an error
-        return actions.search?.onSearch(row, { query: search.query, reg });
-      });
+  const filtersAreStatic = !actions?.get && !options?.filter?.filterFunction;
 
-      setDataToDisplay(filteredData);
-      total.setTotal(filteredData.length);
-    } else {
-      // Keep dataToDisplay in sync with the `data` prop for non-static-search
-      // tables too — otherwise updates from actions.get (pagination, dynamic
-      // search, sorting, refresh) never reach the rendered rows after mount.
-      setDataToDisplay(data || []);
+  useEffect(() => {
+    let next = data || [];
+    let narrowed = false;
+
+    if (actions?.search?.static) {
+      const reg = new RegExp(search.query, "i");
+      next = next.filter((row) =>
+        // @ts-expect-error this is not an error
+        actions.search?.onSearch(row, { query: search.query, reg }),
+      );
+      narrowed = true;
     }
-  }, [search.query, data]);
+
+    if (filtersAreStatic && filters.applied.length > 0) {
+      next = applyFilters(next, filters.applied);
+      narrowed = true;
+    }
+
+    setDataToDisplay(next);
+
+    if (narrowed) total.setTotal(next.length);
+  }, [search.query, data, filters.applied]);
 
   return paginatedData;
 };

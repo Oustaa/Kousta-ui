@@ -35,6 +35,8 @@ export type TablePropsInterface = {
   direction: -1 | 1;
   // display as
   displayAs: string;
+  // active filters
+  filters: TableFilter[];
 };
 // End Table Props
 
@@ -42,6 +44,8 @@ export type TOptions<T> = Partial<{
   extraActions: Array<ExtraActions<T>>;
   emptyTable: ReactNode;
   sort: SortProps;
+  filter: FilterProps;
+  // filterPosition: FilterPositionType;
 
   props: {
     // this will be exectuted by table, so the users can do whatever he want with the passed props, save them in the url, save them in local storage
@@ -89,12 +93,107 @@ export type TablePropsWithChildren<T> =
   | (PropsWithChildren<TableProps<T>> & { children: ReactNode })
   | (TableProps<T> & { children?: never });
 
+export type FilterType = "string" | "number" | "select";
+
+export type StringFilterOperator =
+  | "contains"
+  | "not-contains"
+  | "is"
+  | "is-not"
+  | "starts-with"
+  | "ends-with"
+  | "is-empty"
+  | "is-not-empty";
+
+export type NumberFilterOperator =
+  | "eq"
+  | "neq"
+  | "gt"
+  | "gte"
+  | "lt"
+  | "lte"
+  | "between";
+
+export type SelectFilterOperator =
+  | "is"
+  | "is-not"
+  | "is-any-of"
+  | "is-none-of"
+  | "is-empty"
+  | "is-not-empty";
+
+export type FilterOperator =
+  | StringFilterOperator
+  | NumberFilterOperator
+  | SelectFilterOperator;
+
+/** a filter row while it is still being edited — nothing is applied yet */
+export type TableFilterDraft = {
+  operator?: FilterOperator;
+  value?: string | number | Array<string | number> | null;
+  /** upper bound, only used by the number "between" operator */
+  to?: string | number | null;
+};
+
+/** a filter that is complete enough to actually filter with */
+export type TableFilter = TableFilterDraft & {
+  /** the header label the filter was built from */
+  header: string;
+  /** the value path the filter reads — headers[header].value */
+  name: string;
+  type: FilterType;
+  operator: FilterOperator;
+};
+
+export type FilterProps = {
+  /**
+   * Reshape the active filters into whatever the backend expects. The filter
+   * twin of options.sort.props — without it the table sends the filters as a
+   * JSON string under a `filters` key.
+   */
+  props?: (filters: TableFilter[]) => TParams;
+  /**
+   * Called instead of actions.get when the caller wants to own the fetch.
+   * Receives the same params actions.get would have received.
+   */
+  filterFunction?: (params: TParams) => void;
+};
+
+export type TableHeaderFilter<
+  THF extends { label: string; value: string | number } = any,
+> = {
+  type: FilterType;
+  options?: THF[] | never;
+  getOption?:
+    | never
+    | ((item: THF) => { label: string; value: string | number });
+} & (
+  | {
+      type: "select";
+      options: THF[];
+      getOption?: (item: THF) => { label: string; value: string | number };
+    }
+  | {
+      type: "string" | "number";
+      options?: never;
+      getOption?: never;
+    }
+);
+
+/** the headers that declared a filterBy, keyed by their header label */
+export type TTableFilterHeaders = Record<string, TableHeaderFilter>;
+
+// export type FilterPositionType = "inline" | "modal" | "menu";
+
 export type THeaderValue<T> = {
   value?: string | never;
   exec?: never | ((row: T) => string | ReactNode);
   visible?: boolean;
   canSee?: boolean;
   sortBy?: THeaderSort<T>;
+
+  filterBy?: TableHeaderFilter;
+
   total?:
     | boolean
     | {

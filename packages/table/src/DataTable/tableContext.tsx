@@ -1,5 +1,11 @@
 import React, { createContext, PropsWithChildren, useContext } from "react";
-import type { TableProps, TablePropsInterface, THeader } from "./_props";
+import type {
+  TableFilter,
+  TableFilterDraft,
+  TableProps,
+  TablePropsInterface,
+  THeader,
+} from "./_props";
 
 export type TableHeaders<T> = {
   data: THeader<T>;
@@ -29,6 +35,16 @@ export type TableContextType<T> = Omit<
   order: {
     orderBy: OrderBy;
     setOrderBy: React.Dispatch<React.SetStateAction<OrderBy>>;
+  };
+  filters: {
+    /** what the filter rows currently show, keyed by header label */
+    drafts: Record<string, TableFilterDraft>;
+    setDraft: (header: string, draft: TableFilterDraft) => void;
+    /** what the table is actually filtering by — only changes on Apply */
+    applied: TableFilter[];
+    setApplied: React.Dispatch<React.SetStateAction<TableFilter[]>>;
+    /** resets the rows back to empty; applied filters go through apply() */
+    clearDrafts: VoidFunction;
   };
   total: {
     total: number;

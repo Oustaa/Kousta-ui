@@ -1,6 +1,11 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import DataTable from "..";
-import { data, headers, UserType, renderTableWithExtraProps } from "./test-setup";
+import {
+  data,
+  headers,
+  UserType,
+  renderTableWithExtraProps,
+} from "./test-setup";
 import { TablePropsProvider } from "../PropsContext";
 
 describe("Table Sorting", () => {
@@ -208,7 +213,7 @@ describe("Table Sorting", () => {
               keyExtractor={(row) => row.name}
               // isStatic={false}
               actions={{
-                get() {},
+                get() { },
               }}
             />
             ,
@@ -248,7 +253,7 @@ describe("Table Sorting", () => {
               keyExtractor={(row) => row.name}
               // isStatic={false}
               actions={{
-                get() {},
+                get() { },
               }}
               options={{
                 sort: {

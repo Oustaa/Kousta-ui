@@ -4,7 +4,12 @@ import TableHead from "./components/TableHead";
 import TableHeader from "./components/TableHeader";
 import TableBody from "./components/TableBody";
 import { isValidElement, useCallback, useEffect, useState } from "react";
-import { TableProps, TablePropsInterface } from "./_props";
+import {
+  TableFilter,
+  TableFilterDraft,
+  TableProps,
+  TablePropsInterface,
+} from "./_props";
 import { OrderBy, TableContextProvider } from "./tableContext";
 import { useComponentContext } from "./PropsContext";
 import TableCardContainer from "./components/TableCardContainer";
@@ -38,6 +43,30 @@ function DataTable<T>(props: TableProps<T>) {
   const [displayAs, setDisplayAs] = useState<string>(
     getParams(props, "displayAs", "table"),
   );
+
+  const [appliedFilters, setAppliedFilters] = useState<TableFilter[]>(() =>
+    getParams(props, "filters", []),
+  );
+  // the drafts start as whatever was restored, so a reopened filter panel shows
+  // the filters the table is actually applying
+  const [filterDrafts, setFilterDrafts] = useState<
+    Record<string, TableFilterDraft>
+  >(() =>
+    Object.fromEntries(
+      getParams(props, "filters", []).map((filter) => [
+        filter.header,
+        { operator: filter.operator, value: filter.value, to: filter.to },
+      ]),
+    ),
+  );
+
+  const setFilterDraft = useCallback(
+    (header: string, draft: TableFilterDraft) =>
+      setFilterDrafts((prev) => ({ ...prev, [header]: draft })),
+    [],
+  );
+
+  const clearFilterDrafts = useCallback(() => setFilterDrafts({}), []);
 
   const { setTotal, total, setLimit, limit, setPage, page } = usePagination({
     total: props.pagination?.total || 0,
@@ -235,6 +264,13 @@ function DataTable<T>(props: TableProps<T>) {
       headers={{ data: headers, setHeaders }}
       search={{ query, setQuery }}
       order={{ orderBy, setOrderBy }}
+      filters={{
+        drafts: filterDrafts,
+        setDraft: setFilterDraft,
+        applied: appliedFilters,
+        setApplied: setAppliedFilters,
+        clearDrafts: clearFilterDrafts,
+      }}
       total={{ total, setTotal }}
       rowSelection={{
         selectedRows,
@@ -249,6 +285,7 @@ function DataTable<T>(props: TableProps<T>) {
             sortBy: orderBy.by,
             query,
             displayAs,
+            filters: appliedFilters,
             ...params,
           },
           props.title,

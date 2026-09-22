@@ -7,6 +7,18 @@ export type {
   TableProps,
   TOptions,
   THeaderValue,
+  TParams,
+  // filtering
+  FilterOperator,
+  // FilterPositionType,
+  FilterProps,
+  FilterType,
+  NumberFilterOperator,
+  SelectFilterOperator,
+  StringFilterOperator,
+  TableFilter,
+  TableFilterDraft,
+  TableHeaderFilter,
 } from "./DataTable/_props";
 export { default as DataTable } from "./DataTable/index";
 

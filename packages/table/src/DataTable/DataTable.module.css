@@ -4,6 +4,7 @@
 
 .kui-table-head {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--kui-spacing-md);
   justify-content: space-between;
   margin-bottom: var(--kui-spacing-xs);
@@ -29,6 +30,93 @@
 .table-search-container {
   /*  */
 }
+
+/* Filters */
+
+/* Inline lays the filters out one after another on a single line under the
+   table head, wrapping onto the next line only when it runs out of room. The
+   controls are narrower here than in the dropdown, since several of them share
+   one row. */
+.table-filters-inline {
+  --kui-filter-operator-width: 7rem;
+  --kui-filter-value-width: 11rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--kui-spacing-sm) var(--kui-spacing-md);
+
+  margin-bottom: var(--kui-spacing-md);
+}
+
+/* a flex item with no basis would collapse, so the controls carry their width */
+.table-filters-inline .table-filter-operator {
+  width: var(--kui-filter-operator-width);
+}
+
+.table-filters-inline .table-filter-value {
+  width: var(--kui-filter-value-width);
+}
+
+/* the actions keep the trailing-edge alignment they have in the dropdown, so
+   they sit at the end of whichever line they land on rather than at its start */
+.table-filters-inline .table-filter-apply-container {
+  margin-left: auto;
+}
+
+.table-filters-container {
+  --kui-filter-operator-width: 10rem;
+  --kui-filter-value-width: 15rem;
+
+  display: grid;
+  grid-template-columns:
+    max-content
+    var(--kui-filter-operator-width)
+    var(--kui-filter-value-width);
+  align-items: center;
+  gap: var(--kui-spacing-xs) var(--kui-spacing-sm);
+}
+
+.table-filters-container > .table-filter-item-container {
+  display: contents;
+}
+
+/* standalone (filterPosition: "inline"), where there is no grid to join */
+.table-filter-item-container {
+  display: flex;
+  gap: var(--kui-spacing-xs);
+  align-items: center;
+}
+
+.table-filter-label {
+  white-space: nowrap;
+}
+
+/* min-width: 0 lets the control shrink to its track instead of its content */
+.table-filter-control {
+  min-width: 0;
+}
+
+.number-filter-range-container {
+  display: flex;
+  gap: var(--kui-spacing-xs);
+}
+
+/* min and max split one value cell, so the pair spans exactly the width a
+   single value control would */
+.number-filter-range-container > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.table-filter-apply-container {
+  display: flex;
+  gap: var(--kui-spacing-sm);
+
+  margin-left: auto;
+}
+
+/* End Filters */
 
 .table-footer {
   display: flex;
@@ -90,9 +178,22 @@
 }
 
 .kui-dtable-sort-icon-group {
+  /* the icons are the tallest thing in the header, so this sets the row height */
+  --kui-dtable-sort-icon-size: 0.75rem;
+
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  /* no gap: the chevron glyphs already sit inside padded viewBoxes */
+  gap: 0;
+}
+
+/* sized here rather than on the component, so an icon passed through
+   config.icons is constrained the same way. Without it the default is whatever
+   the icon ships with — lucide's is 24px, which made the pair 50px tall. */
+.kui-dtable-sort-icon > svg {
+  display: block;
+  width: var(--kui-dtable-sort-icon-size);
+  height: var(--kui-dtable-sort-icon-size);
 }
 
 .kui-dtable-sort-icon {
