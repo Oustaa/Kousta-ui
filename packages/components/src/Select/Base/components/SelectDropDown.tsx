@@ -49,6 +49,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const loadingRef = useRef<HTMLDivElement | null>(null);
   const highlightedByUserRef = useRef(false);
+  const [placement, setPlacement] = useState<"bottom" | "top">("bottom");
   const [highlitedOptionIndex, setHighlitedOptionIndex] = useState<number>(
     () => {
       if (value) {
@@ -174,6 +175,26 @@ const SelectDropDown = <T extends SelectDataConstraints>({
     };
   }, [highlitedOptionIndex]);
 
+  // A select sitting at the bottom of its container — the rows-per-page control
+  // under a table, say — would otherwise drop its options straight over the
+  // content below. Measure the room we actually have and flip above the field
+  // when there isn't enough of it.
+  useLayoutEffect(() => {
+    const dropdown = dropdownRef.current;
+    const field = dropdown?.parentElement;
+
+    if (!dropdown || !field) return;
+
+    const fieldRect = field.getBoundingClientRect();
+    const spaceBelow = window.innerHeight - fieldRect.bottom;
+    const spaceAbove = fieldRect.top;
+    const needed = dropdown.scrollHeight;
+
+    setPlacement(
+      spaceBelow < needed && spaceAbove > spaceBelow ? "top" : "bottom",
+    );
+  }, [data.length, extraOptionsLoading]);
+
   const setHighlitedOption = useCallback((index: number) => {
     setHighlitedOptionIndex(index);
   }, []);
@@ -185,6 +206,7 @@ const SelectDropDown = <T extends SelectDataConstraints>({
         onScrollTopChange?.((e.target as HTMLDivElement).scrollTop);
       }}
       className={`${classes["select-dropdown"]} kui-select-dropdown`}
+      data-placement={placement}
     >
       {data.length === 0 && !extraOptionsLoading ? (
         <div

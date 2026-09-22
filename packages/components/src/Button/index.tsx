@@ -23,10 +23,13 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
   type,
   size,
   variant,
+  loadingIndicator,
   ...rest
 }) => {
   const buttonProps = useComponentContext("button") as ButtonPropsProvided;
-  let buttonClassName: string = "";
+  // a provider variant may bring its own class; it has to be kept out of the
+  // spread props, or the className below would overwrite it
+  let variantClassName: string | undefined;
 
   // handle default props and overwriting props
   if (buttonProps) {
@@ -48,31 +51,42 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
       rest.style = { ...buttonProps.style, ...rest.style };
     }
 
-    if (buttonProps.loadingIndicator && !rest.loadingIndicator) {
-      rest.loadingIndicator = buttonProps.loadingIndicator;
+    if (buttonProps.loadingIndicator && !loadingIndicator) {
+      loadingIndicator = buttonProps.loadingIndicator;
     }
 
-    // combine the props className and the variant one
-    buttonClassName = `${buttonProps.className || ""}`;
-
     if (buttonProps.variants && variant && buttonProps.variants[variant]) {
+      const { className: fromVariant, ...variantProps } =
+        buttonProps.variants[variant];
+
+      variantClassName = fromVariant;
       rest = {
-        ...buttonProps.variants[variant],
+        ...variantProps,
         ...rest,
         style: { ...buttonProps.variants[variant].style, ...rest.style },
       };
     }
   }
 
-  buttonClassName =
+  const buttonClassName = [
     // provider props className
-    buttonClassName +
+    buttonProps?.className,
+    // the class the provider variant asked for
+    variantClassName,
     // defaultProps className overwriting
-    ` ${classes[`btn-${variant || defaultProps.variant}`]} ${classes[`btn-${size || defaultProps.size}`]} ` +
+    classes[`btn-${variant || defaultProps.variant}`],
+    classes[`btn-${size || defaultProps.size}`],
     // component class name
-    className +
-    // kui prefixed class
-    ` kui-button kui-button-${variant || defaultProps.variant} kui-button-${size || defaultProps.size}`;
+    className,
+    // kui prefixed classes
+    "kui-button",
+    `kui-button-${variant || defaultProps.variant}`,
+    `kui-button-${size || defaultProps.size}`,
+  ]
+    // a custom variant has no CSS-module class, and className is optional —
+    // neither should leave an "undefined" behind in the class list
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button
@@ -86,7 +100,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     >
       {loading ? (
         <div className="kui-button-loading">
-          {rest.loadingIndicator || defaultProps.loadingIndicator}
+          {loadingIndicator || defaultProps.loadingIndicator}
         </div>
       ) : (
         children

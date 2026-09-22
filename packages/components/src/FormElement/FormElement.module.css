@@ -6,6 +6,9 @@
   width: 100%;
   display: flex;
   gap: var(--kui-spacing-2xs);
+  /* fill the container when something stretches it — e.g. a Group row beside a
+     taller Button — instead of staying at content height */
+  flex: 1 1 auto;
 }
 
 /*=====      End of FormElement        ======*/

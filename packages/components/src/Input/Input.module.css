@@ -14,9 +14,13 @@
   display: flex;
   align-items: stretch;
   width: 100%;
+  /* fill the container when something stretches it — e.g. a Group row next to
+     a taller Button — so the control lines up instead of hanging at the top */
+  flex: 1 1 auto;
 }
 
 .input {
+  min-width: 0;
   padding: var(--kui-spacing-xs) var(--kui-spacing-sm);
   border: solid 0.5px light-dark(var(--kui-neutral-200), var(--kui-neutral-700));
   background-color: light-dark(var(--kui-neutral-100), var(--kui-neutral-800));

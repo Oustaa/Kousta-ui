@@ -38,7 +38,11 @@ const WindowBoundary: WindowBoundaryComponent = ({
   }, [onceItemEnter, onceItemExit]);
 
   useEffect(() => {
-    const rootElement = root === undefined ? document.body : root;
+    // `null` is the viewport. Using document.body instead would make every
+    // target count as intersecting from the moment it mounts — the element is
+    // inside body no matter where the page is scrolled — so nothing would ever
+    // be lazy and onItemExit would never fire.
+    const rootElement = root === undefined ? null : root;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
